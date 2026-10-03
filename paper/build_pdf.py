@@ -428,7 +428,7 @@ def build():
     out = PAPER / "numgate.pdf"
     title = re.sub(r"\\\\|[{}]", " ", arg(pre, "title"))
     doc = SimpleDocTemplate(str(out), pagesize=letter, leftMargin=inch, rightMargin=inch, topMargin=inch, bottomMargin=inch,
-                            title=re.sub(r"\s+", " ", title).strip(), author="NumGate")
+                            title=re.sub(r"\s+", " ", title).strip(), author=re.split(r"\\\\", arg(pre, "author"))[0].strip())
     doc.build(story, onFirstPage=footer, onLaterPages=footer)
     return out
 

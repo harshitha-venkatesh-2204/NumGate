@@ -135,7 +135,7 @@ def validation_macros(m):
     m["Adjudication"] = val.get("adjudication", pending)
     real = val.get("v1_real_errors")
     flags = len(pd.read_csv(PAPER / "data" / "v1_flags.csv"))
-    m["VoneFalsePct"] = (f"At least {(flags - real) / flags * 100:.0f} percent" if real is not None else pending)
+    m["VoneFalsePct"] = (f"at least {(flags - real) / flags * 100:.0f} percent" if real is not None else pending)
 
 
 def pilot_table(by):

@@ -1,0 +1,9 @@
+{
+ "text": "- Total: revenue £112,643.90 TW, revenue £58,152.40 LW, revenue change +93.7% WoW, revenue change +137.2% YoY\n- LANDMARK FRAME COVENT GARDEN: rank 1, revenue £3,766.40 TW, share 3.3% TW\n- LANDMARK FRAME OXFORD STREET: rank 2, revenue £3,753.90 TW, share 3.3% TW\n- LANDMARK FRAME NOTTING HILL: rank 3, revenue £3,660.00 TW, share 3.2% TW\n- CERAMIC CAKE STAND + HANGING CAKES (largest WoW increase): revenue change +2392.0% WoW, revenue £495.90 TW versus £19.90 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (largest WoW decrease): revenue change -63.6% WoW, revenue £689.94 TW versus £1,893.01 LW\n- RED  HARMONICA IN BOX (largest YoY increase): revenue change +26576.5% YoY, revenue £3.75 LY\n- CHRISTMAS LIGHTS 10 REINDEER (largest YoY decrease): revenue change -77.1% YoY, revenue £2,374.88 LY",
+ "input_tokens": 467,
+ "output_tokens": 196,
+ "cost_usd": 0.0,
+ "latency_s": 0.0,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

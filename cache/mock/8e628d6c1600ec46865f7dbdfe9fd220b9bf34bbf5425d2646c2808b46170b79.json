@@ -1,0 +1,9 @@
+{
+ "text": "```python\nimport json\nimport sys\n\nimport pandas as pd\n\ndf = pd.read_csv(sys.argv[1])\nfacts = []\n\n\ndef add(entity, metric, period, value, formula):\n    if pd.notna(value):\n        facts.append({\"entity\": entity, \"metric\": metric, \"period\": period,\n                      \"value\": round(float(value), 2), \"formula\": formula})\n\n\ntw, lw = df[\"Revenue\"].sum(), df[\"Revenue_LW\"].sum()\nadd(\"TOTAL\", \"revenue\", \"TW\", tw, \"sum(Revenue_TW)\")\nadd(\"TOTAL\", \"revenue\", \"WoW\", round((tw - lw) / lw * 100, 1) if lw else None, \"(sum TW - sum LW) / sum LW * 100\")\nfor _, r in df.sort_values(\"Revenue_TW\", ascending=False).head(5).iterrows():\n    add(r[\"Entity\"], \"revenue\", \"TW\", r[\"Revenue_TW\"], \"Revenue_TW\")\n    add(r[\"Entity\"], \"share\", \"TW\", r[\"Share_Pct\"], \"Share_Pct\")\n    add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"WoW_Pct\"], \"WoW_Pct\")\nmovers = df.dropna(subset=[\"WoW_Pct\"])\nif len(movers):\n    up, down = movers.loc[movers[\"WoW_Pct\"].idxmax()], movers.loc[movers[\"WoW_Pct\"].idxmin()]\n    add(up[\"Entity\"], \"revenue\", \"WoW\", up[\"WoW_Pct\"], \"max WoW_Pct\")\n    add(down[\"Entity\"], \"revenue\", \"WoW\", down[\"WoW_Pct\"], \"min WoW_Pct\")\ntop = df.sort_values(\"Revenue_TW\", ascending=False).iloc[0]\nadd(top[\"Entity\"], \"revenue\", \"YoY\", top[\"YoY_Pct\"], \"YoY_Pct\")\nadd(top[\"Entity\"], \"units\", \"TW\", top[\"Units_TW\"], \"Units_TW\")\nadd(top[\"Entity\"], \"orders\", \"TW\", top[\"Orders_TW\"], \"Orders_TW\")\nprint(json.dumps(facts[:25]))\n```",
+ "input_tokens": 630,
+ "output_tokens": 350,
+ "cost_usd": 0.0,
+ "latency_s": 0.0,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

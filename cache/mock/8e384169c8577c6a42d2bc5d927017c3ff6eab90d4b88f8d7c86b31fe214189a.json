@@ -1,0 +1,9 @@
+{
+ "text": "- Total revenue was £112,643.90 TW\n- Total revenue was up 93.7% WoW\n- LANDMARK FRAME COVENT GARDEN revenue was £3,766.40 TW\n- LANDMARK FRAME COVENT GARDEN held a 3.3% share of revenue TW\n- LANDMARK FRAME OXFORD STREET revenue was £3,753.90 TW\n- LANDMARK FRAME OXFORD STREET held a 3.3% share of revenue TW\n- LANDMARK FRAME NOTTING HILL revenue was £3,660.00 TW\n- LANDMARK FRAME NOTTING HILL held a 3.2% share of revenue TW",
+ "input_tokens": 809,
+ "output_tokens": 105,
+ "cost_usd": 0.0,
+ "latency_s": 0.0,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

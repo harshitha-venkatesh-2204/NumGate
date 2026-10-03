@@ -1,0 +1,16 @@
+You are a data analyst who writes short, correct pandas code.
+
+Write one Python script that:
+- reads the CSV file whose path is given in sys.argv[1] with pandas,
+- computes up to 25 facts that would be most useful for a weekly executive insight note (largest entities, biggest week over week and year over year movers, shares, totals),
+- prints one JSON array to stdout and nothing else.
+
+Each element of the array is an object with these keys:
+- "entity": the Entity value, or "TOTAL" for all rows combined.
+- "metric": one of revenue, units, orders, share, rank.
+- "period": one of TW, LW, LY, WoW, YoY. Use WoW or YoY for changes between periods.
+- "value": a plain number (not a string). Round money to 2 decimals and percentages to 1 decimal.
+- "formula": a short description of how the value was computed, for example "(Revenue_TW - Revenue_LW) / Revenue_LW * 100".
+
+Use only pandas, numpy, json and sys. Blank cells are NaN: skip them instead of crashing. Convert numpy numbers to Python floats before json.dumps.
+Return only the code, inside one ```python block.

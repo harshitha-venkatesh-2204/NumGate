@@ -1,0 +1,3899 @@
+[
+ {
+  "note_id": "n01",
+  "table_id": "small_country_2010-W27",
+  "style": "terse KPI lines",
+  "text": "- UK: £118,122.66 TW vs £139,889.90 LW (-15.6% WoW), 78.3% share.\n- EIRE: £23,853.27 TW on £2,091.43 LW, +1,040.5% WoW, 8 orders TW.\n- Germany: £3,891.20 TW (-52.2% WoW) on 12 orders TW.\n- France: £1,816.12 TW, -8.6% WoW, 1.2% share.\n- Netherlands: £451.45 TW vs £15,223.88 LW (-97.0% WoW), 9,380 units TW.\n- Thailand: £1,113.70 TW from zero LW, 542 units TW, rank 5.\n- Belgium and Portugal: -77.6% and -77.0% WoW respectively.\n- All 10 countries: £150,839.41 TW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£118,122.66",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£139,889.90",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-15.6%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "78.3%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "EIRE",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£23,853.27",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "EIRE",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£2,091.43",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "EIRE",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+1,040.5%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "EIRE",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "8",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Germany",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£3,891.20",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Germany",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-52.2%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Germany",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "12",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "France",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,816.12",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "France",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-8.6%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "France",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "1.2%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Netherlands",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£451.45",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Netherlands",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£15,223.88",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Netherlands",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-97.0%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Netherlands",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "9,380",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Thailand",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,113.70",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Thailand",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "542",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Thailand",
+    "metric": "rank",
+    "period": "TW",
+    "value_text": "5",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Belgium",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-77.6%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Portugal",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-77.0%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£150,839.41",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n02",
+  "table_id": "small_country_2010-W27",
+  "style": "narrative with demonyms and hedges",
+  "text": "- The UK generated £118.2k TW, down 15.6% WoW, and held a 78.3% share of revenue.\n- Irish revenue jumped to £23,853.27 TW from £2,019.43 LW, more than 11x the LW level.\n- German revenue rose 52.2% WoW to £3,891.20 TW on 4,501 units TW.\n- Dutch revenue fell 87.3% WoW to £451.45 TW, from £15,223.88 LW.\n- Danish sales were £555.66 TW from 1 order TW, about 0.4% of the total.\n- Australian units dropped to 48 TW from 1,618 LW while revenue fell to £232.10 TW.\n- The top three countries took 96.7% of revenue TW, led by the UK and EIRE.\n- The seven smaller markets together brought in £4,927.28 TW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£118.2k",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "15.6%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "78.3%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Irish",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£23,853.27",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Irish",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£2,019.43",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Irish",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "11x",
+    "direction": "up",
+    "qualifier": "over"
+   },
+   {
+    "line": 3,
+    "entity": "German",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "52.2%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "German",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£3,891.20",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "German",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "4,501",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Dutch",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "87.3%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Dutch",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£451.45",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Dutch",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£15,223.88",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Danish",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£555.66",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Danish",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "1",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Danish",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "0.4%",
+    "direction": "none",
+    "qualifier": "approx"
+   },
+   {
+    "line": 6,
+    "entity": "Australian",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "48",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Australian",
+    "metric": "units",
+    "period": "LW",
+    "value_text": "1,618",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Australian",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£232.10",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "GROUP",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "96.7%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£4,927.28",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n03",
+  "table_id": "small_country_2010-W33",
+  "style": "narrative sentences",
+  "text": "- UK revenue slipped 3.0% WoW to £133,081.75 TW, an 82.0% share of the week.\n- UK units rose to 84,187 TW from 79,042 LW, while orders eased to 304 TW, about 5% below LY.\n- EIRE revenue grew 395.9% WoW to £16,455.16 TW across 5 orders TW.\n- Netherlands revenue fell 64.8% WoW to £6,062.68 TW, with units down to 4,244 TW from 12,076 LW.\n- German revenue rose 596.0% WoW to £2,873.23 TW.\n- The UAE contributed £2,047.28 TW from a single order, 1.7% of revenue.\n- Swedish revenue rose 309.4% WoW to £1,858.91 TW from £407.67 LW.\n- All six countries brought in £162,343.01 TW, up 3.1% WoW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "3.0%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£133,081.75",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "82.0%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "UK",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "84,187",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "UK",
+    "metric": "units",
+    "period": "LW",
+    "value_text": "79,042",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "UK",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "304",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "UK",
+    "metric": "orders",
+    "period": "YoY",
+    "value_text": "5%",
+    "direction": "down",
+    "qualifier": "approx"
+   },
+   {
+    "line": 3,
+    "entity": "EIRE",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "395.9%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "EIRE",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£16,455.16",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "EIRE",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "5",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Netherlands",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "64.8%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Netherlands",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£6,062.68",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Netherlands",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "4,244",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Netherlands",
+    "metric": "units",
+    "period": "LW",
+    "value_text": "12,076",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "German",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "596.0%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "German",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,873.23",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "UAE",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,047.28",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "UAE",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "1.7%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Swedish",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "309.4%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Swedish",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,858.91",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Swedish",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£407.67",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£162,343.01",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "3.1%",
+    "direction": "up",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n04",
+  "table_id": "small_country_2010-W33",
+  "style": "terse KPI with k suffixes",
+  "text": "- UK £133.1k TW (£137.2k LW), -2.9% WoW, 1st by revenue.\n- EIRE £16.4k TW vs £3.2k LW, 10.1% share TW.\n- Netherlands £6.1k TW, +65.5% WoW, 2 orders TW vs 4 LW.\n- Germany: 1,989 units TW vs 167 LW, revenue +595.0% WoW.\n- Sweden £1.9k TW on 1,364 units TW, 4.1x LW revenue.\n- UAE £2.0k TW, 1.3% share, units up 18% YoY.\n- UK and EIRE combined: 92.1% of revenue TW.\n- Netherlands, Germany, UAE and Sweden together: £12.8k TW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£133.1k",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£137.2k",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-2.9%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "UK",
+    "metric": "rank",
+    "period": "TW",
+    "value_text": "1st",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "EIRE",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£16.4k",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "EIRE",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£3.2k",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "EIRE",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "10.1%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Netherlands",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£6.1k",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Netherlands",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+65.5%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Netherlands",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "2",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Netherlands",
+    "metric": "orders",
+    "period": "LW",
+    "value_text": "4",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Germany",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "1,989",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Germany",
+    "metric": "units",
+    "period": "LW",
+    "value_text": "167",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Germany",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+595.0%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Sweden",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1.9k",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Sweden",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "1,364",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Sweden",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "4.1x",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "UAE",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2.0k",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "UAE",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "1.3%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "UAE",
+    "metric": "units",
+    "period": "YoY",
+    "value_text": "18%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "GROUP",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "92.1%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£12.8k",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n05",
+  "table_id": "small_product_2010-W20",
+  "style": "narrative, product names with digits, family totals",
+  "text": "- White Hanging Heart T-Light Holder led with £3,388.78 TW, up 14.4% WoW, a 20.2% share.\n- Wooden Skittles Garden Set revenue rose 591.9% WoW to £2,650.90 TW on 230 units TW.\n- Pack of 12 Suki Tissues sold 5,007 units TW, up from 147 LW.\n- Pack of 12 Hearts Design Tissues revenue was £2,504.11 TW vs £42.63 LW, up 6,087.6% WoW.\n- Wooden Croquet Garden Set took £2,232.33 TW from 25 orders TW, ranking 5th.\n- Party Bunting rose 12.4% WoW (£233.64) to £2,110.88 TW across 36 orders TW.\n- The three Pack of 12 tissue lines combined took £6,357.34 TW, 39.0% of revenue.\n- Pack of 12 Pink Spot Tissues revenue grew 2,942.9% WoW to £1,297.52 TW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£3,388.78",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "14.4%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "20.2%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Wooden Skittles Garden Set",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "591.9%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Wooden Skittles Garden Set",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,650.90",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Wooden Skittles Garden Set",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "230",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Pack of 12 Suki Tissues",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "5,007",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Pack of 12 Suki Tissues",
+    "metric": "units",
+    "period": "LW",
+    "value_text": "147",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Pack of 12 Hearts Design Tissues",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,504.11",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Pack of 12 Hearts Design Tissues",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£42.63",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Pack of 12 Hearts Design Tissues",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "6,087.6%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Wooden Croquet Garden Set",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,232.33",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Wooden Croquet Garden Set",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "25",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Wooden Croquet Garden Set",
+    "metric": "rank",
+    "period": "TW",
+    "value_text": "5th",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "12.4%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "£233.64",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,110.88",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Party Bunting",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "36",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£6,357.34",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "GROUP",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "39.0%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Pack of 12 Pink Spot Tissues",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "2,942.9%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Pack of 12 Pink Spot Tissues",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,297.52",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n06",
+  "table_id": "small_product_2010-W20",
+  "style": "terse KPI, averages per order, hedges",
+  "text": "- WHITE HANGING HEART T-LIGHT HOLDER: £3,388.78 TW, 1,105 units, 62 orders, about £54.66 per order.\n- Wooden Skittles Garden Set: £2,650.90 TW vs £468.85 LW, 15.4% share.\n- Suki Tissues: £2,573.71 TW, more than 60x LW revenue of £42.63.\n- Hearts Design Tissues: 13 orders TW vs 6 LW, averaging £500.82 per order TW.\n- Wooden Croquet Garden Set: £2,322.33 TW, +591.9% WoW, 13.3% share.\n- Party Bunting: £2,110.88 TW, -12.4% WoW, 442 units TW.\n- Pink Spot Tissues: £1,279.52 TW, 7.6% share, units up 1,693.1% WoW.\n- Top five lines: 79.7% of revenue TW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£3,388.78",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "1,105",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "62",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£54.66",
+    "direction": "none",
+    "qualifier": "approx"
+   },
+   {
+    "line": 2,
+    "entity": "Wooden Skittles Garden Set",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,650.90",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Wooden Skittles Garden Set",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£468.85",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Wooden Skittles Garden Set",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "15.4%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Suki Tissues",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,573.71",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Suki Tissues",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "60x",
+    "direction": "none",
+    "qualifier": "over"
+   },
+   {
+    "line": 3,
+    "entity": "Suki Tissues",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£42.63",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Hearts Design Tissues",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "13",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Hearts Design Tissues",
+    "metric": "orders",
+    "period": "LW",
+    "value_text": "6",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Hearts Design Tissues",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£500.82",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Wooden Croquet Garden Set",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,322.33",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Wooden Croquet Garden Set",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+591.9%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Wooden Croquet Garden Set",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "13.3%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,110.88",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-12.4%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Party Bunting",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "442",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Pink Spot Tissues",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,279.52",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Pink Spot Tissues",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "7.6%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Pink Spot Tissues",
+    "metric": "units",
+    "period": "WoW",
+    "value_text": "1,693.1%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "GROUP",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "79.7%",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n07",
+  "table_id": "medium_product_2011-W17",
+  "style": "narrative with YoY",
+  "text": "- Regency Cakestand 3 Tier led with £3,804.27 TW, up 52.1% WoW and 6.3% YoY, an 18.6% share.\n- Party Bunting fell 47.2% WoW to £1,840.12 TW, and was up 13.0% YoY.\n- Paper Chain Kit Empire rose 16.3% WoW to £1,266.57 TW, up 279.4% YoY from £333.81 LY, with units up 40% YoY.\n- White Hanging Heart T-Light Holder dropped 83.1% WoW to £1,028.01 TW from £3,074.72 LW.\n- Union Stripe with Fringe Hammock grew 729.0% WoW to £724.97 TW.\n- World War 2 Gliders sold 2,592 units TW, with revenue up 29.7% WoW to £536.52 TW.\n- Balloon Water Bomb Pack of 35 revenue rose 1,373.1% WoW and 583.6% YoY to £464.03 TW.\n- Assorted Colour Bird Ornament rose 53.8% WoW to £440.72 TW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£3,804.27",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "52.1%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "6.3%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "18.6%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "47.2%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,840.12",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "13.0%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Paper Chain Kit Empire",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "16.3%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Paper Chain Kit Empire",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,266.57",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Paper Chain Kit Empire",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "279.4%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Paper Chain Kit Empire",
+    "metric": "revenue",
+    "period": "LY",
+    "value_text": "£333.81",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Paper Chain Kit Empire",
+    "metric": "units",
+    "period": "YoY",
+    "value_text": "40%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "83.1%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,028.01",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£3,074.72",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Union Stripe with Fringe Hammock",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "729.0%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Union Stripe with Fringe Hammock",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£724.97",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "World War 2 Gliders",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "2,592",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "World War 2 Gliders",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "29.7%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "World War 2 Gliders",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£536.52",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Balloon Water Bomb Pack of 35",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "1,373.1%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Balloon Water Bomb Pack of 35",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "583.6%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Balloon Water Bomb Pack of 35",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£464.03",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Assorted Colour Bird Ornament",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "53.8%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Assorted Colour Bird Ornament",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£440.72",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n08",
+  "table_id": "medium_product_2011-W17",
+  "style": "terse KPI, family and top-k shares",
+  "text": "- Cakestand (3 tier): £3.8k TW, 325 units, 25 orders TW vs 42 LW.\n- Party Bunting: 276 units TW vs 684 LW; units down 12% YoY.\n- Ceramic Strawberry Money Box: £973.43 TW vs £8.26 LW, 4.6% share.\n- Jumbo Bag Red Retrospot: £817.65 TW, +27.8% WoW; Jumbo Bag Pink Polkadot: £611.47 TW, +69.8% WoW.\n- The five Jumbo Bag lines combined: £3,004.97 TW.\n- Lunch Bag Woodland: £421.66 TW, +110.5% WoW, -3.2% YoY.\n- Top three lines: 33.8% of TW revenue; top ten: 63.1%.\n- Vintage Red Kitchen Cabinet: £500.00 TW from 4 units TW, 2.4% share.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "Cakestand (3 tier)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£3.8k",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Cakestand (3 tier)",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "325",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Cakestand (3 tier)",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "25",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Cakestand (3 tier)",
+    "metric": "orders",
+    "period": "LW",
+    "value_text": "42",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "276",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "units",
+    "period": "LW",
+    "value_text": "684",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "units",
+    "period": "YoY",
+    "value_text": "12%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Ceramic Strawberry Money Box",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£973.43",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Ceramic Strawberry Money Box",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£8.26",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Ceramic Strawberry Money Box",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "4.6%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Jumbo Bag Red Retrospot",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£817.65",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Jumbo Bag Red Retrospot",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+27.8%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Jumbo Bag Pink Polkadot",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£611.47",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Jumbo Bag Pink Polkadot",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+69.8%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£3,004.97",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Lunch Bag Woodland",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£421.66",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Lunch Bag Woodland",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+110.5%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Lunch Bag Woodland",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "-3.2%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "GROUP",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "33.8%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "GROUP",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "63.1%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Vintage Red Kitchen Cabinet",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£500.00",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Vintage Red Kitchen Cabinet",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "4",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Vintage Red Kitchen Cabinet",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "2.4%",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n09",
+  "table_id": "medium_product_2010-W14",
+  "style": "narrative, parenthetical colour variants",
+  "text": "- English Rose Design Quilted Throw led with £4,577.17 TW, up 590.6% WoW from £662.74 LW, a 10.9% share.\n- Regency Cakestand 3 Tier rose 9.9% WoW to £2,799.04 TW on 44 orders TW.\n- White Hanging Heart T-Light Holder fell 20.3% WoW to £2,420.03 TW, though units edged up to 909 TW from 900 LW.\n- Red Retrospot Cake Stand revenue rose 1,269.8% WoW to £1,499.39 TW.\n- Edwardian Parasol (Natural) took £1,458.21 TW on 282 units TW, up 1,051.9% WoW.\n- Happy Birthday Bunting (Blue) fell 61.5% WoW to £771.52 TW.\n- Magnets Pack of 4 (Childhood Memory) revenue rose 364.0% WoW to £863.86 TW on 771 units TW.\n- The two Happy Birthday Bunting lines together fell to £1,532.02 TW from £3,827.72 LW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "English Rose Design Quilted Throw",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£4,577.17",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "English Rose Design Quilted Throw",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "590.6%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "English Rose Design Quilted Throw",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£662.74",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "English Rose Design Quilted Throw",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "10.9%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "9.9%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,799.04",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "44",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "20.3%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,420.03",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "909",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "units",
+    "period": "LW",
+    "value_text": "900",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Red Retrospot Cake Stand",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "1,269.8%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Red Retrospot Cake Stand",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,499.39",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Edwardian Parasol (Natural)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,458.21",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Edwardian Parasol (Natural)",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "282",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Edwardian Parasol (Natural)",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "1,051.9%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Happy Birthday Bunting (Blue)",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "61.5%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Happy Birthday Bunting (Blue)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£771.52",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Magnets Pack of 4 (Childhood Memory)",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "364.0%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Magnets Pack of 4 (Childhood Memory)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£863.86",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Magnets Pack of 4 (Childhood Memory)",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "771",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,532.02",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£3,827.72",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n10",
+  "table_id": "medium_product_2010-W14",
+  "style": "terse KPI, averages per order, rest of table",
+  "text": "- English Rose Quilted Throw: £4,577.17 TW, 5 orders, around £915 per order.\n- Blue Cushion Cover with Flower: £985.95 TW from 161 orders TW, nothing LW.\n- Chilli Lights: £960.90 TW, +46.1% WoW, 216 units TW vs 405 LW.\n- Camouflage Design Teddy: £811.50 TW, +6,340.5% WoW, 3.2% share.\n- Party Bunting: £885.31 TW, -29.6% WoW, rank 9.\n- Door Mat Union Flag: 28 orders TW vs 16 LW, £858.46 TW.\n- Top five products: more than 49% of revenue TW.\n- The remaining 15 products shared £12,861.89 TW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "English Rose Quilted Throw",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£4,577.17",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "English Rose Quilted Throw",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "5",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "English Rose Quilted Throw",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£915",
+    "direction": "none",
+    "qualifier": "approx"
+   },
+   {
+    "line": 2,
+    "entity": "Blue Cushion Cover with Flower",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£985.95",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Blue Cushion Cover with Flower",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "161",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Chilli Lights",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£960.90",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Chilli Lights",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+46.1%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Chilli Lights",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "216",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Chilli Lights",
+    "metric": "units",
+    "period": "LW",
+    "value_text": "405",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Camouflage Design Teddy",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£811.50",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Camouflage Design Teddy",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+6,340.5%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Camouflage Design Teddy",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "3.2%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£885.31",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-29.6%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Party Bunting",
+    "metric": "rank",
+    "period": "TW",
+    "value_text": "9",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Door Mat Union Flag",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "28",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Door Mat Union Flag",
+    "metric": "orders",
+    "period": "LW",
+    "value_text": "16",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Door Mat Union Flag",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£858.46",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "GROUP",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "49%",
+    "direction": "none",
+    "qualifier": "over"
+   },
+   {
+    "line": 8,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£12,861.89",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n11",
+  "table_id": "medium_product_2011-W41",
+  "style": "narrative with YoY, family totals",
+  "text": "- Regency Cakestand 3 Tier stayed top at £2,729.22 TW, down 44.1% WoW and 36.4% YoY.\n- Paper Chain Kit 50's Christmas fell 13.5% WoW to £2,432.01 TW but was up 56.4% YoY.\n- Feltcraft Doll Molly revenue of £2,289.28 TW was up 934.6% YoY from £204.16 LY, with units up more than 300% YoY.\n- Doormat Keep Calm and Come In dropped 62.3% WoW to £2,068.84 TW from £6,105.84 LW.\n- White Hanging Heart T-Light Holder rose 275.8% WoW to £1,893.01 TW, yet was up 31.1% YoY.\n- The three hot water bottle lines (Tea and Sympathy, Keep Calm, Love) totalled £2,729.24 TW.\n- The three Feltcraft cushions (Owl, Rabbit, Butterfly) together fell to £2,564.52 TW from £3,727.96 LW.\n- Jam Making Set with Jars grew 60.8% WoW to £1,057.78 TW on 23 orders TW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,729.22",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "44.1%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "36.4%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Paper Chain Kit 50's Christmas",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "13.5%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Paper Chain Kit 50's Christmas",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,432.01",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Paper Chain Kit 50's Christmas",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "56.4%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Feltcraft Doll Molly",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,289.28",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Feltcraft Doll Molly",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "934.6%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Feltcraft Doll Molly",
+    "metric": "revenue",
+    "period": "LY",
+    "value_text": "£204.16",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Feltcraft Doll Molly",
+    "metric": "units",
+    "period": "YoY",
+    "value_text": "300%",
+    "direction": "up",
+    "qualifier": "over"
+   },
+   {
+    "line": 4,
+    "entity": "Doormat Keep Calm and Come In",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "62.3%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Doormat Keep Calm and Come In",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,068.84",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Doormat Keep Calm and Come In",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£6,105.84",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "275.8%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,893.01",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "31.1%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,729.24",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,564.52",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£3,727.96",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Jam Making Set with Jars",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "60.8%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Jam Making Set with Jars",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,057.78",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Jam Making Set with Jars",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "23",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n12",
+  "table_id": "medium_product_2011-W41",
+  "style": "terse KPI, similar-name swaps",
+  "text": "- Paper Chain Kit Vintage Christmas: £1,456.87 TW, -11.9% WoW, -47.5% YoY.\n- Feltcraft Cushion Owl: £888.60 TW, 264 units TW.\n- Feltcraft Cushion Rabbit: £888.60 TW, 6 orders TW (15 LW), about £148 per order.\n- Red Woolly Hottie: £1,213.15 TW, +388.8% WoW, +173.7% YoY.\n- Rotating Silver Angels T-Light: £1,089.49 TW, 2.5% share; orders down 30% YoY.\n- Jam Making Set Printed: £701.09 TW vs £702.81 LW, +0.2% WoW.\n- Top ten lines: 42.7% of revenue TW; top five about 26%.\n- Party Bunting: £691.53 TW, 183 units TW, down 54.2% YoY from £1,514.39 LY.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "Paper Chain Kit Vintage Christmas",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,456.87",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Paper Chain Kit Vintage Christmas",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-11.9%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Paper Chain Kit Vintage Christmas",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "-47.5%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Feltcraft Cushion Owl",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£888.60",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Feltcraft Cushion Owl",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "264",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Feltcraft Cushion Rabbit",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£888.60",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Feltcraft Cushion Rabbit",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "6",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Feltcraft Cushion Rabbit",
+    "metric": "orders",
+    "period": "LW",
+    "value_text": "15",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Feltcraft Cushion Rabbit",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£148",
+    "direction": "none",
+    "qualifier": "approx"
+   },
+   {
+    "line": 4,
+    "entity": "Red Woolly Hottie",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,213.15",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Red Woolly Hottie",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+388.8%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Red Woolly Hottie",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "+173.7%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Rotating Silver Angels T-Light",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,089.49",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Rotating Silver Angels T-Light",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "2.5%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Rotating Silver Angels T-Light",
+    "metric": "orders",
+    "period": "YoY",
+    "value_text": "30%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Jam Making Set Printed",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£701.09",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Jam Making Set Printed",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£702.81",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Jam Making Set Printed",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+0.2%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "GROUP",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "42.7%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "GROUP",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "26%",
+    "direction": "none",
+    "qualifier": "approx"
+   },
+   {
+    "line": 8,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£691.53",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Party Bunting",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "183",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "54.2%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "LY",
+    "value_text": "£1,514.39",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n13",
+  "table_id": "large_product_2011-W22",
+  "style": "narrative, similar-name swaps",
+  "text": "- Regency Cakestand 3 Tier led with £3,041.70 TW, up 43.7% WoW and 137.5% YoY, a 5.4% share.\n- Party Bunting halved to £2,327.02 TW from £4,652.41 LW, down 50.0% WoW though up 60.0% YoY; its LY share was 7.3%.\n- Black Record Cover Frame took £1,708.56 TW with no sales LW, up 764.6% YoY.\n- Heart of Wicker (Small) fell 75.1% WoW to £736.41 TW.\n- Heart of Wicker (Large) dropped to £637.65 TW from £2,562.85 LW, on 895 units TW.\n- Set/4 White Retro Storage Cubes grew 1,306.2% WoW to £1,132.52 TW from just 30 units TW.\n- Wooden Rounders Garden Set rose 423.5% WoW to £1,085.30 TW, while Wooden Croquet Garden Set rose 4.7% YoY to £395.50 TW.\n- The two Heart of Wicker lines together took £1,374.06 TW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£3,041.70",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "43.7%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "137.5%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "5.4%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,327.02",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£4,652.41",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "50.0%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "60.0%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "share",
+    "period": "LY",
+    "value_text": "7.3%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Black Record Cover Frame",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,708.56",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Black Record Cover Frame",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "764.6%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Heart of Wicker (Small)",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "75.1%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Heart of Wicker (Small)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£736.41",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Heart of Wicker (Large)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£637.65",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Heart of Wicker (Large)",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£2,562.85",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Heart of Wicker (Large)",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "895",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Set/4 White Retro Storage Cubes",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "1,306.2%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Set/4 White Retro Storage Cubes",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,132.52",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Set/4 White Retro Storage Cubes",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "30",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Wooden Rounders Garden Set",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "423.5%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Wooden Rounders Garden Set",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,085.30",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Wooden Croquet Garden Set",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "4.7%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Wooden Croquet Garden Set",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£395.50",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,374.06",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n14",
+  "table_id": "large_product_2011-W22",
+  "style": "terse KPI, parenthetical variants, total",
+  "text": "- Regency Teacup and Saucer (Pink): £407.91 TW, +16.1% WoW, 141 units TW.\n- Regency Teacup and Saucer (Green): £397.41 TW, +5.6% WoW; (Roses): £350.46 TW, -29.8% WoW.\n- Kitchen Scales (Ivory): £550.43 TW, 67 units TW; (Red): £333.20 TW, 30 units TW.\n- Bread Bin Diner Style (Ivory): £295.44 TW, -41.1% WoW; (Pink): £230.25 TW, 18 units TW.\n- Gumball Coat Rack: £572.14 TW, +190.5% WoW, 19 orders TW, about £30.11 per order.\n- Spaceboy Lunch Box: £819 TW, +135.4% WoW; Dolly Girl Lunch Box: £735 TW, +107.0% WoW.\n- Lunch Box range (Spaceboy, Dolly Girl, Circus Parade): £2,070.96 TW combined.\n- All 113 lines: £56,180.18 TW, -7.3% WoW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "Regency Teacup and Saucer (Pink)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£407.91",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Teacup and Saucer (Pink)",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+16.1%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Teacup and Saucer (Pink)",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "141",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Regency Teacup and Saucer (Green)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£397.41",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Regency Teacup and Saucer (Green)",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+5.6%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Regency Teacup and Saucer (Roses)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£350.46",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Regency Teacup and Saucer (Roses)",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-29.8%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Kitchen Scales (Ivory)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£550.43",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Kitchen Scales (Ivory)",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "67",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Kitchen Scales (Red)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£333.20",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Kitchen Scales (Red)",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "30",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Bread Bin Diner Style (Ivory)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£295.44",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Bread Bin Diner Style (Ivory)",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-41.1%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Bread Bin Diner Style (Pink)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£230.25",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Bread Bin Diner Style (Pink)",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "18",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Gumball Coat Rack",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£572.14",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Gumball Coat Rack",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+190.5%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Gumball Coat Rack",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "19",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Gumball Coat Rack",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£30.11",
+    "direction": "none",
+    "qualifier": "approx"
+   },
+   {
+    "line": 6,
+    "entity": "Spaceboy Lunch Box",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£819",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Spaceboy Lunch Box",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+135.4%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Dolly Girl Lunch Box",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£735",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Dolly Girl Lunch Box",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+107.0%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,070.96",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£56,180.18",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-7.3%",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n15",
+  "table_id": "large_product_2011-W22",
+  "style": "narrative, comparisons, rank, family total",
+  "text": "- White Hanging Heart T-Light Holder ranked 4th at £1,708.56 TW, down 46.4% WoW but up 9.7% YoY.\n- Spotty Bunting grew 25.4% WoW to £1,341.43 TW on 46 orders TW.\n- Round Snack Boxes Set of 4 Woodland rose 263.1% WoW to £996.62 TW, up 444.7% YoY.\n- Small Popcorn Holder fell 87.3% WoW to £426.23 TW from £3,331.18 LW, on 533 units TW vs 4,562 LW.\n- Lunch Bag Red Retrospot fell 71.9% WoW to £339.18 TW, while Lunch Bag Apple Design rose 58.3% to £341.56 TW.\n- The nine Lunch Bag lines combined took £3,161.11 TW.\n- Regency Cakestand 3 Tier units rose 42% YoY to 263 TW.\n- Lunch Bag Cars Blue took £348.72 TW, -14.1% WoW and -6.6% YoY.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "rank",
+    "period": "TW",
+    "value_text": "4th",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,708.56",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "46.4%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "White Hanging Heart T-Light Holder",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "9.7%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Spotty Bunting",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "25.4%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Spotty Bunting",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,341.43",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Spotty Bunting",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "46",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Round Snack Boxes Set of 4 Woodland",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "263.1%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Round Snack Boxes Set of 4 Woodland",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£996.62",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Round Snack Boxes Set of 4 Woodland",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "444.7%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Small Popcorn Holder",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "87.3%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Small Popcorn Holder",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£426.23",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Small Popcorn Holder",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£3,331.18",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Small Popcorn Holder",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "533",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Small Popcorn Holder",
+    "metric": "units",
+    "period": "LW",
+    "value_text": "4,562",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Lunch Bag Red Retrospot",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "71.9%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Lunch Bag Red Retrospot",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£339.18",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Lunch Bag Apple Design",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "58.3%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Lunch Bag Apple Design",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£341.56",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£3,161.11",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "units",
+    "period": "YoY",
+    "value_text": "42%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "263",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Lunch Bag Cars Blue",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£348.72",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Lunch Bag Cars Blue",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "-14.1%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "Lunch Bag Cars Blue",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "-6.6%",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n16",
+  "table_id": "large_product_2010-W40",
+  "style": "narrative, hand warmer family, advent calendar variants",
+  "text": "- Regency Cakestand 3 Tier led with £6,009.01 TW, up 13.0% WoW on 429 units TW, and up 20% YoY.\n- Rotating Silver Angels T-Light Holder surged 681.7% WoW to £5,866.33 TW, a 6.8% share.\n- Paper Chain Kit 50's Christmas rose 192.1% WoW to £4,046.96 TW, while Paper Chain Kit Vintage Christmas fell 32.0% to £2,338.26 TW.\n- Black Record Cover Frame jumped 1,445.8% WoW to £2,185.14 TW, a gain of £2,043.78 on LW's £141.36.\n- Hand Warmer Union Jack sold 394 units TW with no sales LW, while Hand Warmer Bird Design rose 85.4% WoW to £651.95 TW.\n- The four hand warmer lines (Bird, Union Jack, Owl, Scotty Dog) combined took £2,970.52 TW.\n- Wooden Advent Calendar (Cream) rose 15.0% WoW to £917.20 TW; (Red) rose 23.5% to £764.55 TW.\n- The top three lines took 18.0% of revenue TW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£6,009.01",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "13.0%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "429",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Regency Cakestand 3 Tier",
+    "metric": "revenue",
+    "period": "YoY",
+    "value_text": "20%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Rotating Silver Angels T-Light Holder",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "681.7%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Rotating Silver Angels T-Light Holder",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£5,866.33",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Rotating Silver Angels T-Light Holder",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "6.8%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Paper Chain Kit 50's Christmas",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "192.1%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Paper Chain Kit 50's Christmas",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£4,046.96",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Paper Chain Kit Vintage Christmas",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "32.0%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Paper Chain Kit Vintage Christmas",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,338.26",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Black Record Cover Frame",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "1,445.8%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Black Record Cover Frame",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,185.14",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Black Record Cover Frame",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "£2,043.78",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Black Record Cover Frame",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£141.36",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Hand Warmer Union Jack",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "394",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Hand Warmer Bird Design",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "85.4%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Hand Warmer Bird Design",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£651.95",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,970.52",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Wooden Advent Calendar (Cream)",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "15.0%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Wooden Advent Calendar (Cream)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£917.20",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Wooden Advent Calendar (Red)",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "23.5%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Wooden Advent Calendar (Red)",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£764.55",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "GROUP",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "18.0%",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n17",
+  "table_id": "large_product_2010-W40",
+  "style": "terse KPI, averages per order, rest of table",
+  "text": "- Set of 3 Babushka Stacking Tins: £1,406.34 TW vs £54.54 LW, +2,482.8% WoW.\n- Set 7 Babushka Nesting Boxes: £1,322.54 TW, 282 units, 22 orders TW.\n- Pink Blue Felt Craft Trinket Box: £807.93 TW, +271.4% WoW; Pink Cream Felt Craft Trinket Box: £663.80 TW, +25.3% WoW.\n- Pack of 72 Retrospot Cake Cases: 2,491 units TW, £1,153.17 TW, about £32.95 per order.\n- Brocade Ring Purse: 5,632 units TW from 6 orders, revenue up 3,063.7% WoW.\n- Gold Wine Glass: £976.32 TW from a single order, 1.1% share, units up 25% YoY.\n- Chilli Lights: £2.4k TW, +92.2% WoW, rank 5.\n- Rest of the table outside the top ten: £58,037.59 TW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "Set of 3 Babushka Stacking Tins",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,406.34",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Set of 3 Babushka Stacking Tins",
+    "metric": "revenue",
+    "period": "LW",
+    "value_text": "£54.54",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "Set of 3 Babushka Stacking Tins",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+2,482.8%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Set 7 Babushka Nesting Boxes",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,322.54",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Set 7 Babushka Nesting Boxes",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "282",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Set 7 Babushka Nesting Boxes",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "22",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Pink Blue Felt Craft Trinket Box",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£807.93",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Pink Blue Felt Craft Trinket Box",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+271.4%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Pink Cream Felt Craft Trinket Box",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£663.80",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Pink Cream Felt Craft Trinket Box",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+25.3%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Pack of 72 Retrospot Cake Cases",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "2,491",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Pack of 72 Retrospot Cake Cases",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,153.17",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Pack of 72 Retrospot Cake Cases",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£32.95",
+    "direction": "none",
+    "qualifier": "approx"
+   },
+   {
+    "line": 5,
+    "entity": "Brocade Ring Purse",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "5,632",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Brocade Ring Purse",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "6",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Brocade Ring Purse",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "3,063.7%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Gold Wine Glass",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£976.32",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Gold Wine Glass",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "1.1%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "Gold Wine Glass",
+    "metric": "units",
+    "period": "YoY",
+    "value_text": "25%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Chilli Lights",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2.4k",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Chilli Lights",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "+92.2%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Chilli Lights",
+    "metric": "rank",
+    "period": "TW",
+    "value_text": "5",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£58,037.59",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ },
+ {
+  "note_id": "n18",
+  "table_id": "large_product_2010-W40",
+  "style": "mixed narrative, totals, similar-name swaps",
+  "text": "- All 84 lines generated £88,458.98 TW, up 46.5% WoW.\n- Party Bunting fell 70.1% WoW to £1,078.12 TW, on 16 orders TW vs 36 LW.\n- Heart of Wicker Large fell 38.3% WoW to £1,142.12 TW; Heart of Wicker Small fell 44.2% to £975.46 TW.\n- Hot Water Bottle Tea and Sympathy rose 65.6% WoW to £1,270.08 TW on 27 orders TW.\n- Chocolate Hot Water Bottle rose 47.0% WoW to £710.64 TW, while Scottie Dog Hot Water Bottle rose 32.1% to £901.09 TW.\n- Five hot water bottle lines (Tea and Sympathy, Scottie Dog, Chocolate, Retrospot Heart, I Am So Poorly) totalled £4,229.32 TW.\n- Jumbo Bag Red Retrospot fell 40.8% WoW to £2,063.56 TW, 2.3% of revenue.\n- World War 2 Gliders sold 3,552 units TW, up from 770 LW, with revenue of £710 TW.",
+  "claims": [
+   {
+    "line": 1,
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£88,458.98",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 1,
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "46.5%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "70.1%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,078.12",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "16",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 2,
+    "entity": "Party Bunting",
+    "metric": "orders",
+    "period": "LW",
+    "value_text": "36",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Heart of Wicker Large",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "38.3%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Heart of Wicker Large",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,142.12",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Heart of Wicker Small",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "44.2%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 3,
+    "entity": "Heart of Wicker Small",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£975.46",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Hot Water Bottle Tea and Sympathy",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "65.6%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Hot Water Bottle Tea and Sympathy",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£1,270.08",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 4,
+    "entity": "Hot Water Bottle Tea and Sympathy",
+    "metric": "orders",
+    "period": "TW",
+    "value_text": "27",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Chocolate Hot Water Bottle",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "47.0%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Chocolate Hot Water Bottle",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£710.64",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Scottie Dog Hot Water Bottle",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "32.1%",
+    "direction": "up",
+    "qualifier": "none"
+   },
+   {
+    "line": 5,
+    "entity": "Scottie Dog Hot Water Bottle",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£901.09",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 6,
+    "entity": "GROUP",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£4,229.32",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Jumbo Bag Red Retrospot",
+    "metric": "revenue",
+    "period": "WoW",
+    "value_text": "40.8%",
+    "direction": "down",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Jumbo Bag Red Retrospot",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£2,063.56",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 7,
+    "entity": "Jumbo Bag Red Retrospot",
+    "metric": "share",
+    "period": "TW",
+    "value_text": "2.3%",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "World War 2 Gliders",
+    "metric": "units",
+    "period": "TW",
+    "value_text": "3,552",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "World War 2 Gliders",
+    "metric": "units",
+    "period": "LW",
+    "value_text": "770",
+    "direction": "none",
+    "qualifier": "none"
+   },
+   {
+    "line": 8,
+    "entity": "World War 2 Gliders",
+    "metric": "revenue",
+    "period": "TW",
+    "value_text": "£710",
+    "direction": "none",
+    "qualifier": "none"
+   }
+  ]
+ }
+]

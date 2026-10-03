@@ -1,0 +1,15 @@
+{
+ "frozen_at": "2026-09-28T13:12:51",
+ "files": {
+  "notes.json": "d37eae5ac885279b3e7672069b4cc3f75e838cdeba2620e96aa71d8af805f06f",
+  "truth.csv": "2e62e9ee1ea79f043147f61d6bad3b4b51a2a33f30a00958f9419aa0bb9a2a9e",
+  "gen_notes.py": "d125240975a4c4b26e908dc9931a351810dc95ac85cede6729ddd33339730ffe"
+ },
+ "combined_sha256": "162cd5b99c075f2f77abb76ebf656903bf9e7182e18652dbf7728067b90977fd",
+ "combined_method": "sha256(bytes(notes.json) + bytes(truth.csv))",
+ "state": "written before the gate was run and before src/number_gate.py, docs/method.md, README, tests, runs or results were opened",
+ "counts": {
+  "notes": 18,
+  "claims": 417
+ }
+}

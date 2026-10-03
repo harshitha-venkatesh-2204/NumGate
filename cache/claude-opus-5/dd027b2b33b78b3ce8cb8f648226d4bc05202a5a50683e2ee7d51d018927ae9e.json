@@ -1,0 +1,9 @@
+{
+ "text": "- TOTAL revenue reached £58,323.33 TW versus £23,254.70 LW, a WoW gain of 150.8%.\n- TOTAL revenue of £58.3k TW compares with £20,786.76 LY, a YoY increase of 180.6%.\n- TOTAL volume was 14,739 units across 839 orders TW, with units up 104.5% WoW.\n- LANDMARK FRAME COVENT GARDEN ranked 1 TW with £3,766.40, a 6.5% share of TOTAL revenue and a WoW gain of £3,766.40.\n- LANDMARK FRAME OXFORD STREET posted £3,753.90 TW at 6.4% share, up £3,753.90 WoW, while LANDMARK FRAME NOTTING HILL posted £3,660.00 TW at 6.3% share, up £3,660.00 WoW.\n- LANDMARK FRAME LONDON BRIDGE delivered £3,603.90 TW and LANDMARK FRAME BAKER STREET £3,447.50 TW, with the top five products holding 31.3% of TOTAL revenue TW.\n- DOORMAT KEEP CALM AND COME IN fell £712.05 WoW, the largest decline, followed by PAPER CHAIN KIT VINTAGE CHRISTMAS at £347.98 and PAPER CHAIN KIT 50'S CHRISTMAS at £119.05.\n- BOX OF 6 CHRISTMAS CAKE DECORATIONS rose 332.6% WoW.",
+ "input_tokens": 2493,
+ "output_tokens": 527,
+ "cost_usd": 0.02564,
+ "latency_s": 7.871,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn"
+}

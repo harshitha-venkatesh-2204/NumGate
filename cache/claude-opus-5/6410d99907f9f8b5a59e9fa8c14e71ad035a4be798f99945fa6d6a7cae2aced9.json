@@ -1,0 +1,9 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER led TW at £3,740.98 versus £3,792.77 LW (-1.4% WoW) on 1,382 units, holding rank 1 and a 6.1% share; LY revenue is blank so YoY is not available.\n- KENSINGTON COFFEE SET fell to £1,632.90 TW from £7,750.05 LW (-78.9% WoW), with units down to 186 from 915, and it sits at rank 4 with 2.6% share.\n- SET/3 RUSSIAN DOLL STACKING TINS rose to £1,718.73 TW from £159.75 LW (+975.9% WoW) on 343 units versus 27 units LW, ranking 3.\n- RED HANGING HEART T-LIGHT HOLDER reached £1,807.91 TW versus £822.00 LW (+119.9% WoW) across 45 orders TW versus 31 LW, ranking 2.\n- Three entities recorded zero LW revenue and no WoW value: ASSORTED FLOWER COLOUR \"LEIS\" at £639.90 TW on 1,494 units, JUMBO SHOPPER VINTAGE RED PAISLEY at £514.50 TW on 310 units, and RECYCLING BAG RETROSPOT at £403.45 TW on 199 units.\n- ASSORTED COLOUR BIRD ORNAMENT declined to £427.99 TW from £1,386.13 LW (-69.1% WoW) with units at 211 TW versus 897 LW.\n- Doormat lines gained TW: DOOR MAT UNION FLAG £1,414.86 versus £800.21 LW (+76.8% WoW) and RED SPOTTY COIR DOORMAT £934.31 versus £390.95 LW (+139.0% WoW).\n- The top five TW products combined for 16.9% share, and PACK OF 72 RETRO SPOT CAKE CASES moved 1,445 units TW versus 1,203 LW for £728.43 (+17.8% WoW); LY figures are blank for all 109 rows.",
+ "input_tokens": 8418,
+ "output_tokens": 1288,
+ "cost_usd": 0.07429,
+ "latency_s": 13.065,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn"
+}

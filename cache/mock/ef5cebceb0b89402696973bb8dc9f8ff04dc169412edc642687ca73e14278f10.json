@@ -1,0 +1,9 @@
+{
+ "text": "- Total: revenue £157,731.41 TW, revenue £179,041.64 LW, revenue change -11.9% WoW\n- United Kingdom: rank 1, revenue £117,273.84 TW, share 74.4% TW, revenue change -30.4% WoW\n- Netherlands: rank 2, revenue £18,002.00 TW, share 11.4% TW, revenue change +1414.9% WoW\n- EIRE: rank 3, revenue £9,248.22 TW, share 5.9% TW, revenue change +61.3% WoW\n- Netherlands (largest WoW increase): revenue change +1414.9% WoW, revenue £18,002.00 TW versus £1,188.30 LW\n- United Kingdom (largest WoW decrease): revenue change -30.4% WoW, revenue £117,273.84 TW versus £168,403.05 LW\n- United Kingdom (most orders): orders 314 TW versus 397 LW",
+ "input_tokens": 409,
+ "output_tokens": 156,
+ "cost_usd": 0.0,
+ "latency_s": 0.0,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

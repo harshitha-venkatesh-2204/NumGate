@@ -1,0 +1,9 @@
+{
+ "text": "- LANDMARK FRAME COVENT GARDEN leads TW at £3,766.40 from 340 units and 12 orders, against £0.00 LW and £0.00 LY.\n- The six LANDMARK FRAME lines (COVENT GARDEN, OXFORD STREET, NOTTING HILL, LONDON BRIDGE, BAKER STREET, CAMDEN TOWN) total £21,654.20 TW, all with £0.00 LW and £0.00 LY.\n- REGENCY CAKESTAND 3 TIER ranks 7 at £3,205.71 TW versus £2,729.22 LW (WoW +17.5%) and £4,843.45 LY (YoY -33.8%), with orders at 38 TW versus 50 LW.\n- BOTANICAL GARDENS WALL CLOCK enters at rank 8 with £2,928.80 TW, 140 units and 8 orders, from £0.00 LW and £0.00 LY.\n- GINGHAM HEART DECORATION posts the largest WoW move at +2,054.1%, £1,565.58 TW versus £72.68 LW, with units at 2,130 TW versus 80 LW.\n- PAPER CHAIN KIT 50'S CHRISTMAS is £2,222.96 TW versus £2,342.01 LW (WoW -5.1%) and £1,289.88 LY (YoY +72.3%), while JUMBO BAG RED RETROSPOT is £2,021.85 TW (WoW +7.2%, YoY +42.9%) on 1,045 units.\n- DOORMAT KEEP CALM AND COME IN falls -34.4% WoW to £1,356.79 and PAPER CHAIN KIT VINTAGE CHRISTMAS falls -27.1% WoW to £935.26, the latter also -45.4% YoY against £1,711.83 LY.\n- ASSORTED COLOUR BIRD ORNAMENT is -49.3% YoY at £1,324.21 TW versus £2,609.84 LY, and CHRISTMAS LIGHTS 10 VINTAGE BAUBLES is -54.3% YoY at £896.84 TW versus £1,960.94 LY.",
+ "input_tokens": 4151,
+ "output_tokens": 1048,
+ "cost_usd": 0.046955,
+ "latency_s": 10.626,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn"
+}

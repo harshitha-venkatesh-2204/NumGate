@@ -1,0 +1,13 @@
+Weekly sales report for ISO week {week}. Entity type: {entity_type}.
+
+{columns_guide}
+
+{table_markdown}
+
+Draft note:
+{draft}
+
+Numbers that could not be matched to the table:
+{flagged}
+
+Return the corrected note now.

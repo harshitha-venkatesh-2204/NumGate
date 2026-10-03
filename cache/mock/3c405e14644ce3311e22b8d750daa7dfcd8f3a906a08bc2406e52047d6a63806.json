@@ -1,0 +1,9 @@
+{
+ "text": "- Total revenue was £56,887.82 TW\n- Total revenue was up 11.8% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER revenue was £8,406.79 TW\n- WHITE HANGING HEART T-LIGHT HOLDER held a 13.6% share of revenue TW\n- WHITE HANGING HEART T-LIGHT HOLDER revenue was up 70.1% WoW\n- EDWARDIAN PARASOL BLACK revenue was £3,655.52 TW\n- EDWARDIAN PARASOL BLACK held a 5.6% share of revenue TW\n- EDWARDIAN PARASOL BLACK revenue was down 12.2% WoW",
+ "input_tokens": 971,
+ "output_tokens": 105,
+ "cost_usd": 0.0,
+ "latency_s": 0.0,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

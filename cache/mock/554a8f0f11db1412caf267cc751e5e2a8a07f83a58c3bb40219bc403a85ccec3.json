@@ -1,0 +1,9 @@
+{
+ "text": "- Total: revenue £61,834.59 TW, revenue £55,327.99 LW, revenue change +11.8% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 1, revenue £8,406.79 TW, share 13.6% TW, revenue change +70.1% WoW\n- EDWARDIAN PARASOL BLACK: rank 2, revenue £3,448.60 TW, share 5.6% TW, revenue change -12.2% WoW\n- FAIRY CAKE CANDLES: rank 3, revenue £3,065.02 TW, share 5.0% TW, revenue change +121.8% WoW\n- BLACK RECORD COVER FRAME (largest WoW increase): revenue change +185.5% WoW, revenue £1,144.96 TW versus £401.00 LW\n- PAPER CHAIN KIT 50'S CHRISTMAS (largest WoW decrease): revenue change -61.8% WoW, revenue £2,143.03 TW versus £5,604.38 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 112 TW versus 93 LW",
+ "input_tokens": 428,
+ "output_tokens": 176,
+ "cost_usd": 0.0,
+ "latency_s": 0.0,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

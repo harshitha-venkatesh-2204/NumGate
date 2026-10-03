@@ -1,0 +1,9 @@
+{
+ "text": "- Total: revenue £58,323.33 TW, revenue £23,254.70 LW, revenue change +150.8% WoW, revenue change +180.6% YoY\n- LANDMARK FRAME COVENT GARDEN: rank 1, revenue £3,766.40 TW, share 6.5% TW\n- LANDMARK FRAME OXFORD STREET: rank 2, revenue £3,753.90 TW, share 6.4% TW\n- LANDMARK FRAME NOTTING HILL: rank 3, revenue £3,660.00 TW, share 6.3% TW\n- GINGHAM HEART DECORATION (largest WoW increase): revenue change +2054.1% WoW, revenue £1,565.58 TW versus £72.68 LW\n- DOORMAT KEEP CALM AND COME IN (largest WoW decrease): revenue change -34.4% WoW, revenue £1,356.79 TW versus £2,068.84 LW\n- RED  HARMONICA IN BOX (largest YoY increase): revenue change +26576.5% YoY, revenue £3.75 LY\n- CHRISTMAS LIGHTS 10 VINTAGE BAUBLES (largest YoY decrease): revenue change -54.3% YoY, revenue £1,960.94 LY",
+ "input_tokens": 466,
+ "output_tokens": 195,
+ "cost_usd": 0.0,
+ "latency_s": 0.0,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

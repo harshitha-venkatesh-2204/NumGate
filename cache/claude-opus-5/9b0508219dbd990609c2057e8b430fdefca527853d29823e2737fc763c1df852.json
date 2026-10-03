@@ -1,0 +1,9 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER held rank 1 with TW revenue of £3,740.98 versus LW £3,792.77, a WoW change of -1.4%, and took a 6.1% share of TW revenue.\n- RED HANGING HEART T-LIGHT HOLDER ranked 2 at £1,807.91 TW against £822.00 LW, up 119.9% WoW, with units rising from 296 LW to 673 TW.\n- SET/3 RUSSIAN DOLL STACKING TINS posted the largest gain among the top 10 at £1,718.73 TW versus £159.75 LW, a WoW change of 975.9%, on 343 units TW against 27 LW.\n- KENSINGTON COFFEE SET fell to £1,632.90 TW from £7,750.05 LW, a WoW change of -78.9%, with units down from 915 LW to 186 TW.\n- ASSORTED FLOWER COLOUR \"LEIS\" (£639.90), JUMBO SHOPPER VINTAGE RED PAISLEY (£514.50) and RECYCLING BAG RETROSPOT (£403.45) each recorded £0.00 LW, giving no WoW percentage.\n- ASSORTED COLOUR BIRD ORNAMENT dropped to £427.99 TW from £1,386.13 LW, a WoW change of -69.1%, and WOOD S/3 CABINET ANT WHITE FINISH fell to £286.20 TW from £481.03 LW, down 40.5% WoW.\n- PACK OF 72 RETRO SPOT CAKE CASES led TW unit volume at 1,445 units versus 1,203 LW, with revenue of £728.43 TW, up 17.8% WoW.\n- LY revenue is blank for all 109 products in this week 2010-W04 table, so no YoY percentage is available for any entity shown.",
+ "input_tokens": 8418,
+ "output_tokens": 1361,
+ "cost_usd": 0.076115,
+ "latency_s": 13.261,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn"
+}

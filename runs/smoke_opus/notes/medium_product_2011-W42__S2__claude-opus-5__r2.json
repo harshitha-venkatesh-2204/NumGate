@@ -1,0 +1,237 @@
+{
+ "note_id": "medium_product_2011-W42__S2__claude-opus-5__r2",
+ "table_id": "medium_product_2011-W42",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2011-W42",
+ "n_rows": 33,
+ "strategy": "S2",
+ "model": "claude-opus-5",
+ "repeat": 2,
+ "note": "- Total revenue reached \u00a358.3k in TW versus \u00a323.3k in LW, a WoW gain of 150.8%.\n- Against LY revenue of \u00a320.8k, TOTAL revenue is up 180.6% YoY in TW.\n- TOTAL units hit 14,739 in TW (up 104.5% WoW) across 839 orders (up 23.7% WoW).\n- LANDMARK FRAME COVENT GARDEN ranked 1 in TW with \u00a33,766.40, a 6.5% share of TW revenue.\n- LANDMARK FRAME OXFORD STREET delivered \u00a33,753.90 and LANDMARK FRAME NOTTING HILL \u00a33,660.00 in TW, with the top five products holding 31.3% of TW revenue.\n- LANDMARK FRAME LONDON BRIDGE posted \u00a33,603.90 and LANDMARK FRAME BAKER STREET \u00a33,447.50 in TW.\n- GINGHAM HEART DECORATION rose 2,054.1% WoW, the largest absolute swing at \u00a31,492.90, ahead of BOX OF 6 CHRISTMAS CAKE DECORATIONS at 332.6% WoW and WALL ART BIG LOVE at 242.0% WoW.\n- DOORMAT KEEP CALM AND COME IN fell 34.4% WoW, PAPER CHAIN KIT VINTAGE CHRISTMAS fell 27.1% WoW, and PAPER CHAIN KIT 50'S CHRISTMAS fell 5.1% WoW, while RED HARMONICA IN BOX was up 26,576.5% YoY.",
+ "trace": {
+  "strategy": "S2",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "code_0",
+    "system": "You are a data analyst who writes short, correct pandas code.\n\nWrite one Python script that:\n- reads the CSV file whose path is given in sys.argv[1] with pandas,\n- computes up to 25 facts that would be most useful for a weekly executive insight note (largest entities, biggest week over week and year over year movers, shares, totals),\n- prints one JSON array to stdout and nothing else.\n\nEach element of the array is an object with these keys:\n- \"entity\": the Entity value, or \"TOTAL\" for all rows combined.\n- \"metric\": one of revenue, units, orders, share, rank.\n- \"period\": one of TW, LW, LY, WoW, YoY. Use WoW or YoY for changes between periods.\n- \"value\": a plain number (not a string). Round money to 2 decimals and percentages to 1 decimal.\n- \"formula\": a short description of how the value was computed, for example \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\".\n\nUse only pandas, numpy, json and sys. Blank cells are NaN: skip them instead of crashing. Convert numpy numbers to Python floats before json.dumps.\nReturn only the code, inside one ```python block.\n",
+    "user": "The script will be run as: python facts.py table.csv\n\nThe CSV holds a weekly sales report for ISO week 2011-W42. Entity type: product. It has 33 rows and these columns (with pandas dtypes):\n- Entity: str\n- Revenue_TW: float64\n- Revenue_LW: float64\n- Revenue_LY: float64\n- Units_TW: int64\n- Units_LW: int64\n- Orders_TW: int64\n- Orders_LW: int64\n- WoW_Pct: float64\n- YoY_Pct: float64\n- Share_Pct: float64\n- Rank: int64\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\nFirst rows of the file:\nEntity,Revenue_TW,Revenue_LW,Revenue_LY,Units_TW,Units_LW,Orders_TW,Orders_LW,WoW_Pct,YoY_Pct,Share_Pct,Rank\nLANDMARK FRAME COVENT GARDEN,3766.4,0.0,0.0,340,0,12,0,,,6.5,1\nLANDMARK FRAME OXFORD STREET,3753.9,0.0,0.0,339,0,13,0,,,6.4,2\nLANDMARK FRAME NOTTING HILL,3660.0,0.0,0.0,330,0,14,0,,,6.3,3\n\n",
+    "text": "```python\nimport sys, json\nimport numpy as np\nimport pandas as pd\n\n\ndef main():\n    df = pd.read_csv(sys.argv[1])\n    facts = []\n\n    def add(entity, metric, period, value, formula):\n        if value is None or (isinstance(value, float) and not np.isfinite(value)):\n            return\n        if pd.isna(value):\n            return\n        facts.append({\n            \"entity\": str(entity),\n            \"metric\": metric,\n            \"period\": period,\n            \"value\": round(float(value), 1) if metric in (\"share\",) else (\n                float(round(float(value), 1)) if period in (\"WoW\", \"YoY\") else float(round(float(value), 2))),\n            \"formula\": formula,\n        })\n\n    num = lambda c: pd.to_numeric(df[c], errors=\"coerce\") if c in df.columns else pd.Series(dtype=float)\n\n    rev_tw, rev_lw, rev_ly = num(\"Revenue_TW\"), num(\"Revenue_LW\"), num(\"Revenue_LY\")\n    u_tw, u_lw = num(\"Units_TW\"), num(\"Units_LW\")\n    o_tw, o_lw = num(\"Orders_TW\"), num(\"Orders_LW\")\n\n    t_tw, t_lw, t_ly = rev_tw.sum(), rev_lw.sum(), rev_ly.sum()\n    add(\"TOTAL\", \"revenue\", \"TW\", t_tw, \"sum(Revenue_TW)\")\n    add(\"TOTAL\", \"revenue\", \"LW\", t_lw, \"sum(Revenue_LW)\")\n    if t_ly > 0:\n        add(\"TOTAL\", \"revenue\", \"LY\", t_ly, \"sum(Revenue_LY)\")\n    if t_lw > 0:\n        add(\"TOTAL\", \"revenue\", \"WoW\", (t_tw - t_lw) / t_lw * 100,\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\")\n    if t_ly > 0:\n        add(\"TOTAL\", \"revenue\", \"YoY\", (t_tw - t_ly) / t_ly * 100,\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\")\n    add(\"TOTAL\", \"units\", \"TW\", u_tw.sum(), \"sum(Units_TW)\")\n    if u_lw.sum() > 0:\n        add(\"TOTAL\", \"units\", \"WoW\", (u_tw.sum() - u_lw.sum()) / u_lw.sum() * 100,\n            \"(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100\")\n    add(\"TOTAL\", \"orders\", \"TW\", o_tw.sum(), \"sum(Orders_TW)\")\n    if o_lw.sum() > 0:\n        add(\"TOTAL\", \"orders\", \"WoW\", (o_tw.sum() - o_lw.sum()) / o_lw.sum() * 100,\n            \"(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100\")\n\n    w = df.assign(_rev=rev_tw, _lw=rev_lw, _ly=rev_ly).dropna(subset=[\"_rev\"])\n    top = w.sort_values(\"_rev\", ascending=False).head(5)\n    for _, r in top.iterrows():\n        add(r[\"Entity\"], \"revenue\", \"TW\", r[\"_rev\"], \"Revenue_TW for this product\")\n    if len(top):\n        b = top.iloc[0]\n        share = b.get(\"Share_Pct\")\n        if pd.isna(share) and t_tw:\n            share = b[\"_rev\"] / t_tw * 100\n        add(b[\"Entity\"], \"share\", \"TW\", share, \"Revenue_TW / sum(Revenue_TW) * 100\")\n        add(b[\"Entity\"], \"rank\", \"TW\", b.get(\"Rank\", 1), \"rank by Revenue_TW (1 = highest)\")\n    if t_tw:\n        add(\"TOTAL\", \"share\", \"TW\", top[\"_rev\"].sum() / t_tw * 100,\n            \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\")\n\n    # WoW movers (need a real prior-week base)\n    mv = w[(w[\"_lw\"] > 0) & w[\"_rev\"].notna()].copy()\n    mv[\"_wow\"] = (mv[\"_rev\"] - mv[\"_lw\"]) / mv[\"_lw\"] * 100\n    mv[\"_abs\"] = mv[\"_rev\"] - mv[\"_lw\"]\n    up = mv.sort_values(\"_wow\", ascending=False).head(3)\n    dn = mv.sort_values(\"_wow\").head(3)\n    for _, r in up.iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"_wow\"], \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n    for _, r in dn.iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"_wow\"], \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n    if len(mv):\n        big = mv.reindex(mv[\"_abs\"].abs().sort_values(ascending=False).index).iloc[0]\n        add(big[\"Entity\"], \"revenue\", \"WoW\", big[\"_abs\"], \"Revenue_TW - Revenue_LW (largest absolute swing)\")\n\n    # YoY movers\n    yv = w[(w[\"_ly\"] > 0) & w[\"_rev\"].notna()].copy()\n    if len(yv):\n        yv[\"_yoy\"] = (yv[\"_rev\"] - yv[\"_ly\"]) / yv[\"_ly\"] * 100\n        for _, r in yv.sort_values(\"_yoy\", ascending=False).head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"YoY\", r[\"_yoy\"], \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n        for _, r in yv.sort_values(\"_yoy\").head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"YoY\", r[\"_yoy\"], \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    # Units / orders leaders\n    uw = df.assign(_u=u_tw).dropna(subset=[\"_u\"]).sort_values(\"_u\", ascending=False)\n    if len(uw):\n        add(uw.iloc[0][\"Entity\"], \"units\", \"TW\", uw.iloc[0][\"_u\"], \"max(Units_TW)\")\n    ow = df.assign(_o=o_tw).dropna(subset=[\"_o\"]).sort_values(\"_o\", ascending=False)\n    if len(ow):\n        add(ow.iloc[0][\"Entity\"], \"orders\", \"TW\", ow.iloc[0][\"_o\"], \"max(Orders_TW)\")\n\n    print(json.dumps(facts[:25]))\n\n\nif __name__ == \"__main__\":\n    main()\n```",
+    "input_tokens": 1079,
+    "output_tokens": 2515,
+    "cost_usd": 0.06827,
+    "latency_s": 23.844,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "cached": false
+   },
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a list of facts that were already computed from the sales table. Use only these facts. Every number in the note must come from a fact value, copied exactly or rounded (for example \u00a312,345.67 may be written as \u00a312.3k). Do not compute new numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W42. Entity type: product.\n\nFacts (JSON):\n[\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 58323.33,\n  \"formula\": \"sum(Revenue_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LW\",\n  \"value\": 23254.7,\n  \"formula\": \"sum(Revenue_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LY\",\n  \"value\": 20786.76,\n  \"formula\": \"sum(Revenue_LY)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 150.8,\n  \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 180.6,\n  \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 14739.0,\n  \"formula\": \"sum(Units_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"WoW\",\n  \"value\": 104.5,\n  \"formula\": \"(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 839.0,\n  \"formula\": \"sum(Orders_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"WoW\",\n  \"value\": 23.7,\n  \"formula\": \"(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100\"\n },\n {\n  \"entity\": \"LANDMARK FRAME COVENT GARDEN\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3766.4,\n  \"formula\": \"Revenue_TW for this product\"\n },\n {\n  \"entity\": \"LANDMARK FRAME OXFORD STREET\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3753.9,\n  \"formula\": \"Revenue_TW for this product\"\n },\n {\n  \"entity\": \"LANDMARK FRAME NOTTING HILL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3660.0,\n  \"formula\": \"Revenue_TW for this product\"\n },\n {\n  \"entity\": \"LANDMARK FRAME LONDON BRIDGE\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3603.9,\n  \"formula\": \"Revenue_TW for this product\"\n },\n {\n  \"entity\": \"LANDMARK FRAME BAKER STREET\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3447.5,\n  \"formula\": \"Revenue_TW for this product\"\n },\n {\n  \"entity\": \"LANDMARK FRAME COVENT GARDEN\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 6.5,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"LANDMARK FRAME COVENT GARDEN\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 1.0,\n  \"formula\": \"rank by Revenue_TW (1 = highest)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 31.3,\n  \"formula\": \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"GINGHAM HEART DECORATION\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 2054.1,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"BOX OF 6 CHRISTMAS CAKE DECORATIONS\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 332.6,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"WALL ART BIG LOVE\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 242.0,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"DOORMAT KEEP CALM AND COME IN\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -34.4,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"PAPER CHAIN KIT VINTAGE CHRISTMAS\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -27.1,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"PAPER CHAIN KIT 50'S CHRISTMAS\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -5.1,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"GINGHAM HEART DECORATION\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 1492.9,\n  \"formula\": \"Revenue_TW - Revenue_LW (largest absolute swing)\"\n },\n {\n  \"entity\": \"RED  HARMONICA IN BOX\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 26576.5,\n  \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n }\n]\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a358.3k in TW versus \u00a323.3k in LW, a WoW gain of 150.8%.\n- Against LY revenue of \u00a320.8k, TOTAL revenue is up 180.6% YoY in TW.\n- TOTAL units hit 14,739 in TW (up 104.5% WoW) across 839 orders (up 23.7% WoW).\n- LANDMARK FRAME COVENT GARDEN ranked 1 in TW with \u00a33,766.40, a 6.5% share of TW revenue.\n- LANDMARK FRAME OXFORD STREET delivered \u00a33,753.90 and LANDMARK FRAME NOTTING HILL \u00a33,660.00 in TW, with the top five products holding 31.3% of TW revenue.\n- LANDMARK FRAME LONDON BRIDGE posted \u00a33,603.90 and LANDMARK FRAME BAKER STREET \u00a33,447.50 in TW.\n- GINGHAM HEART DECORATION rose 2,054.1% WoW, the largest absolute swing at \u00a31,492.90, ahead of BOX OF 6 CHRISTMAS CAKE DECORATIONS at 332.6% WoW and WALL ART BIG LOVE at 242.0% WoW.\n- DOORMAT KEEP CALM AND COME IN fell 34.4% WoW, PAPER CHAIN KIT VINTAGE CHRISTMAS fell 27.1% WoW, and PAPER CHAIN KIT 50'S CHRISTMAS fell 5.1% WoW, while RED HARMONICA IN BOX was up 26,576.5% YoY.",
+    "input_tokens": 2561,
+    "output_tokens": 557,
+    "cost_usd": 0.02673,
+    "latency_s": 6.97,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "cached": false
+   }
+  ],
+  "code_runs": [
+   {
+    "attempt": 0,
+    "code": "import sys, json\nimport numpy as np\nimport pandas as pd\n\n\ndef main():\n    df = pd.read_csv(sys.argv[1])\n    facts = []\n\n    def add(entity, metric, period, value, formula):\n        if value is None or (isinstance(value, float) and not np.isfinite(value)):\n            return\n        if pd.isna(value):\n            return\n        facts.append({\n            \"entity\": str(entity),\n            \"metric\": metric,\n            \"period\": period,\n            \"value\": round(float(value), 1) if metric in (\"share\",) else (\n                float(round(float(value), 1)) if period in (\"WoW\", \"YoY\") else float(round(float(value), 2))),\n            \"formula\": formula,\n        })\n\n    num = lambda c: pd.to_numeric(df[c], errors=\"coerce\") if c in df.columns else pd.Series(dtype=float)\n\n    rev_tw, rev_lw, rev_ly = num(\"Revenue_TW\"), num(\"Revenue_LW\"), num(\"Revenue_LY\")\n    u_tw, u_lw = num(\"Units_TW\"), num(\"Units_LW\")\n    o_tw, o_lw = num(\"Orders_TW\"), num(\"Orders_LW\")\n\n    t_tw, t_lw, t_ly = rev_tw.sum(), rev_lw.sum(), rev_ly.sum()\n    add(\"TOTAL\", \"revenue\", \"TW\", t_tw, \"sum(Revenue_TW)\")\n    add(\"TOTAL\", \"revenue\", \"LW\", t_lw, \"sum(Revenue_LW)\")\n    if t_ly > 0:\n        add(\"TOTAL\", \"revenue\", \"LY\", t_ly, \"sum(Revenue_LY)\")\n    if t_lw > 0:\n        add(\"TOTAL\", \"revenue\", \"WoW\", (t_tw - t_lw) / t_lw * 100,\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\")\n    if t_ly > 0:\n        add(\"TOTAL\", \"revenue\", \"YoY\", (t_tw - t_ly) / t_ly * 100,\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\")\n    add(\"TOTAL\", \"units\", \"TW\", u_tw.sum(), \"sum(Units_TW)\")\n    if u_lw.sum() > 0:\n        add(\"TOTAL\", \"units\", \"WoW\", (u_tw.sum() - u_lw.sum()) / u_lw.sum() * 100,\n            \"(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100\")\n    add(\"TOTAL\", \"orders\", \"TW\", o_tw.sum(), \"sum(Orders_TW)\")\n    if o_lw.sum() > 0:\n        add(\"TOTAL\", \"orders\", \"WoW\", (o_tw.sum() - o_lw.sum()) / o_lw.sum() * 100,\n            \"(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100\")\n\n    w = df.assign(_rev=rev_tw, _lw=rev_lw, _ly=rev_ly).dropna(subset=[\"_rev\"])\n    top = w.sort_values(\"_rev\", ascending=False).head(5)\n    for _, r in top.iterrows():\n        add(r[\"Entity\"], \"revenue\", \"TW\", r[\"_rev\"], \"Revenue_TW for this product\")\n    if len(top):\n        b = top.iloc[0]\n        share = b.get(\"Share_Pct\")\n        if pd.isna(share) and t_tw:\n            share = b[\"_rev\"] / t_tw * 100\n        add(b[\"Entity\"], \"share\", \"TW\", share, \"Revenue_TW / sum(Revenue_TW) * 100\")\n        add(b[\"Entity\"], \"rank\", \"TW\", b.get(\"Rank\", 1), \"rank by Revenue_TW (1 = highest)\")\n    if t_tw:\n        add(\"TOTAL\", \"share\", \"TW\", top[\"_rev\"].sum() / t_tw * 100,\n            \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\")\n\n    # WoW movers (need a real prior-week base)\n    mv = w[(w[\"_lw\"] > 0) & w[\"_rev\"].notna()].copy()\n    mv[\"_wow\"] = (mv[\"_rev\"] - mv[\"_lw\"]) / mv[\"_lw\"] * 100\n    mv[\"_abs\"] = mv[\"_rev\"] - mv[\"_lw\"]\n    up = mv.sort_values(\"_wow\", ascending=False).head(3)\n    dn = mv.sort_values(\"_wow\").head(3)\n    for _, r in up.iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"_wow\"], \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n    for _, r in dn.iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"_wow\"], \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n    if len(mv):\n        big = mv.reindex(mv[\"_abs\"].abs().sort_values(ascending=False).index).iloc[0]\n        add(big[\"Entity\"], \"revenue\", \"WoW\", big[\"_abs\"], \"Revenue_TW - Revenue_LW (largest absolute swing)\")\n\n    # YoY movers\n    yv = w[(w[\"_ly\"] > 0) & w[\"_rev\"].notna()].copy()\n    if len(yv):\n        yv[\"_yoy\"] = (yv[\"_rev\"] - yv[\"_ly\"]) / yv[\"_ly\"] * 100\n        for _, r in yv.sort_values(\"_yoy\", ascending=False).head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"YoY\", r[\"_yoy\"], \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n        for _, r in yv.sort_values(\"_yoy\").head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"YoY\", r[\"_yoy\"], \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    # Units / orders leaders\n    uw = df.assign(_u=u_tw).dropna(subset=[\"_u\"]).sort_values(\"_u\", ascending=False)\n    if len(uw):\n        add(uw.iloc[0][\"Entity\"], \"units\", \"TW\", uw.iloc[0][\"_u\"], \"max(Units_TW)\")\n    ow = df.assign(_o=o_tw).dropna(subset=[\"_o\"]).sort_values(\"_o\", ascending=False)\n    if len(ow):\n        add(ow.iloc[0][\"Entity\"], \"orders\", \"TW\", ow.iloc[0][\"_o\"], \"max(Orders_TW)\")\n\n    print(json.dumps(facts[:25]))\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "error": "",
+    "stdout": "lue\": 3660.0, \"formula\": \"Revenue_TW for this product\"}, {\"entity\": \"LANDMARK FRAME LONDON BRIDGE\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 3603.9, \"formula\": \"Revenue_TW for this product\"}, {\"entity\": \"LANDMARK FRAME BAKER STREET\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 3447.5, \"formula\": \"Revenue_TW for this product\"}, {\"entity\": \"LANDMARK FRAME COVENT GARDEN\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 6.5, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"LANDMARK FRAME COVENT GARDEN\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 1.0, \"formula\": \"rank by Revenue_TW (1 = highest)\"}, {\"entity\": \"TOTAL\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 31.3, \"formula\": \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\"}, {\"entity\": \"GINGHAM HEART DECORATION\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 2054.1, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"BOX OF 6 CHRISTMAS CAKE DECORATIONS\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 332.6, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"WALL ART BIG LOVE\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 242.0, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"DOORMAT KEEP CALM AND COME IN\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -34.4, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"PAPER CHAIN KIT VINTAGE CHRISTMAS\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -27.1, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"PAPER CHAIN KIT 50'S CHRISTMAS\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -5.1, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"GINGHAM HEART DECORATION\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 1492.9, \"formula\": \"Revenue_TW - Revenue_LW (largest absolute swing)\"}, {\"entity\": \"RED  HARMONICA IN BOX\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": 26576.5, \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"}]\n"
+   }
+  ],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "facts": [
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 58323.33,
+    "formula": "sum(Revenue_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LW",
+    "value": 23254.7,
+    "formula": "sum(Revenue_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LY",
+    "value": 20786.76,
+    "formula": "sum(Revenue_LY)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 150.8,
+    "formula": "(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 180.6,
+    "formula": "(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "TW",
+    "value": 14739.0,
+    "formula": "sum(Units_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "WoW",
+    "value": 104.5,
+    "formula": "(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "TW",
+    "value": 839.0,
+    "formula": "sum(Orders_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "WoW",
+    "value": 23.7,
+    "formula": "(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100"
+   },
+   {
+    "entity": "LANDMARK FRAME COVENT GARDEN",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3766.4,
+    "formula": "Revenue_TW for this product"
+   },
+   {
+    "entity": "LANDMARK FRAME OXFORD STREET",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3753.9,
+    "formula": "Revenue_TW for this product"
+   },
+   {
+    "entity": "LANDMARK FRAME NOTTING HILL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3660.0,
+    "formula": "Revenue_TW for this product"
+   },
+   {
+    "entity": "LANDMARK FRAME LONDON BRIDGE",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3603.9,
+    "formula": "Revenue_TW for this product"
+   },
+   {
+    "entity": "LANDMARK FRAME BAKER STREET",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3447.5,
+    "formula": "Revenue_TW for this product"
+   },
+   {
+    "entity": "LANDMARK FRAME COVENT GARDEN",
+    "metric": "share",
+    "period": "TW",
+    "value": 6.5,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "LANDMARK FRAME COVENT GARDEN",
+    "metric": "rank",
+    "period": "TW",
+    "value": 1.0,
+    "formula": "rank by Revenue_TW (1 = highest)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "share",
+    "period": "TW",
+    "value": 31.3,
+    "formula": "sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "GINGHAM HEART DECORATION",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 2054.1,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "BOX OF 6 CHRISTMAS CAKE DECORATIONS",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 332.6,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "WALL ART BIG LOVE",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 242.0,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "DOORMAT KEEP CALM AND COME IN",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -34.4,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "PAPER CHAIN KIT VINTAGE CHRISTMAS",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -27.1,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "PAPER CHAIN KIT 50'S CHRISTMAS",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -5.1,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "GINGHAM HEART DECORATION",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 1492.9,
+    "formula": "Revenue_TW - Revenue_LW (largest absolute swing)"
+   },
+   {
+    "entity": "RED  HARMONICA IN BOX",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 26576.5,
+    "formula": "(Revenue_TW - Revenue_LY) / Revenue_LY * 100"
+   }
+  ],
+  "n_calls": 2,
+  "tokens_in": 3640,
+  "tokens_out": 3072,
+  "cost_usd": 0.095,
+  "latency_s": 30.814
+ }
+}

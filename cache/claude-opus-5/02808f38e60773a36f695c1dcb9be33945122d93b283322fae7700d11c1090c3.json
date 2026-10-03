@@ -1,0 +1,9 @@
+{
+ "text": "- TOTAL revenue reached £112.6k TW versus £58.2k LW, a WoW gain of 93.7%.\n- TOTAL revenue was £47.5k LY, putting TW at 137.2% YoY growth.\n- TOTAL units hit 42,286 TW, up 97.3% WoW, while TOTAL orders reached 2,461 TW, up 11.4% WoW.\n- LANDMARK FRAME COVENT GARDEN led products at £3,766.40 TW with a 3.3% share of TOTAL revenue, all £3,766.40 incremental WoW.\n- LANDMARK FRAME OXFORD STREET posted £3,753.90 TW and a 3.3% share, with LANDMARK FRAME NOTTING HILL at £3,660.00 TW and a 3.2% share, both added entirely WoW.\n- LANDMARK FRAME LONDON BRIDGE recorded £3,603.90 TW and LANDMARK FRAME BAKER STREET £3,447.50 TW, with the top five products holding 16.2% of TOTAL revenue TW.\n- WHITE HANGING HEART T-LIGHT HOLDER fell £1,203.07 WoW, the largest product decline, followed by DOORMAT KEEP CALM AND COME IN at £712.05 and RED WOOLLY HOTTIE WHITE HEART. at £626.09.\n- GINGHAM HEART DECORATION rose 2,054.1% WoW TW.",
+ "input_tokens": 2490,
+ "output_tokens": 506,
+ "cost_usd": 0.025099999999999997,
+ "latency_s": 6.493,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn"
+}

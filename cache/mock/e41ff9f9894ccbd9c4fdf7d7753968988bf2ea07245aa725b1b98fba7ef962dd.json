@@ -1,0 +1,9 @@
+{
+ "text": "- Total revenue was £157,731.41 TW\n- Total revenue was down 11.9% WoW\n- United Kingdom revenue was £117,273.84 TW\n- United Kingdom held a 74.4% share of revenue TW\n- United Kingdom revenue was down 30.4% WoW\n- Netherlands revenue was £18,002.00 TW\n- Netherlands held a 11.4% share of revenue TW\n- Netherlands revenue was up 1414.9% WoW",
+ "input_tokens": 889,
+ "output_tokens": 83,
+ "cost_usd": 0.0,
+ "latency_s": 0.0,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

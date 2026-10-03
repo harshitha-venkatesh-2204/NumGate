@@ -1,0 +1,9 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led revenue with £5.9k TW, a 21.4% share of the 10 products shown\n- REGENCY CAKESTAND 3 TIER revenue was down 45.7% WoW from £10,902.59 LW\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2nd with £4,251.25 TW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW gain, up 8063.4% to £2,449.01 TW\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 46.9% WoW to £2,149.75 TW\n- REGENCY CAKESTAND 3 TIER sold 442 units TW versus 851 units LW\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 68 orders TW versus 86 LW\n- Total revenue across the products shown was £27.7k TW, down 8.4% WoW",
+ "input_tokens": 944,
+ "output_tokens": 155,
+ "cost_usd": 0.0,
+ "latency_s": 0.001,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

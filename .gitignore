@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+data/raw/*.zip
+data/raw/*.xlsx
+data/interim/
+.claude/
+.DS_Store
+# an older copy of the paper; the current one is paper/numgate.pdf
+/numgate.pdf

@@ -1,0 +1,9 @@
+{
+ "text": "- TOTAL revenue reached £112.6k TW versus £58.2k LW, a WoW gain of 93.7%.\n- TOTAL revenue of £112.6k TW compares with £47.5k LY, a YoY gain of 137.2%.\n- TOTAL units came in at 42,286 TW, up 97.3% WoW.\n- TOTAL orders reached 2,461 TW, up 11.4% WoW.\n- LANDMARK FRAME COVENT GARDEN ranked 1 TW with £3,766.40 revenue and a 3.3% share of TOTAL TW revenue.\n- LANDMARK FRAME OXFORD STREET ranked 2 TW at £3,753.90 and LANDMARK FRAME NOTTING HILL ranked 3 TW at £3,660.00, holding 3.3% and 3.2% TW share.\n- LANDMARK FRAME LONDON BRIDGE ranked 4 TW at £3,603.90 (3.2% TW share) and LANDMARK FRAME BAKER STREET ranked 5 TW at £3,447.50 (3.1% TW share).\n- The top 5 products together held 16.2% of TOTAL revenue TW.",
+ "input_tokens": 2471,
+ "output_tokens": 408,
+ "cost_usd": 0.022555,
+ "latency_s": 5.186,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn"
+}

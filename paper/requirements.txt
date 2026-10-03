@@ -1,0 +1,2 @@
+# Extra packages for building the paper PDF (paper/build_pdf.py); the harness itself does not need them.
+reportlab>=4.0

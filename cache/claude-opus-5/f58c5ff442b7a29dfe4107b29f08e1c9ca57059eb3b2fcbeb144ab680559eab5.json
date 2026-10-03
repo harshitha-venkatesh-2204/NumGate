@@ -1,0 +1,9 @@
+{
+ "text": "- TOTAL revenue reached £61.8k TW versus £55.3k LW, a WoW gain of 11.8%.\n- TOTAL units came in at 21,178 TW against 18,670 LW, up 13.4% WoW, while TOTAL orders held flat at 1,154 TW, up 0.1% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 TW with £8,406.79 revenue, 13.6% of TOTAL TW revenue, and 3,172 units, the highest unit count TW.\n- WHITE HANGING HEART T-LIGHT HOLDER added £3,464.60 WoW, a 70.1% WoW increase.\n- EDWARDIAN PARASOL BLACK posted £3,448.60 TW at a 5.6% share of TOTAL TW revenue, and FAIRY CAKE CANDLES posted £3,065.02 TW at 5.0% share.\n- FAIRY CAKE CANDLES gained £1,683.17 WoW, and SCOTTIE DOG HOT WATER BOTTLE rose 58.8% WoW.\n- PAPER CHAIN KIT 50'S CHRISTMAS fell £3,461.35 WoW, down 61.8%, and WHITE CHERRY LIGHTS fell £1,427.86 WoW, down 54.1%.\n- The top 5 products accounted for 33.8% of TOTAL revenue TW.",
+ "input_tokens": 2530,
+ "output_tokens": 496,
+ "cost_usd": 0.02505,
+ "latency_s": 6.17,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn"
+}

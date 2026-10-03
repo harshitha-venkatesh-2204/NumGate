@@ -1,0 +1,9 @@
+The script will be run as: python facts.py table.csv
+
+The CSV holds a weekly sales report for ISO week {week}. Entity type: {entity_type}. It has {n_rows} rows and these columns (with pandas dtypes):
+{schema}
+
+{columns_guide}
+
+First rows of the file:
+{head_csv}

@@ -1,0 +1,41 @@
+{
+ "note_id": "small_product_2010-W50__S4__claude-opus-5__r1",
+ "table_id": "small_product_2010-W50",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W50",
+ "n_rows": 10,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- Total revenue was \u00a327,724.70 TW versus \u00a330,272.96 LW, a change of -8.4% WoW, and +89.1% YoY.\n- REGENCY CAKESTAND 3 TIER held rank 1 with \u00a35,919.72 TW and a 21.4% TW share, a change of -45.7% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER took rank 2 with \u00a34,251.25 TW and a 15.3% TW share, a change of +20.1% WoW.\n- CHILLI LIGHTS ranked 3 with \u00a32,494.07 TW and a 9.0% TW share, a change of +26.4% WoW.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW increase at +8063.4%, with \u00a32,449.01 TW versus \u00a330.00 LW.\n- PAPER CHAIN KIT 50'S CHRISTMAS posted the largest WoW decrease at -46.9%, with \u00a32,149.75 TW versus \u00a34,048.91 LW.\n- ROTATING SILVER ANGELS T-LIGHT HLDR recorded the largest YoY increase at +1030.5%, against \u00a3191.29 LY, while WHITE HANGING HEART T-LIGHT HOLDER recorded the largest YoY decrease at -49.4%, against \u00a38,406.79 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 68 orders TW versus 86 orders LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W50. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a327,724.70 TW, revenue \u00a330,272.96 LW, revenue change -8.4% WoW, revenue change +89.1% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a35,919.72 TW, share 21.4% TW, revenue change -45.7% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a34,251.25 TW, share 15.3% TW, revenue change +20.1% WoW\n- CHILLI LIGHTS: rank 3, revenue \u00a32,494.07 TW, share 9.0% TW, revenue change +26.4% WoW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN (largest WoW increase): revenue change +8063.4% WoW, revenue \u00a32,449.01 TW versus \u00a330.00 LW\n- PAPER CHAIN KIT 50'S CHRISTMAS (largest WoW decrease): revenue change -46.9% WoW, revenue \u00a32,149.75 TW versus \u00a34,048.91 LW\n- ROTATING SILVER ANGELS T-LIGHT HLDR (largest YoY increase): revenue change +1030.5% YoY, revenue \u00a3191.29 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (largest YoY decrease): revenue change -49.4% YoY, revenue \u00a38,406.79 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 68 TW versus 86 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue was \u00a327,724.70 TW versus \u00a330,272.96 LW, a change of -8.4% WoW, and +89.1% YoY.\n- REGENCY CAKESTAND 3 TIER held rank 1 with \u00a35,919.72 TW and a 21.4% TW share, a change of -45.7% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER took rank 2 with \u00a34,251.25 TW and a 15.3% TW share, a change of +20.1% WoW.\n- CHILLI LIGHTS ranked 3 with \u00a32,494.07 TW and a 9.0% TW share, a change of +26.4% WoW.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW increase at +8063.4%, with \u00a32,449.01 TW versus \u00a330.00 LW.\n- PAPER CHAIN KIT 50'S CHRISTMAS posted the largest WoW decrease at -46.9%, with \u00a32,149.75 TW versus \u00a34,048.91 LW.\n- ROTATING SILVER ANGELS T-LIGHT HLDR recorded the largest YoY increase at +1030.5%, against \u00a3191.29 LY, while WHITE HANGING HEART T-LIGHT HOLDER recorded the largest YoY decrease at -49.4%, against \u00a38,406.79 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 68 orders TW versus 86 orders LW.",
+    "input_tokens": 885,
+    "output_tokens": 515,
+    "cost_usd": 0.0173,
+    "latency_s": 5.923,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a327,724.70 TW, revenue \u00a330,272.96 LW, revenue change -8.4% WoW, revenue change +89.1% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a35,919.72 TW, share 21.4% TW, revenue change -45.7% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a34,251.25 TW, share 15.3% TW, revenue change +20.1% WoW\n- CHILLI LIGHTS: rank 3, revenue \u00a32,494.07 TW, share 9.0% TW, revenue change +26.4% WoW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN (largest WoW increase): revenue change +8063.4% WoW, revenue \u00a32,449.01 TW versus \u00a330.00 LW\n- PAPER CHAIN KIT 50'S CHRISTMAS (largest WoW decrease): revenue change -46.9% WoW, revenue \u00a32,149.75 TW versus \u00a34,048.91 LW\n- ROTATING SILVER ANGELS T-LIGHT HLDR (largest YoY increase): revenue change +1030.5% YoY, revenue \u00a3191.29 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (largest YoY decrease): revenue change -49.4% YoY, revenue \u00a38,406.79 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 68 TW versus 86 LW",
+  "n_calls": 1,
+  "tokens_in": 885,
+  "tokens_out": 515,
+  "cost_usd": 0.0173,
+  "latency_s": 5.923
+ }
+}

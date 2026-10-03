@@ -1,0 +1,40 @@
+{
+ "note_id": "medium_product_2009-W50__S1__mock__r2",
+ "table_id": "medium_product_2009-W50",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2009-W50",
+ "n_rows": 30,
+ "strategy": "S1",
+ "model": "mock",
+ "repeat": 2,
+ "note": "- WHITE HANGING HEART T-LIGHT HOLDER led revenue with \u00a38.4k TW, a 13.6% share of the 30 products shown\n- WHITE HANGING HEART T-LIGHT HOLDER revenue was up 70.1% WoW from \u00a34,942.19 LW\n- EDWARDIAN PARASOL BLACK ranked 2nd with \u00a33,448.60 TW\n- BLACK RECORD COVER FRAME posted the largest WoW gain, up 185.5% to \u00a31,144.96 TW\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 61.8% WoW to \u00a32,143.03 TW\n- WHITE HANGING HEART T-LIGHT HOLDER sold 3,172 units TW versus 1,851 units LW\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 119 orders TW versus 93 LW\n- Total revenue across the products shown was \u00a361.8k TW, up 11.8% WoW",
+ "trace": {
+  "strategy": "S1",
+  "model": "mock",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2009-W50. Entity type: product. The table has 30 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| WHITE HANGING HEART T-LIGHT HOLDER | 8406.79 | 4942.19 |  | 3172 | 1851 | 112 | 93 | 70.1 |  | 13.6 | 1 |\n| EDWARDIAN PARASOL BLACK | 3448.60 | 3927.55 |  | 910 | 1030 | 28 | 24 | -12.2 |  | 5.6 | 2 |\n| FAIRY CAKE CANDLES | 3065.02 | 1381.85 |  | 2318 | 997 | 50 | 41 | 121.8 |  | 5.0 | 3 |\n| RED/WHITE DOTS RUFFLED UMBRELLA | 3021.80 | 2731.60 |  | 803 | 748 | 40 | 42 | 10.6 |  | 4.9 | 4 |\n| EDWARDIAN PARASOL NATURAL | 2935.10 | 2412.45 |  | 818 | 711 | 18 | 18 | 21.7 |  | 4.7 | 5 |\n| SCOTTIE DOG HOT WATER BOTTLE | 2797.98 | 1762.11 |  | 563 | 344 | 75 | 51 | 58.8 |  | 4.5 | 6 |\n| EDWARDIAN PARASOL RED | 2755.55 | 3114.25 |  | 773 | 856 | 20 | 23 | -11.5 |  | 4.5 | 7 |\n| BLACK/BLUE DOTS RUFFLED UMBRELLA | 2708.55 | 2275.00 |  | 750 | 676 | 30 | 24 | 19.1 |  | 4.4 | 8 |\n| PINK/BROWN DOTS RUFFLED UMBRELLA | 2341.55 | 1864.85 |  | 686 | 599 | 18 | 12 | 25.6 |  | 3.8 | 9 |\n| PAPER CHAIN KIT 50'S CHRISTMAS | 2143.03 | 5604.38 |  | 663 | 2060 | 49 | 84 | -61.8 |  | 3.5 | 10 |\n| JUMBO BAG RED WHITE SPOTTY | 2105.80 | 2159.25 |  | 1233 | 1198 | 29 | 55 | -2.5 |  | 3.4 | 11 |\n| ASSORTED COLOUR BIRD ORNAMENT | 2046.22 | 3160.37 |  | 1213 | 2023 | 29 | 41 | -35.3 |  | 3.3 | 12 |\n| CHOCOLATE HOT WATER BOTTLE | 1946.88 | 1369.46 |  | 406 | 283 | 50 | 37 | 42.2 |  | 3.1 | 13 |\n| HOT WATER BOTTLE TEA AND SYMPATHY | 1869.00 | 1778.15 |  | 466 | 439 | 61 | 57 | 5.1 |  | 3.0 | 14 |\n| RED SPOT HEART HOT WATER BOTTLE | 1808.44 | 850.71 |  | 384 | 171 | 55 | 38 | 112.6 |  | 2.9 | 15 |\n| RETRO SPOT CAKE STAND | 1698.40 | 776.05 |  | 157 | 64 | 27 | 28 | 118.9 |  | 2.7 | 16 |\n| ANTIQUE SILVER TEA GLASS ETCHED | 1527.93 | 726.97 |  | 1265 | 557 | 41 | 32 | 110.2 |  | 2.5 | 17 |\n| GREY HEART HOT WATER BOTTLE | 1394.46 | 615.12 |  | 410 | 167 | 43 | 31 | 126.7 |  | 2.3 | 18 |\n| STRAWBERRY CERAMIC TRINKET BOX | 1346.72 | 1239.62 |  | 1036 | 982 | 53 | 57 | 8.6 |  | 2.2 | 19 |\n| TEA TIME CAKE STAND IN GIFT BOX | 1258.00 | 819.15 |  | 121 | 72 | 21 | 23 | 53.6 |  | 2.0 | 20 |\n| KNITTED UNION FLAG HOT WATER BOTTLE | 1217.94 | 1125.34 |  | 337 | 311 | 35 | 35 | 8.2 |  | 2.0 | 21 |\n| WHITE CHERRY LIGHTS | 1213.62 | 2641.48 |  | 198 | 440 | 36 | 45 | -54.1 |  | 2.0 | 22 |\n| JUMBO  BAG BAROQUE BLACK WHITE | 1151.85 | 912.35 |  | 683 | 508 | 13 | 24 | 26.3 |  | 1.9 | 23 |\n| BLACK RECORD COVER FRAME | 1144.96 | 401.00 |  | 319 | 114 | 13 | 6 | 185.5 |  | 1.9 | 24 |\n| PINK CHERRY LIGHTS | 1130.42 | 1952.91 |  | 174 | 329 | 33 | 34 | -42.1 |  | 1.8 | 25 |\n| RETRO SPOT TEA SET CERAMIC 11 PC | 1093.47 | 1704.91 |  | 209 | 341 | 50 | 60 | -35.9 |  | 1.8 | 26 |\n| BAKING SET 9 PIECE RETROSPOT | 1091.52 | 1132.95 |  | 212 | 214 | 44 | 62 | -3.7 |  | 1.8 | 27 |\n| CHICK GREY HOT WATER BOTTLE | 1076.30 | 421.98 |  | 337 | 120 | 32 | 23 | 155.1 |  | 1.7 | 28 |\n| RED HANGING HEART T-LIGHT HOLDER | 1055.58 | 1161.47 |  | 389 | 413 | 35 | 42 | -9.1 |  | 1.7 | 29 |\n| WILLOW BRANCH LIGHTS. | 1033.11 | 362.52 |  | 173 | 52 | 14 | 11 | 185.0 |  | 1.7 | 30 |\n\nWrite the insight note now.\n",
+    "text": "- WHITE HANGING HEART T-LIGHT HOLDER led revenue with \u00a38.4k TW, a 13.6% share of the 30 products shown\n- WHITE HANGING HEART T-LIGHT HOLDER revenue was up 70.1% WoW from \u00a34,942.19 LW\n- EDWARDIAN PARASOL BLACK ranked 2nd with \u00a33,448.60 TW\n- BLACK RECORD COVER FRAME posted the largest WoW gain, up 185.5% to \u00a31,144.96 TW\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 61.8% WoW to \u00a32,143.03 TW\n- WHITE HANGING HEART T-LIGHT HOLDER sold 3,172 units TW versus 1,851 units LW\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 119 orders TW versus 93 LW\n- Total revenue across the products shown was \u00a361.8k TW, up 11.8% WoW",
+    "input_tokens": 1177,
+    "output_tokens": 157,
+    "cost_usd": 0.0,
+    "latency_s": 0.001,
+    "model": "mock",
+    "stop_reason": "end_turn",
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1177,
+  "tokens_out": 157,
+  "cost_usd": 0.0,
+  "latency_s": 0.001
+ }
+}

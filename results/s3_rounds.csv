@@ -1,0 +1,3 @@
+model,round,mean_note_rate,ci_lo,ci_hi,n_notes
+claude-opus-5,0,0.007352941176470589,0.0,0.022058823529411766,12
+claude-opus-5,1,0.0,0.0,0.0,12

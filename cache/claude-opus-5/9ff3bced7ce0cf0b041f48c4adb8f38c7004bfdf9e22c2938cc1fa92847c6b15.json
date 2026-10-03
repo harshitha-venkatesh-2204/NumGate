@@ -1,0 +1,9 @@
+{
+ "text": "- United Kingdom led TW at £117,273.84 (74.4% share, Rank 1), down 30.4% WoW from £168,403.05 LW.\n- Netherlands ranked 2 TW at £18,002.00, up 1,414.9% WoW from",
+ "input_tokens": 1010,
+ "output_tokens": 86,
+ "cost_usd": 0.0072,
+ "latency_s": 2.538,
+ "model": "claude-opus-5",
+ "stop_reason": "refusal"
+}

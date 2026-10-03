@@ -1,0 +1,11 @@
+{original_request}
+
+Your previous script was:
+```python
+{code}
+```
+
+It failed with this error:
+{error}
+
+Return a corrected script, only the code, inside one ```python block.

@@ -1,0 +1,41 @@
+{
+ "note_id": "small_country_2010-W18__S4__mock__r1",
+ "table_id": "small_country_2010-W18",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2010-W18",
+ "n_rows": 6,
+ "strategy": "S4",
+ "model": "mock",
+ "repeat": 1,
+ "note": "- Total: revenue \u00a3157,731.41 TW, revenue \u00a3179,041.64 LW, revenue change -11.9% WoW\n- United Kingdom: rank 1, revenue \u00a3117,273.84 TW, share 74.4% TW, revenue change -30.4% WoW\n- Netherlands: rank 2, revenue \u00a318,002.00 TW, share 11.4% TW, revenue change +1414.9% WoW\n- EIRE: rank 3, revenue \u00a39,248.22 TW, share 5.9% TW, revenue change +61.3% WoW\n- Netherlands (largest WoW increase): revenue change +1414.9% WoW, revenue \u00a318,002.00 TW versus \u00a31,188.30 LW\n- United Kingdom (largest WoW decrease): revenue change -30.4% WoW, revenue \u00a3117,273.84 TW versus \u00a3168,403.05 LW\n- United Kingdom (most orders): orders 314 TW versus 397 LW",
+ "trace": {
+  "strategy": "S4",
+  "model": "mock",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W18. Entity type: country.\n\nFacts packet:\n- Total: revenue \u00a3157,731.41 TW, revenue \u00a3179,041.64 LW, revenue change -11.9% WoW\n- United Kingdom: rank 1, revenue \u00a3117,273.84 TW, share 74.4% TW, revenue change -30.4% WoW\n- Netherlands: rank 2, revenue \u00a318,002.00 TW, share 11.4% TW, revenue change +1414.9% WoW\n- EIRE: rank 3, revenue \u00a39,248.22 TW, share 5.9% TW, revenue change +61.3% WoW\n- Netherlands (largest WoW increase): revenue change +1414.9% WoW, revenue \u00a318,002.00 TW versus \u00a31,188.30 LW\n- United Kingdom (largest WoW decrease): revenue change -30.4% WoW, revenue \u00a3117,273.84 TW versus \u00a3168,403.05 LW\n- United Kingdom (most orders): orders 314 TW versus 397 LW\n\nWrite the insight note now.\n",
+    "text": "- Total: revenue \u00a3157,731.41 TW, revenue \u00a3179,041.64 LW, revenue change -11.9% WoW\n- United Kingdom: rank 1, revenue \u00a3117,273.84 TW, share 74.4% TW, revenue change -30.4% WoW\n- Netherlands: rank 2, revenue \u00a318,002.00 TW, share 11.4% TW, revenue change +1414.9% WoW\n- EIRE: rank 3, revenue \u00a39,248.22 TW, share 5.9% TW, revenue change +61.3% WoW\n- Netherlands (largest WoW increase): revenue change +1414.9% WoW, revenue \u00a318,002.00 TW versus \u00a31,188.30 LW\n- United Kingdom (largest WoW decrease): revenue change -30.4% WoW, revenue \u00a3117,273.84 TW versus \u00a3168,403.05 LW\n- United Kingdom (most orders): orders 314 TW versus 397 LW",
+    "input_tokens": 409,
+    "output_tokens": 156,
+    "cost_usd": 0.0,
+    "latency_s": 0.0,
+    "model": "mock",
+    "stop_reason": "end_turn",
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a3157,731.41 TW, revenue \u00a3179,041.64 LW, revenue change -11.9% WoW\n- United Kingdom: rank 1, revenue \u00a3117,273.84 TW, share 74.4% TW, revenue change -30.4% WoW\n- Netherlands: rank 2, revenue \u00a318,002.00 TW, share 11.4% TW, revenue change +1414.9% WoW\n- EIRE: rank 3, revenue \u00a39,248.22 TW, share 5.9% TW, revenue change +61.3% WoW\n- Netherlands (largest WoW increase): revenue change +1414.9% WoW, revenue \u00a318,002.00 TW versus \u00a31,188.30 LW\n- United Kingdom (largest WoW decrease): revenue change -30.4% WoW, revenue \u00a3117,273.84 TW versus \u00a3168,403.05 LW\n- United Kingdom (most orders): orders 314 TW versus 397 LW",
+  "n_calls": 1,
+  "tokens_in": 409,
+  "tokens_out": 156,
+  "cost_usd": 0.0,
+  "latency_s": 0.0
+ }
+}

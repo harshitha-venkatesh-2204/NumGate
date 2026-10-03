@@ -1,0 +1,63 @@
+# NumGate experiment configuration. Every script reads this file.
+
+seed: 42
+
+# Models used to write notes. Keys are the names used everywhere else.
+# provider: mock | anthropic | openai | openrouter
+# price_in / price_out: USD per 1M tokens (check the provider page before a paid run).
+# supports_temperature: false for models that reject the temperature parameter.
+models:
+  mock:
+    provider: mock
+    model_id: mock
+    price_in: 0.0
+    price_out: 0.0
+    supports_temperature: true
+  claude-opus-5:
+    provider: anthropic
+    model_id: claude-opus-5
+    price_in: 5.00
+    price_out: 25.00
+    supports_temperature: false
+  gpt-4.1:
+    provider: openai
+    model_id: gpt-4.1
+    price_in: 2.00
+    price_out: 8.00
+    supports_temperature: true
+  llama-3.3-70b:
+    provider: openrouter
+    model_id: meta-llama/llama-3.3-70b-instruct
+    price_in: 0.13
+    price_out: 0.40
+    supports_temperature: true
+  claude-haiku-4-5:
+    provider: anthropic
+    model_id: claude-haiku-4-5
+    price_in: 1.00
+    price_out: 5.00
+    supports_temperature: true
+
+# Cheap model that turns bullet lines into (entity, metric, period, value, direction) triples.
+# For the mock writer the regex fallback is used instead, so smoke runs stay offline.
+extractor_model: claude-haiku-4-5
+
+# Models run in a full experiment (the --smoke flag overrides this with [mock]).
+experiment_models: [claude-opus-5, gpt-4.1, llama-3.3-70b]
+
+strategies: [S1, S2, S3, S4]
+sizes: [small, medium, large]
+tables_per_size: 20
+repeats: 2
+max_budget_usd: 20.0
+workers: 4               # parallel API calls during generation and claim extraction
+max_tokens: 16000   # generous because Opus 5 thinks by default; only used tokens are billed
+s3_max_rounds: 2
+s2_timeout_seconds: 30
+
+# Table construction
+tables:
+  top_products: 150         # product universe considered when building product tables
+  small_rows: [5, 10]
+  medium_rows: [20, 40]
+  large_rows: [80, 150]

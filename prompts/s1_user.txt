@@ -1,0 +1,7 @@
+Weekly sales report for ISO week {week}. Entity type: {entity_type}. The table has {n_rows} rows.
+
+{columns_guide}
+
+{table_markdown}
+
+Write the insight note now.

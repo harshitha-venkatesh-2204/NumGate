@@ -1,0 +1,235 @@
+{
+  "gate_md5": "bcdb434ba30ad334a702493668a0ce39",
+  "notes": 28,
+  "numeric_mentions": 681,
+  "word_form_mentions": 3,
+  "word_form_outcomes": {
+    "nm_skipped": 3
+  },
+  "gate_records": 676,
+  "gate_records_unmatched": 0,
+  "gate_records_matching_several_truth_mentions": 0,
+  "correct": 435,
+  "false_alarms": 7,
+  "correct_not_extracted": 0,
+  "correct_passed": 428,
+  "wrong": 146,
+  "caught": 90,
+  "misses": 56,
+  "wrong_not_extracted": 0,
+  "non_measures": 100,
+  "non_measures_N": 54,
+  "non_measures_CNT": 46,
+  "non_measures_skipped": 79,
+  "non_measures_flagged": 1,
+  "non_measures_supported": 20,
+  "false_alarm_rate_of_correct": 0.0161,
+  "catch_rate_of_wrong": 0.6164,
+  "miss_rate_of_wrong": 0.3836,
+  "flag_precision": 0.9184,
+  "by_label_gate_label": {
+    "C": {
+      "Supported_cell": 332,
+      "Supported_derived": 96,
+      "Unsupported": 7
+    },
+    "W": {
+      "Supported_cell": 43,
+      "Unsupported": 90,
+      "Supported_derived": 13
+    },
+    "N": {
+      "Skipped": 49,
+      "not_extracted": 5
+    },
+    "CNT": {
+      "Skipped": 25,
+      "Supported_derived": 14,
+      "Unsupported": 1,
+      "Supported_cell": 6
+    }
+  },
+  "wrong_by_error_type": {
+    "direction": {
+      "caught": 13
+    },
+    "drift": {
+      "caught": 35,
+      "miss": 5
+    },
+    "group_total": {
+      "caught": 23,
+      "miss": 3
+    },
+    "other_period": {
+      "miss": 22
+    },
+    "other_row": {
+      "miss": 23,
+      "caught": 3
+    },
+    "rounding": {
+      "miss": 3,
+      "caught": 16
+    }
+  },
+  "false_alarms_by_kind": {
+    "group_money": 4,
+    "money": 1,
+    "group_mean": 2
+  },
+  "by_table": {
+    "small_country_2010-W21": {
+      "true_pass": 70,
+      "miss": 7,
+      "caught": 14,
+      "nm_skipped": 9,
+      "nm_supported": 1
+    },
+    "small_product_2011-W47": {
+      "nm_skipped": 14,
+      "true_pass": 57,
+      "caught": 13,
+      "miss": 8,
+      "nm_flagged": 1,
+      "false_alarm": 2
+    },
+    "small_product_2010-W07": {
+      "true_pass": 60,
+      "caught": 14,
+      "miss": 6,
+      "nm_skipped": 5,
+      "nm_supported": 2
+    },
+    "medium_product_2011-W10": {
+      "nm_skipped": 11,
+      "true_pass": 60,
+      "caught": 12,
+      "miss": 9,
+      "nm_supported": 3,
+      "false_alarm": 1
+    },
+    "medium_product_2010-W05": {
+      "true_pass": 66,
+      "caught": 15,
+      "miss": 7,
+      "nm_skipped": 6,
+      "nm_supported": 4
+    },
+    "large_product_2011-W11": {
+      "nm_skipped": 18,
+      "true_pass": 62,
+      "miss": 8,
+      "caught": 13,
+      "nm_supported": 4
+    },
+    "large_product_2010-W16": {
+      "nm_skipped": 16,
+      "true_pass": 53,
+      "miss": 11,
+      "caught": 9,
+      "nm_supported": 6,
+      "false_alarm": 4
+    }
+  },
+  "misses_by_design": 55,
+  "misses_rule_gaps": 1,
+  "misses_by_cause": {
+    "real_cell_of_another_row": 23,
+    "real_cell_of_another_period_same_row": 17,
+    "coincidence_with_unrelated_cell": 4,
+    "derived_value_of_another_period_same_row": 5,
+    "coincidence_with_unrelated_derived_value": 4,
+    "plain_number_matches_any_unit": 1,
+    "derived_value_of_a_different_topk_group": 2
+  },
+  "misses_by_design_strict_cells_or_coincidence": 48,
+  "false_alarm_causes_by_mention": {
+    "level_signed_by_down_from": 3,
+    "mean_of_rest_not_in_library": 2,
+    "family_plural_not_recognised": 2,
+    "family_short_word_ignored": 1
+  },
+  "false_alarms_by_class": {
+    "rule_gap": 5,
+    "by_design": 2
+  },
+  "false_alarm_mentions_with_two_causes": 1,
+  "non_measure_flagged_causes": {
+    "count_word_rule_needs_adjacent_noun": 1
+  },
+  "notes_with_a_false_alarm": 5,
+  "notes_with_a_false_alarm_or_flagged_count": 5,
+  "caught_for_right_reason": 85,
+  "caught_but_correct_value_also_not_supported": [
+    "SC-3 L6 \u00a32,378.59 -> \u00a32,997.06: Unsupported",
+    "MP05-3 L7 \u00a3710.70 -> \u00a3701.60: Unsupported",
+    "LP11-3 L2 \u00a3615.92 -> \u00a3636.92: Unsupported",
+    "LP11-3 L8 3.2x -> 3.1x: Unsupported",
+    "LP16-2 L8 1,818 -> 2,222: Unsupported"
+  ],
+  "catch_rate_value_errors": {
+    "types": [
+      "drift",
+      "rounding",
+      "group_total",
+      "direction"
+    ],
+    "caught": 87,
+    "n": 98,
+    "rate": 0.8878
+  },
+  "catch_rate_binding_errors": {
+    "types": [
+      "other_row",
+      "other_period"
+    ],
+    "caught": 3,
+    "n": 48,
+    "rate": 0.0625
+  },
+  "miss_rate_rule_gaps_of_wrong": 0.0068,
+  "latent_false_alarms_on_corrected_values": 5,
+  "latent_false_alarm_causes": {
+    "level_signed_by_down_from": 1,
+    "mean_of_rest_not_in_library": 2,
+    "inverse_period_ratio_not_in_library": 1,
+    "family_short_word_ignored": 1
+  },
+  "false_alarm_causes_including_latent": {
+    "level_signed_by_down_from": 4,
+    "mean_of_rest_not_in_library": 4,
+    "family_plural_not_recognised": 2,
+    "family_short_word_ignored": 2,
+    "inverse_period_ratio_not_in_library": 1
+  },
+  "wilson95": {
+    "false_alarm_rate_of_correct": [
+      0.0078,
+      0.0328
+    ],
+    "catch_rate_of_wrong": [
+      0.5355,
+      0.6914
+    ],
+    "catch_rate_value_errors": [
+      0.8101,
+      0.9362
+    ],
+    "catch_rate_binding_errors": [
+      0.0215,
+      0.1684
+    ],
+    "flag_precision": [
+      0.8471,
+      0.9581
+    ]
+  },
+  "note_level": {
+    "notes": 28,
+    "notes_with_any_flag_on_correct_content": 5,
+    "notes_with_a_miss": 28,
+    "notes_with_every_planted_error_caught": 0,
+    "notes_with_a_miss_excluding_binding_errors": 9
+  }
+}

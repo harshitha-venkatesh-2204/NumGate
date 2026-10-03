@@ -1,0 +1,237 @@
+{
+ "note_id": "medium_product_2009-W50__S2__claude-opus-5__r1",
+ "table_id": "medium_product_2009-W50",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2009-W50",
+ "n_rows": 30,
+ "strategy": "S2",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- TOTAL revenue reached \u00a361.8k TW versus \u00a355.3k LW, a WoW gain of 11.8%.\n- TOTAL units came in at 21,178 TW, up 13.4% WoW, while TOTAL orders held at 1,154 TW, up 0.1% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 TW with \u00a38,406.79, equal to 13.6% of TOTAL revenue TW.\n- EDWARDIAN PARASOL BLACK delivered \u00a33,448.60 TW (5.6% share) and FAIRY CAKE CANDLES \u00a33,065.02 TW (5.0% share).\n- RED/WHITE DOTS RUFFLED UMBRELLA posted \u00a33,021.80 TW and EDWARDIAN PARASOL NATURAL \u00a32,935.10 TW, with the top five products at 33.8% of TOTAL revenue TW.\n- Largest WoW gains came from WHITE HANGING HEART T-LIGHT HOLDER at \u00a33,464.60, FAIRY CAKE CANDLES at \u00a31,683.17 and SCOTTIE DOG HOT WATER BOTTLE at \u00a31,035.87.\n- Largest WoW declines were PAPER CHAIN KIT 50'S CHRISTMAS at \u00a33,461.35, WHITE CHERRY LIGHTS at \u00a31,427.86 and ASSORTED COLOUR BIRD ORNAMENT at \u00a31,114.15.\n- On a percentage basis GREY HEART HOT WATER BOTTLE rose 126.7% WoW and FAIRY CAKE CANDLES rose 121.8% WoW.",
+ "trace": {
+  "strategy": "S2",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "code_0",
+    "system": "You are a data analyst who writes short, correct pandas code.\n\nWrite one Python script that:\n- reads the CSV file whose path is given in sys.argv[1] with pandas,\n- computes up to 25 facts that would be most useful for a weekly executive insight note (largest entities, biggest week over week and year over year movers, shares, totals),\n- prints one JSON array to stdout and nothing else.\n\nEach element of the array is an object with these keys:\n- \"entity\": the Entity value, or \"TOTAL\" for all rows combined.\n- \"metric\": one of revenue, units, orders, share, rank.\n- \"period\": one of TW, LW, LY, WoW, YoY. Use WoW or YoY for changes between periods.\n- \"value\": a plain number (not a string). Round money to 2 decimals and percentages to 1 decimal.\n- \"formula\": a short description of how the value was computed, for example \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\".\n\nUse only pandas, numpy, json and sys. Blank cells are NaN: skip them instead of crashing. Convert numpy numbers to Python floats before json.dumps.\nReturn only the code, inside one ```python block.\n",
+    "user": "The script will be run as: python facts.py table.csv\n\nThe CSV holds a weekly sales report for ISO week 2009-W50. Entity type: product. It has 30 rows and these columns (with pandas dtypes):\n- Entity: str\n- Revenue_TW: float64\n- Revenue_LW: float64\n- Revenue_LY: float64\n- Units_TW: int64\n- Units_LW: int64\n- Orders_TW: int64\n- Orders_LW: int64\n- WoW_Pct: float64\n- YoY_Pct: float64\n- Share_Pct: float64\n- Rank: int64\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\nFirst rows of the file:\nEntity,Revenue_TW,Revenue_LW,Revenue_LY,Units_TW,Units_LW,Orders_TW,Orders_LW,WoW_Pct,YoY_Pct,Share_Pct,Rank\nWHITE HANGING HEART T-LIGHT HOLDER,8406.79,4942.19,,3172,1851,112,93,70.1,,13.6,1\nEDWARDIAN PARASOL BLACK,3448.6,3927.55,,910,1030,28,24,-12.2,,5.6,2\nFAIRY CAKE CANDLES,3065.02,1381.85,,2318,997,50,41,121.8,,5.0,3\n\n",
+    "text": "```python\nimport sys, json\nimport numpy as np\nimport pandas as pd\n\n\ndef num(x, nd=2):\n    return round(float(x), nd)\n\n\ndef main():\n    df = pd.read_csv(sys.argv[1])\n    facts = []\n\n    def add(entity, metric, period, value, formula):\n        if value is None or (isinstance(value, float) and not np.isfinite(value)):\n            return\n        facts.append({\"entity\": str(entity), \"metric\": metric, \"period\": period,\n                      \"value\": float(value), \"formula\": formula})\n\n    rev_tw = df[\"Revenue_TW\"].sum(skipna=True)\n    rev_lw = df[\"Revenue_LW\"].sum(skipna=True)\n    rev_ly = df[\"Revenue_LY\"].sum(skipna=True)\n    ly_rows = df.dropna(subset=[\"Revenue_LY\"])\n\n    add(\"TOTAL\", \"revenue\", \"TW\", num(rev_tw), \"sum(Revenue_TW)\")\n    add(\"TOTAL\", \"revenue\", \"LW\", num(rev_lw), \"sum(Revenue_LW)\")\n    if rev_lw > 0:\n        add(\"TOTAL\", \"revenue\", \"WoW\", num((rev_tw - rev_lw) / rev_lw * 100, 1),\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\")\n    if len(ly_rows) > 0 and ly_rows[\"Revenue_LY\"].sum() > 0:\n        add(\"TOTAL\", \"revenue\", \"LY\", num(rev_ly), \"sum(Revenue_LY) over rows with LY data\")\n        add(\"TOTAL\", \"revenue\", \"YoY\",\n            num((ly_rows[\"Revenue_TW\"].sum() - ly_rows[\"Revenue_LY\"].sum()) / ly_rows[\"Revenue_LY\"].sum() * 100, 1),\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100 on rows with LY\")\n\n    u_tw = df[\"Units_TW\"].sum()\n    u_lw = df[\"Units_LW\"].sum()\n    o_tw = df[\"Orders_TW\"].sum()\n    o_lw = df[\"Orders_LW\"].sum()\n    add(\"TOTAL\", \"units\", \"TW\", num(u_tw), \"sum(Units_TW)\")\n    if u_lw > 0:\n        add(\"TOTAL\", \"units\", \"WoW\", num((u_tw - u_lw) / u_lw * 100, 1),\n            \"(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100\")\n    add(\"TOTAL\", \"orders\", \"TW\", num(o_tw), \"sum(Orders_TW)\")\n    if o_lw > 0:\n        add(\"TOTAL\", \"orders\", \"WoW\", num((o_tw - o_lw) / o_lw * 100, 1),\n            \"(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100\")\n\n    top = df.sort_values(\"Revenue_TW\", ascending=False).head(5)\n    for _, r in top.iterrows():\n        add(r[\"Entity\"], \"revenue\", \"TW\", num(r[\"Revenue_TW\"]), \"Revenue_TW for this product\")\n    for _, r in top.head(3).iterrows():\n        sh = r[\"Share_Pct\"] if pd.notna(r[\"Share_Pct\"]) else (r[\"Revenue_TW\"] / rev_tw * 100 if rev_tw else np.nan)\n        add(r[\"Entity\"], \"share\", \"TW\", num(sh, 1), \"Revenue_TW / sum(Revenue_TW) * 100\")\n    if rev_tw > 0:\n        add(\"TOTAL\", \"share\", \"TW\", num(top[\"Revenue_TW\"].sum() / rev_tw * 100, 1),\n            \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\")\n    if len(top) > 0:\n        add(top.iloc[0][\"Entity\"], \"rank\", \"TW\", 1.0, \"rank by Revenue_TW (1 = highest)\")\n\n    d = df.dropna(subset=[\"Revenue_TW\", \"Revenue_LW\"]).copy()\n    d[\"delta\"] = d[\"Revenue_TW\"] - d[\"Revenue_LW\"]\n    for _, r in d.sort_values(\"delta\", ascending=False).head(3).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"delta\"]), \"Revenue_TW - Revenue_LW\")\n    for _, r in d.sort_values(\"delta\").head(3).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"delta\"]), \"Revenue_TW - Revenue_LW\")\n\n    mat = d[(d[\"Revenue_LW\"] >= 500) & d[\"WoW_Pct\"].notna()]\n    for _, r in mat.sort_values(\"WoW_Pct\", ascending=False).head(2).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"WoW_Pct\"], 1),\n            \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100, Revenue_LW >= 500\")\n    for _, r in mat.sort_values(\"WoW_Pct\").head(2).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"WoW_Pct\"], 1),\n            \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100, Revenue_LW >= 500\")\n\n    y = df.dropna(subset=[\"YoY_Pct\"])\n    for _, r in y.sort_values(\"YoY_Pct\", ascending=False).head(2).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"YoY\", num(r[\"YoY_Pct\"], 1), \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n    for _, r in y.sort_values(\"YoY_Pct\").head(2).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"YoY\", num(r[\"YoY_Pct\"], 1), \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    du = df.copy()\n    du[\"udelta\"] = du[\"Units_TW\"] - du[\"Units_LW\"]\n    r = du.sort_values(\"udelta\", ascending=False).iloc[0]\n    add(r[\"Entity\"], \"units\", \"WoW\", num(r[\"udelta\"]), \"Units_TW - Units_LW\")\n\n    print(json.dumps(facts[:25]))\n\n\nif __name__ == \"__main__\":\n    main()\n```",
+    "input_tokens": 1086,
+    "output_tokens": 2427,
+    "cost_usd": 0.066105,
+    "latency_s": 21.641,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "cached": false
+   },
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a list of facts that were already computed from the sales table. Use only these facts. Every number in the note must come from a fact value, copied exactly or rounded (for example \u00a312,345.67 may be written as \u00a312.3k). Do not compute new numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2009-W50. Entity type: product.\n\nFacts (JSON):\n[\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 61834.59,\n  \"formula\": \"sum(Revenue_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LW\",\n  \"value\": 55327.99,\n  \"formula\": \"sum(Revenue_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 11.8,\n  \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 21178.0,\n  \"formula\": \"sum(Units_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"WoW\",\n  \"value\": 13.4,\n  \"formula\": \"(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 1154.0,\n  \"formula\": \"sum(Orders_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"WoW\",\n  \"value\": 0.1,\n  \"formula\": \"(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 8406.79,\n  \"formula\": \"Revenue_TW for this product\"\n },\n {\n  \"entity\": \"EDWARDIAN PARASOL BLACK\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3448.6,\n  \"formula\": \"Revenue_TW for this product\"\n },\n {\n  \"entity\": \"FAIRY CAKE CANDLES\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3065.02,\n  \"formula\": \"Revenue_TW for this product\"\n },\n {\n  \"entity\": \"RED/WHITE DOTS RUFFLED UMBRELLA\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3021.8,\n  \"formula\": \"Revenue_TW for this product\"\n },\n {\n  \"entity\": \"EDWARDIAN PARASOL NATURAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 2935.1,\n  \"formula\": \"Revenue_TW for this product\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 13.6,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"EDWARDIAN PARASOL BLACK\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 5.6,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"FAIRY CAKE CANDLES\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 5.0,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 33.8,\n  \"formula\": \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 1.0,\n  \"formula\": \"rank by Revenue_TW (1 = highest)\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 3464.6,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"FAIRY CAKE CANDLES\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 1683.17,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"SCOTTIE DOG HOT WATER BOTTLE\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 1035.87,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"PAPER CHAIN KIT 50'S CHRISTMAS\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -3461.35,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"WHITE CHERRY LIGHTS\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -1427.86,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"ASSORTED COLOUR BIRD ORNAMENT\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -1114.15,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"GREY HEART HOT WATER BOTTLE\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 126.7,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100, Revenue_LW >= 500\"\n },\n {\n  \"entity\": \"FAIRY CAKE CANDLES\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 121.8,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100, Revenue_LW >= 500\"\n }\n]\n\nWrite the insight note now.\n",
+    "text": "- TOTAL revenue reached \u00a361.8k TW versus \u00a355.3k LW, a WoW gain of 11.8%.\n- TOTAL units came in at 21,178 TW, up 13.4% WoW, while TOTAL orders held at 1,154 TW, up 0.1% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 TW with \u00a38,406.79, equal to 13.6% of TOTAL revenue TW.\n- EDWARDIAN PARASOL BLACK delivered \u00a33,448.60 TW (5.6% share) and FAIRY CAKE CANDLES \u00a33,065.02 TW (5.0% share).\n- RED/WHITE DOTS RUFFLED UMBRELLA posted \u00a33,021.80 TW and EDWARDIAN PARASOL NATURAL \u00a32,935.10 TW, with the top five products at 33.8% of TOTAL revenue TW.\n- Largest WoW gains came from WHITE HANGING HEART T-LIGHT HOLDER at \u00a33,464.60, FAIRY CAKE CANDLES at \u00a31,683.17 and SCOTTIE DOG HOT WATER BOTTLE at \u00a31,035.87.\n- Largest WoW declines were PAPER CHAIN KIT 50'S CHRISTMAS at \u00a33,461.35, WHITE CHERRY LIGHTS at \u00a31,427.86 and ASSORTED COLOUR BIRD ORNAMENT at \u00a31,114.15.\n- On a percentage basis GREY HEART HOT WATER BOTTLE rose 126.7% WoW and FAIRY CAKE CANDLES rose 121.8% WoW.",
+    "input_tokens": 2537,
+    "output_tokens": 575,
+    "cost_usd": 0.02706,
+    "latency_s": 7.559,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "cached": false
+   }
+  ],
+  "code_runs": [
+   {
+    "attempt": 0,
+    "code": "import sys, json\nimport numpy as np\nimport pandas as pd\n\n\ndef num(x, nd=2):\n    return round(float(x), nd)\n\n\ndef main():\n    df = pd.read_csv(sys.argv[1])\n    facts = []\n\n    def add(entity, metric, period, value, formula):\n        if value is None or (isinstance(value, float) and not np.isfinite(value)):\n            return\n        facts.append({\"entity\": str(entity), \"metric\": metric, \"period\": period,\n                      \"value\": float(value), \"formula\": formula})\n\n    rev_tw = df[\"Revenue_TW\"].sum(skipna=True)\n    rev_lw = df[\"Revenue_LW\"].sum(skipna=True)\n    rev_ly = df[\"Revenue_LY\"].sum(skipna=True)\n    ly_rows = df.dropna(subset=[\"Revenue_LY\"])\n\n    add(\"TOTAL\", \"revenue\", \"TW\", num(rev_tw), \"sum(Revenue_TW)\")\n    add(\"TOTAL\", \"revenue\", \"LW\", num(rev_lw), \"sum(Revenue_LW)\")\n    if rev_lw > 0:\n        add(\"TOTAL\", \"revenue\", \"WoW\", num((rev_tw - rev_lw) / rev_lw * 100, 1),\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\")\n    if len(ly_rows) > 0 and ly_rows[\"Revenue_LY\"].sum() > 0:\n        add(\"TOTAL\", \"revenue\", \"LY\", num(rev_ly), \"sum(Revenue_LY) over rows with LY data\")\n        add(\"TOTAL\", \"revenue\", \"YoY\",\n            num((ly_rows[\"Revenue_TW\"].sum() - ly_rows[\"Revenue_LY\"].sum()) / ly_rows[\"Revenue_LY\"].sum() * 100, 1),\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100 on rows with LY\")\n\n    u_tw = df[\"Units_TW\"].sum()\n    u_lw = df[\"Units_LW\"].sum()\n    o_tw = df[\"Orders_TW\"].sum()\n    o_lw = df[\"Orders_LW\"].sum()\n    add(\"TOTAL\", \"units\", \"TW\", num(u_tw), \"sum(Units_TW)\")\n    if u_lw > 0:\n        add(\"TOTAL\", \"units\", \"WoW\", num((u_tw - u_lw) / u_lw * 100, 1),\n            \"(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100\")\n    add(\"TOTAL\", \"orders\", \"TW\", num(o_tw), \"sum(Orders_TW)\")\n    if o_lw > 0:\n        add(\"TOTAL\", \"orders\", \"WoW\", num((o_tw - o_lw) / o_lw * 100, 1),\n            \"(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100\")\n\n    top = df.sort_values(\"Revenue_TW\", ascending=False).head(5)\n    for _, r in top.iterrows():\n        add(r[\"Entity\"], \"revenue\", \"TW\", num(r[\"Revenue_TW\"]), \"Revenue_TW for this product\")\n    for _, r in top.head(3).iterrows():\n        sh = r[\"Share_Pct\"] if pd.notna(r[\"Share_Pct\"]) else (r[\"Revenue_TW\"] / rev_tw * 100 if rev_tw else np.nan)\n        add(r[\"Entity\"], \"share\", \"TW\", num(sh, 1), \"Revenue_TW / sum(Revenue_TW) * 100\")\n    if rev_tw > 0:\n        add(\"TOTAL\", \"share\", \"TW\", num(top[\"Revenue_TW\"].sum() / rev_tw * 100, 1),\n            \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\")\n    if len(top) > 0:\n        add(top.iloc[0][\"Entity\"], \"rank\", \"TW\", 1.0, \"rank by Revenue_TW (1 = highest)\")\n\n    d = df.dropna(subset=[\"Revenue_TW\", \"Revenue_LW\"]).copy()\n    d[\"delta\"] = d[\"Revenue_TW\"] - d[\"Revenue_LW\"]\n    for _, r in d.sort_values(\"delta\", ascending=False).head(3).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"delta\"]), \"Revenue_TW - Revenue_LW\")\n    for _, r in d.sort_values(\"delta\").head(3).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"delta\"]), \"Revenue_TW - Revenue_LW\")\n\n    mat = d[(d[\"Revenue_LW\"] >= 500) & d[\"WoW_Pct\"].notna()]\n    for _, r in mat.sort_values(\"WoW_Pct\", ascending=False).head(2).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"WoW_Pct\"], 1),\n            \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100, Revenue_LW >= 500\")\n    for _, r in mat.sort_values(\"WoW_Pct\").head(2).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"WoW_Pct\"], 1),\n            \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100, Revenue_LW >= 500\")\n\n    y = df.dropna(subset=[\"YoY_Pct\"])\n    for _, r in y.sort_values(\"YoY_Pct\", ascending=False).head(2).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"YoY\", num(r[\"YoY_Pct\"], 1), \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n    for _, r in y.sort_values(\"YoY_Pct\").head(2).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"YoY\", num(r[\"YoY_Pct\"], 1), \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    du = df.copy()\n    du[\"udelta\"] = du[\"Units_TW\"] - du[\"Units_LW\"]\n    r = du.sort_values(\"udelta\", ascending=False).iloc[0]\n    add(r[\"Entity\"], \"units\", \"WoW\", num(r[\"udelta\"]), \"Units_TW - Units_LW\")\n\n    print(json.dumps(facts[:25]))\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "error": "",
+    "stdout": "duct\"}, {\"entity\": \"EDWARDIAN PARASOL NATURAL\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 2935.1, \"formula\": \"Revenue_TW for this product\"}, {\"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 13.6, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"EDWARDIAN PARASOL BLACK\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 5.6, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"FAIRY CAKE CANDLES\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 5.0, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"TOTAL\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 33.8, \"formula\": \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\"}, {\"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 1.0, \"formula\": \"rank by Revenue_TW (1 = highest)\"}, {\"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 3464.6, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"FAIRY CAKE CANDLES\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 1683.17, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"SCOTTIE DOG HOT WATER BOTTLE\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 1035.87, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"PAPER CHAIN KIT 50'S CHRISTMAS\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -3461.35, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"WHITE CHERRY LIGHTS\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -1427.86, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"ASSORTED COLOUR BIRD ORNAMENT\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -1114.15, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"GREY HEART HOT WATER BOTTLE\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 126.7, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100, Revenue_LW >= 500\"}, {\"entity\": \"FAIRY CAKE CANDLES\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 121.8, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100, Revenue_LW >= 500\"}]\n"
+   }
+  ],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "facts": [
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 61834.59,
+    "formula": "sum(Revenue_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LW",
+    "value": 55327.99,
+    "formula": "sum(Revenue_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 11.8,
+    "formula": "(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "TW",
+    "value": 21178.0,
+    "formula": "sum(Units_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "WoW",
+    "value": 13.4,
+    "formula": "(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "TW",
+    "value": 1154.0,
+    "formula": "sum(Orders_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "WoW",
+    "value": 0.1,
+    "formula": "(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 8406.79,
+    "formula": "Revenue_TW for this product"
+   },
+   {
+    "entity": "EDWARDIAN PARASOL BLACK",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3448.6,
+    "formula": "Revenue_TW for this product"
+   },
+   {
+    "entity": "FAIRY CAKE CANDLES",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3065.02,
+    "formula": "Revenue_TW for this product"
+   },
+   {
+    "entity": "RED/WHITE DOTS RUFFLED UMBRELLA",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3021.8,
+    "formula": "Revenue_TW for this product"
+   },
+   {
+    "entity": "EDWARDIAN PARASOL NATURAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 2935.1,
+    "formula": "Revenue_TW for this product"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "share",
+    "period": "TW",
+    "value": 13.6,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "EDWARDIAN PARASOL BLACK",
+    "metric": "share",
+    "period": "TW",
+    "value": 5.6,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "FAIRY CAKE CANDLES",
+    "metric": "share",
+    "period": "TW",
+    "value": 5.0,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "share",
+    "period": "TW",
+    "value": 33.8,
+    "formula": "sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "rank",
+    "period": "TW",
+    "value": 1.0,
+    "formula": "rank by Revenue_TW (1 = highest)"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 3464.6,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "FAIRY CAKE CANDLES",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 1683.17,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "SCOTTIE DOG HOT WATER BOTTLE",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 1035.87,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "PAPER CHAIN KIT 50'S CHRISTMAS",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -3461.35,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "WHITE CHERRY LIGHTS",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -1427.86,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "ASSORTED COLOUR BIRD ORNAMENT",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -1114.15,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "GREY HEART HOT WATER BOTTLE",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 126.7,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100, Revenue_LW >= 500"
+   },
+   {
+    "entity": "FAIRY CAKE CANDLES",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 121.8,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100, Revenue_LW >= 500"
+   }
+  ],
+  "n_calls": 2,
+  "tokens_in": 3623,
+  "tokens_out": 3002,
+  "cost_usd": 0.093165,
+  "latency_s": 29.2
+ }
+}

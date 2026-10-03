@@ -1,0 +1,9 @@
+{
+ "text": "- Total revenue was £27,724.70 TW\n- Total revenue was down 8.4% WoW\n- REGENCY CAKESTAND 3 TIER revenue was £5,919.72 TW\n- REGENCY CAKESTAND 3 TIER held a 21.4% share of revenue TW\n- REGENCY CAKESTAND 3 TIER revenue was down 45.7% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER revenue was £4,251.25 TW\n- WHITE HANGING HEART T-LIGHT HOLDER held a 15.3% share of revenue TW\n- WHITE HANGING HEART T-LIGHT HOLDER revenue was up 18.5% WoW",
+ "input_tokens": 968,
+ "output_tokens": 106,
+ "cost_usd": 0.0,
+ "latency_s": 0.0,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

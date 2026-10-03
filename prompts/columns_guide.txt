@@ -1,0 +1,9 @@
+Column guide:
+- Entity: the country or product.
+- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).
+- Units_TW, Units_LW: units sold this week and last week.
+- Orders_TW, Orders_LW: distinct invoices this week and last week.
+- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).
+- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).
+- Share_Pct: this entity's percent share of this week's revenue across the rows shown.
+- Rank: rank by this week's revenue among the rows shown (1 is highest).

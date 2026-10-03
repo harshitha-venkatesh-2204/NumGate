@@ -1,0 +1,181 @@
+{
+ "claims": 417,
+ "notes": 18,
+ "correct": 270,
+ "false_alarms": 6,
+ "coverage_losses": 3,
+ "correct_verified": 261,
+ "wrong": 104,
+ "detected": 99,
+ "misses": 2,
+ "hidden": 3,
+ "type_agreement": 99,
+ "group_correct": 24,
+ "group_correct_verified": 21,
+ "group_correct_flagged": 3,
+ "group_correct_unverifiable": 0,
+ "group_wrong": 9,
+ "group_wrong_flagged": 9,
+ "group_wrong_missed": 0,
+ "unverifiable": 10,
+ "unverifiable_ok": 10,
+ "false_alarm_rate": 0.0222,
+ "coverage_loss_rate": 0.0111,
+ "detection_rate": 0.9519,
+ "miss_rate": 0.0192,
+ "type_agreement_rate": 1.0,
+ "flag_precision": 0.9231,
+ "false_alarm_rate_excluding_per_order": {
+  "correct_claims": 264,
+  "false_alarms": 0
+ },
+ "note_level": {
+  "notes": 18,
+  "notes_with_a_wrongly_flagged_correct_claim": 7,
+  "notes_with_planted_errors": 18,
+  "notes_with_every_planted_error_flagged": 13
+ },
+ "bootstrap_95ci_by_note": {
+  "false_alarm_rate": [
+   0.0069,
+   0.0412
+  ],
+  "detection_rate": [
+   0.9143,
+   0.981
+  ],
+  "flag_precision": [
+   0.879,
+   0.9643
+  ]
+ },
+ "by_truth": {
+  "Correct": {
+   "Correct": 261,
+   "Wrong_value": 6,
+   "Unverifiable": 3
+  },
+  "Wrong_metric": {
+   "Wrong_metric": 25,
+   "Unverifiable": 1
+  },
+  "Wrong_value": {
+   "Wrong_value": 30,
+   "Correct": 2
+  },
+  "Wrong_entity": {
+   "Wrong_entity": 29,
+   "Unverifiable": 2
+  },
+  "Group_correct": {
+   "Correct": 21,
+   "Wrong_value": 3
+  },
+  "Wrong_direction": {
+   "Wrong_value": 15
+  },
+  "Group_wrong": {
+   "Wrong_value": 9
+  },
+  "Unverifiable": {
+   "Unverifiable": 10
+  }
+ },
+ "detection_by_error_mode": {
+  "direction": {
+   "n": 15,
+   "detected": 15,
+   "type_agrees": 15
+  },
+  "drift": {
+   "n": 24,
+   "detected": 24,
+   "type_agrees": 24
+  },
+  "other_metric": {
+   "n": 3,
+   "detected": 2,
+   "type_agrees": 2
+  },
+  "other_period": {
+   "n": 23,
+   "detected": 23,
+   "type_agrees": 23
+  },
+  "other_row": {
+   "n": 31,
+   "detected": 29,
+   "type_agrees": 29
+  },
+  "rounding": {
+   "n": 8,
+   "detected": 6,
+   "type_agrees": 6
+  }
+ },
+ "false_alarms_by_kind": {
+  "Wrong_value": 6
+ },
+ "false_alarm_causes": {
+  "PER_ORDER (rule_gap)": 6
+ },
+ "coverage_loss_causes": {
+  "UAE_ALIAS (rule_gap)": 3
+ },
+ "miss_causes": {
+  "K_TOLERANCE (by_design)": 2
+ },
+ "hidden_causes": {
+  "FUZZY_NAME (by_design)": 2,
+  "UAE_ALIAS (rule_gap)": 1
+ },
+ "group_correct_flagged_causes": {
+  "GROUP_BOUND (rule_gap)": 1,
+  "FAMILY_PLURAL (rule_gap)": 1,
+  "GROUP_SUBSET (by_design)": 1
+ },
+ "cause_descriptions": {
+  "PER_ORDER": "Average per order cited as a \u00a3 figure. The extractor schema has no per-order metric, so the claim is revenue/TW; check_row maps it to Revenue_TW and, because the unit (currency) fits, never tries the row's derived values (per_order is only tried when the unit does not fit). Level 1 supports the same number as per_order(entity.Revenue_TW).",
+  "UAE_ALIAS": "'UAE' (and 'Emirati') is not in ENTITY_ALIASES, the words test fails ({'uae'} is not a subset of the name's words) and fuzzy WRatio('uae','united arab emirates') is below 85, so the entity is not found.",
+  "K_TOLERANCE": "Value cited in k with the last digit rounded the wrong way (118.12k written 118.2k; 16.455k written 16.4k). matches() also accepts any k/M value within 0.5 percent relative error, so the wrong last digit passes.",
+  "FUZZY_NAME": "Name found only by fuzzy matching (note 'Set of 4' vs table 'SET OF4'; note 'T-Light Holder' vs table 'T-LIGHT HLDR'). The check did find the error, but a fuzzily bound name may not produce a confident Wrong_*, so it becomes Unverifiable.",
+  "GROUP_BOUND": "Group figure with a bound ('more than 49%' for the top-five share of 49.88%). group_value_match calls first_match without allow_bounds, so the bound is read as an exact 49% and fails; Level 1 allows bounds on lines that name no entity.",
+  "FAMILY_PLURAL": "Family written in the plural ('Feltcraft cushions'). families() matches exact word runs, so FELTCRAFT CUSHION (exactly the three rows) is not found; only FELTCRAFT (9 rows) and BUTTERFLY (2 rows) are, and the short member names in brackets (Owl, Rabbit, Butterfly) are not entity mentions. With 'cushion' the family is found.",
+  "GROUP_SUBSET": "Hand-picked subset of a family named by short names in brackets (5 of the 7 hot water bottle rows). The library has the 7-row HOT WATER BOTTLE family and top-k/rest totals, but not this subset; the short names are not found as entity mentions."
+ },
+ "counterfactual": {
+  "flagged_wrong_or_group_wrong": 108,
+  "true_value_verified_Correct": 107,
+  "non_discriminating_flags": [
+   {
+    "note_id": "n11",
+    "line": 7,
+    "value_text": "\u00a33,727.96",
+    "cf_value_text": "\u00a33,772.96",
+    "cf_label": "Wrong_value"
+   }
+  ],
+  "wrong_claims_detected_and_true_value_passes": 99,
+  "group_wrong_flagged_and_true_value_passes": 8
+ },
+ "right_label_wrong_reason": [
+  {
+   "note_id": "n04",
+   "line": 6,
+   "value_text": "18%",
+   "row_type": "info_right_label_wrong_reason"
+  },
+  {
+   "note_id": "n12",
+   "line": 7,
+   "value_text": "26%",
+   "row_type": "info_right_label_wrong_evidence"
+  }
+ ],
+ "by_class": {
+  "false_alarms_by_design": 0,
+  "false_alarms_rule_gap": 6,
+  "all_errors_by_design": 5,
+  "all_errors_rule_gap": 12
+ }
+}

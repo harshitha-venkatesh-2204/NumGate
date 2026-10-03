@@ -1,0 +1,9 @@
+{
+ "text": "- TOTAL revenue reached £61.8k TW versus £42.3k LW, a WoW increase of 46.0%.\n- TOTAL units came in at 29,849 TW across 1,820 orders TW, with units up 72.7% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 TW at £3,740.98, equal to 6.1% of TOTAL revenue TW.\n- SET/3 RUSSIAN DOLL STACKING TINS posted £1,718.73 TW and the largest WoW gain at £1,558.98.\n- RED HANGING HEART T-LIGHT HOLDER delivered £1,807.91 TW, up £985.91 WoW (+119.9%), while PINK CHERRY LIGHTS rose 85.2% WoW.\n- KENSINGTON COFFEE SET recorded £1,632.90 TW after a WoW decline of £6,117.15 (-78.9%).\n- ASSORTED COLOUR BIRD ORNAMENT fell £958.14 WoW (-69.1%) and ROUND SNACK BOXES SET OF4 WOODLAND fell £236.06 WoW.\n- Top 5 products held 16.9% of TOTAL revenue TW and the top 10 held 25.7% TW, with JUMBO BAG RED WHITE SPOTTY at £1,557.40 TW.",
+ "input_tokens": 2587,
+ "output_tokens": 475,
+ "cost_usd": 0.02481,
+ "latency_s": 6.836,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn"
+}

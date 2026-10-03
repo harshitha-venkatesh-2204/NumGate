@@ -1,0 +1,9 @@
+{
+ "text": "- LANDMARK FRAME COVENT GARDEN led revenue with £3.8k TW, a 3.3% share of the 125 products shown\n- LANDMARK FRAME OXFORD STREET ranked 2nd with £3,753.90 TW\n- CERAMIC CAKE STAND + HANGING CAKES posted the largest WoW gain, up 2392.0% to £495.90 TW\n- WHITE HANGING HEART T-LIGHT HOLDER revenue fell 63.6% WoW to £689.94 TW\n- LANDMARK FRAME COVENT GARDEN sold 340 units TW versus 0 units LW\n- HOT WATER BOTTLE KEEP CALM had the most orders with 50 orders TW versus 38 LW\n- Total revenue across the products shown was £112.6k TW, up 93.7% WoW",
+ "input_tokens": 3631,
+ "output_tokens": 134,
+ "cost_usd": 0.0,
+ "latency_s": 0.002,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

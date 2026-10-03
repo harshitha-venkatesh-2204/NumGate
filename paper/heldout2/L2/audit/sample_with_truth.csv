@@ -1,0 +1,71 @@
+,note_id,table_id,claim_idx,line,entity,metric,period,value_text,direction,qualifier,kind,truth,expected_gate,error_mode,true_value,true_ref,cited_source,source_value,rounding_check,remark,stratum
+10,n01,small_country_2010-W27,10,3,Germany,orders,TW,12,none,none,single,Wrong_metric,Wrong_metric,other_period,8.0,Germany | Orders_TW,Germany | Orders_LW,12.0,pass,,wrong
+14,n01,small_country_2010-W27,14,5,Netherlands,revenue,TW,£451.45,none,none,single,Correct,Correct,,451.45,Netherlands | Revenue_TW,,,pass,,other
+18,n01,small_country_2010-W27,18,6,Thailand,revenue,TW,"£1,113.70",none,none,single,Correct,Correct,,1113.7,Thailand | Revenue_TW,,,pass,,other
+21,n01,small_country_2010-W27,21,7,Belgium,revenue,WoW,-77.6%,none,none,single,Wrong_entity,Wrong_entity,other_row,-77.0,Belgium | WoW_Pct,Portugal | WoW_Pct,-77.6,pass,Belgium/Portugal values swapped,wrong
+22,n01,small_country_2010-W27,22,7,Portugal,revenue,WoW,-77.0%,none,none,single,Wrong_entity,Wrong_entity,other_row,-77.6,Portugal | WoW_Pct,Belgium | WoW_Pct,-77.0,pass,Belgium/Portugal values swapped,wrong
+25,n02,small_country_2010-W27,1,1,UK,revenue,WoW,15.6%,down,none,single,Correct,Correct,,-15.6,United Kingdom | WoW_Pct,,,pass,,other
+27,n02,small_country_2010-W27,3,2,Irish,revenue,TW,"£23,853.27",none,none,single,Correct,Correct,,23853.27,EIRE | Revenue_TW,,,pass,,other
+28,n02,small_country_2010-W27,4,2,Irish,revenue,LW,"£2,019.43",none,none,single,Wrong_value,Wrong_value,drift,2091.43,EIRE | Revenue_LW,,,pass,"2,091.43 transposed",wrong
+34,n02,small_country_2010-W27,10,4,Dutch,revenue,TW,£451.45,none,none,single,Correct,Correct,,451.45,Netherlands | Revenue_TW,,,pass,,other
+37,n02,small_country_2010-W27,13,5,Danish,orders,TW,1,none,none,single,Correct,Correct,,1.0,Denmark | Orders_TW,,,pass,,other
+41,n02,small_country_2010-W27,17,6,Australian,revenue,TW,£232.10,none,none,single,Wrong_entity,Wrong_entity,other_row,294.88,Australia | Revenue_TW,Portugal | Revenue_TW,232.1,pass,next row (Portugal),wrong
+45,n03,small_country_2010-W33,1,1,UK,revenue,TW,"£133,081.75",none,none,single,Correct,Correct,,133081.75,United Kingdom | Revenue_TW,,,pass,,other
+55,n03,small_country_2010-W33,11,4,Netherlands,revenue,TW,"£6,062.68",none,none,single,Correct,Correct,,6062.68,Netherlands | Revenue_TW,,,pass,,other
+61,n03,small_country_2010-W33,17,6,UAE,share,TW,1.7%,none,none,single,Wrong_entity,Wrong_entity,other_row,1.3,United Arab Emirates | Share_Pct,Germany | Share_Pct,1.7,pass,,wrong
+62,n03,small_country_2010-W33,18,7,Swedish,revenue,WoW,309.4%,up,none,single,Correct,Correct,,309.4,Sweden | WoW_Pct,,,pass,,other
+71,n04,small_country_2010-W33,4,2,EIRE,revenue,TW,£16.4k,none,none,single,Wrong_value,Wrong_value,rounding,16455.16,EIRE | Revenue_TW,,,pass,16.455k rounds to 16.5k,wrong
+75,n04,small_country_2010-W33,8,3,Netherlands,revenue,WoW,+65.5%,none,none,single,Wrong_direction,Wrong_value,direction,-65.5,Netherlands | WoW_Pct,,,pass,,wrong
+79,n04,small_country_2010-W33,12,4,Germany,units,LW,167,none,none,single,Correct,Correct,,167.0,Germany | Units_LW,,,pass,,other
+87,n04,small_country_2010-W33,20,7,GROUP,share,TW,92.1%,none,none,group,Group_correct,Correct,,92.1117,grp share  over 2 rows: United Kingdom; EIRE,,,pass,sum of rounded Share_Pct = 92.1 (agrees),other
+89,n05,small_product_2010-W20,0,1,White Hanging Heart T-Light Holder,revenue,TW,"£3,388.78",none,none,single,Correct,Correct,,3388.78,WHITE HANGING HEART T-LIGHT HOLDER | Revenue_TW,,,pass,,other
+96,n05,small_product_2010-W20,7,3,Pack of 12 Suki Tissues,units,LW,147,none,none,single,Correct,Correct,,147.0,PACK OF 12 SUKI TISSUES | Units_LW,,,pass,,other
+100,n05,small_product_2010-W20,11,5,Wooden Croquet Garden Set,revenue,TW,"£2,232.33",none,none,single,Correct,Correct,,2232.33,WOODEN CROQUET GARDEN SET | Revenue_TW,,,pass,,other
+108,n05,small_product_2010-W20,19,7,GROUP,share,TW,39.0%,none,none,group,Group_wrong,Wrong_*,group_total,37.9764,fam share  over 3 rows: PACK OF 12 SUKI TISSUES; PACK OF 12 HEARTS DESIGN TISSUES; PACK OF 12 PINK SPOT TISSUES,,,pass,true 38.0%; sum of rounded Share_Pct = 38.0 (DIFFERS),wrong
+110,n05,small_product_2010-W20,21,8,Pack of 12 Pink Spot Tissues,revenue,TW,"£1,297.52",none,none,single,Wrong_value,Wrong_value,drift,1279.52,PACK OF 12 PINK SPOT TISSUES | Revenue_TW,,,pass,"1,279.52 transposed",wrong
+113,n06,small_product_2010-W20,2,1,WHITE HANGING HEART T-LIGHT HOLDER,orders,TW,62,none,none,single,Correct,Correct,,62.0,WHITE HANGING HEART T-LIGHT HOLDER | Orders_TW,,,pass,,other
+117,n06,small_product_2010-W20,6,2,Wooden Skittles Garden Set,share,TW,15.4%,none,none,single,Wrong_entity,Wrong_entity,other_row,15.8,WOODEN SKITTLES GARDEN SET | Share_Pct,PACK OF 12 SUKI TISSUES | Share_Pct,15.4,pass,next row,wrong
+127,n06,small_product_2010-W20,16,6,Party Bunting,revenue,TW,"£2,110.88",none,none,single,Correct,Correct,,2110.88,PARTY BUNTING | Revenue_TW,,,pass,,other
+146,n07,medium_product_2011-W17,12,4,White Hanging Heart T-Light Holder,revenue,WoW,83.1%,down,none,single,Correct,Correct,,-83.1,WHITE HANGING HEART T-LIGHT HOLDER | WoW_Pct,,,pass,,other
+147,n07,medium_product_2011-W17,13,4,White Hanging Heart T-Light Holder,revenue,TW,"£1,028.01",none,none,single,Correct,Correct,,1028.01,WHITE HANGING HEART T-LIGHT HOLDER | Revenue_TW,,,pass,,other
+148,n07,medium_product_2011-W17,14,4,White Hanging Heart T-Light Holder,revenue,LW,"£3,074.72",none,none,single,Wrong_metric,Wrong_metric,other_period,6087.56,WHITE HANGING HEART T-LIGHT HOLDER | Revenue_LW,WHITE HANGING HEART T-LIGHT HOLDER | Revenue_LY,3074.72,pass,,wrong
+149,n07,medium_product_2011-W17,15,5,Union Stripe with Fringe Hammock,revenue,WoW,729.0%,up,none,single,Wrong_metric,Wrong_metric,other_period,212.5,UNION STRIPE WITH FRINGE  HAMMOCK | WoW_Pct,UNION STRIPE WITH FRINGE  HAMMOCK | YoY_Pct,729.0,pass,YoY value given as WoW,wrong
+163,n08,medium_product_2011-W17,4,2,Party Bunting,units,TW,276,none,none,single,Correct,Correct,,276.0,PARTY BUNTING | Units_TW,,,pass,,other
+166,n08,medium_product_2011-W17,7,3,Ceramic Strawberry Money Box,revenue,TW,£973.43,none,none,single,Wrong_value,Wrong_value,drift,937.43,CERAMIC STRAWBERRY MONEY BOX | Revenue_TW,,,pass,937.43 transposed,wrong
+171,n08,medium_product_2011-W17,12,4,Jumbo Bag Pink Polkadot,revenue,TW,£611.47,none,none,single,Wrong_entity,Wrong_entity,other_row,578.91,JUMBO BAG PINK POLKADOT | Revenue_TW,JUMBO BAG APPLES | Revenue_TW,611.47,pass,similar name: Jumbo Bag Apples,wrong
+172,n08,medium_product_2011-W17,13,4,Jumbo Bag Pink Polkadot,revenue,WoW,+69.8%,none,none,single,Correct,Correct,,69.8,JUMBO BAG PINK POLKADOT | WoW_Pct,,,pass,,other
+204,n09,medium_product_2010-W14,22,8,GROUP,revenue,LW,"£3,827.72",none,none,group,Group_wrong,Wrong_*,group_total,3872.72,grp sum Revenue_LW over 2 rows: BLUE HAPPY BIRTHDAY BUNTING; PINK HAPPY BIRTHDAY BUNTING,,,pass,"true 3,872.72 transposed",wrong
+206,n10,medium_product_2010-W14,1,1,English Rose Quilted Throw,orders,TW,5,none,none,single,Correct,Correct,,5.0,ENGLISH ROSE DESIGN QUILTED THROW | Orders_TW,,,pass,,other
+211,n10,medium_product_2010-W14,6,3,Chilli Lights,revenue,WoW,+46.1%,none,none,single,Wrong_direction,Wrong_value,direction,-46.1,CHILLI LIGHTS | WoW_Pct,,,pass,,wrong
+218,n10,medium_product_2010-W14,13,5,Party Bunting,revenue,WoW,-29.6%,none,none,single,Wrong_value,Wrong_value,drift,-26.9,PARTY BUNTING | WoW_Pct,,,pass,-26.9 transposed,wrong
+227,n11,medium_product_2011-W41,2,1,Regency Cakestand 3 Tier,revenue,YoY,36.4%,down,none,single,Correct,Correct,,-36.4,REGENCY CAKESTAND 3 TIER | YoY_Pct,,,pass,,other
+236,n11,medium_product_2011-W41,11,4,Doormat Keep Calm and Come In,revenue,TW,"£2,068.84",none,none,single,Correct,Correct,,2068.84,DOORMAT KEEP CALM AND COME IN | Revenue_TW,,,pass,,other
+247,n12,medium_product_2011-W41,0,1,Paper Chain Kit Vintage Christmas,revenue,TW,"£1,456.87",none,none,single,Wrong_metric,Wrong_metric,other_period,1283.24,PAPER CHAIN KIT VINTAGE CHRISTMAS | Revenue_TW,PAPER CHAIN KIT VINTAGE CHRISTMAS | Revenue_LW,1456.87,pass,,wrong
+256,n12,medium_product_2011-W41,9,4,Red Woolly Hottie,revenue,TW,"£1,213.15",none,none,single,Correct,Correct,,1213.15,RED WOOLLY HOTTIE WHITE HEART. | Revenue_TW,,,pass,,other
+260,n12,medium_product_2011-W41,13,5,Rotating Silver Angels T-Light,share,TW,2.5%,none,none,single,Correct,Correct,,2.5,ROTATING SILVER ANGELS T-LIGHT HLDR | Share_Pct,,,pass,,other
+271,n13,large_product_2011-W22,0,1,Regency Cakestand 3 Tier,revenue,TW,"£3,041.70",none,none,single,Correct,Correct,,3041.7,REGENCY CAKESTAND 3 TIER | Revenue_TW,,,pass,,other
+275,n13,large_product_2011-W22,4,2,Party Bunting,revenue,TW,"£2,327.02",none,none,single,Correct,Correct,,2327.02,PARTY BUNTING | Revenue_TW,,,pass,,other
+277,n13,large_product_2011-W22,6,2,Party Bunting,revenue,WoW,50.0%,down,none,single,Correct,Correct,,-50.0,PARTY BUNTING | WoW_Pct,,,pass,,other
+278,n13,large_product_2011-W22,7,2,Party Bunting,revenue,YoY,60.0%,up,none,single,Correct,Correct,,60.0,PARTY BUNTING | YoY_Pct,,,pass,,other
+282,n13,large_product_2011-W22,11,4,Heart of Wicker (Small),revenue,WoW,75.1%,down,none,single,Wrong_entity,Wrong_entity,other_row,-67.3,HEART OF WICKER SMALL | WoW_Pct,HEART OF WICKER LARGE | WoW_Pct,-75.1,pass,similar name: Large variant,wrong
+287,n13,large_product_2011-W22,16,6,Set/4 White Retro Storage Cubes,revenue,WoW,"1,306.2%",up,none,single,Correct,Correct,,1306.2,SET/4 WHITE RETRO STORAGE CUBES | WoW_Pct,,,pass,,other
+296,n14,large_product_2011-W22,1,1,Regency Teacup and Saucer (Pink),revenue,WoW,+16.1%,none,none,single,Correct,Correct,,16.1,PINK REGENCY TEACUP AND SAUCER | WoW_Pct,,,pass,,other
+314,n14,large_product_2011-W22,19,6,Spaceboy Lunch Box,revenue,TW,£819,none,none,single,Correct,Correct,,819.4,SPACEBOY LUNCH BOX | Revenue_TW,,,pass,,other
+316,n14,large_product_2011-W22,21,6,Dolly Girl Lunch Box,revenue,TW,£735,none,none,single,Wrong_value,Wrong_value,rounding,734.3,DOLLY GIRL LUNCH BOX | Revenue_TW,,,pass,734.30 rounds to 734,wrong
+321,n15,large_product_2011-W22,0,1,White Hanging Heart T-Light Holder,rank,TW,4th,none,none,single,Correct,Correct,,4.0,WHITE HANGING HEART T-LIGHT HOLDER | Rank,,,pass,,other
+322,n15,large_product_2011-W22,1,1,White Hanging Heart T-Light Holder,revenue,TW,"£1,708.56",none,none,single,Wrong_entity,Wrong_entity,other_row,1691.11,WHITE HANGING HEART T-LIGHT HOLDER | Revenue_TW,BLACK RECORD COVER FRAME | Revenue_TW,1708.56,pass,row above,wrong
+353,n16,large_product_2010-W40,7,3,Paper Chain Kit 50's Christmas,revenue,WoW,192.1%,up,none,single,Correct,Correct,,192.1,PAPER CHAIN KIT 50'S CHRISTMAS | WoW_Pct,,,pass,,other
+358,n16,large_product_2010-W40,12,4,Black Record Cover Frame,revenue,TW,"£2,185.14",none,none,single,Correct,Correct,,2185.14,BLACK RECORD COVER FRAME | Revenue_TW,,,pass,,other
+361,n16,large_product_2010-W40,15,5,Hand Warmer Union Jack,units,TW,394,none,none,single,Correct,Correct,,394.0,HAND WARMER UNION JACK | Units_TW,,,pass,,other
+365,n16,large_product_2010-W40,19,7,Wooden Advent Calendar (Cream),revenue,WoW,15.0%,up,none,single,Wrong_value,Wrong_value,rounding,14.9,WOODEN ADVENT CALENDAR CREAM | WoW_Pct,,,pass,14.94 rounds to 14.9,wrong
+369,n16,large_product_2010-W40,23,8,GROUP,share,TW,18.0%,none,none,group,Group_correct,Correct,,17.9996,topk share  over 3 rows: REGENCY CAKESTAND 3 TIER; ROTATING SILVER ANGELS T-LIGHT HLDR; PAPER CHAIN KIT 50'S CHRISTMAS,,,pass,sum of rounded Share_Pct = 18.0 (agrees),other
+377,n17,large_product_2010-W40,7,3,Pink Blue Felt Craft Trinket Box,revenue,WoW,+271.4%,none,none,single,Correct,Correct,,271.4,PINK BLUE FELT CRAFT TRINKET BOX | WoW_Pct,,,pass,,other
+378,n17,large_product_2010-W40,8,3,Pink Cream Felt Craft Trinket Box,revenue,TW,£663.80,none,none,single,Correct,Correct,,663.8,PINK CREAM FELT CRAFT TRINKET BOX | Revenue_TW,,,pass,,other
+383,n17,large_product_2010-W40,13,5,Brocade Ring Purse,units,TW,"5,632",none,none,single,Correct,Correct,,5632.0,BROCADE RING PURSE | Units_TW,,,pass,,other
+391,n17,large_product_2010-W40,21,7,Chilli Lights,rank,TW,5,none,none,single,Correct,Correct,,5.0,CHILLI LIGHTS | Rank,,,pass,,other
+397,n18,large_product_2010-W40,4,2,Party Bunting,orders,TW,16,none,none,single,Correct,Correct,,16.0,PARTY BUNTING | Orders_TW,,,pass,,other
+403,n18,large_product_2010-W40,10,4,Hot Water Bottle Tea and Sympathy,revenue,WoW,65.6%,up,none,single,Correct,Correct,,65.6,HOT WATER BOTTLE TEA AND SYMPATHY | WoW_Pct,,,pass,,other
+406,n18,large_product_2010-W40,13,5,Chocolate Hot Water Bottle,revenue,WoW,47.0%,up,none,single,Wrong_direction,Wrong_value,direction,-47.0,CHOCOLATE HOT WATER BOTTLE | WoW_Pct,,,pass,,wrong
+412,n18,large_product_2010-W40,19,7,Jumbo Bag Red Retrospot,revenue,TW,"£2,063.56",none,none,single,Wrong_entity,Wrong_entity,other_row,2026.7,JUMBO BAG RED RETROSPOT | Revenue_TW,COLOUR GLASS. STAR T-LIGHT HOLDER | Revenue_TW,2063.56,pass,row above,wrong
+413,n18,large_product_2010-W40,20,7,Jumbo Bag Red Retrospot,share,TW,2.3%,none,none,single,Correct,Correct,,2.3,JUMBO BAG RED RETROSPOT | Share_Pct,,,pass,,other
+414,n18,large_product_2010-W40,21,8,World War 2 Gliders,units,TW,"3,552",none,none,single,Correct,Correct,,3552.0,WORLD WAR 2 GLIDERS ASSTD DESIGNS | Units_TW,,,pass,,other

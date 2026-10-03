@@ -1,0 +1,8 @@
+Format rules for the note:
+- Write 6 to 8 bullet lines. Start each line with "- " and state exactly one insight per line.
+- Every line names at least one entity from the data and contains at least one number.
+- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).
+- Revenue is in GBP. Write money with the £ sign.
+- State facts only. Do not give recommendations, advice, or explanations of causes.
+- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.
+- Do not use em dashes.

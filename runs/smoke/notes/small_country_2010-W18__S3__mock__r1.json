@@ -1,0 +1,48 @@
+{
+ "note_id": "small_country_2010-W18__S3__mock__r1",
+ "table_id": "small_country_2010-W18",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2010-W18",
+ "n_rows": 6,
+ "strategy": "S3",
+ "model": "mock",
+ "repeat": 1,
+ "note": "- United Kingdom led revenue with \u00a3117.3k TW, a 74.4% share of the 6 countries shown\n- United Kingdom revenue was down 30.4% WoW from \u00a3168,403.05 LW\n- Netherlands ranked 2nd with \u00a318,002.00 TW\n- Netherlands posted the largest WoW gain, up 1414.9% to \u00a318,002.00 TW\n- United Kingdom sold 66,459 units TW versus 93,805 units LW\n- United Kingdom had the most orders with 7 orders TW versus 397 LW\n- Total revenue across the countries shown was \u00a3157.7k TW, down 11.9% WoW",
+ "trace": {
+  "strategy": "S3",
+  "model": "mock",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W18. Entity type: country. The table has 6 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| United Kingdom | 117273.84 | 168403.05 |  | 66459 | 93805 | 314 | 397 | -30.4 |  | 74.4 | 1 |\n| Netherlands | 18002.00 | 1188.30 |  | 11784 | 922 | 3 | 2 | 1414.9 |  | 11.4 | 2 |\n| EIRE | 9248.22 | 5735.12 |  | 5000 | 3155 | 7 | 6 | 61.3 |  | 5.9 | 3 |\n| France | 9014.91 | 1348.33 |  | 6055 | 1007 | 7 | 2 | 568.6 |  | 5.7 | 4 |\n| Germany | 2460.79 | 2366.84 |  | 1110 | 1076 | 3 | 6 | 4.0 |  | 1.6 | 5 |\n| Spain | 1731.65 | 0.00 |  | 1091 | 0 | 3 | 0 |  |  | 1.1 | 6 |\n\nWrite the insight note now.\n",
+    "text": "- United Kingdom led revenue with \u00a3117.3k TW, a 74.4% share of the 6 countries shown\n- United Kingdom revenue was down 30.4% WoW from \u00a3168,403.05 LW\n- Netherlands ranked 2nd with \u00a318,002.00 TW\n- Netherlands posted the largest WoW gain, up 1414.9% to \u00a318,002.00 TW\n- United Kingdom sold 66,459 units TW versus 93,805 units LW\n- United Kingdom had the most orders with 7 orders TW versus 397 LW\n- Total revenue across the countries shown was \u00a3157.7k TW, down 11.9% WoW",
+    "input_tokens": 556,
+    "output_tokens": 116,
+    "cost_usd": 0.0,
+    "latency_s": 0.002,
+    "model": "mock",
+    "stop_reason": "end_turn",
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 14,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- United Kingdom led revenue with \u00a3117.3k TW, a 74.4% share of the 6 countries shown\n- United Kingdom revenue was down 30.4% WoW from \u00a3168,403.05 LW\n- Netherlands ranked 2nd with \u00a318,002.00 TW\n- Netherlands posted the largest WoW gain, up 1414.9% to \u00a318,002.00 TW\n- United Kingdom sold 66,459 units TW versus 93,805 units LW\n- United Kingdom had the most orders with 7 orders TW versus 397 LW\n- Total revenue across the countries shown was \u00a3157.7k TW, down 11.9% WoW"
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 556,
+  "tokens_out": 116,
+  "cost_usd": 0.0,
+  "latency_s": 0.002
+ }
+}

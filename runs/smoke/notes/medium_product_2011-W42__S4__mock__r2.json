@@ -1,0 +1,41 @@
+{
+ "note_id": "medium_product_2011-W42__S4__mock__r2",
+ "table_id": "medium_product_2011-W42",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2011-W42",
+ "n_rows": 33,
+ "strategy": "S4",
+ "model": "mock",
+ "repeat": 2,
+ "note": "- Total: revenue \u00a358,323.33 TW, revenue \u00a323,254.70 LW, revenue change +150.8% WoW, revenue change +180.6% YoY\n- LANDMARK FRAME COVENT GARDEN: rank 1, revenue \u00a33,766.40 TW, share 6.5% TW\n- LANDMARK FRAME OXFORD STREET: rank 2, revenue \u00a33,753.90 TW, share 6.4% TW\n- LANDMARK FRAME NOTTING HILL: rank 3, revenue \u00a33,660.00 TW, share 6.3% TW\n- GINGHAM HEART DECORATION (largest WoW increase): revenue change +2054.1% WoW, revenue \u00a31,565.58 TW versus \u00a372.68 LW\n- DOORMAT KEEP CALM AND COME IN (largest WoW decrease): revenue change -34.4% WoW, revenue \u00a31,356.79 TW versus \u00a32,068.84 LW\n- RED  HARMONICA IN BOX (largest YoY increase): revenue change +26576.5% YoY, revenue \u00a33.75 LY\n- CHRISTMAS LIGHTS 10 VINTAGE BAUBLES (largest YoY decrease): revenue change -54.3% YoY, revenue \u00a31,960.94 LY",
+ "trace": {
+  "strategy": "S4",
+  "model": "mock",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W42. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a358,323.33 TW, revenue \u00a323,254.70 LW, revenue change +150.8% WoW, revenue change +180.6% YoY\n- LANDMARK FRAME COVENT GARDEN: rank 1, revenue \u00a33,766.40 TW, share 6.5% TW\n- LANDMARK FRAME OXFORD STREET: rank 2, revenue \u00a33,753.90 TW, share 6.4% TW\n- LANDMARK FRAME NOTTING HILL: rank 3, revenue \u00a33,660.00 TW, share 6.3% TW\n- GINGHAM HEART DECORATION (largest WoW increase): revenue change +2054.1% WoW, revenue \u00a31,565.58 TW versus \u00a372.68 LW\n- DOORMAT KEEP CALM AND COME IN (largest WoW decrease): revenue change -34.4% WoW, revenue \u00a31,356.79 TW versus \u00a32,068.84 LW\n- RED  HARMONICA IN BOX (largest YoY increase): revenue change +26576.5% YoY, revenue \u00a33.75 LY\n- CHRISTMAS LIGHTS 10 VINTAGE BAUBLES (largest YoY decrease): revenue change -54.3% YoY, revenue \u00a31,960.94 LY\n- HOT WATER BOTTLE KEEP CALM (most orders): orders 50 TW versus 38 LW\n\nWrite the insight note now.\n",
+    "text": "- Total: revenue \u00a358,323.33 TW, revenue \u00a323,254.70 LW, revenue change +150.8% WoW, revenue change +180.6% YoY\n- LANDMARK FRAME COVENT GARDEN: rank 1, revenue \u00a33,766.40 TW, share 6.5% TW\n- LANDMARK FRAME OXFORD STREET: rank 2, revenue \u00a33,753.90 TW, share 6.4% TW\n- LANDMARK FRAME NOTTING HILL: rank 3, revenue \u00a33,660.00 TW, share 6.3% TW\n- GINGHAM HEART DECORATION (largest WoW increase): revenue change +2054.1% WoW, revenue \u00a31,565.58 TW versus \u00a372.68 LW\n- DOORMAT KEEP CALM AND COME IN (largest WoW decrease): revenue change -34.4% WoW, revenue \u00a31,356.79 TW versus \u00a32,068.84 LW\n- RED  HARMONICA IN BOX (largest YoY increase): revenue change +26576.5% YoY, revenue \u00a33.75 LY\n- CHRISTMAS LIGHTS 10 VINTAGE BAUBLES (largest YoY decrease): revenue change -54.3% YoY, revenue \u00a31,960.94 LY",
+    "input_tokens": 466,
+    "output_tokens": 195,
+    "cost_usd": 0.0,
+    "latency_s": 0.0,
+    "model": "mock",
+    "stop_reason": "end_turn",
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a358,323.33 TW, revenue \u00a323,254.70 LW, revenue change +150.8% WoW, revenue change +180.6% YoY\n- LANDMARK FRAME COVENT GARDEN: rank 1, revenue \u00a33,766.40 TW, share 6.5% TW\n- LANDMARK FRAME OXFORD STREET: rank 2, revenue \u00a33,753.90 TW, share 6.4% TW\n- LANDMARK FRAME NOTTING HILL: rank 3, revenue \u00a33,660.00 TW, share 6.3% TW\n- GINGHAM HEART DECORATION (largest WoW increase): revenue change +2054.1% WoW, revenue \u00a31,565.58 TW versus \u00a372.68 LW\n- DOORMAT KEEP CALM AND COME IN (largest WoW decrease): revenue change -34.4% WoW, revenue \u00a31,356.79 TW versus \u00a32,068.84 LW\n- RED  HARMONICA IN BOX (largest YoY increase): revenue change +26576.5% YoY, revenue \u00a33.75 LY\n- CHRISTMAS LIGHTS 10 VINTAGE BAUBLES (largest YoY decrease): revenue change -54.3% YoY, revenue \u00a31,960.94 LY\n- HOT WATER BOTTLE KEEP CALM (most orders): orders 50 TW versus 38 LW",
+  "n_calls": 1,
+  "tokens_in": 466,
+  "tokens_out": 195,
+  "cost_usd": 0.0,
+  "latency_s": 0.0
+ }
+}

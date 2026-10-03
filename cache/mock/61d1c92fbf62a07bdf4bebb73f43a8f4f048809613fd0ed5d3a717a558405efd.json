@@ -1,0 +1,9 @@
+{
+ "text": "- United Kingdom led revenue with £117.3k TW, a 70.7% share of the 6 countries shown\n- United Kingdom revenue was down 30.4% WoW from £168,403.05 LW\n- Netherlands ranked 2nd with £9,014.91 TW\n- Netherlands posted the largest WoW gain, up 1414.9% to £18,002.00 TW\n- United Kingdom sold 66,459 units TW versus 93,805 units LW\n- United Kingdom had the most orders with 314 orders TW versus 397 LW\n- Total revenue across the countries shown was £157.7k TW, down 11.9% WoW",
+ "input_tokens": 556,
+ "output_tokens": 116,
+ "cost_usd": 0.0,
+ "latency_s": 0.002,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

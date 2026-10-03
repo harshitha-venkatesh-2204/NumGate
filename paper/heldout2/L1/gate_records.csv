@@ -1,0 +1,677 @@
+note_id,table_id,line,rec_idx,g_start,g_end,raw_text,value,unit,is_rank,g_qualifier,g_direction,gate_label,evidence,matched_truth
+SC-1,small_country_2010-W21,1,0,18,29,"£143,748.77",143748.77,currency,False,none,none,Supported_cell,"cell(United Kingdom, Revenue_TW)=143749",SC-1|1|0
+SC-1,small_country_2010-W21,1,1,36,47,"£130,586.63",130586.63,currency,False,none,none,Supported_cell,"cell(United Kingdom, Revenue_LW)=130587",SC-1|1|1
+SC-1,small_country_2010-W21,1,2,52,58,+10.1%,10.1,percent,False,none,none,Supported_cell,"cell(United Kingdom, WoW_Pct)=10.1",SC-1|1|2
+SC-1,small_country_2010-W21,1,3,64,69,92.9%,92.9,percent,False,none,none,Supported_cell,"cell(United Kingdom, Share_Pct)=92.9",SC-1|1|3
+SC-1,small_country_2010-W21,2,4,19,28,"£3,401.24",3401.24,currency,False,none,none,Supported_cell,"cell(Channel Islands, Revenue_TW)=3401.24",SC-1|2|0
+SC-1,small_country_2010-W21,2,5,33,40,+349.8%,349.8,percent,False,none,none,Supported_cell,"cell(France, WoW_Pct)=349.8",SC-1|2|1
+SC-1,small_country_2010-W21,2,6,48,49,3,3.0,count,False,none,none,Supported_cell,"cell(Channel Islands, Orders_TW)=3",SC-1|2|2
+SC-1,small_country_2010-W21,2,7,58,59,1,1.0,plain,False,none,none,Supported_cell,"cell(Channel Islands, Orders_LW)=1",SC-1|2|3
+SC-1,small_country_2010-W21,3,8,8,17,"£2,637.72",2637.72,currency,False,none,none,Supported_cell,"cell(EIRE, Revenue_LW)=2637.72",SC-1|3|0
+SC-1,small_country_2010-W21,3,9,22,28,-28.4%,-28.4,percent,False,none,none,Supported_cell,"cell(EIRE, WoW_Pct)=-28.4",SC-1|3|1
+SC-1,small_country_2010-W21,3,10,34,39,"1,013",1013.0,count,False,none,none,Supported_cell,"cell(EIRE, Units_TW)=1013",SC-1|3|2
+SC-1,small_country_2010-W21,4,11,15,24,"£1,834.67",1834.67,currency,False,none,none,Supported_cell,"cell(Netherlands, Revenue_TW)=1834.67",SC-1|4|0
+SC-1,small_country_2010-W21,4,12,33,38,"1,263",1263.0,count,False,none,none,Supported_cell,"cell(Netherlands, Units_TW)=1263",SC-1|4|1
+SC-1,small_country_2010-W21,4,13,49,50,2,2.0,count,False,none,none,Supported_cell,"cell(Netherlands, Orders_TW)=2",SC-1|4|2
+SC-1,small_country_2010-W21,5,14,15,24,"£1,407.70",1407.7,currency,False,none,none,Supported_cell,"cell(Switzerland, Revenue_TW)=1407.7",SC-1|5|0
+SC-1,small_country_2010-W21,5,15,31,40,"£7,802.09",7802.09,currency,False,none,none,Supported_cell,"cell(Switzerland, Revenue_LW)=7802.09",SC-1|5|1
+SC-1,small_country_2010-W21,5,16,45,51,-80.2%,-80.2,percent,False,none,none,Unsupported,,SC-1|5|2
+SC-1,small_country_2010-W21,6,17,10,19,"£1,271.21",1271.21,currency,False,none,none,Supported_cell,"cell(France, Revenue_TW)=1271.21",SC-1|6|0
+SC-1,small_country_2010-W21,6,18,24,31,+349.8%,349.8,percent,False,none,none,Supported_cell,"cell(France, WoW_Pct)=349.8",SC-1|6|1
+SC-1,small_country_2010-W21,6,19,43,46,763,763.0,plain,False,none,none,Supported_cell,"cell(France, Units_TW)=763",SC-1|6|2
+SC-1,small_country_2010-W21,6,20,53,56,106,106.0,plain,False,none,none,Unsupported,,SC-1|6|3
+SC-1,small_country_2010-W21,7,21,11,20,"£1,107.38",1107.38,currency,False,none,none,Supported_cell,"cell(Germany, Revenue_TW)=1107.38",SC-1|7|0
+SC-1,small_country_2010-W21,7,22,25,31,-62.5%,-62.5,percent,False,none,none,Supported_cell,"cell(Germany, WoW_Pct)=-62.5",SC-1|7|1
+SC-1,small_country_2010-W21,7,23,37,41,0.8%,0.8,percent,False,none,none,Supported_cell,"cell(France, Share_Pct)=0.8",SC-1|7|2
+SC-1,small_country_2010-W21,7,24,49,50,4,4.0,count,False,none,none,Supported_cell,"cell(Germany, Orders_TW)=4",SC-1|7|3
+SC-1,small_country_2010-W21,8,25,6,7,7,7.0,plain,False,none,none,Skipped,counting,SC-1|8|0
+SC-1,small_country_2010-W21,8,26,19,30,"£154,660.65",154660.65,currency,False,none,none,Supported_derived,sum(Revenue_TW)=154661,SC-1|8|1
+SC-1,small_country_2010-W21,8,27,37,48,"£154,045.82",154045.82,currency,False,none,none,Unsupported,,SC-1|8|2
+SC-1,small_country_2010-W21,8,28,53,58,+6.6%,6.6,percent,False,none,none,Supported_derived,"pct_change(sum(Revenue_TW), sum(Revenue_LW))=6.62882",SC-1|8|3
+SC-2,small_country_2010-W21,1,0,31,38,£143.7k,143700.0,currency,False,none,none,Supported_cell,"cell(United Kingdom, Revenue_TW)=143749",SC-2|1|0
+SC-2,small_country_2010-W21,1,1,42,46,2010,2010.0,plain,False,none,none,Skipped,date_or_week,SC-2|1|1
+SC-2,small_country_2010-W21,1,2,55,60,10.1%,10.1,percent,False,none,up,Supported_cell,"cell(United Kingdom, WoW_Pct)=10.1",SC-2|1|3
+SC-2,small_country_2010-W21,1,3,71,76,92.9%,92.9,percent,False,none,none,Supported_cell,"cell(United Kingdom, Share_Pct)=92.9",SC-2|1|4
+SC-2,small_country_2010-W21,2,4,34,43,"£3,401.24",3401.24,currency,False,none,none,Supported_cell,"cell(Channel Islands, Revenue_TW)=3401.24",SC-2|2|0
+SC-2,small_country_2010-W21,2,5,52,59,£872.80,872.8,currency,False,none,none,Unsupported,,SC-2|2|1
+SC-2,small_country_2010-W21,2,6,67,72,"1,673",1673.0,count,False,none,none,Supported_cell,"cell(Channel Islands, Units_TW)=1673",SC-2|2|2
+SC-2,small_country_2010-W21,3,7,27,32,82.0%,-82.0,percent,False,none,down,Supported_cell,"cell(Switzerland, WoW_Pct)=-82",SC-2|3|0
+SC-2,small_country_2010-W21,3,8,40,49,"£1,407.70",1407.7,currency,False,none,none,Supported_cell,"cell(Switzerland, Revenue_TW)=1407.7",SC-2|3|1
+SC-2,small_country_2010-W21,3,9,76,77,3,3.0,plain,False,none,none,Supported_cell,"cell(Switzerland, Orders_LW)=3",SC-2|3|2
+SC-2,small_country_2010-W21,3,10,84,85,1,1.0,plain,False,none,none,Supported_cell,"cell(Switzerland, Orders_TW)=1",SC-2|3|3
+SC-2,small_country_2010-W21,4,11,37,46,"£1,107.38",1107.38,currency,False,none,none,Supported_cell,"cell(Germany, Revenue_TW)=1107.38",SC-2|4|0
+SC-2,small_country_2010-W21,4,12,56,61,62.5%,-62.5,percent,False,none,down,Supported_cell,"cell(Germany, WoW_Pct)=-62.5",SC-2|4|1
+SC-2,small_country_2010-W21,4,13,70,71,4,4.0,count,False,none,none,Supported_cell,"cell(Germany, Orders_TW)=4",SC-2|4|2
+SC-2,small_country_2010-W21,5,14,29,36,£944.84,944.84,currency,False,none,none,Supported_derived,per_order(EIRE.Revenue_TW)=944.84,SC-2|5|0
+SC-2,small_country_2010-W21,5,15,48,55,£492.33,492.33,currency,False,none,none,Unsupported,,SC-2|5|1
+SC-2,small_country_2010-W21,6,16,40,41,6,6.0,plain,False,none,none,Skipped,counting,SC-2|6|0
+SC-2,small_country_2010-W21,6,17,57,66,"£9,077.21",9077.21,currency,False,none,none,Unsupported,,SC-2|6|1
+SC-2,small_country_2010-W21,6,18,76,81,24.5%,-24.5,percent,False,none,down,Supported_derived,"pct_change(sum_excluding(United Kingdom.Revenue_TW), sum_excluding(United Kingdom.Revenue_LW))=-24.5333",SC-2|6|2
+SC-2,small_country_2010-W21,7,19,22,28,349.8%,349.8,percent,False,none,up,Supported_cell,"cell(France, WoW_Pct)=349.8",SC-2|7|0
+SC-2,small_country_2010-W21,7,20,36,45,"£1,271.21",1271.21,currency,False,none,none,Supported_cell,"cell(France, Revenue_TW)=1271.21",SC-2|7|1
+SC-2,small_country_2010-W21,7,21,52,53,4,4.0,count,False,none,none,Supported_cell,"cell(EIRE, Orders_LW)=4",SC-2|7|2
+SC-2,small_country_2010-W21,8,22,16,21,25.8%,-25.8,percent,False,none,down,Unsupported,,SC-2|8|0
+SC-2,small_country_2010-W21,8,23,29,35,"96,600",96600.0,plain,False,none,none,Supported_cell,"cell(United Kingdom, Units_TW)=96600",SC-2|8|1
+SC-2,small_country_2010-W21,8,24,41,47,"76,814",76814.0,plain,False,none,none,Supported_cell,"cell(United Kingdom, Units_LW)=76814",SC-2|8|2
+SC-3,small_country_2010-W21,1,0,28,39,"£143,748.77",143748.77,currency,False,none,none,Supported_cell,"cell(United Kingdom, Revenue_TW)=143749",SC-3|1|0
+SC-3,small_country_2010-W21,1,1,47,52,42.2x,42.2,plain,False,none,none,Unsupported,,SC-3|1|1
+SC-3,small_country_2010-W21,1,2,78,87,"£3,401.24",3401.24,currency,False,none,none,Supported_cell,"cell(Channel Islands, Revenue_TW)=3401.24",SC-3|1|2
+SC-3,small_country_2010-W21,2,3,30,33,2nd,2.0,count,True,none,none,Supported_cell,"cell(Channel Islands, Rank)=2",SC-3|2|0
+SC-3,small_country_2010-W21,2,4,41,47,"£1,512",1512.0,currency,False,none,up,Supported_derived,"diff(Channel Islands.Revenue_TW, EIRE.Revenue_TW)=1511.56",SC-3|2|1
+SC-3,small_country_2010-W21,2,5,65,71,"£3,401",3401.0,currency,False,none,none,Supported_cell,"cell(Channel Islands, Revenue_TW)=3401.24",SC-3|2|2
+SC-3,small_country_2010-W21,2,6,75,81,"£1,890",1890.0,currency,False,none,none,Supported_cell,"cell(EIRE, Revenue_TW)=1889.68",SC-3|2|3
+SC-3,small_country_2010-W21,3,7,15,24,"£1,834.67",1834.67,currency,False,none,none,Supported_cell,"cell(Netherlands, Revenue_TW)=1834.67",SC-3|3|0
+SC-3,small_country_2010-W21,3,8,36,45,"£1,889.68",1889.68,currency,False,none,none,Supported_cell,"cell(EIRE, Revenue_TW)=1889.68",SC-3|3|1
+SC-3,small_country_2010-W21,3,9,57,61,1.2%,1.2,percent,False,none,none,Supported_cell,"cell(EIRE, Share_Pct)=1.2",SC-3|3|2
+SC-3,small_country_2010-W21,4,10,19,28,"£6,394.39",-6394.39,currency,False,none,down,Supported_derived,"diff(Switzerland.Revenue_TW, Switzerland.Revenue_LW)=-6394.39",SC-3|4|0
+SC-3,small_country_2010-W21,4,11,72,73,7,-7.0,plain,False,none,down,Skipped,counting,SC-3|4|1
+SC-3,small_country_2010-W21,5,12,11,18,+349.8%,349.8,percent,False,none,none,Supported_cell,"cell(France, WoW_Pct)=349.8",SC-3|5|0
+SC-3,small_country_2010-W21,5,13,55,62,+343.5%,343.5,percent,False,none,none,Unsupported,,SC-3|5|1
+SC-3,small_country_2010-W21,6,14,32,41,"£2,378.59",-2378.59,currency,False,none,down,Unsupported,,SC-3|6|0
+SC-3,small_country_2010-W21,6,15,56,65,"£5,591.70",5591.7,currency,False,none,none,Supported_derived,sum(group[EIRE; Germany].Revenue_LW)=5591.7,SC-3|6|1
+SC-3,small_country_2010-W21,7,16,10,11,3,3.0,plain,False,none,none,Skipped,counting,SC-3|7|0
+SC-3,small_country_2010-W21,7,17,25,30,96.4%,96.4,percent,False,none,none,Supported_derived,share_top3(Revenue_TW)=96.3656,SC-3|7|1
+SC-3,small_country_2010-W21,7,18,60,61,4,4.0,plain,False,none,none,Supported_derived,share_after_top3(Revenue_TW)=3.63438,SC-3|7|2
+SC-3,small_country_2010-W21,7,19,67,76,"£5,620.96",5620.96,currency,False,none,none,Supported_derived,sum_after_top3(Revenue_TW)=5620.96,SC-3|7|3
+SC-3,small_country_2010-W21,8,20,36,43,£376.31,376.31,currency,False,none,none,Supported_derived,per_order(United Kingdom.Revenue_TW)=376.306,SC-3|8|0
+SC-3,small_country_2010-W21,8,21,60,69,"£2,600.70",2600.7,currency,False,none,none,Supported_derived,per_order(Switzerland.Revenue_LW)=2600.7,SC-3|8|1
+SC-4,small_country_2010-W21,1,0,7,9,21,21.0,plain,False,none,none,Skipped,date_or_week,SC-4|1|0
+SC-4,small_country_2010-W21,1,1,13,17,2010,2010.0,plain,False,none,none,Skipped,year,SC-4|1|1
+SC-4,small_country_2010-W21,1,2,52,57,£144k,144000.0,currency,False,approx,none,Supported_cell,"cell(United Kingdom, Revenue_TW)=143749",SC-4|1|2
+SC-4,small_country_2010-W21,1,3,72,75,90%,90.0,percent,False,over,none,Supported_cell,"cell(United Kingdom, Share_Pct)=92.9",SC-4|1|3
+SC-4,small_country_2010-W21,2,4,20,23,382,382.0,plain,False,none,none,Supported_cell,"cell(United Kingdom, Orders_TW)=382",SC-4|2|0
+SC-4,small_country_2010-W21,2,5,32,35,319,319.0,plain,False,none,none,Supported_cell,"cell(United Kingdom, Orders_LW)=319",SC-4|2|1
+SC-4,small_country_2010-W21,2,6,43,48,17.9%,17.9,percent,False,none,up,Unsupported,,SC-4|2|2
+SC-4,small_country_2010-W21,3,7,34,39,"1,673",1673.0,plain,False,none,none,Supported_cell,"cell(Channel Islands, Units_TW)=1673",SC-4|3|0
+SC-4,small_country_2010-W21,3,8,48,51,146,146.0,plain,False,none,none,Supported_cell,"cell(Channel Islands, Units_LW)=146",SC-4|3|1
+SC-4,small_country_2010-W21,4,9,34,39,£1.8k,1800.0,currency,False,approx,none,Supported_cell,"cell(Netherlands, Revenue_TW)=1834.67",SC-4|4|0
+SC-4,small_country_2010-W21,4,10,48,51,763,763.0,count,False,none,none,Supported_derived,min(Units_TW)=763,SC-4|4|1
+SC-4,small_country_2010-W21,4,11,65,66,2,2.0,count,False,none,none,Supported_cell,"cell(Netherlands, Orders_TW)=2",SC-4|4|2
+SC-4,small_country_2010-W21,5,12,20,25,28.4%,28.4,percent,False,none,up,Unsupported,,SC-4|5|0
+SC-4,small_country_2010-W21,5,13,33,42,"£1,889.68",1889.68,currency,False,none,none,Supported_cell,"cell(EIRE, Revenue_TW)=1889.68",SC-4|5|1
+SC-4,small_country_2010-W21,5,14,74,79,"1,013",1013.0,plain,False,none,none,Supported_cell,"cell(EIRE, Units_TW)=1013",SC-4|5|2
+SC-4,small_country_2010-W21,5,15,85,90,"1,003",1003.0,plain,False,none,none,Supported_cell,"cell(EIRE, Units_LW)=1003",SC-4|5|3
+SC-4,small_country_2010-W21,6,16,31,34,787,787.0,plain,False,none,none,Supported_cell,"cell(Switzerland, Units_TW)=787",SC-4|6|0
+SC-4,small_country_2010-W21,6,17,43,48,"5,011",5011.0,plain,False,none,none,Supported_cell,"cell(Switzerland, Units_LW)=5011",SC-4|6|1
+SC-4,small_country_2010-W21,6,18,56,61,84.3%,84.3,percent,False,none,up,Unsupported,,SC-4|6|2
+SC-4,small_country_2010-W21,7,19,41,50,"£2,378.59",2378.59,currency,False,none,none,Supported_derived,sum(group[France; Germany].Revenue_TW)=2378.59,SC-4|7|0
+SC-4,small_country_2010-W21,7,20,57,61,1.6%,1.6,percent,False,none,none,Supported_derived,share(group[France; Germany].Units_TW)=1.6184,SC-4|7|1
+SC-4,small_country_2010-W21,8,21,13,14,7,7.0,plain,False,none,none,Skipped,counting,SC-4|8|0
+SC-4,small_country_2010-W21,8,22,46,56,"£22,904.38",22904.38,currency,False,none,none,Unsupported,,SC-4|8|1
+SC-4,small_country_2010-W21,8,23,90,93,397,397.0,plain,False,none,none,Supported_derived,sum(Orders_TW)=397,SC-4|8|2
+SP47-1,small_product_2011-W47,1,0,18,20,50,50.0,plain,False,none,none,Skipped,entity_name,SP47-1|1|0
+SP47-1,small_product_2011-W47,1,1,34,43,"£5,701.16",5701.16,currency,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT 50'S CHRISTMAS, Revenue_TW)=5701.16",SP47-1|1|1
+SP47-1,small_product_2011-W47,1,2,48,54,-39.9%,-39.9,percent,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT 50'S CHRISTMAS, WoW_Pct)=-39.9",SP47-1|1|2
+SP47-1,small_product_2011-W47,1,3,60,65,-6.0%,-6.0,percent,False,none,none,Unsupported,,SP47-1|1|3
+SP47-1,small_product_2011-W47,1,4,71,76,22.6%,22.6,percent,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT 50'S CHRISTMAS, Share_Pct)=22.6",SP47-1|1|4
+SP47-1,small_product_2011-W47,2,5,22,31,"£5,084.81",5084.81,currency,False,none,none,Supported_cell,"cell(RABBIT NIGHT LIGHT, Revenue_TW)=5084.81",SP47-1|2|0
+SP47-1,small_product_2011-W47,2,6,38,48,"£10,687.69",10687.69,currency,False,none,none,Supported_cell,"cell(RABBIT NIGHT LIGHT, Revenue_LW)=10687.7",SP47-1|2|1
+SP47-1,small_product_2011-W47,2,7,53,59,-52.4%,-52.4,percent,False,none,none,Supported_cell,"cell(RABBIT NIGHT LIGHT, WoW_Pct)=-52.4",SP47-1|2|2
+SP47-1,small_product_2011-W47,3,8,17,26,"£4,960.25",4960.25,currency,False,none,none,Supported_cell,"cell(CHILLI LIGHTS, Revenue_TW)=4960.25",SP47-1|3|0
+SP47-1,small_product_2011-W47,3,9,31,38,+229.3%,229.3,percent,False,none,none,Supported_cell,"cell(CHILLI LIGHTS, YoY_Pct)=229.3",SP47-1|3|1
+SP47-1,small_product_2011-W47,3,10,44,51,+229.3%,229.3,percent,False,none,none,Supported_cell,"cell(CHILLI LIGHTS, YoY_Pct)=229.3",SP47-1|3|2
+SP47-1,small_product_2011-W47,4,11,20,21,3,3.0,plain,False,none,none,Skipped,entity_name,SP47-1|4|0
+SP47-1,small_product_2011-W47,4,12,28,37,"£3,543.60",3543.6,currency,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Revenue_TW)=3543.6",SP47-1|4|1
+SP47-1,small_product_2011-W47,4,13,44,53,"£3,020.07",3020.07,currency,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Revenue_LW)=3020.07",SP47-1|4|2
+SP47-1,small_product_2011-W47,4,14,58,64,-45.9%,-45.9,percent,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, YoY_Pct)=-45.9",SP47-1|4|3
+SP47-1,small_product_2011-W47,4,15,70,73,261,261.0,count,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Units_TW)=261",SP47-1|4|4
+SP47-1,small_product_2011-W47,5,16,37,46,"£3,034.33",3034.33,currency,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT VINTAGE CHRISTMAS, Revenue_TW)=3034.33",SP47-1|5|0
+SP47-1,small_product_2011-W47,5,17,51,53,71,71.0,count,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT VINTAGE CHRISTMAS, Orders_TW)=71",SP47-1|5|1
+SP47-1,small_product_2011-W47,5,18,65,67,57,57.0,plain,False,none,none,Supported_derived,share_outside(family[PAPER CHAIN KIT].Revenue_LW)=57.1055,SP47-1|5|2
+SP47-1,small_product_2011-W47,6,19,39,48,"£2,894.37",2894.37,currency,False,none,none,Supported_cell,"cell(ROTATING SILVER ANGELS T-LIGHT HLDR, Revenue_TW)=2894.37",SP47-1|6|0
+SP47-1,small_product_2011-W47,6,20,53,59,+17.3%,17.3,percent,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, WoW_Pct)=17.3",SP47-1|6|1
+SP47-1,small_product_2011-W47,6,21,70,71,6,6.0,count,True,none,none,Supported_cell,"cell(ROTATING SILVER ANGELS T-LIGHT HLDR, Rank)=6",SP47-1|6|2
+SP47-1,small_product_2011-W47,7,22,9,19,"£25,218.52",25218.52,currency,False,none,none,Supported_derived,sum(Revenue_TW)=25218.5,SP47-1|7|0
+SP47-1,small_product_2011-W47,7,23,26,36,"£30,010.24",30010.24,currency,False,none,none,Unsupported,,SP47-1|7|1
+SP47-1,small_product_2011-W47,7,24,41,47,-22.7%,-22.7,percent,False,none,none,Supported_derived,"pct_change(sum(Revenue_TW), sum(Revenue_LW))=-22.7081",SP47-1|7|2
+SP47-2,small_product_2011-W47,1,0,22,26,2011,2011.0,plain,False,none,none,Skipped,date_or_week,SP47-2|1|0
+SP47-2,small_product_2011-W47,1,1,53,55,50,50.0,plain,False,none,none,Skipped,entity_name,SP47-2|1|2
+SP47-2,small_product_2011-W47,1,2,88,97,"£5,701.16",5701.16,currency,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT 50'S CHRISTMAS, Revenue_TW)=5701.16",SP47-2|1|3
+SP47-2,small_product_2011-W47,1,3,102,107,22.6%,22.6,percent,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT 50'S CHRISTMAS, Share_Pct)=22.6",SP47-2|1|4
+SP47-2,small_product_2011-W47,2,4,6,7,2,2.0,plain,False,none,none,Unsupported,,SP47-2|2|0
+SP47-2,small_product_2011-W47,2,5,43,52,"£8,735.49",-8735.49,currency,False,none,down,Unsupported,,SP47-2|2|1
+SP47-2,small_product_2011-W47,2,6,67,77,"£12,102.54",12102.54,currency,False,none,none,Unsupported,,SP47-2|2|2
+SP47-2,small_product_2011-W47,3,7,34,39,52.4%,52.4,percent,False,none,up,Unsupported,,SP47-2|3|0
+SP47-2,small_product_2011-W47,3,8,47,56,"£5,084.81",5084.81,currency,False,none,none,Supported_cell,"cell(RABBIT NIGHT LIGHT, Revenue_TW)=5084.81",SP47-2|3|1
+SP47-2,small_product_2011-W47,3,9,80,85,"2,331",2331.0,plain,False,none,none,Supported_cell,"cell(RABBIT NIGHT LIGHT, Units_TW)=2331",SP47-2|3|2
+SP47-2,small_product_2011-W47,3,10,91,96,"4,279",4279.0,plain,False,none,none,Supported_cell,"cell(RABBIT NIGHT LIGHT, Units_LW)=4279",SP47-2|3|3
+SP47-2,small_product_2011-W47,4,11,29,35,115.0%,115.0,percent,False,none,up,Supported_cell,"cell(CHILLI LIGHTS, WoW_Pct)=115",SP47-2|4|0
+SP47-2,small_product_2011-W47,4,12,43,52,"£4,960.25",4960.25,currency,False,none,none,Supported_cell,"cell(CHILLI LIGHTS, Revenue_TW)=4960.25",SP47-2|4|1
+SP47-2,small_product_2011-W47,4,13,67,73,229.3%,229.3,percent,False,none,up,Supported_cell,"cell(CHILLI LIGHTS, YoY_Pct)=229.3",SP47-2|4|2
+SP47-2,small_product_2011-W47,5,14,20,21,3,3.0,plain,False,none,none,Skipped,entity_name,SP47-2|5|0
+SP47-2,small_product_2011-W47,5,15,32,37,17.3%,17.3,percent,False,none,up,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, WoW_Pct)=17.3",SP47-2|5|1
+SP47-2,small_product_2011-W47,5,16,45,54,"£3,543.60",3543.6,currency,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Revenue_TW)=3543.6",SP47-2|5|2
+SP47-2,small_product_2011-W47,5,17,71,76,54.9%,-54.9,percent,False,none,down,Unsupported,,SP47-2|5|3
+SP47-2,small_product_2011-W47,6,18,50,59,"£3,034.33",3034.33,currency,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT VINTAGE CHRISTMAS, Revenue_TW)=3034.33",SP47-2|6|0
+SP47-2,small_product_2011-W47,6,19,67,72,42.7%,42.7,percent,False,none,up,Supported_cell,"cell(ROTATING SILVER ANGELS T-LIGHT HLDR, YoY_Pct)=42.7",SP47-2|6|1
+SP47-2,small_product_2011-W47,6,20,83,85,37,37.0,count,False,none,none,Supported_cell,"cell(ROTATING SILVER ANGELS T-LIGHT HLDR, Orders_TW)=37",SP47-2|6|2
+SP47-2,small_product_2011-W47,7,21,10,11,3,3.0,plain,False,none,none,Skipped,counting,SP47-2|7|0
+SP47-2,small_product_2011-W47,7,22,35,40,62.5%,62.5,percent,False,none,none,Unsupported,,SP47-2|7|1
+SP47-3,small_product_2011-W47,1,0,18,20,50,50.0,plain,False,none,none,Skipped,entity_name,SP47-3|1|0
+SP47-3,small_product_2011-W47,1,1,59,66,£616.35,616.35,currency,False,none,none,Supported_derived,"diff(PAPER CHAIN KIT 50'S CHRISTMAS.Revenue_TW, RABBIT NIGHT LIGHT.Revenue_TW)=616.35",SP47-3|1|1
+SP47-3,small_product_2011-W47,1,2,71,80,"£5,701.16",5701.16,currency,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT 50'S CHRISTMAS, Revenue_TW)=5701.16",SP47-3|1|2
+SP47-3,small_product_2011-W47,1,3,84,93,"£5,084.81",5084.81,currency,False,none,none,Supported_cell,"cell(RABBIT NIGHT LIGHT, Revenue_TW)=5084.81",SP47-3|1|3
+SP47-3,small_product_2011-W47,2,4,44,49,"2,331",2331.0,plain,False,none,none,Supported_cell,"cell(RABBIT NIGHT LIGHT, Units_TW)=2331",SP47-3|2|0
+SP47-3,small_product_2011-W47,2,5,51,55,2.6x,2.6,plain,False,none,none,Unsupported,,SP47-3|2|1
+SP47-3,small_product_2011-W47,2,6,71,74,959,959.0,plain,False,none,none,Supported_cell,"cell(CHILLI LIGHTS, Units_TW)=959",SP47-3|2|2
+SP47-3,small_product_2011-W47,3,7,25,32,£160.00,160.0,currency,False,none,none,Unsupported,,SP47-3|3|0
+SP47-3,small_product_2011-W47,3,8,53,59,£85.44,85.44,currency,False,none,none,Supported_derived,per_order(CHILLI LIGHTS.Revenue_LW)=85.4448,SP47-3|3|1
+SP47-3,small_product_2011-W47,4,9,20,21,3,3.0,plain,False,none,none,Skipped,entity_name,SP47-3|4|0
+SP47-3,small_product_2011-W47,4,10,36,42,£64.26,64.26,currency,False,none,none,Supported_derived,per_order(REGENCY CAKESTAND 3 TIER.Revenue_LW)=64.2568,SP47-3|4|1
+SP47-3,small_product_2011-W47,4,11,59,61,50,50.0,count,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Orders_TW)=50",SP47-3|4|2
+SP47-3,small_product_2011-W47,5,12,37,46,"£3,034.33",3034.33,currency,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT VINTAGE CHRISTMAS, Revenue_TW)=3034.33",SP47-3|5|0
+SP47-3,small_product_2011-W47,5,13,93,102,"£2,894.37",2894.37,currency,False,none,none,Supported_cell,"cell(ROTATING SILVER ANGELS T-LIGHT HLDR, Revenue_TW)=2894.37",SP47-3|5|1
+SP47-3,small_product_2011-W47,5,14,107,114,£149.96,149.96,currency,False,none,none,Unsupported,,SP47-3|5|2
+SP47-3,small_product_2011-W47,6,15,29,31,50,50.0,plain,False,none,none,Skipped,entity_name,SP47-3|6|0
+SP47-3,small_product_2011-W47,6,16,44,49,22.6%,22.6,percent,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT 50'S CHRISTMAS, Share_Pct)=22.6",SP47-3|6|1
+SP47-3,small_product_2011-W47,6,17,72,77,20.2%,20.2,percent,False,none,none,Supported_cell,"cell(RABBIT NIGHT LIGHT, Share_Pct)=20.2",SP47-3|6|2
+SP47-3,small_product_2011-W47,6,18,81,87,2.4 pp,2.4,percent,False,none,none,Supported_derived,"diff(PAPER CHAIN KIT 50'S CHRISTMAS.Share_Pct, RABBIT NIGHT LIGHT.Share_Pct)=2.4",SP47-3|6|3
+SP47-3,small_product_2011-W47,7,19,13,14,3,3.0,plain,False,none,none,Skipped,counting,SP47-3|7|0
+SP47-3,small_product_2011-W47,7,20,37,46,"£6,577.93",6577.93,currency,False,none,none,Unsupported,,SP47-3|7|1
+SP47-3,small_product_2011-W47,7,21,51,56,37.6%,37.6,percent,False,none,none,Supported_derived,"pct_change(sum(Revenue_TW), sum(Revenue_LY))=37.6203",SP47-3|7|2
+SP47-4,small_product_2011-W47,1,0,9,12,23%,23.0,percent,False,approx,none,Supported_cell,"cell(PAPER CHAIN KIT 50'S CHRISTMAS, Share_Pct)=22.6",SP47-4|1|0
+SP47-4,small_product_2011-W47,1,1,53,55,50,50.0,plain,False,none,none,Skipped,entity_name,SP47-4|1|1
+SP47-4,small_product_2011-W47,1,2,79,84,£5.7k,5700.0,currency,False,approx,none,Supported_cell,"cell(PAPER CHAIN KIT 50'S CHRISTMAS, Revenue_TW)=5701.16",SP47-4|1|2
+SP47-4,small_product_2011-W47,2,3,39,42,105,105.0,plain,False,none,none,Supported_cell,"cell(RABBIT NIGHT LIGHT, Orders_TW)=105",SP47-4|2|0
+SP47-4,small_product_2011-W47,2,4,51,54,123,123.0,plain,False,none,none,Supported_cell,"cell(RABBIT NIGHT LIGHT, Orders_LW)=123",SP47-4|2|1
+SP47-4,small_product_2011-W47,2,5,78,83,52.4%,-52.4,percent,False,none,down,Supported_cell,"cell(RABBIT NIGHT LIGHT, WoW_Pct)=-52.4",SP47-4|2|2
+SP47-4,small_product_2011-W47,3,6,27,33,164.5%,164.5,percent,False,none,up,Unsupported,,SP47-4|3|0
+SP47-4,small_product_2011-W47,3,7,41,44,959,959.0,plain,False,none,none,Supported_cell,"cell(CHILLI LIGHTS, Units_TW)=959",SP47-4|3|1
+SP47-4,small_product_2011-W47,4,8,45,51,229.3%,229.3,percent,False,none,up,Supported_cell,"cell(CHILLI LIGHTS, YoY_Pct)=229.3",SP47-4|4|0
+SP47-4,small_product_2011-W47,4,9,55,64,"£4,960.25",4960.25,currency,False,none,none,Supported_cell,"cell(CHILLI LIGHTS, Revenue_TW)=4960.25",SP47-4|4|1
+SP47-4,small_product_2011-W47,4,10,76,85,"£2,028.90",2028.9,currency,False,none,none,Supported_cell,"cell(ROTATING SILVER ANGELS T-LIGHT HLDR, Revenue_LY)=2028.9",SP47-4|4|2
+SP47-4,small_product_2011-W47,5,11,20,21,3,3.0,plain,False,none,none,Skipped,entity_name,SP47-4|5|0
+SP47-4,small_product_2011-W47,5,12,37,38,5,5.0,count,True,none,none,Supported_cell,"cell(PAPER CHAIN KIT VINTAGE CHRISTMAS, Rank)=5",SP47-4|5|1
+SP47-4,small_product_2011-W47,5,13,44,50,"£3,544",-3544.0,currency,False,none,down,Unsupported,,SP47-4|5|2
+SP47-4,small_product_2011-W47,5,14,65,71,"£6,553",6553.0,currency,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Revenue_LY)=6552.99",SP47-4|5|3
+SP47-4,small_product_2011-W47,6,15,37,43,-32.7%,-32.7,percent,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT VINTAGE CHRISTMAS, WoW_Pct)=-32.7",SP47-4|6|0
+SP47-4,small_product_2011-W47,6,16,49,55,+21.3%,21.3,percent,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT VINTAGE CHRISTMAS, YoY_Pct)=21.3",SP47-4|6|1
+SP47-4,small_product_2011-W47,6,17,61,66,"1,043",1043.0,count,False,none,none,Supported_cell,"cell(PAPER CHAIN KIT VINTAGE CHRISTMAS, Units_TW)=1043",SP47-4|6|2
+SP47-4,small_product_2011-W47,7,18,55,60,"1,170",1170.0,plain,False,none,none,Supported_cell,"cell(ROTATING SILVER ANGELS T-LIGHT HLDR, Units_TW)=1170",SP47-4|7|0
+SP47-4,small_product_2011-W47,7,19,66,69,735,735.0,plain,False,none,none,Supported_cell,"cell(ROTATING SILVER ANGELS T-LIGHT HLDR, Units_LW)=735",SP47-4|7|1
+SP47-4,small_product_2011-W47,7,20,97,102,10.6%,-10.6,percent,False,none,down,Unsupported,,SP47-4|7|2
+SP47-4,small_product_2011-W47,8,21,13,14,6,6.0,plain,False,none,none,Skipped,counting,SP47-4|8|0
+SP47-4,small_product_2011-W47,8,22,44,47,390,390.0,plain,False,none,none,Supported_derived,sum(Orders_TW)=390,SP47-4|8|1
+SP47-4,small_product_2011-W47,8,23,56,59,424,424.0,plain,False,none,none,Unsupported,,SP47-4|8|2
+SP07-1,small_product_2010-W07,1,0,35,44,"£6,467.60",6467.6,currency,False,none,none,Supported_cell,"cell(SMALL FAIRY CAKE FRIDGE MAGNETS, Revenue_TW)=6467.6",SP07-1|1|0
+SP07-1,small_product_2010-W07,1,1,49,54,41.0%,41.0,percent,False,none,none,Supported_cell,"cell(SMALL FAIRY CAKE FRIDGE MAGNETS, Share_Pct)=41",SP07-1|1|1
+SP07-1,small_product_2010-W07,1,2,62,68,"11,690",11690.0,count,False,none,none,Unsupported,,SP07-1|1|2
+SP07-1,small_product_2010-W07,1,3,80,81,2,2.0,count,False,none,none,Supported_cell,"cell(SMALL FAIRY CAKE FRIDGE MAGNETS, Orders_TW)=2",SP07-1|1|3
+SP07-1,small_product_2010-W07,2,4,21,30,"£2,021.25",2021.25,currency,False,none,none,Supported_cell,"cell(DOOR MAT RED SPOT, Revenue_TW)=2021.25",SP07-1|2|0
+SP07-1,small_product_2010-W07,2,5,37,44,£576.44,576.44,currency,False,none,none,Supported_cell,"cell(DOOR MAT RED SPOT, Revenue_LW)=576.44",SP07-1|2|1
+SP07-1,small_product_2010-W07,2,6,49,56,+417.3%,417.3,percent,False,none,none,Supported_cell,"cell(DOOR MAT SPOTTY HOME SWEET HOME, WoW_Pct)=417.3",SP07-1|2|2
+SP07-1,small_product_2010-W07,3,7,38,47,"£1,946.33",1946.33,currency,False,none,none,Supported_cell,"cell(BLACK AND WHITE PAISLEY FLOWER MUG, Revenue_TW)=1946.33",SP07-1|3|0
+SP07-1,small_product_2010-W07,3,8,52,58,"19,165",19165.0,count,False,none,none,Supported_cell,"cell(BLACK AND WHITE PAISLEY FLOWER MUG, Units_TW)=19165",SP07-1|3|1
+SP07-1,small_product_2010-W07,3,9,66,67,2,2.0,count,False,none,none,Supported_cell,"cell(SMALL FAIRY CAKE FRIDGE MAGNETS, Orders_TW)=2",SP07-1|3|2
+SP07-1,small_product_2010-W07,4,10,38,47,"£1,617.50",1617.5,currency,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_LW)=1617.5",SP07-1|4|0
+SP07-1,small_product_2010-W07,4,11,52,58,+17.6%,17.6,percent,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, WoW_Pct)=17.6",SP07-1|4|1
+SP07-1,small_product_2010-W07,4,12,64,66,47,47.0,count,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Orders_TW)=47",SP07-1|4|2
+SP07-1,small_product_2010-W07,4,13,78,80,45,45.0,plain,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Orders_LW)=45",SP07-1|4|3
+SP07-1,small_product_2010-W07,5,14,30,39,"£1,776.34",1776.34,currency,False,none,none,Supported_cell,"cell(JUMBO BAG RED WHITE SPOTTY, Revenue_TW)=1776.34",SP07-1|5|0
+SP07-1,small_product_2010-W07,5,15,44,50,+85.9%,85.9,percent,False,none,none,Supported_cell,"cell(JUMBO BAG RED WHITE SPOTTY, WoW_Pct)=85.9",SP07-1|5|1
+SP07-1,small_product_2010-W07,5,16,56,61,11.2%,11.2,percent,False,none,none,Unsupported,,SP07-1|5|2
+SP07-1,small_product_2010-W07,6,17,35,44,"£1,668.35",1668.35,currency,False,none,none,Supported_cell,"cell(DOOR MAT SPOTTY HOME SWEET HOME, Revenue_TW)=1668.35",SP07-1|6|0
+SP07-1,small_product_2010-W07,6,18,49,56,+417.3%,417.3,percent,False,none,none,Supported_cell,"cell(DOOR MAT SPOTTY HOME SWEET HOME, WoW_Pct)=417.3",SP07-1|6|1
+SP07-1,small_product_2010-W07,6,19,67,68,6,6.0,count,True,none,none,Supported_cell,"cell(DOOR MAT SPOTTY HOME SWEET HOME, Rank)=6",SP07-1|6|2
+SP07-1,small_product_2010-W07,7,20,15,25,"£15,781.74",15781.74,currency,False,none,none,Supported_derived,sum(Revenue_TW)=15781.7,SP07-1|7|0
+SP07-1,small_product_2010-W07,7,21,32,41,"£3,472.13",3472.13,currency,False,none,none,Supported_derived,sum(Revenue_LW)=3472.13,SP07-1|7|1
+SP07-1,small_product_2010-W07,7,22,46,52,"34,476",34476.0,count,False,none,none,Unsupported,,SP07-1|7|2
+SP07-2,small_product_2010-W07,1,0,10,11,7,7.0,plain,False,none,none,Skipped,date_or_week,SP07-2|1|0
+SP07-2,small_product_2010-W07,1,1,15,19,2010,2010.0,plain,False,none,none,Skipped,year,SP07-2|1|1
+SP07-2,small_product_2010-W07,1,2,62,71,"£6,467.60",6467.6,currency,False,none,none,Supported_cell,"cell(SMALL FAIRY CAKE FRIDGE MAGNETS, Revenue_TW)=6467.6",SP07-2|1|2
+SP07-2,small_product_2010-W07,1,3,85,86,3,3.0,count,False,none,none,Supported_cell,"cell(BLACK AND WHITE PAISLEY FLOWER MUG, Orders_TW)=3",SP07-2|1|3
+SP07-2,small_product_2010-W07,1,4,95,100,41.0%,41.0,percent,False,none,none,Supported_cell,"cell(SMALL FAIRY CAKE FRIDGE MAGNETS, Share_Pct)=41",SP07-2|1|4
+SP07-2,small_product_2010-W07,2,5,45,51,"19,615",19615.0,count,False,none,none,Unsupported,,SP07-2|2|0
+SP07-2,small_product_2010-W07,2,6,89,98,"£1,946.33",1946.33,currency,False,none,none,Supported_cell,"cell(BLACK AND WHITE PAISLEY FLOWER MUG, Revenue_TW)=1946.33",SP07-2|2|1
+SP07-2,small_product_2010-W07,3,7,33,39,250.6%,250.6,percent,False,none,up,Supported_cell,"cell(DOOR MAT RED SPOT, WoW_Pct)=250.6",SP07-2|3|0
+SP07-2,small_product_2010-W07,3,8,47,56,"£2,021.25",2021.25,currency,False,none,none,Supported_cell,"cell(DOOR MAT RED SPOT, Revenue_TW)=2021.25",SP07-2|3|1
+SP07-2,small_product_2010-W07,3,9,78,80,25,25.0,plain,False,none,none,Supported_cell,"cell(DOOR MAT RED SPOT, Orders_TW)=25",SP07-2|3|2
+SP07-2,small_product_2010-W07,4,10,66,72,417.3%,417.3,percent,False,none,up,Supported_cell,"cell(DOOR MAT SPOTTY HOME SWEET HOME, WoW_Pct)=417.3",SP07-2|4|0
+SP07-2,small_product_2010-W07,4,11,76,85,"£1,668.35",1668.35,currency,False,none,none,Supported_cell,"cell(DOOR MAT SPOTTY HOME SWEET HOME, Revenue_TW)=1668.35",SP07-2|4|1
+SP07-2,small_product_2010-W07,4,12,94,101,£332.50,332.5,currency,False,none,none,Unsupported,,SP07-2|4|2
+SP07-2,small_product_2010-W07,5,13,34,39,85.9%,85.9,percent,False,none,up,Supported_cell,"cell(JUMBO BAG RED WHITE SPOTTY, WoW_Pct)=85.9",SP07-2|5|0
+SP07-2,small_product_2010-W07,5,14,47,56,"£1,776.34",1776.34,currency,False,none,none,Supported_cell,"cell(JUMBO BAG RED WHITE SPOTTY, Revenue_TW)=1776.34",SP07-2|5|1
+SP07-2,small_product_2010-W07,5,15,78,80,22,22.0,plain,False,none,none,Supported_cell,"cell(JUMBO BAG RED WHITE SPOTTY, Orders_LW)=22",SP07-2|5|2
+SP07-2,small_product_2010-W07,5,16,84,86,36,36.0,plain,False,none,none,Supported_cell,"cell(JUMBO BAG RED WHITE SPOTTY, Orders_TW)=36",SP07-2|5|3
+SP07-2,small_product_2010-W07,6,17,48,53,17.6%,-17.6,percent,False,none,down,Unsupported,,SP07-2|6|0
+SP07-2,small_product_2010-W07,6,18,61,70,"£1,901.87",1901.87,currency,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_TW)=1901.87",SP07-2|6|1
+SP07-2,small_product_2010-W07,7,19,6,7,2,2.0,plain,False,none,none,Supported_derived,share(family[DOOR MAT].Units_TW)=1.99546,SP07-2|7|0
+SP07-2,small_product_2010-W07,7,20,37,46,"£3,689.60",3689.6,currency,False,none,none,Supported_derived,sum(family[DOOR MAT].Revenue_TW)=3689.6,SP07-2|7|1
+SP07-2,small_product_2010-W07,7,21,51,56,23.4%,23.4,percent,False,none,none,Supported_derived,share(family[DOOR MAT].Revenue_TW)=23.3789,SP07-2|7|2
+SP07-2,small_product_2010-W07,7,22,72,79,£998.94,998.94,currency,False,none,none,Unsupported,,SP07-2|7|3
+SP07-3,small_product_2010-W07,1,0,43,52,"£3,233.80",3233.8,currency,False,none,none,Supported_derived,per_order(SMALL FAIRY CAKE FRIDGE MAGNETS.Revenue_TW)=3233.8,SP07-3|1|0
+SP07-3,small_product_2010-W07,1,1,74,80,£23.06,23.06,currency,False,none,none,Supported_derived,per_order(DOOR MAT RED SPOT.Revenue_LW)=23.0576,SP07-3|1|1
+SP07-3,small_product_2010-W07,2,2,44,50,"19,165",19165.0,plain,False,none,none,Supported_cell,"cell(BLACK AND WHITE PAISLEY FLOWER MUG, Units_TW)=19165",SP07-3|2|0
+SP07-3,small_product_2010-W07,2,3,57,61,1.7x,1.7,plain,False,none,none,Unsupported,,SP07-3|2|1
+SP07-3,small_product_2010-W07,2,4,104,110,"11,960",11960.0,plain,False,none,none,Supported_cell,"cell(SMALL FAIRY CAKE FRIDGE MAGNETS, Units_TW)=11960",SP07-3|2|2
+SP07-3,small_product_2010-W07,3,5,10,11,3,3.0,plain,False,none,none,Skipped,counting,SP07-3|3|0
+SP07-3,small_product_2010-W07,3,6,26,31,66.1%,66.1,percent,False,none,none,Supported_derived,share_top3(Revenue_TW)=66.1219,SP07-3|3|1
+SP07-3,small_product_2010-W07,3,7,57,58,3,3.0,plain,False,none,none,Supported_derived,per_unit(sum(Revenue_LW))=2.75785,SP07-3|3|2
+SP07-3,small_product_2010-W07,3,8,64,73,"£3,678.21",3678.21,currency,False,none,none,Unsupported,,SP07-3|3|3
+SP07-3,small_product_2010-W07,4,9,73,80,£125.53,125.53,currency,False,none,none,Supported_derived,"diff(JUMBO BAG RED WHITE SPOTTY.Revenue_TW, WHITE HANGING HEART T-LIGHT HOLDER.Revenue_TW)=-125.53",SP07-3|4|0
+SP07-3,small_product_2010-W07,4,10,91,100,"£1,901.87",1901.87,currency,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_TW)=1901.87",SP07-3|4|1
+SP07-3,small_product_2010-W07,4,11,104,113,"£1,776.34",1776.34,currency,False,none,none,Supported_cell,"cell(JUMBO BAG RED WHITE SPOTTY, Revenue_TW)=1776.34",SP07-3|4|2
+SP07-3,small_product_2010-W07,5,12,50,59,"£1,354.85",1354.85,currency,False,none,up,Unsupported,,SP07-3|5|0
+SP07-3,small_product_2010-W07,5,13,68,71,311,311.0,count,False,none,none,Supported_cell,"cell(DOOR MAT SPOTTY HOME SWEET HOME, Units_TW)=311",SP07-3|5|1
+SP07-3,small_product_2010-W07,5,14,81,83,46,46.0,plain,False,none,none,Supported_cell,"cell(DOOR MAT SPOTTY HOME SWEET HOME, Units_LW)=46",SP07-3|5|2
+SP07-3,small_product_2010-W07,6,15,34,38,28.2,28.2,count,False,none,none,Supported_derived,units_per_order(JUMBO BAG RED WHITE SPOTTY.Units_TW)=28.1667,SP07-3|6|0
+SP07-3,small_product_2010-W07,6,16,62,65,5.1,5.1,plain,False,none,none,Unsupported,,SP07-3|6|1
+SP07-3,small_product_2010-W07,7,17,22,32,"£15,781.74",15781.74,currency,False,none,none,Supported_derived,sum(Revenue_TW)=15781.7,SP07-3|7|0
+SP07-3,small_product_2010-W07,7,18,43,47,4.5x,4.5,plain,False,approx,none,Supported_derived,"ratio(sum(Revenue_TW), sum(Revenue_LW))=4.54526",SP07-3|7|1
+SP07-3,small_product_2010-W07,7,19,53,62,"£3,472.13",3472.13,currency,False,none,none,Supported_derived,sum(Revenue_LW)=3472.13,SP07-3|7|2
+SP07-3,small_product_2010-W07,8,20,63,64,2,2.0,count,True,none,none,Supported_cell,"cell(DOOR MAT RED SPOT, Rank)=2",SP07-3|8|0
+SP07-3,small_product_2010-W07,8,21,69,70,6,6.0,count,True,none,none,Supported_cell,"cell(DOOR MAT SPOTTY HOME SWEET HOME, Rank)=6",SP07-3|8|1
+SP07-4,small_product_2010-W07,1,0,51,56,£6.5k,6500.0,currency,False,approx,none,Supported_cell,"cell(SMALL FAIRY CAKE FRIDGE MAGNETS, Revenue_TW)=6467.6",SP07-4|1|0
+SP07-4,small_product_2010-W07,1,1,66,69,40%,40.0,percent,False,over,none,Supported_cell,"cell(SMALL FAIRY CAKE FRIDGE MAGNETS, Share_Pct)=41",SP07-4|1|1
+SP07-4,small_product_2010-W07,2,2,52,58,"20,000",20000.0,count,False,over,none,Unsupported,,SP07-4|2|0
+SP07-4,small_product_2010-W07,2,3,80,86,"£1,946",1946.0,currency,False,approx,none,Supported_cell,"cell(BLACK AND WHITE PAISLEY FLOWER MUG, Revenue_TW)=1946.33",SP07-4|2|1
+SP07-4,small_product_2010-W07,3,4,21,23,25,25.0,count,False,none,none,Supported_cell,"cell(DOOR MAT RED SPOT, Orders_TW)=25",SP07-4|3|0
+SP07-4,small_product_2010-W07,3,5,55,62,+250.6%,250.6,percent,False,none,none,Supported_cell,"cell(DOOR MAT RED SPOT, WoW_Pct)=250.6",SP07-4|3|1
+SP07-4,small_product_2010-W07,4,6,42,47,12.3%,12.3,percent,False,none,none,Supported_cell,"cell(BLACK AND WHITE PAISLEY FLOWER MUG, Share_Pct)=12.3",SP07-4|4|0
+SP07-4,small_product_2010-W07,4,7,59,62,669,669.0,count,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Units_TW)=669",SP07-4|4|1
+SP07-4,small_product_2010-W07,4,8,78,81,586,586.0,plain,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Units_LW)=586",SP07-4|4|2
+SP07-4,small_product_2010-W07,5,9,41,50,"£1,776.34",1776.34,currency,False,none,up,Supported_cell,"cell(JUMBO BAG RED WHITE SPOTTY, Revenue_TW)=1776.34",SP07-4|5|0
+SP07-4,small_product_2010-W07,5,10,63,70,£995.69,995.69,currency,False,none,none,Unsupported,,SP07-4|5|1
+SP07-4,small_product_2010-W07,6,11,49,51,23,23.0,plain,False,none,none,Supported_cell,"cell(DOOR MAT SPOTTY HOME SWEET HOME, Orders_TW)=23",SP07-4|6|0
+SP07-4,small_product_2010-W07,6,12,60,61,9,9.0,plain,False,none,none,Supported_cell,"cell(DOOR MAT SPOTTY HOME SWEET HOME, Orders_LW)=9",SP07-4|6|1
+SP07-4,small_product_2010-W07,6,13,66,73,+155.5%,155.5,percent,False,none,none,Unsupported,,SP07-4|6|2
+SP07-4,small_product_2010-W07,7,14,13,14,2,2.0,plain,False,none,none,Skipped,counting,SP07-4|7|0
+SP07-4,small_product_2010-W07,7,15,94,103,"£3,444.69",3444.69,currency,False,none,none,Supported_derived,sum(group[DOOR MAT SPOTTY HOME SWEET HOME; JUMBO BAG RED WHITE SPOTTY].Revenue_TW)=3444.69,SP07-4|7|1
+SP07-4,small_product_2010-W07,7,16,117,122,21.8%,21.8,percent,False,none,none,Supported_derived,share(JUMBO BAG RED WHITE SPOTTY.Orders_LW)=21.7822,SP07-4|7|2
+SP07-4,small_product_2010-W07,8,17,29,30,6,6.0,plain,False,none,none,Skipped,counting,SP07-4|8|0
+SP07-4,small_product_2010-W07,8,18,44,53,"£2,630.29",2630.29,currency,False,none,none,Supported_derived,mean(Revenue_TW)=2630.29,SP07-4|8|1
+MP10-1,medium_product_2011-W10,1,0,20,21,3,3.0,plain,False,none,none,Skipped,entity_name,MP10-1|1|0
+MP10-1,medium_product_2011-W10,1,1,28,37,"£2,616.00",2616.0,currency,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Revenue_TW)=2616",MP10-1|1|1
+MP10-1,medium_product_2011-W10,1,2,42,48,+36.1%,36.1,percent,False,none,none,Unsupported,,MP10-1|1|2
+MP10-1,medium_product_2011-W10,1,3,54,58,8.0%,8.0,percent,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Share_Pct)=8",MP10-1|1|3
+MP10-1,medium_product_2011-W10,2,4,17,26,"£1,516.30",1516.3,currency,False,none,none,Supported_cell,"cell(CHILLI LIGHTS, Revenue_TW)=1516.3",MP10-1|2|0
+MP10-1,medium_product_2011-W10,2,5,33,40,£341.48,341.48,currency,False,none,none,Supported_cell,"cell(HEART OF WICKER SMALL, Revenue_LW)=341.48",MP10-1|2|1
+MP10-1,medium_product_2011-W10,2,6,45,52,+621.7%,621.7,percent,False,none,none,Supported_cell,"cell(CHILLI LIGHTS, WoW_Pct)=621.7",MP10-1|2|2
+MP10-1,medium_product_2011-W10,3,7,25,34,"£1,365.96",1365.96,currency,False,none,none,Supported_cell,"cell(HEART OF WICKER SMALL, Revenue_TW)=1365.96",MP10-1|3|0
+MP10-1,medium_product_2011-W10,3,8,39,46,+300.0%,300.0,percent,False,none,none,Supported_cell,"cell(HEART OF WICKER SMALL, WoW_Pct)=300",MP10-1|3|1
+MP10-1,medium_product_2011-W10,3,9,52,55,220,220.0,count,False,none,none,Supported_cell,"cell(HEART OF WICKER SMALL, Units_LW)=220",MP10-1|3|2
+MP10-1,medium_product_2011-W10,4,10,17,26,"£1,301.83",1301.83,currency,False,none,none,Supported_cell,"cell(PARTY BUNTING, Revenue_TW)=1301.83",MP10-1|4|0
+MP10-1,medium_product_2011-W10,4,11,31,36,+6.4%,6.4,percent,False,none,none,Supported_cell,"cell(PARTY BUNTING, WoW_Pct)=6.4",MP10-1|4|1
+MP10-1,medium_product_2011-W10,4,12,42,47,+6.4%,6.4,percent,False,none,none,Supported_cell,"cell(PARTY BUNTING, WoW_Pct)=6.4",MP10-1|4|2
+MP10-1,medium_product_2011-W10,5,13,38,47,"£1,249.82",1249.82,currency,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_TW)=1249.82",MP10-1|5|0
+MP10-1,medium_product_2011-W10,5,14,54,63,"£2,356.84",2356.84,currency,False,none,none,Unsupported,,MP10-1|5|1
+MP10-1,medium_product_2011-W10,5,15,68,74,-47.2%,-47.2,percent,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, YoY_Pct)=-47.2",MP10-1|5|2
+MP10-1,medium_product_2011-W10,6,16,18,25,£732.13,732.13,currency,False,none,none,Supported_cell,"cell(DOORMAT HEARTS, Revenue_TW)=732.13",MP10-1|6|0
+MP10-1,medium_product_2011-W10,6,17,30,39,"+5,323.2%",5323.2,percent,False,none,none,Supported_cell,"cell(DOORMAT HEARTS, YoY_Pct)=5323.2",MP10-1|6|1
+MP10-1,medium_product_2011-W10,6,18,49,55,£13.50,13.5,currency,False,none,none,Supported_cell,"cell(DOORMAT HEARTS, Revenue_LY)=13.5",MP10-1|6|2
+MP10-1,medium_product_2011-W10,7,19,12,19,£513.65,513.65,currency,False,none,none,Supported_cell,"cell(SOMBRERO, Revenue_TW)=513.65",MP10-1|7|0
+MP10-1,medium_product_2011-W10,7,20,24,27,407,407.0,count,False,none,none,Supported_cell,"cell(SOMBRERO, Units_TW)=407",MP10-1|7|1
+MP10-1,medium_product_2011-W10,7,21,40,42,39,39.0,count,True,none,none,Supported_cell,"cell(SOMBRERO, Rank)=39",MP10-1|7|2
+MP10-1,medium_product_2011-W10,8,22,15,25,"£32,891.80",32891.8,currency,False,none,none,Supported_derived,sum(Revenue_TW)=32891.8,MP10-1|8|0
+MP10-1,medium_product_2011-W10,8,23,30,36,-65.6%,-65.6,percent,False,none,none,Unsupported,,MP10-1|8|1
+MP10-1,medium_product_2011-W10,8,24,48,50,39,39.0,plain,False,none,none,Skipped,counting,MP10-1|8|2
+MP10-2,medium_product_2011-W10,1,0,9,13,2011,2011.0,plain,False,none,none,Skipped,date_or_week,MP10-2|1|0
+MP10-2,medium_product_2011-W10,1,1,23,24,7,7.0,plain,False,none,none,Supported_cell,"cell(PLEASE ONE PERSON METAL SIGN, YoY_Pct)=6.8",MP10-2|1|2
+MP10-2,medium_product_2011-W10,1,2,54,63,"£5,597.13",5597.13,currency,False,none,none,Supported_derived,sum(family[JUMBO BAG].Revenue_TW)=5597.13,MP10-2|1|3
+MP10-2,medium_product_2011-W10,1,3,71,76,92.4%,92.4,percent,False,none,up,Supported_derived,"pct_change(sum(family[JUMBO BAG].Revenue_TW), sum(family[JUMBO BAG].Revenue_LW))=92.4411",MP10-2|1|4
+MP10-2,medium_product_2011-W10,1,4,80,89,"£2,686.99",2686.99,currency,False,none,none,Unsupported,,MP10-2|1|5
+MP10-2,medium_product_2011-W10,2,5,53,62,"£1,356.16",1356.16,currency,False,none,none,Supported_cell,"cell(JUMBO BAG RED RETROSPOT, Revenue_TW)=1356.16",MP10-2|2|0
+MP10-2,medium_product_2011-W10,2,6,70,75,17.6%,17.6,percent,False,none,up,Supported_cell,"cell(JUMBO BAG RED RETROSPOT, WoW_Pct)=17.6",MP10-2|2|1
+MP10-2,medium_product_2011-W10,3,7,6,7,5,5.0,plain,False,none,none,Supported_derived,min(Units_TW)=5,MP10-2|3|0
+MP10-2,medium_product_2011-W10,3,8,27,36,"£3,432.04",3432.04,currency,False,none,none,Supported_derived,sum(family[DOORMAT].Revenue_TW)=3432.04,MP10-2|3|1
+MP10-2,medium_product_2011-W10,3,9,41,46,10.5%,10.5,percent,False,none,none,Unsupported,,MP10-2|3|2
+MP10-2,medium_product_2011-W10,3,10,69,78,"£1,390.86",1390.86,currency,False,none,none,Supported_derived,sum(family[DOORMAT].Revenue_LW)=1390.86,MP10-2|3|3
+MP10-2,medium_product_2011-W10,4,11,6,7,3,3.0,plain,False,none,none,Supported_derived,share(family[BABY GIFT SET].Orders_TW)=2.5825,MP10-2|4|0
+MP10-2,medium_product_2011-W10,4,12,57,66,"£2,397.15",2397.15,currency,False,none,none,Supported_derived,sum(family[BABY GIFT SET].Revenue_TW)=2397.15,MP10-2|4|1
+MP10-2,medium_product_2011-W10,4,13,75,77,16,16.0,count,False,none,none,Supported_derived,mean(Orders_LW)=15.8718,MP10-2|4|2
+MP10-2,medium_product_2011-W10,5,14,105,110,26.6%,-26.6,percent,False,none,down,Supported_derived,"pct_change(sum(group[PARTY BUNTING; VINTAGE UNION JACK BUNTING; WOODEN UNION JACK BUNTING].Revenue_TW), sum(group[PARTY BUNTING; VINTAGE UNION JACK BUNTING; WOODEN UNION JACK BUNTING].Revenue_LW))=-26.6455",MP10-2|5|1
+MP10-2,medium_product_2011-W10,5,15,118,127,"£2,763.74",2763.74,currency,False,none,none,Supported_derived,sum(group[PARTY BUNTING; VINTAGE UNION JACK BUNTING; WOODEN UNION JACK BUNTING].Revenue_TW)=2763.74,MP10-2|5|2
+MP10-2,medium_product_2011-W10,6,16,73,82,"£1,328.74",1328.74,currency,False,none,none,Supported_derived,sum(group[FELTCRAFT CUSHION BUTTERFLY; FELTCRAFT CUSHION RABBIT].Revenue_TW)=1328.74,MP10-2|6|0
+MP10-2,medium_product_2011-W10,6,17,89,96,£353.46,353.46,currency,False,none,none,Unsupported,,MP10-2|6|1
+MP10-2,medium_product_2011-W10,7,18,32,37,28.4%,-28.4,percent,False,none,down,Supported_cell,"cell(JAM MAKING SET WITH JARS, WoW_Pct)=-28.4",MP10-2|7|0
+MP10-2,medium_product_2011-W10,7,19,45,52,£849.69,849.69,currency,False,none,none,Supported_cell,"cell(JAM MAKING SET WITH JARS, Revenue_TW)=849.69",MP10-2|7|1
+MP10-2,medium_product_2011-W10,7,20,88,93,10.2%,10.2,percent,False,none,up,Supported_cell,"cell(JAM MAKING SET PRINTED, WoW_Pct)=10.2",MP10-2|7|2
+MP10-2,medium_product_2011-W10,7,21,97,104,£548.19,548.19,currency,False,none,none,Supported_cell,"cell(JAM MAKING SET PRINTED, Revenue_LW)=548.19",MP10-2|7|3
+MP10-2,medium_product_2011-W10,8,22,9,10,3,3.0,plain,False,none,none,Skipped,entity_name,MP10-2|8|0
+MP10-2,medium_product_2011-W10,8,23,50,57,£878.15,878.15,currency,False,none,none,Supported_cell,"cell(SET OF 3 CAKE TINS PANTRY DESIGN, Revenue_TW)=878.15",MP10-2|8|1
+MP10-2,medium_product_2011-W10,8,24,66,68,47,47.0,count,False,none,none,Supported_cell,"cell(SET OF 3 CAKE TINS PANTRY DESIGN, Orders_TW)=47",MP10-2|8|2
+MP10-3,medium_product_2011-W10,1,0,10,11,5,5.0,plain,False,none,none,Skipped,counting,MP10-3|1|0
+MP10-3,medium_product_2011-W10,1,1,26,31,20.8%,20.8,percent,False,none,none,Supported_derived,share_top4(Revenue_TW)=20.8393,MP10-3|1|1
+MP10-3,medium_product_2011-W10,1,2,72,73,3,3.0,plain,False,none,none,Skipped,entity_name,MP10-3|1|2
+MP10-3,medium_product_2011-W10,1,3,82,91,"£2,616.00",2616.0,currency,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Revenue_TW)=2616",MP10-3|1|3
+MP10-3,medium_product_2011-W10,2,4,20,21,3,3.0,plain,False,none,none,Skipped,entity_name,MP10-3|2|0
+MP10-3,medium_product_2011-W10,2,5,55,64,"£1,109.70",1109.7,currency,False,none,none,Unsupported,,MP10-3|2|1
+MP10-3,medium_product_2011-W10,3,6,60,69,"+1,286.1%",1286.1,percent,False,none,none,Supported_cell,"cell(CHARLOTTE BAG SUKI DESIGN, WoW_Pct)=1286.1",MP10-3|3|0
+MP10-3,medium_product_2011-W10,3,7,80,87,£876.84,876.84,currency,False,none,none,Supported_cell,"cell(CHARLOTTE BAG SUKI DESIGN, Revenue_TW)=876.84",MP10-3|3|1
+MP10-3,medium_product_2011-W10,4,8,37,42,64.8%,-64.8,percent,False,none,down,Supported_cell,"cell(VINTAGE UNION JACK BUNTING, WoW_Pct)=-64.8",MP10-3|4|0
+MP10-3,medium_product_2011-W10,4,9,50,59,"£2,288.50",2288.5,currency,False,none,none,Supported_cell,"cell(VINTAGE UNION JACK BUNTING, Revenue_LW)=2288.5",MP10-3|4|1
+MP10-3,medium_product_2011-W10,4,10,83,85,20,20.0,plain,False,none,none,Supported_cell,"cell(VINTAGE UNION JACK BUNTING, Orders_LW)=20",MP10-3|4|2
+MP10-3,medium_product_2011-W10,4,11,89,90,4,4.0,plain,False,none,none,Supported_cell,"cell(VINTAGE UNION JACK BUNTING, Orders_TW)=4",MP10-3|4|3
+MP10-3,medium_product_2011-W10,5,12,30,35,"1,261",1261.0,count,False,none,none,Supported_cell,"cell(MINI PAINT SET VINTAGE, Units_TW)=1261",MP10-3|5|0
+MP10-3,medium_product_2011-W10,5,13,46,51,11.6x,11.6,plain,False,none,none,Unsupported,,MP10-3|5|1
+MP10-3,medium_product_2011-W10,5,14,69,72,108,108.0,plain,False,none,none,Supported_cell,"cell(MINI PAINT SET VINTAGE, Units_LW)=108",MP10-3|5|2
+MP10-3,medium_product_2011-W10,6,15,34,41,£113.01,113.01,currency,False,none,none,Supported_derived,per_order(SPACEBOY BABY GIFT SET.Revenue_TW)=113.006,MP10-3|6|0
+MP10-3,medium_product_2011-W10,6,16,89,96,£159.98,159.98,currency,False,none,none,Unsupported,,MP10-3|6|1
+MP10-3,medium_product_2011-W10,7,17,18,20,10,10.0,plain,False,none,none,Skipped,counting,MP10-3|7|0
+MP10-3,medium_product_2011-W10,7,18,36,38,29,29.0,plain,False,none,none,Skipped,counting,MP10-3|7|1
+MP10-3,medium_product_2011-W10,7,19,57,64,£680.75,680.75,currency,False,none,none,Unsupported,,MP10-3|7|2
+MP10-3,medium_product_2011-W10,8,20,35,42,£625.00,625.0,currency,False,none,none,Supported_cell,"cell(VINTAGE RED KITCHEN CABINET, Revenue_TW)=625",MP10-3|8|0
+MP10-3,medium_product_2011-W10,8,21,56,57,5,5.0,count,False,none,none,Supported_cell,"cell(VINTAGE RED KITCHEN CABINET, Units_TW)=5",MP10-3|8|1
+MP10-3,medium_product_2011-W10,8,22,68,75,£208.33,208.33,currency,False,none,none,Supported_derived,per_order(VINTAGE RED KITCHEN CABINET.Revenue_TW)=208.333,MP10-3|8|2
+MP10-4,medium_product_2011-W10,1,0,20,21,3,3.0,plain,False,none,none,Skipped,entity_name,MP10-4|1|0
+MP10-4,medium_product_2011-W10,1,1,40,45,36.1%,-36.1,percent,False,none,down,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, WoW_Pct)=-36.1",MP10-4|1|1
+MP10-4,medium_product_2011-W10,1,2,59,64,£2.6k,2600.0,currency,False,approx,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Revenue_TW)=2616",MP10-4|1|2
+MP10-4,medium_product_2011-W10,2,3,31,38,£129.33,129.33,currency,False,none,none,Supported_cell,"cell(DOORMAT FAIRY CAKE, Revenue_LW)=129.33",MP10-4|2|0
+MP10-4,medium_product_2011-W10,2,4,45,52,£942.30,942.3,currency,False,none,none,Supported_cell,"cell(DOORMAT FAIRY CAKE, Revenue_TW)=942.3",MP10-4|2|1
+MP10-4,medium_product_2011-W10,2,5,70,74,600%,600.0,percent,False,over,up,Supported_cell,"cell(DOORMAT FAIRY CAKE, WoW_Pct)=628.6",MP10-4|2|2
+MP10-4,medium_product_2011-W10,3,6,40,46,543.2%,543.2,percent,False,none,up,Unsupported,,MP10-4|3|0
+MP10-4,medium_product_2011-W10,3,7,54,61,£795.44,795.44,currency,False,none,none,Supported_cell,"cell(JUMBO BAG PINK VINTAGE PAISLEY, Revenue_TW)=795.44",MP10-4|3|1
+MP10-4,medium_product_2011-W10,4,8,37,40,779,779.0,plain,False,none,none,Supported_cell,"cell(SMALL POPCORN HOLDER, Units_TW)=779",MP10-4|4|0
+MP10-4,medium_product_2011-W10,4,9,46,49,370,370.0,plain,False,none,none,Supported_cell,"cell(SMALL POPCORN HOLDER, Units_LW)=370",MP10-4|4|1
+MP10-4,medium_product_2011-W10,4,10,65,71,100.4%,100.4,percent,False,none,up,Supported_cell,"cell(SMALL POPCORN HOLDER, WoW_Pct)=100.4",MP10-4|4|2
+MP10-4,medium_product_2011-W10,5,11,61,70,"£1,272.47",1272.47,currency,False,none,none,Unsupported,,MP10-4|5|0
+MP10-4,medium_product_2011-W10,5,12,91,93,4%,4.0,percent,False,approx,none,Supported_derived,"pct_change(PLEASE ONE PERSON METAL SIGN.Revenue_LW, mean(Revenue_LW))=-3.79684",MP10-4|5|1
+MP10-4,medium_product_2011-W10,6,13,49,56,£567.52,567.52,currency,False,none,none,Supported_cell,"cell(NATURAL SLATE HEART CHALKBOARD, Revenue_TW)=567.52",MP10-4|6|0
+MP10-4,medium_product_2011-W10,6,14,63,70,£640.85,640.85,currency,False,none,none,Supported_cell,"cell(PLEASE ONE PERSON METAL SIGN, Revenue_LY)=640.85",MP10-4|6|1
+MP10-4,medium_product_2011-W10,6,15,75,81,-14.7%,-14.7,percent,False,none,none,Supported_cell,"cell(NATURAL SLATE HEART CHALKBOARD, YoY_Pct)=-14.7",MP10-4|6|2
+MP10-4,medium_product_2011-W10,7,16,39,41,37,37.0,count,True,none,none,Supported_cell,"cell(JUMBO  BAG BAROQUE BLACK WHITE, Rank)=37",MP10-4|7|0
+MP10-4,medium_product_2011-W10,7,17,48,54,143.4%,143.4,percent,False,none,up,Unsupported,,MP10-4|7|1
+MP10-4,medium_product_2011-W10,7,18,62,69,£539.35,539.35,currency,False,none,none,Supported_cell,"cell(JUMBO  BAG BAROQUE BLACK WHITE, Revenue_TW)=539.35",MP10-4|7|2
+MP10-4,medium_product_2011-W10,8,19,16,19,407,407.0,count,False,none,none,Supported_cell,"cell(SOMBRERO, Units_TW)=407",MP10-4|8|0
+MP10-4,medium_product_2011-W10,8,20,57,65,"5,323.2%",5323.2,percent,False,none,up,Supported_cell,"cell(DOORMAT HEARTS, YoY_Pct)=5323.2",MP10-4|8|1
+MP10-4,medium_product_2011-W10,8,21,74,80,£11.70,11.7,currency,False,none,none,Supported_cell,"cell(SOMBRERO, Revenue_LY)=11.7",MP10-4|8|2
+MP05-1,medium_product_2010-W05,1,0,38,47,"£2,009.77",2009.77,currency,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_TW)=2009.77",MP05-1|1|0
+MP05-1,medium_product_2010-W05,1,1,54,63,"£3,740.98",3740.98,currency,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_LW)=3740.98",MP05-1|1|1
+MP05-1,medium_product_2010-W05,1,2,68,74,-46.3%,-46.3,percent,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, WoW_Pct)=-46.3",MP05-1|1|2
+MP05-1,medium_product_2010-W05,1,3,80,84,8.5%,8.5,percent,False,none,none,Unsupported,,MP05-1|1|3
+MP05-1,medium_product_2010-W05,2,4,29,38,"£1,506.02",1506.02,currency,False,none,none,Supported_cell,"cell(COOK WITH WINE METAL SIGN, Revenue_TW)=1506.02",MP05-1|2|0
+MP05-1,medium_product_2010-W05,2,5,43,52,"+3,118.0%",3118.0,percent,False,none,none,Supported_cell,"cell(COOK WITH WINE METAL SIGN, WoW_Pct)=3118",MP05-1|2|1
+MP05-1,medium_product_2010-W05,2,6,58,60,24,24.0,count,False,none,none,Supported_cell,"cell(COOK WITH WINE METAL SIGN, Units_LW)=24",MP05-1|2|2
+MP05-1,medium_product_2010-W05,3,7,11,12,3,3.0,plain,False,none,none,Skipped,entity_name,MP05-1|3|0
+MP05-1,medium_product_2010-W05,3,8,26,33,£973.81,973.81,currency,False,none,none,Supported_cell,"cell(DOOR MAT 3 SMILEY CATS, Revenue_TW)=973.81",MP05-1|3|1
+MP05-1,medium_product_2010-W05,3,9,38,45,+242.5%,242.5,percent,False,none,none,Unsupported,,MP05-1|3|2
+MP05-1,medium_product_2010-W05,3,10,51,52,7,7.0,count,False,none,none,Supported_cell,"cell(DOOR MAT 3 SMILEY CATS, Orders_TW)=7",MP05-1|3|3
+MP05-1,medium_product_2010-W05,3,11,63,65,14,14.0,plain,False,none,none,Supported_cell,"cell(DOOR MAT 3 SMILEY CATS, Orders_LW)=14",MP05-1|3|4
+MP05-1,medium_product_2010-W05,4,12,36,43,£948.00,948.0,currency,False,none,none,Supported_cell,"cell(RED HANGING HEART T-LIGHT HOLDER, Revenue_TW)=948",MP05-1|4|0
+MP05-1,medium_product_2010-W05,4,13,48,54,-47.6%,-47.6,percent,False,none,none,Supported_cell,"cell(RED HANGING HEART T-LIGHT HOLDER, WoW_Pct)=-47.6",MP05-1|4|1
+MP05-1,medium_product_2010-W05,5,14,28,35,£875.04,875.04,currency,False,none,none,Supported_cell,"cell(KASHMIR FOLKART TUMBLERS, Revenue_TW)=875.04",MP05-1|5|0
+MP05-1,medium_product_2010-W05,5,15,40,43,498,498.0,count,False,none,none,Supported_cell,"cell(KASHMIR FOLKART TUMBLERS, Units_TW)=498",MP05-1|5|1
+MP05-1,medium_product_2010-W05,5,16,56,58,13,13.0,count,True,none,none,Supported_cell,"cell(HOME SWEET HOME METAL SIGN, Rank)=13",MP05-1|5|2
+MP05-1,medium_product_2010-W05,6,17,34,41,£688.26,688.26,currency,False,none,none,Supported_cell,"cell(YOU'RE CONFUSING ME METAL SIGN, Revenue_TW)=688.26",MP05-1|6|0
+MP05-1,medium_product_2010-W05,6,18,48,54,£36.87,36.87,currency,False,none,none,Unsupported,,MP05-1|6|1
+MP05-1,medium_product_2010-W05,6,19,59,68,"+1,670.7%",1670.7,percent,False,none,none,Supported_cell,"cell(YOU'RE CONFUSING ME METAL SIGN, WoW_Pct)=1670.7",MP05-1|6|2
+MP05-1,medium_product_2010-W05,7,20,28,35,£565.10,565.1,currency,False,none,none,Supported_cell,"cell(LOVE BUILDING BLOCK WORD, Revenue_TW)=565.1",MP05-1|7|0
+MP05-1,medium_product_2010-W05,7,21,40,42,28,28.0,count,False,none,none,Supported_cell,"cell(LOVE BUILDING BLOCK WORD, Orders_TW)=28",MP05-1|7|1
+MP05-1,medium_product_2010-W05,7,22,51,55,2.4%,2.4,percent,False,none,none,Supported_cell,"cell(LOVE BUILDING BLOCK WORD, Share_Pct)=2.4",MP05-1|7|2
+MP05-1,medium_product_2010-W05,8,23,9,19,"£23,394.39",23394.39,currency,False,none,none,Supported_derived,sum(Revenue_TW)=23394.4,MP05-1|8|0
+MP05-1,medium_product_2010-W05,8,24,26,36,"£14,694.01",14694.01,currency,False,none,none,Supported_derived,sum(Revenue_LW)=14694,MP05-1|8|1
+MP05-1,medium_product_2010-W05,8,25,41,47,-59.2%,-59.2,percent,False,none,none,Unsupported,,MP05-1|8|2
+MP05-2,medium_product_2010-W05,1,0,5,9,2010,2010.0,plain,False,none,none,Skipped,date_or_week,MP05-2|1|0
+MP05-2,medium_product_2010-W05,1,1,19,20,7,7.0,plain,False,none,none,Supported_cell,"cell(DOOR MAT BLACK FLOCK, Orders_LW)=7",MP05-2|1|2
+MP05-2,medium_product_2010-W05,1,2,50,59,"£6,608.34",6608.34,currency,False,none,none,Unsupported,,MP05-2|1|3
+MP05-2,medium_product_2010-W05,1,3,64,69,31.2%,31.2,percent,False,none,none,Supported_derived,share(family[DOOR MAT].Revenue_TW)=31.1903,MP05-2|1|4
+MP05-2,medium_product_2010-W05,1,4,90,99,"£1,963.57",1963.57,currency,False,none,none,Supported_derived,sum(family[DOOR MAT].Revenue_LW)=1963.57,MP05-2|1|5
+MP05-2,medium_product_2010-W05,2,5,2,3,3,3.0,plain,False,none,none,Skipped,counting,MP05-2|2|0
+MP05-2,medium_product_2010-W05,2,6,127,136,"£1,497.76",1497.76,currency,False,none,none,Supported_cell,"cell(DOOR MAT RED SPOT, Revenue_TW)=1497.76",MP05-2|2|1
+MP05-2,medium_product_2010-W05,2,7,165,172,£896.19,896.19,currency,False,none,none,Supported_cell,"cell(DOOR MAT HEARTS, Revenue_TW)=896.19",MP05-2|2|2
+MP05-2,medium_product_2010-W05,3,8,6,7,5,5.0,plain,False,none,none,Supported_cell,"cell(RETRO SPOT CAKE STAND, Share_Pct)=4.7",MP05-2|3|0
+MP05-2,medium_product_2010-W05,3,9,38,47,"£4,261.21",4261.21,currency,False,none,up,Supported_derived,sum(family[METAL SIGN].Revenue_TW)=4261.21,MP05-2|3|1
+MP05-2,medium_product_2010-W05,3,10,60,67,£880.82,880.82,currency,False,none,none,Unsupported,,MP05-2|3|2
+MP05-2,medium_product_2010-W05,3,11,75,80,"2,315",2315.0,count,False,none,none,Supported_derived,sum(family[METAL SIGN].Units_TW)=2315,MP05-2|3|3
+MP05-2,medium_product_2010-W05,4,12,38,46,"3,118.0%",3118.0,percent,False,none,up,Supported_cell,"cell(COOK WITH WINE METAL SIGN, WoW_Pct)=3118",MP05-2|4|0
+MP05-2,medium_product_2010-W05,4,13,54,61,£647.41,647.41,currency,False,none,none,Supported_cell,"cell(PLEASE ONE PERSON METAL SIGN, Revenue_TW)=647.41",MP05-2|4|1
+MP05-2,medium_product_2010-W05,5,14,6,7,2,2.0,plain,False,none,none,Supported_derived,min(Share_Pct)=2.4,MP05-2|5|0
+MP05-2,medium_product_2010-W05,5,15,51,60,"£2,957.77",2957.77,currency,False,none,none,Supported_derived,sum(family[HANGING HEART T].Revenue_TW)=2957.77,MP05-2|5|1
+MP05-2,medium_product_2010-W05,5,16,69,78,"£5,548.89",5548.89,currency,False,none,none,Supported_derived,sum(family[HANGING HEART T].Revenue_LW)=5548.89,MP05-2|5|2
+MP05-2,medium_product_2010-W05,5,17,88,93,46.7%,-46.7,percent,False,none,down,Supported_derived,"pct_change(sum(family[HANGING HEART T].Revenue_TW), sum(family[HANGING HEART T].Revenue_LW))=-46.6962",MP05-2|5|3
+MP05-2,medium_product_2010-W05,6,18,27,32,51.3%,-51.3,percent,False,none,down,Supported_cell,"cell(DOOR MAT UNION FLAG, WoW_Pct)=-51.3",MP05-2|6|0
+MP05-2,medium_product_2010-W05,6,19,40,47,£688.45,688.45,currency,False,none,none,Supported_cell,"cell(DOOR MAT UNION FLAG, Revenue_TW)=688.45",MP05-2|6|1
+MP05-2,medium_product_2010-W05,6,20,69,71,20,20.0,plain,False,none,none,Supported_cell,"cell(DOOR MAT UNION FLAG, Orders_TW)=20",MP05-2|6|2
+MP05-2,medium_product_2010-W05,6,21,77,79,30,30.0,plain,False,none,none,Unsupported,,MP05-2|6|3
+MP05-2,medium_product_2010-W05,7,22,74,83,"£1,501.26",1501.26,currency,False,none,none,Supported_derived,sum(group[JUMBO BAG PINK WITH WHITE SPOTS; JUMBO BAG RED WHITE SPOTTY].Revenue_TW)=1501.26,MP05-2|7|0
+MP05-2,medium_product_2010-W05,7,23,93,98,14.1%,-14.1,percent,False,none,down,Unsupported,,MP05-2|7|1
+MP05-3,medium_product_2010-W05,1,0,38,47,"£2,009.77",2009.77,currency,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_TW)=2009.77",MP05-3|1|0
+MP05-3,medium_product_2010-W05,1,1,92,101,"£1,506.02",1506.02,currency,False,none,none,Supported_cell,"cell(COOK WITH WINE METAL SIGN, Revenue_TW)=1506.02",MP05-3|1|1
+MP05-3,medium_product_2010-W05,1,2,106,113,£530.75,530.75,currency,False,none,none,Unsupported,,MP05-3|1|2
+MP05-3,medium_product_2010-W05,2,3,57,66,"+3,118.0%",3118.0,percent,False,none,none,Supported_cell,"cell(COOK WITH WINE METAL SIGN, WoW_Pct)=3118",MP05-3|2|0
+MP05-3,medium_product_2010-W05,2,4,73,79,£46.80,46.8,currency,False,none,none,Supported_cell,"cell(COOK WITH WINE METAL SIGN, Revenue_LW)=46.8",MP05-3|2|1
+MP05-3,medium_product_2010-W05,3,5,52,53,3,3.0,count,True,none,none,Supported_cell,"cell(DOOR MAT RED SPOT, Rank)=3",MP05-3|3|0
+MP05-3,medium_product_2010-W05,3,6,58,59,5,5.0,count,True,none,none,Supported_cell,"cell(RETRO SPOT CAKE STAND, Rank)=5",MP05-3|3|1
+MP05-3,medium_product_2010-W05,3,7,64,73,"£1,497.76",1497.76,currency,False,none,none,Supported_cell,"cell(DOOR MAT RED SPOT, Revenue_TW)=1497.76",MP05-3|3|2
+MP05-3,medium_product_2010-W05,3,8,78,87,"£1,321.48",1321.48,currency,False,none,none,Supported_cell,"cell(DOOR MAT BLACK FLOCK, Revenue_TW)=1321.48",MP05-3|3|3
+MP05-3,medium_product_2010-W05,4,9,33,39,£64.29,64.29,currency,False,none,none,Supported_derived,per_order(RETRO SPOT CAKE STAND.Revenue_TW)=64.2929,MP05-3|4|0
+MP05-3,medium_product_2010-W05,4,10,56,62,£26.36,26.36,currency,False,none,none,Unsupported,,MP05-3|4|1
+MP05-3,medium_product_2010-W05,5,11,32,35,498,498.0,count,False,none,none,Supported_cell,"cell(KASHMIR FOLKART TUMBLERS, Units_TW)=498",MP05-3|5|0
+MP05-3,medium_product_2010-W05,5,12,43,47,5.9x,5.9,plain,False,none,none,Unsupported,,MP05-3|5|1
+MP05-3,medium_product_2010-W05,5,13,53,56,101,101.0,plain,False,none,none,Supported_cell,"cell(KASHMIR FOLKART TUMBLERS, Units_LW)=101",MP05-3|5|2
+MP05-3,medium_product_2010-W05,6,14,40,46,612.3%,612.3,percent,False,none,up,Supported_cell,"cell(PINK BLUE FELT CRAFT TRINKET BOX, WoW_Pct)=612.3",MP05-3|6|0
+MP05-3,medium_product_2010-W05,6,15,54,61,£712.29,712.29,currency,False,none,none,Supported_cell,"cell(PINK BLUE FELT CRAFT TRINKET BOX, Revenue_TW)=712.29",MP05-3|6|1
+MP05-3,medium_product_2010-W05,6,16,94,99,34.7%,-34.7,percent,False,none,down,Supported_cell,"cell(WHITE CHERRY LIGHTS, WoW_Pct)=-34.7",MP05-3|6|2
+MP05-3,medium_product_2010-W05,6,17,103,112,"£1,153.50",1153.5,currency,False,none,none,Supported_cell,"cell(WHITE CHERRY LIGHTS, Revenue_LW)=1153.5",MP05-3|6|3
+MP05-3,medium_product_2010-W05,7,18,10,12,10,10.0,plain,False,none,none,Skipped,counting,MP05-3|7|0
+MP05-3,medium_product_2010-W05,7,19,27,32,52.0%,52.0,percent,False,none,none,Supported_derived,share_top10(Revenue_TW)=52.016,MP05-3|7|1
+MP05-3,medium_product_2010-W05,7,20,58,60,16,16.0,plain,False,none,none,Supported_derived,mean(Orders_TW)=16.3462,MP05-3|7|2
+MP05-3,medium_product_2010-W05,7,21,70,77,£710.70,710.7,currency,False,none,none,Unsupported,,MP05-3|7|3
+MP05-3,medium_product_2010-W05,8,22,22,29,£641.95,641.95,currency,False,none,none,Supported_cell,"cell(SOMBRERO, Revenue_TW)=641.95",MP05-3|8|0
+MP05-3,medium_product_2010-W05,8,23,48,49,3,3.0,count,False,none,none,Supported_cell,"cell(SOMBRERO, Orders_TW)=3",MP05-3|8|1
+MP05-3,medium_product_2010-W05,8,24,58,65,£213.98,213.98,currency,False,none,none,Supported_derived,per_order(SOMBRERO.Revenue_TW)=213.983,MP05-3|8|2
+MP05-4,medium_product_2010-W05,1,0,50,53,1st,1.0,count,True,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Rank)=1",MP05-4|1|0
+MP05-4,medium_product_2010-W05,1,1,64,69,£2.0k,2000.0,currency,False,approx,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_TW)=2009.77",MP05-4|1|1
+MP05-4,medium_product_2010-W05,1,2,76,81,43.6%,-43.6,percent,False,none,down,Unsupported,,MP05-4|1|2
+MP05-4,medium_product_2010-W05,2,3,43,46,900,900.0,count,False,over,none,Unsupported,,MP05-4|2|0
+MP05-4,medium_product_2010-W05,2,4,63,65,24,24.0,plain,False,none,none,Supported_cell,"cell(COOK WITH WINE METAL SIGN, Units_LW)=24",MP05-4|2|1
+MP05-4,medium_product_2010-W05,3,5,42,48,840.5%,840.5,percent,False,none,up,Supported_cell,"cell(DOOR MAT WELCOME PUPPIES, WoW_Pct)=840.5",MP05-4|3|0
+MP05-4,medium_product_2010-W05,3,6,52,61,"£1,017.04",1017.04,currency,False,none,none,Supported_cell,"cell(DOOR MAT WELCOME PUPPIES, Revenue_TW)=1017.04",MP05-4|3|1
+MP05-4,medium_product_2010-W05,3,7,66,67,9,9.0,count,False,none,none,Supported_cell,"cell(DOOR MAT WELCOME PUPPIES, Orders_LW)=9",MP05-4|3|2
+MP05-4,medium_product_2010-W05,4,8,34,41,£811.10,811.1,currency,False,none,none,Supported_cell,"cell(HOME SWEET HOME METAL SIGN, Revenue_TW)=811.1",MP05-4|4|0
+MP05-4,medium_product_2010-W05,4,9,50,51,6,6.0,count,False,none,none,Supported_cell,"cell(HOME SWEET HOME METAL SIGN, Orders_TW)=6",MP05-4|4|1
+MP05-4,medium_product_2010-W05,4,10,63,64,9,9.0,plain,False,none,none,Supported_cell,"cell(HOME SWEET HOME METAL SIGN, Orders_LW)=9",MP05-4|4|2
+MP05-4,medium_product_2010-W05,5,11,38,40,3%,3.0,percent,False,approx,none,Supported_cell,"cell(BLACK RECORD COVER FRAME, Share_Pct)=3.4",MP05-4|5|0
+MP05-4,medium_product_2010-W05,5,12,52,59,£788.49,788.49,currency,False,none,none,Supported_cell,"cell(BLACK RECORD COVER FRAME, Revenue_TW)=788.49",MP05-4|5|1
+MP05-4,medium_product_2010-W05,6,13,27,34,£663.76,663.76,currency,False,none,none,Supported_cell,"cell(CREAM HEART CARD HOLDER, Revenue_TW)=663.76",MP05-4|6|0
+MP05-4,medium_product_2010-W05,6,14,73,80,£530.77,530.77,currency,False,none,none,Supported_cell,"cell(RED SPOT HEART HOT WATER BOTTLE, Revenue_LW)=530.77",MP05-4|6|1
+MP05-4,medium_product_2010-W05,6,15,104,109,£0.15,0.15,currency,False,none,none,Supported_derived,"diff(CREAM HEART CARD HOLDER.Revenue_TW, RED SPOT HEART HOT WATER BOTTLE.Revenue_TW)=0.15",MP05-4|6|2
+MP05-4,medium_product_2010-W05,7,16,25,28,513,513.0,plain,False,none,none,Supported_cell,"cell(SOMBRERO, Units_TW)=513",MP05-4|7|0
+MP05-4,medium_product_2010-W05,7,17,34,37,200,200.0,plain,False,none,none,Supported_cell,"cell(SOMBRERO, Units_LW)=200",MP05-4|7|1
+MP05-4,medium_product_2010-W05,7,18,45,51,156.5%,156.5,percent,False,none,up,Supported_derived,"pct_change(SOMBRERO.Units_TW, SOMBRERO.Units_LW)=156.5",MP05-4|7|2
+MP05-4,medium_product_2010-W05,8,19,19,21,26,26.0,plain,False,none,none,Skipped,counting,MP05-4|8|0
+MP05-4,medium_product_2010-W05,8,20,40,45,"8,300",8300.0,plain,False,none,none,Supported_derived,sum(Units_TW)=8300,MP05-4|8|1
+MP05-4,medium_product_2010-W05,8,21,52,57,"4,372",4372.0,plain,False,none,none,Unsupported,,MP05-4|8|2
+LP11-1,large_product_2011-W11,1,0,20,21,3,3.0,plain,False,none,none,Skipped,entity_name,LP11-1|1|0
+LP11-1,large_product_2011-W11,1,1,28,37,"£3,740.45",3740.45,currency,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Revenue_TW)=3740.45",LP11-1|1|1
+LP11-1,large_product_2011-W11,1,2,42,48,+43.0%,43.0,percent,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, WoW_Pct)=43",LP11-1|1|2
+LP11-1,large_product_2011-W11,1,3,54,60,+43.0%,43.0,percent,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, WoW_Pct)=43",LP11-1|1|3
+LP11-1,large_product_2011-W11,1,4,66,70,5.7%,5.7,percent,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Share_Pct)=5.7",LP11-1|1|4
+LP11-1,large_product_2011-W11,2,5,17,26,"£2,843.54",2843.54,currency,False,none,none,Supported_cell,"cell(PARTY BUNTING, Revenue_TW)=2843.54",LP11-1|2|0
+LP11-1,large_product_2011-W11,2,6,33,42,"£1,041.34",1041.34,currency,False,none,none,Unsupported,,LP11-1|2|1
+LP11-1,large_product_2011-W11,2,7,47,54,+180.3%,180.3,percent,False,none,none,Supported_cell,"cell(PARTY BUNTING, YoY_Pct)=180.3",LP11-1|2|2
+LP11-1,large_product_2011-W11,3,8,27,36,"£2,718.16",2718.16,currency,False,none,none,Supported_cell,"cell(JUMBO BAG RED RETROSPOT, Revenue_TW)=2718.16",LP11-1|3|0
+LP11-1,large_product_2011-W11,3,9,41,46,"1,546",1546.0,count,False,none,none,Supported_cell,"cell(JUMBO BAG RED RETROSPOT, Units_TW)=1546",LP11-1|3|1
+LP11-1,large_product_2011-W11,3,10,54,61,+100.4%,100.4,percent,False,none,none,Supported_cell,"cell(JUMBO BAG RED RETROSPOT, WoW_Pct)=100.4",LP11-1|3|2
+LP11-1,large_product_2011-W11,4,11,38,47,"£1,264.96",1264.96,currency,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_TW)=1264.96",LP11-1|4|0
+LP11-1,large_product_2011-W11,4,12,54,63,"£3,952.80",3952.8,currency,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_LY)=3952.8",LP11-1|4|1
+LP11-1,large_product_2011-W11,4,13,68,74,+68.0%,68.0,percent,False,none,none,Unsupported,,LP11-1|4|2
+LP11-1,large_product_2011-W11,5,14,10,12,12,12.0,plain,False,none,none,Skipped,entity_name,LP11-1|5|0
+LP11-1,large_product_2011-W11,5,15,28,35,£564.36,564.36,currency,False,none,none,Supported_cell,"cell(PACK OF 12 SKULL TISSUES, Revenue_TW)=564.36",LP11-1|5|1
+LP11-1,large_product_2011-W11,5,16,44,51,£344.84,344.84,currency,False,none,none,Supported_cell,"cell(PACK OF 12 LONDON TISSUES, Revenue_LW)=344.84",LP11-1|5|2
+LP11-1,large_product_2011-W11,5,17,56,65,"+3,954.3%",3954.3,percent,False,none,none,Supported_cell,"cell(PACK OF 12 SKULL TISSUES, WoW_Pct)=3954.3",LP11-1|5|3
+LP11-1,large_product_2011-W11,6,18,2,4,12,12.0,plain,False,none,none,Skipped,entity_name,LP11-1|6|0
+LP11-1,large_product_2011-W11,6,19,39,46,£579.10,579.1,currency,False,none,none,Supported_cell,"cell(12 PENCILS SMALL TUBE RED RETROSPOT, Revenue_TW)=579.1",LP11-1|6|1
+LP11-1,large_product_2011-W11,6,20,51,54,980,980.0,count,False,none,none,Unsupported,,LP11-1|6|2
+LP11-1,large_product_2011-W11,6,21,62,64,10,10.0,count,False,none,none,Supported_cell,"cell(12 PENCILS SMALL TUBE RED RETROSPOT, Orders_TW)=10",LP11-1|6|3
+LP11-1,large_product_2011-W11,7,22,2,3,3,3.0,plain,False,none,none,Skipped,entity_name,LP11-1|7|0
+LP11-1,large_product_2011-W11,7,23,36,43,£537.03,537.03,currency,False,none,none,Supported_cell,"cell(3 HOOK PHOTO SHELF ANTIQUE WHITE, Revenue_TW)=537.03",LP11-1|7|1
+LP11-1,large_product_2011-W11,7,24,50,56,£17.00,17.0,currency,False,none,none,Supported_cell,"cell(3 HOOK PHOTO SHELF ANTIQUE WHITE, Revenue_LY)=17",LP11-1|7|2
+LP11-1,large_product_2011-W11,7,25,61,70,"+3,059.0%",3059.0,percent,False,none,none,Supported_cell,"cell(3 HOOK PHOTO SHELF ANTIQUE WHITE, YoY_Pct)=3059",LP11-1|7|3
+LP11-1,large_product_2011-W11,7,26,81,83,44,44.0,count,True,none,none,Supported_cell,"cell(JUMBO SHOPPER VINTAGE RED PAISLEY, Rank)=44",LP11-1|7|4
+LP11-1,large_product_2011-W11,8,27,9,19,"£65,350.74",65350.74,currency,False,none,none,Supported_derived,sum(Revenue_TW)=65350.7,LP11-1|8|0
+LP11-1,large_product_2011-W11,8,28,26,36,"£38,569.58",38569.58,currency,False,none,none,Supported_derived,sum(Revenue_LW)=38569.6,LP11-1|8|1
+LP11-1,large_product_2011-W11,8,29,44,54,"£23,107.90",23107.9,currency,False,none,none,Unsupported,,LP11-1|8|2
+LP11-2,large_product_2011-W11,1,0,6,7,9,9.0,plain,False,none,none,Supported_cell,"cell(JUMBO BAG TOYS, Orders_TW)=9",LP11-2|1|0
+LP11-2,large_product_2011-W11,1,1,69,79,"£13,456.71",13456.71,currency,False,none,none,Supported_derived,sum(family[JUMBO BAG].Revenue_TW)=13456.7,LP11-2|1|1
+LP11-2,large_product_2011-W11,1,2,84,89,20.5%,20.5,percent,False,none,none,Unsupported,,LP11-2|1|2
+LP11-2,large_product_2011-W11,2,3,56,63,+789.2%,789.2,percent,False,none,none,Supported_cell,"cell(JUMBO BAG TOYS, WoW_Pct)=789.2",LP11-2|2|0
+LP11-2,large_product_2011-W11,2,4,68,77,"£1,132.19",1132.19,currency,False,none,none,Supported_cell,"cell(JUMBO BAG TOYS, Revenue_TW)=1132.19",LP11-2|2|1
+LP11-2,large_product_2011-W11,2,5,83,90,£166.37,166.37,currency,False,none,none,Supported_cell,"cell(JUMBO BAG TOYS, Revenue_LY)=166.37",LP11-2|2|2
+LP11-2,large_product_2011-W11,3,6,6,7,3,3.0,plain,False,none,none,Supported_derived,"ratio(sum(Revenue_TW), sum(Revenue_LY))=2.83913",LP11-2|3|0
+LP11-2,large_product_2011-W11,3,7,63,72,"£1,563.74",1563.74,currency,False,none,none,Supported_derived,sum(family[KITCHEN SCALES].Revenue_TW)=1563.74,LP11-2|3|1
+LP11-2,large_product_2011-W11,3,8,79,86,£439.41,439.41,currency,False,none,none,Unsupported,,LP11-2|3|2
+LP11-2,large_product_2011-W11,4,9,36,45,"£1,455.96",1455.96,currency,False,none,none,Supported_derived,sum(family[BAKING MOULD].Revenue_TW)=1455.96,LP11-2|4|1
+LP11-2,large_product_2011-W11,4,10,54,56,14,14.0,count,False,none,none,Supported_derived,sum(family[BAKING MOULD].Orders_TW)=14,LP11-2|4|2
+LP11-2,large_product_2011-W11,4,11,73,80,£119.98,119.98,currency,False,none,none,Unsupported,,LP11-2|4|3
+LP11-2,large_product_2011-W11,5,12,6,7,3,3.0,plain,False,none,none,Supported_derived,share(family[BABY GIFT SET].Revenue_TW)=2.93326,LP11-2|5|0
+LP11-2,large_product_2011-W11,5,13,33,38,20.0%,-20.0,percent,False,none,down,Supported_derived,"pct_change(sum(family[BABY GIFT SET].Revenue_TW), sum(family[BABY GIFT SET].Revenue_LW))=-20.0338",LP11-2|5|1
+LP11-2,large_product_2011-W11,5,14,46,55,"£1,916.91",1916.91,currency,False,none,none,Supported_derived,sum(family[BABY GIFT SET].Revenue_TW)=1916.91,LP11-2|5|2
+LP11-2,large_product_2011-W11,6,15,6,7,4,4.0,plain,False,none,none,Supported_cell,"cell(PARTY BUNTING, Share_Pct)=4.4",LP11-2|6|0
+LP11-2,large_product_2011-W11,6,16,45,54,"£1,997.59",1997.59,currency,False,none,none,Supported_derived,sum(family[METAL SIGN].Revenue_TW)=1997.59,LP11-2|6|1
+LP11-2,large_product_2011-W11,6,17,59,64,-1.9%,-1.9,percent,False,none,none,Unsupported,,LP11-2|6|2
+LP11-2,large_product_2011-W11,6,18,79,84,29.8%,-29.8,percent,False,none,down,Supported_derived,"pct_change(sum(family[METAL SIGN].Revenue_TW), sum(family[METAL SIGN].Revenue_LY))=-29.8027",LP11-2|6|3
+LP11-2,large_product_2011-W11,7,19,83,92,"£1,059.92",1059.92,currency,False,none,none,Supported_derived,sum(group[GREEN REGENCY TEACUP AND SAUCER; ROSES REGENCY TEACUP AND SAUCER].Revenue_TW)=1059.92,LP11-2|7|0
+LP11-2,large_product_2011-W11,7,20,100,105,80.9%,80.9,percent,False,none,up,Supported_derived,"pct_change(sum(group[GREEN REGENCY TEACUP AND SAUCER; ROSES REGENCY TEACUP AND SAUCER].Revenue_TW), sum(group[GREEN REGENCY TEACUP AND SAUCER; ROSES REGENCY TEACUP AND SAUCER].Revenue_LW))=80.9108",LP11-2|7|1
+LP11-2,large_product_2011-W11,8,21,10,12,12,12.0,plain,False,none,none,Skipped,entity_name,LP11-2|8|0
+LP11-2,large_product_2011-W11,8,22,39,41,12,12.0,plain,False,none,none,Skipped,entity_name,LP11-2|8|1
+LP11-2,large_product_2011-W11,8,23,62,67,"3,700",3700.0,count,False,none,none,Supported_derived,sum(group[PACK OF 12 LONDON TISSUES; PACK OF 12 SKULL TISSUES].Units_TW)=3700,LP11-2|8|2
+LP11-3,large_product_2011-W11,1,0,10,11,3,3.0,plain,False,none,none,Skipped,counting,LP11-3|1|0
+LP11-3,large_product_2011-W11,1,1,40,41,3,3.0,plain,False,none,none,Skipped,entity_name,LP11-3|1|1
+LP11-3,large_product_2011-W11,1,2,96,101,14.2%,14.2,percent,False,none,none,Supported_derived,share(group[JUMBO BAG RED RETROSPOT; PARTY BUNTING; REGENCY CAKESTAND 3 TIER].Revenue_TW)=14.2342,LP11-3|1|2
+LP11-3,large_product_2011-W11,2,3,16,18,88,88.0,plain,False,none,none,Skipped,counting,LP11-3|2|0
+LP11-3,large_product_2011-W11,2,4,33,43,"£56,048.59",56048.59,currency,False,none,none,Supported_derived,sum_after_top3(Revenue_TW)=56048.6,LP11-3|2|1
+LP11-3,large_product_2011-W11,2,5,62,69,£615.92,615.92,currency,False,none,none,Unsupported,,LP11-3|2|2
+LP11-3,large_product_2011-W11,3,6,20,21,3,3.0,plain,False,none,none,Skipped,entity_name,LP11-3|3|0
+LP11-3,large_product_2011-W11,3,7,48,55,£896.91,896.91,currency,False,none,none,Supported_derived,"diff(PARTY BUNTING.Revenue_TW, REGENCY CAKESTAND 3 TIER.Revenue_TW)=-896.91",LP11-3|3|1
+LP11-3,large_product_2011-W11,4,8,21,26,56.7%,-56.7,percent,False,none,down,Supported_cell,"cell(CHILLI LIGHTS, WoW_Pct)=-56.7",LP11-3|4|0
+LP11-3,large_product_2011-W11,4,9,34,41,£656.45,656.45,currency,False,none,none,Supported_cell,"cell(CHILLI LIGHTS, Revenue_TW)=656.45",LP11-3|4|1
+LP11-3,large_product_2011-W11,4,10,80,87,£580.11,580.11,currency,False,none,none,Supported_cell,"cell(DOLLY GIRL BABY GIFT SET, Revenue_TW)=580.11",LP11-3|4|2
+LP11-3,large_product_2011-W11,5,11,9,10,3,3.0,plain,False,none,none,Skipped,entity_name,LP11-3|5|0
+LP11-3,large_product_2011-W11,5,12,44,50,£31.92,31.92,currency,False,none,none,Supported_derived,per_order(SET OF 3 CAKE TINS PANTRY DESIGN.Revenue_TW)=31.9158,LP11-3|5|1
+LP11-3,large_product_2011-W11,5,13,68,74,£15.18,15.18,currency,False,none,none,Supported_derived,per_order(SET OF 6 SPICE TINS PANTRY DESIGN.Revenue_LW)=15.179,LP11-3|5|2
+LP11-3,large_product_2011-W11,5,14,86,87,6,6.0,plain,False,none,none,Skipped,entity_name,LP11-3|5|3
+LP11-3,large_product_2011-W11,6,15,10,12,72,72.0,plain,False,none,none,Skipped,entity_name,LP11-3|6|0
+LP11-3,large_product_2011-W11,6,16,39,44,"1,303",1303.0,count,False,none,none,Supported_cell,"cell(PACK OF 72 RETROSPOT CAKE CASES, Units_TW)=1303",LP11-3|6|1
+LP11-3,large_product_2011-W11,6,17,61,63,26,26.0,count,False,none,none,Supported_cell,"cell(PACK OF 72 RETROSPOT CAKE CASES, Orders_TW)=26",LP11-3|6|2
+LP11-3,large_product_2011-W11,6,18,72,76,50.1,50.1,count,False,none,none,Supported_derived,units_per_order(PACK OF 72 RETROSPOT CAKE CASES.Units_TW)=50.1154,LP11-3|6|3
+LP11-3,large_product_2011-W11,7,19,79,88,"+7,855.9%",7855.9,percent,False,none,none,Supported_cell,"cell(BAKING MOULD TOFFEE CUP CHOCOLATE, WoW_Pct)=7855.9",LP11-3|7|0
+LP11-3,large_product_2011-W11,8,20,51,60,"£3,952.80",3952.8,currency,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_LY)=3952.8",LP11-3|8|0
+LP11-3,large_product_2011-W11,8,21,65,69,3.2x,3.2,plain,False,none,none,Unsupported,,LP11-3|8|1
+LP11-3,large_product_2011-W11,8,22,86,95,"£1,264.96",1264.96,currency,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_TW)=1264.96",LP11-3|8|2
+LP11-4,large_product_2011-W11,1,0,7,8,1,1.0,count,True,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Rank)=1",LP11-4|1|0
+LP11-4,large_product_2011-W11,1,1,28,29,3,3.0,plain,False,none,none,Skipped,entity_name,LP11-4|1|1
+LP11-4,large_product_2011-W11,1,2,38,47,"£3,740.45",3740.45,currency,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Revenue_TW)=3740.45",LP11-4|1|2
+LP11-4,large_product_2011-W11,1,3,55,60,34.0%,34.0,percent,False,none,up,Unsupported,,LP11-4|1|3
+LP11-4,large_product_2011-W11,1,4,69,78,"£2,616.00",2616.0,currency,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Revenue_LW)=2616",LP11-4|1|4
+LP11-4,large_product_2011-W11,2,5,33,36,606,606.0,plain,False,none,none,Supported_cell,"cell(PARTY BUNTING, Units_TW)=606",LP11-4|2|0
+LP11-4,large_product_2011-W11,2,6,45,48,205,205.0,plain,False,none,none,Supported_cell,"cell(PARTY BUNTING, Units_LW)=205",LP11-4|2|1
+LP11-4,large_product_2011-W11,2,7,64,70,118.4%,118.4,percent,False,none,up,Supported_cell,"cell(PARTY BUNTING, WoW_Pct)=118.4",LP11-4|2|2
+LP11-4,large_product_2011-W11,3,8,35,40,£1.9k,1900.0,currency,False,approx,up,Supported_cell,"cell(JUMBO BAG PINK POLKADOT, Revenue_TW)=1917.87",LP11-4|3|0
+LP11-4,large_product_2011-W11,3,9,53,57,170%,170.0,percent,False,over,up,Supported_cell,"cell(JUMBO BAG PINK POLKADOT, WoW_Pct)=172.4",LP11-4|3|1
+LP11-4,large_product_2011-W11,4,10,35,41,115.9%,115.9,percent,False,none,up,Supported_cell,"cell(EDWARDIAN PARASOL NATURAL, WoW_Pct)=115.9",LP11-4|4|0
+LP11-4,large_product_2011-W11,4,11,51,60,"£1,018.49",1018.49,currency,False,none,none,Supported_cell,"cell(EDWARDIAN PARASOL NATURAL, Revenue_TW)=1018.49",LP11-4|4|1
+LP11-4,large_product_2011-W11,4,12,70,72,14,14.0,count,False,none,none,Supported_cell,"cell(EDWARDIAN PARASOL NATURAL, Orders_TW)=14",LP11-4|4|2
+LP11-4,large_product_2011-W11,5,13,7,8,2,2.0,plain,False,none,none,Skipped,entity_name,LP11-4|5|0
+LP11-4,large_product_2011-W11,5,14,42,49,£674.01,674.01,currency,False,none,none,Supported_cell,"cell(WOOD 2 DRAWER CABINET WHITE FINISH, Revenue_TW)=674.01",LP11-4|5|1
+LP11-4,large_product_2011-W11,5,15,54,61,+164.2%,164.2,percent,False,none,none,Unsupported,,LP11-4|5|2
+LP11-4,large_product_2011-W11,5,16,70,73,110,110.0,count,False,none,none,Supported_cell,"cell(WOOD 2 DRAWER CABINET WHITE FINISH, Units_TW)=110",LP11-4|5|3
+LP11-4,large_product_2011-W11,6,17,6,8,10,10.0,plain,False,none,none,Skipped,entity_name,LP11-4|6|0
+LP11-4,large_product_2011-W11,6,18,39,47,"1,011.2%",1011.2,percent,False,none,up,Supported_cell,"cell(SET 10 LIGHTS NIGHT OWL, WoW_Pct)=1011.2",LP11-4|6|1
+LP11-4,large_product_2011-W11,6,19,56,64,"1,168.1%",1168.1,percent,False,none,none,Unsupported,,LP11-4|6|2
+LP11-4,large_product_2011-W11,6,20,72,79,£522.69,522.69,currency,False,none,none,Supported_cell,"cell(SET 10 LIGHTS NIGHT OWL, Revenue_TW)=522.69",LP11-4|6|3
+LP11-4,large_product_2011-W11,7,21,35,40,32.8%,-32.8,percent,False,none,down,Supported_cell,"cell(GIN + TONIC DIET METAL SIGN, YoY_Pct)=-32.8",LP11-4|7|0
+LP11-4,large_product_2011-W11,7,22,48,55,£507.17,507.17,currency,False,none,none,Supported_cell,"cell(LUNCH BAG RED RETROSPOT, Revenue_TW)=507.17",LP11-4|7|1
+LP11-4,large_product_2011-W11,7,23,69,75,113.9%,113.9,percent,False,none,up,Supported_cell,"cell(GIN + TONIC DIET METAL SIGN, WoW_Pct)=113.9",LP11-4|7|2
+LP11-4,large_product_2011-W11,8,24,28,30,11,11.0,plain,False,none,none,Skipped,entity_name,LP11-4|8|0
+LP11-4,large_product_2011-W11,8,25,42,44,20,20.0,plain,False,none,none,Skipped,entity_name,LP11-4|8|1
+LP11-4,large_product_2011-W11,8,26,78,87,"£1,008.29",1008.29,currency,False,none,none,Supported_derived,sum(group[RETROSPOT TEA SET CERAMIC 11 PC; SET/20 RED RETROSPOT PAPER NAPKINS].Revenue_TW)=1008.29,LP11-4|8|2
+LP11-4,large_product_2011-W11,8,27,107,111,1.5%,1.5,percent,False,approx,none,Supported_derived,share(group[RETROSPOT TEA SET CERAMIC 11 PC; SET/20 RED RETROSPOT PAPER NAPKINS].Revenue_TW)=1.54289,LP11-4|8|3
+LP16-1,large_product_2010-W16,1,0,20,21,3,3.0,plain,False,none,none,Skipped,entity_name,LP16-1|1|0
+LP16-1,large_product_2010-W16,1,1,28,37,"£4,443.21",4443.21,currency,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Revenue_TW)=4443.21",LP16-1|1|1
+LP16-1,large_product_2010-W16,1,2,42,48,+28.5%,28.5,percent,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, WoW_Pct)=28.5",LP16-1|1|2
+LP16-1,large_product_2010-W16,1,3,54,58,6.4%,6.4,percent,False,none,none,Supported_cell,"cell(GROW YOUR OWN HERBS SET OF 3, WoW_Pct)=-6.4",LP16-1|1|3
+LP16-1,large_product_2010-W16,1,4,66,68,59,59.0,count,False,none,none,Supported_cell,"cell(REGENCY CAKESTAND 3 TIER, Orders_TW)=59",LP16-1|1|4
+LP16-1,large_product_2010-W16,2,5,32,41,"£1,825.90",1825.9,currency,False,none,none,Supported_cell,"cell(PINK AND LILAC QUILTED THROW, Revenue_TW)=1825.9",LP16-1|2|0
+LP16-1,large_product_2010-W16,2,6,48,54,£45.95,45.95,currency,False,none,none,Supported_cell,"cell(PINK AND LILAC QUILTED THROW, Revenue_LW)=45.95",LP16-1|2|1
+LP16-1,large_product_2010-W16,2,7,59,68,"+3,783.7%",3783.7,percent,False,none,none,Unsupported,,LP16-1|2|2
+LP16-1,large_product_2010-W16,3,8,26,35,"£1,323.00",1323.0,currency,False,none,none,Supported_cell,"cell(GIANT BLACK SUNGLASSES, Revenue_TW)=1323",LP16-1|3|0
+LP16-1,large_product_2010-W16,3,9,44,45,2,2.0,count,False,none,none,Supported_cell,"cell(GIANT BLACK SUNGLASSES, Units_LW)=2",LP16-1|3|1
+LP16-1,large_product_2010-W16,3,10,54,57,450,450.0,count,False,none,none,Supported_cell,"cell(GIANT BLACK SUNGLASSES, Units_TW)=450",LP16-1|3|2
+LP16-1,large_product_2010-W16,3,11,65,75,"+33,823.1%",33823.1,percent,False,none,none,Supported_cell,"cell(GIANT BLACK SUNGLASSES, WoW_Pct)=33823.1",LP16-1|3|3
+LP16-1,large_product_2010-W16,4,12,39,48,"£1,193.55",1193.55,currency,False,none,none,Supported_cell,"cell(CLASSIC METAL BIRDCAGE PLANT HOLDER, Revenue_TW)=1193.55",LP16-1|4|0
+LP16-1,large_product_2010-W16,4,13,72,75,153,153.0,count,False,none,none,Supported_cell,"cell(CLASSIC METAL BIRDCAGE PLANT HOLDER, Units_TW)=153",LP16-1|4|1
+LP16-1,large_product_2010-W16,5,14,7,8,3,3.0,count,False,none,none,Skipped,entity_name,LP16-1|5|0
+LP16-1,large_product_2010-W16,5,15,38,47,"£1,039.65",1039.65,currency,False,none,none,Supported_cell,"cell(PINK 3 PIECE MINI DOTS CUTLERY SET, Revenue_TW)=1039.65",LP16-1|5|1
+LP16-1,large_product_2010-W16,5,16,52,59,+962.8%,962.8,percent,False,none,none,Unsupported,,LP16-1|5|2
+LP16-1,large_product_2010-W16,6,17,32,39,£441.39,441.39,currency,False,none,none,Supported_cell,"cell(PLEASE ONE PERSON METAL SIGN, Revenue_TW)=441.39",LP16-1|6|0
+LP16-1,large_product_2010-W16,6,18,46,55,"£1,192.80",1192.8,currency,False,none,none,Supported_cell,"cell(TEA TIME CAKE STAND IN GIFT BOX, Revenue_LW)=1192.8",LP16-1|6|1
+LP16-1,large_product_2010-W16,6,19,60,66,-70.7%,-70.7,percent,False,none,none,Supported_cell,"cell(PLEASE ONE PERSON METAL SIGN, WoW_Pct)=-70.7",LP16-1|6|2
+LP16-1,large_product_2010-W16,7,20,2,4,60,60.0,plain,False,none,none,Skipped,entity_name,LP16-1|7|0
+LP16-1,large_product_2010-W16,7,21,31,38,£421.21,421.21,currency,False,none,none,Supported_cell,"cell(60 TEATIME FAIRY CAKE CASES, Revenue_TW)=421.21",LP16-1|7|1
+LP16-1,large_product_2010-W16,7,22,43,46,800,800.0,count,False,none,none,Supported_cell,"cell(60 TEATIME FAIRY CAKE CASES, Units_TW)=800",LP16-1|7|2
+LP16-1,large_product_2010-W16,7,23,56,61,"1,049",1049.0,plain,False,none,none,Unsupported,,LP16-1|7|3
+LP16-1,large_product_2010-W16,8,24,15,18,115,115.0,plain,False,none,none,Skipped,counting,LP16-1|8|0
+LP16-1,large_product_2010-W16,8,25,29,39,"£68,686.56",68686.56,currency,False,none,none,Supported_derived,sum(Revenue_TW)=68686.6,LP16-1|8|1
+LP16-1,large_product_2010-W16,8,26,44,50,+36.6%,36.6,percent,False,none,none,Supported_derived,"pct_change(sum(Revenue_TW), sum(Revenue_LW))=36.6349",LP16-1|8|2
+LP16-2,large_product_2010-W16,1,0,5,9,2010,2010.0,plain,False,none,none,Skipped,date_or_week,LP16-2|1|0
+LP16-2,large_product_2010-W16,1,1,19,20,4,4.0,plain,False,none,none,Supported_derived,share(family[MINI DOTS CUTLERY].Revenue_TW)=3.92924,LP16-2|1|2
+LP16-2,large_product_2010-W16,1,2,56,65,"£2,698.86",2698.86,currency,False,none,up,Supported_derived,sum(family[MINI DOTS CUTLERY].Revenue_TW)=2698.86,LP16-2|1|3
+LP16-2,large_product_2010-W16,1,3,78,85,£345.00,345.0,currency,False,none,none,Unsupported,,LP16-2|1|4
+LP16-2,large_product_2010-W16,2,4,7,8,3,3.0,count,False,none,none,Skipped,entity_name,LP16-2|2|0
+LP16-2,large_product_2010-W16,2,5,56,65,"£1,039.65",1039.65,currency,False,none,up,Supported_cell,"cell(PINK 3 PIECE MINI DOTS CUTLERY SET, Revenue_TW)=1039.65",LP16-2|2|1
+LP16-2,large_product_2010-W16,2,6,82,83,3,3.0,count,False,none,none,Skipped,entity_name,LP16-2|2|2
+LP16-2,large_product_2010-W16,2,7,115,122,£510.57,510.57,currency,False,none,none,Supported_cell,"cell(RED 3 PIECE MINI DOTS CUTLERY SET, Revenue_TW)=510.57",LP16-2|2|3
+LP16-2,large_product_2010-W16,3,8,6,7,2,2.0,plain,False,none,none,Supported_derived,per_unit(sum(Revenue_TW))=2.49316,LP16-2|3|0
+LP16-2,large_product_2010-W16,3,9,37,46,"£3,176.87",3176.87,currency,False,none,none,Supported_derived,sum(family[QUILTED THROW].Revenue_TW)=3176.87,LP16-2|3|1
+LP16-2,large_product_2010-W16,3,10,51,55,6.4%,6.4,percent,False,none,none,Supported_cell,"cell(GROW YOUR OWN HERBS SET OF 3, WoW_Pct)=-6.4",LP16-2|3|2
+LP16-2,large_product_2010-W16,3,11,71,77,£45.95,45.95,currency,False,none,none,Supported_derived,sum(family[QUILTED THROW].Revenue_LW)=45.95,LP16-2|3|3
+LP16-2,large_product_2010-W16,4,12,6,7,6,6.0,plain,False,none,none,Supported_derived,"pct_change(per_order(TW), per_order(LW))=-6.11665",LP16-2|4|0
+LP16-2,large_product_2010-W16,4,13,28,33,29.1%,29.1,percent,False,none,up,Unsupported,,LP16-2|4|1
+LP16-2,large_product_2010-W16,4,14,41,50,"£3,055.03",3055.03,currency,False,none,none,Supported_derived,sum(family[DOOR MAT].Revenue_TW)=3055.03,LP16-2|4|2
+LP16-2,large_product_2010-W16,5,15,6,7,3,3.0,plain,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Share_Pct)=2.9",LP16-2|5|0
+LP16-2,large_product_2010-W16,5,16,73,82,"£2,106.75",-2106.75,currency,False,none,down,Unsupported,,LP16-2|5|1
+LP16-2,large_product_2010-W16,5,17,97,106,"£2,604.85",2604.85,currency,False,none,none,Unsupported,,LP16-2|5|2
+LP16-2,large_product_2010-W16,6,18,6,7,3,3.0,plain,False,none,none,Supported_derived,share(family[LUNCH BAG].Units_TW)=2.60617,LP16-2|6|0
+LP16-2,large_product_2010-W16,6,19,32,41,"£1,168.38",1168.38,currency,False,none,none,Supported_derived,sum(family[LUNCH BAG].Revenue_TW)=1168.38,LP16-2|6|1
+LP16-2,large_product_2010-W16,6,20,50,59,"£2,125.50",2125.5,currency,False,none,none,Supported_derived,sum(family[LUNCH BAG].Revenue_LW)=2125.5,LP16-2|6|2
+LP16-2,large_product_2010-W16,6,21,67,70,111,111.0,count,False,none,none,Supported_derived,sum(family[LUNCH BAG].Orders_TW)=111,LP16-2|6|3
+LP16-2,large_product_2010-W16,7,22,46,52,394.0%,394.0,percent,False,none,up,Supported_derived,"pct_change(sum(family[ANTIQUE SILVER TEA].Revenue_TW), sum(family[ANTIQUE SILVER TEA].Revenue_LW))=394.033",LP16-2|7|1
+LP16-2,large_product_2010-W16,7,23,60,67,£951.36,951.36,currency,False,none,none,Supported_derived,sum(family[ANTIQUE SILVER TEA].Revenue_TW)=951.36,LP16-2|7|2
+LP16-2,large_product_2010-W16,8,24,6,7,5,5.0,plain,False,none,none,Supported_derived,"pct_change(per_unit(TW), per_unit(LW))=5.3998",LP16-2|8|0
+LP16-2,large_product_2010-W16,8,25,23,28,"1,818",1818.0,count,False,none,none,Unsupported,,LP16-2|8|1
+LP16-2,large_product_2010-W16,8,26,42,51,"£2,188.64",2188.64,currency,False,none,none,Unsupported,,LP16-2|8|2
+LP16-3,large_product_2010-W16,1,0,20,21,3,3.0,plain,False,none,none,Skipped,entity_name,LP16-3|1|0
+LP16-3,large_product_2010-W16,1,1,34,38,1.6x,1.6,plain,False,none,none,Supported_derived,"ratio(PARTY BUNTING.Revenue_TW, PARTY BUNTING.Revenue_LW)=1.55912",LP16-3|1|1
+LP16-3,large_product_2010-W16,1,2,55,64,"£2,495.37",2495.37,currency,False,none,none,Supported_cell,"cell(PARTY BUNTING, Revenue_TW)=2495.37",LP16-3|1|2
+LP16-3,large_product_2010-W16,2,3,10,11,5,5.0,plain,False,none,none,Skipped,counting,LP16-3|2|0
+LP16-3,large_product_2010-W16,2,4,26,31,17.6%,17.6,percent,False,none,none,Supported_derived,share_top5(Revenue_TW)=17.582,LP16-3|2|1
+LP16-3,large_product_2010-W16,2,5,58,60,10,10.0,plain,False,none,none,Skipped,counting,LP16-3|2|2
+LP16-3,large_product_2010-W16,2,6,61,66,24.7%,24.7,percent,False,none,none,Supported_derived,share_top9(Revenue_TW)=24.6608,LP16-3|2|3
+LP16-3,large_product_2010-W16,3,7,35,44,"£1,323.00",1323.0,currency,False,none,none,Supported_cell,"cell(GIANT BLACK SUNGLASSES, Revenue_TW)=1323",LP16-3|3|0
+LP16-3,large_product_2010-W16,3,8,54,55,1,1.0,count,False,none,none,Supported_cell,"cell(GIANT BLACK SUNGLASSES, Orders_TW)=1",LP16-3|3|1
+LP16-3,large_product_2010-W16,4,9,42,47,13.2%,13.2,percent,False,none,up,Unsupported,,LP16-3|4|0
+LP16-3,large_product_2010-W16,4,10,55,64,"£1,961.04",1961.04,currency,False,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Revenue_TW)=1961.04",LP16-3|4|1
+LP16-3,large_product_2010-W16,4,11,74,77,3rd,3.0,count,True,none,none,Supported_cell,"cell(WHITE HANGING HEART T-LIGHT HOLDER, Rank)=3",LP16-3|4|2
+LP16-3,large_product_2010-W16,5,12,27,36,"£1,115.45",1115.45,currency,False,none,none,Supported_cell,"cell(RED RETROSPOT JUMBO BAG, Revenue_TW)=1115.45",LP16-3|5|0
+LP16-3,large_product_2010-W16,5,13,45,52,£163.71,163.71,currency,False,none,up,Supported_derived,"diff(RED RETROSPOT JUMBO BAG.Revenue_TW, JUMBO BAG STRAWBERRY.Revenue_TW)=163.71",LP16-3|5|1
+LP16-3,large_product_2010-W16,5,14,84,91,£951.74,951.74,currency,False,none,none,Supported_cell,"cell(JUMBO BAG STRAWBERRY, Revenue_TW)=951.74",LP16-3|5|2
+LP16-3,large_product_2010-W16,6,15,69,74,70.7%,-70.7,percent,False,none,down,Supported_cell,"cell(PLEASE ONE PERSON METAL SIGN, WoW_Pct)=-70.7",LP16-3|6|0
+LP16-3,large_product_2010-W16,7,16,38,44,£18.27,18.27,currency,False,none,none,Supported_derived,per_order(WOODEN ROUNDERS GARDEN SET.Revenue_TW)=18.2737,LP16-3|7|0
+LP16-3,large_product_2010-W16,7,17,66,72,£45.35,45.35,currency,False,none,none,Supported_derived,per_order(WOODEN CROQUET GARDEN SET.Revenue_LW)=45.3492,LP16-3|7|1
+LP16-3,large_product_2010-W16,8,18,16,18,10,10.0,plain,False,none,none,Skipped,counting,LP16-3|8|0
+LP16-3,large_product_2010-W16,8,19,30,33,105,105.0,plain,False,none,none,Skipped,counting,LP16-3|8|1
+LP16-3,large_product_2010-W16,8,20,52,59,£482.79,482.79,currency,False,none,none,Unsupported,,LP16-3|8|2
+LP16-4,large_product_2010-W16,1,0,29,34,55.9%,55.9,percent,False,none,up,Supported_cell,"cell(PARTY BUNTING, WoW_Pct)=55.9",LP16-4|1|0
+LP16-4,large_product_2010-W16,1,1,48,53,£2.5k,2500.0,currency,False,approx,none,Supported_cell,"cell(PARTY BUNTING, Revenue_TW)=2495.37",LP16-4|1|1
+LP16-4,large_product_2010-W16,2,2,41,43,35,35.0,count,False,none,none,Supported_cell,"cell(PACK OF 60 PINK PAISLEY CAKE CASES, Orders_TW)=35",LP16-4|2|0
+LP16-4,large_product_2010-W16,2,3,57,58,4,4.0,count,False,none,none,Supported_cell,"cell(ENGLISH ROSE DESIGN QUILTED THROW, Orders_TW)=4",LP16-4|2|1
+LP16-4,large_product_2010-W16,2,4,70,79,"£1,350.97",1350.97,currency,False,none,none,Supported_cell,"cell(ENGLISH ROSE DESIGN QUILTED THROW, Revenue_TW)=1350.97",LP16-4|2|2
+LP16-4,large_product_2010-W16,3,5,46,53,£860.03,860.03,currency,False,none,none,Supported_cell,"cell(DOOR MAT UNION FLAG, Revenue_LW)=860.03",LP16-4|3|0
+LP16-4,large_product_2010-W16,3,6,61,66,43.0%,43.0,percent,False,none,up,Supported_cell,"cell(DOOR MAT UNION FLAG, WoW_Pct)=43",LP16-4|3|1
+LP16-4,large_product_2010-W16,3,7,77,78,7,7.0,count,True,none,none,Supported_cell,"cell(DOOR MAT UNION FLAG, Rank)=7",LP16-4|3|2
+LP16-4,large_product_2010-W16,4,8,10,12,72,72.0,plain,False,none,none,Skipped,entity_name,LP16-4|4|0
+LP16-4,large_product_2010-W16,4,9,49,52,792,792.0,plain,False,none,none,Supported_cell,"cell(PACK OF 72 RETRO SPOT CAKE CASES, Units_TW)=792",LP16-4|4|1
+LP16-4,large_product_2010-W16,4,10,58,63,"1,300",1300.0,plain,False,none,none,Supported_cell,"cell(PACK OF 72 RETRO SPOT CAKE CASES, Units_LW)=1300",LP16-4|4|2
+LP16-4,large_product_2010-W16,4,11,73,78,39.0%,-39.0,percent,False,none,down,Unsupported,,LP16-4|4|3
+LP16-4,large_product_2010-W16,5,12,50,52,50,50.0,count,False,over,none,Supported_derived,"diff(WOODEN PICTURE FRAME WHITE FINISH.Units_TW, WOODEN PICTURE FRAME WHITE FINISH.Units_LW)=-65",LP16-4|5|0
+LP16-4,large_product_2010-W16,5,13,87,91,9.5%,-9.5,percent,False,none,down,Supported_cell,"cell(WOODEN PICTURE FRAME WHITE FINISH, WoW_Pct)=-9.5",LP16-4|5|1
+LP16-4,large_product_2010-W16,6,14,29,36,£572.06,572.06,currency,False,none,none,Supported_cell,"cell(PIZZA SLICE DISH, Revenue_TW)=572.06",LP16-4|6|0
+LP16-4,large_product_2010-W16,6,15,45,52,£150.00,150.0,currency,False,none,none,Unsupported,,LP16-4|6|1
+LP16-4,large_product_2010-W16,7,16,9,11,36,36.0,plain,False,none,none,Skipped,entity_name,LP16-4|7|0
+LP16-4,large_product_2010-W16,7,17,40,46,464.5%,464.5,percent,False,none,up,Supported_cell,"cell(SET OF 36 PAISLEY FLOWER DOILIES, WoW_Pct)=464.5",LP16-4|7|1
+LP16-4,large_product_2010-W16,7,18,54,61,£319.68,319.68,currency,False,none,none,Supported_cell,"cell(SET OF 36 PAISLEY FLOWER DOILIES, Revenue_TW)=319.68",LP16-4|7|2
+LP16-4,large_product_2010-W16,7,19,65,68,234,234.0,count,False,none,none,Supported_cell,"cell(SET OF 36 PAISLEY FLOWER DOILIES, Units_TW)=234",LP16-4|7|3
+LP16-4,large_product_2010-W16,8,20,22,23,2,2.0,plain,False,none,none,Skipped,entity_name,LP16-4|8|0
+LP16-4,large_product_2010-W16,8,21,52,56,£115,115.0,currency,False,approx,none,Supported_derived,per_order(CAKE STAND LOVEBIRD 2 TIER WHITE.Revenue_TW)=115.267,LP16-4|8|1
+LP16-4,large_product_2010-W16,8,22,78,79,3,3.0,count,False,none,none,Supported_cell,"cell(CAKE STAND LOVEBIRD 2 TIER WHITE, Orders_TW)=3",LP16-4|8|2

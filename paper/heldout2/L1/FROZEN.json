@@ -1,0 +1,52 @@
+{
+  "set": "NumGate held-out set 2, Level 1 (paper/heldout2/L1)",
+  "frozen_at": "2026-09-28T13:15:26+05:30",
+  "notes_file": "notes.jsonl",
+  "notes_sha256": "8ab2af68d69c9822dff8bd64354f87826123ec63285241844e81de761f7bd109",
+  "truth_file": "truth.csv",
+  "truth_sha256": "fff979ead82ad988b734a58908c7cd879cfada4ee286270a5925ffe057da4670",
+  "generator_file": "generate_notes.py",
+  "generator_sha256": "ea01b1638a60df8f412b8681341b5293a19ab8a97494d04de80597dd199c506b",
+  "protocol": "Written before the gate was run and before src/number_gate.py, docs/method.md, README.md, tests/, runs/, results/ or other paper/ folders were opened. Inputs read: prompts/note_rules.txt, prompts/extract_system.txt, prompts/columns_guide.txt and the seven assigned tables. No model API calls.",
+  "tables": [
+    "small_country_2010-W21",
+    "small_product_2011-W47",
+    "small_product_2010-W07",
+    "medium_product_2011-W10",
+    "medium_product_2010-W05",
+    "large_product_2011-W11",
+    "large_product_2010-W16"
+  ],
+  "counts_at_freeze": {
+    "notes": 28,
+    "lines": 218,
+    "digit_mentions": 681,
+    "word_mentions": 3,
+    "C": 435,
+    "W": 146,
+    "N": 54,
+    "CNT": 46,
+    "W_types": {
+      "drift": 40,
+      "other_row": 26,
+      "group_total": 26,
+      "other_period": 22,
+      "rounding": 19,
+      "direction": 13
+    }
+  },
+  "preregistered_metrics": {
+    "numeric_mentions": "digit-form registered mentions (is_word=0); word-form counts reported separately",
+    "alignment": "a truth mention is matched to the gate record whose character span overlaps it on the same note line; if the gate reports no spans, match by line and normalised numeric value in reading order",
+    "false_alarms": "C labelled Unsupported",
+    "correct_not_extracted": "C labelled Skipped or with no matching gate record",
+    "caught": "W labelled Unsupported",
+    "misses": "W labelled Supported_cell or Supported_derived",
+    "wrong_not_extracted": "W labelled Skipped or with no matching gate record (reported separately; not caught)",
+    "misses_by_design": "misses whose cited value is a real cell of another row or period, or coincides with an unrelated cell or derivation, as documented as a limit in docs/method.md section 7",
+    "misses_rule_gaps": "all other misses",
+    "non_measures_skipped": "N or CNT labelled Skipped or with no matching gate record",
+    "non_measures_flagged": "N or CNT labelled Unsupported",
+    "non_measures_supported": "N or CNT labelled Supported_* (reported, not an error)"
+  }
+}

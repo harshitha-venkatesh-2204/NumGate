@@ -1,0 +1,9 @@
+{
+ "text": "- LANDMARK FRAME COVENT GARDEN led revenue with £3.6k TW, a 6.5% share of the 33 products shown\n- LANDMARK FRAME OXFORD STREET ranked 2nd with £3,753.90 TW\n- GINGHAM HEART DECORATION posted the largest WoW gain, up 2054.1% to £1,565.58 TW\n- DOORMAT KEEP CALM AND COME IN revenue fell 34.4% WoW to £1,356.79 TW\n- LANDMARK FRAME COVENT GARDEN sold 340 units TW versus 0 units LW\n- HOT WATER BOTTLE KEEP CALM had the most orders with 50 orders TW versus 38 LW\n- Total revenue across the products shown was £58.3k TW, up 150.8% WoW",
+ "input_tokens": 1489,
+ "output_tokens": 131,
+ "cost_usd": 0.0,
+ "latency_s": 0.001,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

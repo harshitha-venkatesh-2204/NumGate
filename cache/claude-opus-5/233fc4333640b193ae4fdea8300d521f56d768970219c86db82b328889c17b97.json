@@ -1,0 +1,9 @@
+{
+ "text": "- Six LANDMARK FRAME lines (Covent Garden £3,766.40, Oxford Street £3,753.90, Notting Hill £3,660.00, London Bridge £3,603.90, Baker Street £3,447.50, Camden Town £3,422.50) hold ranks 1 to 6 TW, total £21,654.20 and 37.2% share, with £0.00 LW and £0.00 LY each.\n- REGENCY CAKESTAND 3 TIER ranks 7 at £3,205.71 TW versus £2,729.22 LW (WoW +17.5%) and £4,843.45 LY (YoY -33.8%), on 38 orders TW versus 50 LW.\n- PAPER CHAIN KIT 50'S CHRISTMAS posts £2,222.96 TW versus £2,342.01 LW (WoW -5.1%) and £1,289.88 LY (YoY +72.3%), with 756 units TW versus 819 LW.\n- JUMBO BAG RED RETROSPOT records £2,021.85 TW, WoW +7.2% from £1,886.66 LW and YoY +42.9% from £1,415.27 LY, on 1,045 units TW.\n- GINGHAM HEART DECORATION rises to £1,565.58 TW from £72.68 LW (WoW +2,054.1%), with units at 2,130 TW versus 80 LW.\n- CHOCOLATE HOT WATER BOTTLE reaches £1,594.49 TW versus £680.33 LW (WoW +134.4%) and £1,233.86 LY (YoY +29.2%), across 33 orders TW versus 24 LW.\n- DOORMAT KEEP CALM AND COME IN falls to £1,356.79 TW from £2,068.84 LW (WoW -34.4%), and PAPER CHAIN KIT VINTAGE CHRISTMAS falls to £935.26 TW from £1,283.24 LW (WoW -27.1%) and £1,711.83 LY (YoY -45.4%).\n- ASSORTED COLOUR BIRD ORNAMENT is £1,324.21 TW, WoW +86.6% from £709.80 LW but YoY -49.3% against £2,609.84 LY, while CHRISTMAS LIGHTS 10 VINTAGE BAUBLES is £896.84 TW, WoW +67.8% and YoY -54.3%.",
+ "input_tokens": 3199,
+ "output_tokens": 1621,
+ "cost_usd": 0.05652,
+ "latency_s": 18.285,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn"
+}

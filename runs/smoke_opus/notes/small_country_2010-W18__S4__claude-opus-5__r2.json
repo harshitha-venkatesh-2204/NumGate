@@ -1,0 +1,41 @@
+{
+ "note_id": "small_country_2010-W18__S4__claude-opus-5__r2",
+ "table_id": "small_country_2010-W18",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2010-W18",
+ "n_rows": 6,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 2,
+ "note": "- Total revenue was \u00a3157,731.41 TW versus \u00a3179,041.64 LW, a change of -11.9% WoW.\n- United Kingdom ranked 1 with revenue \u00a3117,273.84 TW and a 74.4% TW share of total revenue.\n- Netherlands ranked 2 with revenue \u00a318,002.00 TW and an 11.4% TW share.\n- EIRE ranked 3 with revenue \u00a39,248.22 TW, a 5.9% TW share, and a change of +61.3% WoW.\n- Netherlands posted the largest WoW increase at +1414.9%, moving from \u00a31,188.30 LW to \u00a318,002.00 TW.\n- United Kingdom posted the largest WoW decrease at -30.4%, moving from \u00a3168,403.05 LW to \u00a3117,273.84 TW.\n- United Kingdom recorded the most orders at 314 TW versus 397 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W18. Entity type: country.\n\nFacts packet:\n- Total: revenue \u00a3157,731.41 TW, revenue \u00a3179,041.64 LW, revenue change -11.9% WoW\n- United Kingdom: rank 1, revenue \u00a3117,273.84 TW, share 74.4% TW, revenue change -30.4% WoW\n- Netherlands: rank 2, revenue \u00a318,002.00 TW, share 11.4% TW, revenue change +1414.9% WoW\n- EIRE: rank 3, revenue \u00a39,248.22 TW, share 5.9% TW, revenue change +61.3% WoW\n- Netherlands (largest WoW increase): revenue change +1414.9% WoW, revenue \u00a318,002.00 TW versus \u00a31,188.30 LW\n- United Kingdom (largest WoW decrease): revenue change -30.4% WoW, revenue \u00a3117,273.84 TW versus \u00a3168,403.05 LW\n- United Kingdom (most orders): orders 314 TW versus 397 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue was \u00a3157,731.41 TW versus \u00a3179,041.64 LW, a change of -11.9% WoW.\n- United Kingdom ranked 1 with revenue \u00a3117,273.84 TW and a 74.4% TW share of total revenue.\n- Netherlands ranked 2 with revenue \u00a318,002.00 TW and an 11.4% TW share.\n- EIRE ranked 3 with revenue \u00a39,248.22 TW, a 5.9% TW share, and a change of +61.3% WoW.\n- Netherlands posted the largest WoW increase at +1414.9%, moving from \u00a31,188.30 LW to \u00a318,002.00 TW.\n- United Kingdom posted the largest WoW decrease at -30.4%, moving from \u00a3168,403.05 LW to \u00a3117,273.84 TW.\n- United Kingdom recorded the most orders at 314 TW versus 397 LW.",
+    "input_tokens": 662,
+    "output_tokens": 297,
+    "cost_usd": 0.010735,
+    "latency_s": 4.551,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a3157,731.41 TW, revenue \u00a3179,041.64 LW, revenue change -11.9% WoW\n- United Kingdom: rank 1, revenue \u00a3117,273.84 TW, share 74.4% TW, revenue change -30.4% WoW\n- Netherlands: rank 2, revenue \u00a318,002.00 TW, share 11.4% TW, revenue change +1414.9% WoW\n- EIRE: rank 3, revenue \u00a39,248.22 TW, share 5.9% TW, revenue change +61.3% WoW\n- Netherlands (largest WoW increase): revenue change +1414.9% WoW, revenue \u00a318,002.00 TW versus \u00a31,188.30 LW\n- United Kingdom (largest WoW decrease): revenue change -30.4% WoW, revenue \u00a3117,273.84 TW versus \u00a3168,403.05 LW\n- United Kingdom (most orders): orders 314 TW versus 397 LW",
+  "n_calls": 1,
+  "tokens_in": 662,
+  "tokens_out": 297,
+  "cost_usd": 0.010735,
+  "latency_s": 4.551
+ }
+}

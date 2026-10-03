@@ -1,0 +1,9 @@
+{
+ "text": "```json\n{\n  \"claims\": [\n    {\n      \"line\": 0,\n      \"entity\": \"United Kingdom\",\n      \"metric\": \"revenue\",\n      \"period\": \"TW\",\n      \"value_text\": \"£117,273.84\",\n      \"direction\": \"none\"\n    },\n    {\n      \"line\": 0,\n      \"entity\": \"United Kingdom\",\n      \"metric\": \"share\",\n      \"period\": \"TW\",\n      \"value_text\": \"74.4%\",\n      \"direction\": \"none\"\n    },\n    {\n      \"line\": 0,\n      \"entity\": \"United Kingdom\",\n      \"metric\": \"rank\",\n      \"period\": \"TW\",\n      \"value_text\": \"1\",\n      \"direction\": \"none\"\n    },\n    {\n      \"line\": 0,\n      \"entity\": \"United Kingdom\",\n      \"metric\": \"revenue\",\n      \"period\": \"WoW\",\n      \"value_text\": \"30.4%\",\n      \"direction\": \"down\"\n    },\n    {\n      \"line\": 0,\n      \"entity\": \"United Kingdom\",\n      \"metric\": \"revenue\",\n      \"period\": \"LW\",\n      \"value_text\": \"£168,403.05\",\n      \"direction\": \"none\"\n    },\n    {\n      \"line\": 1,\n      \"entity\": \"Netherlands\",\n      \"metric\": \"rank\",\n      \"period\": \"TW\",\n      \"value_text\": \"2\",\n      \"direction\": \"none\"\n    },\n    {\n      \"line\": 1,\n      \"entity\": \"Netherlands\",\n      \"metric\": \"revenue\",\n      \"period\": \"TW\",\n      \"value_text\": \"£18,002.00\",\n      \"direction\": \"none\"\n    },\n    {\n      \"line\": 1,\n      \"entity\": \"Netherlands\",\n      \"metric\": \"revenue\",\n      \"period\": \"WoW\",\n      \"value_text\": \"1,414.9%\",\n      \"direction\": \"up\"\n    }\n  ]\n}\n```",
+ "input_tokens": 382,
+ "output_tokens": 509,
+ "cost_usd": 0.002927,
+ "latency_s": 3.179,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn"
+}

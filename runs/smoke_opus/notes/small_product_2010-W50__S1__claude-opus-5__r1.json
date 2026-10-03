@@ -1,0 +1,40 @@
+{
+ "note_id": "small_product_2010-W50__S1__claude-opus-5__r1",
+ "table_id": "small_product_2010-W50",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W50",
+ "n_rows": 10,
+ "strategy": "S1",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- REGENCY CAKESTAND 3 TIER holds Rank 1 with TW revenue of \u00a35,919.72 against \u00a310,902.59 LW, a WoW change of -45.7%, on 442 units TW versus 851 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER is Rank 2 at \u00a34,251.25 TW versus \u00a33,539.40 LW (WoW +20.1%) and \u00a38,406.79 LY (YoY -49.4%).\n- CHILLI LIGHTS posts \u00a32,494.07 TW versus \u00a31,973.63 LW (WoW +26.4%) and \u00a3829.73 LY (YoY +200.6%), the third highest share at 9.0%.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN moves from \u00a330.00 LW to \u00a32,449.01 TW (WoW +8,063.4%) on 2,569 units TW across 6 orders versus 1 order LW.\n- ROTATING SILVER ANGELS T-LIGHT HLDR records \u00a32,162.57 TW against \u00a3191.29 LY, a YoY change of +1,030.5%, with WoW +20.6% from \u00a31,792.58 LW.\n- PAPER CHAIN KIT 50'S CHRISTMAS falls to \u00a32,149.75 TW from \u00a34,048.91 LW (WoW -46.9%) while sitting at \u00a32,143.03 LY (YoY +0.3%), with orders at 32 TW versus 74 LW.\n- HAND WARMER BABUSHKA DESIGN and HOT WATER BOTTLE BABUSHKA both rise WoW, at \u00a31,998.10 TW (+8.2%) and \u00a32,234.58 TW (+35.4%) respectively, with combined TW units of 2,487.\n- The 10 listed products total \u00a327,724.70 TW versus \u00a330,272.96 LW, a WoW change of -8.4%, with the top two entities holding 36.7% combined share.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W50. Entity type: product. The table has 10 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 5919.72 | 10902.59 | 0.00 | 442 | 851 | 49 | 61 | -45.7 |  | 21.4 | 1 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 4251.25 | 3539.40 | 8406.79 | 1529 | 1122 | 68 | 86 | 20.1 | -49.4 | 15.3 | 2 |\n| CHILLI LIGHTS | 2494.07 | 1973.63 | 829.73 | 589 | 337 | 28 | 22 | 26.4 | 200.6 | 9.0 | 3 |\n| GROW A FLYTRAP OR SUNFLOWER IN TIN | 2449.01 | 30.00 | 0.00 | 2569 | 24 | 6 | 1 | 8063.4 |  | 8.8 | 4 |\n| HOT WATER BOTTLE BABUSHKA | 2234.58 | 1650.41 | 0.00 | 481 | 333 | 43 | 50 | 35.4 |  | 8.1 | 5 |\n| ROTATING SILVER ANGELS T-LIGHT HLDR | 2162.57 | 1792.58 | 191.29 | 801 | 661 | 21 | 28 | 20.6 | 1030.5 | 7.8 | 6 |\n| PAPER CHAIN KIT 50'S CHRISTMAS | 2149.75 | 4048.91 | 2143.03 | 597 | 1055 | 32 | 74 | -46.9 | 0.3 | 7.8 | 7 |\n| CHOCOLATE HOT WATER BOTTLE | 2104.25 | 2507.79 | 1946.88 | 366 | 431 | 50 | 52 | -16.1 | 8.1 | 7.6 | 8 |\n| HAND WARMER BABUSHKA DESIGN | 1998.10 | 1847.14 | 0.00 | 2006 | 958 | 63 | 58 | 8.2 |  | 7.2 | 9 |\n| BLACK RECORD COVER FRAME | 1961.40 | 1980.51 | 1144.96 | 575 | 577 | 7 | 11 | -1.0 | 71.3 | 7.1 | 10 |\n\nWrite the insight note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER holds Rank 1 with TW revenue of \u00a35,919.72 against \u00a310,902.59 LW, a WoW change of -45.7%, on 442 units TW versus 851 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER is Rank 2 at \u00a34,251.25 TW versus \u00a33,539.40 LW (WoW +20.1%) and \u00a38,406.79 LY (YoY -49.4%).\n- CHILLI LIGHTS posts \u00a32,494.07 TW versus \u00a31,973.63 LW (WoW +26.4%) and \u00a3829.73 LY (YoY +200.6%), the third highest share at 9.0%.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN moves from \u00a330.00 LW to \u00a32,449.01 TW (WoW +8,063.4%) on 2,569 units TW across 6 orders versus 1 order LW.\n- ROTATING SILVER ANGELS T-LIGHT HLDR records \u00a32,162.57 TW against \u00a3191.29 LY, a YoY change of +1,030.5%, with WoW +20.6% from \u00a31,792.58 LW.\n- PAPER CHAIN KIT 50'S CHRISTMAS falls to \u00a32,149.75 TW from \u00a34,048.91 LW (WoW -46.9%) while sitting at \u00a32,143.03 LY (YoY +0.3%), with orders at 32 TW versus 74 LW.\n- HAND WARMER BABUSHKA DESIGN and HOT WATER BOTTLE BABUSHKA both rise WoW, at \u00a31,998.10 TW (+8.2%) and \u00a32,234.58 TW (+35.4%) respectively, with combined TW units of 2,487.\n- The 10 listed products total \u00a327,724.70 TW versus \u00a330,272.96 LW, a WoW change of -8.4%, with the top two entities holding 36.7% combined share.",
+    "input_tokens": 1468,
+    "output_tokens": 943,
+    "cost_usd": 0.030914999999999998,
+    "latency_s": 10.089,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1468,
+  "tokens_out": 943,
+  "cost_usd": 0.030914999999999998,
+  "latency_s": 10.089
+ }
+}

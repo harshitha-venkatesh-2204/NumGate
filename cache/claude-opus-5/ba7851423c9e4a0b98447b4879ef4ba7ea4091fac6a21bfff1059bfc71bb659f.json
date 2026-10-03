@@ -1,0 +1,9 @@
+{
+ "text": "- Total revenue reached £58.3k in TW versus £23.3k in LW, a WoW gain of 150.8%.\n- Against LY revenue of £20.8k, TOTAL revenue is up 180.6% YoY in TW.\n- TOTAL units hit 14,739 in TW (up 104.5% WoW) across 839 orders (up 23.7% WoW).\n- LANDMARK FRAME COVENT GARDEN ranked 1 in TW with £3,766.40, a 6.5% share of TW revenue.\n- LANDMARK FRAME OXFORD STREET delivered £3,753.90 and LANDMARK FRAME NOTTING HILL £3,660.00 in TW, with the top five products holding 31.3% of TW revenue.\n- LANDMARK FRAME LONDON BRIDGE posted £3,603.90 and LANDMARK FRAME BAKER STREET £3,447.50 in TW.\n- GINGHAM HEART DECORATION rose 2,054.1% WoW, the largest absolute swing at £1,492.90, ahead of BOX OF 6 CHRISTMAS CAKE DECORATIONS at 332.6% WoW and WALL ART BIG LOVE at 242.0% WoW.\n- DOORMAT KEEP CALM AND COME IN fell 34.4% WoW, PAPER CHAIN KIT VINTAGE CHRISTMAS fell 27.1% WoW, and PAPER CHAIN KIT 50'S CHRISTMAS fell 5.1% WoW, while RED HARMONICA IN BOX was up 26,576.5% YoY.",
+ "input_tokens": 2561,
+ "output_tokens": 557,
+ "cost_usd": 0.02673,
+ "latency_s": 6.97,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn"
+}

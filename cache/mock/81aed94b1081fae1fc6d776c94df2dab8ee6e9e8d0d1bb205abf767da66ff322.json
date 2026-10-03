@@ -1,0 +1,9 @@
+{
+ "text": "- Total revenue was £61,756.48 TW\n- Total revenue was up 46.0% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER revenue was £3,740.98 TW\n- WHITE HANGING HEART T-LIGHT HOLDER held a 6.1% share of revenue TW\n- WHITE HANGING HEART T-LIGHT HOLDER revenue was down 1.4% WoW\n- RED HANGING HEART T-LIGHT HOLDER revenue was £1,807.91 TW\n- RED HANGING HEART T-LIGHT HOLDER held a 2.9% share of revenue TW\n- RED HANGING HEART T-LIGHT HOLDER revenue was up 119.9% WoW",
+ "input_tokens": 980,
+ "output_tokens": 112,
+ "cost_usd": 0.0,
+ "latency_s": 0.0,
+ "model": "mock",
+ "stop_reason": "end_turn"
+}

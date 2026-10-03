@@ -1,0 +1,88 @@
+{
+ "note_id": "small_product_2010-W50__S3__mock__r1",
+ "table_id": "small_product_2010-W50",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W50",
+ "n_rows": 10,
+ "strategy": "S3",
+ "model": "mock",
+ "repeat": 1,
+ "note": "- REGENCY CAKESTAND 3 TIER led revenue with \u00a35.9k TW, a 21.4% share of the 10 products shown\n- REGENCY CAKESTAND 3 TIER revenue was down 45.7% WoW from \u00a310,902.59 LW\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2nd with \u00a34,251.25 TW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW gain, up 8063.4% to \u00a32,449.01 TW\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 46.9% WoW to \u00a32,149.75 TW\n- REGENCY CAKESTAND 3 TIER sold 442 units TW versus 851 units LW\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 68 orders TW versus 86 LW\n- Total revenue across the products shown was \u00a327.7k TW, down 8.4% WoW",
+ "trace": {
+  "strategy": "S3",
+  "model": "mock",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W50. Entity type: product. The table has 10 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 5919.72 | 10902.59 | 0.00 | 442 | 851 | 49 | 61 | -45.7 |  | 21.4 | 1 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 4251.25 | 3539.40 | 8406.79 | 1529 | 1122 | 68 | 86 | 20.1 | -49.4 | 15.3 | 2 |\n| CHILLI LIGHTS | 2494.07 | 1973.63 | 829.73 | 589 | 337 | 28 | 22 | 26.4 | 200.6 | 9.0 | 3 |\n| GROW A FLYTRAP OR SUNFLOWER IN TIN | 2449.01 | 30.00 | 0.00 | 2569 | 24 | 6 | 1 | 8063.4 |  | 8.8 | 4 |\n| HOT WATER BOTTLE BABUSHKA | 2234.58 | 1650.41 | 0.00 | 481 | 333 | 43 | 50 | 35.4 |  | 8.1 | 5 |\n| ROTATING SILVER ANGELS T-LIGHT HLDR | 2162.57 | 1792.58 | 191.29 | 801 | 661 | 21 | 28 | 20.6 | 1030.5 | 7.8 | 6 |\n| PAPER CHAIN KIT 50'S CHRISTMAS | 2149.75 | 4048.91 | 2143.03 | 597 | 1055 | 32 | 74 | -46.9 | 0.3 | 7.8 | 7 |\n| CHOCOLATE HOT WATER BOTTLE | 2104.25 | 2507.79 | 1946.88 | 366 | 431 | 50 | 52 | -16.1 | 8.1 | 7.6 | 8 |\n| HAND WARMER BABUSHKA DESIGN | 1998.10 | 1847.14 | 0.00 | 2006 | 958 | 63 | 58 | 8.2 |  | 7.2 | 9 |\n| BLACK RECORD COVER FRAME | 1961.40 | 1980.51 | 1144.96 | 575 | 577 | 7 | 11 | -1.0 | 71.3 | 7.1 | 10 |\n\nWrite the insight note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER led revenue with \u00a35.9k TW, a 23.8% share of the 10 products shown\n- REGENCY CAKESTAND 3 TIER revenue was down 45.7% WoW from \u00a310,902.59 LW\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2nd with \u00a34,251.25 TW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW gain, up 8063.4% to \u00a32,449.01 TW\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 46.9% WoW to \u00a32,149.75 TW\n- REGENCY CAKESTAND 3 TIER sold 442 units TW versus 851 units LW\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 68 orders TW versus 86 LW\n- Total revenue across the products shown was \u00a327.7k TW, down 9.3% WoW",
+    "input_tokens": 703,
+    "output_tokens": 155,
+    "cost_usd": 0.0,
+    "latency_s": 0.001,
+    "model": "mock",
+    "stop_reason": "end_turn",
+    "cached": true
+   },
+   {
+    "step": "revise_1",
+    "system": "You are checking a draft executive insight note against its source sales table. An automatic check could not match some numbers in the draft to the table. For each flagged number, either correct it using the table or remove that claim. Leave every other line unchanged. Return the full corrected note and nothing else.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W50. Entity type: product.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 5919.72 | 10902.59 | 0.00 | 442 | 851 | 49 | 61 | -45.7 |  | 21.4 | 1 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 4251.25 | 3539.40 | 8406.79 | 1529 | 1122 | 68 | 86 | 20.1 | -49.4 | 15.3 | 2 |\n| CHILLI LIGHTS | 2494.07 | 1973.63 | 829.73 | 589 | 337 | 28 | 22 | 26.4 | 200.6 | 9.0 | 3 |\n| GROW A FLYTRAP OR SUNFLOWER IN TIN | 2449.01 | 30.00 | 0.00 | 2569 | 24 | 6 | 1 | 8063.4 |  | 8.8 | 4 |\n| HOT WATER BOTTLE BABUSHKA | 2234.58 | 1650.41 | 0.00 | 481 | 333 | 43 | 50 | 35.4 |  | 8.1 | 5 |\n| ROTATING SILVER ANGELS T-LIGHT HLDR | 2162.57 | 1792.58 | 191.29 | 801 | 661 | 21 | 28 | 20.6 | 1030.5 | 7.8 | 6 |\n| PAPER CHAIN KIT 50'S CHRISTMAS | 2149.75 | 4048.91 | 2143.03 | 597 | 1055 | 32 | 74 | -46.9 | 0.3 | 7.8 | 7 |\n| CHOCOLATE HOT WATER BOTTLE | 2104.25 | 2507.79 | 1946.88 | 366 | 431 | 50 | 52 | -16.1 | 8.1 | 7.6 | 8 |\n| HAND WARMER BABUSHKA DESIGN | 1998.10 | 1847.14 | 0.00 | 2006 | 958 | 63 | 58 | 8.2 |  | 7.2 | 9 |\n| BLACK RECORD COVER FRAME | 1961.40 | 1980.51 | 1144.96 | 575 | 577 | 7 | 11 | -1.0 | 71.3 | 7.1 | 10 |\n\nDraft note:\n- REGENCY CAKESTAND 3 TIER led revenue with \u00a35.9k TW, a 23.8% share of the 10 products shown\n- REGENCY CAKESTAND 3 TIER revenue was down 45.7% WoW from \u00a310,902.59 LW\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2nd with \u00a34,251.25 TW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW gain, up 8063.4% to \u00a32,449.01 TW\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 46.9% WoW to \u00a32,149.75 TW\n- REGENCY CAKESTAND 3 TIER sold 442 units TW versus 851 units LW\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 68 orders TW versus 86 LW\n- Total revenue across the products shown was \u00a327.7k TW, down 9.3% WoW\n\nNumbers that could not be matched to the table:\n- line 1: \"23.8%\" in: - REGENCY CAKESTAND 3 TIER led revenue with \u00a35.9k TW, a 23.8% share of the 10 products shown\n- line 8: \"9.3%\" in: - Total revenue across the products shown was \u00a327.7k TW, down 9.3% WoW\n\nReturn the corrected note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER led revenue with \u00a35.9k TW, a 21.4% share of the 10 products shown\n- REGENCY CAKESTAND 3 TIER revenue was down 45.7% WoW from \u00a310,902.59 LW\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2nd with \u00a34,251.25 TW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW gain, up 8063.4% to \u00a32,449.01 TW\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 46.9% WoW to \u00a32,149.75 TW\n- REGENCY CAKESTAND 3 TIER sold 442 units TW versus 851 units LW\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 68 orders TW versus 86 LW\n- Total revenue across the products shown was \u00a327.7k TW, down 9.3% WoW",
+    "input_tokens": 967,
+    "output_tokens": 155,
+    "cost_usd": 0.0,
+    "latency_s": 0.001,
+    "model": "mock",
+    "stop_reason": "end_turn",
+    "cached": false
+   },
+   {
+    "step": "revise_2",
+    "system": "You are checking a draft executive insight note against its source sales table. An automatic check could not match some numbers in the draft to the table. For each flagged number, either correct it using the table or remove that claim. Leave every other line unchanged. Return the full corrected note and nothing else.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W50. Entity type: product.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 5919.72 | 10902.59 | 0.00 | 442 | 851 | 49 | 61 | -45.7 |  | 21.4 | 1 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 4251.25 | 3539.40 | 8406.79 | 1529 | 1122 | 68 | 86 | 20.1 | -49.4 | 15.3 | 2 |\n| CHILLI LIGHTS | 2494.07 | 1973.63 | 829.73 | 589 | 337 | 28 | 22 | 26.4 | 200.6 | 9.0 | 3 |\n| GROW A FLYTRAP OR SUNFLOWER IN TIN | 2449.01 | 30.00 | 0.00 | 2569 | 24 | 6 | 1 | 8063.4 |  | 8.8 | 4 |\n| HOT WATER BOTTLE BABUSHKA | 2234.58 | 1650.41 | 0.00 | 481 | 333 | 43 | 50 | 35.4 |  | 8.1 | 5 |\n| ROTATING SILVER ANGELS T-LIGHT HLDR | 2162.57 | 1792.58 | 191.29 | 801 | 661 | 21 | 28 | 20.6 | 1030.5 | 7.8 | 6 |\n| PAPER CHAIN KIT 50'S CHRISTMAS | 2149.75 | 4048.91 | 2143.03 | 597 | 1055 | 32 | 74 | -46.9 | 0.3 | 7.8 | 7 |\n| CHOCOLATE HOT WATER BOTTLE | 2104.25 | 2507.79 | 1946.88 | 366 | 431 | 50 | 52 | -16.1 | 8.1 | 7.6 | 8 |\n| HAND WARMER BABUSHKA DESIGN | 1998.10 | 1847.14 | 0.00 | 2006 | 958 | 63 | 58 | 8.2 |  | 7.2 | 9 |\n| BLACK RECORD COVER FRAME | 1961.40 | 1980.51 | 1144.96 | 575 | 577 | 7 | 11 | -1.0 | 71.3 | 7.1 | 10 |\n\nDraft note:\n- REGENCY CAKESTAND 3 TIER led revenue with \u00a35.9k TW, a 21.4% share of the 10 products shown\n- REGENCY CAKESTAND 3 TIER revenue was down 45.7% WoW from \u00a310,902.59 LW\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2nd with \u00a34,251.25 TW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW gain, up 8063.4% to \u00a32,449.01 TW\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 46.9% WoW to \u00a32,149.75 TW\n- REGENCY CAKESTAND 3 TIER sold 442 units TW versus 851 units LW\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 68 orders TW versus 86 LW\n- Total revenue across the products shown was \u00a327.7k TW, down 9.3% WoW\n\nNumbers that could not be matched to the table:\n- line 8: \"9.3%\" in: - Total revenue across the products shown was \u00a327.7k TW, down 9.3% WoW\n\nReturn the corrected note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER led revenue with \u00a35.9k TW, a 21.4% share of the 10 products shown\n- REGENCY CAKESTAND 3 TIER revenue was down 45.7% WoW from \u00a310,902.59 LW\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2nd with \u00a34,251.25 TW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW gain, up 8063.4% to \u00a32,449.01 TW\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 46.9% WoW to \u00a32,149.75 TW\n- REGENCY CAKESTAND 3 TIER sold 442 units TW versus 851 units LW\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 68 orders TW versus 86 LW\n- Total revenue across the products shown was \u00a327.7k TW, down 8.4% WoW",
+    "input_tokens": 938,
+    "output_tokens": 155,
+    "cost_usd": 0.0,
+    "latency_s": 0.001,
+    "model": "mock",
+    "stop_reason": "end_turn",
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 16,
+    "n_unsupported": 2,
+    "unsupported_rate": 0.125,
+    "note": "- REGENCY CAKESTAND 3 TIER led revenue with \u00a35.9k TW, a 23.8% share of the 10 products shown\n- REGENCY CAKESTAND 3 TIER revenue was down 45.7% WoW from \u00a310,902.59 LW\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2nd with \u00a34,251.25 TW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW gain, up 8063.4% to \u00a32,449.01 TW\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 46.9% WoW to \u00a32,149.75 TW\n- REGENCY CAKESTAND 3 TIER sold 442 units TW versus 851 units LW\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 68 orders TW versus 86 LW\n- Total revenue across the products shown was \u00a327.7k TW, down 9.3% WoW"
+   },
+   {
+    "round": 1,
+    "n_checked": 16,
+    "n_unsupported": 1,
+    "unsupported_rate": 0.0625,
+    "note": "- REGENCY CAKESTAND 3 TIER led revenue with \u00a35.9k TW, a 21.4% share of the 10 products shown\n- REGENCY CAKESTAND 3 TIER revenue was down 45.7% WoW from \u00a310,902.59 LW\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2nd with \u00a34,251.25 TW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW gain, up 8063.4% to \u00a32,449.01 TW\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 46.9% WoW to \u00a32,149.75 TW\n- REGENCY CAKESTAND 3 TIER sold 442 units TW versus 851 units LW\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 68 orders TW versus 86 LW\n- Total revenue across the products shown was \u00a327.7k TW, down 9.3% WoW"
+   },
+   {
+    "round": 2,
+    "n_checked": 16,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- REGENCY CAKESTAND 3 TIER led revenue with \u00a35.9k TW, a 21.4% share of the 10 products shown\n- REGENCY CAKESTAND 3 TIER revenue was down 45.7% WoW from \u00a310,902.59 LW\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2nd with \u00a34,251.25 TW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW gain, up 8063.4% to \u00a32,449.01 TW\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 46.9% WoW to \u00a32,149.75 TW\n- REGENCY CAKESTAND 3 TIER sold 442 units TW versus 851 units LW\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 68 orders TW versus 86 LW\n- Total revenue across the products shown was \u00a327.7k TW, down 8.4% WoW"
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 3,
+  "tokens_in": 2608,
+  "tokens_out": 465,
+  "cost_usd": 0.0,
+  "latency_s": 0.003
+ }
+}

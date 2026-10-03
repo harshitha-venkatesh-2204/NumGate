@@ -1,0 +1,9 @@
+{
+ "text": "- TOTAL revenue reached £27.7k in TW versus £30.3k in LW, a WoW change of -8.4%.\n- TOTAL revenue of £27.7k in TW compares with £14.7k in LY, a YoY change of +89.1%.\n- TOTAL units came in at 9,955 in TW, up 56.8% WoW, while TOTAL orders were 367, down 17.2% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 in TW with £5,919.72 and a 21.4% share of TOTAL revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 in TW at £4,251.25 (15.3% share) and CHILLI LIGHTS ranked 3 at £2,494.07 (9.0% share), with the top three products at 45.7% of TOTAL TW revenue.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted the largest WoW gain at +£2,419.01, equal to +8,063.4% WoW.\n- REGENCY CAKESTAND 3 TIER recorded the largest WoW drop at -£4,982.87, or -45.7% WoW.\n- PAPER CHAIN KIT 50'S CHRISTMAS fell 46.9% WoW, while HOT WATER BOTTLE BABUSHKA rose 35.4% WoW.",
+ "input_tokens": 2550,
+ "output_tokens": 478,
+ "cost_usd": 0.0247,
+ "latency_s": 5.842,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn"
+}

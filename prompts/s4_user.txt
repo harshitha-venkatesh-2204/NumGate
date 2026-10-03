@@ -1,0 +1,6 @@
+Weekly sales report for ISO week {week}. Entity type: {entity_type}.
+
+Facts packet:
+{packet}
+
+Write the insight note now.

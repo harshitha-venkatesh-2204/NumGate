@@ -1,0 +1,41 @@
+{
+ "note_id": "large_product_2010-W04__S4__claude-opus-5__r1",
+ "table_id": "large_product_2010-W04",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2010-W04",
+ "n_rows": 109,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a361,756.48 TW versus \u00a342,295.08 LW, a change of +46.0% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER held rank 1 with revenue \u00a33,740.98 TW and a 6.1% TW share, a change of -1.4% WoW.\n- RED HANGING HEART T-LIGHT HOLDER placed rank 2 at \u00a31,807.91 TW, 2.9% share TW, up +119.9% WoW.\n- SET/3 RUSSIAN DOLL STACKING TINS came in at rank 3 with \u00a31,718.73 TW and 2.8% share TW, a change of +975.9% WoW.\n- CHERRY DESIGN PAPERLANTERNS posted the largest increase at +14999.8% WoW, moving from \u00a34.21 LW to \u00a3635.70 TW.\n- KENSINGTON COFFEE SET posted the largest decrease at -78.9% WoW, moving from \u00a37,750.05 LW to \u00a31,632.90 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 79 orders TW versus 66 orders LW.\n- The top three products (WHITE HANGING HEART T-LIGHT HOLDER, RED HANGING HEART T-LIGHT HOLDER, SET/3 RUSSIAN DOLL STACKING TINS) accounted for 6.1%, 2.9% and 2.8% of TW revenue respectively.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W04. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a361,756.48 TW, revenue \u00a342,295.08 LW, revenue change +46.0% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 1, revenue \u00a33,740.98 TW, share 6.1% TW, revenue change -1.4% WoW\n- RED HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a31,807.91 TW, share 2.9% TW, revenue change +119.9% WoW\n- SET/3 RUSSIAN DOLL STACKING TINS: rank 3, revenue \u00a31,718.73 TW, share 2.8% TW, revenue change +975.9% WoW\n- CHERRY DESIGN PAPERLANTERNS (largest WoW increase): revenue change +14999.8% WoW, revenue \u00a3635.70 TW versus \u00a34.21 LW\n- KENSINGTON COFFEE SET (largest WoW decrease): revenue change -78.9% WoW, revenue \u00a31,632.90 TW versus \u00a37,750.05 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 79 TW versus 66 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a361,756.48 TW versus \u00a342,295.08 LW, a change of +46.0% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER held rank 1 with revenue \u00a33,740.98 TW and a 6.1% TW share, a change of -1.4% WoW.\n- RED HANGING HEART T-LIGHT HOLDER placed rank 2 at \u00a31,807.91 TW, 2.9% share TW, up +119.9% WoW.\n- SET/3 RUSSIAN DOLL STACKING TINS came in at rank 3 with \u00a31,718.73 TW and 2.8% share TW, a change of +975.9% WoW.\n- CHERRY DESIGN PAPERLANTERNS posted the largest increase at +14999.8% WoW, moving from \u00a34.21 LW to \u00a3635.70 TW.\n- KENSINGTON COFFEE SET posted the largest decrease at -78.9% WoW, moving from \u00a37,750.05 LW to \u00a31,632.90 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 79 orders TW versus 66 orders LW.\n- The top three products (WHITE HANGING HEART T-LIGHT HOLDER, RED HANGING HEART T-LIGHT HOLDER, SET/3 RUSSIAN DOLL STACKING TINS) accounted for 6.1%, 2.9% and 2.8% of TW revenue respectively.",
+    "input_tokens": 749,
+    "output_tokens": 506,
+    "cost_usd": 0.016395,
+    "latency_s": 5.433,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a361,756.48 TW, revenue \u00a342,295.08 LW, revenue change +46.0% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 1, revenue \u00a33,740.98 TW, share 6.1% TW, revenue change -1.4% WoW\n- RED HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a31,807.91 TW, share 2.9% TW, revenue change +119.9% WoW\n- SET/3 RUSSIAN DOLL STACKING TINS: rank 3, revenue \u00a31,718.73 TW, share 2.8% TW, revenue change +975.9% WoW\n- CHERRY DESIGN PAPERLANTERNS (largest WoW increase): revenue change +14999.8% WoW, revenue \u00a3635.70 TW versus \u00a34.21 LW\n- KENSINGTON COFFEE SET (largest WoW decrease): revenue change -78.9% WoW, revenue \u00a31,632.90 TW versus \u00a37,750.05 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 79 TW versus 66 LW",
+  "n_calls": 1,
+  "tokens_in": 749,
+  "tokens_out": 506,
+  "cost_usd": 0.016395,
+  "latency_s": 5.433
+ }
+}

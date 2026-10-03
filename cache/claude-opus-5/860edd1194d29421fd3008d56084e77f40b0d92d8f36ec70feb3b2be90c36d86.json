@@ -1,0 +1,9 @@
+{
+ "text": "- The six LANDMARK FRAME lines (Covent Garden £3,766.40, Oxford Street £3,753.90, Notting Hill £3,660.00, London Bridge £3,603.90, Baker Street £3,447.50, Camden Town £3,422.50) take the top six ranks TW on £21,654.20 combined and 19.1% share, with £0.00 in LW and £0.00 in LY.\n- REGENCY CAKESTAND 3 TIER ranks 7 TW at £3,205.71 on 268 units and 38 orders, up 17.5% WoW from £2,729.22 and down 33.8% YoY from £4,843.45.\n- BOTANICAL GARDENS WALL CLOCK enters at rank 8 TW with £2,928.80, 140 units and 8 orders, against £0.00 LW and £0.00 LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS posts £2,222.96 TW, down 5.1% WoW from £2,342.01 and up 72.3% YoY from £1,289.88, on 756 units versus 819 units LW.\n- JUMBO BAG RED RETROSPOT records £2,021.85 TW on 1,045 units, up 7.2% WoW from £1,886.66 and up 42.9% YoY from £1,415.27.\n- GINGHAM HEART DECORATION rises 2,054.1% WoW to £1,565.58 TW from £72.68 LW, with units moving from 80 LW to 2,130 TW; CHOCOLATE HOT WATER BOTTLE gains 134.4% WoW to £1,594.49 and 29.2% YoY.\n- WHITE HANGING HEART T-LIGHT HOLDER falls to £689.94 TW at rank 54, down 63.6% WoW from £1,893.01 and down 69.0% YoY from £2,226.27, with units at 234 versus 683 LW.\n- CHRISTMAS LIGHTS 10 REINDEER is down 77.1% YoY at £543.26 TW versus £2,374.88 LY, and PAPER CHAIN KIT VINTAGE CHRISTMAS is down 27.1% WoW and 45.4% YoY at £935.26 TW.",
+ "input_tokens": 10211,
+ "output_tokens": 1412,
+ "cost_usd": 0.086355,
+ "latency_s": 13.509,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn"
+}

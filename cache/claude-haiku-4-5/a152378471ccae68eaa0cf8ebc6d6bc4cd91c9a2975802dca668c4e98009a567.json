@@ -1,0 +1,9 @@
+{
+ "text": "```json\n{\"ok\": true}\n```",
+ "input_tokens": 18,
+ "output_tokens": 13,
+ "cost_usd": 8.3e-05,
+ "latency_s": 1.124,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn"
+}

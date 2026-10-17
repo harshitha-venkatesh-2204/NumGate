@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT generated £10.7k revenue in TW, representing 19.3% of total product revenue of £55.6k, with 5,593 units sold across 43 orders.\n- RABBIT NIGHT LIGHT revenue surged 18,473.8% WoW, the strongest growth among all products in TW.\n- ALARM CLOCK BAKELIKE RED achieved £2.4k revenue in TW with a 4.4% share, making it the second-largest revenue contributor.\n- CHILLI LIGHTS and PAPER CHAIN KIT 50'S CHRISTMAS each generated over £2.2k revenue in TW, capturing 4.1% and market share respectively.\n- WORLD WAR 2 GLIDERS ASSTD DESIGNS led unit sales with 5,328 units in TW, second only to RABBIT NIGHT LIGHT's 5,593 units.\n- ALARM CLOCK BAKELIKE PINK showed exceptional YoY growth of 611.7% in TW compared to LY.\n- WORLD WAR 2 GLIDERS ASSTD DESIGNS revenue increased 513.2% YoY in TW, demonstrating strong year-on-year momentum.\n- PAPER CHAIN KIT 50'S CHRISTMAS received the most orders in TW with 64 orders, followed by JUMBO BAG PAISLEY PARK with 46 orders.",
+ "input_tokens": 1883,
+ "output_tokens": 335,
+ "cost_usd": 0.003558,
+ "latency_s": 3.993,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

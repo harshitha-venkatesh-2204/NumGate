@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom TW revenue is £193,356.23 versus LW £277,287.56, a WoW change of -30.3%, and versus LY £222,326.89, a YoY change of -13.0%, holding Rank 1 with 92.6% share.\n- Germany TW revenue is £4,525.14 versus LW £3,893.44, WoW +16.2%, and versus LY £3,173.27, YoY +42.6%, Rank 2.\n- Sweden TW revenue is £3,834.30 versus LW £0.00, with no WoW figure available, and versus LY £285.30, YoY +1244.0%, Rank 3.\n- EIRE TW revenue is £2,392.28 versus LW £3,184.10, WoW -24.9%, and versus LY £3,253.23, YoY -26.5%, Rank 4.\n- Cyprus TW revenue is £1,590.82 versus LW £0.00 and LY £0.00, with no WoW or YoY figures available, Rank 5.\n- Spain TW revenue is £909.01 versus LW £174.72, WoW +420.3%, and versus LY £328.60, YoY +176.6%, Rank 6.\n- France TW revenue is £515.12 versus LW £4,050.16, WoW -87.3%, and versus LY £1,926.72, YoY -73.3%, Rank 9.\n- Australia TW revenue is £415.70 versus LW £258.90, WoW +60.6%, with no LY figure available, Rank 10.",
+ "input_tokens": 1290,
+ "output_tokens": 523,
+ "cost_usd": 0.00781,
+ "latency_s": 5.051,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

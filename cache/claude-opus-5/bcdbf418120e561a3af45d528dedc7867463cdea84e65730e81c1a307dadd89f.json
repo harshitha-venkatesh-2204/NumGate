@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £89,976.85 TW versus £71,964.54 LW, a WoW gain of 25.0%.\n- TOTAL units were 36,997 TW, up 50.0% WoW, while TOTAL orders were 2,476 TW, down 2.1% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £7,558.58, holding 8.4% of TOTAL revenue TW.\n- The top five products together accounted for 22.7% of TOTAL revenue TW, with WHITE HANGING HEART T-LIGHT HOLDER at £4,173.55 and COLOUR GLASS. STAR T-LIGHT HOLDER at £3,915.56 TW.\n- RED HANGING HEART T-LIGHT HOLDER delivered £2,774.28 TW, up 189.7% WoW, and CANDLEHOLDER PINK HANGING HEART delivered £1,992.98 TW.\n- Largest WoW gainers were COLOUR GLASS. STAR T-LIGHT HOLDER at £3.57k, REGENCY CAKESTAND 3 TIER at £2.72k, and WHITE HANGING HEART T-LIGHT HOLDER at £1.95k.\n- Largest WoW decliners were EDWARDIAN PARASOL BLACK at £-1.73k (-80.0% WoW), CHRISTMAS LIGHTS 10 REINDEER at £-1.60k (-67.6% WoW), and RED RETROSPOT UMBRELLA at £-1.00k.\n- SMALL POPCORN HOLDER rose 97.0% WoW TW.",
+ "input_tokens": 2612,
+ "output_tokens": 572,
+ "cost_usd": 0.027360000000000002,
+ "latency_s": 7.086,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

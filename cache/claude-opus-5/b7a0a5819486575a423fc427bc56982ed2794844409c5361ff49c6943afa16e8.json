@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue in TW was £208.7k, down 27.7% WoW from £288.8k in LW and down 9.9% YoY against £231.8k in LY.\n- Total units in TW reached 106,817, down 6.6% WoW, while total orders came in at 440, down 14.6% WoW.\n- United Kingdom ranked 1 in TW with £193.4k, holding a 92.6% share of total revenue.\n- Germany ranked 2 in TW with £4.5k and a 2.2% share, ahead of Sweden at rank 3 with £3.8k and a 1.8% share.\n- The top three countries combined accounted for 96.6% of total TW revenue.\n- United Kingdom posted the largest absolute decline in TW, down £83.9k WoW, a drop of 30.3% WoW.\n- Sweden recorded the largest absolute gain in TW at £3.8k WoW.\n- Spain rose 420.3% WoW and Australia rose 60.6% WoW, while France fell 87.3% WoW.",
+ "input_tokens": 2324,
+ "output_tokens": 342,
+ "cost_usd": 0.02017,
+ "latency_s": 6.566,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

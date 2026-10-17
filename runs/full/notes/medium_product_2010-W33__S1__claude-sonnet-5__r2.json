@@ -1,0 +1,41 @@
+{
+ "note_id": "medium_product_2010-W33__S1__claude-sonnet-5__r2",
+ "table_id": "medium_product_2010-W33",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W33",
+ "n_rows": 40,
+ "strategy": "S1",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- WHITE HANGING HEART T-LIGHT HOLDER leads TW revenue at \u00a34405.70, up 29.4% WoW from \u00a33403.60 LW, holding 10.6% share and Rank 1.\n- PARTY BUNTING ranks 2 with TW revenue of \u00a33220.36, up 89.8% WoW from \u00a31696.49 LW.\n- REGENCY CAKESTAND 3 TIER posted TW revenue of \u00a32446.96, down 20.0% WoW from \u00a33058.79 LW, Rank 3.\n- JUMBO BAG STRAWBERRY fell 68.8% WoW, from \u00a32439.76 LW to \u00a3760.11 TW, the steepest WoW decline among the 40 products.\n- WALL MIRROR , RECT DIAMANTE, PINK/ jumped 3923.3% WoW, rising from \u00a316.13 LW to \u00a3648.96 TW.\n- PLEASE ONE PERSON METAL SIGN generated \u00a31475.70 TW on 26 orders versus \u00a30.00 LW.\n- DOORMAT TOPIARY grew 919.8% WoW, from \u00a367.41 LW to \u00a3687.43 TW.\n- HOT BATHS METAL SIGN recorded \u00a3619.02 TW revenue with 351 units across 15 orders, up from \u00a30.00 LW.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W33. Entity type: product. The table has 40 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| WHITE HANGING HEART T-LIGHT HOLDER | 4405.70 | 3403.60 |  | 1686 | 1229 | 57 | 63 | 29.4 |  | 10.6 | 1 |\n| PARTY BUNTING | 3220.36 | 1696.49 |  | 351 | 188 | 9 | 14 | 89.8 |  | 7.7 | 2 |\n| REGENCY CAKESTAND 3 TIER | 2446.96 | 3058.79 |  | 196 | 227 | 38 | 43 | -20.0 |  | 5.9 | 3 |\n| JUMBO BAG PINK VINTAGE PAISLEY | 1477.55 | 1014.67 |  | 875 | 529 | 18 | 20 | 45.6 |  | 3.6 | 4 |\n| PLEASE ONE PERSON METAL SIGN | 1475.70 | 0.00 |  | 767 | 0 | 26 | 0 |  |  | 3.5 | 5 |\n| LUNCH BAG RED SPOTTY | 1464.04 | 1478.13 |  | 940 | 608 | 46 | 41 | -1.0 |  | 3.5 | 6 |\n| JUMBO BAG PINK WITH WHITE SPOTS | 1183.71 | 1172.57 |  | 677 | 460 | 26 | 28 | 1.0 |  | 2.8 | 7 |\n| COOK WITH WINE METAL SIGN | 1141.92 | 0.00 |  | 656 | 0 | 19 | 0 |  |  | 2.7 | 8 |\n| ASSORTED COLOUR BIRD ORNAMENT | 1057.36 | 1156.70 |  | 664 | 758 | 21 | 18 | -8.6 |  | 2.5 | 9 |\n| SET/5 RED SPOTTY LID GLASS BOWLS | 970.46 | 521.28 |  | 354 | 168 | 23 | 25 | 86.2 |  | 2.3 | 10 |\n| DOORMAT RED SPOT | 937.30 | 916.16 |  | 144 | 115 | 14 | 19 | 2.3 |  | 2.3 | 11 |\n| EDWARDIAN PARASOL BLACK | 927.20 | 368.90 |  | 176 | 62 | 14 | 9 | 151.3 |  | 2.2 | 12 |\n| JUMBO STORAGE BAG SUKI | 913.54 | 1478.55 |  | 510 | 478 | 22 | 15 | -38.2 |  | 2.2 | 13 |\n| DOORMAT SPOTTY HOME SWEET HOME | 896.27 | 255.23 |  | 137 | 34 | 11 | 9 | 251.2 |  | 2.2 | 14 |\n| EDWARDIAN PARASOL NATURAL | 879.39 | 673.39 |  | 160 | 123 | 10 | 13 | 30.6 |  | 2.1 | 15 |\n| VINTAGE UNION JACK BUNTING | 875.44 | 828.51 |  | 100 | 85 | 14 | 16 | 5.7 |  | 2.1 | 16 |\n| PACK OF 72 RETRO SPOT CAKE CASES | 871.56 | 1292.68 |  | 1859 | 1900 | 36 | 37 | -32.6 |  | 2.1 | 17 |\n| LUNCH BAG CARS BLUE | 863.36 | 825.59 |  | 552 | 499 | 30 | 30 | 4.6 |  | 2.1 | 18 |\n| WOODEN FRAME ANTIQUE WHITE | 813.35 | 573.10 |  | 305 | 148 | 20 | 18 | 41.9 |  | 2.0 | 19 |\n| RECIPE BOX RETRO SPOT DESIGN | 794.15 | 197.65 |  | 305 | 67 | 13 | 18 | 301.8 |  | 1.9 | 20 |\n| WHITE CHERRY LIGHTS | 784.80 | 0.00 |  | 144 | 0 | 1 | 0 |  |  | 1.9 | 21 |\n| NO SINGING METAL SIGN | 775.76 | 157.53 |  | 433 | 72 | 15 | 15 | 392.5 |  | 1.9 | 22 |\n| SMALL POPCORN HOLDER | 763.97 | 416.16 |  | 1025 | 552 | 17 | 11 | 83.6 |  | 1.8 | 23 |\n| JUMBO BAG STRAWBERRY | 760.11 | 2439.76 |  | 429 | 1254 | 20 | 34 | -68.8 |  | 1.8 | 24 |\n| WOODEN PICTURE FRAME WHITE FINISH | 751.05 | 314.28 |  | 339 | 133 | 19 | 18 | 139.0 |  | 1.8 | 25 |\n| JUMBO  BAG BAROQUE BLACK WHITE | 741.32 | 918.23 |  | 424 | 435 | 16 | 17 | -19.3 |  | 1.8 | 26 |\n| HAND OVER THE CHOCOLATE   SIGN | 738.73 | 153.31 |  | 407 | 72 | 20 | 14 | 381.9 |  | 1.8 | 27 |\n| HEART OF WICKER SMALL | 721.56 | 448.15 |  | 455 | 240 | 33 | 33 | 61.0 |  | 1.7 | 28 |\n| DOORMAT FANCY FONT HOME SWEET HOME | 716.84 | 336.77 |  | 110 | 41 | 8 | 10 | 112.9 |  | 1.7 | 29 |\n| PACK OF 60 PINK PAISLEY CAKE CASES | 711.14 | 340.11 |  | 1531 | 389 | 27 | 23 | 109.1 |  | 1.7 | 30 |\n| DOORMAT TOPIARY | 687.43 | 67.41 |  | 107 | 9 | 5 | 3 | 919.8 |  | 1.7 | 31 |\n| MEMO BOARD COTTAGE DESIGN | 674.10 | 417.14 |  | 166 | 92 | 8 | 7 | 61.6 |  | 1.6 | 32 |\n| ROUND SNACK BOXES SET OF 4 FRUITS | 671.05 | 1030.10 |  | 247 | 398 | 16 | 12 | -34.9 |  | 1.6 | 33 |\n| LUNCH BAG SUKI  DESIGN | 656.30 | 371.49 |  | 390 | 190 | 40 | 27 | 76.7 |  | 1.6 | 34 |\n| WALL MIRROR , RECT DIAMANTE, PINK/ | 648.96 | 16.13 |  | 96 | 1 | 1 | 1 | 3923.3 |  | 1.6 | 35 |\n| DIAMANTE HEART SHAPED WALL MIRROR, | 648.96 | 38.25 |  | 96 | 3 | 1 | 3 | 1596.6 |  | 1.6 | 35 |\n| JUMBO SHOPPER VINTAGE RED PAISLEY | 640.98 | 627.63 |  | 356 | 262 | 16 | 23 | 2.1 |  | 1.5 | 37 |\n| JUMBO BAG SCANDINAVIAN PAISLEY | 638.59 | 750.47 |  | 369 | 438 | 11 | 25 | -14.9 |  | 1.5 | 38 |\n| RED 3 PIECE MINI DOTS CUTLERY SET | 619.08 | 279.25 |  | 172 | 43 | 13 | 8 | 121.7 |  | 1.5 | 39 |\n| HOT BATHS METAL SIGN | 619.02 | 0.00 |  | 351 | 0 | 15 | 0 |  |  | 1.5 | 40 |\n\nWrite the insight note now.\n",
+    "text": "- WHITE HANGING HEART T-LIGHT HOLDER leads TW revenue at \u00a34405.70, up 29.4% WoW from \u00a33403.60 LW, holding 10.6% share and Rank 1.\n- PARTY BUNTING ranks 2 with TW revenue of \u00a33220.36, up 89.8% WoW from \u00a31696.49 LW.\n- REGENCY CAKESTAND 3 TIER posted TW revenue of \u00a32446.96, down 20.0% WoW from \u00a33058.79 LW, Rank 3.\n- JUMBO BAG STRAWBERRY fell 68.8% WoW, from \u00a32439.76 LW to \u00a3760.11 TW, the steepest WoW decline among the 40 products.\n- WALL MIRROR , RECT DIAMANTE, PINK/ jumped 3923.3% WoW, rising from \u00a316.13 LW to \u00a3648.96 TW.\n- PLEASE ONE PERSON METAL SIGN generated \u00a31475.70 TW on 26 orders versus \u00a30.00 LW.\n- DOORMAT TOPIARY grew 919.8% WoW, from \u00a367.41 LW to \u00a3687.43 TW.\n- HOT BATHS METAL SIGN recorded \u00a3619.02 TW revenue with 351 units across 15 orders, up from \u00a30.00 LW.",
+    "input_tokens": 3485,
+    "output_tokens": 477,
+    "cost_usd": 0.01174,
+    "latency_s": 4.95,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 3485,
+  "tokens_out": 477,
+  "cost_usd": 0.01174,
+  "latency_s": 4.95
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 this week (TW) with revenue of £4554.09, up from £2456.32 LW, a WoW change of 85.4%, holding 12.3% share of TW revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER is rank 2 TW with £3214.95 revenue, up from £2173.03 LW, a WoW increase of 47.9%, with 1209 units sold TW versus 785 LW.\n- JUMBO BAG RED RETROSPOT posted £2489.35 TW revenue versus £1392.22 LW, a WoW rise of 78.8%, with orders increasing from 40 LW to 46 TW.\n- PAPER CHAIN KIT SKULLS revenue rose from £35.40 LW to £1445.70 TW, a WoW change of 3983.9%, with units up from 12 LW to 566 TW.\n- CHILDS BREAKFAST SET DOLLY GIRL revenue grew from £9.95 LW to £909.33 TW, a WoW increase of 9039.0%, with orders rising from 1 LW to 14 TW.\n- LARGE RED SPOT WINDMILL recorded £1332.00 TW revenue versus £0.00 LW, with 720 units sold TW and a single order TW compared to zero orders LW.\n- ASSORTED COLOURS SILK FAN showed a WoW decline of -5.0%, with revenue falling from £1011.52 LW to £960.95 TW and units dropping from 1571 LW to 1333 TW.\n- LUNCH BAG RED SPOTTY revenue was nearly flat, moving from £873.96 LW to £876.99 TW, a WoW change of 0.3%, with orders up slightly from 42 LW to 44 TW.",
+ "input_tokens": 2518,
+ "output_tokens": 616,
+ "cost_usd": 0.011196,
+ "latency_s": 5.909,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2011-W28__S4__claude-opus-5__r2",
+ "table_id": "large_product_2011-W28",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W28",
+ "n_rows": 96,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 2,
+ "note": "- Total revenue reached \u00a351,928.98 TW versus \u00a349,691.65 LW, a change of +4.5% WoW and +117.3% YoY.\n- REGENCY CAKESTAND 3 TIER held rank 1 with \u00a33,429.15 TW, a 6.6% share TW and +70.1% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with \u00a33,266.50 TW, a 6.3% share TW and +330.0% WoW.\n- PARTY BUNTING ranked 3 with \u00a31,795.82 TW and a 3.5% share TW, changing -62.6% WoW.\n- POLKADOT PEN posted the largest WoW increase at +18121.5%, moving from \u00a31.63 LW to \u00a3297.01 TW.\n- DOORMAT HEARTS posted the largest WoW decrease at -86.8%, moving from \u00a32,345.43 LW to \u00a3309.46 TW.\n- BROCADE RING PURSE showed the largest YoY increase at +10158.9% against \u00a32.58 LY, while WOOD BLACK BOARD ANT WHITE FINISH showed the largest YoY decrease at -86.4% against \u00a32,130.35 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 46 orders TW versus 26 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W28. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a351,928.98 TW, revenue \u00a349,691.65 LW, revenue change +4.5% WoW, revenue change +117.3% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a33,429.15 TW, share 6.6% TW, revenue change +70.1% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a33,266.50 TW, share 6.3% TW, revenue change +330.0% WoW\n- PARTY BUNTING: rank 3, revenue \u00a31,795.82 TW, share 3.5% TW, revenue change -62.6% WoW\n- POLKADOT PEN (largest WoW increase): revenue change +18121.5% WoW, revenue \u00a3297.01 TW versus \u00a31.63 LW\n- DOORMAT HEARTS (largest WoW decrease): revenue change -86.8% WoW, revenue \u00a3309.46 TW versus \u00a32,345.43 LW\n- BROCADE RING PURSE (largest YoY increase): revenue change +10158.9% YoY, revenue \u00a32.58 LY\n- WOOD BLACK BOARD ANT WHITE FINISH (largest YoY decrease): revenue change -86.4% YoY, revenue \u00a32,130.35 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 46 TW versus 26 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a351,928.98 TW versus \u00a349,691.65 LW, a change of +4.5% WoW and +117.3% YoY.\n- REGENCY CAKESTAND 3 TIER held rank 1 with \u00a33,429.15 TW, a 6.6% share TW and +70.1% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with \u00a33,266.50 TW, a 6.3% share TW and +330.0% WoW.\n- PARTY BUNTING ranked 3 with \u00a31,795.82 TW and a 3.5% share TW, changing -62.6% WoW.\n- POLKADOT PEN posted the largest WoW increase at +18121.5%, moving from \u00a31.63 LW to \u00a3297.01 TW.\n- DOORMAT HEARTS posted the largest WoW decrease at -86.8%, moving from \u00a32,345.43 LW to \u00a3309.46 TW.\n- BROCADE RING PURSE showed the largest YoY increase at +10158.9% against \u00a32.58 LY, while WOOD BLACK BOARD ANT WHITE FINISH showed the largest YoY decrease at -86.4% against \u00a32,130.35 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 46 orders TW versus 26 LW.",
+    "input_tokens": 835,
+    "output_tokens": 454,
+    "cost_usd": 0.015525,
+    "latency_s": 5.433,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a351,928.98 TW, revenue \u00a349,691.65 LW, revenue change +4.5% WoW, revenue change +117.3% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a33,429.15 TW, share 6.6% TW, revenue change +70.1% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a33,266.50 TW, share 6.3% TW, revenue change +330.0% WoW\n- PARTY BUNTING: rank 3, revenue \u00a31,795.82 TW, share 3.5% TW, revenue change -62.6% WoW\n- POLKADOT PEN (largest WoW increase): revenue change +18121.5% WoW, revenue \u00a3297.01 TW versus \u00a31.63 LW\n- DOORMAT HEARTS (largest WoW decrease): revenue change -86.8% WoW, revenue \u00a3309.46 TW versus \u00a32,345.43 LW\n- BROCADE RING PURSE (largest YoY increase): revenue change +10158.9% YoY, revenue \u00a32.58 LY\n- WOOD BLACK BOARD ANT WHITE FINISH (largest YoY decrease): revenue change -86.4% YoY, revenue \u00a32,130.35 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 46 TW versus 26 LW",
+  "n_calls": 1,
+  "tokens_in": 835,
+  "tokens_out": 454,
+  "cost_usd": 0.015525,
+  "latency_s": 5.433
+ }
+}

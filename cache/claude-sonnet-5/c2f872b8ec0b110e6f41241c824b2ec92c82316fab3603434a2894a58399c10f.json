@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER ranks 1 TW with £2009.77, down from £3740.98 LW, a WoW change of -46.3%.\n- COOK WITH WINE METAL SIGN revenue rose from £46.80 LW to £1506.02 TW, a WoW increase of 3118.0%, ranking 2 with 6.4% share.\n- DOOR MAT RED SPOT had £0.00 LW and £1497.76 TW, ranking 3 with 6.4% share.\n- DOOR MAT BLACK FLOCK grew from £140.50 LW to £1321.48 TW, WoW up 840.6%, ranking 4.\n- RETRO SPOT CAKE STAND increased from £632.42 LW to £1092.98 TW, a WoW rise of 72.8%, ranking 5 with 4.7% share.\n- RED HANGING HEART T-LIGHT HOLDER fell from £1807.91 LW to £948.00 TW, a WoW decline of 47.6%, ranking 8.\n- PLEASE ONE PERSON METAL SIGN jumped from £29.41 LW to £647.41 TW, a WoW increase of 2101.3%, ranking 21.\n- JUMBO BAG RED WHITE SPOTTY dropped from £1557.40 LW to £899.90 TW, a WoW decrease of 42.2%, ranking 10 with 3.8% share.",
+ "input_tokens": 2452,
+ "output_tokens": 492,
+ "cost_usd": 0.009824,
+ "latency_s": 4.928,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

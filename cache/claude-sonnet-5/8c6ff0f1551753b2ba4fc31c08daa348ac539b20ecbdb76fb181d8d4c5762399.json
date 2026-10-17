@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £25,571.27 vs LW £16,369.32, WoW +56.2%.\n- TOTAL units TW 8,388 vs LW 3,915; TOTAL orders TW 311 vs LW 272.\n- TOTAL avg revenue per order TW £82.22 and avg revenue per unit TW £3.05.\n- ENGLISH ROSE DESIGN QUILTED THROW ranks 1 with TW revenue £4,577.17, 17.9% share, up from LW £662.74.\n- REGENCY CAKESTAND 3 TIER ranks 2 with TW revenue £2,799.04, 10.9% share.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 3 with TW revenue £2,420.03, 9.5% share, and leads orders TW at 43.\n- CAMOFLAGE DESIGN TEDDY is the top WoW gainer at +6,340.5%, while PINK HAPPY BIRTHDAY BUNTING is the top WoW loser at -61.5%.\n- PACK OF 72 RETRO SPOT CAKE CASES leads units TW at 1,724, among TOTAL of 20 entities tracked.",
+ "input_tokens": 2367,
+ "output_tokens": 416,
+ "cost_usd": 0.008893999999999999,
+ "latency_s": 4.375,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £18,776.73 TW versus £8,706.79 LW, a WoW change of +115.7%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with £4,554.09 TW revenue, a 24.3% share TW, and a WoW change of +85.4%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with £3,214.95 TW revenue, a 17.1% share TW, and a WoW change of +47.9%.\n- JUMBO BAG RED RETROSPOT ranked 3 with £2,489.35 TW revenue, a 13.3% share TW, and a WoW change of +78.8%.\n- PAPER CHAIN KIT SKULLS posted the largest WoW increase, rising from £35.40 LW to £1,445.70 TW, a WoW change of +3983.9%.\n- WHITE HANGING HEART T-LIGHT HOLDER also showed the largest WoW decrease in rate among top movers, with revenue of £3,214.95 TW versus £2,173.03 LW, a WoW change of +47.9%.\n- REGENCY CAKESTAND 3 TIER recorded the most orders, with 59 TW compared to 53 LW.",
+ "input_tokens": 743,
+ "output_tokens": 519,
+ "cost_usd": 0.006676,
+ "latency_s": 5.215,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

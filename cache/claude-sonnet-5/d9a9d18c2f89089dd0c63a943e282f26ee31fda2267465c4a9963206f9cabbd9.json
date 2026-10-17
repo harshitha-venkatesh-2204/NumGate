@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led revenue TW at £7558.58, up 56.1% WoW from £4843.45 LW, holding 8.4% share and Rank 1.\n- COLOUR GLASS. STAR T-LIGHT HOLDER rose 1038.9% WoW, from £343.79 LW to £3915.56 TW, ranking 3 with 4.4% share.\n- SMALL CHINESE STYLE SCISSOR jumped 7769.0% WoW, from £16.80 LW to £1322.00 TW, reaching Rank 10.\n- DOORMAT HOME SWEET HOME BLUE surged 6118.9% WoW, from £15.90 LW to £988.80 TW at Rank 19.\n- EDWARDIAN PARASOL BLACK fell 80.0% WoW, from £2169.57 LW to £434.67 TW, dropping to Rank 93.\n- CHRISTMAS LIGHTS 10 REINDEER declined 67.6% WoW, from £2374.88 LW to £770.08 TW, at Rank 25.\n- ROTATING SILVER ANGELS T-LIGHT HLDR dropped 62.1% WoW, from £1565.72 LW to £593.52 TW, Rank 53.\n- WHITE HANGING HEART T-LIGHT HOLDER grew 87.5% WoW, from £2226.27 LW to £4173.55 TW, holding Rank 2 with 4.6% share.",
+ "input_tokens": 8581,
+ "output_tokens": 509,
+ "cost_usd": 0.022252,
+ "latency_s": 4.825,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

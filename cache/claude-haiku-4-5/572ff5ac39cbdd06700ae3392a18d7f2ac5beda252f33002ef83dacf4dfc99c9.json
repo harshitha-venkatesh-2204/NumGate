@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £6.6k revenue TW, capturing 18.6% of total product revenue and leading all items.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £6.0k revenue TW with 2,155 units sold across 112 orders, representing 17.1% revenue share.\n- PAPER CHAIN KIT 50'S CHRISTMAS delivered £5.7k revenue TW from 1,756 units in 92 orders, accounting for 16.3% of total revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue surged 125.6% WoW, the strongest growth among tracked products.\n- HOT WATER BOTTLE BABUSHKA revenue increased 113.1% WoW, demonstrating significant momentum in the hot water bottle category.\n- Total product revenue reached £35.2k TW compared to £34.9k LW, representing 0.8% WoW growth.\n- Total units sold across all products reached 9,486 TW, distributed across 759 orders.",
+ "input_tokens": 1600,
+ "output_tokens": 257,
+ "cost_usd": 0.002885,
+ "latency_s": 3.28,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

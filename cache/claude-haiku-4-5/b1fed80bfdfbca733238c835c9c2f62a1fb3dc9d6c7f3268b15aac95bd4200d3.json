@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £4.4k revenue in TW, the highest performing product by sales value.\n- Total revenue reached £33.6k in TW, representing a 57.1% WoW increase from £21.4k in LW.\n- GIANT BLACK SUNGLASSES showed exceptional growth with a 33823.1% WoW revenue increase.\n- WHITE HANGING HEART T-LIGHT HOLDER led in order volume with 60 orders in TW and 696 units sold.\n- MULTI COLOUR SILVER T-LIGHT HOLDER was the top unit seller with 823 units moved in TW.\n- PINK AND LILAC QUILTED THROW achieved £1.8k revenue in TW with a 3873.7% WoW growth rate.\n- Total order count reached 770 orders in TW across all products.\n- PARTY BUNTING contributed £2.5k revenue in TW from 525 units across 47 orders.",
+ "input_tokens": 1876,
+ "output_tokens": 239,
+ "cost_usd": 0.003071,
+ "latency_s": 3.14,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

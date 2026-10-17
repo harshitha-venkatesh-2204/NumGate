@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2011-W23__S4__claude-opus-5__r1",
+ "table_id": "large_product_2011-W23",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W23",
+ "n_rows": 107,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a3124,910.08 TW against \u00a340,389.09 LW, a change of +209.3% WoW and +165.1% YoY.\n- PICNIC BASKET WICKER 60 PIECES ranked 1 with revenue of \u00a339,619.50 TW, holding a 31.7% share TW.\n- PARTY BUNTING ranked 2 at \u00a34,019.93 TW, a 3.2% share TW and a change of +72.8% WoW.\n- DOORMAT KEEP CALM AND COME IN ranked 3 at \u00a32,800.73 TW, a 2.2% share TW and a change of +339.7% WoW.\n- DOORMAT BLACK FLOCK posted the largest WoW increase at +14502.5%, moving from \u00a315.90 LW to \u00a32,321.80 TW.\n- SET/4 WHITE RETRO STORAGE CUBES recorded the largest WoW decrease at -68.1%, from \u00a31,123.52 LW to \u00a3357.89 TW.\n- TEA TIME PARTY BUNTING showed the largest YoY increase at +2828.5% against \u00a315.90 LY, while LUNCH BAG  BLACK SKULL. showed the largest YoY decrease at -91.0% against \u00a34,044.23 LY.\n- JUMBO BAG RED RETROSPOT led on order count with 59 orders TW versus 29 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W23. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a3124,910.08 TW, revenue \u00a340,389.09 LW, revenue change +209.3% WoW, revenue change +165.1% YoY\n- PICNIC BASKET WICKER 60 PIECES: rank 1, revenue \u00a339,619.50 TW, share 31.7% TW\n- PARTY BUNTING: rank 2, revenue \u00a34,019.93 TW, share 3.2% TW, revenue change +72.8% WoW\n- DOORMAT KEEP CALM AND COME IN: rank 3, revenue \u00a32,800.73 TW, share 2.2% TW, revenue change +339.7% WoW\n- DOORMAT BLACK FLOCK (largest WoW increase): revenue change +14502.5% WoW, revenue \u00a32,321.80 TW versus \u00a315.90 LW\n- SET/4 WHITE RETRO STORAGE CUBES (largest WoW decrease): revenue change -68.1% WoW, revenue \u00a3357.89 TW versus \u00a31,123.52 LW\n- TEA TIME PARTY BUNTING (largest YoY increase): revenue change +2828.5% YoY, revenue \u00a315.90 LY\n- LUNCH BAG  BLACK SKULL. (largest YoY decrease): revenue change -91.0% YoY, revenue \u00a34,044.23 LY\n- JUMBO BAG RED RETROSPOT (most orders): orders 59 TW versus 29 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a3124,910.08 TW against \u00a340,389.09 LW, a change of +209.3% WoW and +165.1% YoY.\n- PICNIC BASKET WICKER 60 PIECES ranked 1 with revenue of \u00a339,619.50 TW, holding a 31.7% share TW.\n- PARTY BUNTING ranked 2 at \u00a34,019.93 TW, a 3.2% share TW and a change of +72.8% WoW.\n- DOORMAT KEEP CALM AND COME IN ranked 3 at \u00a32,800.73 TW, a 2.2% share TW and a change of +339.7% WoW.\n- DOORMAT BLACK FLOCK posted the largest WoW increase at +14502.5%, moving from \u00a315.90 LW to \u00a32,321.80 TW.\n- SET/4 WHITE RETRO STORAGE CUBES recorded the largest WoW decrease at -68.1%, from \u00a31,123.52 LW to \u00a3357.89 TW.\n- TEA TIME PARTY BUNTING showed the largest YoY increase at +2828.5% against \u00a315.90 LY, while LUNCH BAG  BLACK SKULL. showed the largest YoY decrease at -91.0% against \u00a34,044.23 LY.\n- JUMBO BAG RED RETROSPOT led on order count with 59 orders TW versus 29 LW.",
+    "input_tokens": 832,
+    "output_tokens": 463,
+    "cost_usd": 0.015735,
+    "latency_s": 5.524,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a3124,910.08 TW, revenue \u00a340,389.09 LW, revenue change +209.3% WoW, revenue change +165.1% YoY\n- PICNIC BASKET WICKER 60 PIECES: rank 1, revenue \u00a339,619.50 TW, share 31.7% TW\n- PARTY BUNTING: rank 2, revenue \u00a34,019.93 TW, share 3.2% TW, revenue change +72.8% WoW\n- DOORMAT KEEP CALM AND COME IN: rank 3, revenue \u00a32,800.73 TW, share 2.2% TW, revenue change +339.7% WoW\n- DOORMAT BLACK FLOCK (largest WoW increase): revenue change +14502.5% WoW, revenue \u00a32,321.80 TW versus \u00a315.90 LW\n- SET/4 WHITE RETRO STORAGE CUBES (largest WoW decrease): revenue change -68.1% WoW, revenue \u00a3357.89 TW versus \u00a31,123.52 LW\n- TEA TIME PARTY BUNTING (largest YoY increase): revenue change +2828.5% YoY, revenue \u00a315.90 LY\n- LUNCH BAG  BLACK SKULL. (largest YoY decrease): revenue change -91.0% YoY, revenue \u00a34,044.23 LY\n- JUMBO BAG RED RETROSPOT (most orders): orders 59 TW versus 29 LW",
+  "n_calls": 1,
+  "tokens_in": 832,
+  "tokens_out": 463,
+  "cost_usd": 0.015735,
+  "latency_s": 5.524
+ }
+}

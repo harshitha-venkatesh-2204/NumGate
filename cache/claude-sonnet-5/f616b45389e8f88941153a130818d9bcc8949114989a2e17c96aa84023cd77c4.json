@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £38.2k versus LW £22.1k, a WoW increase of 72.8%.\n- TOTAL revenue TW of £38.2k compares to LY £13.1k, a YoY increase of 191.8%.\n- TOTAL units TW reached 18,990 versus LW 8,705, and TOTAL orders TW were 669 versus LW 599.\n- REGENCY CAKESTAND 3 TIER ranked 1 with TW revenue of £3.7k, a 9.8% share of TOTAL.\n- PARTY BUNTING ranked 2 with TW revenue of £2.8k, a 7.4% share, and led all products with 45 orders TW.\n- JUMBO BAG RED RETROSPOT ranked 3 with TW revenue of £2.7k, a 7.1% share, and the highest units TW at 1,546.\n- BAKING MOULD EASTER EGG MILK CHOC rose 841.6% WoW, while CHILLI LIGHTS fell 56.7% WoW.\n- JUMBO BAG TOYS grew 580.5% YoY, while WHITE HANGING HEART T-LIGHT HOLDER declined 68.0% YoY, and POLKADOT PEN had the lowest TW revenue at £577.92.",
+ "input_tokens": 2273,
+ "output_tokens": 438,
+ "cost_usd": 0.008926,
+ "latency_s": 4.325,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

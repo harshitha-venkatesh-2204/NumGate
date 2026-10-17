@@ -1,0 +1,42 @@
+{
+ "note_id": "small_product_2010-W24__S4__claude-haiku-4-5__r1",
+ "table_id": "small_product_2010-W24",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W24",
+ "n_rows": 8,
+ "strategy": "S4",
+ "model": "claude-haiku-4-5",
+ "repeat": 1,
+ "note": "- Total revenue across all products was \u00a313,748.28 TW, down 14.8% WoW from \u00a316,144.80 LW.\n- REGENCY CAKESTAND 3 TIER generated \u00a35,198.05 TW, representing 37.8% of total revenue and ranking as the top product despite a 5.8% WoW decline.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to \u00a31,625.34 TW with an 11.8% share, experiencing the largest WoW decrease of -61.7% from \u00a34,245.80 LW.\n- VINTAGE UNION JACK BUNTING achieved \u00a31,261.17 TW for a 9.2% revenue share, with a 25.9% WoW decline.\n- DOOR MAT RED SPOT showed the strongest WoW performance, increasing 119.5% to \u00a3957.50 TW from \u00a3436.26 LW.\n- REGENCY CAKESTAND 3 TIER recorded 52 orders TW, down from 74 orders LW despite maintaining the highest order volume.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W24. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a313,748.28 TW, revenue \u00a316,144.80 LW, revenue change -14.8% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a35,198.05 TW, share 37.8% TW, revenue change -5.8% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a31,625.34 TW, share 11.8% TW, revenue change -61.7% WoW\n- VINTAGE UNION JACK BUNTING: rank 3, revenue \u00a31,261.17 TW, share 9.2% TW, revenue change -25.9% WoW\n- DOOR MAT RED SPOT (largest WoW increase): revenue change +119.5% WoW, revenue \u00a3957.50 TW versus \u00a3436.26 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (largest WoW decrease): revenue change -61.7% WoW, revenue \u00a31,625.34 TW versus \u00a34,245.80 LW\n- REGENCY CAKESTAND 3 TIER (most orders): orders 52 TW versus 74 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue across all products was \u00a313,748.28 TW, down 14.8% WoW from \u00a316,144.80 LW.\n- REGENCY CAKESTAND 3 TIER generated \u00a35,198.05 TW, representing 37.8% of total revenue and ranking as the top product despite a 5.8% WoW decline.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to \u00a31,625.34 TW with an 11.8% share, experiencing the largest WoW decrease of -61.7% from \u00a34,245.80 LW.\n- VINTAGE UNION JACK BUNTING achieved \u00a31,261.17 TW for a 9.2% revenue share, with a 25.9% WoW decline.\n- DOOR MAT RED SPOT showed the strongest WoW performance, increasing 119.5% to \u00a3957.50 TW from \u00a3436.26 LW.\n- REGENCY CAKESTAND 3 TIER recorded 52 orders TW, down from 74 orders LW despite maintaining the highest order volume.",
+    "input_tokens": 570,
+    "output_tokens": 269,
+    "cost_usd": 0.001915,
+    "latency_s": 2.985,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a313,748.28 TW, revenue \u00a316,144.80 LW, revenue change -14.8% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a35,198.05 TW, share 37.8% TW, revenue change -5.8% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a31,625.34 TW, share 11.8% TW, revenue change -61.7% WoW\n- VINTAGE UNION JACK BUNTING: rank 3, revenue \u00a31,261.17 TW, share 9.2% TW, revenue change -25.9% WoW\n- DOOR MAT RED SPOT (largest WoW increase): revenue change +119.5% WoW, revenue \u00a3957.50 TW versus \u00a3436.26 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (largest WoW decrease): revenue change -61.7% WoW, revenue \u00a31,625.34 TW versus \u00a34,245.80 LW\n- REGENCY CAKESTAND 3 TIER (most orders): orders 52 TW versus 74 LW",
+  "n_calls": 1,
+  "tokens_in": 570,
+  "tokens_out": 269,
+  "cost_usd": 0.001915,
+  "latency_s": 2.985
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £41.6k in TW versus £30.0k in LW, a WoW change of +38.5%.\n- TOTAL units came in at 19,061 in TW, up 54.9% WoW, while TOTAL orders reached 769, up 6.8% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 in TW with £4,405.70, equal to 10.6% of TOTAL revenue.\n- PARTY BUNTING ranked 2 in TW with £3,220.36 and a 7.7% share, and added £1,523.87 WoW.\n- REGENCY CAKESTAND 3 TIER ranked 3 in TW with £2,446.96 and a 5.9% share, down £611.83 WoW.\n- PLEASE ONE PERSON METAL SIGN posted £1,475.70 in TW, the full amount of its £1,475.70 WoW gain, and COOK WITH WINE METAL SIGN added £1,141.92 WoW.\n- JUMBO BAG STRAWBERRY fell £1,679.65 WoW and JUMBO STORAGE BAG SUKI fell £565.01 WoW; JUMBO BAG PINK VINTAGE PAISLEY recorded £1,477.55 in TW.\n- The top 5 products together accounted for 31.3% of TOTAL revenue in TW.",
+ "input_tokens": 2451,
+ "output_tokens": 472,
+ "cost_usd": 0.024055,
+ "latency_s": 6.372,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

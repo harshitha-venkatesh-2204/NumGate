@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led TW at £7,558.58 versus £4,843.45 LW (+56.1% WoW) on 642 units, holding an 8.4% share of the 112 rows shown.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with £4,173.55 TW against £2,226.27 LW (+87.5% WoW) and 1,467 units versus 799 LW.\n- COLOUR GLASS. STAR T-LIGHT HOLDER rose to £3,915.56 TW from £343.79 LW (+1,038.9% WoW), with units up from 111 LW to 1,412 TW.\n- Five doormat lines posted outsized WoW moves: DOORMAT HOME SWEET HOME BLUE £988.80 (+6,118.9%), DOORMAT MERRY CHRISTMAS RED £585.31 (+3,581.2%), DOORMAT WELCOME PUPPIES £564.00 (+3,221.6%), DOORMAT FANCY FONT HOME SWEET HOME £1,098.63 (+3,135.1%), and DOORMAT ENGLISH ROSE £711.00 TW from £0.00 LW.\n- SMALL CHINESE STYLE SCISSOR booked £1,322.00 TW on 4,100 units across 3 orders, versus £16.80 and 40 units in 1 order LW (+7,769.0% WoW).\n- The steepest declines were EDWARDIAN PARASOL BLACK at £434.67 TW versus £2,169.57 LW (-80.0% WoW), CHRISTMAS LIGHTS 10 REINDEER at £770.08 versus £2,374.88 LW (-67.6%), and ROTATING SILVER ANGELS T-LIGHT HLDR at £593.52 versus £1,565.72 LW (-62.1%).\n- ASSORTED COLOUR BIRD ORNAMENT fell to £1,741.51 TW from £2,609.84 LW (-33.3% WoW) with units down from 1,736 to 1,039, while orders rose from 28 LW to 41 TW.\n- Revenue_LY is blank for all 112 rows in this table, so no YoY percentage is available for any product this week.",
+ "input_tokens": 8581,
+ "output_tokens": 1404,
+ "cost_usd": 0.07800499999999999,
+ "latency_s": 15.809,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

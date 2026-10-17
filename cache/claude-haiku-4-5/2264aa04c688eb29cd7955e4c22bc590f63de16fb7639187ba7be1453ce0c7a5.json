@@ -1,0 +1,10 @@
+{
+ "text": "- EMPIRE DESIGN ROSETTE generated £3,277.92 revenue in TW, up 26123.4% WoW from £12.50 in LW, and ranks 1st with 4.9% share of total weekly revenue.\n- REGENCY CAKESTAND 3 TIER declined to £2,529.33 in TW from £4,651.74 in LW, representing a 45.6% WoW decrease, though it maintains rank 2 with 3.8% share.\n- ASSORTED COLOUR MINI CASES surged to £1,551.15 in TW from £71.55 in LW, a 2067.9% WoW increase, with 949.8% YoY growth compared to £147.75 in LY.\n- JUMBO BAG RED RETROSPOT fell to £1,482.34 in TW from £1,732.75 in LW, down 14.5% WoW, while maintaining rank 4 with 2.2% revenue share.\n- WHITE HANGING HEART T-LIGHT HOLDER generated £1,119.63 in TW, up 11.9% WoW but down 55.2% YoY from £2,501.43 in LY, with 37 orders in TW.\n- VINTAGE UNION JACK BUNTING achieved £1,111.39 in TW, up 59.5% YoY from £697.00 in LY despite a 7.4% WoW decline from £1,200.77 in LW.\n- SMALL POPCORN HOLDER increased to £1,004.96 in TW from £805.74 in LW, a 24.7% WoW gain, with 1,312 units sold in TW versus 1,040 in LW.\n- PAPER CHAIN KIT EMPIRE more than doubled to £953.40 in TW from £387.21 in LW, representing 146.2% WoW growth and 42.7% YoY increase from £668.12 in LY.",
+ "input_tokens": 9925,
+ "output_tokens": 508,
+ "cost_usd": 0.012465,
+ "latency_s": 6.196,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

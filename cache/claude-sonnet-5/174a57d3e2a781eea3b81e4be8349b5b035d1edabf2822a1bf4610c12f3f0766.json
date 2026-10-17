@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £67.0k versus LW £79.2k, a WoW change of -15.3%, and versus LY £39.1k, a YoY change of +71.3%.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 1 for TW with revenue of £5.7k, an 8.5% share of total.\n- RABBIT NIGHT LIGHT ranked 2 for TW with revenue of £5.08k, a 7.6% share of total.\n- CHILLI LIGHTS ranked 3 for TW with revenue of £4.96k, a 7.4% share of total.\n- COLOURED GLASS STAR T-LIGHT HOLDER rose 1050.4% WoW, the largest WoW gain among products listed.\n- JUMBO BAG 50'S CHRISTMAS fell 69.0% WoW and JUMBO BAG VINTAGE DOILY fell 62.9% WoW.\n- WOODEN ADVENT CALENDAR RED rose 698.9% YoY while WHITE HANGING HEART T-LIGHT HOLDER fell 58.7% YoY.\n- REGENCY CAKESTAND 3 TIER declined 45.9% YoY, contrasting with PARTY BUNTING's YoY gain of 463.2%.",
+ "input_tokens": 2430,
+ "output_tokens": 446,
+ "cost_usd": 0.00932,
+ "latency_s": 4.163,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

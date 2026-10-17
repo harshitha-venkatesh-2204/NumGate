@@ -1,0 +1,10 @@
+{
+ "text": "```json\n{\n  \"claims\": [\n    {\n      \"line\": 0,\n      \"entity\": \"TOTAL\",\n      \"metric\": \"revenue\",\n      \"period\": \"TW\",\n      \"value_text\": \"£162.3k\",\n      \"direction\": \"none\",\n      \"qualifier\": \"none\"\n    },\n    {\n      \"line\": 0,\n      \"entity\": \"TOTAL\",\n      \"metric\": \"revenue\",\n      \"period\": \"LW\",\n      \"value_text\": \"£159.0k\",\n      \"direction\": \"none\",\n      \"qualifier\": \"none\"\n    },\n    {\n      \"line\": 0,\n      \"entity\": \"TOTAL\",\n      \"metric\": \"revenue\",\n      \"period\": \"WoW\",\n      \"value_text\": \"+2.1%\",\n      \"direction\": \"up\",\n      \"qualifier\": \"none\"\n    }\n  ]\n}\n```",
+ "input_tokens": 612,
+ "output_tokens": 230,
+ "cost_usd": 0.0017620000000000001,
+ "latency_s": 2.303,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

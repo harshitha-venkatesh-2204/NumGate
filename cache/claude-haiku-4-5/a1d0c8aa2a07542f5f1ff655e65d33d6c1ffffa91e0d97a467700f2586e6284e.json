@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue TW reached £50.3k, up 21.8% WoW from £41.3k LW, demonstrating strong week-on-week growth across the product portfolio.\n- REGENCY CAKESTAND 3 TIER generated £2.5k revenue TW and led order volume with 53 orders, making it the top-performing product by order count.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £2.2k revenue TW with 785 units sold and 55 orders, the highest order count across all products.\n- JUMBO BAG RED RETROSPOT contributed £1.4k revenue TW from 751 units across 40 orders, ranking third in revenue generation.\n- FLAG OF ST GEORGE CAR FLAG showed exceptional growth with revenue up 3969.8% WoW, followed by BLACK HEART CARD HOLDER at 3930.0% WoW growth.\n- ASSORTED COLOURS SILK FAN led unit sales with 1571 units TW, while ASSORTED FLOWER COLOUR \"LEIS\" achieved 1098 units and SMALL CHINESE STYLE SCISSOR reached 1000 units.\n- Total unit volume TW reached 22179 units across 1661 orders, indicating strong customer engagement and transaction frequency.\n- NATURAL SLATE HEART CHALKBOARD and JUMBO BAG SCANDINAVIAN PAISLEY both demonstrated substantial WoW revenue growth at 2940.5% and 2749.3% respectively.",
+ "input_tokens": 1893,
+ "output_tokens": 353,
+ "cost_usd": 0.003658,
+ "latency_s": 4.526,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,41 @@
+{
+ "note_id": "medium_product_2011-W17__S1__claude-sonnet-5__r1",
+ "table_id": "medium_product_2011-W17",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2011-W17",
+ "n_rows": 26,
+ "strategy": "S1",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- REGENCY CAKESTAND 3 TIER ranked 1 TW with \u00a33804.27, up 52.1% WoW from \u00a32500.50 LW and up 6.3% YoY from \u00a33578.34 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to \u00a31028.01 TW from \u00a36087.56 LW, a WoW change of -83.1%, and down 66.6% YoY from \u00a33074.72 LY.\n- PARTY BUNTING dropped to \u00a31840.12 TW from \u00a33483.92 LW, WoW -47.2%, and YoY -13.0% versus \u00a32114.56 LY.\n- CERAMIC STRAWBERRY MONEY BOX rose to \u00a3937.43 TW from \u00a38.26 LW, a WoW increase of 11249.0%, with 415 units TW versus 2 units LW.\n- PAPER CHAIN KIT EMPIRE reached \u00a31266.57 TW, up 16.3% WoW from \u00a31088.95 LW and up 279.4% YoY from \u00a3333.81 LY.\n- BALLOON WATER BOMB PACK OF 35 climbed to \u00a3464.03 TW from \u00a331.50 LW, WoW +1373.1%, and YoY +538.6% versus \u00a372.66 LY.\n- ASSORTED COLOUR BIRD ORNAMENT declined to \u00a3440.72 TW from \u00a3952.92 LW, WoW -53.8%, and YoY -70.9% from \u00a31512.31 LY.\n- VINTAGE RED KITCHEN CABINET posted \u00a3500.00 TW versus \u00a30.00 LW and \u00a30.00 LY, with 2 orders TW and a 2.4% share of TW revenue.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W17. Entity type: product. The table has 26 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 3804.27 | 2500.50 | 3578.34 | 325 | 186 | 25 | 42 | 52.1 | 6.3 | 18.6 | 1 |\n| PARTY BUNTING | 1840.12 | 3483.92 | 2114.56 | 276 | 648 | 35 | 55 | -47.2 | -13.0 | 9.0 | 2 |\n| PAPER CHAIN KIT EMPIRE | 1266.57 | 1088.95 | 333.81 | 486 | 377 | 16 | 34 | 16.3 | 279.4 | 6.2 | 3 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 1028.01 | 6087.56 | 3074.72 | 375 | 2422 | 28 | 50 | -83.1 | -66.6 | 5.0 | 4 |\n| WOODEN UNION JACK BUNTING | 981.83 | 1434.19 | 273.70 | 158 | 205 | 16 | 31 | -31.5 | 258.7 | 4.8 | 5 |\n| CERAMIC STRAWBERRY MONEY BOX | 937.43 | 8.26 | 0.00 | 415 | 2 | 3 | 1 | 11249.0 |  | 4.6 | 6 |\n| PAPER BUNTING WHITE LACE | 853.39 | 819.10 | 230.14 | 301 | 250 | 18 | 22 | 4.2 | 270.8 | 4.2 | 7 |\n| JUMBO BAG RED RETROSPOT | 817.65 | 1131.81 | 0.00 | 385 | 549 | 27 | 32 | -27.8 |  | 4.0 | 8 |\n| UNION STRIPE WITH FRINGE  HAMMOCK | 724.97 | 232.01 | 87.45 | 104 | 27 | 9 | 10 | 212.5 | 729.0 | 3.5 | 9 |\n| PICNIC BASKET WICKER LARGE | 629.15 | 838.99 | 0.00 | 57 | 77 | 16 | 25 | -25.0 |  | 3.1 | 10 |\n| JUMBO BAG APPLES | 611.47 | 751.60 | 0.00 | 299 | 380 | 21 | 28 | -18.6 |  | 3.0 | 11 |\n| ASSORTED COLOURS SILK FAN | 593.59 | 158.02 | 572.48 | 793 | 174 | 7 | 16 | 275.6 | 3.7 | 2.9 | 12 |\n| JUMBO BAG PINK POLKADOT | 578.91 | 340.85 | 0.00 | 282 | 155 | 20 | 19 | 69.8 |  | 2.8 | 13 |\n| JUMBO  BAG BAROQUE BLACK WHITE | 577.89 | 297.26 | 912.30 | 278 | 147 | 17 | 12 | 94.4 | -36.7 | 2.8 | 14 |\n| WORLD WAR 2 GLIDERS ASSTD DESIGNS | 563.52 | 434.49 | 141.12 | 2592 | 1927 | 7 | 10 | 29.7 | 299.3 | 2.8 | 15 |\n| VINTAGE RED KITCHEN CABINET | 500.00 | 0.00 | 0.00 | 4 | 0 | 2 | 0 |  |  | 2.4 | 16 |\n| BALLOON WATER BOMB PACK OF 35 | 464.03 | 31.50 | 72.66 | 1281 | 75 | 5 | 4 | 1373.1 | 538.6 | 2.3 | 17 |\n| ASSORTED COLOUR BIRD ORNAMENT | 440.72 | 952.92 | 1512.31 | 264 | 612 | 19 | 26 | -53.8 | -70.9 | 2.2 | 18 |\n| JUMBO BAG SCANDINAVIAN BLUE PAISLEY | 419.05 | 526.18 | 0.00 | 205 | 271 | 16 | 19 | -20.4 |  | 2.1 | 19 |\n| PAPER BUNTING RETROSPOT | 410.74 | 832.71 | 0.00 | 114 | 261 | 16 | 30 | -50.7 |  | 2.0 | 20 |\n| LUNCH BAG WOODLAND | 408.30 | 193.98 | 421.66 | 234 | 94 | 17 | 16 | 110.5 | -3.2 | 2.0 | 21 |\n| CAMOUFLAGE DESIGN TEDDY | 405.75 | 100.80 | 0.00 | 193 | 48 | 2 | 1 | 302.5 |  | 2.0 | 22 |\n| SET 2 TEA TOWELS I LOVE LONDON | 405.00 | 179.40 | 0.00 | 140 | 50 | 7 | 11 | 125.8 |  | 2.0 | 23 |\n| RED  HARMONICA IN BOX | 399.52 | 169.56 | 638.81 | 364 | 125 | 7 | 10 | 135.6 | -37.5 | 2.0 | 24 |\n| JUMBO SHOPPER VINTAGE RED PAISLEY | 391.01 | 478.25 | 563.11 | 162 | 235 | 17 | 19 | -18.2 | -30.6 | 1.9 | 25 |\n| LUNCH BAG APPLE DESIGN | 375.50 | 491.52 | 0.00 | 230 | 304 | 19 | 28 | -23.6 |  | 1.8 | 26 |\n\nWrite the insight note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER ranked 1 TW with \u00a33804.27, up 52.1% WoW from \u00a32500.50 LW and up 6.3% YoY from \u00a33578.34 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to \u00a31028.01 TW from \u00a36087.56 LW, a WoW change of -83.1%, and down 66.6% YoY from \u00a33074.72 LY.\n- PARTY BUNTING dropped to \u00a31840.12 TW from \u00a33483.92 LW, WoW -47.2%, and YoY -13.0% versus \u00a32114.56 LY.\n- CERAMIC STRAWBERRY MONEY BOX rose to \u00a3937.43 TW from \u00a38.26 LW, a WoW increase of 11249.0%, with 415 units TW versus 2 units LW.\n- PAPER CHAIN KIT EMPIRE reached \u00a31266.57 TW, up 16.3% WoW from \u00a31088.95 LW and up 279.4% YoY from \u00a3333.81 LY.\n- BALLOON WATER BOMB PACK OF 35 climbed to \u00a3464.03 TW from \u00a331.50 LW, WoW +1373.1%, and YoY +538.6% versus \u00a372.66 LY.\n- ASSORTED COLOUR BIRD ORNAMENT declined to \u00a3440.72 TW from \u00a3952.92 LW, WoW -53.8%, and YoY -70.9% from \u00a31512.31 LY.\n- VINTAGE RED KITCHEN CABINET posted \u00a3500.00 TW versus \u00a30.00 LW and \u00a30.00 LY, with 2 orders TW and a 2.4% share of TW revenue.",
+    "input_tokens": 2661,
+    "output_tokens": 566,
+    "cost_usd": 0.010982,
+    "latency_s": 5.14,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 2661,
+  "tokens_out": 566,
+  "cost_usd": 0.010982,
+  "latency_s": 5.14
+ }
+}

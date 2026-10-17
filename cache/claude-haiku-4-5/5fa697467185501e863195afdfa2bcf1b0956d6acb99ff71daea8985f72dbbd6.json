@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £133,081.75 in revenue during TW, representing 82.0% of total revenue across all entities shown, ranking 1st.\n- United Kingdom revenue declined 3.0% WoW, falling from £137,188.80 in LW to £133,081.75 in TW, despite units increasing from 79,042 to 84,187.\n- EIRE revenue surged 395.9% WoW, growing from £3,318.09 in LW to £16,455.16 in TW, with units rising from 1,573 to 11,157.\n- Germany revenue increased 596.0% WoW, climbing from £407.67 in LW to £2,837.23 in TW, with units growing from 167 to 1,989.\n- Netherlands revenue fell 65.5% WoW, dropping from £17,594.55 in LW to £6,062.68 in TW, with units declining from 12,067 to 4,244.\n- United Arab Emirates generated £2,047.28 in revenue during TW with 1,364 units sold, representing a new market entry with zero revenue recorded in LW.\n- Sweden revenue increased 309.4% WoW, rising from £454.03 in LW to £1,858.91 in TW, with units increasing from 421 to 1,402.\n- Total orders across all entities in TW reached 326, compared to 321 orders in LW, with United Kingdom accounting for 304 of the TW orders.",
+ "input_tokens": 846,
+ "output_tokens": 378,
+ "cost_usd": 0.0027359999999999997,
+ "latency_s": 4.009,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

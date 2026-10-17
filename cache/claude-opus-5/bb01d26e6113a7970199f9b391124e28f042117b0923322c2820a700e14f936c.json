@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led TW at £3,740.45 on 308 units across 39 orders, up 43.0% WoW from £2,616.00 and up 48.9% YoY from £2,511.24, holding a 5.7% share at rank 1.\n- PARTY BUNTING ranked 2 with £2,843.54 TW versus £1,301.83 LW (+118.4% WoW) and £1,014.34 LY (+180.3% YoY), with units rising from 205 LW to 606 TW.\n- The jumbo bag group took four of the top ten slots TW: RED RETROSPOT £2,718.16 (+100.4% WoW), PINK POLKADOT £1,917.87 (+172.4% WoW), STRAWBERRY £1,707.48 (+142.9% WoW, +196.1% YoY) and OWLS £1,492.20 (+191.6% WoW, +392.2% YoY).\n- WHITE HANGING HEART T-LIGHT HOLDER sat at £1,264.96 TW, nearly flat WoW at +1.2% from £1,249.82, but down 68.0% YoY from £3,952.80 LY.\n- CHILLI LIGHTS fell 56.7% WoW to £656.45 from £1,516.30 LW, and CHARLOTTE BAG SUKI DESIGN fell 55.9% WoW to £387.09 from £876.84 LW.\n- BAKING MOULD TOFFEE CUP CHOCOLATE posted the largest WoW move at +7,855.9% to £405.75 from £5.10 LW, followed by PACK OF 12 SKULL TISSUES at +3,954.3% to £564.36 from £13.92 LW.\n- PACK OF 12 SKULL TISSUES (2,244 units) and BROCADE RING PURSE (2,196 units, £550.44, +653.2% WoW) were the two highest unit lines TW despite ranking 37 and 40 by revenue.\n- RECYCLING BAG RETROSPOT rose 143.3% WoW to £366.31 on 27 orders versus 8 LW, while remaining 65.0% below its £1,047.37 LY level.",
+ "input_tokens": 7591,
+ "output_tokens": 1442,
+ "cost_usd": 0.074005,
+ "latency_s": 15.23,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

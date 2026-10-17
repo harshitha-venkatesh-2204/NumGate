@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue was £44.3k TW versus £59.7k LW, a WoW change of -25.9%.\n- TOTAL revenue was £44.3k TW versus £29.5k LY, a YoY change of 49.9%.\n- TOTAL units were 15,986 TW versus 22,631 LW, and orders were 997 TW versus 1,094 LW.\n- REGENCY CAKESTAND 3 TIER led product revenue TW at £2,729.22, a 6.2% share.\n- PAPER CHAIN KIT 50'S CHRISTMAS followed with £2,342.01 TW revenue, a 5.3% share.\n- PAPER LANTERN 9 POINT DELUXE STAR revenue rose 1,841.1% WoW, the largest WoW gain among products.\n- JUMBO BAG PINK POLKADOT revenue fell 71.9% WoW, while DOORMAT KEEP CALM AND COME IN fell 66.1% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue was £1,893.01 TW with a 275.8% WoW increase.",
+ "input_tokens": 2432,
+ "output_tokens": 386,
+ "cost_usd": 0.008724,
+ "latency_s": 3.913,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

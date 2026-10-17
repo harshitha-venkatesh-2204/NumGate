@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2011-W43__S4__claude-haiku-4-5__r1",
+ "table_id": "large_product_2011-W43",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W43",
+ "n_rows": 128,
+ "strategy": "S4",
+ "model": "claude-haiku-4-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a3109,203.35 TW, representing a +23.8% WoW increase from \u00a388,233.35 LW.\n- Total revenue grew +116.5% YoY for ISO week 2011-W43.\n- RABBIT NIGHT LIGHT generated \u00a310,739.38 TW revenue, ranking 1st with a 9.8% share TW and surging +18473.8% WoW from \u00a357.82 LW.\n- ALARM CLOCK BAKELIKE RED achieved rank 2 with \u00a32,423.41 TW revenue, a 2.2% share TW, and a +610.8% WoW increase.\n- CHILLI LIGHTS held rank 3 with \u00a32,285.12 TW revenue, representing a 2.1% share TW and a +221.7% WoW rise.\n- LANDMARK FRAME OXFORD STREET experienced the largest WoW decline at -88.8%, falling from \u00a33,753.90 LW to \u00a3418.90 TW.\n- CHRISTMAS CRAFT WHITE FAIRY showed the largest YoY increase at +28727.6%, growing from \u00a31.45 LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS recorded the most orders at 64 TW, up from 48 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W43. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a3109,203.35 TW, revenue \u00a388,233.35 LW, revenue change +23.8% WoW, revenue change +116.5% YoY\n- RABBIT NIGHT LIGHT: rank 1, revenue \u00a310,739.38 TW, share 9.8% TW, revenue change +18473.8% WoW\n- ALARM CLOCK BAKELIKE RED: rank 2, revenue \u00a32,423.41 TW, share 2.2% TW, revenue change +610.8% WoW\n- CHILLI LIGHTS: rank 3, revenue \u00a32,285.12 TW, share 2.1% TW, revenue change +221.7% WoW\n- RABBIT NIGHT LIGHT (largest WoW increase): revenue change +18473.8% WoW, revenue \u00a310,739.38 TW versus \u00a357.82 LW\n- LANDMARK FRAME OXFORD STREET (largest WoW decrease): revenue change -88.8% WoW, revenue \u00a3418.90 TW versus \u00a33,753.90 LW\n- CHRISTMAS CRAFT WHITE FAIRY (largest YoY increase): revenue change +28727.6% YoY, revenue \u00a31.45 LY\n- RED HANGING HEART T-LIGHT HOLDER (largest YoY decrease): revenue change -85.5% YoY, revenue \u00a32,774.28 LY\n- PAPER CHAIN KIT 50'S CHRISTMAS (most orders): orders 64 TW versus 48 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a3109,203.35 TW, representing a +23.8% WoW increase from \u00a388,233.35 LW.\n- Total revenue grew +116.5% YoY for ISO week 2011-W43.\n- RABBIT NIGHT LIGHT generated \u00a310,739.38 TW revenue, ranking 1st with a 9.8% share TW and surging +18473.8% WoW from \u00a357.82 LW.\n- ALARM CLOCK BAKELIKE RED achieved rank 2 with \u00a32,423.41 TW revenue, a 2.2% share TW, and a +610.8% WoW increase.\n- CHILLI LIGHTS held rank 3 with \u00a32,285.12 TW revenue, representing a 2.1% share TW and a +221.7% WoW rise.\n- LANDMARK FRAME OXFORD STREET experienced the largest WoW decline at -88.8%, falling from \u00a33,753.90 LW to \u00a3418.90 TW.\n- CHRISTMAS CRAFT WHITE FAIRY showed the largest YoY increase at +28727.6%, growing from \u00a31.45 LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS recorded the most orders at 64 TW, up from 48 LW.",
+    "input_tokens": 644,
+    "output_tokens": 322,
+    "cost_usd": 0.002254,
+    "latency_s": 3.315,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a3109,203.35 TW, revenue \u00a388,233.35 LW, revenue change +23.8% WoW, revenue change +116.5% YoY\n- RABBIT NIGHT LIGHT: rank 1, revenue \u00a310,739.38 TW, share 9.8% TW, revenue change +18473.8% WoW\n- ALARM CLOCK BAKELIKE RED: rank 2, revenue \u00a32,423.41 TW, share 2.2% TW, revenue change +610.8% WoW\n- CHILLI LIGHTS: rank 3, revenue \u00a32,285.12 TW, share 2.1% TW, revenue change +221.7% WoW\n- RABBIT NIGHT LIGHT (largest WoW increase): revenue change +18473.8% WoW, revenue \u00a310,739.38 TW versus \u00a357.82 LW\n- LANDMARK FRAME OXFORD STREET (largest WoW decrease): revenue change -88.8% WoW, revenue \u00a3418.90 TW versus \u00a33,753.90 LW\n- CHRISTMAS CRAFT WHITE FAIRY (largest YoY increase): revenue change +28727.6% YoY, revenue \u00a31.45 LY\n- RED HANGING HEART T-LIGHT HOLDER (largest YoY decrease): revenue change -85.5% YoY, revenue \u00a32,774.28 LY\n- PAPER CHAIN KIT 50'S CHRISTMAS (most orders): orders 64 TW versus 48 LW",
+  "n_calls": 1,
+  "tokens_in": 644,
+  "tokens_out": 322,
+  "cost_usd": 0.002254,
+  "latency_s": 3.315
+ }
+}

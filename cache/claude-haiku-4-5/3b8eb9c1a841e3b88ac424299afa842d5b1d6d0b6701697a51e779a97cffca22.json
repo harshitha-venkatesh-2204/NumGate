@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £143,748.77 in revenue TW, representing 92.9% of total revenue across all entities and ranking first.\n- United Kingdom revenue increased 10.1% WoW, rising from £130,586.63 in LW to £143,748.77 in TW.\n- United Kingdom units sold grew from 76,814 in LW to 96,600 in TW, an increase of 19,786 units.\n- Channel Islands revenue surged 334.5% WoW, climbing from £782.80 in LW to £3,401.24 in TW, with units rising from 146 to 1,673.\n- France revenue increased 349.8% WoW, jumping from £282.60 in LW to £1,271.21 in TW with 763 units sold.\n- Switzerland revenue declined 82.0% WoW, falling from £7,802.09 in LW to £1,407.70 in TW, with units dropping from 5,011 to 787.\n- EIRE revenue decreased 28.4% WoW, declining from £2,637.72 in LW to £1,889.68 in TW despite units remaining relatively stable at 1,013.\n- Germany revenue fell 62.5% WoW, dropping from £2,953.98 in LW to £1,107.38 in TW with units declining from 1,415 to 904.",
+ "input_tokens": 898,
+ "output_tokens": 354,
+ "cost_usd": 0.0026680000000000002,
+ "latency_s": 3.642,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

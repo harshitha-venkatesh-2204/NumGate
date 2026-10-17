@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £2963.43 in TW revenue, ranking 1st with a 9.1% share of total sales and a 3.9% WoW increase from £2851.87 in LW.\n- RETRO SPOT TEA SET CERAMIC 11 PC surged 552.6% WoW to £2071.74 in TW revenue, up from £317.45 in LW, with units increasing from 58 to 480.\n- FAWN BLUE HOT WATER BOTTLE achieved £1903.35 in TW revenue with 745 units sold, representing a new product entry with zero LW sales.\n- PARTY BUNTING declined 25.4% WoW to £1877.24 in TW revenue from £2517.71 in LW, with units falling from 565 to 442.\n- PINK CREAM FELT CRAFT TRINKET BOX experienced explosive 1164.2% WoW growth to £1785.89 in TW revenue from £141.27 in LW, with units jumping from 111 to 1671.\n- REGENCY CAKESTAND 3 TIER dropped 55.8% WoW to £1647.56 in TW revenue from £3730.99 in LW, with units declining from 311 to 132.\n- GLITTER HANGING BUTTERFLY STRING posted the highest WoW percentage increase at 4752.8%, reaching £1121.49 in TW revenue from £23.11 in LW with 525 units sold.\n- FLAG OF ST GEORGE CAR FLAG achieved 3253.7% WoW growth to £1183.19 in TW revenue from £35.28 in LW, though units decreased from 84 to 63.",
+ "input_tokens": 1943,
+ "output_tokens": 436,
+ "cost_usd": 0.004123,
+ "latency_s": 5.353,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

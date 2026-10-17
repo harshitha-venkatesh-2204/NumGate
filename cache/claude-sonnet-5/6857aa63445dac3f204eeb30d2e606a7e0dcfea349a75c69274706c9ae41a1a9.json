@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £29.4k versus LW £31.1k, a WoW decline of -5.3%.\n- TOTAL units TW rose to 14,252 from LW 12,688, a WoW increase of 12.3%.\n- TOTAL orders TW reached 676 compared to LW 582, a WoW increase of 16.2%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with TW revenue of £3,712.01, a 12.6% share of TOTAL.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with TW revenue of £2,481.58, an 8.4% share of TOTAL.\n- JUMBO BAG RED RETROSPOT ranked 3 with TW revenue of £2,315.21, a 7.9% share of TOTAL.\n- CARDHOLDER HOLLY WREATH METAL ranked 4 with TW revenue of £1,672.50, a 5.7% share of TOTAL, and WoW growth of 11,050.0%.\n- HANGING JAM JAR T-LIGHT HOLDER ranked 5 with TW revenue of £1,202.52, a 4.1% share of TOTAL.",
+ "input_tokens": 2292,
+ "output_tokens": 413,
+ "cost_usd": 0.008714,
+ "latency_s": 3.926,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £63,322.09 TW versus £59,216.04 LW, a WoW change of +6.9%, and compares to +65.9% YoY.\n- RABBIT NIGHT LIGHT ranked 1 with £2,152.90 revenue TW, holding 3.4% share TW, up +40.6% WoW.\n- WOOD BLACK BOARD ANT WHITE FINISH ranked 2 with £2,057.46 revenue TW, 3.2% share TW, up +496.6% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 3 with £1,991.04 revenue TW, 3.1% share TW, down -31.5% WoW.\n- SMALL ZINC HEART WALL ORGANISER posted the largest WoW increase at +11787.1%, rising to £1,367.02 TW from £11.50 LW.\n- ALARM CLOCK BAKELIKE RED posted the largest WoW decrease at -80.7%, falling to £322.54 TW from £1,667.45 LW.\n- FELTCRAFT PRINCESS OLIVIA DOLL recorded the largest YoY increase at +23496.0%, compared to £3.75 LY.\n- ASSORTED COLOUR BIRD ORNAMENT recorded the largest YoY decrease at -75.9%, compared to £1,562.67 LY.\n- JUMBO BAG RED RETROSPOT had the most orders with 44 TW versus 43 LW.",
+ "input_tokens": 867,
+ "output_tokens": 507,
+ "cost_usd": 0.006804,
+ "latency_s": 4.489,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £65.4k versus LW £38.6k, a WoW increase of 69.4%.\n- TOTAL revenue TW of £65.4k compares to LY £23.0k, a YoY increase of 183.9%.\n- TOTAL units sold TW reached 35,746 compared to LW 17,651.\n- TOTAL orders TW totaled 1,478 versus LW 1,290.\n- REGENCY CAKESTAND 3 TIER ranked 1 in TW with revenue of £3,740.45 and a 5.7% share of TOTAL revenue.\n- PARTY BUNTING ranked 2 in TW with revenue of £2,843.54 and a 4.4% share of TOTAL revenue.\n- JUMBO BAG RED RETROSPOT ranked 3 in TW with revenue of £2,718.16 and a 4.2% share of TOTAL revenue.\n- BAKING MOULD TOFFEE CUP CHOCOLATE recorded a WoW revenue change of 7855.9%.",
+ "input_tokens": 2231,
+ "output_tokens": 644,
+ "cost_usd": 0.010902,
+ "latency_s": 5.692,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

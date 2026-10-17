@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue was £29.4k TW versus £31.1k LW, a WoW change of -5.3%.\n- TOTAL units reached 14,252 TW and orders reached 676 TW, up 12.3% and 16.2% WoW respectively.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £3,712.01 revenue and a 12.6% share of TW total.\n- WHITE HANGING HEART T-LIGHT HOLDER took £2,481.58 TW (8.4% share) and JUMBO BAG RED RETROSPOT took £2,315.21 TW (7.9% share).\n- The top 5 products accounted for 38.7% of TOTAL revenue TW, with CARDHOLDER HOLLY WREATH METAL at £1,672.50 and HANGING JAM JAR T-LIGHT HOLDER at £1,202.52.\n- CARDHOLDER HOLLY WREATH METAL added £1,657.50 WoW, the largest absolute gain, while REGENCY CAKESTAND 3 TIER lost £1,550.86 WoW.\n- SET/4 WHITE RETRO STORAGE CUBES rose 427.0% WoW, HANGING JAM JAR T-LIGHT HOLDER rose 365.4% WoW and RETRO SPOT TEA SET CERAMIC 11 PC rose 146.5% WoW.\n- VINTAGE UNION JACK BUNTING fell 66.8% WoW, JUMBO BAG PINK VINTAGE PAISLEY fell 65.2% WoW and ASSORTED COLOUR BIRD ORNAMENT fell 59.8% WoW.",
+ "input_tokens": 2584,
+ "output_tokens": 581,
+ "cost_usd": 0.027444999999999997,
+ "latency_s": 6.895,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

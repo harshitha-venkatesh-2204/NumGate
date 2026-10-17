@@ -1,0 +1,42 @@
+{
+ "note_id": "medium_product_2010-W05__S4__claude-opus-5__r2",
+ "table_id": "medium_product_2010-W05",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W05",
+ "n_rows": 26,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 2,
+ "note": "- Total revenue reached \u00a323,394.39 TW versus \u00a314,694.01 LW, a change of +59.2% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER held rank 1 with revenue \u00a32,009.77 TW and share 8.6% TW.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue moved -46.3% WoW despite holding the top rank TW.\n- COOK WITH WINE METAL SIGN ranked 2 with revenue \u00a31,506.02 TW and share 6.4% TW.\n- COOK WITH WINE METAL SIGN posted the largest increase at +3118.0% WoW, \u00a31,506.02 TW versus \u00a346.80 LW.\n- DOOR MAT RED SPOT ranked 3 with revenue \u00a31,497.76 TW and share 6.4% TW.\n- DOOR MAT UNION FLAG recorded the largest decrease at -51.3% WoW, \u00a3688.45 TW versus \u00a31,414.86 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 58 orders TW versus 79 orders LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W05. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a323,394.39 TW, revenue \u00a314,694.01 LW, revenue change +59.2% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 1, revenue \u00a32,009.77 TW, share 8.6% TW, revenue change -46.3% WoW\n- COOK WITH WINE METAL SIGN: rank 2, revenue \u00a31,506.02 TW, share 6.4% TW, revenue change +3118.0% WoW\n- DOOR MAT RED SPOT: rank 3, revenue \u00a31,497.76 TW, share 6.4% TW\n- COOK WITH WINE METAL SIGN (largest WoW increase): revenue change +3118.0% WoW, revenue \u00a31,506.02 TW versus \u00a346.80 LW\n- DOOR MAT UNION FLAG (largest WoW decrease): revenue change -51.3% WoW, revenue \u00a3688.45 TW versus \u00a31,414.86 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 58 TW versus 79 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a323,394.39 TW versus \u00a314,694.01 LW, a change of +59.2% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER held rank 1 with revenue \u00a32,009.77 TW and share 8.6% TW.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue moved -46.3% WoW despite holding the top rank TW.\n- COOK WITH WINE METAL SIGN ranked 2 with revenue \u00a31,506.02 TW and share 6.4% TW.\n- COOK WITH WINE METAL SIGN posted the largest increase at +3118.0% WoW, \u00a31,506.02 TW versus \u00a346.80 LW.\n- DOOR MAT RED SPOT ranked 3 with revenue \u00a31,497.76 TW and share 6.4% TW.\n- DOOR MAT UNION FLAG recorded the largest decrease at -51.3% WoW, \u00a3688.45 TW versus \u00a31,414.86 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 58 orders TW versus 79 orders LW.",
+    "input_tokens": 718,
+    "output_tokens": 472,
+    "cost_usd": 0.01539,
+    "latency_s": 6.114,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a323,394.39 TW, revenue \u00a314,694.01 LW, revenue change +59.2% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 1, revenue \u00a32,009.77 TW, share 8.6% TW, revenue change -46.3% WoW\n- COOK WITH WINE METAL SIGN: rank 2, revenue \u00a31,506.02 TW, share 6.4% TW, revenue change +3118.0% WoW\n- DOOR MAT RED SPOT: rank 3, revenue \u00a31,497.76 TW, share 6.4% TW\n- COOK WITH WINE METAL SIGN (largest WoW increase): revenue change +3118.0% WoW, revenue \u00a31,506.02 TW versus \u00a346.80 LW\n- DOOR MAT UNION FLAG (largest WoW decrease): revenue change -51.3% WoW, revenue \u00a3688.45 TW versus \u00a31,414.86 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 58 TW versus 79 LW",
+  "n_calls": 1,
+  "tokens_in": 718,
+  "tokens_out": 472,
+  "cost_usd": 0.01539,
+  "latency_s": 6.114
+ }
+}

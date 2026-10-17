@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £157,505.13 TW, representing a 21.2% WoW increase from £129,975.51 LW.\n- Total revenue grew 241.2% YoY in ISO week 2010-W49, demonstrating strong year-over-year performance.\n- REGENCY CAKESTAND 3 TIER maintained the top position with £10,902.59 TW revenue and 6.9% share TW, though it declined 4.8% WoW.\n- VINTAGE UNION JACK MEMOBOARD ranked second with £6,561.83 TW revenue and 4.2% share TW, surging 1528.2% WoW.\n- UTILTY CABINET WITH HOOKS achieved the largest WoW increase at 3003.8%, growing from £80.85 LW to £2,509.44 TW.\n- HAND WARMER OWL DESIGN experienced the largest WoW decrease of 75.1%, falling from £2,542.97 LW to £633.57 TW.\n- ENGLISH ROSE HOT WATER BOTTLE recorded the largest YoY increase of 35879.3%, rising from £1.50 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the most orders at 86 TW compared to 81 LW.",
+ "input_tokens": 662,
+ "output_tokens": 326,
+ "cost_usd": 0.0022919999999999998,
+ "latency_s": 3.44,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

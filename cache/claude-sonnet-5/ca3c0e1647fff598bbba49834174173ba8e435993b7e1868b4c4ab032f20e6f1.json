@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £50.3k versus LW £41.3k, a WoW change of 21.8%.\n- TOTAL units TW reached 22,179 compared to LW 18,454.\n- TOTAL orders TW totaled 1,661 versus LW 1,482.\n- REGENCY CAKESTAND 3 TIER led product revenue TW at £2,456.32.\n- WHITE HANGING HEART T-LIGHT HOLDER followed with TW revenue of £2,173.03.\n- FLAG OF ST GEORGE CAR FLAG had the largest WoW increase at 3969.8%.\n- BLACK HEART CARD HOLDER rose WoW by 3930.0%, and NATURAL SLATE HEART CHALKBOARD rose WoW by 2940.5%.\n- DOOR MAT ENGLISH ROSE declined WoW by -70.8%, the steepest drop among products listed.",
+ "input_tokens": 1917,
+ "output_tokens": 317,
+ "cost_usd": 0.007004,
+ "latency_s": 3.372,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £61,756.48 TW, representing a +46.0% WoW increase from £42,295.08 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the highest revenue at £3,740.98 TW with a 6.1% share TW, despite a -1.4% WoW decline.\n- RED HANGING HEART T-LIGHT HOLDER achieved the second-highest revenue of £1,807.91 TW with a 2.9% share TW and a +119.9% WoW surge.\n- SET/3 RUSSIAN DOLL STACKING TINS ranked third with £1,718.73 TW revenue and a 2.8% share TW, posting a +975.9% WoW increase.\n- CHERRY DESIGN PAPERLANTERNS experienced the largest WoW growth at +14999.8%, rising from £4.21 LW to £635.70 TW.\n- KENSINGTON COFFEE SET recorded the largest WoW decline at -78.9%, falling from £7,750.05 LW to £1,632.90 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the most orders with 79 TW compared to 66 LW.",
+ "input_tokens": 572,
+ "output_tokens": 310,
+ "cost_usd": 0.0021219999999999998,
+ "latency_s": 3.019,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

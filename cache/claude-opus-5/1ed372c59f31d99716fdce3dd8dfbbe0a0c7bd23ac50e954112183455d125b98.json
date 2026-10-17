@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £64.7k against £45.7k LW, a WoW gain of 41.5%.\n- TOTAL units TW reached 35,010, up 78.3% WoW, while TOTAL orders TW were 1,777, up 20.2% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 TW with £3,388.78, a 5.2% share of TOTAL revenue TW.\n- The top five products held 20.6% of TOTAL revenue TW, with WOODEN SKITTLES GARDEN SET at £2,650.90, PACK OF 12 SUKI TISSUES at £2,573.71, PACK OF 12 HEARTS DESIGN TISSUES at £2,504.11 and WOODEN CROQUET GARDEN SET at £2,232.33.\n- PACK OF 12 SUKI TISSUES added £2,531.08 WoW and PACK OF 12 HEARTS DESIGN TISSUES added £2,463.64 WoW, the latter a 6,087.6% WoW rise.\n- WOODEN SKITTLES GARDEN SET gained £2,182.05 WoW, and SOMBRERO posted the largest percentage move at 51,182.1% WoW.\n- RETRO SPOT TEA SET CERAMIC 11 PC fell £1,734.02 WoW, a decline of 83.7% WoW.\n- REGENCY CAKESTAND 3 TIER was down £1,239.60 WoW and LUNCH BAG SUKI DESIGN was down £1,121.30 WoW, equal to minus 78.7% WoW.",
+ "input_tokens": 2548,
+ "output_tokens": 561,
+ "cost_usd": 0.026764999999999997,
+ "latency_s": 7.321,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

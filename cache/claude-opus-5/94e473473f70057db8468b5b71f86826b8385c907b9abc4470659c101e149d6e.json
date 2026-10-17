@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led TW at £7,503.00 revenue, 17.2% share and Rank 1, up 67.0% WoW from £4,493.62 LW on 624 units TW versus 380 LW.\n- Across the 22 rows TW revenue totalled £43,516.17 against £17,609.09 LW, a WoW gain of about 147.1%, with no LY figures available for any row.\n- HAND WARMER RED POLKA DOT entered at Rank 2 with £3,707.40 TW and 2,004 units from a single order, against £0.00 and 0 units LW, so WoW is not calculable.\n- AFGHAN SLIPPER SOCK PAIR posted the largest WoW move at 52,204.3%, rising from £3.45 LW to £1,804.50 TW on 610 units versus 1 unit LW.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS rose 519.4% WoW to £2,297.49 TW from £370.90 LW, with orders up from 7 LW to 59 TW.\n- SET OF 20 VINTAGE CHRISTMAS NAPKINS gained 2,762.4% WoW to £1,289.50 TW and 1,831 units, while BABUSHKA LIGHTS STRING OF 10 gained 1,557.0% WoW to £1,678.87 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER was the flattest top-five line at £2,894.02 TW versus £2,798.40 LW, up 3.4% WoW, with 67 orders TW against 60 LW.\n- LARGE CIRCULAR MIRROR MOBILE (£1,239.75 TW, 1,371 units) and SET OF 6 T-LIGHTS SANTA (£1,095.07 TW, 405 units) both recorded £0.00 LW, and JUMBO BAG RED RETROSPOT rose 54.7% WoW to £3,129.01 TW on 39 orders versus 50 LW.",
+ "input_tokens": 2261,
+ "output_tokens": 1387,
+ "cost_usd": 0.04598,
+ "latency_s": 17.178,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

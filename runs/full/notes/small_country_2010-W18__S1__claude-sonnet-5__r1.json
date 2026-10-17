@@ -1,0 +1,41 @@
+{
+ "note_id": "small_country_2010-W18__S1__claude-sonnet-5__r1",
+ "table_id": "small_country_2010-W18",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2010-W18",
+ "n_rows": 6,
+ "strategy": "S1",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- United Kingdom TW revenue is \u00a3117,273.84 versus LW \u00a3168,403.05, a WoW change of -30.4%.\n- Netherlands TW revenue is \u00a318,002.00 versus LW \u00a31,188.30, a WoW change of +1414.9%.\n- EIRE TW revenue is \u00a39,248.22 versus LW \u00a35,735.12, a WoW change of +61.3%.\n- France TW revenue is \u00a39,014.91 versus LW \u00a31,348.33, a WoW change of +568.6%.\n- Germany TW revenue is \u00a32,460.79 versus LW \u00a32,366.84, a WoW change of +4.0%.\n- Spain TW revenue is \u00a31,731.65 versus LW \u00a30.00, with 3 orders recorded TW and 0 orders LW.\n- United Kingdom holds the largest TW share at 74.4%, followed by Netherlands at 11.4% and EIRE at 5.9%.\n- LY revenue figures are blank for all six countries in this table, so no YoY comparison is available for TW 2010-W18.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W18. Entity type: country. The table has 6 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| United Kingdom | 117273.84 | 168403.05 |  | 66459 | 93805 | 314 | 397 | -30.4 |  | 74.4 | 1 |\n| Netherlands | 18002.00 | 1188.30 |  | 11784 | 922 | 3 | 2 | 1414.9 |  | 11.4 | 2 |\n| EIRE | 9248.22 | 5735.12 |  | 5000 | 3155 | 7 | 6 | 61.3 |  | 5.9 | 3 |\n| France | 9014.91 | 1348.33 |  | 6055 | 1007 | 7 | 2 | 568.6 |  | 5.7 | 4 |\n| Germany | 2460.79 | 2366.84 |  | 1110 | 1076 | 3 | 6 | 4.0 |  | 1.6 | 5 |\n| Spain | 1731.65 | 0.00 |  | 1091 | 0 | 3 | 0 |  |  | 1.1 | 6 |\n\nWrite the insight note now.\n",
+    "text": "- United Kingdom TW revenue is \u00a3117,273.84 versus LW \u00a3168,403.05, a WoW change of -30.4%.\n- Netherlands TW revenue is \u00a318,002.00 versus LW \u00a31,188.30, a WoW change of +1414.9%.\n- EIRE TW revenue is \u00a39,248.22 versus LW \u00a35,735.12, a WoW change of +61.3%.\n- France TW revenue is \u00a39,014.91 versus LW \u00a31,348.33, a WoW change of +568.6%.\n- Germany TW revenue is \u00a32,460.79 versus LW \u00a32,366.84, a WoW change of +4.0%.\n- Spain TW revenue is \u00a31,731.65 versus LW \u00a30.00, with 3 orders recorded TW and 0 orders LW.\n- United Kingdom holds the largest TW share at 74.4%, followed by Netherlands at 11.4% and EIRE at 5.9%.\n- LY revenue figures are blank for all six countries in this table, so no YoY comparison is available for TW 2010-W18.",
+    "input_tokens": 1010,
+    "output_tokens": 543,
+    "cost_usd": 0.00745,
+    "latency_s": 6.546,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1010,
+  "tokens_out": 543,
+  "cost_usd": 0.00745,
+  "latency_s": 6.546
+ }
+}

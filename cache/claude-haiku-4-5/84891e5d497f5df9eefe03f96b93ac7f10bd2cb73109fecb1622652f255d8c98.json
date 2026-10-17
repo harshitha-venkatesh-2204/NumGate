@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £5.2k revenue in TW, representing 37.8% of total product revenue and the highest performing item.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £1.6k revenue in TW across 586 units and 44 orders, accounting for 11.8% of total revenue.\n- VINTAGE UNION JACK BUNTING contributed £1.3k revenue in TW, capturing 9.2% of total product sales.\n- Total product revenue declined to £13.7k in TW from £16.1k in LW, representing a WoW decrease of 14.8%.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue fell 61.7% WoW, while JUMBO BAG RED RETROSPOT declined 27.6% WoW.\n- DOOR MAT RED SPOT revenue increased 119.5% WoW and DOOR MAT FANCY FONT HOME SWEET HOME grew 79.6% WoW, showing strong momentum in doormat category.\n- JUMBO BAG RED RETROSPOT led unit sales with 696 units sold in TW across 41 orders.\n- Total order count reached 250 orders in TW with 2,850 units sold across all products.",
+ "input_tokens": 1660,
+ "output_tokens": 306,
+ "cost_usd": 0.00319,
+ "latency_s": 3.551,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

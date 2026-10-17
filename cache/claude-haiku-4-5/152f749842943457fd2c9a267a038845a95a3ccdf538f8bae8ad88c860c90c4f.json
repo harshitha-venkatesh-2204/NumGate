@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £32,657.36 TW, representing an 86.6% WoW increase from £17,497.91 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER maintained the top position with £2,963.43 TW revenue and a 9.1% share of total sales TW.\n- RETRO SPOT TEA SET CERAMIC 11 PC achieved the second-highest revenue at £2,071.74 TW, up 552.6% WoW from the prior week.\n- FAWN BLUE HOT WATER BOTTLE generated £1,903.35 TW revenue, capturing 5.8% of total sales TW.\n- GLITTER HANGING BUTTERFLY STRING experienced the largest WoW surge, increasing 4752.8% from £23.11 LW to £1,121.49 TW.\n- REGENCY CAKESTAND 3 TIER posted the largest WoW decline, falling 55.8% from £3,730.99 LW to £1,647.56 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER recorded the most orders at 55 TW compared to 53 LW.",
+ "input_tokens": 567,
+ "output_tokens": 289,
+ "cost_usd": 0.002012,
+ "latency_s": 3.074,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

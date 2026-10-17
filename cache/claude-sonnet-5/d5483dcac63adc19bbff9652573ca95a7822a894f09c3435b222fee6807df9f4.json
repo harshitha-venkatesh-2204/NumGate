@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £254.2k versus LW £195.1k, a WoW change of +30.3%.\n- TOTAL revenue TW was £254.2k versus LY £229.1k, a YoY change of +10.94%.\n- TOTAL units TW reached 146,905 compared with LW 104,327.\n- TOTAL orders TW stood at 430 versus LW 416.\n- United Kingdom revenue TW was £196.5k, holding a 77.3% share and rank 1, with WoW +8.1% and YoY -8.0%.\n- Netherlands revenue TW was £29.5k, a 11.6% share at rank 2, with YoY +7641.5%.\n- EIRE revenue TW was £13.8k, a 5.4% share at rank 3, with WoW +91.1% and YoY +30.4%.\n- Germany revenue TW was £9.2k, a 3.6% share of TOTAL.",
+ "input_tokens": 2044,
+ "output_tokens": 607,
+ "cost_usd": 0.010158,
+ "latency_s": 5.977,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

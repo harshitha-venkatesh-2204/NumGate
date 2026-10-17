@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £3,740.45 revenue in TW, ranking 1st and representing 5.7% of total revenue, with a WoW increase of 43.0% and YoY growth of 48.9%.\n- PARTY BUNTING achieved £2,843.54 revenue in TW (rank 2), more than doubling from LW at £1,301.83 with a WoW surge of 118.4% and YoY increase of 180.3%.\n- JUMBO BAG RED RETROSPOT generated £2,718.16 in TW revenue (rank 3) with 1,546 units sold, representing a WoW increase of 100.4% from £1,356.16 in LW.\n- JUMBO BAG TOYS showed exceptional growth with £1,132.19 revenue in TW compared to £127.33 in LW, delivering a WoW increase of 789.2% and YoY growth of 580.5%.\n- PACK OF 12 SKULL TISSUES recorded the highest WoW percentage change at 3954.3%, rising from £13.92 in LW to £564.36 in TW, with 2,244 units sold in TW.\n- WHITE HANGING HEART T-LIGHT HOLDER declined to £1,264.96 in TW from £3,952.80 in LY, representing a YoY decrease of 68.0% despite ranking 11th in TW revenue.\n- BAKING MOULD TOFFEE CUP CHOCOLATE achieved £405.75 revenue in TW with a WoW increase of 7855.9% from just £5.10 in LW, selling 193 units.\n- CLASSIC METAL BIRDCAGE PLANT HOLDER generated £433.15 in TW revenue with a YoY increase of 4253.3% compared to £9.95 in LY, demonstrating exceptional year-on-year growth.",
+ "input_tokens": 6656,
+ "output_tokens": 482,
+ "cost_usd": 0.009066,
+ "latency_s": 5.948,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

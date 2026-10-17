@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £4290.54 revenue in TW, ranking 1st and representing 9.1% of total revenue, with a WoW increase of 102.8% from £2115.30 in LW.\n\n- JUMBO BAG RED RETROSPOT achieved £2339.73 revenue in TW with a YoY surge of 981.6% compared to £216.32 in LY, ranking 4th with 1206 units sold.\n\n- PARTY BUNTING declined 23.1% WoW to £4021.56 in TW from £5226.24 in LW, despite maintaining a strong YoY growth of 114.2% versus £1877.24 in LY.\n\n- SET/4 WHITE RETRO STORAGE CUBES showed exceptional growth with a 2093.0% WoW increase to £1278.32 in TW from £58.29 in LW, and a YoY increase of 717.1% from £156.45 in LY.\n\n- LUNCH BAG DOILEY PATTERN surged 1337.6% WoW to £1778.97 in TW from £123.75 in LW, with 1157 units sold across 60 orders.\n\n- COLOUR GLASS STAR T-LIGHT HOLDER generated £1229.13 revenue in TW with a YoY increase of 1981.9% from £59.04 in LY, despite zero sales in LW.\n\n- CHILLI LIGHTS achieved a YoY growth of 1154.5% to £993.60 in TW from £79.20 in LY, with a WoW increase of 70.3% from £583.50 in LW.\n\n- WHITE HANGING HEART T-LIGHT HOLDER declined 18.1% WoW to £2503.60 in TW from £3057.60 in LW, and fell 15.5% YoY from £2963.43 in LY, ranking 3rd with 892 units sold.",
+ "input_tokens": 2526,
+ "output_tokens": 504,
+ "cost_usd": 0.005046,
+ "latency_s": 6.156,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

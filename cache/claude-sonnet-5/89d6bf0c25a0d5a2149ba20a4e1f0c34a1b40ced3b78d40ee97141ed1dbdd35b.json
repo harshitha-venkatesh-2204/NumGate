@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER leads TW revenue at £8406.79, up 70.1% WoW from £4942.19 LW, holding 13.6% share and Rank 1.\n- PAPER CHAIN KIT 50'S CHRISTMAS fell 61.8% WoW to £2143.03 TW from £5604.38 LW, with orders down from 84 to 49.\n- BLACK RECORD COVER FRAME rose 185.5% WoW to £1144.96 TW from £401.00 LW, the largest percentage gain among listed products.\n- WILLOW BRANCH LIGHTS. increased 185.0% WoW, from £362.52 LW to £1033.11 TW, ranked 30 by TW revenue.\n- GREY HEART HOT WATER BOTTLE grew 126.7% WoW to £1394.46 TW from £615.12 LW.\n- ASSORTED COLOUR BIRD ORNAMENT dropped 35.3% WoW to £2046.22 TW from £3160.37 LW.\n- PINK CHERRY LIGHTS declined 42.1% WoW to £1130.42 TW from £1952.91 LW.\n- EDWARDIAN PARASOL RED decreased 11.5% WoW to £2755.55 TW from £3114.25 LW, Rank 7 among 30 products.",
+ "input_tokens": 2863,
+ "output_tokens": 466,
+ "cost_usd": 0.010386,
+ "latency_s": 4.541,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

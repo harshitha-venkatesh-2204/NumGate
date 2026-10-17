@@ -1,0 +1,42 @@
+{
+ "note_id": "medium_product_2010-W36__S4__claude-haiku-4-5__r1",
+ "table_id": "medium_product_2010-W36",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W36",
+ "n_rows": 31,
+ "strategy": "S4",
+ "model": "claude-haiku-4-5",
+ "repeat": 1,
+ "note": "- Total revenue across all products was \u00a329,424.89 TW, down 5.3% WoW from \u00a331,085.63 LW.\n- REGENCY CAKESTAND 3 TIER generated the highest revenue at \u00a33,712.01 TW, representing 12.6% of total revenue, but declined 29.5% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked second with \u00a32,481.58 TW in revenue and 8.4% share, growing 1.6% WoW with 52 orders TW compared to 44 orders LW.\n- JUMBO BAG RED RETROSPOT achieved third place with \u00a32,315.21 TW in revenue and 7.9% share, falling 28.1% WoW.\n- CARDHOLDER HOLLY WREATH METAL showed the largest WoW increase at 11050.0%, rising from \u00a315.00 LW to \u00a31,672.50 TW.\n- VINTAGE UNION JACK BUNTING experienced the largest WoW decrease at -66.8%, dropping from \u00a31,509.60 LW to \u00a3501.50 TW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W36. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a329,424.89 TW, revenue \u00a331,085.63 LW, revenue change -5.3% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a33,712.01 TW, share 12.6% TW, revenue change -29.5% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a32,481.58 TW, share 8.4% TW, revenue change +1.6% WoW\n- JUMBO BAG RED RETROSPOT: rank 3, revenue \u00a32,315.21 TW, share 7.9% TW, revenue change -28.1% WoW\n- CARDHOLDER HOLLY WREATH METAL (largest WoW increase): revenue change +11050.0% WoW, revenue \u00a31,672.50 TW versus \u00a315.00 LW\n- VINTAGE UNION JACK BUNTING (largest WoW decrease): revenue change -66.8% WoW, revenue \u00a3501.50 TW versus \u00a31,509.60 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 52 TW versus 44 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue across all products was \u00a329,424.89 TW, down 5.3% WoW from \u00a331,085.63 LW.\n- REGENCY CAKESTAND 3 TIER generated the highest revenue at \u00a33,712.01 TW, representing 12.6% of total revenue, but declined 29.5% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked second with \u00a32,481.58 TW in revenue and 8.4% share, growing 1.6% WoW with 52 orders TW compared to 44 orders LW.\n- JUMBO BAG RED RETROSPOT achieved third place with \u00a32,315.21 TW in revenue and 7.9% share, falling 28.1% WoW.\n- CARDHOLDER HOLLY WREATH METAL showed the largest WoW increase at 11050.0%, rising from \u00a315.00 LW to \u00a31,672.50 TW.\n- VINTAGE UNION JACK BUNTING experienced the largest WoW decrease at -66.8%, dropping from \u00a31,509.60 LW to \u00a3501.50 TW.",
+    "input_tokens": 572,
+    "output_tokens": 285,
+    "cost_usd": 0.001997,
+    "latency_s": 3.018,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a329,424.89 TW, revenue \u00a331,085.63 LW, revenue change -5.3% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a33,712.01 TW, share 12.6% TW, revenue change -29.5% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a32,481.58 TW, share 8.4% TW, revenue change +1.6% WoW\n- JUMBO BAG RED RETROSPOT: rank 3, revenue \u00a32,315.21 TW, share 7.9% TW, revenue change -28.1% WoW\n- CARDHOLDER HOLLY WREATH METAL (largest WoW increase): revenue change +11050.0% WoW, revenue \u00a31,672.50 TW versus \u00a315.00 LW\n- VINTAGE UNION JACK BUNTING (largest WoW decrease): revenue change -66.8% WoW, revenue \u00a3501.50 TW versus \u00a31,509.60 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 52 TW versus 44 LW",
+  "n_calls": 1,
+  "tokens_in": 572,
+  "tokens_out": 285,
+  "cost_usd": 0.001997,
+  "latency_s": 3.018
+ }
+}

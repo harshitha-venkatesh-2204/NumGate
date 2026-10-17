@@ -1,0 +1,239 @@
+{
+ "note_id": "large_product_2011-W34__S2__claude-sonnet-5__r1",
+ "table_id": "large_product_2011-W34",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W34",
+ "n_rows": 104,
+ "strategy": "S2",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- TOTAL revenue TW was \u00a374.9k versus LW \u00a348.6k, a WoW change of +54.19%.\n- TOTAL revenue TW was \u00a374.9k versus LY \u00a320.7k, a YoY change of +261.45%.\n- TOTAL units sold TW were 35,509 versus LW 22,846, and TOTAL orders TW were 1,803 versus LW 1,433.\n- JUMBO BAG RED RETROSPOT ranked 1 in TW revenue at \u00a32.9k, a 3.9% share, with YoY change of +150750.8%.\n- REGENCY CAKESTAND 3 TIER ranked 2 in TW revenue at \u00a32.9k, a 3.9% share of TOTAL.\n- PARTY BUNTING ranked 3 in TW revenue at \u00a32.7k, a 3.6% share of TOTAL.\n- SMALL CHINESE STYLE SCISSOR had the largest WoW revenue change among listed products at +157681.0%.\n- SET OF TEA COFFEE SUGAR TINS PANTRY and SET OF 3 CAKE TINS PANTRY DESIGN saw WoW declines of -84.9% and -74.8% respectively.",
+ "trace": {
+  "strategy": "S2",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "code_0",
+    "system": "You are a data analyst who writes short, correct pandas code.\n\nWrite one Python script that:\n- reads the CSV file whose path is given in sys.argv[1] with pandas,\n- computes up to 25 facts that would be most useful for a weekly executive insight note (largest entities, biggest week over week and year over year movers, shares, totals),\n- prints one JSON array to stdout and nothing else.\n\nEach element of the array is an object with these keys:\n- \"entity\": the Entity value, or \"TOTAL\" for all rows combined.\n- \"metric\": one of revenue, units, orders, share, rank.\n- \"period\": one of TW, LW, LY, WoW, YoY. Use WoW or YoY for changes between periods.\n- \"value\": a plain number (not a string). Round money to 2 decimals and percentages to 1 decimal.\n- \"formula\": a short description of how the value was computed, for example \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\".\n\nUse only pandas, numpy, json and sys. Blank cells are NaN: skip them instead of crashing. Convert numpy numbers to Python floats before json.dumps.\nReturn only the code, inside one ```python block.\n",
+    "user": "The script will be run as: python facts.py table.csv\n\nThe CSV holds a weekly sales report for ISO week 2011-W34. Entity type: product. It has 104 rows and these columns (with pandas dtypes):\n- Entity: str\n- Revenue_TW: float64\n- Revenue_LW: float64\n- Revenue_LY: float64\n- Units_TW: int64\n- Units_LW: int64\n- Orders_TW: int64\n- Orders_LW: int64\n- WoW_Pct: float64\n- YoY_Pct: float64\n- Share_Pct: float64\n- Rank: int64\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\nFirst rows of the file:\nEntity,Revenue_TW,Revenue_LW,Revenue_LY,Units_TW,Units_LW,Orders_TW,Orders_LW,WoW_Pct,YoY_Pct,Share_Pct,Rank\nJUMBO BAG RED RETROSPOT,2941.59,2581.23,1.95,1518,1356,43,43,14.0,150750.8,3.9,1\nREGENCY CAKESTAND 3 TIER,2907.39,2544.78,3265.21,242,210,33,33,14.2,-11.0,3.9,2\nPARTY BUNTING,2730.41,2050.94,76.23,471,402,41,33,33.1,3481.8,3.6,3\n\n",
+    "text": "```python\nimport sys\nimport json\nimport numpy as np\nimport pandas as pd\n\ndef to_float(x):\n    return float(np.round(float(x), 2))\n\ndef main():\n    path = sys.argv[1]\n    df = pd.read_csv(path)\n\n    facts = []\n\n    def add(entity, metric, period, value, formula):\n        if value is None:\n            return\n        if isinstance(value, float) and (np.isnan(value) or np.isinf(value)):\n            return\n        facts.append({\n            \"entity\": entity,\n            \"metric\": metric,\n            \"period\": period,\n            \"value\": to_float(value),\n            \"formula\": formula\n        })\n\n    # --- Totals ---\n    rev_tw = df[\"Revenue_TW\"].sum(skipna=True)\n    rev_lw = df[\"Revenue_LW\"].sum(skipna=True)\n    rev_ly = df[\"Revenue_LY\"].sum(skipna=True)\n    units_tw = df[\"Units_TW\"].sum(skipna=True)\n    units_lw = df[\"Units_LW\"].sum(skipna=True)\n    orders_tw = df[\"Orders_TW\"].sum(skipna=True)\n    orders_lw = df[\"Orders_LW\"].sum(skipna=True)\n\n    add(\"TOTAL\", \"revenue\", \"TW\", rev_tw, \"sum(Revenue_TW)\")\n    add(\"TOTAL\", \"revenue\", \"LW\", rev_lw, \"sum(Revenue_LW)\")\n    add(\"TOTAL\", \"revenue\", \"LY\", rev_ly, \"sum(Revenue_LY)\")\n    add(\"TOTAL\", \"units\", \"TW\", units_tw, \"sum(Units_TW)\")\n    add(\"TOTAL\", \"units\", \"LW\", units_lw, \"sum(Units_LW)\")\n    add(\"TOTAL\", \"orders\", \"TW\", orders_tw, \"sum(Orders_TW)\")\n    add(\"TOTAL\", \"orders\", \"LW\", orders_lw, \"sum(Orders_LW)\")\n\n    if rev_lw and not np.isnan(rev_lw) and rev_lw != 0:\n        wow_total = (rev_tw - rev_lw) / rev_lw * 100\n        add(\"TOTAL\", \"revenue\", \"WoW\", wow_total,\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\")\n\n    if rev_ly and not np.isnan(rev_ly) and rev_ly != 0:\n        yoy_total = (rev_tw - rev_ly) / rev_ly * 100\n        add(\"TOTAL\", \"revenue\", \"YoY\", yoy_total,\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\")\n\n    # --- Top entities by current revenue (rank) ---\n    top_rank = df.dropna(subset=[\"Rank\"]).sort_values(\"Rank\").head(3)\n    for _, row in top_rank.iterrows():\n        add(row[\"Entity\"], \"revenue\", \"TW\", row[\"Revenue_TW\"],\n            \"Revenue_TW for top-ranked entity\")\n        if not pd.isna(row.get(\"Share_Pct\")):\n            add(row[\"Entity\"], \"share\", \"TW\", row[\"Share_Pct\"],\n                \"Share_Pct column: entity revenue / total revenue * 100\")\n        add(row[\"Entity\"], \"rank\", \"TW\", row[\"Rank\"],\n            \"Rank column: rank by Revenue_TW\")\n\n    # --- Biggest WoW gainers / losers ---\n    wow_df = df.dropna(subset=[\"WoW_Pct\"])\n    top_gain = wow_df.sort_values(\"WoW_Pct\", ascending=False).head(3)\n    top_loss = wow_df.sort_values(\"WoW_Pct\", ascending=True).head(3)\n    for _, row in top_gain.iterrows():\n        add(row[\"Entity\"], \"revenue\", \"WoW\", row[\"WoW_Pct\"],\n            \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n    for _, row in top_loss.iterrows():\n        add(row[\"Entity\"], \"revenue\", \"WoW\", row[\"WoW_Pct\"],\n            \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n\n    # --- Biggest YoY gainers / losers ---\n    yoy_df = df.dropna(subset=[\"YoY_Pct\"])\n    top_yoy_gain = yoy_df.sort_values(\"YoY_Pct\", ascending=False).head(3)\n    top_yoy_loss = yoy_df.sort_values(\"YoY_Pct\", ascending=True).head(3)\n    for _, row in top_yoy_gain.iterrows():\n        add(row[\"Entity\"], \"revenue\", \"YoY\", row[\"YoY_Pct\"],\n            \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n    for _, row in top_yoy_loss.iterrows():\n        add(row[\"Entity\"], \"revenue\", \"YoY\", row[\"YoY_Pct\"],\n            \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    # --- Top entity by units and orders this week ---\n    units_top = df.dropna(subset=[\"Units_TW\"]).sort_values(\"Units_TW\", ascending=False).head(1)\n    for _, row in units_top.iterrows():\n        add(row[\"Entity\"], \"units\", \"TW\", row[\"Units_TW\"],\n            \"max(Units_TW) among entities\")\n\n    orders_top = df.dropna(subset=[\"Orders_TW\"]).sort_values(\"Orders_TW\", ascending=False).head(1)\n    for _, row in orders_top.iterrows():\n        add(row[\"Entity\"], \"orders\", \"TW\", row[\"Orders_TW\"],\n            \"max(Orders_TW) among entities\")\n\n    # Limit to 25 facts\n    facts = facts[:25]\n\n    print(json.dumps(facts))\n\nif __name__ == \"__main__\":\n    main()\n```",
+    "input_tokens": 1095,
+    "output_tokens": 2765,
+    "cost_usd": 0.029840000000000002,
+    "latency_s": 22.315,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   },
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a list of facts that were already computed from the sales table. Use only these facts. Every number in the note must come from a fact value, copied exactly or rounded (for example \u00a312,345.67 may be written as \u00a312.3k). Do not compute new numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W34. Entity type: product.\n\nFacts (JSON):\n[\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 74914.3,\n  \"formula\": \"sum(Revenue_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LW\",\n  \"value\": 48586.55,\n  \"formula\": \"sum(Revenue_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LY\",\n  \"value\": 20726.13,\n  \"formula\": \"sum(Revenue_LY)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 35509.0,\n  \"formula\": \"sum(Units_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"LW\",\n  \"value\": 22846.0,\n  \"formula\": \"sum(Units_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 1803.0,\n  \"formula\": \"sum(Orders_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"LW\",\n  \"value\": 1433.0,\n  \"formula\": \"sum(Orders_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 54.19,\n  \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 261.45,\n  \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\"\n },\n {\n  \"entity\": \"JUMBO BAG RED RETROSPOT\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 2941.59,\n  \"formula\": \"Revenue_TW for top-ranked entity\"\n },\n {\n  \"entity\": \"JUMBO BAG RED RETROSPOT\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 3.9,\n  \"formula\": \"Share_Pct column: entity revenue / total revenue * 100\"\n },\n {\n  \"entity\": \"JUMBO BAG RED RETROSPOT\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 1.0,\n  \"formula\": \"Rank column: rank by Revenue_TW\"\n },\n {\n  \"entity\": \"REGENCY CAKESTAND 3 TIER\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 2907.39,\n  \"formula\": \"Revenue_TW for top-ranked entity\"\n },\n {\n  \"entity\": \"REGENCY CAKESTAND 3 TIER\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 3.9,\n  \"formula\": \"Share_Pct column: entity revenue / total revenue * 100\"\n },\n {\n  \"entity\": \"REGENCY CAKESTAND 3 TIER\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 2.0,\n  \"formula\": \"Rank column: rank by Revenue_TW\"\n },\n {\n  \"entity\": \"PARTY BUNTING\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 2730.41,\n  \"formula\": \"Revenue_TW for top-ranked entity\"\n },\n {\n  \"entity\": \"PARTY BUNTING\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 3.6,\n  \"formula\": \"Share_Pct column: entity revenue / total revenue * 100\"\n },\n {\n  \"entity\": \"PARTY BUNTING\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 3.0,\n  \"formula\": \"Rank column: rank by Revenue_TW\"\n },\n {\n  \"entity\": \"SMALL CHINESE STYLE SCISSOR\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 157681.0,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"RABBIT NIGHT LIGHT\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 36973.4,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"SET OF 2 TEA TOWELS APPLE AND PEARS\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 5630.8,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"SET OF TEA COFFEE SUGAR TINS PANTRY\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -84.9,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"SET OF 3 CAKE TINS PANTRY DESIGN\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -74.8,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"PACK OF 72 RETROSPOT CAKE CASES\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -60.1,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"JUMBO BAG RED RETROSPOT\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 150750.8,\n  \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n }\n]\n\nWrite the insight note now.\n",
+    "text": "- TOTAL revenue TW was \u00a374.9k versus LW \u00a348.6k, a WoW change of +54.19%.\n- TOTAL revenue TW was \u00a374.9k versus LY \u00a320.7k, a YoY change of +261.45%.\n- TOTAL units sold TW were 35,509 versus LW 22,846, and TOTAL orders TW were 1,803 versus LW 1,433.\n- JUMBO BAG RED RETROSPOT ranked 1 in TW revenue at \u00a32.9k, a 3.9% share, with YoY change of +150750.8%.\n- REGENCY CAKESTAND 3 TIER ranked 2 in TW revenue at \u00a32.9k, a 3.9% share of TOTAL.\n- PARTY BUNTING ranked 3 in TW revenue at \u00a32.7k, a 3.6% share of TOTAL.\n- SMALL CHINESE STYLE SCISSOR had the largest WoW revenue change among listed products at +157681.0%.\n- SET OF TEA COFFEE SUGAR TINS PANTRY and SET OF 3 CAKE TINS PANTRY DESIGN saw WoW declines of -84.9% and -74.8% respectively.",
+    "input_tokens": 2508,
+    "output_tokens": 408,
+    "cost_usd": 0.009096,
+    "latency_s": 4.059,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [
+   {
+    "attempt": 0,
+    "code": "import sys\nimport json\nimport numpy as np\nimport pandas as pd\n\ndef to_float(x):\n    return float(np.round(float(x), 2))\n\ndef main():\n    path = sys.argv[1]\n    df = pd.read_csv(path)\n\n    facts = []\n\n    def add(entity, metric, period, value, formula):\n        if value is None:\n            return\n        if isinstance(value, float) and (np.isnan(value) or np.isinf(value)):\n            return\n        facts.append({\n            \"entity\": entity,\n            \"metric\": metric,\n            \"period\": period,\n            \"value\": to_float(value),\n            \"formula\": formula\n        })\n\n    # --- Totals ---\n    rev_tw = df[\"Revenue_TW\"].sum(skipna=True)\n    rev_lw = df[\"Revenue_LW\"].sum(skipna=True)\n    rev_ly = df[\"Revenue_LY\"].sum(skipna=True)\n    units_tw = df[\"Units_TW\"].sum(skipna=True)\n    units_lw = df[\"Units_LW\"].sum(skipna=True)\n    orders_tw = df[\"Orders_TW\"].sum(skipna=True)\n    orders_lw = df[\"Orders_LW\"].sum(skipna=True)\n\n    add(\"TOTAL\", \"revenue\", \"TW\", rev_tw, \"sum(Revenue_TW)\")\n    add(\"TOTAL\", \"revenue\", \"LW\", rev_lw, \"sum(Revenue_LW)\")\n    add(\"TOTAL\", \"revenue\", \"LY\", rev_ly, \"sum(Revenue_LY)\")\n    add(\"TOTAL\", \"units\", \"TW\", units_tw, \"sum(Units_TW)\")\n    add(\"TOTAL\", \"units\", \"LW\", units_lw, \"sum(Units_LW)\")\n    add(\"TOTAL\", \"orders\", \"TW\", orders_tw, \"sum(Orders_TW)\")\n    add(\"TOTAL\", \"orders\", \"LW\", orders_lw, \"sum(Orders_LW)\")\n\n    if rev_lw and not np.isnan(rev_lw) and rev_lw != 0:\n        wow_total = (rev_tw - rev_lw) / rev_lw * 100\n        add(\"TOTAL\", \"revenue\", \"WoW\", wow_total,\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\")\n\n    if rev_ly and not np.isnan(rev_ly) and rev_ly != 0:\n        yoy_total = (rev_tw - rev_ly) / rev_ly * 100\n        add(\"TOTAL\", \"revenue\", \"YoY\", yoy_total,\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\")\n\n    # --- Top entities by current revenue (rank) ---\n    top_rank = df.dropna(subset=[\"Rank\"]).sort_values(\"Rank\").head(3)\n    for _, row in top_rank.iterrows():\n        add(row[\"Entity\"], \"revenue\", \"TW\", row[\"Revenue_TW\"],\n            \"Revenue_TW for top-ranked entity\")\n        if not pd.isna(row.get(\"Share_Pct\")):\n            add(row[\"Entity\"], \"share\", \"TW\", row[\"Share_Pct\"],\n                \"Share_Pct column: entity revenue / total revenue * 100\")\n        add(row[\"Entity\"], \"rank\", \"TW\", row[\"Rank\"],\n            \"Rank column: rank by Revenue_TW\")\n\n    # --- Biggest WoW gainers / losers ---\n    wow_df = df.dropna(subset=[\"WoW_Pct\"])\n    top_gain = wow_df.sort_values(\"WoW_Pct\", ascending=False).head(3)\n    top_loss = wow_df.sort_values(\"WoW_Pct\", ascending=True).head(3)\n    for _, row in top_gain.iterrows():\n        add(row[\"Entity\"], \"revenue\", \"WoW\", row[\"WoW_Pct\"],\n            \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n    for _, row in top_loss.iterrows():\n        add(row[\"Entity\"], \"revenue\", \"WoW\", row[\"WoW_Pct\"],\n            \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n\n    # --- Biggest YoY gainers / losers ---\n    yoy_df = df.dropna(subset=[\"YoY_Pct\"])\n    top_yoy_gain = yoy_df.sort_values(\"YoY_Pct\", ascending=False).head(3)\n    top_yoy_loss = yoy_df.sort_values(\"YoY_Pct\", ascending=True).head(3)\n    for _, row in top_yoy_gain.iterrows():\n        add(row[\"Entity\"], \"revenue\", \"YoY\", row[\"YoY_Pct\"],\n            \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n    for _, row in top_yoy_loss.iterrows():\n        add(row[\"Entity\"], \"revenue\", \"YoY\", row[\"YoY_Pct\"],\n            \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    # --- Top entity by units and orders this week ---\n    units_top = df.dropna(subset=[\"Units_TW\"]).sort_values(\"Units_TW\", ascending=False).head(1)\n    for _, row in units_top.iterrows():\n        add(row[\"Entity\"], \"units\", \"TW\", row[\"Units_TW\"],\n            \"max(Units_TW) among entities\")\n\n    orders_top = df.dropna(subset=[\"Orders_TW\"]).sort_values(\"Orders_TW\", ascending=False).head(1)\n    for _, row in orders_top.iterrows():\n        add(row[\"Entity\"], \"orders\", \"TW\", row[\"Orders_TW\"],\n            \"max(Orders_TW) among entities\")\n\n    # Limit to 25 facts\n    facts = facts[:25]\n\n    print(json.dumps(facts))\n\nif __name__ == \"__main__\":\n    main()\n",
+    "error": "",
+    "stdout": "1.0, \"formula\": \"Rank column: rank by Revenue_TW\"}, {\"entity\": \"REGENCY CAKESTAND 3 TIER\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 2907.39, \"formula\": \"Revenue_TW for top-ranked entity\"}, {\"entity\": \"REGENCY CAKESTAND 3 TIER\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 3.9, \"formula\": \"Share_Pct column: entity revenue / total revenue * 100\"}, {\"entity\": \"REGENCY CAKESTAND 3 TIER\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 2.0, \"formula\": \"Rank column: rank by Revenue_TW\"}, {\"entity\": \"PARTY BUNTING\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 2730.41, \"formula\": \"Revenue_TW for top-ranked entity\"}, {\"entity\": \"PARTY BUNTING\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 3.6, \"formula\": \"Share_Pct column: entity revenue / total revenue * 100\"}, {\"entity\": \"PARTY BUNTING\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 3.0, \"formula\": \"Rank column: rank by Revenue_TW\"}, {\"entity\": \"SMALL CHINESE STYLE SCISSOR\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 157681.0, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"RABBIT NIGHT LIGHT\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 36973.4, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"SET OF 2 TEA TOWELS APPLE AND PEARS\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 5630.8, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"SET OF TEA COFFEE SUGAR TINS PANTRY\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -84.9, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"SET OF 3 CAKE TINS PANTRY DESIGN\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -74.8, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"PACK OF 72 RETROSPOT CAKE CASES\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -60.1, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"JUMBO BAG RED RETROSPOT\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": 150750.8, \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"}]\n"
+   }
+  ],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "facts": [
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 74914.3,
+    "formula": "sum(Revenue_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LW",
+    "value": 48586.55,
+    "formula": "sum(Revenue_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LY",
+    "value": 20726.13,
+    "formula": "sum(Revenue_LY)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "TW",
+    "value": 35509.0,
+    "formula": "sum(Units_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "LW",
+    "value": 22846.0,
+    "formula": "sum(Units_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "TW",
+    "value": 1803.0,
+    "formula": "sum(Orders_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "LW",
+    "value": 1433.0,
+    "formula": "sum(Orders_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 54.19,
+    "formula": "(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 261.45,
+    "formula": "(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100"
+   },
+   {
+    "entity": "JUMBO BAG RED RETROSPOT",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 2941.59,
+    "formula": "Revenue_TW for top-ranked entity"
+   },
+   {
+    "entity": "JUMBO BAG RED RETROSPOT",
+    "metric": "share",
+    "period": "TW",
+    "value": 3.9,
+    "formula": "Share_Pct column: entity revenue / total revenue * 100"
+   },
+   {
+    "entity": "JUMBO BAG RED RETROSPOT",
+    "metric": "rank",
+    "period": "TW",
+    "value": 1.0,
+    "formula": "Rank column: rank by Revenue_TW"
+   },
+   {
+    "entity": "REGENCY CAKESTAND 3 TIER",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 2907.39,
+    "formula": "Revenue_TW for top-ranked entity"
+   },
+   {
+    "entity": "REGENCY CAKESTAND 3 TIER",
+    "metric": "share",
+    "period": "TW",
+    "value": 3.9,
+    "formula": "Share_Pct column: entity revenue / total revenue * 100"
+   },
+   {
+    "entity": "REGENCY CAKESTAND 3 TIER",
+    "metric": "rank",
+    "period": "TW",
+    "value": 2.0,
+    "formula": "Rank column: rank by Revenue_TW"
+   },
+   {
+    "entity": "PARTY BUNTING",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 2730.41,
+    "formula": "Revenue_TW for top-ranked entity"
+   },
+   {
+    "entity": "PARTY BUNTING",
+    "metric": "share",
+    "period": "TW",
+    "value": 3.6,
+    "formula": "Share_Pct column: entity revenue / total revenue * 100"
+   },
+   {
+    "entity": "PARTY BUNTING",
+    "metric": "rank",
+    "period": "TW",
+    "value": 3.0,
+    "formula": "Rank column: rank by Revenue_TW"
+   },
+   {
+    "entity": "SMALL CHINESE STYLE SCISSOR",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 157681.0,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "RABBIT NIGHT LIGHT",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 36973.4,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "SET OF 2 TEA TOWELS APPLE AND PEARS",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 5630.8,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "SET OF TEA COFFEE SUGAR TINS PANTRY",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -84.9,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "SET OF 3 CAKE TINS PANTRY DESIGN",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -74.8,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "PACK OF 72 RETROSPOT CAKE CASES",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -60.1,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "JUMBO BAG RED RETROSPOT",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 150750.8,
+    "formula": "(Revenue_TW - Revenue_LY) / Revenue_LY * 100"
+   }
+  ],
+  "n_calls": 2,
+  "tokens_in": 3603,
+  "tokens_out": 3173,
+  "cost_usd": 0.038936,
+  "latency_s": 26.374000000000002
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2010-W25__S4__claude-sonnet-5__r2",
+ "table_id": "large_product_2010-W25",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2010-W25",
+ "n_rows": 97,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- Total revenue TW is \u00a350,310.27 versus \u00a341,309.97 LW, a WoW change of +21.8%.\n- REGENCY CAKESTAND 3 TIER ranks 1 with revenue \u00a32,456.32 TW and 4.9% share TW, but WoW change is -52.7%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 2 with revenue \u00a32,173.03 TW, 4.3% share TW, and WoW change of +33.7%.\n- JUMBO BAG RED RETROSPOT ranks 3 with revenue \u00a31,392.22 TW and WoW change of +10.5%.\n- FLAG OF ST GEORGE CAR FLAG posted the largest WoW increase at +3969.8%, rising from \u00a36.69 LW to \u00a3272.27 TW.\n- DOOR MAT ENGLISH ROSE posted the largest WoW decrease at -70.8%, falling from \u00a3891.83 LW to \u00a3260.72 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 55 TW versus 44 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W25. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a350,310.27 TW, revenue \u00a341,309.97 LW, revenue change +21.8% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a32,456.32 TW, share 4.9% TW, revenue change -52.7% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a32,173.03 TW, share 4.3% TW, revenue change +33.7% WoW\n- JUMBO BAG RED RETROSPOT: rank 3, revenue \u00a31,392.22 TW, share 2.8% TW, revenue change +10.5% WoW\n- FLAG OF ST GEORGE CAR FLAG (largest WoW increase): revenue change +3969.8% WoW, revenue \u00a3272.27 TW versus \u00a36.69 LW\n- DOOR MAT ENGLISH ROSE (largest WoW decrease): revenue change -70.8% WoW, revenue \u00a3260.72 TW versus \u00a3891.83 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 55 TW versus 44 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue TW is \u00a350,310.27 versus \u00a341,309.97 LW, a WoW change of +21.8%.\n- REGENCY CAKESTAND 3 TIER ranks 1 with revenue \u00a32,456.32 TW and 4.9% share TW, but WoW change is -52.7%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 2 with revenue \u00a32,173.03 TW, 4.3% share TW, and WoW change of +33.7%.\n- JUMBO BAG RED RETROSPOT ranks 3 with revenue \u00a31,392.22 TW and WoW change of +10.5%.\n- FLAG OF ST GEORGE CAR FLAG posted the largest WoW increase at +3969.8%, rising from \u00a36.69 LW to \u00a3272.27 TW.\n- DOOR MAT ENGLISH ROSE posted the largest WoW decrease at -70.8%, falling from \u00a3891.83 LW to \u00a3260.72 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 55 TW versus 44 LW.",
+    "input_tokens": 739,
+    "output_tokens": 378,
+    "cost_usd": 0.005258,
+    "latency_s": 3.662,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a350,310.27 TW, revenue \u00a341,309.97 LW, revenue change +21.8% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a32,456.32 TW, share 4.9% TW, revenue change -52.7% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a32,173.03 TW, share 4.3% TW, revenue change +33.7% WoW\n- JUMBO BAG RED RETROSPOT: rank 3, revenue \u00a31,392.22 TW, share 2.8% TW, revenue change +10.5% WoW\n- FLAG OF ST GEORGE CAR FLAG (largest WoW increase): revenue change +3969.8% WoW, revenue \u00a3272.27 TW versus \u00a36.69 LW\n- DOOR MAT ENGLISH ROSE (largest WoW decrease): revenue change -70.8% WoW, revenue \u00a3260.72 TW versus \u00a3891.83 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 55 TW versus 44 LW",
+  "n_calls": 1,
+  "tokens_in": 739,
+  "tokens_out": 378,
+  "cost_usd": 0.005258,
+  "latency_s": 3.662
+ }
+}

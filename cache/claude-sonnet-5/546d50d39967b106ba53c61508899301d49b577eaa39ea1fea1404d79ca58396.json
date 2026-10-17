@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £23,394.39 TW versus £14,694.01 LW, a change of +59.2% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 with £2,009.77 TW revenue and an 8.6% share TW, down -46.3% WoW.\n- COOK WITH WINE METAL SIGN ranked 2 with £1,506.02 TW revenue and a 6.4% share TW.\n- DOOR MAT RED SPOT ranked 3 with £1,497.76 TW revenue and a 6.4% share TW.\n- COOK WITH WINE METAL SIGN posted the largest WoW increase, rising +3118.0% WoW from £46.80 LW to £1,506.02 TW.\n- DOOR MAT UNION FLAG posted the largest WoW decrease, falling -51.3% WoW from £1,414.86 LW to £688.45 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders among products, with 58 orders TW versus 79 orders LW.",
+ "input_tokens": 718,
+ "output_tokens": 368,
+ "cost_usd": 0.005116,
+ "latency_s": 3.527,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

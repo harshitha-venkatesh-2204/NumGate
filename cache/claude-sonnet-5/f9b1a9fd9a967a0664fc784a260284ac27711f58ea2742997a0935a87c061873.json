@@ -1,0 +1,10 @@
+{
+ "text": "- EMPIRE DESIGN ROSETTE ranks 1 this week with Revenue_TW of £3277.92, up 26123.4% WoW from Revenue_LW £12.50, and up 26123.4% YoY from Revenue_LY £12.50.\n- REGENCY CAKESTAND 3 TIER ranks 2 with Revenue_TW of £2529.33, down 45.6% WoW from Revenue_LW £4651.74, with Revenue_LY at £0.00.\n- ASSORTED COLOUR MINI CASES shows Revenue_TW of £1551.15, up 2067.9% WoW from Revenue_LW £71.55, and up 949.8% YoY from Revenue_LY £147.75.\n- JUMBO BAG RED RETROSPOT posts Revenue_TW of £1482.34, down 14.5% WoW from Revenue_LW £1732.75, with Revenue_LY at £0.00.\n- WHITE HANGING HEART T-LIGHT HOLDER records Revenue_TW of £1119.63, up 11.9% WoW from Revenue_LW £1000.83, but down 55.2% YoY from Revenue_LY £2501.43.\n- VINTAGE UNION JACK BUNTING has Revenue_TW of £1111.39, down 7.4% WoW from Revenue_LW £1200.77, and up 59.5% YoY from Revenue_LY £697.00.\n- SET/10 PINK POLKADOT PARTY CANDLES jumps to Revenue_TW of £467.70, up 4614.7% WoW from Revenue_LW £9.92, with Orders_TW at 12 versus Orders_LW at 3.\n- The top 10 products by Revenue_TW together hold a Share_Pct total of 21.9% of this week's revenue across the 140 rows shown.",
+ "input_tokens": 12056,
+ "output_tokens": 4926,
+ "cost_usd": 0.07337199999999999,
+ "latency_s": 35.28,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

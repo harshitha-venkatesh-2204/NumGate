@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW reached £50.3k versus LW £41.3k, a WoW increase of 21.8%.\n- TOTAL units sold rose to 22,179 TW from 18,454 LW, while TOTAL orders grew to 1,661 TW from 1,482 LW.\n- REGENCY CAKESTAND 3 TIER ranked 1 for TW with revenue of £2,456.32 and a 4.9% share of total revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER posted TW revenue of £2,173.03, holding a 4.3% share.\n- JUMBO BAG RED RETROSPOT recorded TW revenue of £1,392.22 with a 2.8% share.\n- FLAG OF ST GEORGE CAR FLAG showed the largest WoW revenue increase among listed products at 3,969.8%.\n- BLACK HEART CARD HOLDER also surged WoW, up 3,930.0% in revenue.\n- DOOR MAT ENGLISH ROSE and CERAMIC CAKE STAND + HANGING CAKES declined WoW by 70.8% and 64.4% respectively.",
+ "input_tokens": 1812,
+ "output_tokens": 396,
+ "cost_usd": 0.0075840000000000005,
+ "latency_s": 4.35,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

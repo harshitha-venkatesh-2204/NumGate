@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £41.6k versus LW £30.0k, a WoW increase of 38.5%.\n- TOTAL units sold TW reached 19,061 compared to LW 12,302, up 54.9% WoW.\n- TOTAL orders TW totaled 769 versus LW 720, a WoW rise of 6.8%.\n- WHITE HANGING HEART T-LIGHT HOLDER led all products TW with £4,405.70 revenue, a 10.6% share, ranked 1.\n- PARTY BUNTING ranked 2 TW with £3,220.36 revenue, holding a 7.7% share.\n- REGENCY CAKESTAND 3 TIER ranked 3 TW with £2,446.96 revenue, a 5.9% share.\n- JUMBO BAG PINK VINTAGE PAISLEY and PLEASE ONE PERSON METAL SIGN ranked 4 and 5 TW, with revenues of £1,477.55 and £1,475.70 respectively.\n- WALL MIRROR , RECT DIAMANTE, PINK/ recorded the largest WoW revenue increase among products at 3923.3%.",
+ "input_tokens": 2324,
+ "output_tokens": 396,
+ "cost_usd": 0.008608000000000001,
+ "latency_s": 3.873,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

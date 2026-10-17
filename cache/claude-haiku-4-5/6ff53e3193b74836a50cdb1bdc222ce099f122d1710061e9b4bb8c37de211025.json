@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £4443.21 in TW revenue, ranking 1st and representing 13.2% of total revenue, with 355 units sold across 59 orders compared to 296 units in 53 orders LW.\n- PARTY BUNTING achieved 55.9% WoW growth, increasing from £1600.50 LW to £2495.37 TW, with units rising from 386 to 525 and orders growing from 29 to 47.\n- GIANT BLACK SUNGLASSES experienced exceptional 33823.1% WoW revenue growth, jumping from £3.90 LW to £1323.00 TW with 450 units sold in TW versus 2 units LW.\n- PINK AND LILAC QUILTED THROW surged 3873.7% WoW, growing from £45.95 LW to £1825.90 TW with 53 units sold across 4 orders in TW compared to 1 unit LW.\n- WHITE HANGING HEART T-LIGHT HOLDER declined 13.2% WoW from £2259.40 LW to £1961.04 TW, with units falling from 848 to 696 despite maintaining 60 orders in TW.\n- RED RETROSPOT JUMBO BAG fell 28.4% WoW, decreasing from £1558.65 LW to £1115.45 TW, with units dropping from 907 to 595 across 41 orders.\n- WOODEN CROQUET GARDEN SET decreased 34.4% WoW from £1133.73 LW to £743.99 TW, with units declining from 103 to 63 and orders rising from 25 to 22.\n- MULTI COLOUR SILVER T-LIGHT HOLDER grew 211.7% WoW from £203.69 LW to £634.84 TW, with units increasing from 269 to 823 across 11 orders in TW.",
+ "input_tokens": 2371,
+ "output_tokens": 492,
+ "cost_usd": 0.004831,
+ "latency_s": 5.849,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

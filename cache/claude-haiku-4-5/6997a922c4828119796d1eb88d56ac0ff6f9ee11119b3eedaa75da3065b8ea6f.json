@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £2729.22 revenue in TW, ranking 1st but declining 44.1% WoW and 36.4% YoY from £4883.58 LW and £4291.64 LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS achieved £2342.01 revenue in TW at rank 2, growing 56.4% YoY versus £1497.38 LY despite a 13.5% WoW decrease from £2708.63 LW.\n- FELTCRAFT DOLL MOLLY surged 934.6% YoY to £2289.28 in TW revenue at rank 3, though units fell 40.8% WoW from 1500 to 888.\n- DOORMAT KEEP CALM AND COME IN declined 66.1% WoW to £2068.84 in TW revenue at rank 4, with units dropping from 844 LW to 272 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER grew 275.8% WoW to £1893.01 in TW revenue at rank 5, with units increasing from 165 LW to 683 TW.\n- JUMBO BAG RED RETROSPOT fell 62.3% WoW to £1886.66 in TW revenue at rank 6, with units declining 65.0% from 2709 LW to 947 TW.\n- PAPER LANTERN 9 POINT DELUXE STAR surged 1841.1% WoW to £1419.90 in TW revenue at rank 8, with units rising from 11 LW to 246 TW.\n- PINK BLUE FELT CRAFT TRINKET BOX increased 269.4% YoY to £1621.36 in TW revenue at rank 7, though units fell 49.8% WoW from 3013 to 1515.",
+ "input_tokens": 3264,
+ "output_tokens": 484,
+ "cost_usd": 0.005684,
+ "latency_s": 5.934,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

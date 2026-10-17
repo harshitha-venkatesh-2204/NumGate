@@ -1,0 +1,10 @@
+{
+ "text": "- Total TW revenue across the 22 products shown was £43,516.17 versus £17,609.09 LW, a WoW change of +147.1%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with £7,503.00 TW against £4,493.62 LW, up 67.0% WoW, on 624 units versus 380 LW and a 17.2% share.\n- HAND WARMER RED POLKA DOT ranked 2 at £3,707.40 TW from £0.00 LW, recorded on 2,004 units across 1 order TW.\n- WHITE HANGING HEART T-LIGHT HOLDER posted the smallest WoW move in the top five at +3.4%, £2,894.02 TW versus £2,798.40 LW, with 67 orders TW versus 60 LW.\n- Christmas lines moved sharply WoW: PAPER CHAIN KIT VINTAGE CHRISTMAS £2,297.49 TW (+519.4%), SET OF 20 VINTAGE CHRISTMAS NAPKINS £1,289.50 TW (+2,762.4%), and WOODEN ADVENT CALENDAR CREAM £1,358.70 TW (+1,236.0%).\n- AFGHAN SLIPPER SOCK PAIR reached £1,804.50 TW from £3.45 LW, with 610 units TW versus 1 unit LW across 5 orders.\n- LARGE CIRCULAR MIRROR MOBILE (£1,239.75 TW, 1,371 units) and SET OF 6 T-LIGHTS SANTA (£1,095.07 TW, 405 units) both came from £0.00 LW and hold 2.8% and 2.5% share TW.\n- No LY revenue is recorded for any of the 22 products, so YoY cannot be calculated for this week, including for rank 1 REGENCY CAKESTAND 3 TIER.",
+ "input_tokens": 2261,
+ "output_tokens": 1511,
+ "cost_usd": 0.049080000000000006,
+ "latency_s": 17.047,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

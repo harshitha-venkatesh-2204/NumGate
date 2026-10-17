@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £44,269.00 TW versus £59,718.06 LW, a WoW change of -25.9%, and compares to a YoY change of +49.9%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with revenue £2,729.22 TW, a 6.2% share TW, and a WoW change of -44.1%.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 2 with revenue £2,342.01 TW, a 5.3% share TW, and a WoW change of -13.5%.\n- FELTCRAFT DOLL MOLLY ranked 3 with revenue £2,289.28 TW, a 5.2% share TW, and a WoW change of -37.6%.\n- PAPER LANTERN 9 POINT DELUXE STAR had the largest WoW increase at +1841.1%, moving from £73.15 LW to £1,419.90 TW.\n- JUMBO BAG PINK POLKADOT had the largest WoW decrease at -71.9%, moving from £3,027.97 LW to £850.91 TW.\n- FELTCRAFT DOLL MOLLY had the largest YoY increase at +934.6%, compared to £221.28 LY.\n- ASSORTED COLOUR BIRD ORNAMENT had the largest YoY decrease at -79.6%, compared to £3,476.13 LY.",
+ "input_tokens": 871,
+ "output_tokens": 472,
+ "cost_usd": 0.006462000000000001,
+ "latency_s": 4.068,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

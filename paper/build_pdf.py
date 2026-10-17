@@ -93,9 +93,9 @@ def arg(s, name):
 
 
 def load_macros():
-    """\\newcommand definitions from numbers.tex (generated) as {name: value}."""
+    """\\newcommand definitions from numbers.tex and numbers_full.tex (both generated) as {name: value}."""
     macros = {}
-    text = (PAPER / "numbers.tex").read_text(encoding="utf-8")
+    text = "\n".join((PAPER / f).read_text(encoding="utf-8") for f in ("numbers.tex", "numbers_full.tex") if (PAPER / f).exists())
     for m in re.finditer(r"\\newcommand\{\\(\w+)\}\{", text):
         start = m.end() - 1
         macros[m.group(1)] = text[start + 1:matching_brace(text, start)]
@@ -159,7 +159,7 @@ class Refs:
 
 def math_to_markup(expr):
     """The few inline formulas in the paper, as italic text with real symbols."""
-    rep = {r"\le": "≤", r"\ge": "≥", r"\cdot": "·", r"\times": "×", r"\approx": "≈", r"\,": " "}
+    rep = {r"\le": "≤", r"\ge": "≥", r"\cdot": "·", r"\times": "×", r"\approx": "≈", r"\kappa": "κ", r"\,": " "}
     for a, b in rep.items():
         expr = expr.replace(a, b)
     expr = re.sub(r"\^\{([^}]*)\}", r"<super>\1</super>", expr)

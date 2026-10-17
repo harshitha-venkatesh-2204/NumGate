@@ -1,0 +1,10 @@
+{
+ "text": "- PLEASE ONE PERSON METAL SIGN led TW at £2,773.43 on 1,398 units and 41 orders, a 4.2% share and rank 1, versus £81.90 LW (WoW +3,286.4%) and £603.92 LY (YoY +359.2%).\n- Metal signs clustered at the top of the WoW table: COOK WITH WINE METAL SIGN £1,415.04 TW (LW £52.00, WoW +2,621.2%), HOT BATHS METAL SIGN £1,062.17 (WoW +1,159.7%), GIN + TONIC DIET METAL SIGN £791.53 (WoW +1,731.8%) and BEWARE OF THE CAT METAL SIGN £620.84 (WoW +3,836.8%).\n- PARTY BUNTING ranked 2 at £1,825.40 TW against £1,410.09 LW (WoW +29.5%) and £31.72 LY (YoY +5,654.7%), while SPOTTY BUNTING fell to £845.73 from £1,068.76 LW (WoW -20.9%).\n- REGENCY CAKESTAND 3 TIER posted £1,825.17 TW versus £1,991.04 LW (WoW -8.3%) and £3,712.01 LY (YoY -50.8%), with 150 units TW against 147 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER at £1,285.11 TW and JUMBO BAG RED RETROSPOT at £1,162.03 TW were both down against LY, at -48.2% and -49.8% YoY respectively, with the jumbo bag also -25.2% WoW on 556 units TW versus 717 LW.\n- Cold weather lines rose: HAND WARMER OWL DESIGN £1,611.60 TW (WoW +416.7%, YoY +2,458.1%), HOT WATER BOTTLE KEEP CALM £1,198.31 (WoW +72.8%) and LOVE HOT WATER BOTTLE £1,046.40 (WoW +155.1%).\n- Christmas stock moved up the table: PAPER CHAIN KIT 50'S CHRISTMAS £1,347.29 TW (WoW +159.0%, YoY +3,705.9%), VINTAGE CHRISTMAS BUNTING £870.00 (WoW +362.5%), STAR WOODEN CHRISTMAS DECORATION £448.16 (WoW +3,710.9%, YoY +2,322.5%) and CHRISTMAS RETROSPOT ANGEL WOOD £450.42 (WoW +1,803.7%).\n- WOOD BLACK BOARD ANT WHITE FINISH dropped to £489.41 TW from £2,057.46 LW (WoW -76.2%) on 63 units versus 370 LW, though still +99.1% YoY against £245.77.",
+ "input_tokens": 7441,
+ "output_tokens": 1775,
+ "cost_usd": 0.08158,
+ "latency_s": 18.078,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

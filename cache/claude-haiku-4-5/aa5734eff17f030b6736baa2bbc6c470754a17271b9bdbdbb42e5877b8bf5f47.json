@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £4443.21 in revenue TW, ranking 1st and representing 6.5% of total revenue, with a WoW increase of 28.5% from £3457.20 LW.\n- PARTY BUNTING achieved £2495.37 revenue TW, ranking 2nd with a 55.9% WoW increase from £1600.50 LW, driven by 525 units sold TW versus 386 units LW.\n- PINK AND LILAC QUILTED THROW surged to £1825.90 revenue TW with a 3873.7% WoW increase from just £45.95 LW, selling 53 units TW compared to 1 unit LW.\n- GIANT BLACK SUNGLASSES recorded a 33823.1% WoW revenue increase to £1323.00 TW from £3.90 LW, with 450 units sold TW versus 2 units LW.\n- WHITE HANGING HEART T-LIGHT HOLDER declined 13.2% WoW to £1961.04 TW from £2259.40 LW, with units falling from 848 LW to 696 TW.\n- ENGLISH ROSE DESIGN QUILTED THROW generated £1350.97 revenue TW with 53 units sold across 4 orders, compared to zero revenue and units LW.\n- RED RETROSPOT JUMBO BAG fell 28.4% WoW to £1115.45 TW from £1558.65 LW, with units declining from 907 LW to 595 TW.\n- VINTAGE UNION JACK BUNTING decreased 29.8% WoW to £889.25 TW from £1266.50 LW, with 100 units sold TW versus 149 units LW.",
+ "input_tokens": 7572,
+ "output_tokens": 454,
+ "cost_usd": 0.009842,
+ "latency_s": 5.607,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

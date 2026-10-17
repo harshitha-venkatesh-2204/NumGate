@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2011-W35__S4__claude-haiku-4-5__r2",
+ "table_id": "large_product_2011-W35",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W35",
+ "n_rows": 110,
+ "strategy": "S4",
+ "model": "claude-haiku-4-5",
+ "repeat": 2,
+ "note": "- Total revenue reached \u00a363,322.09 TW, up 6.9% WoW from \u00a359,216.04 LW and up 65.9% YoY.\n- RABBIT NIGHT LIGHT generated the highest revenue at \u00a32,152.90 TW with a 3.4% share, increasing 40.6% WoW.\n- WOOD BLACK BOARD ANT WHITE FINISH achieved the second highest revenue of \u00a32,057.46 TW with a 3.2% share, surging 496.6% WoW.\n- REGENCY CAKESTAND 3 TIER ranked third with \u00a31,991.04 TW revenue and a 3.1% share, declining 31.5% WoW.\n- SMALL ZINC HEART WALL ORGANISER experienced the largest WoW increase at 11787.1%, rising from \u00a311.50 LW to \u00a31,367.02 TW.\n- ALARM CLOCK BAKELIKE RED recorded the largest WoW decrease at -80.7%, falling from \u00a31,667.45 LW to \u00a3322.54 TW.\n- FELTCRAFT PRINCESS OLIVIA DOLL showed the largest YoY increase at 23496.0%, growing from \u00a33.75 LY to current week revenue.\n- JUMBO BAG RED RETROSPOT generated the most orders with 44 TW compared to 43 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W35. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a363,322.09 TW, revenue \u00a359,216.04 LW, revenue change +6.9% WoW, revenue change +65.9% YoY\n- RABBIT NIGHT LIGHT: rank 1, revenue \u00a32,152.90 TW, share 3.4% TW, revenue change +40.6% WoW\n- WOOD BLACK BOARD ANT WHITE FINISH: rank 2, revenue \u00a32,057.46 TW, share 3.2% TW, revenue change +496.6% WoW\n- REGENCY CAKESTAND 3 TIER: rank 3, revenue \u00a31,991.04 TW, share 3.1% TW, revenue change -31.5% WoW\n- SMALL ZINC HEART WALL ORGANISER (largest WoW increase): revenue change +11787.1% WoW, revenue \u00a31,367.02 TW versus \u00a311.50 LW\n- ALARM CLOCK BAKELIKE RED (largest WoW decrease): revenue change -80.7% WoW, revenue \u00a3322.54 TW versus \u00a31,667.45 LW\n- FELTCRAFT PRINCESS OLIVIA DOLL (largest YoY increase): revenue change +23496.0% YoY, revenue \u00a33.75 LY\n- ASSORTED COLOUR BIRD ORNAMENT (largest YoY decrease): revenue change -75.9% YoY, revenue \u00a31,562.67 LY\n- JUMBO BAG RED RETROSPOT (most orders): orders 44 TW versus 43 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a363,322.09 TW, up 6.9% WoW from \u00a359,216.04 LW and up 65.9% YoY.\n- RABBIT NIGHT LIGHT generated the highest revenue at \u00a32,152.90 TW with a 3.4% share, increasing 40.6% WoW.\n- WOOD BLACK BOARD ANT WHITE FINISH achieved the second highest revenue of \u00a32,057.46 TW with a 3.2% share, surging 496.6% WoW.\n- REGENCY CAKESTAND 3 TIER ranked third with \u00a31,991.04 TW revenue and a 3.1% share, declining 31.5% WoW.\n- SMALL ZINC HEART WALL ORGANISER experienced the largest WoW increase at 11787.1%, rising from \u00a311.50 LW to \u00a31,367.02 TW.\n- ALARM CLOCK BAKELIKE RED recorded the largest WoW decrease at -80.7%, falling from \u00a31,667.45 LW to \u00a3322.54 TW.\n- FELTCRAFT PRINCESS OLIVIA DOLL showed the largest YoY increase at 23496.0%, growing from \u00a33.75 LY to current week revenue.\n- JUMBO BAG RED RETROSPOT generated the most orders with 44 TW compared to 43 LW.",
+    "input_tokens": 657,
+    "output_tokens": 342,
+    "cost_usd": 0.002367,
+    "latency_s": 3.397,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a363,322.09 TW, revenue \u00a359,216.04 LW, revenue change +6.9% WoW, revenue change +65.9% YoY\n- RABBIT NIGHT LIGHT: rank 1, revenue \u00a32,152.90 TW, share 3.4% TW, revenue change +40.6% WoW\n- WOOD BLACK BOARD ANT WHITE FINISH: rank 2, revenue \u00a32,057.46 TW, share 3.2% TW, revenue change +496.6% WoW\n- REGENCY CAKESTAND 3 TIER: rank 3, revenue \u00a31,991.04 TW, share 3.1% TW, revenue change -31.5% WoW\n- SMALL ZINC HEART WALL ORGANISER (largest WoW increase): revenue change +11787.1% WoW, revenue \u00a31,367.02 TW versus \u00a311.50 LW\n- ALARM CLOCK BAKELIKE RED (largest WoW decrease): revenue change -80.7% WoW, revenue \u00a3322.54 TW versus \u00a31,667.45 LW\n- FELTCRAFT PRINCESS OLIVIA DOLL (largest YoY increase): revenue change +23496.0% YoY, revenue \u00a33.75 LY\n- ASSORTED COLOUR BIRD ORNAMENT (largest YoY decrease): revenue change -75.9% YoY, revenue \u00a31,562.67 LY\n- JUMBO BAG RED RETROSPOT (most orders): orders 44 TW versus 43 LW",
+  "n_calls": 1,
+  "tokens_in": 657,
+  "tokens_out": 342,
+  "cost_usd": 0.002367,
+  "latency_s": 3.397
+ }
+}

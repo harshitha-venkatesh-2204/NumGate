@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £13.9k vs LW £11.7k, WoW +18.6%.\n- TOTAL orders TW 223 vs LW 181, and TOTAL units TW 3,817 vs LW 3,697.\n- REGENCY CAKESTAND 3 TIER ranked 1 in TW with revenue £3,265.21, a 23.5% share of TOTAL revenue, WoW +33.4%.\n- WHITE HANGING HEART T-LIGHT HOLDER TW revenue £3,042.82, 21.9% share, WoW -30.9%.\n- ASSORTED COLOUR BIRD ORNAMENT TW revenue £1,575.76, 11.4% share, WoW +49.0%.\n- PLEASE ONE PERSON METAL SIGN TW revenue £1,340.40, 9.7% share, WoW -9.2%.\n- CAKE STAND LOVEBIRD 2 TIER PINK TW revenue £1,234.18, 8.9% share, WoW +1,441.2%.\n- RED RETROSPOT CAKE STAND TW revenue £1,201.80, 8.7% share of TOTAL revenue.",
+ "input_tokens": 2509,
+ "output_tokens": 424,
+ "cost_usd": 0.009257999999999999,
+ "latency_s": 4.084,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

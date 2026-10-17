@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom TW revenue was £94,054.57 versus LW £113,921.89, a WoW change of -17.4%, and versus LY £138,295.13, a YoY change of -32.0%, holding Rank 1 with 75.6% share.\n- Australia TW revenue was £16,726.84 versus LW £412.55, a WoW change of 3954.5%, and versus LY £394.59, a YoY change of 4139.0%, ranking 2 with 13.4% share.\n- Finland TW revenue was £4,418.02 versus LW £165.16, a WoW change of 2575.0%, with LY revenue at £0.00, ranking 3 with 3.6% share.\n- EIRE TW revenue was £3,676.64 versus LW £2,491.28, a WoW change of 47.6%, and versus LY £11,352.29, a YoY change of -67.6%, ranking 4 with 3.0% share.\n- France TW revenue was £3,110.18 versus LW £1,225.18, a WoW change of 153.9%, and versus LY £3,408.23, a YoY change of -8.7%, ranking 5 with 2.5% share.\n- Germany TW revenue was £1,433.78 versus LW £2,728.99, a WoW change of -47.5%, and versus LY £4,421.14, a YoY change of -67.6%, ranking 6 with 1.2% share.\n- Belgium TW revenue was £984.07 versus LW £352.21, a WoW change of 179.4%, and versus LY £629.02, a YoY change of 56.4%, ranking 7 with 0.8% share.\n- United Kingdom TW orders totaled 250 versus LW 264, while Australia TW orders were 1 versus LW 1, and Finland TW orders were 2 versus LW 1.",
+ "input_tokens": 1122,
+ "output_tokens": 632,
+ "cost_usd": 0.008564,
+ "latency_s": 5.291,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

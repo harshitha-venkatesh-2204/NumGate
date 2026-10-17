@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £90.0k vs LW £72.0k, WoW +25.0%.\n- TOTAL units TW 36,997 vs LW 24,660; TOTAL orders TW 2,476 vs LW 2,530.\n- REGENCY CAKESTAND 3 TIER ranks 1 TW with revenue £7.6k and 8.4% share.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 2 TW with revenue £4.2k and 4.6% share.\n- COLOUR GLASS. STAR T-LIGHT HOLDER ranks 3 TW with revenue £3.9k and 4.4% share.\n- RED HANGING HEART T-LIGHT HOLDER ranks 4 TW with revenue £2.8k and 3.1% share.\n- CANDLEHOLDER PINK HANGING HEART ranks 5 TW with revenue £2.0k and 2.2% share.\n- SMALL CHINESE STYLE SCISSOR WoW +7769.0%, DOORMAT HOME SWEET HOME BLUE WoW +6118.9%, SOMBRERO WoW +4173.5%.",
+ "input_tokens": 2334,
+ "output_tokens": 404,
+ "cost_usd": 0.008708,
+ "latency_s": 3.676,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

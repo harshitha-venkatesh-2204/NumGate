@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER ranks 1 in TW with £3388.78 revenue, up 14.4% WoW from £2963.43 LW, and holds 20.2% share.\n- PACK OF 12 HEARTS DESIGN TISSUES revenue rose 6087.6% WoW to £2504.11 TW from £40.47 LW, with units up from 127 to 5007.\n- PACK OF 12 SUKI TISSUES revenue climbed 5937.3% WoW to £2573.71 TW from £42.63 LW, ranking 3 with 15.4% share.\n- PACK OF 12 PINK SPOT TISSUES revenue increased 2942.9% WoW to £1279.52 TW from £42.05 LW, with orders up from 2 to 8.\n- WOODEN SKITTLES GARDEN SET revenue grew 465.4% WoW, reaching £2650.90 TW compared to £468.85 LW, ranking 2 with 15.8% share.\n- WOODEN CROQUET GARDEN SET revenue rose 591.9% WoW to £2232.33 TW from £322.65 LW, with orders up from 14 to 25.\n- PARTY BUNTING revenue increased 12.4% WoW to £2110.88 TW from £1877.24 LW, ranking 6 with 12.6% share.\n- No YoY figures are available for any product in this ISO week 2010-W20 report.",
+ "input_tokens": 1165,
+ "output_tokens": 493,
+ "cost_usd": 0.007260000000000001,
+ "latency_s": 4.712,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

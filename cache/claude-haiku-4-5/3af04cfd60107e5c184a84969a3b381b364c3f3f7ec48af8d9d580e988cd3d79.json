@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £10.9k revenue in TW, the highest performing product by sales value.\n- VINTAGE UNION JACK MEMOBOARD achieved £6.6k revenue in TW and showed WoW growth of 1528.2%.\n- CREAM HEART CARD HOLDER led unit sales with 2074 units sold in TW, while generating £4.9k revenue.\n- BLACK HEART CARD HOLDER sold 2059 units in TW with £4.8k revenue and demonstrated WoW revenue growth of 1561.0%.\n- WHITE HANGING HEART T-LIGHT HOLDER recorded the highest order count at 86 orders in TW.\n- ENGLISH ROSE HOT WATER BOTTLE showed exceptional YoY growth of 35879.3% compared to LY.\n- 3 HEARTS HANGING DECORATION RUSTIC increased 31364.4% YoY, indicating strong seasonal demand versus the same week last year.\n- UTILTY CABINET WITH HOOKS posted the strongest WoW revenue increase at 3003.8% from LW to TW.",
+ "input_tokens": 1961,
+ "output_tokens": 267,
+ "cost_usd": 0.0032960000000000003,
+ "latency_s": 3.515,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

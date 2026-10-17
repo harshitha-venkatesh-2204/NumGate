@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 with £7,503.00 TW versus £4,493.62 LW, a WoW gain of 67.0%, and holds 27.1% of TW revenue across the 9 rows.\n- HAND WARMER RED POLKA DOT ranks 2 at £3,707.40 TW from £0.00 LW, on 2,004 units TW across a single order TW versus 0 orders LW, giving a 13.4% share.\n- JUMBO BAG RED RETROSPOT posts £3,129.01 TW against £2,022.70 LW, up 54.7% WoW, while orders fell from 50 LW to 39 TW and units rose from 1,118 LW to 1,515 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER shows the smallest WoW move among growing rows at 3.4%, £2,894.02 TW versus £2,798.40 LW, with 67 orders TW against 60 LW.\n- ASSORTED COLOUR BIRD ORNAMENT rises 187.4% WoW to £2,829.76 TW from £984.67 LW, with units up from 619 LW to 1,792 TW.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS gains 519.4% WoW to £2,297.49 TW from £370.90 LW, and orders move from 7 LW to 59 TW.\n- AFGHAN SLIPPER SOCK PAIR records £1,804.50 TW against £3.45 LW on 610 units TW versus 1 unit LW, while BABUSHKA LIGHTS STRING OF 10 reaches £1,678.87 TW from £101.32 LW, up 1,557.0% WoW.\n- The 9 rows total £27,641.06 TW versus £12,361.01 LW, up 123.6% WoW, with no LY revenue recorded for any row so YoY is unavailable.",
+ "input_tokens": 1330,
+ "output_tokens": 1004,
+ "cost_usd": 0.03175,
+ "latency_s": 11.75,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

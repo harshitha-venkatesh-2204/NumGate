@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue of £4,290.54, up 102.8% WoW from £2,115.30 and up 160.4% YoY from £1,647.56, on 366 units TW versus 171 LW.\n- PARTY BUNTING ranks 2 at £4,021.56 TW, down 23.1% WoW from £5,226.24, yet up 114.2% YoY from £1,877.24, with 756 units TW versus 984 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER posted £2,503.60 TW, down 18.1% WoW from £3,057.60 and down 15.5% YoY from £2,963.43, while orders rose from 58 LW to 62 TW.\n- JUMBO BAG RED RETROSPOT reached £2,339.73 TW, up 187.5% WoW from £813.70 and up 981.6% YoY from £216.32, on 1,206 units TW versus 380 LW.\n- LUNCH BAG DOILEY PATTERN recorded the largest WoW gain among entities with a prior week, up 1,337.6% to £1,778.97 TW from £123.75 LW, with orders at 60 TW versus 9 LW.\n- SET/4 WHITE RETRO STORAGE CUBES rose 2,093.0% WoW to £1,278.32 TW from £58.29 LW and 717.1% YoY from £156.45, on 34 units TW versus 1 unit LW.\n- COLOUR GLASS. STAR T-LIGHT HOLDER, SMALL CERAMIC TOP STORAGE JAR and REGENCY TEAPOT ROSES each had £0.00 LW and TW revenue of £1,229.13, £1,125.40 and £1,110.81 respectively.\n- The top five products by TW revenue hold a combined 32.1% share, with SPOTTY BUNTING at 4.2% share on £1,971.47 TW, up 39.4% WoW from £1,414.10 and £0.00 LY.",
+ "input_tokens": 2917,
+ "output_tokens": 696,
+ "cost_usd": 0.031985,
+ "latency_s": 7.917,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

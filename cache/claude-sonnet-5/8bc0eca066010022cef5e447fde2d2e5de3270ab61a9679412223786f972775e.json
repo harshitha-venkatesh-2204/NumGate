@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom TW revenue is £117,273.84 versus LW £168,403.05, a WoW change of -30.4%.\n- Netherlands TW revenue is £18,002.00 versus LW £1,188.30, a WoW change of +1414.9%.\n- EIRE TW revenue is £9,248.22 versus LW £5,735.12, a WoW change of +61.3%.\n- France TW revenue is £9,014.91 versus LW £1,348.33, a WoW change of +568.6%.\n- Germany TW revenue is £2,460.79 versus LW £2,366.84, a WoW change of +4.0%.\n- Spain TW revenue is £1,731.65 versus LW £0.00, with 3 orders recorded TW and 0 orders LW.\n- United Kingdom holds the largest TW share at 74.4%, followed by Netherlands at 11.4% and EIRE at 5.9%.\n- LY revenue figures are blank for all six countries in this table, so no YoY comparison is available for TW 2010-W18.",
+ "input_tokens": 1010,
+ "output_tokens": 543,
+ "cost_usd": 0.00745,
+ "latency_s": 6.546,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

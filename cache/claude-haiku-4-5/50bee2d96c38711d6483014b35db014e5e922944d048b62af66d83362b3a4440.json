@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £58,323.33 TW, representing a +150.8% WoW increase from £23,254.70 LW.\n- Total revenue grew +180.6% YoY for ISO week 42, demonstrating strong year-over-year performance.\n- LANDMARK FRAME COVENT GARDEN generated the highest revenue at £3,766.40 TW with a 6.5% share of total sales.\n- LANDMARK FRAME OXFORD STREET achieved £3,753.90 TW in revenue, capturing 6.4% of total sales and ranking second.\n- LANDMARK FRAME NOTTING HILL contributed £3,660.00 TW, representing 6.3% of total revenue and ranking third.\n- GINGHAM HEART DECORATION surged +2054.1% WoW, climbing from £72.68 LW to £1,565.58 TW.\n- RED HARMONICA IN BOX experienced the largest YoY growth at +26576.5%, rising from £3.75 LY to current week levels.\n- HOT WATER BOTTLE KEEP CALM generated the most orders with 50 TW compared to 38 LW.",
+ "input_tokens": 622,
+ "output_tokens": 284,
+ "cost_usd": 0.002042,
+ "latency_s": 3.127,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

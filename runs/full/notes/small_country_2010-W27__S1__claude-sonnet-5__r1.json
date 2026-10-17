@@ -1,0 +1,41 @@
+{
+ "note_id": "small_country_2010-W27__S1__claude-sonnet-5__r1",
+ "table_id": "small_country_2010-W27",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2010-W27",
+ "n_rows": 10,
+ "strategy": "S1",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- United Kingdom TW revenue was \u00a3118,122.66 versus LW \u00a3139,889.90, a WoW change of -15.6%, holding Rank 1 with 78.3% Share_Pct.\n- EIRE TW revenue reached \u00a323,853.27 versus LW \u00a32,091.43, a WoW change of +1040.5%, moving to Rank 2 with 15.8% Share_Pct.\n- Germany TW revenue fell to \u00a33,891.20 from LW \u00a38,132.43, a WoW change of -52.2%, ranked 3 with 2.6% Share_Pct.\n- Netherlands TW revenue dropped to \u00a3451.45 from LW \u00a315,223.88, a WoW change of -97.0%, ranked 8 with 0.3% Share_Pct.\n- Australia TW revenue was \u00a3294.88 versus LW \u00a32,326.74, a WoW change of -87.3%, ranked 9 with 0.2% Share_Pct.\n- Portugal TW revenue was \u00a3232.10 versus LW \u00a31,034.33, a WoW change of -77.6%, ranked 10 with 0.2% Share_Pct.\n- Thailand recorded TW revenue of \u00a31,113.70 with 1 order, up from LW revenue of \u00a30.00 and 0 orders.\n- Denmark recorded TW revenue of \u00a3555.66 with 1 order, up from LW revenue of \u00a30.00 and 0 orders.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W27. Entity type: country. The table has 10 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| United Kingdom | 118122.66 | 139889.90 |  | 58751 | 84543 | 320 | 328 | -15.6 |  | 78.3 | 1 |\n| EIRE | 23853.27 | 2091.43 |  | 10183 | 1069 | 8 | 4 | 1040.5 |  | 15.8 | 2 |\n| Germany | 3891.20 | 8132.43 |  | 3277 | 4501 | 8 | 12 | -52.2 |  | 2.6 | 3 |\n| France | 1816.12 | 1948.84 |  | 1056 | 1209 | 3 | 6 | -6.8 |  | 1.2 | 4 |\n| Thailand | 1113.70 | 0.00 |  | 524 | 0 | 1 | 0 |  |  | 0.7 | 5 |\n| Denmark | 555.66 | 0.00 |  | 162 | 0 | 1 | 0 |  |  | 0.4 | 6 |\n| Belgium | 508.37 | 2212.35 |  | 619 | 987 | 2 | 2 | -77.0 |  | 0.3 | 7 |\n| Netherlands | 451.45 | 15223.88 |  | 314 | 9380 | 1 | 4 | -97.0 |  | 0.3 | 8 |\n| Australia | 294.88 | 2326.74 |  | 48 | 1618 | 1 | 1 | -87.3 |  | 0.2 | 9 |\n| Portugal | 232.10 | 1034.33 |  | 70 | 575 | 1 | 1 | -77.6 |  | 0.2 | 10 |\n\nWrite the insight note now.\n",
+    "text": "- United Kingdom TW revenue was \u00a3118,122.66 versus LW \u00a3139,889.90, a WoW change of -15.6%, holding Rank 1 with 78.3% Share_Pct.\n- EIRE TW revenue reached \u00a323,853.27 versus LW \u00a32,091.43, a WoW change of +1040.5%, moving to Rank 2 with 15.8% Share_Pct.\n- Germany TW revenue fell to \u00a33,891.20 from LW \u00a38,132.43, a WoW change of -52.2%, ranked 3 with 2.6% Share_Pct.\n- Netherlands TW revenue dropped to \u00a3451.45 from LW \u00a315,223.88, a WoW change of -97.0%, ranked 8 with 0.3% Share_Pct.\n- Australia TW revenue was \u00a3294.88 versus LW \u00a32,326.74, a WoW change of -87.3%, ranked 9 with 0.2% Share_Pct.\n- Portugal TW revenue was \u00a3232.10 versus LW \u00a31,034.33, a WoW change of -77.6%, ranked 10 with 0.2% Share_Pct.\n- Thailand recorded TW revenue of \u00a31,113.70 with 1 order, up from LW revenue of \u00a30.00 and 0 orders.\n- Denmark recorded TW revenue of \u00a3555.66 with 1 order, up from LW revenue of \u00a30.00 and 0 orders.",
+    "input_tokens": 1228,
+    "output_tokens": 466,
+    "cost_usd": 0.007116,
+    "latency_s": 4.248,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1228,
+  "tokens_out": 466,
+  "cost_usd": 0.007116,
+  "latency_s": 4.248
+ }
+}

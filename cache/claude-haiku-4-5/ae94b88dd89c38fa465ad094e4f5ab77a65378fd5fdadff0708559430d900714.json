@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue across all countries reached £103,744.81 TW, representing a decline of 12.1% WoW from £117,975.95 LW.\n\n- Total revenue increased 23.4% YoY, demonstrating strong year-over-year growth despite the weekly decline.\n\n- United Kingdom maintained rank 1 with revenue of £89,759.37 TW, accounting for 86.5% of total revenue TW, but declined 15.9% WoW.\n\n- Japan achieved the largest WoW increase with revenue change of +12485.6% WoW, growing from £45.57 LW to £5,735.24 TW and reaching rank 2.\n\n- Germany held rank 3 with revenue of £2,840.80 TW representing 2.7% of total revenue TW, declining 27.0% WoW.\n\n- United Kingdom showed the largest YoY increase with revenue change of +20.5% YoY, growing from £74,480.20 LY to £89,759.37 TW.\n\n- France experienced the largest WoW decrease with revenue change of -85.1% WoW, falling from £5,710.94 LW to £852.44 TW.\n\n- France recorded the largest YoY decrease with revenue change of -82.3% YoY, declining from £4,804.52 LY to £852.44 TW.",
+ "input_tokens": 592,
+ "output_tokens": 340,
+ "cost_usd": 0.0022919999999999998,
+ "latency_s": 3.576,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

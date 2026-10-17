@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £13.7k vs LW £16.1k, WoW -14.84%.\n- TOTAL units TW 2,850 vs LW 3,815; TOTAL orders TW 250 vs LW 311.\n- REGENCY CAKESTAND 3 TIER led TW revenue at £5.2k, 37.8% share of TOTAL, WoW -5.8%.\n- WHITE HANGING HEART T-LIGHT HOLDER TW revenue £1.6k, 11.8% share, WoW -61.7%.\n- VINTAGE UNION JACK BUNTING TW revenue £1.3k, 9.2% share, WoW -25.9%.\n- DOOR MAT RED SPOT showed the largest WoW swing among products at +119.5%.\n- JUMBO BAG RED RETROSPOT had the highest TW units at 696.\n- REGENCY CAKESTAND 3 TIER recorded the most TW orders at 52.",
+ "input_tokens": 1956,
+ "output_tokens": 330,
+ "cost_usd": 0.007212,
+ "latency_s": 3.352,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

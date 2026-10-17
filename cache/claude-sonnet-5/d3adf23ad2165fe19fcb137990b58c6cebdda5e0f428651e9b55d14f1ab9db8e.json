@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £124.4k vs LW £121.3k, WoW +2.6%, vs LY YoY -21.5%.\n- United Kingdom leads all countries TW at £94.1k revenue, rank 1 with 75.6% share of TOTAL TW revenue.\n- Australia ranks 2 TW with £16.7k revenue, 13.4% share of TOTAL TW revenue.\n- Finland ranks 3 TW with £4.4k revenue, 3.6% share of TOTAL TW revenue.\n- EIRE ranks 4 TW with £3.7k revenue, 3.0% share of TOTAL TW revenue.\n- France ranks 5 TW with £3.1k revenue, 2.5% share of TOTAL TW revenue.\n- Germany ranks 6 TW with £1.4k revenue, 1.2% share of TOTAL TW revenue.\n- Belgium ranks 7 TW with £984.1 revenue, 0.8% share of TOTAL TW revenue.",
+ "input_tokens": 2153,
+ "output_tokens": 365,
+ "cost_usd": 0.007956,
+ "latency_s": 3.885,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

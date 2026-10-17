@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £41,585.07 TW, representing a +38.5% WoW increase from £30,034.16 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER maintained rank 1 with revenue of £4,405.70 TW, accounting for 10.6% of total revenue TW, and grew +29.4% WoW.\n- PARTY BUNTING achieved rank 2 with revenue of £3,220.36 TW, representing 7.7% of total revenue TW, and surged +89.8% WoW.\n- REGENCY CAKESTAND 3 TIER held rank 3 with revenue of £2,446.96 TW, comprising 5.9% of total revenue TW, but declined -20.0% WoW.\n- WALL MIRROR, RECT DIAMANTE, PINK/ experienced the largest WoW increase, growing +3923.3% from £16.13 LW to £648.96 TW.\n- JUMBO BAG STRAWBERRY recorded the largest WoW decrease, falling -68.8% from £2,439.76 LW to £760.11 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the most orders at 57 TW, down from 63 LW.",
+ "input_tokens": 568,
+ "output_tokens": 321,
+ "cost_usd": 0.002173,
+ "latency_s": 3.229,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

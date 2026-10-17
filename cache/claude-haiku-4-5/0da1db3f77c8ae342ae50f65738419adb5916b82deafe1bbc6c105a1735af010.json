@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £2009.77 in revenue TW, the highest among all products, but declined 46.3% WoW from £3740.98 LW with units falling from 1382 to 727.\n- COOK WITH WINE METAL SIGN surged 3118.0% WoW to £1506.02 TW, up from just £46.80 LW, with units increasing from 24 to 874.\n- DOOR MAT RED SPOT and DOOR MAT SPOTTY HOME SWEET HOME each generated over £900 TW with zero revenue LW, representing new or reactivated product sales.\n- DOOR MAT UNION FLAG fell 51.3% WoW to £688.45 TW from £1414.86 LW, the steepest decline among established products, with units dropping from 224 to 107.\n- PLEASE ONE PERSON METAL SIGN achieved 2101.3% WoW growth to £647.41 TW from £29.41 LW, with orders increasing from 6 to 14.\n- RED HANGING HEART T-LIGHT HOLDER and JUMBO BAG RED WHITE SPOTTY both declined approximately 42-48% WoW, with units falling by roughly 50% for each product.\n- KASHMIR FOLKART TUMBLERS and BLACK RECORD COVER FRAME each grew over 240% WoW, reaching £875.04 and £788.49 respectively.",
+ "input_tokens": 2569,
+ "output_tokens": 360,
+ "cost_usd": 0.004369,
+ "latency_s": 3.133,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,41 @@
+{
+ "note_id": "small_product_2011-W47__S1__claude-opus-5__r1",
+ "table_id": "small_product_2011-W47",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2011-W47",
+ "n_rows": 6,
+ "strategy": "S1",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- PAPER CHAIN KIT 50'S CHRISTMAS leads TW at \u00a35,701.16 (22.6% share, Rank 1), down 39.9% WoW from \u00a39,485.15 and down 0.6% YoY from \u00a35,735.62.\n- RABBIT NIGHT LIGHT sits second TW at \u00a35,084.81, a 52.4% WoW fall from \u00a310,687.69 LW, with no LY revenue recorded for this week.\n- CHILLI LIGHTS posts the largest gains, TW \u00a34,960.25 versus LW \u00a32,307.01 (+115.0% WoW) and LY \u00a31,506.40 (+229.3% YoY).\n- REGENCY CAKESTAND 3 TIER is up 17.3% WoW to \u00a33,543.60 TW but down 45.9% YoY from \u00a36,552.99.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS records \u00a33,034.33 TW, down 32.7% WoW from \u00a34,510.32 and up 21.3% YoY from \u00a32,500.80.\n- ROTATING SILVER ANGELS T-LIGHT HLDR gains 10.6% WoW to \u00a32,894.37 TW and 42.7% YoY, with units rising from 735 LW to 1,170 TW.\n- Unit volumes fell WoW for RABBIT NIGHT LIGHT (4,279 to 2,331) and PAPER CHAIN KIT 50'S CHRISTMAS (2,161 to 1,692), while CHILLI LIGHTS rose from 389 to 959.\n- Order counts TW are led by RABBIT NIGHT LIGHT at 105 and PAPER CHAIN KIT 50'S CHRISTMAS at 96, both below their LW levels of 123 and 100.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W47. Entity type: product. The table has 6 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| PAPER CHAIN KIT 50'S CHRISTMAS | 5701.16 | 9485.15 | 5735.62 | 1692 | 2161 | 96 | 100 | -39.9 | -0.6 | 22.6 | 1 |\n| RABBIT NIGHT LIGHT | 5084.81 | 10687.69 | 0.00 | 2331 | 4279 | 105 | 123 | -52.4 |  | 20.2 | 2 |\n| CHILLI LIGHTS | 4960.25 | 2307.01 | 1506.40 | 959 | 389 | 31 | 27 | 115.0 | 229.3 | 19.7 | 3 |\n| REGENCY CAKESTAND 3 TIER | 3543.60 | 3020.07 | 6552.99 | 261 | 235 | 50 | 47 | 17.3 | -45.9 | 14.1 | 4 |\n| PAPER CHAIN KIT VINTAGE CHRISTMAS | 3034.33 | 4510.32 | 2500.80 | 1043 | 1216 | 71 | 75 | -32.7 | 21.3 | 12.0 | 5 |\n| ROTATING SILVER ANGELS T-LIGHT HLDR | 2894.37 | 2617.39 | 2028.90 | 1170 | 735 | 37 | 42 | 10.6 | 42.7 | 11.5 | 6 |\n\nWrite the insight note now.\n",
+    "text": "- PAPER CHAIN KIT 50'S CHRISTMAS leads TW at \u00a35,701.16 (22.6% share, Rank 1), down 39.9% WoW from \u00a39,485.15 and down 0.6% YoY from \u00a35,735.62.\n- RABBIT NIGHT LIGHT sits second TW at \u00a35,084.81, a 52.4% WoW fall from \u00a310,687.69 LW, with no LY revenue recorded for this week.\n- CHILLI LIGHTS posts the largest gains, TW \u00a34,960.25 versus LW \u00a32,307.01 (+115.0% WoW) and LY \u00a31,506.40 (+229.3% YoY).\n- REGENCY CAKESTAND 3 TIER is up 17.3% WoW to \u00a33,543.60 TW but down 45.9% YoY from \u00a36,552.99.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS records \u00a33,034.33 TW, down 32.7% WoW from \u00a34,510.32 and up 21.3% YoY from \u00a32,500.80.\n- ROTATING SILVER ANGELS T-LIGHT HLDR gains 10.6% WoW to \u00a32,894.37 TW and 42.7% YoY, with units rising from 735 LW to 1,170 TW.\n- Unit volumes fell WoW for RABBIT NIGHT LIGHT (4,279 to 2,331) and PAPER CHAIN KIT 50'S CHRISTMAS (2,161 to 1,692), while CHILLI LIGHTS rose from 389 to 959.\n- Order counts TW are led by RABBIT NIGHT LIGHT at 105 and PAPER CHAIN KIT 50'S CHRISTMAS at 96, both below their LW levels of 123 and 100.",
+    "input_tokens": 1157,
+    "output_tokens": 604,
+    "cost_usd": 0.020885,
+    "latency_s": 7.554,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1157,
+  "tokens_out": 604,
+  "cost_usd": 0.020885,
+  "latency_s": 7.554
+ }
+}

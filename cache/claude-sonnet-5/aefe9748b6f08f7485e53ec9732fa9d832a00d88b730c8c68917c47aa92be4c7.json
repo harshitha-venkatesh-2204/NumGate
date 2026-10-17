@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £51.9k versus LW £49.7k, a WoW increase of 4.5%.\n- TOTAL revenue TW of £51.9k compares to LY £23.9k, a YoY increase of 117.3%.\n- TOTAL units sold TW reached 23,994 compared to LW 19,546.\n- TOTAL orders TW were 1,527, down from LW 1,629.\n- REGENCY CAKESTAND 3 TIER led product revenue TW at £3.4k, a 6.6% share of TOTAL.\n- WHITE HANGING HEART T-LIGHT HOLDER generated £3.3k TW revenue, a 6.3% share of TOTAL.\n- POLKADOT PEN revenue surged WoW by 18,121.5%, the largest increase among products.\n- DOORMAT HEARTS revenue fell WoW by 86.8%, the steepest decline among products.",
+ "input_tokens": 2365,
+ "output_tokens": 312,
+ "cost_usd": 0.00785,
+ "latency_s": 3.543,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

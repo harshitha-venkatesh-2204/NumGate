@@ -1,0 +1,42 @@
+{
+ "note_id": "small_product_2011-W36__S4__claude-haiku-4-5__r2",
+ "table_id": "small_product_2011-W36",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2011-W36",
+ "n_rows": 8,
+ "strategy": "S4",
+ "model": "claude-haiku-4-5",
+ "repeat": 2,
+ "note": "- Total revenue reached \u00a313,409.45 TW, representing a +122.1% WoW increase from \u00a36,036.77 LW.\n- Total revenue grew +89.6% YoY for ISO week W36.\n- PLEASE ONE PERSON METAL SIGN generated \u00a32,773.43 TW revenue, ranking 1st with a 20.7% share and surging +3286.4% WoW from \u00a381.90 LW.\n- PARTY BUNTING achieved \u00a31,825.40 TW revenue in rank 2 with a 13.6% share, up +29.5% WoW, and posted the largest YoY gain at +5654.7% from \u00a331.72 LY.\n- REGENCY CAKESTAND 3 TIER held rank 3 with \u00a31,825.17 TW revenue and a 13.6% share, declining -8.3% WoW from \u00a31,991.04 LW.\n- REGENCY CAKESTAND 3 TIER experienced the largest YoY decrease at -50.8%, falling from \u00a33,712.01 LY to \u00a31,825.17 TW.\n- PLEASE ONE PERSON METAL SIGN recorded 41 orders TW compared to 5 orders LW, the highest order volume across all products.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W36. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a313,409.45 TW, revenue \u00a36,036.77 LW, revenue change +122.1% WoW, revenue change +89.6% YoY\n- PLEASE ONE PERSON METAL SIGN: rank 1, revenue \u00a32,773.43 TW, share 20.7% TW, revenue change +3286.4% WoW\n- PARTY BUNTING: rank 2, revenue \u00a31,825.40 TW, share 13.6% TW, revenue change +29.5% WoW\n- REGENCY CAKESTAND 3 TIER: rank 3, revenue \u00a31,825.17 TW, share 13.6% TW, revenue change -8.3% WoW\n- PLEASE ONE PERSON METAL SIGN (largest WoW increase): revenue change +3286.4% WoW, revenue \u00a32,773.43 TW versus \u00a381.90 LW\n- REGENCY CAKESTAND 3 TIER (largest WoW decrease): revenue change -8.3% WoW, revenue \u00a31,825.17 TW versus \u00a31,991.04 LW\n- PARTY BUNTING (largest YoY increase): revenue change +5654.7% YoY, revenue \u00a331.72 LY\n- REGENCY CAKESTAND 3 TIER (largest YoY decrease): revenue change -50.8% YoY, revenue \u00a33,712.01 LY\n- PLEASE ONE PERSON METAL SIGN (most orders): orders 41 TW versus 5 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a313,409.45 TW, representing a +122.1% WoW increase from \u00a36,036.77 LW.\n- Total revenue grew +89.6% YoY for ISO week W36.\n- PLEASE ONE PERSON METAL SIGN generated \u00a32,773.43 TW revenue, ranking 1st with a 20.7% share and surging +3286.4% WoW from \u00a381.90 LW.\n- PARTY BUNTING achieved \u00a31,825.40 TW revenue in rank 2 with a 13.6% share, up +29.5% WoW, and posted the largest YoY gain at +5654.7% from \u00a331.72 LY.\n- REGENCY CAKESTAND 3 TIER held rank 3 with \u00a31,825.17 TW revenue and a 13.6% share, declining -8.3% WoW from \u00a31,991.04 LW.\n- REGENCY CAKESTAND 3 TIER experienced the largest YoY decrease at -50.8%, falling from \u00a33,712.01 LY to \u00a31,825.17 TW.\n- PLEASE ONE PERSON METAL SIGN recorded 41 orders TW compared to 5 orders LW, the highest order volume across all products.",
+    "input_tokens": 655,
+    "output_tokens": 323,
+    "cost_usd": 0.00227,
+    "latency_s": 3.533,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a313,409.45 TW, revenue \u00a36,036.77 LW, revenue change +122.1% WoW, revenue change +89.6% YoY\n- PLEASE ONE PERSON METAL SIGN: rank 1, revenue \u00a32,773.43 TW, share 20.7% TW, revenue change +3286.4% WoW\n- PARTY BUNTING: rank 2, revenue \u00a31,825.40 TW, share 13.6% TW, revenue change +29.5% WoW\n- REGENCY CAKESTAND 3 TIER: rank 3, revenue \u00a31,825.17 TW, share 13.6% TW, revenue change -8.3% WoW\n- PLEASE ONE PERSON METAL SIGN (largest WoW increase): revenue change +3286.4% WoW, revenue \u00a32,773.43 TW versus \u00a381.90 LW\n- REGENCY CAKESTAND 3 TIER (largest WoW decrease): revenue change -8.3% WoW, revenue \u00a31,825.17 TW versus \u00a31,991.04 LW\n- PARTY BUNTING (largest YoY increase): revenue change +5654.7% YoY, revenue \u00a331.72 LY\n- REGENCY CAKESTAND 3 TIER (largest YoY decrease): revenue change -50.8% YoY, revenue \u00a33,712.01 LY\n- PLEASE ONE PERSON METAL SIGN (most orders): orders 41 TW versus 5 LW",
+  "n_calls": 1,
+  "tokens_in": 655,
+  "tokens_out": 323,
+  "cost_usd": 0.00227,
+  "latency_s": 3.533
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated the highest revenue in TW at £4.6k, followed by WHITE HANGING HEART T-LIGHT HOLDER at £3.2k.\n- JUMBO BAG RED RETROSPOT led unit sales in TW with 1,405 units, while ASSORTED COLOURS SILK FAN achieved 1,333 units.\n- REGENCY CAKESTAND 3 TIER recorded the most orders in TW with 59, compared to WHITE HANGING HEART T-LIGHT HOLDER with 57 orders.\n- Total revenue in TW reached £36.9k across 626 orders, representing a WoW increase of 120.6%.\n- CHILDS BREAKFAST SET DOLLY GIRL showed the strongest WoW revenue growth at 9,039%, followed by PAPER CHAIN KIT SKULLS at 3,983.9%.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved 1,209 units sold in TW, the third highest unit volume after JUMBO BAG RED RETROSPOT and ASSORTED COLOURS SILK FAN.\n- Total unit volume in TW was 14,987 units across all products, with PAPER BUNTING RETRO SPOTS contributing 846 units.\n- CHILDS BREAKFAST SET SPACEBOY demonstrated significant WoW revenue growth of 3,144.7%, indicating strong momentum compared to LW.",
+ "input_tokens": 1828,
+ "output_tokens": 336,
+ "cost_usd": 0.003508,
+ "latency_s": 4.016,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

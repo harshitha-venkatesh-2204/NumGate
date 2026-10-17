@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £65.4k TW versus £38.6k LW, a WoW gain of 69.4%, and £23.0k LY, a YoY gain of 183.9%.\n- TOTAL units came in at 35,746 TW with orders at 1,478 TW, units up 102.5% WoW against orders up 14.6% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £3,740.45, holding a 5.7% share of TW revenue.\n- The top five products delivered 19.8% of TOTAL revenue TW, led by PARTY BUNTING at £2,843.54 and JUMBO BAG RED RETROSPOT at £2,718.16.\n- JUMBO BAG PINK POLKADOT posted £1,917.87 TW and JUMBO BAG STRAWBERRY £1,707.48 TW.\n- PARTY BUNTING added £1,541.70 WoW and JUMBO BAG RED RETROSPOT added £1,362.00 WoW, the largest absolute gains.\n- JUMBO BAG SCANDINAVIAN BLUE PAISLEY rose 307.0% WoW, ASSORTED COLOURS SILK FAN 224.9% WoW, and JUMBO BAG OWLS 191.6% WoW.\n- CHILLI LIGHTS fell 56.7% WoW, CHARLOTTE BAG SUKI DESIGN 55.9% WoW, and DOLLY GIRL BABY GIFT SET 32.0% WoW.",
+ "input_tokens": 2525,
+ "output_tokens": 526,
+ "cost_usd": 0.025775,
+ "latency_s": 6.943,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

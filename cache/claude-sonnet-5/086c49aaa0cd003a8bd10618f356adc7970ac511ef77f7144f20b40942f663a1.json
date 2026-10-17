@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT ranked 1 in TW with £2152.90 revenue, up 40.6% WoW from £1531.13 LW, with no LY comparison available.\n- WOOD BLACK BOARD ANT WHITE FINISH revenue rose 496.6% WoW to £2057.46 TW from £344.85 LW, and is up 87.0% YoY versus £1099.98 LY.\n- REGENCY CAKESTAND 3 TIER fell to £1991.04 TW from £2907.39 LW, a 31.5% WoW decline, and down 62.2% YoY from £5262.87 LY.\n- RED HARMONICA IN BOX revenue jumped 320.3% WoW to £1731.06 TW from £411.90 LW, and rose 120.2% YoY from £786.11 LY.\n- JUMBO BAG RED RETROSPOT dropped 47.2% WoW to £1554.01 TW from £2941.59 LW, and fell 51.7% YoY from £3219.09 LY.\n- SMALL ZINC HEART WALL ORGANISER revenue surged 11787.1% WoW to £1367.02 TW from £11.50 LW, with 409 units sold TW versus 2 units LW.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue declined 46.6% WoW to £1096.24 TW from £2054.09 LW, and fell 55.1% YoY from £2442.16 LY.\n- Across the 110 products shown, RABBIT NIGHT LIGHT holds the top Share_Pct at 3.4% of TW revenue, followed by WOOD BLACK BOARD ANT WHITE FINISH at 3.2%.",
+ "input_tokens": 9071,
+ "output_tokens": 587,
+ "cost_usd": 0.024012,
+ "latency_s": 5.408,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

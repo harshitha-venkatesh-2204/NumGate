@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2011-W08__S4__claude-sonnet-5__r1",
+ "table_id": "large_product_2011-W08",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W08",
+ "n_rows": 140,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a367,441.41 TW versus \u00a350,908.88 LW, a WoW change of +32.5%, and versus LY the change was +214.4% YoY.\n- EMPIRE DESIGN ROSETTE ranked 1 with revenue \u00a33,277.92 TW, a 4.9% share TW, and the largest WoW increase at +26123.4%, up from \u00a312.50 LW.\n- EMPIRE DESIGN ROSETTE also posted the largest YoY increase at +26123.4%, rising from \u00a312.50 LY.\n- REGENCY CAKESTAND 3 TIER ranked 2 with revenue \u00a32,529.33 TW, a 3.8% share TW, and a WoW change of -45.6%.\n- ASSORTED COLOUR MINI CASES ranked 3 with revenue \u00a31,551.15 TW, a 2.3% share TW, and a WoW change of +2067.9%.\n- CHILLI LIGHTS recorded the largest WoW decrease at -69.3%, falling from \u00a31,588.33 LW to \u00a3487.56 TW.\n- SET/4 WHITE RETRO STORAGE CUBES recorded the largest YoY decrease at -70.8%, down from \u00a31,198.25 LY.\n- HEART OF WICKER SMALL had the most orders with 39 TW compared to 26 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W08. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a367,441.41 TW, revenue \u00a350,908.88 LW, revenue change +32.5% WoW, revenue change +214.4% YoY\n- EMPIRE DESIGN ROSETTE: rank 1, revenue \u00a33,277.92 TW, share 4.9% TW, revenue change +26123.4% WoW\n- REGENCY CAKESTAND 3 TIER: rank 2, revenue \u00a32,529.33 TW, share 3.8% TW, revenue change -45.6% WoW\n- ASSORTED COLOUR MINI CASES: rank 3, revenue \u00a31,551.15 TW, share 2.3% TW, revenue change +2067.9% WoW\n- EMPIRE DESIGN ROSETTE (largest WoW increase): revenue change +26123.4% WoW, revenue \u00a33,277.92 TW versus \u00a312.50 LW\n- CHILLI LIGHTS (largest WoW decrease): revenue change -69.3% WoW, revenue \u00a3487.56 TW versus \u00a31,588.33 LW\n- EMPIRE DESIGN ROSETTE (largest YoY increase): revenue change +26123.4% YoY, revenue \u00a312.50 LY\n- SET/4 WHITE RETRO STORAGE CUBES (largest YoY decrease): revenue change -70.8% YoY, revenue \u00a31,198.25 LY\n- HEART OF WICKER SMALL (most orders): orders 39 TW versus 26 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a367,441.41 TW versus \u00a350,908.88 LW, a WoW change of +32.5%, and versus LY the change was +214.4% YoY.\n- EMPIRE DESIGN ROSETTE ranked 1 with revenue \u00a33,277.92 TW, a 4.9% share TW, and the largest WoW increase at +26123.4%, up from \u00a312.50 LW.\n- EMPIRE DESIGN ROSETTE also posted the largest YoY increase at +26123.4%, rising from \u00a312.50 LY.\n- REGENCY CAKESTAND 3 TIER ranked 2 with revenue \u00a32,529.33 TW, a 3.8% share TW, and a WoW change of -45.6%.\n- ASSORTED COLOUR MINI CASES ranked 3 with revenue \u00a31,551.15 TW, a 2.3% share TW, and a WoW change of +2067.9%.\n- CHILLI LIGHTS recorded the largest WoW decrease at -69.3%, falling from \u00a31,588.33 LW to \u00a3487.56 TW.\n- SET/4 WHITE RETRO STORAGE CUBES recorded the largest YoY decrease at -70.8%, down from \u00a31,198.25 LY.\n- HEART OF WICKER SMALL had the most orders with 39 TW compared to 26 LW.",
+    "input_tokens": 844,
+    "output_tokens": 454,
+    "cost_usd": 0.006228,
+    "latency_s": 4.366,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a367,441.41 TW, revenue \u00a350,908.88 LW, revenue change +32.5% WoW, revenue change +214.4% YoY\n- EMPIRE DESIGN ROSETTE: rank 1, revenue \u00a33,277.92 TW, share 4.9% TW, revenue change +26123.4% WoW\n- REGENCY CAKESTAND 3 TIER: rank 2, revenue \u00a32,529.33 TW, share 3.8% TW, revenue change -45.6% WoW\n- ASSORTED COLOUR MINI CASES: rank 3, revenue \u00a31,551.15 TW, share 2.3% TW, revenue change +2067.9% WoW\n- EMPIRE DESIGN ROSETTE (largest WoW increase): revenue change +26123.4% WoW, revenue \u00a33,277.92 TW versus \u00a312.50 LW\n- CHILLI LIGHTS (largest WoW decrease): revenue change -69.3% WoW, revenue \u00a3487.56 TW versus \u00a31,588.33 LW\n- EMPIRE DESIGN ROSETTE (largest YoY increase): revenue change +26123.4% YoY, revenue \u00a312.50 LY\n- SET/4 WHITE RETRO STORAGE CUBES (largest YoY decrease): revenue change -70.8% YoY, revenue \u00a31,198.25 LY\n- HEART OF WICKER SMALL (most orders): orders 39 TW versus 26 LW",
+  "n_calls": 1,
+  "tokens_in": 844,
+  "tokens_out": 454,
+  "cost_usd": 0.006228,
+  "latency_s": 4.366
+ }
+}

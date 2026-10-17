@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £7503.00 revenue in TW, the highest among all products, with 624 units sold across 58 orders, representing a 67.0% WoW increase from LW revenue of £4493.62.\n- HAND WARMER RED POLKA DOT achieved £3707.40 revenue in TW with 2004 units sold, up from zero revenue in LW, capturing 8.5% of TW total revenue.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS recorded £2297.49 revenue in TW, a 519.4% WoW increase from £370.90 in LW, with orders rising from 7 to 59.\n- AFGHAN SLIPPER SOCK PAIR posted £1804.50 revenue in TW, a 52204.3% WoW surge from just £3.45 in LW, with units increasing from 1 to 610.\n- BABUSHKA LIGHTS STRING OF 10 generated £1678.87 revenue in TW, a 1557.0% WoW jump from £101.32 in LW, with units climbing from 14 to 279.\n- SET OF 20 VINTAGE CHRISTMAS NAPKINS reached £1289.50 revenue in TW, a 2762.4% WoW increase from £45.05 in LW, with units expanding from 53 to 1831.\n- WOODEN ADVENT CALENDAR CREAM delivered £1358.70 revenue in TW, a 1236.0% WoW increase from £101.70 in LW, with orders growing from 4 to 14.\n- LARGE CIRCULAR MIRROR MOBILE and SET OF 6 T-LIGHTS SANTA each generated new revenue in TW at £1239.75 and £1095.07 respectively, with zero sales recorded in LW.",
+ "input_tokens": 1895,
+ "output_tokens": 455,
+ "cost_usd": 0.00417,
+ "latency_s": 5.226,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

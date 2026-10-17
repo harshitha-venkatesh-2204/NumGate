@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue for TW was £67.0k, down from LW £79.2k, a WoW change of -15.3%.\n- TOTAL revenue for TW of £67.0k compares to LY £39.1k, a YoY change of +71.3%.\n- TOTAL units sold fell from LW 24,550 to TW 20,840.\n- TOTAL orders declined from LW 1,477 to TW 1,329.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 1 in TW with revenue of £5.7k and an 8.5% share.\n- RABBIT NIGHT LIGHT ranked 2 in TW with revenue of £5.08k and a 7.6% share.\n- CHILLI LIGHTS ranked 3 in TW with revenue of £4.96k and a 7.4% share.\n- COLOURED GLASS STAR T-LIGHT HOLDER saw a WoW revenue increase of 1050.4%.",
+ "input_tokens": 2281,
+ "output_tokens": 394,
+ "cost_usd": 0.008502,
+ "latency_s": 4.162,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

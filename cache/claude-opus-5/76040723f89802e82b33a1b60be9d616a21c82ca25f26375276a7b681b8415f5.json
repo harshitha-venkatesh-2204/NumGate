@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £27,933.80 TW versus £13,633.74 LW, a change of +104.9% WoW and +130.1% YoY.\n- PARTY BUNTING held rank 1 with £5,226.24 TW, an 18.7% share TW and a change of +184.0% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 at £3,057.60 TW, 10.9% share TW, with a change of +197.4% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 3 at £2,115.30 TW with a 7.6% share TW, down -44.4% WoW from £3,804.27 LW and the largest WoW decrease.\n- SMALL CHINESE STYLE SCISSOR posted the largest WoW increase at +19919.5% WoW, £840.82 TW versus £4.20 LW.\n- EDWARDIAN PARASOL NATURAL recorded the largest YoY increase at +315.0% YoY against £223.43 LY.\n- REGENCY CAKESTAND 3 TIER also showed the largest YoY decrease at -43.3% YoY against £3,730.99 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 58 orders TW versus 28 orders LW.",
+ "input_tokens": 855,
+ "output_tokens": 450,
+ "cost_usd": 0.015525,
+ "latency_s": 5.495,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

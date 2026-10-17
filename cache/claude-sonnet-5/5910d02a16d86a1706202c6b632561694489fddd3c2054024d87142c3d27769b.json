@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £154,660.65 TW versus £145,045.82 LW, a WoW change of +6.6%.\n- United Kingdom ranked 1 with £143,748.77 revenue TW, a 92.9% share TW, and a WoW change of +10.1%.\n- Channel Islands ranked 2 with £3,401.24 revenue TW, a 2.2% share TW, and a WoW change of +334.5%.\n- EIRE ranked 3 with £1,889.68 revenue TW, a 1.2% share TW, and a WoW change of -28.4%.\n- France posted the largest WoW increase at +349.8%, rising to £1,271.21 TW from £282.60 LW.\n- Switzerland posted the largest WoW decrease at -82.0%, falling to £1,407.70 TW from £7,802.09 LW.\n- United Kingdom recorded the most orders with 382 TW compared to 319 LW.",
+ "input_tokens": 654,
+ "output_tokens": 313,
+ "cost_usd": 0.004438,
+ "latency_s": 3.159,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

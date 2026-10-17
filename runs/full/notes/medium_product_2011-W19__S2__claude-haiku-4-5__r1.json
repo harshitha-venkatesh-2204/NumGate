@@ -1,0 +1,239 @@
+{
+ "note_id": "medium_product_2011-W19__S2__claude-haiku-4-5__r1",
+ "table_id": "medium_product_2011-W19",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2011-W19",
+ "n_rows": 30,
+ "strategy": "S2",
+ "model": "claude-haiku-4-5",
+ "repeat": 1,
+ "note": "- REGENCY CAKESTAND 3 TIER generated the highest revenue TW at \u00a34,290.54, followed by PARTY BUNTING at \u00a34,021.56.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved \u00a32,503.60 in revenue TW and led order volume with 62 orders.\n- JUMBO BAG RED RETROSPOT delivered \u00a32,339.73 in revenue TW while selling 1,206 units, the third highest unit volume.\n- SET/4 WHITE RETRO STORAGE CUBES showed the strongest WoW growth at 2,093% increase in revenue.\n- COLOUR GLASS. STAR T-LIGHT HOLDER demonstrated exceptional YoY performance with 1,981.9% revenue growth.\n- ASSORTED COLOURS SILK FAN led unit sales TW with 1,618 units, closely followed by SMALL CERAMIC TOP STORAGE JAR at 1,616 units.\n- SPOTTY BUNTING generated 67 orders TW, the highest order count, while also contributing \u00a31,971.47 in revenue.\n- CHILLI LIGHTS showed strong YoY growth of 1,154.5%, indicating significant year-on-year revenue expansion.",
+ "trace": {
+  "strategy": "S2",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "code_0",
+    "system": "You are a data analyst who writes short, correct pandas code.\n\nWrite one Python script that:\n- reads the CSV file whose path is given in sys.argv[1] with pandas,\n- computes up to 25 facts that would be most useful for a weekly executive insight note (largest entities, biggest week over week and year over year movers, shares, totals),\n- prints one JSON array to stdout and nothing else.\n\nEach element of the array is an object with these keys:\n- \"entity\": the Entity value, or \"TOTAL\" for all rows combined.\n- \"metric\": one of revenue, units, orders, share, rank.\n- \"period\": one of TW, LW, LY, WoW, YoY. Use WoW or YoY for changes between periods.\n- \"value\": a plain number (not a string). Round money to 2 decimals and percentages to 1 decimal.\n- \"formula\": a short description of how the value was computed, for example \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\".\n\nUse only pandas, numpy, json and sys. Blank cells are NaN: skip them instead of crashing. Convert numpy numbers to Python floats before json.dumps.\nReturn only the code, inside one ```python block.\n",
+    "user": "The script will be run as: python facts.py table.csv\n\nThe CSV holds a weekly sales report for ISO week 2011-W19. Entity type: product. It has 30 rows and these columns (with pandas dtypes):\n- Entity: str\n- Revenue_TW: float64\n- Revenue_LW: float64\n- Revenue_LY: float64\n- Units_TW: int64\n- Units_LW: int64\n- Orders_TW: int64\n- Orders_LW: int64\n- WoW_Pct: float64\n- YoY_Pct: float64\n- Share_Pct: float64\n- Rank: int64\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\nFirst rows of the file:\nEntity,Revenue_TW,Revenue_LW,Revenue_LY,Units_TW,Units_LW,Orders_TW,Orders_LW,WoW_Pct,YoY_Pct,Share_Pct,Rank\nREGENCY CAKESTAND 3 TIER,4290.54,2115.3,1647.56,366,171,48,44,102.8,160.4,9.1,1\nPARTY BUNTING,4021.56,5226.24,1877.24,756,984,61,53,-23.1,114.2,8.5,2\nWHITE HANGING HEART T-LIGHT HOLDER,2503.6,3057.6,2963.43,892,1144,62,58,-18.1,-15.5,5.3,3\n\n",
+    "text": "```python\nimport sys\nimport pandas as pd\nimport numpy as np\nimport json\n\n# Read CSV\ndf = pd.read_csv(sys.argv[1])\n\nfacts = []\n\n# Helper function to convert numpy types to Python types\ndef to_python(val):\n    if pd.isna(val):\n        return None\n    if isinstance(val, (np.integer, np.floating)):\n        return float(val)\n    return val\n\n# 1. Top 5 entities by Revenue_TW\ntop_revenue = df.nlargest(5, 'Revenue_TW')\nfor idx, row in top_revenue.iterrows():\n    facts.append({\n        \"entity\": row['Entity'],\n        \"metric\": \"revenue\",\n        \"period\": \"TW\",\n        \"value\": round(to_python(row['Revenue_TW']), 2),\n        \"formula\": \"Revenue_TW\"\n    })\n\n# 2. Top 5 entities by WoW_Pct (biggest week-over-week movers)\nwow_valid = df[df['WoW_Pct'].notna()].nlargest(5, 'WoW_Pct')\nfor idx, row in wow_valid.iterrows():\n    facts.append({\n        \"entity\": row['Entity'],\n        \"metric\": \"revenue\",\n        \"period\": \"WoW\",\n        \"value\": round(to_python(row['WoW_Pct']), 1),\n        \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n    })\n\n# 3. Top 5 entities by YoY_Pct (biggest year-over-year movers)\nyoy_valid = df[df['YoY_Pct'].notna()].nlargest(5, 'YoY_Pct')\nfor idx, row in yoy_valid.iterrows():\n    facts.append({\n        \"entity\": row['Entity'],\n        \"metric\": \"revenue\",\n        \"period\": \"YoY\",\n        \"value\": round(to_python(row['YoY_Pct']), 1),\n        \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n    })\n\n# 4. Top 5 entities by Units_TW\ntop_units = df.nlargest(5, 'Units_TW')\nfor idx, row in top_units.iterrows():\n    facts.append({\n        \"entity\": row['Entity'],\n        \"metric\": \"units\",\n        \"period\": \"TW\",\n        \"value\": to_python(row['Units_TW']),\n        \"formula\": \"Units_TW\"\n    })\n\n# 5. Top 5 entities by Orders_TW\ntop_orders = df.nlargest(5, 'Orders_TW')\nfor idx, row in top_orders.iterrows():\n    facts.append({\n        \"entity\": row['Entity'],\n        \"metric\": \"orders\",\n        \"period\": \"TW\",\n        \"value\": to_python(row['Orders_TW']),\n        \"formula\": \"Orders_TW\"\n    })\n\n# 6. TOTAL Revenue_TW\ntotal_revenue_tw = df['Revenue_TW'].sum()\nfacts.append({\n    \"entity\": \"TOTAL\",\n    \"metric\": \"revenue\",\n    \"period\": \"TW\",\n    \"value\": round(to_python(total_revenue_tw), 2),\n    \"formula\": \"SUM(Revenue_TW)\"\n})\n\n# 7. TOTAL Revenue_LW\ntotal_revenue_lw = df['Revenue_LW'].sum()\nfacts.append({\n    \"entity\": \"TOTAL\",\n    \"metric\": \"revenue\",\n    \"period\": \"LW\",\n    \"value\": round(to_python(total_revenue_lw), 2),\n    \"formula\": \"SUM(Revenue_LW)\"\n})\n\n# 8. TOTAL Revenue_LY\ntotal_revenue_ly = df['Revenue_LY'].sum()\nfacts.append({\n    \"entity\": \"TOTAL\",\n    \"metric\": \"revenue\",\n    \"period\": \"LY\",\n    \"value\": round(to_python(total_revenue_ly), 2),\n    \"formula\": \"SUM(Revenue_LY)\"\n})\n\n# 9. TOTAL WoW\nif total_revenue_lw > 0:\n    total_wow = (total_revenue_tw - total_revenue_lw) / total_revenue_lw * 100\n    facts.append({\n        \"entity\": \"TOTAL\",\n        \"metric\": \"revenue\",\n        \"period\": \"WoW\",\n        \"value\": round(to_python(total_wow), 1),\n        \"formula\": \"(SUM(Revenue_TW) - SUM(Revenue_LW)) / SUM(Revenue_LW) * 100\"\n    })\n\n# 10. TOTAL YoY\nif total_revenue_ly > 0:\n    total_yoy = (total_revenue_tw - total_revenue_ly) / total_revenue_ly * 100\n    facts.append({\n        \"entity\": \"TOTAL\",\n        \"metric\": \"revenue\",\n        \"period\": \"YoY\",\n        \"value\": round(to_python(total_yoy), 1),\n        \"formula\": \"(SUM(Revenue_TW) - SUM(Revenue_LY)) / SUM(Revenue_LY) * 100\"\n    })\n\n# 11. TOTAL Units_TW\ntotal_units_tw = df['Units_TW'].sum()\nfacts.append({\n    \"entity\": \"TOTAL\",\n    \"metric\": \"units\",\n    \"period\": \"TW\",\n    \"value\": to_python(total_units_tw),\n    \"formula\": \"SUM(Units_TW)\"\n})\n\n# 12. TOTAL Orders_TW\ntotal_orders_tw = df['Orders_TW'].sum()\nfacts.append({\n    \"entity\": \"TOTAL\",\n    \"metric\": \"orders\",\n    \"period\": \"TW\",\n    \"value\": to_python(total_orders_tw),\n    \"formula\": \"SUM(Orders_TW)\"\n})\n\n# Limit to 25 facts\nfacts = facts[:25]\n\nprint(json.dumps(facts))\n```",
+    "input_tokens": 873,
+    "output_tokens": 1544,
+    "cost_usd": 0.008593,
+    "latency_s": 11.177,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   },
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a list of facts that were already computed from the sales table. Use only these facts. Every number in the note must come from a fact value, copied exactly or rounded (for example \u00a312,345.67 may be written as \u00a312.3k). Do not compute new numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W19. Entity type: product.\n\nFacts (JSON):\n[\n {\n  \"entity\": \"REGENCY CAKESTAND 3 TIER\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 4290.54,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"PARTY BUNTING\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 4021.56,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 2503.6,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"JUMBO BAG RED RETROSPOT\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 2339.73,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"SPOTTY BUNTING\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1971.47,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"SET/4 WHITE RETRO STORAGE CUBES\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 2093.0,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"LUNCH BAG DOILEY PATTERN\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 1337.6,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"JUMBO BAG PEARS\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 785.3,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"JUMBO BAG DOILEY PATTERNS\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 579.1,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"JUMBO BAG VINTAGE LEAF\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 509.2,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"COLOUR GLASS. STAR T-LIGHT HOLDER\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 1981.9,\n  \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n },\n {\n  \"entity\": \"CHILLI LIGHTS\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 1154.5,\n  \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n },\n {\n  \"entity\": \"JUMBO BAG RED RETROSPOT\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 981.6,\n  \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n },\n {\n  \"entity\": \"SET/4 WHITE RETRO STORAGE CUBES\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 717.1,\n  \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n },\n {\n  \"entity\": \"LUNCH BAG WOODLAND\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 211.8,\n  \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n },\n {\n  \"entity\": \"ASSORTED COLOURS SILK FAN\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 1618,\n  \"formula\": \"Units_TW\"\n },\n {\n  \"entity\": \"SMALL CERAMIC TOP STORAGE JAR\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 1616,\n  \"formula\": \"Units_TW\"\n },\n {\n  \"entity\": \"JUMBO BAG RED RETROSPOT\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 1206,\n  \"formula\": \"Units_TW\"\n },\n {\n  \"entity\": \"ASSORTED COLOUR BIRD ORNAMENT\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 1185,\n  \"formula\": \"Units_TW\"\n },\n {\n  \"entity\": \"LUNCH BAG DOILEY PATTERN\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 1157,\n  \"formula\": \"Units_TW\"\n },\n {\n  \"entity\": \"SPOTTY BUNTING\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 67,\n  \"formula\": \"Orders_TW\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 62,\n  \"formula\": \"Orders_TW\"\n },\n {\n  \"entity\": \"PARTY BUNTING\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 61,\n  \"formula\": \"Orders_TW\"\n },\n {\n  \"entity\": \"LUNCH BAG DOILEY PATTERN\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 60,\n  \"formula\": \"Orders_TW\"\n },\n {\n  \"entity\": \"JUMBO BAG RED RETROSPOT\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 55,\n  \"formula\": \"Orders_TW\"\n }\n]\n\nWrite the insight note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER generated the highest revenue TW at \u00a34,290.54, followed by PARTY BUNTING at \u00a34,021.56.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved \u00a32,503.60 in revenue TW and led order volume with 62 orders.\n- JUMBO BAG RED RETROSPOT delivered \u00a32,339.73 in revenue TW while selling 1,206 units, the third highest unit volume.\n- SET/4 WHITE RETRO STORAGE CUBES showed the strongest WoW growth at 2,093% increase in revenue.\n- COLOUR GLASS. STAR T-LIGHT HOLDER demonstrated exceptional YoY performance with 1,981.9% revenue growth.\n- ASSORTED COLOURS SILK FAN led unit sales TW with 1,618 units, closely followed by SMALL CERAMIC TOP STORAGE JAR at 1,616 units.\n- SPOTTY BUNTING generated 67 orders TW, the highest order count, while also contributing \u00a31,971.47 in revenue.\n- CHILLI LIGHTS showed strong YoY growth of 1,154.5%, indicating significant year-on-year revenue expansion.",
+    "input_tokens": 1941,
+    "output_tokens": 291,
+    "cost_usd": 0.0033959999999999997,
+    "latency_s": 3.821,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [
+   {
+    "attempt": 0,
+    "code": "import sys\nimport pandas as pd\nimport numpy as np\nimport json\n\n# Read CSV\ndf = pd.read_csv(sys.argv[1])\n\nfacts = []\n\n# Helper function to convert numpy types to Python types\ndef to_python(val):\n    if pd.isna(val):\n        return None\n    if isinstance(val, (np.integer, np.floating)):\n        return float(val)\n    return val\n\n# 1. Top 5 entities by Revenue_TW\ntop_revenue = df.nlargest(5, 'Revenue_TW')\nfor idx, row in top_revenue.iterrows():\n    facts.append({\n        \"entity\": row['Entity'],\n        \"metric\": \"revenue\",\n        \"period\": \"TW\",\n        \"value\": round(to_python(row['Revenue_TW']), 2),\n        \"formula\": \"Revenue_TW\"\n    })\n\n# 2. Top 5 entities by WoW_Pct (biggest week-over-week movers)\nwow_valid = df[df['WoW_Pct'].notna()].nlargest(5, 'WoW_Pct')\nfor idx, row in wow_valid.iterrows():\n    facts.append({\n        \"entity\": row['Entity'],\n        \"metric\": \"revenue\",\n        \"period\": \"WoW\",\n        \"value\": round(to_python(row['WoW_Pct']), 1),\n        \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n    })\n\n# 3. Top 5 entities by YoY_Pct (biggest year-over-year movers)\nyoy_valid = df[df['YoY_Pct'].notna()].nlargest(5, 'YoY_Pct')\nfor idx, row in yoy_valid.iterrows():\n    facts.append({\n        \"entity\": row['Entity'],\n        \"metric\": \"revenue\",\n        \"period\": \"YoY\",\n        \"value\": round(to_python(row['YoY_Pct']), 1),\n        \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n    })\n\n# 4. Top 5 entities by Units_TW\ntop_units = df.nlargest(5, 'Units_TW')\nfor idx, row in top_units.iterrows():\n    facts.append({\n        \"entity\": row['Entity'],\n        \"metric\": \"units\",\n        \"period\": \"TW\",\n        \"value\": to_python(row['Units_TW']),\n        \"formula\": \"Units_TW\"\n    })\n\n# 5. Top 5 entities by Orders_TW\ntop_orders = df.nlargest(5, 'Orders_TW')\nfor idx, row in top_orders.iterrows():\n    facts.append({\n        \"entity\": row['Entity'],\n        \"metric\": \"orders\",\n        \"period\": \"TW\",\n        \"value\": to_python(row['Orders_TW']),\n        \"formula\": \"Orders_TW\"\n    })\n\n# 6. TOTAL Revenue_TW\ntotal_revenue_tw = df['Revenue_TW'].sum()\nfacts.append({\n    \"entity\": \"TOTAL\",\n    \"metric\": \"revenue\",\n    \"period\": \"TW\",\n    \"value\": round(to_python(total_revenue_tw), 2),\n    \"formula\": \"SUM(Revenue_TW)\"\n})\n\n# 7. TOTAL Revenue_LW\ntotal_revenue_lw = df['Revenue_LW'].sum()\nfacts.append({\n    \"entity\": \"TOTAL\",\n    \"metric\": \"revenue\",\n    \"period\": \"LW\",\n    \"value\": round(to_python(total_revenue_lw), 2),\n    \"formula\": \"SUM(Revenue_LW)\"\n})\n\n# 8. TOTAL Revenue_LY\ntotal_revenue_ly = df['Revenue_LY'].sum()\nfacts.append({\n    \"entity\": \"TOTAL\",\n    \"metric\": \"revenue\",\n    \"period\": \"LY\",\n    \"value\": round(to_python(total_revenue_ly), 2),\n    \"formula\": \"SUM(Revenue_LY)\"\n})\n\n# 9. TOTAL WoW\nif total_revenue_lw > 0:\n    total_wow = (total_revenue_tw - total_revenue_lw) / total_revenue_lw * 100\n    facts.append({\n        \"entity\": \"TOTAL\",\n        \"metric\": \"revenue\",\n        \"period\": \"WoW\",\n        \"value\": round(to_python(total_wow), 1),\n        \"formula\": \"(SUM(Revenue_TW) - SUM(Revenue_LW)) / SUM(Revenue_LW) * 100\"\n    })\n\n# 10. TOTAL YoY\nif total_revenue_ly > 0:\n    total_yoy = (total_revenue_tw - total_revenue_ly) / total_revenue_ly * 100\n    facts.append({\n        \"entity\": \"TOTAL\",\n        \"metric\": \"revenue\",\n        \"period\": \"YoY\",\n        \"value\": round(to_python(total_yoy), 1),\n        \"formula\": \"(SUM(Revenue_TW) - SUM(Revenue_LY)) / SUM(Revenue_LY) * 100\"\n    })\n\n# 11. TOTAL Units_TW\ntotal_units_tw = df['Units_TW'].sum()\nfacts.append({\n    \"entity\": \"TOTAL\",\n    \"metric\": \"units\",\n    \"period\": \"TW\",\n    \"value\": to_python(total_units_tw),\n    \"formula\": \"SUM(Units_TW)\"\n})\n\n# 12. TOTAL Orders_TW\ntotal_orders_tw = df['Orders_TW'].sum()\nfacts.append({\n    \"entity\": \"TOTAL\",\n    \"metric\": \"orders\",\n    \"period\": \"TW\",\n    \"value\": to_python(total_orders_tw),\n    \"formula\": \"SUM(Orders_TW)\"\n})\n\n# Limit to 25 facts\nfacts = facts[:25]\n\nprint(json.dumps(facts))\n",
+    "error": "",
+    "stdout": "\": \"revenue\", \"period\": \"WoW\", \"value\": 509.2, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"COLOUR GLASS. STAR T-LIGHT HOLDER\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": 1981.9, \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"}, {\"entity\": \"CHILLI LIGHTS\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": 1154.5, \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"}, {\"entity\": \"JUMBO BAG RED RETROSPOT\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": 981.6, \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"}, {\"entity\": \"SET/4 WHITE RETRO STORAGE CUBES\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": 717.1, \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"}, {\"entity\": \"LUNCH BAG WOODLAND\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": 211.8, \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"}, {\"entity\": \"ASSORTED COLOURS SILK FAN\", \"metric\": \"units\", \"period\": \"TW\", \"value\": 1618, \"formula\": \"Units_TW\"}, {\"entity\": \"SMALL CERAMIC TOP STORAGE JAR\", \"metric\": \"units\", \"period\": \"TW\", \"value\": 1616, \"formula\": \"Units_TW\"}, {\"entity\": \"JUMBO BAG RED RETROSPOT\", \"metric\": \"units\", \"period\": \"TW\", \"value\": 1206, \"formula\": \"Units_TW\"}, {\"entity\": \"ASSORTED COLOUR BIRD ORNAMENT\", \"metric\": \"units\", \"period\": \"TW\", \"value\": 1185, \"formula\": \"Units_TW\"}, {\"entity\": \"LUNCH BAG DOILEY PATTERN\", \"metric\": \"units\", \"period\": \"TW\", \"value\": 1157, \"formula\": \"Units_TW\"}, {\"entity\": \"SPOTTY BUNTING\", \"metric\": \"orders\", \"period\": \"TW\", \"value\": 67, \"formula\": \"Orders_TW\"}, {\"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\", \"metric\": \"orders\", \"period\": \"TW\", \"value\": 62, \"formula\": \"Orders_TW\"}, {\"entity\": \"PARTY BUNTING\", \"metric\": \"orders\", \"period\": \"TW\", \"value\": 61, \"formula\": \"Orders_TW\"}, {\"entity\": \"LUNCH BAG DOILEY PATTERN\", \"metric\": \"orders\", \"period\": \"TW\", \"value\": 60, \"formula\": \"Orders_TW\"}, {\"entity\": \"JUMBO BAG RED RETROSPOT\", \"metric\": \"orders\", \"period\": \"TW\", \"value\": 55, \"formula\": \"Orders_TW\"}]\n"
+   }
+  ],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "facts": [
+   {
+    "entity": "REGENCY CAKESTAND 3 TIER",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 4290.54,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "PARTY BUNTING",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 4021.56,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 2503.6,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "JUMBO BAG RED RETROSPOT",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 2339.73,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "SPOTTY BUNTING",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1971.47,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "SET/4 WHITE RETRO STORAGE CUBES",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 2093.0,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "LUNCH BAG DOILEY PATTERN",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 1337.6,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "JUMBO BAG PEARS",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 785.3,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "JUMBO BAG DOILEY PATTERNS",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 579.1,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "JUMBO BAG VINTAGE LEAF",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 509.2,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "COLOUR GLASS. STAR T-LIGHT HOLDER",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 1981.9,
+    "formula": "(Revenue_TW - Revenue_LY) / Revenue_LY * 100"
+   },
+   {
+    "entity": "CHILLI LIGHTS",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 1154.5,
+    "formula": "(Revenue_TW - Revenue_LY) / Revenue_LY * 100"
+   },
+   {
+    "entity": "JUMBO BAG RED RETROSPOT",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 981.6,
+    "formula": "(Revenue_TW - Revenue_LY) / Revenue_LY * 100"
+   },
+   {
+    "entity": "SET/4 WHITE RETRO STORAGE CUBES",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 717.1,
+    "formula": "(Revenue_TW - Revenue_LY) / Revenue_LY * 100"
+   },
+   {
+    "entity": "LUNCH BAG WOODLAND",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 211.8,
+    "formula": "(Revenue_TW - Revenue_LY) / Revenue_LY * 100"
+   },
+   {
+    "entity": "ASSORTED COLOURS SILK FAN",
+    "metric": "units",
+    "period": "TW",
+    "value": 1618,
+    "formula": "Units_TW"
+   },
+   {
+    "entity": "SMALL CERAMIC TOP STORAGE JAR",
+    "metric": "units",
+    "period": "TW",
+    "value": 1616,
+    "formula": "Units_TW"
+   },
+   {
+    "entity": "JUMBO BAG RED RETROSPOT",
+    "metric": "units",
+    "period": "TW",
+    "value": 1206,
+    "formula": "Units_TW"
+   },
+   {
+    "entity": "ASSORTED COLOUR BIRD ORNAMENT",
+    "metric": "units",
+    "period": "TW",
+    "value": 1185,
+    "formula": "Units_TW"
+   },
+   {
+    "entity": "LUNCH BAG DOILEY PATTERN",
+    "metric": "units",
+    "period": "TW",
+    "value": 1157,
+    "formula": "Units_TW"
+   },
+   {
+    "entity": "SPOTTY BUNTING",
+    "metric": "orders",
+    "period": "TW",
+    "value": 67,
+    "formula": "Orders_TW"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "orders",
+    "period": "TW",
+    "value": 62,
+    "formula": "Orders_TW"
+   },
+   {
+    "entity": "PARTY BUNTING",
+    "metric": "orders",
+    "period": "TW",
+    "value": 61,
+    "formula": "Orders_TW"
+   },
+   {
+    "entity": "LUNCH BAG DOILEY PATTERN",
+    "metric": "orders",
+    "period": "TW",
+    "value": 60,
+    "formula": "Orders_TW"
+   },
+   {
+    "entity": "JUMBO BAG RED RETROSPOT",
+    "metric": "orders",
+    "period": "TW",
+    "value": 55,
+    "formula": "Orders_TW"
+   }
+  ],
+  "n_calls": 2,
+  "tokens_in": 2814,
+  "tokens_out": 1835,
+  "cost_usd": 0.011989,
+  "latency_s": 14.998
+ }
+}

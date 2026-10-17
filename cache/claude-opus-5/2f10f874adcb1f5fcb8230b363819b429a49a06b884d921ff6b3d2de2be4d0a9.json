@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led TW at £4,554.09, up 85.4 percent WoW from £2,456.32 LW, on 391 units TW versus 178 LW; no LY figure is available.\n- The top three products TW, REGENCY CAKESTAND 3 TIER, WHITE HANGING HEART T-LIGHT HOLDER (£3,214.95) and JUMBO BAG RED RETROSPOT (£2,489.35), together hold 27.7 percent of TW revenue across the 26 rows.\n- The 26 listed products total £36,893.26 TW versus £16,723.02 LW, a WoW increase of 120.6 percent; YoY is not calculable because LY revenue is blank for all 26 rows.\n- Seven JUMBO BAG lines sum to £9,170.67 TW, 24.9 percent of TW revenue, led by JUMBO BAG RED RETROSPOT at £2,489.35 TW versus £1,392.22 LW (+78.8 percent WoW).\n- ASSORTED COLOURS SILK FAN is the only decliner, at £960.95 TW versus £1,011.52 LW (-5.0 percent WoW), with units down to 1,333 TW from 1,571 LW.\n- LARGE RED SPOT WINDMILL posted £1,332.00 TW from £0.00 LW, recorded on 720 units and 1 order TW versus 0 orders LW.\n- CHILDS BREAKFAST SET DOLLY GIRL rose 9,039.0 percent WoW to £909.33 TW from £9.95 LW, and CHILDS BREAKFAST SET SPACEBOY rose 3,144.7 percent WoW to £968.55 TW from £29.85 LW.\n- PAPER CHAIN KIT SKULLS reached £1,445.70 TW versus £35.40 LW (+3,983.9 percent WoW) on 3 orders TW, while PAPER CHAIN KIT RETRO SPOT reached £1,573.81 TW versus £194.74 LW (+708.2 percent WoW) on 12 orders TW.",
+ "input_tokens": 2518,
+ "output_tokens": 1764,
+ "cost_usd": 0.056690000000000004,
+ "latency_s": 19.552,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

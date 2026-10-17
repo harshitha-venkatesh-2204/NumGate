@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue TW reached £60.7k, down 6.3% WoW from £64.8k LW, indicating a softer week in overall sales performance.\n- REGENCY CAKESTAND 3 TIER led revenue TW with £5.9k across 49 orders, making it the top-performing product by value.\n- WHITE HANGING HEART T-LIGHT HOLDER generated £4.3k TW from 1,529 units sold in 68 orders, the highest order count of any product.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN showed exceptional momentum with 2,569 units sold TW and an 8,063% WoW revenue increase.\n- PHOTO CUBE demonstrated strong YoY growth of 36,541% TW compared to LY, with 937 units sold this week.\n- HOT WATER BOTTLE BABUSHKA contributed £2.2k TW, reflecting continued demand for seasonal gift items during week 50.\n- Total revenue TW of £60.7k represents 93.2% growth YoY from £31.5k LY, showing substantial year-on-year improvement.\n- HAND WARMER BABUSHKA DESIGN achieved 2,006 units sold TW across 63 orders, ranking second in unit volume behind the flytrap product.",
+ "input_tokens": 1926,
+ "output_tokens": 317,
+ "cost_usd": 0.0035110000000000002,
+ "latency_s": 4.229,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

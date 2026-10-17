@@ -1,0 +1,42 @@
+{
+ "note_id": "medium_product_2011-W41__S4__claude-sonnet-5__r2",
+ "table_id": "medium_product_2011-W41",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2011-W41",
+ "n_rows": 40,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- Total revenue for ISO week 2011-W41 was \u00a344,269.00 TW versus \u00a359,718.06 LW, a WoW change of -25.9%, and versus \u00a344,269.00 TW YoY change of +49.9%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with revenue \u00a32,729.22 TW, a 6.2% share TW, and a WoW change of -44.1%.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 2 with revenue \u00a32,342.01 TW, a 5.3% share TW, a WoW change of -13.5%, and the most orders at 53 TW versus 52 LW.\n- FELTCRAFT DOLL MOLLY ranked 3 with revenue \u00a32,289.28 TW, a 5.2% share TW, a WoW change of -37.6%, and also recorded the largest YoY increase of +934.6% versus \u00a3221.28 LY.\n- PAPER LANTERN 9 POINT DELUXE STAR recorded the largest WoW increase of +1841.1%, with revenue of \u00a31,419.90 TW versus \u00a373.15 LW.\n- JUMBO BAG PINK POLKADOT recorded the largest WoW decrease of -71.9%, with revenue of \u00a3850.91 TW versus \u00a33,027.97 LW.\n- ASSORTED COLOUR BIRD ORNAMENT recorded the largest YoY decrease of -79.6%, with revenue of \u00a33,476.13 LY.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W41. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a344,269.00 TW, revenue \u00a359,718.06 LW, revenue change -25.9% WoW, revenue change +49.9% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a32,729.22 TW, share 6.2% TW, revenue change -44.1% WoW\n- PAPER CHAIN KIT 50'S CHRISTMAS: rank 2, revenue \u00a32,342.01 TW, share 5.3% TW, revenue change -13.5% WoW\n- FELTCRAFT DOLL MOLLY: rank 3, revenue \u00a32,289.28 TW, share 5.2% TW, revenue change -37.6% WoW\n- PAPER LANTERN 9 POINT DELUXE STAR (largest WoW increase): revenue change +1841.1% WoW, revenue \u00a31,419.90 TW versus \u00a373.15 LW\n- JUMBO BAG PINK POLKADOT (largest WoW decrease): revenue change -71.9% WoW, revenue \u00a3850.91 TW versus \u00a33,027.97 LW\n- FELTCRAFT DOLL MOLLY (largest YoY increase): revenue change +934.6% YoY, revenue \u00a3221.28 LY\n- ASSORTED COLOUR BIRD ORNAMENT (largest YoY decrease): revenue change -79.6% YoY, revenue \u00a33,476.13 LY\n- PAPER CHAIN KIT 50'S CHRISTMAS (most orders): orders 53 TW versus 52 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue for ISO week 2011-W41 was \u00a344,269.00 TW versus \u00a359,718.06 LW, a WoW change of -25.9%, and versus \u00a344,269.00 TW YoY change of +49.9%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with revenue \u00a32,729.22 TW, a 6.2% share TW, and a WoW change of -44.1%.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 2 with revenue \u00a32,342.01 TW, a 5.3% share TW, a WoW change of -13.5%, and the most orders at 53 TW versus 52 LW.\n- FELTCRAFT DOLL MOLLY ranked 3 with revenue \u00a32,289.28 TW, a 5.2% share TW, a WoW change of -37.6%, and also recorded the largest YoY increase of +934.6% versus \u00a3221.28 LY.\n- PAPER LANTERN 9 POINT DELUXE STAR recorded the largest WoW increase of +1841.1%, with revenue of \u00a31,419.90 TW versus \u00a373.15 LW.\n- JUMBO BAG PINK POLKADOT recorded the largest WoW decrease of -71.9%, with revenue of \u00a3850.91 TW versus \u00a33,027.97 LW.\n- ASSORTED COLOUR BIRD ORNAMENT recorded the largest YoY decrease of -79.6%, with revenue of \u00a33,476.13 LY.",
+    "input_tokens": 871,
+    "output_tokens": 505,
+    "cost_usd": 0.006791999999999999,
+    "latency_s": 4.465,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a344,269.00 TW, revenue \u00a359,718.06 LW, revenue change -25.9% WoW, revenue change +49.9% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a32,729.22 TW, share 6.2% TW, revenue change -44.1% WoW\n- PAPER CHAIN KIT 50'S CHRISTMAS: rank 2, revenue \u00a32,342.01 TW, share 5.3% TW, revenue change -13.5% WoW\n- FELTCRAFT DOLL MOLLY: rank 3, revenue \u00a32,289.28 TW, share 5.2% TW, revenue change -37.6% WoW\n- PAPER LANTERN 9 POINT DELUXE STAR (largest WoW increase): revenue change +1841.1% WoW, revenue \u00a31,419.90 TW versus \u00a373.15 LW\n- JUMBO BAG PINK POLKADOT (largest WoW decrease): revenue change -71.9% WoW, revenue \u00a3850.91 TW versus \u00a33,027.97 LW\n- FELTCRAFT DOLL MOLLY (largest YoY increase): revenue change +934.6% YoY, revenue \u00a3221.28 LY\n- ASSORTED COLOUR BIRD ORNAMENT (largest YoY decrease): revenue change -79.6% YoY, revenue \u00a33,476.13 LY\n- PAPER CHAIN KIT 50'S CHRISTMAS (most orders): orders 53 TW versus 52 LW",
+  "n_calls": 1,
+  "tokens_in": 871,
+  "tokens_out": 505,
+  "cost_usd": 0.006791999999999999,
+  "latency_s": 4.465
+ }
+}

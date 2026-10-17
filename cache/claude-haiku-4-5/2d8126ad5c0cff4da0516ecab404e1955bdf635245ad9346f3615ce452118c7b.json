@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £68,686.56 TW, up 36.6% WoW from £50,270.15 LW.\n- REGENCY CAKESTAND 3 TIER generated £4,443.21 TW with a 6.5% share TW, ranking as the top product with a 28.5% WoW increase.\n- PARTY BUNTING achieved £2,495.37 TW revenue TW with a 3.6% share TW and the second-highest rank, growing 55.9% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked third with £1,961.04 TW revenue TW and a 2.9% share TW, despite declining 13.2% WoW.\n- GIANT BLACK SUNGLASSES experienced the largest WoW surge, increasing 33823.1% from £3.90 LW to £1,323.00 TW.\n- PLEASE ONE PERSON METAL SIGN recorded the largest WoW decline, falling 70.7% from £1,506.00 LW to £441.39 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the most orders at 60 TW compared to 45 LW.",
+ "input_tokens": 564,
+ "output_tokens": 304,
+ "cost_usd": 0.002084,
+ "latency_s": 3.106,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

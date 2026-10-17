@@ -115,6 +115,8 @@ From `python src/estimate_cost.py` (60 tables x 4 strategies x 2 repeats = 480 n
 
 The Opus figure assumes about 1,500 thinking tokens per call, because Opus 5 thinks by default; this is the least certain input. Run one real model on the smoke set first (24 notes, well under a dollar for gpt-4.1 or llama) and compare `cost_usd` in its `notes.csv` with the estimate. The default cap of $20 stops the full run early; set `MAX_BUDGET_USD=70` for the full run.
 
+The full study that was actually run used three Anthropic writers instead (claude-opus-5, claude-sonnet-5, claude-haiku-4-5) with a $60 cap; it was billed USD 39.86 for generation and claim extraction (see below).
+
 ## Smoke-run results (mock model)
 
 `python src/run_experiment.py --smoke`: 6 tables (2 per size), 4 strategies, 2 repeats, 48 notes. These numbers come from the mock model's planted error rates. They show the pipeline works, not anything about real LLMs.
@@ -139,13 +141,33 @@ On the mock S1 notes the gate flagged 24 of 24 lines that contained a planted er
 | S3 Write-then-verify | 514 | 0.0% | 0.0% | 0.0% | $0.053 |
 | S4 Facts-template | 296 | 0.0% | 0.0% | 0.0% | $0.015 |
 
-Every flag was checked by hand: the 3 unsupported numbers (and the matching 3 wrong group claims) are real Opus errors, all in one sentence that misreports a product-family total. The first version of the gate reported a 9.3 percent claim error rate on these same notes; at least 97 percent of its 110 claim flags were the gate misreading correct sentences (group totals, the extractor mislabelling periods, directions applied to levels, ambiguous short names). The fixes are described in docs/method.md, the regression cases are in tests/test_number_gate.py, and `paper/rescore_v1.py` reproduces the comparison.
+Every flag was checked against the tables (with AI assistance and programmatic cell lookups, not a human audit): the 3 unsupported numbers (and the matching 3 wrong group claims) are real Opus errors, all in one sentence that misreports a product-family total. The first version of the gate reported a 9.3 percent claim error rate on these same notes; at least 97 percent of its 110 claim flags were the gate misreading correct sentences (group totals, the extractor mislabelling periods, directions applied to levels, ambiguous short names). The fixes are described in docs/method.md, the regression cases are in tests/test_number_gate.py, and `paper/rescore_v1.py` reproduces the comparison.
+
+## Full study (pre-registered; Claude Opus 5, Sonnet 5, Haiku 4.5)
+
+`runs/full`: 60 tables, 4 strategies, 2 repeats, 3 writers, 1,440 notes, 44,087 checked numbers, billed USD 39.86. The analysis plan (`paper/preregistration.md`) was committed before any note was generated, with gate v3 frozen by checksum. The primary set is the 54 tables the pilot did not use.
+
+Every gate flag, plus a seeded sample of 500 unflagged numbers, was reviewed blind: each item showed only the note, the number and the table, never the writer, strategy or gate verdict. Two reviewers worked independently and a third settled disagreements. The reviewers were Claude agents that recomputed every number from the table with pandas. They are not people, and a human spot check is still to do. The first two reviewers agreed on 99.5% of 843 items. Results on the primary set:
+
+| writer | numbers checked | gate flags | confirmed errors | gate precision |
+|---|---|---|---|---|
+| Claude Opus 5 | 15,215 | 0.62% | 0.22% (34) | 35.8% |
+| Claude Sonnet 5 | 12,789 | 0.72% | 0.05% (7) | 7.6% |
+| Claude Haiku 4.5 | 11,896 | 1.09% | 0.47% (56) | 43.1% |
+
+- Only 97 of the gate's 317 flags were real errors. None of the 451 sampled unflagged numbers was wrong (95% upper bound 0.8%).
+- Raw gate rates rank Sonnet 5 below Opus 5, but confirmed errors reverse the order. Most of Sonnet 5's false alarms (50 of 62 at Level 1) come from one phrasing that gate v3 misreads: "£5735.62, down from LW £9020.33" (the level is signed negative).
+- Write-then-verify (S3) and the facts template (S4) cut confirmed errors relative to direct writing for Opus 5 and Haiku 4.5 (Holm p ≤ 0.018).
+- Compute-then-write (S2) raised Opus 5's errors by 0.90 points. Its model-written facts script rounded money changes to one decimal and labelled the smallest rise "largest drop", and the writer copied both into the note.
+- Hypotheses: H4 (Haiku 4.5 errs more than Opus 5 under S1) supported; H1 and H2 partly supported; H3 (more errors on large tables) not supported.
+
+`python paper/full_study.py` regenerates every full-study number, table and macro in the paper. The review inputs and outputs are in `paper/adjudication/`: items, unblinding key, guide, workflow, every reviewer verdict with its computation, and the error-kind labels.
 
 ## Status of this build
 
 - Verified: table build (60 tables, all derived columns recompute), 58 passing tests (including three planted errors flagged exactly and a planted wrong-entity claim labelled Wrong_entity), smoke run end to end, report and paper numbers, audit scripts, cache hits and budget stop (tests with a priced mock model), credential preflight.
-- Real run: Claude Opus 5 on the smoke set (above), with Claude Haiku 4.5 as the claim extractor. The OpenAI and OpenRouter paths are wired but have not made a paid call yet. The runner checks credentials first and exits before any call if a key is missing.
-- Held-out results (fresh notes the gate was never revised on): gate v2 on set 1 raised false alarms on 6.2% of correct numbers and 4.0% of correct claims; gate v3 on set 2 (`paper/heldout2/`, frozen by checksum, ground truth audited 140/140) raised 1.6% and 2.2%, caught 89% of wrong values at Level 1 and 95% of wrong claims at Level 2. At the Opus pilot's true error rate (0.18%) that still means only about 9% of Level 1 flags would be real errors, so flags should be confirmed by a person.
+- Real runs: Claude Opus 5 on the smoke set, and the pre-registered full study with Opus 5, Sonnet 5 and Haiku 4.5 (above), with Claude Haiku 4.5 as the claim extractor. The OpenAI and OpenRouter paths are wired but have not made a paid call yet. The runner checks credentials first and exits before any call if a key is missing.
+- Held-out results (fresh notes the gate was never revised on): gate v2 on set 1 raised false alarms on 6.2% of correct numbers and 4.0% of correct claims; gate v3 on set 2 (`paper/heldout2/`, frozen by checksum, ground truth audited 140/140) raised 1.6% and 2.2%, caught 89% of wrong values at Level 1 and 95% of wrong claims at Level 2. At the Opus pilot's true error rate (0.18%) that still means only about 9% of Level 1 flags would be real errors, so flags should be confirmed by review.
 - Gate versions: v1 (built on the mock model; kept in `paper/v1/`), v2 (revised on the Opus pilot's flags; kept in `paper/v2/`, measured by held-out set 1), v3 (the current `src/number_gate.py`, revised on held-out set 1 and the pilot adjudication, frozen and measured by held-out set 2 in `paper/heldout2/`).
 - Gate stress tests (`paper/stress/`): on 379 hand-labelled numbers and 203 hand-labelled claims written in varied LLM styles, Level 1 raised 2 false alarms on 291 correct numbers and caught 61 of 88 wrong numbers (most of the 27 misses are real cells attached to the wrong row or period, which is Level 2's job); Level 2 raised no false alarms and detected all 49 wrong claims. The fixes were tuned on these items, so treat them as a regression suite, not an unbiased accuracy estimate; the human audit is the real test.
 - Paper: `paper/numgate.tex` (LaTeX) and `paper/numgate.pdf`. `python paper/make_numbers.py` regenerates every number in it from the runs, and `python paper/build_pdf.py` typesets the PDF without a LaTeX installation (needs `pip install -r paper/requirements.txt`).
@@ -199,7 +221,7 @@ Gate and statistics
 - **The gate can miss paraphrased numbers.** Numbers written as words ("doubled", "a third", "two-fold") are not extracted, so they are neither supported nor flagged.
 - **Finite operation library.** A correct derived number outside the library (for example a multi-week average) is labelled Unsupported. In large tables a wrong number can coincide with an unrelated cell and pass Level 1; Level 2 catches this only when the claim names an entity.
 - **Extractor model errors.** Level 2 depends on the claim extractor. A wrong entity or period from the extractor produces a false Wrong_* label. The rule-based extractor is tuned to the mock model's phrasing and should not be used to score real models.
-- **S3 is scored by the gate it optimizes against.** Its Level 1 rate is biased low by construction; compare strategies on the Level 2 claim error rate and the human audit.
+- **S3 is scored by the gate it optimizes against.** Its Level 1 rate is biased low by construction; compare strategies on the confirmed error rate from the blind review (and, eventually, a human audit).
 - **Strict rounding.** Truncated values cited without k or M count as unsupported.
-- **The mock check is not validation.** Gate precision and recall on real notes must come from the human audit (`make_audit_sample.py`, `score_audit.py`).
+- **The mock check is not validation.** Gate precision and recall on real notes must come from review of real notes: the full study's blind review (`paper/adjudication/`) and, still to do, a human audit (`make_audit_sample.py`, `score_audit.py`).
 - **Sampling.** Opus 5 cannot run at temperature 0, so its repeats vary more than the other models'.

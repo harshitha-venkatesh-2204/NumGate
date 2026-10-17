@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 in TW revenue at £6552.99, down 8.3% WoW from £7144.93 LW, holding 18.6% share.\n- WHITE HANGING HEART T-LIGHT HOLDER rose 125.6% WoW to £5999.53 TW from £2659.73 LW, ranking 2 with 17.1% share.\n- PAPER CHAIN KIT 50'S CHRISTMAS fell 36.4% WoW to £5735.62 TW from £9020.33 LW, ranking 3 with 16.3% share.\n- HOT WATER BOTTLE BABUSHKA grew 113.1% WoW to £3215.95 TW from £1509.10 LW, ranking 4 with 9.1% share.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS dropped 34.0% WoW to £2500.80 TW from £3791.87 LW, ranking 5.\n- HOT WATER BOTTLE TEA AND SYMPATHY increased 82.8% WoW to £2459.61 TW from £1345.84 LW, ranking 6.\n- HAND WARMER SCOTTY DOG DESIGN declined 29.1% WoW to £2126.08 TW from £2998.66 LW, ranking 10 with 6.0% share.\n- JUMBO BAG RED RETROSPOT edged up 1.5% WoW to £2221.19 TW from £2189.34 LW, with 64 orders TW versus 62 LW.",
+ "input_tokens": 1414,
+ "output_tokens": 525,
+ "cost_usd": 0.008078,
+ "latency_s": 4.382,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

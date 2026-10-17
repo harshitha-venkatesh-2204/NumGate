@@ -1,0 +1,10 @@
+{
+ "text": "- EMPIRE DESIGN ROSETTE ranked 1 at £3,277.92 TW on 3,966 units across 2 orders, up from £12.50 in both LW and LY (WoW and YoY +26,123.4%), taking a 4.9% share.\n- REGENCY CAKESTAND 3 TIER ranked 2 at £2,529.33 TW versus £4,651.74 LW (WoW -45.6%), with units at 204 TW against 400 LW and orders flat at 33 in both weeks.\n- ASSORTED COLOUR MINI CASES reached £1,551.15 TW versus £71.55 LW (WoW +2,067.9%) and £147.75 LY (YoY +949.8%), with 241 units TW against 9 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER posted £1,119.63 TW versus £1,000.83 LW (WoW +11.9%) and £2,501.43 LY (YoY -55.2%), on 401 units TW across 37 orders.\n- VINTAGE UNION JACK BUNTING at £1,111.39 TW was WoW -7.4% from £1,200.77 and YoY +59.5% from £697.00, while PARTY BUNTING at £859.79 TW was WoW -5.3% and YoY +120.3%.\n- The steepest WoW declines among the top 50 were CHILLI LIGHTS at £487.56 TW versus £1,588.33 LW (-69.3%), JUMBO STORAGE BAG SUKI at £328.92 versus £948.16 LW (-65.3%, YoY -20.4%), and JAM MAKING SET WITH JARS at £502.74 versus £1,332.70 LW (-62.3%).\n- Three lines recorded £0.00 LW and sold TW: CHILDRENS CUTLERY POLKADOT GREEN £357.14 on 92 units, RUSTIC SEVENTEEN DRAWER SIDEBOARD £330.00 on 2 units, and CAMOUFLAGE DESIGN TEDDY £302.40 on 144 units in 1 order.\n- WOOD BLACK BOARD ANT WHITE FINISH ranked 140 at £256.63 TW versus £313.05 LW (WoW -18.0%), holding a 0.4% share of TW revenue.",
+ "input_tokens": 12272,
+ "output_tokens": 1127,
+ "cost_usd": 0.089535,
+ "latency_s": 12.415,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

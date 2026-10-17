@@ -1,0 +1,10 @@
+{
+ "text": "- PLEASE ONE PERSON METAL SIGN led TW at £2,773.43 on 1,398 units and 41 orders, up 3,286.4% WoW from £81.90 and up 359.2% YoY from £603.92, taking a 4.2% share.\n- PARTY BUNTING ranked 2 at £1,825.40 TW versus £1,410.09 LW (+29.5% WoW) and £31.72 LY (+5,654.7% YoY), with orders down from 34 LW to 30 TW.\n- REGENCY CAKESTAND 3 TIER posted £1,825.17 TW against £1,991.04 LW (-8.3% WoW) and £3,712.01 LY (-50.8% YoY), despite units rising from 147 LW to 150 TW.\n- Cold-weather lines moved up: HAND WARMER OWL DESIGN £1,611.60 TW (+416.7% WoW, +2,458.1% YoY), HOT WATER BOTTLE KEEP CALM £1,198.31 TW (+72.8% WoW) and LOVE HOT WATER BOTTLE £1,046.40 TW (+155.1% WoW).\n- Other metal signs climbed sharply TW: COOK WITH WINE £1,415.04 (+2,621.2% WoW), HOT BATHS £1,062.17 (+1,159.7% WoW), GIN + TONIC DIET £791.53 (+1,731.8% WoW) and BEWARE OF THE CAT £620.84 (+3,836.8% WoW).\n- Christmas stock split two ways: PAPER CHAIN KIT 50'S CHRISTMAS reached £1,347.29 TW (+159.0% WoW, +3,705.9% YoY) while PAPER CHAIN KIT VINTAGE CHRISTMAS fell to £442.60 TW (-33.5% WoW).\n- WOOD BLACK BOARD ANT WHITE FINISH dropped to £489.41 TW from £2,057.46 LW (-76.2% WoW) on 63 units versus 370 LW, and remains +99.1% YoY against £245.77.\n- Four items recorded £0.00 LW and sales TW: LADIES & GENTLEMEN METAL SIGN £924.90, HAND OVER THE CHOCOLATE SIGN £839.99, YOU'RE CONFUSING ME METAL SIGN £591.92, and TRAY, BREAKFAST IN BED £591.30 from a single order.",
+ "input_tokens": 7441,
+ "output_tokens": 1604,
+ "cost_usd": 0.077305,
+ "latency_s": 17.179,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT ranks 1 with TW revenue of £10,739.38 versus LW £57.82, a WoW change of 18,473.8%, and 9.8% share of TW revenue.\n- ALARM CLOCK BAKELIKE RED posted TW revenue of £2,423.41, up 610.8% WoW from LW £340.94 and up 307.3% YoY from LY £595.04.\n- CHILLI LIGHTS recorded TW revenue of £2,285.12, up 221.7% WoW from LW £710.37 and up 123.7% YoY from LY £1,021.67.\n- PAPER CHAIN KIT 50'S CHRISTMAS reached TW revenue of £2,264.16, up 1.9% WoW from LW £2,222.96 and up 58.1% YoY from LY £1,432.05.\n- REGENCY CAKESTAND 3 TIER fell to TW revenue of £1,679.31, down 47.6% WoW from LW £3,205.71 and down 77.8% YoY from LY £7,558.58.\n- LANDMARK FRAME OXFORD STREET dropped to TW revenue of £418.90, down 88.8% WoW from LW £3,753.90, with TW orders at 14 versus LW orders at 13.\n- COLOUR GLASS. STAR T-LIGHT HOLDER posted TW revenue of £2,062.35, up 560.9% WoW from LW £312.07 but down 47.3% YoY from LY £3,915.56.\n- WHITE HANGING HEART T-LIGHT HOLDER generated TW revenue of £1,271.33, up 84.3% WoW from LW £689.94 but down 69.5% YoY from LY £4,173.55.",
+ "input_tokens": 10482,
+ "output_tokens": 595,
+ "cost_usd": 0.026914,
+ "latency_s": 5.204,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

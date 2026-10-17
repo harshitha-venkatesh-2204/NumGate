@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £103,744.81 TW versus £117,975.95 LW, a WoW change of -12.1%.\n- Total revenue change YoY was +23.4% TW versus LY.\n- United Kingdom ranked 1 with revenue £89,759.37 TW, representing 86.5% share TW, a WoW change of -15.9%.\n- Japan ranked 2 with revenue £5,735.24 TW, representing 5.5% share TW, the largest WoW increase at +12485.6%, up from £45.57 LW.\n- Germany ranked 3 with revenue £2,840.80 TW, representing 2.7% share TW, a WoW change of -27.0%.\n- France recorded the largest WoW decrease at -85.1%, falling to £852.44 TW from £5,710.94 LW.\n- United Kingdom recorded the largest YoY increase at +20.5%, rising from £74,480.20 LY.\n- France recorded the largest YoY decrease at -82.3%, down from £4,804.52 LY, and United Kingdom logged the most orders at 204 TW versus 263 LW.",
+ "input_tokens": 741,
+ "output_tokens": 370,
+ "cost_usd": 0.005182,
+ "latency_s": 3.911,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £88.5k vs LW £60.8k, WoW up 45.6%.\n- TOTAL units TW 51,065 vs implied LW, WoW up 105.8%.\n- TOTAL orders TW 2,019, WoW up 4.7%.\n- REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue £6.0k, 6.8% share.\n- ROTATING SILVER ANGELS T-LIGHT HLDR ranks 2 with TW revenue £5.9k, 6.6% share.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranks 3 with TW revenue £4.0k, 4.6% share.\n- BROCADE RING PURSE WoW revenue change up 3063.7%.\n- SET OF 3 BABUSHKA STACKING TINS WoW revenue change up 2482.8%.",
+ "input_tokens": 2365,
+ "output_tokens": 310,
+ "cost_usd": 0.00783,
+ "latency_s": 3.37,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

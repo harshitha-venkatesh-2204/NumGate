@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £89,759.37 in revenue TW, representing 86.5% of total revenue and ranking first, but declined 15.9% WoW from £106,749.18 in LW.\n- United Kingdom revenue increased 20.5% YoY, growing from £74,480.20 in LY to £89,759.37 TW, despite the WoW decline.\n- Japan achieved exceptional growth with revenue surging 12485.6% WoW from £45.57 in LW to £5,735.24 TW, ranking second overall.\n- Germany's revenue fell 27.0% WoW to £2,840.80 TW and declined 31.5% YoY compared to £4,144.93 in LY.\n- France experienced a sharp 85.1% WoW revenue decline from £5,710.94 in LW to £852.44 TW, and dropped 82.3% YoY from £4,804.52 in LY.\n- Cyprus entered the market TW with £1,993.96 in revenue and 494 units sold, generating 1.9% of total revenue with no prior week or year-ago activity.\n- Netherlands revenue increased 280.4% WoW from £303.93 in LW to £1,156.28 TW, with units rising from 227 to 1,116.\n- Australia returned to sales TW with £259.95 in revenue and 79 units, but this represents a 60.7% YoY decline from £662.25 in LY.",
+ "input_tokens": 1103,
+ "output_tokens": 382,
+ "cost_usd": 0.003013,
+ "latency_s": 4.467,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

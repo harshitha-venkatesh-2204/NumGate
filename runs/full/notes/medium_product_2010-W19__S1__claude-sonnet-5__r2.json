@@ -1,0 +1,41 @@
+{
+ "note_id": "medium_product_2010-W19__S1__claude-sonnet-5__r2",
+ "table_id": "medium_product_2010-W19",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W19",
+ "n_rows": 23,
+ "strategy": "S1",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- WHITE HANGING HEART T-LIGHT HOLDER ranks 1 TW with revenue \u00a32963.43, up 3.9% WoW from \u00a32851.87 LW.\n- RETRO SPOT TEA SET CERAMIC 11 PC revenue rose 552.6% WoW to \u00a32071.74 TW from \u00a3317.45 LW, ranking 2.\n- REGENCY CAKESTAND 3 TIER fell 55.8% WoW to \u00a31647.56 TW from \u00a33730.99 LW.\n- PARTY BUNTING and RED RETROSPOT JUMBO BAG both declined 25.4% WoW, with TW revenue of \u00a31877.24 and \u00a31542.69 respectively.\n- FAWN BLUE HOT WATER BOTTLE generated \u00a31903.35 TW revenue from 0 LW revenue, ranking 3 with 745 units sold.\n- FLAG OF ST GEORGE CAR FLAG increased 3253.7% WoW to \u00a31183.19 TW from \u00a335.28 LW.\n- GLITTER HANGING BUTTERFLY STRING rose 4752.8% WoW to \u00a31121.49 TW from \u00a323.11 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER holds the largest share of TW revenue at 9.1%, followed by RETRO SPOT TEA SET CERAMIC 11 PC at 6.3%.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W19. Entity type: product. The table has 23 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| WHITE HANGING HEART T-LIGHT HOLDER | 2963.43 | 2851.87 |  | 1105 | 1053 | 55 | 53 | 3.9 |  | 9.1 | 1 |\n| RETRO SPOT TEA SET CERAMIC 11 PC | 2071.74 | 317.45 |  | 480 | 58 | 17 | 17 | 552.6 |  | 6.3 | 2 |\n| FAWN BLUE HOT WATER BOTTLE | 1903.35 | 0.00 |  | 745 | 0 | 8 | 0 |  |  | 5.8 | 3 |\n| PARTY BUNTING | 1877.24 | 2517.71 |  | 442 | 565 | 36 | 45 | -25.4 |  | 5.7 | 4 |\n| PINK CREAM FELT CRAFT TRINKET BOX | 1785.89 | 141.27 |  | 1671 | 111 | 11 | 10 | 1164.2 |  | 5.5 | 5 |\n| REGENCY CAKESTAND 3 TIER | 1647.56 | 3730.99 |  | 132 | 311 | 39 | 58 | -55.8 |  | 5.0 | 6 |\n| RED RETROSPOT JUMBO BAG | 1542.69 | 2067.21 |  | 873 | 1207 | 35 | 31 | -25.4 |  | 4.7 | 7 |\n| ASSORTED COLOUR BIRD ORNAMENT | 1495.07 | 577.98 |  | 923 | 342 | 29 | 20 | 158.7 |  | 4.6 | 8 |\n| LUNCH BAG SUKI  DESIGN | 1424.37 | 352.05 |  | 945 | 217 | 27 | 18 | 304.6 |  | 4.4 | 9 |\n| 3 STRIPEY MICE FELTCRAFT | 1367.85 | 51.01 |  | 823 | 25 | 9 | 5 | 2581.5 |  | 4.2 | 10 |\n| TEA TIME PARTY BUNTING | 1289.91 | 654.28 |  | 327 | 138 | 14 | 21 | 97.1 |  | 3.9 | 11 |\n| RED TOADSTOOL LED NIGHT LIGHT | 1259.40 | 388.89 |  | 849 | 249 | 15 | 12 | 223.8 |  | 3.9 | 12 |\n| VINTAGE HEADS AND TAILS CARD GAME | 1245.10 | 43.78 |  | 1156 | 32 | 17 | 7 | 2744.0 |  | 3.8 | 13 |\n| DOOR MAT UNION FLAG | 1231.05 | 577.92 |  | 181 | 80 | 32 | 25 | 113.0 |  | 3.8 | 14 |\n| FLAG OF ST GEORGE CAR FLAG | 1183.19 | 35.28 |  | 63 | 84 | 4 | 5 | 3253.7 |  | 3.6 | 15 |\n| DOOR MAT RED SPOT | 1136.94 | 747.36 |  | 166 | 108 | 24 | 23 | 52.1 |  | 3.5 | 16 |\n| GLITTER HANGING BUTTERFLY STRING | 1121.49 | 23.11 |  | 525 | 10 | 7 | 3 | 4752.8 |  | 3.4 | 17 |\n| RED  HARMONICA IN BOX | 1066.03 | 80.02 |  | 941 | 62 | 15 | 6 | 1232.2 |  | 3.3 | 18 |\n| BLUE HAPPY BIRTHDAY BUNTING | 1048.34 | 338.02 |  | 216 | 61 | 16 | 18 | 210.1 |  | 3.2 | 19 |\n| COLOUR GLASS T-LIGHT HOLDER HANGING | 1045.68 | 621.96 |  | 1776 | 1038 | 19 | 21 | 68.1 |  | 3.2 | 20 |\n| JUMBO STORAGE BAG SUKI | 1038.92 | 478.81 |  | 592 | 269 | 27 | 16 | 117.0 |  | 3.2 | 21 |\n| PINK FAIRY CAKE COASTER | 985.66 | 0.00 |  | 2401 | 0 | 3 | 0 |  |  | 3.0 | 22 |\n| VINTAGE UNION JACK BUNTING | 926.46 | 900.94 |  | 107 | 103 | 26 | 23 | 2.8 |  | 2.8 | 23 |\n\nWrite the insight note now.\n",
+    "text": "- WHITE HANGING HEART T-LIGHT HOLDER ranks 1 TW with revenue \u00a32963.43, up 3.9% WoW from \u00a32851.87 LW.\n- RETRO SPOT TEA SET CERAMIC 11 PC revenue rose 552.6% WoW to \u00a32071.74 TW from \u00a3317.45 LW, ranking 2.\n- REGENCY CAKESTAND 3 TIER fell 55.8% WoW to \u00a31647.56 TW from \u00a33730.99 LW.\n- PARTY BUNTING and RED RETROSPOT JUMBO BAG both declined 25.4% WoW, with TW revenue of \u00a31877.24 and \u00a31542.69 respectively.\n- FAWN BLUE HOT WATER BOTTLE generated \u00a31903.35 TW revenue from 0 LW revenue, ranking 3 with 745 units sold.\n- FLAG OF ST GEORGE CAR FLAG increased 3253.7% WoW to \u00a31183.19 TW from \u00a335.28 LW.\n- GLITTER HANGING BUTTERFLY STRING rose 4752.8% WoW to \u00a31121.49 TW from \u00a323.11 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER holds the largest share of TW revenue at 9.1%, followed by RETRO SPOT TEA SET CERAMIC 11 PC at 6.3%.",
+    "input_tokens": 2299,
+    "output_tokens": 479,
+    "cost_usd": 0.009388,
+    "latency_s": 4.461,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 2299,
+  "tokens_out": 479,
+  "cost_usd": 0.009388,
+  "latency_s": 4.461
+ }
+}

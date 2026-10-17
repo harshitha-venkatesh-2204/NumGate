@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW reached £112.6k versus LW £58.2k, a WoW increase of 93.7%.\n- TOTAL revenue TW of £112.6k compares to LY £47.5k, a YoY increase of 137.2%.\n- TOTAL units sold rose to 42,286 TW from 21,432 LW.\n- TOTAL orders increased to 2,461 TW from 2,209 LW.\n- LANDMARK FRAME COVENT GARDEN ranked 1 TW with £3,766.4 revenue and 3.3% share.\n- LANDMARK FRAME OXFORD STREET ranked 2 TW with £3,753.9 revenue and 3.3% share.\n- LANDMARK FRAME NOTTING HILL ranked 3 TW with £3,660.0 revenue and 3.2% share.\n- CERAMIC CAKE STAND + HANGING CAKES posted a WoW revenue increase of 2,392.0%.",
+ "input_tokens": 2268,
+ "output_tokens": 328,
+ "cost_usd": 0.007816,
+ "latency_s": 3.167,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

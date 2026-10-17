@@ -1,0 +1,239 @@
+{
+ "note_id": "large_product_2011-W42__S2__claude-sonnet-5__r1",
+ "table_id": "large_product_2011-W42",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W42",
+ "n_rows": 125,
+ "strategy": "S2",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- TOTAL revenue TW reached \u00a3112.6k versus LW \u00a358.2k, a WoW increase of 93.7%.\n- TOTAL revenue TW of \u00a3112.6k compares to LY \u00a347.5k, a YoY increase of 137.2%.\n- TOTAL units sold rose to 42,286 TW from 21,432 LW.\n- TOTAL orders increased to 2,461 TW from 2,209 LW.\n- LANDMARK FRAME COVENT GARDEN ranked 1 TW with \u00a33,766.4 revenue and 3.3% share.\n- LANDMARK FRAME OXFORD STREET ranked 2 TW with \u00a33,753.9 revenue and 3.3% share.\n- LANDMARK FRAME NOTTING HILL ranked 3 TW with \u00a33,660.0 revenue and 3.2% share.\n- CERAMIC CAKE STAND + HANGING CAKES posted a WoW revenue increase of 2,392.0%.",
+ "trace": {
+  "strategy": "S2",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "code_0",
+    "system": "You are a data analyst who writes short, correct pandas code.\n\nWrite one Python script that:\n- reads the CSV file whose path is given in sys.argv[1] with pandas,\n- computes up to 25 facts that would be most useful for a weekly executive insight note (largest entities, biggest week over week and year over year movers, shares, totals),\n- prints one JSON array to stdout and nothing else.\n\nEach element of the array is an object with these keys:\n- \"entity\": the Entity value, or \"TOTAL\" for all rows combined.\n- \"metric\": one of revenue, units, orders, share, rank.\n- \"period\": one of TW, LW, LY, WoW, YoY. Use WoW or YoY for changes between periods.\n- \"value\": a plain number (not a string). Round money to 2 decimals and percentages to 1 decimal.\n- \"formula\": a short description of how the value was computed, for example \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\".\n\nUse only pandas, numpy, json and sys. Blank cells are NaN: skip them instead of crashing. Convert numpy numbers to Python floats before json.dumps.\nReturn only the code, inside one ```python block.\n",
+    "user": "The script will be run as: python facts.py table.csv\n\nThe CSV holds a weekly sales report for ISO week 2011-W42. Entity type: product. It has 125 rows and these columns (with pandas dtypes):\n- Entity: str\n- Revenue_TW: float64\n- Revenue_LW: float64\n- Revenue_LY: float64\n- Units_TW: int64\n- Units_LW: int64\n- Orders_TW: int64\n- Orders_LW: int64\n- WoW_Pct: float64\n- YoY_Pct: float64\n- Share_Pct: float64\n- Rank: int64\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\nFirst rows of the file:\nEntity,Revenue_TW,Revenue_LW,Revenue_LY,Units_TW,Units_LW,Orders_TW,Orders_LW,WoW_Pct,YoY_Pct,Share_Pct,Rank\nLANDMARK FRAME COVENT GARDEN,3766.4,0.0,0.0,340,0,12,0,,,3.3,1\nLANDMARK FRAME OXFORD STREET,3753.9,0.0,0.0,339,0,13,0,,,3.3,2\nLANDMARK FRAME NOTTING HILL,3660.0,0.0,0.0,330,0,14,0,,,3.2,3\n\n",
+    "text": "```python\nimport sys\nimport json\nimport pandas as pd\nimport numpy as np\n\ndf = pd.read_csv(sys.argv[1])\n\nfacts = []\n\ndef add(entity, metric, period, value, formula):\n    try:\n        value = float(value)\n    except (TypeError, ValueError):\n        return\n    if pd.isna(value):\n        return\n    facts.append({\n        \"entity\": str(entity),\n        \"metric\": metric,\n        \"period\": period,\n        \"value\": value,\n        \"formula\": formula\n    })\n\n# ---- Totals ----\nrev_tw = df['Revenue_TW'].sum(skipna=True)\nrev_lw = df['Revenue_LW'].sum(skipna=True)\nrev_ly = df['Revenue_LY'].sum(skipna=True)\nunits_tw = df['Units_TW'].sum(skipna=True)\nunits_lw = df['Units_LW'].sum(skipna=True)\norders_tw = df['Orders_TW'].sum(skipna=True)\norders_lw = df['Orders_LW'].sum(skipna=True)\n\nadd(\"TOTAL\", \"revenue\", \"TW\", round(rev_tw, 2), \"sum(Revenue_TW)\")\nadd(\"TOTAL\", \"revenue\", \"LW\", round(rev_lw, 2), \"sum(Revenue_LW)\")\nadd(\"TOTAL\", \"revenue\", \"LY\", round(rev_ly, 2), \"sum(Revenue_LY)\")\nadd(\"TOTAL\", \"units\", \"TW\", round(units_tw, 2), \"sum(Units_TW)\")\nadd(\"TOTAL\", \"units\", \"LW\", round(units_lw, 2), \"sum(Units_LW)\")\nadd(\"TOTAL\", \"orders\", \"TW\", round(orders_tw, 2), \"sum(Orders_TW)\")\nadd(\"TOTAL\", \"orders\", \"LW\", round(orders_lw, 2), \"sum(Orders_LW)\")\n\nif rev_lw and not pd.isna(rev_lw) and rev_lw != 0:\n    wow = (rev_tw - rev_lw) / rev_lw * 100\n    add(\"TOTAL\", \"revenue\", \"WoW\", round(wow, 1),\n        \"(sum(Revenue_TW)-sum(Revenue_LW))/sum(Revenue_LW)*100\")\n\nif rev_ly and not pd.isna(rev_ly) and rev_ly != 0:\n    yoy = (rev_tw - rev_ly) / rev_ly * 100\n    add(\"TOTAL\", \"revenue\", \"YoY\", round(yoy, 1),\n        \"(sum(Revenue_TW)-sum(Revenue_LY))/sum(Revenue_LY)*100\")\n\n# ---- Top entities by Revenue_TW ----\ntop5 = df.sort_values(\"Revenue_TW\", ascending=False).head(5)\nfor _, row in top5.iterrows():\n    if pd.notna(row['Revenue_TW']):\n        add(row['Entity'], \"revenue\", \"TW\", round(row['Revenue_TW'], 2), \"Revenue_TW\")\n    if pd.notna(row['Share_Pct']):\n        add(row['Entity'], \"share\", \"TW\", round(row['Share_Pct'], 1), \"Share_Pct\")\n    if pd.notna(row['Rank']):\n        add(row['Entity'], \"rank\", \"TW\", float(row['Rank']), \"Rank\")\n\n# ---- Top WoW movers ----\nwow_df = df.dropna(subset=['WoW_Pct'])\ntop_wow_up = wow_df.sort_values(\"WoW_Pct\", ascending=False).head(3)\ntop_wow_down = wow_df.sort_values(\"WoW_Pct\", ascending=True).head(3)\nfor _, row in pd.concat([top_wow_up, top_wow_down]).iterrows():\n    add(row['Entity'], \"revenue\", \"WoW\", round(row['WoW_Pct'], 1),\n        \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\")\n\n# ---- Top YoY movers ----\nyoy_df = df.dropna(subset=['YoY_Pct'])\ntop_yoy_up = yoy_df.sort_values(\"YoY_Pct\", ascending=False).head(3)\ntop_yoy_down = yoy_df.sort_values(\"YoY_Pct\", ascending=True).head(3)\nfor _, row in pd.concat([top_yoy_up, top_yoy_down]).iterrows():\n    add(row['Entity'], \"revenue\", \"YoY\", round(row['YoY_Pct'], 1),\n        \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\")\n\n# Limit to 25 facts\nfacts = facts[:25]\n\nprint(json.dumps(facts))\n```",
+    "input_tokens": 1079,
+    "output_tokens": 3634,
+    "cost_usd": 0.038498,
+    "latency_s": 26.572,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   },
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a list of facts that were already computed from the sales table. Use only these facts. Every number in the note must come from a fact value, copied exactly or rounded (for example \u00a312,345.67 may be written as \u00a312.3k). Do not compute new numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W42. Entity type: product.\n\nFacts (JSON):\n[\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 112643.9,\n  \"formula\": \"sum(Revenue_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LW\",\n  \"value\": 58152.4,\n  \"formula\": \"sum(Revenue_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LY\",\n  \"value\": 47486.18,\n  \"formula\": \"sum(Revenue_LY)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 42286.0,\n  \"formula\": \"sum(Units_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"LW\",\n  \"value\": 21432.0,\n  \"formula\": \"sum(Units_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 2461.0,\n  \"formula\": \"sum(Orders_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"LW\",\n  \"value\": 2209.0,\n  \"formula\": \"sum(Orders_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 93.7,\n  \"formula\": \"(sum(Revenue_TW)-sum(Revenue_LW))/sum(Revenue_LW)*100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 137.2,\n  \"formula\": \"(sum(Revenue_TW)-sum(Revenue_LY))/sum(Revenue_LY)*100\"\n },\n {\n  \"entity\": \"LANDMARK FRAME COVENT GARDEN\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3766.4,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"LANDMARK FRAME COVENT GARDEN\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 3.3,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"LANDMARK FRAME COVENT GARDEN\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 1.0,\n  \"formula\": \"Rank\"\n },\n {\n  \"entity\": \"LANDMARK FRAME OXFORD STREET\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3753.9,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"LANDMARK FRAME OXFORD STREET\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 3.3,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"LANDMARK FRAME OXFORD STREET\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 2.0,\n  \"formula\": \"Rank\"\n },\n {\n  \"entity\": \"LANDMARK FRAME NOTTING HILL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3660.0,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"LANDMARK FRAME NOTTING HILL\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 3.2,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"LANDMARK FRAME NOTTING HILL\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 3.0,\n  \"formula\": \"Rank\"\n },\n {\n  \"entity\": \"LANDMARK FRAME LONDON BRIDGE\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3603.9,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"LANDMARK FRAME LONDON BRIDGE\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 3.2,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"LANDMARK FRAME LONDON BRIDGE\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 4.0,\n  \"formula\": \"Rank\"\n },\n {\n  \"entity\": \"LANDMARK FRAME BAKER STREET\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3447.5,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"LANDMARK FRAME BAKER STREET\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 3.1,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"LANDMARK FRAME BAKER STREET\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 5.0,\n  \"formula\": \"Rank\"\n },\n {\n  \"entity\": \"CERAMIC CAKE STAND + HANGING CAKES\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 2392.0,\n  \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"\n }\n]\n\nWrite the insight note now.\n",
+    "text": "- TOTAL revenue TW reached \u00a3112.6k versus LW \u00a358.2k, a WoW increase of 93.7%.\n- TOTAL revenue TW of \u00a3112.6k compares to LY \u00a347.5k, a YoY increase of 137.2%.\n- TOTAL units sold rose to 42,286 TW from 21,432 LW.\n- TOTAL orders increased to 2,461 TW from 2,209 LW.\n- LANDMARK FRAME COVENT GARDEN ranked 1 TW with \u00a33,766.4 revenue and 3.3% share.\n- LANDMARK FRAME OXFORD STREET ranked 2 TW with \u00a33,753.9 revenue and 3.3% share.\n- LANDMARK FRAME NOTTING HILL ranked 3 TW with \u00a33,660.0 revenue and 3.2% share.\n- CERAMIC CAKE STAND + HANGING CAKES posted a WoW revenue increase of 2,392.0%.",
+    "input_tokens": 2268,
+    "output_tokens": 328,
+    "cost_usd": 0.007816,
+    "latency_s": 3.167,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [
+   {
+    "attempt": 0,
+    "code": "import sys\nimport json\nimport pandas as pd\nimport numpy as np\n\ndf = pd.read_csv(sys.argv[1])\n\nfacts = []\n\ndef add(entity, metric, period, value, formula):\n    try:\n        value = float(value)\n    except (TypeError, ValueError):\n        return\n    if pd.isna(value):\n        return\n    facts.append({\n        \"entity\": str(entity),\n        \"metric\": metric,\n        \"period\": period,\n        \"value\": value,\n        \"formula\": formula\n    })\n\n# ---- Totals ----\nrev_tw = df['Revenue_TW'].sum(skipna=True)\nrev_lw = df['Revenue_LW'].sum(skipna=True)\nrev_ly = df['Revenue_LY'].sum(skipna=True)\nunits_tw = df['Units_TW'].sum(skipna=True)\nunits_lw = df['Units_LW'].sum(skipna=True)\norders_tw = df['Orders_TW'].sum(skipna=True)\norders_lw = df['Orders_LW'].sum(skipna=True)\n\nadd(\"TOTAL\", \"revenue\", \"TW\", round(rev_tw, 2), \"sum(Revenue_TW)\")\nadd(\"TOTAL\", \"revenue\", \"LW\", round(rev_lw, 2), \"sum(Revenue_LW)\")\nadd(\"TOTAL\", \"revenue\", \"LY\", round(rev_ly, 2), \"sum(Revenue_LY)\")\nadd(\"TOTAL\", \"units\", \"TW\", round(units_tw, 2), \"sum(Units_TW)\")\nadd(\"TOTAL\", \"units\", \"LW\", round(units_lw, 2), \"sum(Units_LW)\")\nadd(\"TOTAL\", \"orders\", \"TW\", round(orders_tw, 2), \"sum(Orders_TW)\")\nadd(\"TOTAL\", \"orders\", \"LW\", round(orders_lw, 2), \"sum(Orders_LW)\")\n\nif rev_lw and not pd.isna(rev_lw) and rev_lw != 0:\n    wow = (rev_tw - rev_lw) / rev_lw * 100\n    add(\"TOTAL\", \"revenue\", \"WoW\", round(wow, 1),\n        \"(sum(Revenue_TW)-sum(Revenue_LW))/sum(Revenue_LW)*100\")\n\nif rev_ly and not pd.isna(rev_ly) and rev_ly != 0:\n    yoy = (rev_tw - rev_ly) / rev_ly * 100\n    add(\"TOTAL\", \"revenue\", \"YoY\", round(yoy, 1),\n        \"(sum(Revenue_TW)-sum(Revenue_LY))/sum(Revenue_LY)*100\")\n\n# ---- Top entities by Revenue_TW ----\ntop5 = df.sort_values(\"Revenue_TW\", ascending=False).head(5)\nfor _, row in top5.iterrows():\n    if pd.notna(row['Revenue_TW']):\n        add(row['Entity'], \"revenue\", \"TW\", round(row['Revenue_TW'], 2), \"Revenue_TW\")\n    if pd.notna(row['Share_Pct']):\n        add(row['Entity'], \"share\", \"TW\", round(row['Share_Pct'], 1), \"Share_Pct\")\n    if pd.notna(row['Rank']):\n        add(row['Entity'], \"rank\", \"TW\", float(row['Rank']), \"Rank\")\n\n# ---- Top WoW movers ----\nwow_df = df.dropna(subset=['WoW_Pct'])\ntop_wow_up = wow_df.sort_values(\"WoW_Pct\", ascending=False).head(3)\ntop_wow_down = wow_df.sort_values(\"WoW_Pct\", ascending=True).head(3)\nfor _, row in pd.concat([top_wow_up, top_wow_down]).iterrows():\n    add(row['Entity'], \"revenue\", \"WoW\", round(row['WoW_Pct'], 1),\n        \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\")\n\n# ---- Top YoY movers ----\nyoy_df = df.dropna(subset=['YoY_Pct'])\ntop_yoy_up = yoy_df.sort_values(\"YoY_Pct\", ascending=False).head(3)\ntop_yoy_down = yoy_df.sort_values(\"YoY_Pct\", ascending=True).head(3)\nfor _, row in pd.concat([top_yoy_up, top_yoy_down]).iterrows():\n    add(row['Entity'], \"revenue\", \"YoY\", round(row['YoY_Pct'], 1),\n        \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\")\n\n# Limit to 25 facts\nfacts = facts[:25]\n\nprint(json.dumps(facts))\n",
+    "error": "",
+    "stdout": " \"YoY\", \"value\": 137.2, \"formula\": \"(sum(Revenue_TW)-sum(Revenue_LY))/sum(Revenue_LY)*100\"}, {\"entity\": \"LANDMARK FRAME COVENT GARDEN\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 3766.4, \"formula\": \"Revenue_TW\"}, {\"entity\": \"LANDMARK FRAME COVENT GARDEN\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 3.3, \"formula\": \"Share_Pct\"}, {\"entity\": \"LANDMARK FRAME COVENT GARDEN\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 1.0, \"formula\": \"Rank\"}, {\"entity\": \"LANDMARK FRAME OXFORD STREET\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 3753.9, \"formula\": \"Revenue_TW\"}, {\"entity\": \"LANDMARK FRAME OXFORD STREET\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 3.3, \"formula\": \"Share_Pct\"}, {\"entity\": \"LANDMARK FRAME OXFORD STREET\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 2.0, \"formula\": \"Rank\"}, {\"entity\": \"LANDMARK FRAME NOTTING HILL\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 3660.0, \"formula\": \"Revenue_TW\"}, {\"entity\": \"LANDMARK FRAME NOTTING HILL\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 3.2, \"formula\": \"Share_Pct\"}, {\"entity\": \"LANDMARK FRAME NOTTING HILL\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 3.0, \"formula\": \"Rank\"}, {\"entity\": \"LANDMARK FRAME LONDON BRIDGE\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 3603.9, \"formula\": \"Revenue_TW\"}, {\"entity\": \"LANDMARK FRAME LONDON BRIDGE\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 3.2, \"formula\": \"Share_Pct\"}, {\"entity\": \"LANDMARK FRAME LONDON BRIDGE\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 4.0, \"formula\": \"Rank\"}, {\"entity\": \"LANDMARK FRAME BAKER STREET\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 3447.5, \"formula\": \"Revenue_TW\"}, {\"entity\": \"LANDMARK FRAME BAKER STREET\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 3.1, \"formula\": \"Share_Pct\"}, {\"entity\": \"LANDMARK FRAME BAKER STREET\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 5.0, \"formula\": \"Rank\"}, {\"entity\": \"CERAMIC CAKE STAND + HANGING CAKES\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 2392.0, \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"}]\n"
+   }
+  ],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "facts": [
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 112643.9,
+    "formula": "sum(Revenue_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LW",
+    "value": 58152.4,
+    "formula": "sum(Revenue_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LY",
+    "value": 47486.18,
+    "formula": "sum(Revenue_LY)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "TW",
+    "value": 42286.0,
+    "formula": "sum(Units_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "LW",
+    "value": 21432.0,
+    "formula": "sum(Units_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "TW",
+    "value": 2461.0,
+    "formula": "sum(Orders_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "LW",
+    "value": 2209.0,
+    "formula": "sum(Orders_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 93.7,
+    "formula": "(sum(Revenue_TW)-sum(Revenue_LW))/sum(Revenue_LW)*100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 137.2,
+    "formula": "(sum(Revenue_TW)-sum(Revenue_LY))/sum(Revenue_LY)*100"
+   },
+   {
+    "entity": "LANDMARK FRAME COVENT GARDEN",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3766.4,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "LANDMARK FRAME COVENT GARDEN",
+    "metric": "share",
+    "period": "TW",
+    "value": 3.3,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "LANDMARK FRAME COVENT GARDEN",
+    "metric": "rank",
+    "period": "TW",
+    "value": 1.0,
+    "formula": "Rank"
+   },
+   {
+    "entity": "LANDMARK FRAME OXFORD STREET",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3753.9,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "LANDMARK FRAME OXFORD STREET",
+    "metric": "share",
+    "period": "TW",
+    "value": 3.3,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "LANDMARK FRAME OXFORD STREET",
+    "metric": "rank",
+    "period": "TW",
+    "value": 2.0,
+    "formula": "Rank"
+   },
+   {
+    "entity": "LANDMARK FRAME NOTTING HILL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3660.0,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "LANDMARK FRAME NOTTING HILL",
+    "metric": "share",
+    "period": "TW",
+    "value": 3.2,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "LANDMARK FRAME NOTTING HILL",
+    "metric": "rank",
+    "period": "TW",
+    "value": 3.0,
+    "formula": "Rank"
+   },
+   {
+    "entity": "LANDMARK FRAME LONDON BRIDGE",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3603.9,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "LANDMARK FRAME LONDON BRIDGE",
+    "metric": "share",
+    "period": "TW",
+    "value": 3.2,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "LANDMARK FRAME LONDON BRIDGE",
+    "metric": "rank",
+    "period": "TW",
+    "value": 4.0,
+    "formula": "Rank"
+   },
+   {
+    "entity": "LANDMARK FRAME BAKER STREET",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3447.5,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "LANDMARK FRAME BAKER STREET",
+    "metric": "share",
+    "period": "TW",
+    "value": 3.1,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "LANDMARK FRAME BAKER STREET",
+    "metric": "rank",
+    "period": "TW",
+    "value": 5.0,
+    "formula": "Rank"
+   },
+   {
+    "entity": "CERAMIC CAKE STAND + HANGING CAKES",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 2392.0,
+    "formula": "(Revenue_TW-Revenue_LW)/Revenue_LW*100"
+   }
+  ],
+  "n_calls": 2,
+  "tokens_in": 3347,
+  "tokens_out": 3962,
+  "cost_usd": 0.046313999999999994,
+  "latency_s": 29.738999999999997
+ }
+}

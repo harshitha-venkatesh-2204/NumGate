@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £2,616.00 revenue in TW, ranking 1st but declining 36.1% WoW from £4,096.80 in LW with units falling from 349 to 190.\n- CHILLI LIGHTS achieved £1,516.30 revenue in TW, ranking 2nd with a 621.7% WoW surge from £210.09 in LW and units increasing from 39 to 270.\n- HEART OF WICKER SMALL posted £1,365.96 revenue in TW, ranking 3rd with a 300.0% WoW increase from £341.48 in LW and units rising from 220 to 708.\n- CHARLOTTE BAG SUKI DESIGN recorded £876.84 revenue in TW, ranking 11th with a 1286.1% WoW jump from £63.26 in LW and units growing from 68 to 418.\n- DOORMAT HEARTS generated £732.13 revenue in TW, ranking 19th with a 5323.2% YoY increase from £13.50 in LY and a 204.5% WoW rise from £240.41 in LW.\n- JUMBO BAG PINK VINTAGE PAISLEY achieved £795.44 revenue in TW, ranking 17th with a 534.2% YoY increase from £125.42 in LY and a 109.1% WoW gain from £380.42 in LW.\n- SMALL POPCORN HOLDER posted £595.33 revenue in TW, ranking 32nd with a 1205.0% YoY surge from £45.62 in LY and a 100.4% WoW increase from £297.08 in LW.\n- SOMBRERO recorded £513.65 revenue in TW, ranking 39th with a 4290.2% YoY increase from £11.70 in LY, entering the product mix with 407 units sold and 3 orders in TW.",
+ "input_tokens": 3083,
+ "output_tokens": 499,
+ "cost_usd": 0.005578,
+ "latency_s": 5.666,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

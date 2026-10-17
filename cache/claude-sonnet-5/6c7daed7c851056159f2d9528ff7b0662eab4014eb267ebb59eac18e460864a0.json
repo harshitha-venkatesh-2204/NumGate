@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £58.8k versus LW £39.5k, a WoW increase of 48.85%.\n- TOTAL revenue TW was £58.8k versus LY £13.1k, a YoY increase of 350.86%.\n- TOTAL units TW reached 25,436 compared with LW 16,315, while orders TW were 1,474 versus LW 1,676.\n- VINTAGE UNION JACK MEMOBOARD led all products with TW revenue of £6.5k, an 11.0% share and rank 1.\n- VINTAGE UNION JACK MEMOBOARD revenue rose 65233.6% WoW, and PACK OF 12 SUKI TISSUES revenue rose 49201.7% WoW.\n- ASSORTED COLOUR BIRD ORNAMENT revenue fell 80.3% WoW and RECYCLING BAG RETROSPOT revenue fell 78.3% WoW.\n- BASKET OF FLOWERS SEWING KIT revenue grew 1707.1% YoY and SET OF 3 BLACK FLYING DUCKS revenue grew 1265.1% YoY.\n- RED TOADSTOOL LED NIGHT LIGHT revenue declined 70.7% YoY and ASSORTED COLOUR BIRD ORNAMENT revenue declined 64.3% YoY.",
+ "input_tokens": 2298,
+ "output_tokens": 464,
+ "cost_usd": 0.009236000000000001,
+ "latency_s": 4.486,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

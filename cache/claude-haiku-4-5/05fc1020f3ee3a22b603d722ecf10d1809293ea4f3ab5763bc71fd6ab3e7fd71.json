@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated the highest revenue TW at £3,740.45, followed by PARTY BUNTING at £2,843.54.\n- JUMBO BAG RED RETROSPOT led unit sales TW with 1,546 units, while ASSORTED COLOURS SILK FAN achieved 1,342 units.\n- PARTY BUNTING and SET OF 3 CAKE TINS PANTRY DESIGN tied for the most orders TW at 45 orders each.\n- BAKING MOULD EASTER EGG MILK CHOC showed the strongest WoW revenue growth at 841.6 percent increase.\n- JUMBO BAG TOYS demonstrated exceptional performance with 789.2 percent WoW revenue growth and 580.5 percent YoY revenue growth.\n- LUNCH BOX I LOVE LONDON achieved 587.7 percent WoW revenue increase, while 12 PENCILS SMALL TUBE RED RETROSPOT grew 567.2 percent WoW.\n- JUMBO BAG OWLS posted 392.2 percent YoY revenue growth, and VICTORIAN GLASS HANGING T-LIGHT grew 338.7 percent YoY.\n- GUMBALL COAT RACK recorded 478.9 percent WoW revenue growth, indicating strong momentum compared to LW.",
+ "input_tokens": 1965,
+ "output_tokens": 323,
+ "cost_usd": 0.00358,
+ "latency_s": 3.722,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

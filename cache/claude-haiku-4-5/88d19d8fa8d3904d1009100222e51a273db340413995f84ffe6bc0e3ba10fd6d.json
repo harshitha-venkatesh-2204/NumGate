@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £3,429.15 in TW revenue, ranking 1st and representing 6.6% of total revenue, with a WoW increase of 70.1% from £2,015.58 in LW.\n\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £3,266.50 in TW revenue with 1,198 units sold, a WoW surge of 330.0% from £759.60 in LW, though YoY declined 3.1% versus £3,370.47 in LY.\n\n- PARTY BUNTING recorded £1,795.82 in TW revenue despite a WoW drop of 62.6% from £4,796.67 in LW, but showed exceptional YoY growth of 462.6% compared to £319.20 in LY.\n\n- RED HANGING HEART T-LIGHT HOLDER generated £602.52 in TW revenue with a dramatic WoW increase of 1,041.8% from £52.77 in LW and YoY growth of 311.3% versus £146.50 in LY.\n\n- METAL SIGN TAKE IT OR LEAVE IT achieved £711.64 in TW revenue with a WoW jump of 260.5% from £197.43 in LW and YoY growth of 551.9% compared to £109.16 in LY.\n\n- DOORMAT HEARTS declined sharply to £309.46 in TW revenue, representing a WoW decrease of 86.8% from £2,345.43 in LW and a YoY drop of 80.4% versus £1,582.84 in LY.\n\n- POLKADOT PEN surged to £297.01 in TW revenue with an extraordinary WoW increase of 18,121.5% from just £1.63 in LW, driven by 343 units sold compared to 1 unit in LW.\n\n- BROCADE RING PURSE generated £264.68 in TW revenue with 1,012 units sold, showing a WoW increase of 187.0% from £92.22 in LW and a YoY increase of 10,158.9% versus £2.58 in LY.",
+ "input_tokens": 6926,
+ "output_tokens": 553,
+ "cost_usd": 0.009691,
+ "latency_s": 6.331,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

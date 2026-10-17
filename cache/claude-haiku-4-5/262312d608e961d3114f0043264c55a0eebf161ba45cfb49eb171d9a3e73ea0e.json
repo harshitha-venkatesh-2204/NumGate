@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £94,054.57 in revenue TW, representing 75.6% of total revenue across all entities and ranking first by sales volume.\n- United Kingdom revenue declined 17.4% WoW from £113,921.89 LW and fell 32.0% YoY compared to £138,295.13 in the same week last year.\n- Australia achieved exceptional growth with revenue of £16,726.84 TW, up 3954.5% WoW from £412.55 LW and up 4139.0% YoY from £394.59 LY.\n- France revenue increased 153.9% WoW to £3,110.18 TW from £1,225.18 LW, though it declined 8.7% YoY from £3,408.23 LY.\n- Finland generated £4,418.02 in revenue TW with 2575.0% WoW growth from £165.16 LW, with no comparable revenue data available for the same week last year.\n- EIRE revenue totaled £3,676.64 TW, up 47.6% WoW from £2,491.28 LW but down 67.6% YoY from £11,352.29 LY.\n- Germany revenue declined to £1,433.78 TW, down 47.5% WoW from £2,728.99 LW and down 67.6% YoY from £4,421.14 LY.\n- Belgium showed growth with £984.07 in revenue TW, up 179.4% WoW from £352.21 LW and up 56.4% YoY from £629.02 LY.",
+ "input_tokens": 959,
+ "output_tokens": 415,
+ "cost_usd": 0.0030340000000000002,
+ "latency_s": 4.234,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

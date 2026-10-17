@@ -1,0 +1,42 @@
+{
+ "note_id": "small_country_2010-W27__S4__claude-haiku-4-5__r2",
+ "table_id": "small_country_2010-W27",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2010-W27",
+ "n_rows": 10,
+ "strategy": "S4",
+ "model": "claude-haiku-4-5",
+ "repeat": 2,
+ "note": "- Total revenue across all countries declined to \u00a3150,839.41 TW from \u00a3172,859.90 LW, representing a -12.7% WoW change.\n- United Kingdom maintained rank 1 with revenue of \u00a3118,122.66 TW, accounting for 78.3% of total revenue TW, but experienced a -15.6% WoW decline.\n- EIRE achieved rank 2 with revenue of \u00a323,853.27 TW and a 15.8% share TW, driven by a +1040.5% WoW increase from \u00a32,091.43 LW.\n- Germany held rank 3 with revenue of \u00a33,891.20 TW representing 2.6% of total revenue TW, while declining -52.2% WoW.\n- Netherlands recorded the largest WoW decrease at -97.0%, falling from \u00a315,223.88 LW to \u00a3451.45 TW.\n- United Kingdom processed the most orders at 320 TW, down slightly from 328 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W27. Entity type: country.\n\nFacts packet:\n- Total: revenue \u00a3150,839.41 TW, revenue \u00a3172,859.90 LW, revenue change -12.7% WoW\n- United Kingdom: rank 1, revenue \u00a3118,122.66 TW, share 78.3% TW, revenue change -15.6% WoW\n- EIRE: rank 2, revenue \u00a323,853.27 TW, share 15.8% TW, revenue change +1040.5% WoW\n- Germany: rank 3, revenue \u00a33,891.20 TW, share 2.6% TW, revenue change -52.2% WoW\n- EIRE (largest WoW increase): revenue change +1040.5% WoW, revenue \u00a323,853.27 TW versus \u00a32,091.43 LW\n- Netherlands (largest WoW decrease): revenue change -97.0% WoW, revenue \u00a3451.45 TW versus \u00a315,223.88 LW\n- United Kingdom (most orders): orders 320 TW versus 328 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue across all countries declined to \u00a3150,839.41 TW from \u00a3172,859.90 LW, representing a -12.7% WoW change.\n- United Kingdom maintained rank 1 with revenue of \u00a3118,122.66 TW, accounting for 78.3% of total revenue TW, but experienced a -15.6% WoW decline.\n- EIRE achieved rank 2 with revenue of \u00a323,853.27 TW and a 15.8% share TW, driven by a +1040.5% WoW increase from \u00a32,091.43 LW.\n- Germany held rank 3 with revenue of \u00a33,891.20 TW representing 2.6% of total revenue TW, while declining -52.2% WoW.\n- Netherlands recorded the largest WoW decrease at -97.0%, falling from \u00a315,223.88 LW to \u00a3451.45 TW.\n- United Kingdom processed the most orders at 320 TW, down slightly from 328 LW.",
+    "input_tokens": 524,
+    "output_tokens": 251,
+    "cost_usd": 0.0017790000000000002,
+    "latency_s": 2.877,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a3150,839.41 TW, revenue \u00a3172,859.90 LW, revenue change -12.7% WoW\n- United Kingdom: rank 1, revenue \u00a3118,122.66 TW, share 78.3% TW, revenue change -15.6% WoW\n- EIRE: rank 2, revenue \u00a323,853.27 TW, share 15.8% TW, revenue change +1040.5% WoW\n- Germany: rank 3, revenue \u00a33,891.20 TW, share 2.6% TW, revenue change -52.2% WoW\n- EIRE (largest WoW increase): revenue change +1040.5% WoW, revenue \u00a323,853.27 TW versus \u00a32,091.43 LW\n- Netherlands (largest WoW decrease): revenue change -97.0% WoW, revenue \u00a3451.45 TW versus \u00a315,223.88 LW\n- United Kingdom (most orders): orders 320 TW versus 328 LW",
+  "n_calls": 1,
+  "tokens_in": 524,
+  "tokens_out": 251,
+  "cost_usd": 0.0017790000000000002,
+  "latency_s": 2.877
+ }
+}

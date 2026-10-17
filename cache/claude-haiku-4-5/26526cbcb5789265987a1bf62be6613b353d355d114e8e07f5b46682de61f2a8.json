@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £213,613.05 in revenue during TW (2010-W42), representing 88.9% of total revenue across all entities shown.\n- United Kingdom revenue declined 17.3% WoW, falling from £258,385.96 in LW to £213,613.05 in TW, with units sold dropping from 135,606 to 113,398.\n- EIRE revenue increased 48.8% WoW, rising from £7,086.94 in LW to £10,542.88 in TW, with orders growing from 7 to 15.\n- Germany revenue grew 24.9% WoW, reaching £4,577.05 in TW compared to £3,663.41 in LW, with units increasing from 1,850 to 3,247.\n- Spain revenue fell 27.5% WoW, declining from £6,235.52 in LW to £4,523.63 in TW, with units decreasing from 3,206 to 2,575.\n- France experienced the largest WoW decline at 73.5%, with revenue dropping from £9,041.24 in LW to £2,393.87 in TW and units falling from 6,103 to 1,479.\n- Channel Islands and Italy each generated new revenue in TW with £2,724.75 and £1,832.21 respectively, having recorded zero revenue in LW.",
+ "input_tokens": 898,
+ "output_tokens": 348,
+ "cost_usd": 0.002638,
+ "latency_s": 3.692,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

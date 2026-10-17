@@ -1,0 +1,41 @@
+{
+ "note_id": "small_country_2010-W18__S1__claude-sonnet-5__r2",
+ "table_id": "small_country_2010-W18",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2010-W18",
+ "n_rows": 6,
+ "strategy": "S1",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- United Kingdom TW revenue is \u00a3117,273.84, down from \u00a3168,403.05 LW, a WoW change of -30.4%.\n- United Kingdom holds the largest share of TW revenue at 74.4%, ranked 1 among 6 countries.\n- Netherlands TW revenue is \u00a318,002.00 versus \u00a31,188.30 LW, a WoW change of 1414.9%.\n- France TW revenue is \u00a39,014.91 compared to \u00a31,348.33 LW, a WoW change of 568.6%.\n- EIRE TW revenue is \u00a39,248.22, up from \u00a35,735.12 LW, a WoW change of 61.3%.\n- Germany TW revenue is \u00a32,460.79 versus \u00a32,366.84 LW, a WoW change of 4.0%.\n- Spain recorded TW revenue of \u00a31,731.65 with 3 orders, up from \u00a30.00 LW.\n- United Kingdom TW orders total 314, down from 397 LW, with units falling to 66,459 from 93,805 LW.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W18. Entity type: country. The table has 6 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| United Kingdom | 117273.84 | 168403.05 |  | 66459 | 93805 | 314 | 397 | -30.4 |  | 74.4 | 1 |\n| Netherlands | 18002.00 | 1188.30 |  | 11784 | 922 | 3 | 2 | 1414.9 |  | 11.4 | 2 |\n| EIRE | 9248.22 | 5735.12 |  | 5000 | 3155 | 7 | 6 | 61.3 |  | 5.9 | 3 |\n| France | 9014.91 | 1348.33 |  | 6055 | 1007 | 7 | 2 | 568.6 |  | 5.7 | 4 |\n| Germany | 2460.79 | 2366.84 |  | 1110 | 1076 | 3 | 6 | 4.0 |  | 1.6 | 5 |\n| Spain | 1731.65 | 0.00 |  | 1091 | 0 | 3 | 0 |  |  | 1.1 | 6 |\n\nWrite the insight note now.\n",
+    "text": "- United Kingdom TW revenue is \u00a3117,273.84, down from \u00a3168,403.05 LW, a WoW change of -30.4%.\n- United Kingdom holds the largest share of TW revenue at 74.4%, ranked 1 among 6 countries.\n- Netherlands TW revenue is \u00a318,002.00 versus \u00a31,188.30 LW, a WoW change of 1414.9%.\n- France TW revenue is \u00a39,014.91 compared to \u00a31,348.33 LW, a WoW change of 568.6%.\n- EIRE TW revenue is \u00a39,248.22, up from \u00a35,735.12 LW, a WoW change of 61.3%.\n- Germany TW revenue is \u00a32,460.79 versus \u00a32,366.84 LW, a WoW change of 4.0%.\n- Spain recorded TW revenue of \u00a31,731.65 with 3 orders, up from \u00a30.00 LW.\n- United Kingdom TW orders total 314, down from 397 LW, with units falling to 66,459 from 93,805 LW.",
+    "input_tokens": 1010,
+    "output_tokens": 357,
+    "cost_usd": 0.0055899999999999995,
+    "latency_s": 3.812,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1010,
+  "tokens_out": 357,
+  "cost_usd": 0.0055899999999999995,
+  "latency_s": 3.812
+ }
+}

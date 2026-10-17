@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £50,310.27 TW versus £41,309.97 LW, a change of +21.8% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 with £2,456.32 TW revenue and a 4.9% share TW, down -52.7% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with £2,173.03 TW revenue and a 4.3% share TW, up +33.7% WoW.\n- JUMBO BAG RED RETROSPOT ranked 3 with £1,392.22 TW revenue and a 2.8% share TW, up +10.5% WoW.\n- FLAG OF ST GEORGE CAR FLAG posted the largest WoW increase, rising +3969.8% WoW from £6.69 LW to £272.27 TW.\n- DOOR MAT ENGLISH ROSE posted the largest WoW decrease, falling -70.8% WoW from £891.83 LW to £260.72 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER recorded the most orders with 55 TW compared to 44 LW.",
+ "input_tokens": 739,
+ "output_tokens": 426,
+ "cost_usd": 0.005738,
+ "latency_s": 4.181,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

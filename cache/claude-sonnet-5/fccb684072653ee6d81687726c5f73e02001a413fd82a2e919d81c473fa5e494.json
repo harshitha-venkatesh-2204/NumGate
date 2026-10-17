@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £58,838.41 TW versus £39,528.47 LW, a WoW change of +48.9%, and versus LY a YoY change of +350.9%.\n- VINTAGE UNION JACK MEMOBOARD ranked 1 with £6,500.69 TW revenue, an 11.0% share TW, up from £9.95 LW, a WoW change of +65233.6%.\n- CREAM HEART CARD HOLDER ranked 2 with £2,403.53 TW revenue, a 4.1% share TW, a WoW change of +910.8%.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN ranked 3 with £2,319.75 TW revenue, a 3.9% share TW, a WoW change of +3766.2%.\n- ASSORTED COLOUR BIRD ORNAMENT recorded the largest WoW decrease, falling to £281.84 TW from £1,429.93 LW, a WoW change of -80.3%.\n- BASKET OF FLOWERS SEWING KIT recorded the largest YoY increase, a YoY change of +1707.1% versus £10.20 LY.\n- RED TOADSTOOL LED NIGHT LIGHT recorded the largest YoY decrease, a YoY change of -70.7% versus £583.41 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders, 31 TW compared with 48 LW.",
+ "input_tokens": 877,
+ "output_tokens": 493,
+ "cost_usd": 0.006684000000000001,
+ "latency_s": 4.429,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

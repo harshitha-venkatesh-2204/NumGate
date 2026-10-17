@@ -1,0 +1,10 @@
+{
+ "text": "- PICNIC BASKET WICKER 60 PIECES generated £39,619.50 revenue in TW, representing 31.7% of total revenue and ranking first, with no comparable LW or LY data.\n- DOORMAT category showed exceptional growth in TW, with DOORMAT UNION JACK GUNS AND ROSES achieving 11548.5% WoW increase from £20.41 LW to £2,377.45 TW across 9 orders.\n- PARTY BUNTING delivered £4,019.93 revenue in TW, up 72.8% WoW from £2,327.02 LW and up 24.3% YoY, with 663 units sold across 58 orders.\n- REGENCY CAKESTAND 3 TIER declined to £2,711.19 in TW, down 10.9% WoW and down 50.9% YoY from £5,517.46, selling 208 units across 38 orders.\n- ASSORTED COLOURS SILK FAN grew to £1,240.70 in TW, up 577.3% WoW from £183.19 LW and up 62.9% YoY, with 1,610 units sold.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to £1,085.90 in TW, down 35.8% WoW from £1,691.11 LW and down 74.4% YoY from £4,245.80, with 390 units across 38 orders.\n- BAKING SET 9 PIECE RETROSPOT increased to £732.75 in TW, up 194.1% WoW from £249.15 LW and up 114.5% YoY from £341.55, with 165 units sold.\n- TEA TIME PARTY BUNTING surged to £465.63 in TW, up 151.7% WoW from £185.00 LW and up 2828.5% YoY from £15.90, with 89 units across 22 orders.",
+ "input_tokens": 7684,
+ "output_tokens": 508,
+ "cost_usd": 0.010224,
+ "latency_s": 6.516,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

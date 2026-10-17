@@ -1,0 +1,41 @@
+{
+ "note_id": "small_product_2010-W26__S1__claude-sonnet-5__r1",
+ "table_id": "small_product_2010-W26",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W26",
+ "n_rows": 8,
+ "strategy": "S1",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue of \u00a34554.09, up WoW 85.4% from LW \u00a32456.32.\n- WHITE HANGING HEART T-LIGHT HOLDER posted TW revenue of \u00a33214.95, a WoW increase of 47.9% versus LW \u00a32173.03, holding 17.1% share.\n- JUMBO BAG RED RETROSPOT recorded TW revenue of \u00a32489.35 with 1405 units sold, up WoW 78.8% from LW \u00a31392.22.\n- PAPER BUNTING RETRO SPOTS grew WoW 160.0% to TW revenue of \u00a32266.34 from LW \u00a3871.55.\n- PAPER CHAIN KIT SKULLS surged WoW 3983.9% to TW revenue of \u00a31445.70 from LW \u00a335.40, with orders rising from 2 to 3.\n- PAPER CHAIN KIT RETRO SPOT climbed WoW 708.2% to TW revenue of \u00a31573.81 from LW \u00a3194.74.\n- VINTAGE UNION JACK BUNTING reached TW revenue of \u00a31688.33, up WoW 106.9% from LW \u00a3815.92, ranked 5 of 8.\n- JUMBO BAG STRAWBERRY recorded TW revenue of \u00a31544.16, up WoW 101.2% from LW \u00a3767.61, with 8.2% share of TW revenue across the 8 products.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W26. Entity type: product. The table has 8 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 4554.09 | 2456.32 |  | 391 | 178 | 59 | 53 | 85.4 |  | 24.3 | 1 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 3214.95 | 2173.03 |  | 1209 | 785 | 57 | 55 | 47.9 |  | 17.1 | 2 |\n| JUMBO BAG RED RETROSPOT | 2489.35 | 1392.22 |  | 1405 | 751 | 46 | 40 | 78.8 |  | 13.3 | 3 |\n| PAPER BUNTING RETRO SPOTS | 2266.34 | 871.55 |  | 846 | 269 | 33 | 34 | 160.0 |  | 12.1 | 4 |\n| VINTAGE UNION JACK BUNTING | 1688.33 | 815.92 |  | 198 | 92 | 28 | 25 | 106.9 |  | 9.0 | 5 |\n| PAPER CHAIN KIT RETRO SPOT | 1573.81 | 194.74 |  | 603 | 62 | 12 | 13 | 708.2 |  | 8.4 | 6 |\n| JUMBO BAG STRAWBERRY | 1544.16 | 767.61 |  | 894 | 419 | 32 | 27 | 101.2 |  | 8.2 | 7 |\n| PAPER CHAIN KIT SKULLS | 1445.70 | 35.40 |  | 566 | 12 | 3 | 2 | 3983.9 |  | 7.7 | 8 |\n\nWrite the insight note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue of \u00a34554.09, up WoW 85.4% from LW \u00a32456.32.\n- WHITE HANGING HEART T-LIGHT HOLDER posted TW revenue of \u00a33214.95, a WoW increase of 47.9% versus LW \u00a32173.03, holding 17.1% share.\n- JUMBO BAG RED RETROSPOT recorded TW revenue of \u00a32489.35 with 1405 units sold, up WoW 78.8% from LW \u00a31392.22.\n- PAPER BUNTING RETRO SPOTS grew WoW 160.0% to TW revenue of \u00a32266.34 from LW \u00a3871.55.\n- PAPER CHAIN KIT SKULLS surged WoW 3983.9% to TW revenue of \u00a31445.70 from LW \u00a335.40, with orders rising from 2 to 3.\n- PAPER CHAIN KIT RETRO SPOT climbed WoW 708.2% to TW revenue of \u00a31573.81 from LW \u00a3194.74.\n- VINTAGE UNION JACK BUNTING reached TW revenue of \u00a31688.33, up WoW 106.9% from LW \u00a3815.92, ranked 5 of 8.\n- JUMBO BAG STRAWBERRY recorded TW revenue of \u00a31544.16, up WoW 101.2% from LW \u00a3767.61, with 8.2% share of TW revenue across the 8 products.",
+    "input_tokens": 1232,
+    "output_tokens": 507,
+    "cost_usd": 0.007534,
+    "latency_s": 5.117,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1232,
+  "tokens_out": 507,
+  "cost_usd": 0.007534,
+  "latency_s": 5.117
+ }
+}

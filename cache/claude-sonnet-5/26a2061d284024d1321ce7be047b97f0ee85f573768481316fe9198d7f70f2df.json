@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue for ISO week 2011-W18 was £27,933.80 TW versus £13,633.74 LW, a WoW change of +104.9%, and YoY change of +130.1%.\n- PARTY BUNTING ranked 1 with revenue £5,226.24 TW, an 18.7% share TW, and a WoW change of +184.0%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with revenue £3,057.60 TW, a 10.9% share TW, and a WoW change of +197.4%.\n- REGENCY CAKESTAND 3 TIER ranked 3 with revenue £2,115.30 TW, a 7.6% share TW, and a WoW change of -44.4%.\n- SMALL CHINESE STYLE SCISSOR had the largest WoW increase, up +19919.5% WoW, from £4.20 LW to £840.82 TW.\n- REGENCY CAKESTAND 3 TIER had the largest WoW decrease, down -44.4% WoW, from £3,804.27 LW to £2,115.30 TW.\n- EDWARDIAN PARASOL NATURAL had the largest YoY increase, up +315.0% YoY, from £223.43 LY.\n- REGENCY CAKESTAND 3 TIER had the largest YoY decrease, down -43.3% YoY, from £3,730.99 LY.",
+ "input_tokens": 855,
+ "output_tokens": 473,
+ "cost_usd": 0.0064399999999999995,
+ "latency_s": 4.154,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

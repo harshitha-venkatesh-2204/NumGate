@@ -1,0 +1,10 @@
+{
+ "text": "- VINTAGE UNION JACK MEMOBOARD ranked 1 at £6,500.69 TW versus £9.95 LW (WoW +65,233.6%), on 1,015 units TW against 1 unit LW, and holds 11.0% of TW revenue.\n- CREAM HEART CARD HOLDER took rank 2 with £2,403.53 TW versus £237.78 LW (WoW +910.8%) and £419.43 LY (YoY +473.0%), with 1,027 units TW against 58 units LW.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posted £2,319.75 TW versus £60.00 LW (WoW +3,766.2%) across 2,451 units TW and 3 orders TW.\n- REGENCY CAKESTAND 3 TIER held £1,860.24 TW versus £1,890.60 LW (WoW -1.6%), with 139 units TW against 150 units LW and 29 orders TW versus 33 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER reached £1,392.59 TW versus £1,616.72 LW (WoW -13.9%) and £1,617.50 LY (YoY -13.9%), ranking 5 with 2.4% share.\n- ASSORTED COLOUR BIRD ORNAMENT fell to £281.84 TW from £1,429.93 LW (WoW -80.3%) and £788.48 LY (YoY -64.3%), with 160 units TW versus 937 LW.\n- JUMBO BAG RED RETROSPOT recorded £568.66 TW versus £1,786.35 LW (WoW -68.2%) and RECYCLING BAG RETROSPOT £165.51 TW versus £763.74 LW (WoW -78.3%), with the latter at £218.45 LY (YoY -24.2%).\n- RUSTIC SEVENTEEN DRAWER SIDEBOARD entered at £745.00 TW from £0.00 LW on 5 units and 3 orders, while PARTY BUNTING reached £1,254.96 TW versus £1,072.02 LW (WoW +17.1%) and £256.25 LY (YoY +389.7%).",
+ "input_tokens": 11236,
+ "output_tokens": 1398,
+ "cost_usd": 0.09113,
+ "latency_s": 14.988,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

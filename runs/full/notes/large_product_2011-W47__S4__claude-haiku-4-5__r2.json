@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2011-W47__S4__claude-haiku-4-5__r2",
+ "table_id": "large_product_2011-W47",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W47",
+ "n_rows": 135,
+ "strategy": "S4",
+ "model": "claude-haiku-4-5",
+ "repeat": 2,
+ "note": "- Total revenue across all products was \u00a3135,254.11 TW, representing a -15.0% WoW decline from \u00a3159,100.49 LW, though revenue increased +57.9% YoY.\n- PAPER CHAIN KIT 50'S CHRISTMAS generated the highest revenue at \u00a35,701.16 TW with a 4.2% share TW, but declined -39.9% WoW.\n- RABBIT NIGHT LIGHT achieved the second highest revenue of \u00a35,084.81 TW with a 3.8% share TW and recorded the most orders at 105 TW compared to 123 LW.\n- CHILLI LIGHTS ranked third with revenue of \u00a34,960.25 TW representing a 3.7% share TW and showed strong growth of +115.0% WoW.\n- DOORMAT BLACK FLOCK experienced the largest WoW increase with revenue surging +1544.7% from \u00a333.00 LW to \u00a3542.76 TW.\n- 3 HEARTS HANGING DECORATION RUSTIC saw the largest WoW decrease, declining -73.8% from \u00a33,006.44 LW to \u00a3788.05 TW.\n- JAM MAKING SET WITH JARS demonstrated the largest YoY increase with revenue growing +832.5% from \u00a393.50 LY to current week levels.\n- HAND WARMER SCOTTY DOG DESIGN recorded the largest YoY decrease, falling -76.8% from \u00a32,126.08 LY.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W47. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a3135,254.11 TW, revenue \u00a3159,100.49 LW, revenue change -15.0% WoW, revenue change +57.9% YoY\n- PAPER CHAIN KIT 50'S CHRISTMAS: rank 1, revenue \u00a35,701.16 TW, share 4.2% TW, revenue change -39.9% WoW\n- RABBIT NIGHT LIGHT: rank 2, revenue \u00a35,084.81 TW, share 3.8% TW, revenue change -52.4% WoW\n- CHILLI LIGHTS: rank 3, revenue \u00a34,960.25 TW, share 3.7% TW, revenue change +115.0% WoW\n- DOORMAT BLACK FLOCK (largest WoW increase): revenue change +1544.7% WoW, revenue \u00a3542.76 TW versus \u00a333.00 LW\n- 3 HEARTS HANGING DECORATION RUSTIC (largest WoW decrease): revenue change -73.8% WoW, revenue \u00a3788.05 TW versus \u00a33,006.44 LW\n- JAM MAKING SET WITH JARS (largest YoY increase): revenue change +832.5% YoY, revenue \u00a393.50 LY\n- HAND WARMER SCOTTY DOG DESIGN (largest YoY decrease): revenue change -76.8% YoY, revenue \u00a32,126.08 LY\n- RABBIT NIGHT LIGHT (most orders): orders 105 TW versus 123 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue across all products was \u00a3135,254.11 TW, representing a -15.0% WoW decline from \u00a3159,100.49 LW, though revenue increased +57.9% YoY.\n- PAPER CHAIN KIT 50'S CHRISTMAS generated the highest revenue at \u00a35,701.16 TW with a 4.2% share TW, but declined -39.9% WoW.\n- RABBIT NIGHT LIGHT achieved the second highest revenue of \u00a35,084.81 TW with a 3.8% share TW and recorded the most orders at 105 TW compared to 123 LW.\n- CHILLI LIGHTS ranked third with revenue of \u00a34,960.25 TW representing a 3.7% share TW and showed strong growth of +115.0% WoW.\n- DOORMAT BLACK FLOCK experienced the largest WoW increase with revenue surging +1544.7% from \u00a333.00 LW to \u00a3542.76 TW.\n- 3 HEARTS HANGING DECORATION RUSTIC saw the largest WoW decrease, declining -73.8% from \u00a33,006.44 LW to \u00a3788.05 TW.\n- JAM MAKING SET WITH JARS demonstrated the largest YoY increase with revenue growing +832.5% from \u00a393.50 LY to current week levels.\n- HAND WARMER SCOTTY DOG DESIGN recorded the largest YoY decrease, falling -76.8% from \u00a32,126.08 LY.",
+    "input_tokens": 645,
+    "output_tokens": 369,
+    "cost_usd": 0.00249,
+    "latency_s": 3.768,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a3135,254.11 TW, revenue \u00a3159,100.49 LW, revenue change -15.0% WoW, revenue change +57.9% YoY\n- PAPER CHAIN KIT 50'S CHRISTMAS: rank 1, revenue \u00a35,701.16 TW, share 4.2% TW, revenue change -39.9% WoW\n- RABBIT NIGHT LIGHT: rank 2, revenue \u00a35,084.81 TW, share 3.8% TW, revenue change -52.4% WoW\n- CHILLI LIGHTS: rank 3, revenue \u00a34,960.25 TW, share 3.7% TW, revenue change +115.0% WoW\n- DOORMAT BLACK FLOCK (largest WoW increase): revenue change +1544.7% WoW, revenue \u00a3542.76 TW versus \u00a333.00 LW\n- 3 HEARTS HANGING DECORATION RUSTIC (largest WoW decrease): revenue change -73.8% WoW, revenue \u00a3788.05 TW versus \u00a33,006.44 LW\n- JAM MAKING SET WITH JARS (largest YoY increase): revenue change +832.5% YoY, revenue \u00a393.50 LY\n- HAND WARMER SCOTTY DOG DESIGN (largest YoY decrease): revenue change -76.8% YoY, revenue \u00a32,126.08 LY\n- RABBIT NIGHT LIGHT (most orders): orders 105 TW versus 123 LW",
+  "n_calls": 1,
+  "tokens_in": 645,
+  "tokens_out": 369,
+  "cost_usd": 0.00249,
+  "latency_s": 3.768
+ }
+}

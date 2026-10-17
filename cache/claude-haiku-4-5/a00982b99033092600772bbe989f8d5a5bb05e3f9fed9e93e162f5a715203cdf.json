@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £33,628.20 TW, up 57.1% WoW from £21,402.06 LW.\n- REGENCY CAKESTAND 3 TIER generated £4,443.21 TW, holding rank 1 with 13.2% share TW and growing 28.5% WoW.\n- PARTY BUNTING achieved rank 2 with revenue £2,495.37 TW, representing 7.4% share TW and increasing 55.9% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 3 with revenue £1,961.04 TW and 5.8% share TW, despite declining 13.2% WoW.\n- GIANT BLACK SUNGLASSES surged 33823.1% WoW, rising from £3.90 LW to £1,323.00 TW.\n- WOODEN CROQUET GARDEN SET fell 34.4% WoW, dropping from £1,133.73 LW to £743.99 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the most orders at 60 TW compared to 45 LW.",
+ "input_tokens": 563,
+ "output_tokens": 292,
+ "cost_usd": 0.002023,
+ "latency_s": 2.945,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

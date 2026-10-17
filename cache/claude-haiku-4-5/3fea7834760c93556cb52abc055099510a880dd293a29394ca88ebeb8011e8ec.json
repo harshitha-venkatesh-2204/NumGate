@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £3804.27 revenue in TW, ranking 1st and representing 18.6% of total revenue, with a WoW increase of 52.1% from £2500.50 in LW.\n- PARTY BUNTING declined to £1840.12 in TW from £3483.92 in LW, a WoW decrease of 47.2%, though it maintained rank 2 with 9.0% share of TW revenue.\n- CERAMIC STRAWBERRY MONEY BOX surged to £937.43 in TW from £8.26 in LW, representing an exceptional WoW increase of 11249.0% with 415 units sold.\n- PAPER CHAIN KIT EMPIRE achieved £1266.57 in TW revenue with a YoY increase of 279.4% compared to £333.81 in LY, ranking 3rd with 6.2% share.\n- WHITE HANGING HEART T-LIGHT HOLDER fell sharply to £1028.01 in TW from £6087.56 in LW, a WoW decrease of 83.1%, and declined 66.6% YoY from £3074.72 in LY.\n- UNION STRIPE WITH FRINGE HAMMOCK reached £724.97 in TW with a WoW increase of 212.5% from £232.01 in LW and a YoY increase of 729.0% from £87.45 in LY.\n- BALLOON WATER BOMB PACK OF 35 generated £464.03 in TW with a WoW increase of 1373.1% from £31.50 in LW and a YoY increase of 538.6% from £72.66 in LY.\n- ASSORTED COLOUR BIRD ORNAMENT decreased to £440.72 in TW from £952.92 in LW, a WoW decline of 53.8%, and fell 70.9% YoY from £1512.31 in LY.",
+ "input_tokens": 2279,
+ "output_tokens": 499,
+ "cost_usd": 0.0047740000000000005,
+ "latency_s": 5.893,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

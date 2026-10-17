@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER led TW at £2,963.43 (9.1% share, rank 1), up 3.9% WoW from £2,851.87 LW on 1,105 units versus 1,053 LW.\n- RETRO SPOT TEA SET CERAMIC 11 PC ranked 2 at £2,071.74 TW against £317.45 LW, a WoW gain of 552.6%, with units at 480 TW versus 58 LW across 17 orders in both weeks.\n- REGENCY CAKESTAND 3 TIER fell 55.8% WoW to £1,647.56 TW from £3,730.99 LW, with units down to 132 from 311 and orders down to 39 from 58.\n- FAWN BLUE HOT WATER BOTTLE and PINK FAIRY CAKE COASTER recorded £1,903.35 and £985.66 TW from £0.00 LW, on 745 and 2,401 units TW respectively.\n- GLITTER HANGING BUTTERFLY STRING posted the largest WoW increase at 4,752.8%, reaching £1,121.49 TW from £23.11 LW, with orders at 7 TW versus 3 LW.\n- PARTY BUNTING and RED RETROSPOT JUMBO BAG each declined 25.4% WoW, to £1,877.24 and £1,542.69 TW from £2,517.71 and £2,067.21 LW.\n- VINTAGE HEADS AND TAILS CARD GAME rose 2,744.0% WoW to £1,245.10 TW, with units at 1,156 TW versus 32 LW and orders at 17 TW versus 7 LW.\n- Revenue_LY is blank for all 23 rows in week 2010-W19, so no YoY percentage is available for any product this week.",
+ "input_tokens": 2299,
+ "output_tokens": 615,
+ "cost_usd": 0.026869999999999998,
+ "latency_s": 7.474,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

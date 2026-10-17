@@ -1,0 +1,49 @@
+{
+ "note_id": "small_country_2011-W42__S3__claude-haiku-4-5__r2",
+ "table_id": "small_country_2011-W42",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2011-W42",
+ "n_rows": 5,
+ "strategy": "S3",
+ "model": "claude-haiku-4-5",
+ "repeat": 2,
+ "note": "- United Kingdom generated \u00a3196,490.10 in revenue TW, representing 77.3% of total revenue across all entities shown and ranking first.\n- United Kingdom revenue increased 8.1% WoW from \u00a3181,722.47 LW, though it declined 8.0% YoY compared to \u00a3213,613.05 in the same ISO week last year.\n- Netherlands entered the market with \u00a329,458.10 revenue TW and 20,878 units sold, up from zero revenue and zero units LW, capturing 11.6% share.\n- EIRE revenue surged 91.1% WoW to \u00a313,751.42 TW from \u00a37,196.47 LW, and grew 30.4% YoY versus \u00a310,542.88 in the same week last year.\n- Germany revenue increased 49.4% WoW to \u00a39,191.85 TW from \u00a36,153.87 LW, and more than doubled with 100.8% YoY growth from \u00a34,577.05 last year.\n- Sweden generated \u00a35,296.96 revenue TW with 5,952 units sold from a single order, compared to zero revenue and zero units LW.\n- United Kingdom processed 391 orders TW with 103,879 units sold, compared to 393 orders LW with 96,832 units sold.\n- Netherlands achieved the highest YoY growth rate at 7641.5%, though this reflects a minimal base of \u00a3380.52 in the same week last year.",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W42. Entity type: country. The table has 5 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| United Kingdom | 196490.10 | 181722.47 | 213613.05 | 103879 | 96832 | 391 | 393 | 8.1 | -8.0 | 77.3 | 1 |\n| Netherlands | 29458.10 | 0.00 | 380.52 | 20878 | 0 | 7 | 0 |  | 7641.5 | 11.6 | 2 |\n| EIRE | 13751.42 | 7196.47 | 10542.88 | 9809 | 4614 | 14 | 12 | 91.1 | 30.4 | 5.4 | 3 |\n| Germany | 9191.85 | 6153.87 | 4577.05 | 6387 | 2881 | 17 | 11 | 49.4 | 100.8 | 3.6 | 4 |\n| Sweden | 5296.96 | 0.00 | 0.00 | 5952 | 0 | 1 | 0 |  |  | 2.1 | 5 |\n\nWrite the insight note now.\n",
+    "text": "- United Kingdom generated \u00a3196,490.10 in revenue TW, representing 77.3% of total revenue across all entities shown and ranking first.\n- United Kingdom revenue increased 8.1% WoW from \u00a3181,722.47 LW, though it declined 8.0% YoY compared to \u00a3213,613.05 in the same ISO week last year.\n- Netherlands entered the market with \u00a329,458.10 revenue TW and 20,878 units sold, up from zero revenue and zero units LW, capturing 11.6% share.\n- EIRE revenue surged 91.1% WoW to \u00a313,751.42 TW from \u00a37,196.47 LW, and grew 30.4% YoY versus \u00a310,542.88 in the same week last year.\n- Germany revenue increased 49.4% WoW to \u00a39,191.85 TW from \u00a36,153.87 LW, and more than doubled with 100.8% YoY growth from \u00a34,577.05 last year.\n- Sweden generated \u00a35,296.96 revenue TW with 5,952 units sold from a single order, compared to zero revenue and zero units LW.\n- United Kingdom processed 391 orders TW with 103,879 units sold, compared to 393 orders LW with 96,832 units sold.\n- Netherlands achieved the highest YoY growth rate at 7641.5%, though this reflects a minimal base of \u00a3380.52 in the same week last year.",
+    "input_tokens": 826,
+    "output_tokens": 365,
+    "cost_usd": 0.002651,
+    "latency_s": 4.178,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 27,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- United Kingdom generated \u00a3196,490.10 in revenue TW, representing 77.3% of total revenue across all entities shown and ranking first.\n- United Kingdom revenue increased 8.1% WoW from \u00a3181,722.47 LW, though it declined 8.0% YoY compared to \u00a3213,613.05 in the same ISO week last year.\n- Netherlands entered the market with \u00a329,458.10 revenue TW and 20,878 units sold, up from zero revenue and zero units LW, capturing 11.6% share.\n- EIRE revenue surged 91.1% WoW to \u00a313,751.42 TW from \u00a37,196.47 LW, and grew 30.4% YoY versus \u00a310,542.88 in the same week last year.\n- Germany revenue increased 49.4% WoW to \u00a39,191.85 TW from \u00a36,153.87 LW, and more than doubled with 100.8% YoY growth from \u00a34,577.05 last year.\n- Sweden generated \u00a35,296.96 revenue TW with 5,952 units sold from a single order, compared to zero revenue and zero units LW.\n- United Kingdom processed 391 orders TW with 103,879 units sold, compared to 393 orders LW with 96,832 units sold.\n- Netherlands achieved the highest YoY growth rate at 7641.5%, though this reflects a minimal base of \u00a3380.52 in the same week last year."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 826,
+  "tokens_out": 365,
+  "cost_usd": 0.002651,
+  "latency_s": 4.178
+ }
+}

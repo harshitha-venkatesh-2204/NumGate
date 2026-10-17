@@ -139,7 +139,7 @@ def rows(df, cols, note_index, tables=None, lines=None):
 
 def run_label(models):
     names = {"mock": "Mock model", "claude-opus-5": "Claude Opus 5", "gpt-4.1": "GPT-4.1",
-             "llama-3.3-70b": "Llama 3.3 70B", "claude-haiku-4-5": "Claude Haiku 4.5"}
+             "llama-3.3-70b": "Llama 3.3 70B", "claude-haiku-4-5": "Claude Haiku 4.5", "claude-sonnet-5": "Claude Sonnet 5"}
     return ", ".join(names.get(m, m) for m in models)
 
 
@@ -184,6 +184,7 @@ def run_payload(run_dir):
         "notes": out_notes, "texts": texts, "s3MaxRounds": s3_rounds,
         "numbers": numbers, "claims": claims, "flags": gate_flags(numbers, claims),
         "v1": overlay[0] if overlay else None, "v1Counts": overlay[1] if overlay else None,
+        "review": review_overlay(run_dir.name, numbers, notes["note_id"]),
     }
 
 
@@ -233,7 +234,10 @@ def v1_overlay(note_ids, texts, table_of, numbers):
         return None
     flags = pd.read_csv(flags_path)
     ids = list(note_ids)
-    if not set(flags["note_id"]) & set(ids):
+    # gate v1 was re-scored on the pilot notes only, so the overlay applies to a run made of exactly those notes
+    pilot_notes = PAPER_DIR / "data" / "v1_v2_notes.csv"
+    rescored = set(pd.read_csv(pilot_notes)["note_id"]) if pilot_notes.exists() else set(flags["note_id"])
+    if not set(flags["note_id"]) & set(ids) or not set(ids) <= rescored:
         return None
     import importlib.util
     spec = importlib.util.spec_from_file_location("gate_v1", v1_path)
@@ -261,6 +265,21 @@ def v1_overlay(note_ids, texts, table_of, numbers):
         if k:
             flagged.add(k)
     return [1 if k in flagged else 0 for k in keys], {"numberFlags": l1, "claimFlags": l2, "marked": len(flagged)}
+
+
+REVIEW_CODES = {"correct": 1, "wrong": 2, "unclear": 3, "not_a_measurement": 4}
+
+
+def review_overlay(run_id, numbers, note_ids):
+    """Blind-review verdict per number mention (0 = not reviewed), from paper/adjudication/verdicts_<run_id>.csv."""
+    path = PAPER_DIR / "adjudication" / f"verdicts_{run_id}.csv"
+    if not path.exists():
+        return None
+    v = pd.read_csv(path)
+    ids = list(note_ids)
+    pos = {(nid, int(li), str(raw), int(p)): REVIEW_CODES.get(f, 0)
+           for nid, li, raw, p, f in zip(v.note_id, v.line_idx, v.raw_text, v.position, v.final)}
+    return [pos.get((ids[x[0]], x[1], x[2], x[6] if x[6] is not None else -1), 0) for x in numbers]
 
 
 def story():
@@ -315,7 +334,8 @@ def table_payload(table_ids):
 
 def build_data():
     cfg = load_config()
-    runs = [p for p in (run_payload(d) for d in sorted(RUNS_DIR.iterdir()) if d.is_dir()) if p]
+    # preflight runs are API checks before a paid run, not results
+    runs = [p for p in (run_payload(d) for d in sorted(RUNS_DIR.iterdir()) if d.is_dir() and not d.name.startswith("preflight")) if p]
     # Real-model runs first (largest first), mock runs last, so the page opens on real results.
     runs.sort(key=lambda r: (r["isMock"], -len(r["notes"]), r["id"]))
     table_ids = {n["table"] for r in runs for n in r["notes"]}

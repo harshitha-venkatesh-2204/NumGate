@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £193,356.23 in revenue in TW, representing 92.6% of total revenue across all entities shown.\n- United Kingdom revenue declined 30.3% WoW from £277,287.56 in LW to £193,356.23 in TW, and fell 13.0% YoY compared to £222,326.89 in the same ISO week LY.\n- United Kingdom orders decreased from 493 in LW to 413 in TW.\n- Germany achieved £4,525.14 revenue in TW, up 16.2% WoW from £3,893.44 in LW, and up 42.6% YoY from £3,173.27 in LY.\n- Sweden generated £3,834.30 revenue in TW with zero revenue in LW, representing a 1244.0% YoY increase from £285.30 in LY.\n- Spain revenue surged 420.3% WoW from £174.72 in LW to £909.01 in TW, and increased 176.6% YoY from £328.60 in LY.\n- France experienced a sharp 87.3% WoW revenue decline from £4,050.16 in LW to £515.12 in TW, and fell 73.3% YoY from £1,926.72 in LY.\n- Belgium recorded £541.16 revenue in TW with no sales in LW, representing a 6266.6% YoY increase from £8.50 in LY.",
+ "input_tokens": 1594,
+ "output_tokens": 376,
+ "cost_usd": 0.0034739999999999997,
+ "latency_s": 3.114,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

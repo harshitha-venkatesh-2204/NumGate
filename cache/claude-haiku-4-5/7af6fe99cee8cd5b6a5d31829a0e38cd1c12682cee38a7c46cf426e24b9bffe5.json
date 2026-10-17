@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £8.4k revenue TW, representing 13.6% of total product revenue and leading all items with 3,172 units sold.\n- Total revenue reached £61.8k TW, up 11.8% WoW from £55.3k LW, demonstrating strong week-over-week growth.\n- EDWARDIAN PARASOL BLACK contributed £3.4k revenue TW with a 5.6% share of total product sales.\n- WHITE HANGING HEART T-LIGHT HOLDER received 112 orders TW, the highest order count across all products, followed by SCOTTIE DOG HOT WATER BOTTLE with 75 orders.\n- FAIRY CAKE CANDLES achieved £3.1k revenue TW and ranked second in unit sales with 2,318 units sold.\n- BLACK RECORD COVER FRAME showed exceptional momentum with 185.5% revenue growth WoW, while WILLOW BRANCH LIGHTS grew 185.0% WoW.\n- Total units sold reached 21,178 TW across 1,154 orders, indicating strong customer demand across the product range.\n- RED/WHITE DOTS RUFFLED UMBRELLA and EDWARDIAN PARASOL NATURAL each generated approximately £3.0k revenue TW, rounding out the top five revenue performers.",
+ "input_tokens": 1876,
+ "output_tokens": 319,
+ "cost_usd": 0.003471,
+ "latency_s": 4.04,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

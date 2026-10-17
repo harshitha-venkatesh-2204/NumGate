@@ -1,0 +1,49 @@
+{
+ "note_id": "small_product_2010-W38__S3__claude-sonnet-5__r1",
+ "table_id": "small_product_2010-W38",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W38",
+ "n_rows": 9,
+ "strategy": "S3",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- REGENCY CAKESTAND 3 TIER ranks 1 TW with \u00a37503.00 revenue, up 67.0% WoW from \u00a34493.62 LW, holding 27.1% share.\n- HAND WARMER RED POLKA DOT posted \u00a33707.40 TW revenue versus \u00a30.00 LW, selling 2004 units TW across 1 order.\n- JUMBO BAG RED RETROSPOT ranks 3 TW with \u00a33129.01 revenue, up 54.7% WoW from \u00a32022.70 LW, on 39 orders TW versus 50 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue rose 3.4% WoW to \u00a32894.02 TW from \u00a32798.40 LW, with orders up to 67 TW from 60 LW.\n- ASSORTED COLOUR BIRD ORNAMENT revenue grew 187.4% WoW to \u00a32829.76 TW from \u00a3984.67 LW, units rising to 1792 TW from 619 LW.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS revenue increased 519.4% WoW to \u00a32297.49 TW from \u00a3370.90 LW, orders up to 59 TW from 7 LW.\n- AFGHAN SLIPPER SOCK PAIR revenue jumped 52204.3% WoW to \u00a31804.50 TW from \u00a33.45 LW, units rising to 610 TW from 1 LW.\n- BABUSHKA LIGHTS STRING OF 10 revenue climbed 1557.0% WoW to \u00a31678.87 TW from \u00a3101.32 LW, holding 6.1% share of TW revenue.",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W38. Entity type: product. The table has 9 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 7503.00 | 4493.62 |  | 624 | 380 | 58 | 53 | 67.0 |  | 27.1 | 1 |\n| HAND WARMER RED POLKA DOT | 3707.40 | 0.00 |  | 2004 | 0 | 1 | 0 |  |  | 13.4 | 2 |\n| JUMBO BAG RED RETROSPOT | 3129.01 | 2022.70 |  | 1515 | 1118 | 39 | 50 | 54.7 |  | 11.3 | 3 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 2894.02 | 2798.40 |  | 1088 | 1048 | 67 | 60 | 3.4 |  | 10.5 | 4 |\n| ASSORTED COLOUR BIRD ORNAMENT | 2829.76 | 984.67 |  | 1792 | 619 | 43 | 27 | 187.4 |  | 10.2 | 5 |\n| PAPER CHAIN KIT VINTAGE CHRISTMAS | 2297.49 | 370.90 |  | 819 | 142 | 59 | 7 | 519.4 |  | 8.3 | 6 |\n| AFGHAN SLIPPER SOCK PAIR | 1804.50 | 3.45 |  | 610 | 1 | 5 | 1 | 52204.3 |  | 6.5 | 7 |\n| SET OF 6 RIBBONS VINTAGE CHRISTMAS | 1797.01 | 1585.95 |  | 756 | 749 | 45 | 7 | 13.3 |  | 6.5 | 8 |\n| BABUSHKA LIGHTS STRING OF 10 | 1678.87 | 101.32 |  | 279 | 14 | 25 | 7 | 1557.0 |  | 6.1 | 9 |\n\nWrite the insight note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER ranks 1 TW with \u00a37503.00 revenue, up 67.0% WoW from \u00a34493.62 LW, holding 27.1% share.\n- HAND WARMER RED POLKA DOT posted \u00a33707.40 TW revenue versus \u00a30.00 LW, selling 2004 units TW across 1 order.\n- JUMBO BAG RED RETROSPOT ranks 3 TW with \u00a33129.01 revenue, up 54.7% WoW from \u00a32022.70 LW, on 39 orders TW versus 50 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue rose 3.4% WoW to \u00a32894.02 TW from \u00a32798.40 LW, with orders up to 67 TW from 60 LW.\n- ASSORTED COLOUR BIRD ORNAMENT revenue grew 187.4% WoW to \u00a32829.76 TW from \u00a3984.67 LW, units rising to 1792 TW from 619 LW.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS revenue increased 519.4% WoW to \u00a32297.49 TW from \u00a3370.90 LW, orders up to 59 TW from 7 LW.\n- AFGHAN SLIPPER SOCK PAIR revenue jumped 52204.3% WoW to \u00a31804.50 TW from \u00a33.45 LW, units rising to 610 TW from 1 LW.\n- BABUSHKA LIGHTS STRING OF 10 revenue climbed 1557.0% WoW to \u00a31678.87 TW from \u00a3101.32 LW, holding 6.1% share of TW revenue.",
+    "input_tokens": 1330,
+    "output_tokens": 560,
+    "cost_usd": 0.00826,
+    "latency_s": 5.422,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 39,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- REGENCY CAKESTAND 3 TIER ranks 1 TW with \u00a37503.00 revenue, up 67.0% WoW from \u00a34493.62 LW, holding 27.1% share.\n- HAND WARMER RED POLKA DOT posted \u00a33707.40 TW revenue versus \u00a30.00 LW, selling 2004 units TW across 1 order.\n- JUMBO BAG RED RETROSPOT ranks 3 TW with \u00a33129.01 revenue, up 54.7% WoW from \u00a32022.70 LW, on 39 orders TW versus 50 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue rose 3.4% WoW to \u00a32894.02 TW from \u00a32798.40 LW, with orders up to 67 TW from 60 LW.\n- ASSORTED COLOUR BIRD ORNAMENT revenue grew 187.4% WoW to \u00a32829.76 TW from \u00a3984.67 LW, units rising to 1792 TW from 619 LW.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS revenue increased 519.4% WoW to \u00a32297.49 TW from \u00a3370.90 LW, orders up to 59 TW from 7 LW.\n- AFGHAN SLIPPER SOCK PAIR revenue jumped 52204.3% WoW to \u00a31804.50 TW from \u00a33.45 LW, units rising to 610 TW from 1 LW.\n- BABUSHKA LIGHTS STRING OF 10 revenue climbed 1557.0% WoW to \u00a31678.87 TW from \u00a3101.32 LW, holding 6.1% share of TW revenue."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1330,
+  "tokens_out": 560,
+  "cost_usd": 0.00826,
+  "latency_s": 5.422
+ }
+}

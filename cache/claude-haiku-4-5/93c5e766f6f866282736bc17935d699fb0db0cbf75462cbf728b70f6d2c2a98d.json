@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £4.4k revenue TW, the highest performing product, with 1,686 units sold across 57 orders.\n- PARTY BUNTING achieved £3.2k revenue TW, placing it as the second strongest revenue driver for the week.\n- REGENCY CAKESTAND 3 TIER delivered £2.4k revenue TW with 38 orders, demonstrating consistent customer demand.\n- PACK OF 72 RETRO SPOT CAKE CASES led unit sales with 1,859 units sold TW, outperforming all other products by volume.\n- WALL MIRROR RECT DIAMANTE PINK showed exceptional growth with revenue increasing 3,923.3% WoW, indicating a significant surge in demand.\n- DIAMANTE HEART SHAPED WALL MIRROR experienced strong momentum with revenue up 1,596.6% WoW compared to LW.\n- Total revenue reached £41.6k TW with 19,061 units sold across 769 orders.\n- Overall portfolio revenue grew 38.5% WoW, reflecting broad-based strength across the product range.",
+ "input_tokens": 1834,
+ "output_tokens": 271,
+ "cost_usd": 0.003189,
+ "latency_s": 3.561,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

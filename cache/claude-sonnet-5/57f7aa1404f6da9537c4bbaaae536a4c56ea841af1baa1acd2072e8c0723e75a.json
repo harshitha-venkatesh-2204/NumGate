@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranked 1 TW with revenue of £6009.01, up 13.0% WoW from £5319.69 LW.\n- ROTATING SILVER ANGELS T-LIGHT HLDR ranked 2 TW with revenue of £5866.33, up 681.7% WoW from £750.47 LW.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 3 TW with revenue of £4046.96, up 192.1% WoW from £1385.59 LW.\n- BROCADE RING PURSE revenue rose 3063.7% WoW to £1052.56 TW from £33.27 LW.\n- SET OF 3 BABUSHKA STACKING TINS revenue rose 2482.8% WoW to £1406.34 TW from £54.45 LW.\n- PARTY BUNTING fell 70.1% WoW to £1078.12 TW from £3601.04 LW.\n- JUMBO BAG RED RETROSPOT revenue declined 40.8% WoW to £2026.70 TW from £3423.53 LW.\n- GOLD WINE GLASS had zero revenue LW and recorded £976.32 TW across 1 order, ranked 23.",
+ "input_tokens": 6624,
+ "output_tokens": 422,
+ "cost_usd": 0.017467999999999997,
+ "latency_s": 4.088,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

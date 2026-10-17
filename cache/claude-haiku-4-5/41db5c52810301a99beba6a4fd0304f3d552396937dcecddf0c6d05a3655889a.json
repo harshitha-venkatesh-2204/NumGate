@@ -1,0 +1,10 @@
+{
+ "text": "- PLEASE ONE PERSON METAL SIGN generated £2,773.43 revenue in TW, ranking 1st and representing 4.2% of total revenue, with a WoW increase of 3286.4% from £81.90 in LW.\n- PARTY BUNTING achieved £1,825.40 revenue in TW (rank 2, 2.8% share) with a YoY increase of 5654.7% compared to £31.72 in LY.\n- HAND WARMER OWL DESIGN grew to £1,611.60 in TW from £311.93 in LW, representing a WoW increase of 416.7% and a YoY increase of 2458.1%.\n- COOK WITH WINE METAL SIGN reached £1,415.04 revenue in TW with a WoW increase of 2621.2% from £52.00 in LW and a YoY increase of 865.5%.\n- REGENCY CAKESTAND 3 TIER declined to £1,825.17 in TW from £1,991.04 in LW, a WoW decrease of 8.3%, and fell 50.8% YoY from £3,712.01 in LY.\n- JUMBO BAG RED RETROSPOT decreased to £1,162.03 in TW from £1,554.01 in LW, representing a WoW decline of 25.2% and a YoY decline of 49.8% from £2,315.21 in LY.\n- STAR WOODEN CHRISTMAS DECORATION generated £448.16 in TW with 608 units sold, showing a WoW increase of 3710.9% from £11.76 in LW and a YoY increase of 2322.5%.\n- BEWARE OF THE CAT METAL SIGN achieved £620.84 revenue in TW with a WoW increase of 3836.8% from £15.77 in LW and a YoY increase of 413.9% from £120.82 in LY.",
+ "input_tokens": 6506,
+ "output_tokens": 505,
+ "cost_usd": 0.009030999999999999,
+ "latency_s": 6.087,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

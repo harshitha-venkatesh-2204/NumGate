@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue of £4554.09, up WoW 85.4% from LW £2456.32.\n- WHITE HANGING HEART T-LIGHT HOLDER posted TW revenue of £3214.95, a WoW increase of 47.9% versus LW £2173.03, holding 17.1% share.\n- JUMBO BAG RED RETROSPOT recorded TW revenue of £2489.35 with 1405 units sold, up WoW 78.8% from LW £1392.22.\n- PAPER BUNTING RETRO SPOTS grew WoW 160.0% to TW revenue of £2266.34 from LW £871.55.\n- PAPER CHAIN KIT SKULLS surged WoW 3983.9% to TW revenue of £1445.70 from LW £35.40, with orders rising from 2 to 3.\n- PAPER CHAIN KIT RETRO SPOT climbed WoW 708.2% to TW revenue of £1573.81 from LW £194.74.\n- VINTAGE UNION JACK BUNTING reached TW revenue of £1688.33, up WoW 106.9% from LW £815.92, ranked 5 of 8.\n- JUMBO BAG STRAWBERRY recorded TW revenue of £1544.16, up WoW 101.2% from LW £767.61, with 8.2% share of TW revenue across the 8 products.",
+ "input_tokens": 1232,
+ "output_tokens": 507,
+ "cost_usd": 0.007534,
+ "latency_s": 5.117,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

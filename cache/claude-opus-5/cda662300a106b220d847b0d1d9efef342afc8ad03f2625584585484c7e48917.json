@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT leads TW at £2,152.90, up 40.6% WoW from £1,531.13, with 1,160 units TW versus 768 LW and a 3.4% share of TW revenue.\n- WOOD BLACK BOARD ANT WHITE FINISH ranks 2 at £2,057.46 TW, up 496.6% WoW from £344.85 and up 87.0% YoY from £1,099.98 LY.\n- REGENCY CAKESTAND 3 TIER posts £1,991.04 TW at rank 3, down 31.5% WoW from £2,907.39 and down 62.2% YoY from £5,262.87, with 147 units TW versus 242 LW.\n- RED HARMONICA IN BOX reaches £1,731.06 TW on 1,621 units, up 320.3% WoW from £411.90 and up 120.2% YoY from £786.11, across 8 orders TW versus 9 LW.\n- JUMBO BAG RED RETROSPOT falls to £1,554.01 TW, down 47.2% WoW from £2,941.59 and down 51.7% YoY from £3,219.09, with units at 717 TW versus 1,518 LW.\n- The three ALARM CLOCK BAKELIKE lines total £1,092.71 TW versus £4,348.60 LW, with RED down 80.7% WoW, PINK down 79.1% WoW and GREEN down 60.0% WoW.\n- Christmas lines rise sharply WoW: CHRISTMAS LIGHTS 10 REINDEER £805.13 TW versus £8.50 LW, PAPER CHAIN KIT VINTAGE CHRISTMAS £665.83 TW versus £44.25 LW, and 36 DOILIES VINTAGE CHRISTMAS £635.74 TW versus £97.15 LW.\n- SMALL ZINC HEART WALL ORGANISER records £1,367.02 TW from £11.50 LW on 409 units across 2 orders, ranking 7 with a 2.2% share of TW revenue.",
+ "input_tokens": 9071,
+ "output_tokens": 1268,
+ "cost_usd": 0.077055,
+ "latency_s": 13.457,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

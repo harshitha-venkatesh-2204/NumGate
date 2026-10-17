@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £112,643.90 TW versus £58,152.40 LW, a WoW change of +93.7%, and versus LY a YoY change of +137.2%.\n- LANDMARK FRAME COVENT GARDEN ranked 1 TW with revenue £3,766.40 and a 3.3% share TW.\n- LANDMARK FRAME OXFORD STREET ranked 2 TW with revenue £3,753.90 and a 3.3% share TW.\n- LANDMARK FRAME NOTTING HILL ranked 3 TW with revenue £3,660.00 and a 3.2% share TW.\n- CERAMIC CAKE STAND + HANGING CAKES posted the largest WoW increase, up +2392.0% WoW, from £19.90 LW to £495.90 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER posted the largest WoW decrease, down -63.6% WoW, from £1,893.01 LW to £689.94 TW.\n- RED  HARMONICA IN BOX had the largest YoY increase, up +26576.5% YoY, from £3.75 LY.\n- CHRISTMAS LIGHTS 10 REINDEER had the largest YoY decrease, down -77.1% YoY, from £2,374.88 LY.\n- HOT WATER BOTTLE KEEP CALM had the most orders, 50 TW versus 38 LW.",
+ "input_tokens": 824,
+ "output_tokens": 482,
+ "cost_usd": 0.006468,
+ "latency_s": 4.307,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

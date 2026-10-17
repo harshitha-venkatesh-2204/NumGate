@@ -1,0 +1,10 @@
+{
+ "text": "```json\n{\"claims\": []}\n```\n\nNo note lines were provided to extract numeric claims from. Please provide the business insight notes with line numbers, and I'll extract all numeric claims in the requested JSON format.",
+ "input_tokens": 568,
+ "output_tokens": 48,
+ "cost_usd": 0.000808,
+ "latency_s": 1.213,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

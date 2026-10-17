@@ -1,0 +1,10 @@
+{
+ "text": "- PARTY BUNTING ranks 1 with TW revenue of £5226.24, up 184.0% WoW from £1840.12 LW and up 107.6% YoY from £2517.71 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER is rank 2 with TW revenue of £3057.60, up 197.4% WoW from £1028.01 LW and up 7.2% YoY from £2851.87 LY.\n- REGENCY CAKESTAND 3 TIER fell to £2115.30 TW from £3804.27 LW, a WoW decline of 44.4%, and is down 43.3% YoY versus £3730.99 LY.\n- SMALL CHINESE STYLE SCISSOR TW revenue of £840.82 compares to just £4.20 LW, a WoW increase of 19919.5%, with units rising from 10 LW to 2621 TW.\n- SPOTTY BUNTING recorded TW revenue of £1414.10 with 0.00 LW and 0.00 LY, ranking 4 with 29 orders TW.\n- BLACK RECORD COVER FRAME TW revenue of £1354.18 is up 911.6% WoW from £133.86 LW and up 199.7% YoY from £451.80 LY.\n- Total TW revenue across the 21 listed products is £27933.80, with PARTY BUNTING holding the largest share at 18.7%.\n- DOORMAT KEEP CALM AND COME IN TW revenue of £1151.56 is up 415.9% WoW from £223.20 LW, with orders rising from 5 LW to 31 TW.",
+ "input_tokens": 2904,
+ "output_tokens": 900,
+ "cost_usd": 0.014807999999999998,
+ "latency_s": 6.668,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

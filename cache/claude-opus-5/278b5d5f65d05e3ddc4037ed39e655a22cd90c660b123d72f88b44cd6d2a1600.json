@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 at £3,265.21 TW versus £2,446.96 LW, a WoW gain of 33.4%, holding 23.5% of TW revenue across the 8 rows.\n- WHITE HANGING HEART T-LIGHT HOLDER falls to rank 2 at £3,042.82 TW from £4,405.70 LW, a WoW decline of 30.9%, with units down from 1,686 LW to 1,118 TW even as orders rose from 57 LW to 69 TW.\n- CAKE STAND LOVEBIRD 2 TIER PINK posts the largest WoW move at 1,441.2%, rising from £80.08 LW to £1,234.18 TW on 205 units TW versus 7 units LW, spread across 2 orders TW versus 4 LW.\n- RED RETROSPOT CAKE STAND gains 182.8% WoW to £1,201.80 TW from £424.95 LW, with units at 148 TW against 41 LW.\n- ASSORTED COLOUR BIRD ORNAMENT reaches £1,575.76 TW versus £1,057.36 LW, up 49.0% WoW, on 1,000 units TW against 664 units LW.\n- PLEASE ONE PERSON METAL SIGN is the second decliner at £1,340.40 TW versus £1,475.70 LW, down 9.2% WoW, with units at 684 TW versus 767 LW.\n- EDWARDIAN PARASOL NATURAL at £1,148.67 TW (up 30.6% WoW) and EDWARDIAN PARASOL BLACK at £1,065.69 TW (up 14.9% WoW) combine for £2,214.36 TW and 16.0% of TW revenue.\n- The 8 listed products total £13,874.53 TW versus £11,697.34 LW, up 18.6% WoW, with no LY revenue recorded for any row so YoY is not available for week 2010-W34.",
+ "input_tokens": 1245,
+ "output_tokens": 1196,
+ "cost_usd": 0.036125,
+ "latency_s": 14.844,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

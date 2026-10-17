@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £35.2k TW versus £34.9k LW, a WoW change of +0.8%.\n- TOTAL units came in at 9,486 TW, up 18.7% WoW, while TOTAL orders reached 759 TW, up 22.4% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £6,552.99, a 18.6% share of TOTAL revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER delivered £5,999.53 TW for a 17.1% share, and PAPER CHAIN KIT 50'S CHRISTMAS delivered £5,735.62 TW for a 16.3% share.\n- The top three products together held 52.0% of TOTAL revenue TW.\n- WHITE HANGING HEART T-LIGHT HOLDER added £3,339.80 WoW (+125.6%), and HOT WATER BOTTLE BABUSHKA added £1,706.85 WoW (+113.1%).\n- PAPER CHAIN KIT 50'S CHRISTMAS fell £3,284.71 WoW (-36.4%), and PAPER CHAIN KIT VINTAGE CHRISTMAS fell £1,291.07 WoW (-34.0%).\n- WHITE HANGING HEART T-LIGHT HOLDER led all products on volume TW with 2,155 units across 112 orders.",
+ "input_tokens": 2591,
+ "output_tokens": 486,
+ "cost_usd": 0.025105,
+ "latency_s": 5.996,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

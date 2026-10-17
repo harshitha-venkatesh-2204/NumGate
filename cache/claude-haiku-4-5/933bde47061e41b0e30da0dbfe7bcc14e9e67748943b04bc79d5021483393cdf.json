@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £2,616.0 revenue TW, the highest performing product by sales value.\n- MINI PAINT SET VINTAGE led unit sales TW with 1,261 units sold, significantly outpacing the second-ranked SMALL POPCORN HOLDER at 779 units.\n- SET OF 3 CAKE TINS PANTRY DESIGN recorded the most orders TW with 47 orders, followed by JUMBO BAG RED RETROSPOT with 37 orders.\n- CHARLOTTE BAG SUKI DESIGN showed the strongest WoW revenue growth at 1,286.1 percent, with MINI PAINT SET VINTAGE also performing strongly at 945.9 percent WoW increase.\n- DOORMAT HEARTS demonstrated exceptional YoY growth of 5,323.2 percent in revenue, while SOMBRERO achieved 4,290.2 percent YoY increase.\n- CHILLI LIGHTS generated £1,516.3 revenue TW while also achieving 621.7 percent WoW revenue growth.\n- JUMBO BAG RED RETROSPOT maintained strong performance across multiple metrics with £1,356.16 revenue TW, 738 units sold, and 37 orders placed.\n- SMALL POPCORN HOLDER showed robust YoY expansion with 1,205.0 percent revenue growth despite ranking second in TW unit sales at 779 units.",
+ "input_tokens": 1916,
+ "output_tokens": 339,
+ "cost_usd": 0.0036109999999999996,
+ "latency_s": 4.332,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

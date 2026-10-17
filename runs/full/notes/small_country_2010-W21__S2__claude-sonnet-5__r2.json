@@ -1,0 +1,239 @@
+{
+ "note_id": "small_country_2010-W21__S2__claude-sonnet-5__r2",
+ "table_id": "small_country_2010-W21",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2010-W21",
+ "n_rows": 7,
+ "strategy": "S2",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- TOTAL revenue TW was \u00a3154.7k vs LW \u00a3145.0k, WoW up 6.6%.\n- TOTAL units rose to 103,003 TW from 84,549 LW.\n- TOTAL orders increased to 397 TW from 334 LW.\n- United Kingdom led all countries with \u00a3143.7k TW revenue, a 92.9% share and rank 1.\n- Channel Islands ranked 2nd with \u00a33.4k TW revenue, 2.2% share.\n- EIRE held rank 3 with \u00a31.9k TW revenue, 1.2% share.\n- Netherlands followed at rank 4 with \u00a31.8k TW revenue, 1.2% share.\n- Switzerland and France rounded out the top six with \u00a31.4k and \u00a31.3k TW revenue respectively, each under 1% share.",
+ "trace": {
+  "strategy": "S2",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "code_0",
+    "system": "You are a data analyst who writes short, correct pandas code.\n\nWrite one Python script that:\n- reads the CSV file whose path is given in sys.argv[1] with pandas,\n- computes up to 25 facts that would be most useful for a weekly executive insight note (largest entities, biggest week over week and year over year movers, shares, totals),\n- prints one JSON array to stdout and nothing else.\n\nEach element of the array is an object with these keys:\n- \"entity\": the Entity value, or \"TOTAL\" for all rows combined.\n- \"metric\": one of revenue, units, orders, share, rank.\n- \"period\": one of TW, LW, LY, WoW, YoY. Use WoW or YoY for changes between periods.\n- \"value\": a plain number (not a string). Round money to 2 decimals and percentages to 1 decimal.\n- \"formula\": a short description of how the value was computed, for example \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\".\n\nUse only pandas, numpy, json and sys. Blank cells are NaN: skip them instead of crashing. Convert numpy numbers to Python floats before json.dumps.\nReturn only the code, inside one ```python block.\n",
+    "user": "The script will be run as: python facts.py table.csv\n\nThe CSV holds a weekly sales report for ISO week 2010-W21. Entity type: country. It has 7 rows and these columns (with pandas dtypes):\n- Entity: str\n- Revenue_TW: float64\n- Revenue_LW: float64\n- Revenue_LY: float64\n- Units_TW: int64\n- Units_LW: int64\n- Orders_TW: int64\n- Orders_LW: int64\n- WoW_Pct: float64\n- YoY_Pct: float64\n- Share_Pct: float64\n- Rank: int64\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\nFirst rows of the file:\nEntity,Revenue_TW,Revenue_LW,Revenue_LY,Units_TW,Units_LW,Orders_TW,Orders_LW,WoW_Pct,YoY_Pct,Share_Pct,Rank\nUnited Kingdom,143748.77,130586.63,,96600,76814,382,319,10.1,,92.9,1\nChannel Islands,3401.24,782.8,,1673,146,3,1,334.5,,2.2,2\nEIRE,1889.68,2637.72,,1013,1003,2,4,-28.4,,1.2,3\n\n",
+    "text": "```python\nimport sys, json\nimport pandas as pd\nimport numpy as np\n\ndef to_float(x):\n    return None if pd.isna(x) else round(float(x), 2)\n\ndef add(facts, entity, metric, period, value, formula):\n    if value is None or (isinstance(value, float) and np.isnan(value)):\n        return\n    facts.append({\n        \"entity\": entity,\n        \"metric\": metric,\n        \"period\": period,\n        \"value\": float(value),\n        \"formula\": formula\n    })\n\ndef main():\n    path = sys.argv[1]\n    df = pd.read_csv(path)\n\n    facts = []\n\n    # ---- Totals ----\n    total_tw = df[\"Revenue_TW\"].sum(skipna=True)\n    total_lw = df[\"Revenue_LW\"].sum(skipna=True)\n    total_ly = df[\"Revenue_LY\"].sum(skipna=True)\n    total_units_tw = df[\"Units_TW\"].sum(skipna=True)\n    total_units_lw = df[\"Units_LW\"].sum(skipna=True)\n    total_orders_tw = df[\"Orders_TW\"].sum(skipna=True)\n    total_orders_lw = df[\"Orders_LW\"].sum(skipna=True)\n\n    add(facts, \"TOTAL\", \"revenue\", \"TW\", round(total_tw, 2), \"sum(Revenue_TW)\")\n    add(facts, \"TOTAL\", \"revenue\", \"LW\", round(total_lw, 2), \"sum(Revenue_LW)\")\n    if not pd.isna(total_ly) and total_ly != 0:\n        add(facts, \"TOTAL\", \"revenue\", \"LY\", round(total_ly, 2), \"sum(Revenue_LY)\")\n\n    if total_lw and not pd.isna(total_lw) and total_lw != 0:\n        wow = (total_tw - total_lw) / total_lw * 100\n        add(facts, \"TOTAL\", \"revenue\", \"WoW\", round(wow, 1),\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\")\n\n    if not pd.isna(total_ly) and total_ly != 0:\n        yoy = (total_tw - total_ly) / total_ly * 100\n        add(facts, \"TOTAL\", \"revenue\", \"YoY\", round(yoy, 1),\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\")\n\n    add(facts, \"TOTAL\", \"units\", \"TW\", float(total_units_tw), \"sum(Units_TW)\")\n    add(facts, \"TOTAL\", \"units\", \"LW\", float(total_units_lw), \"sum(Units_LW)\")\n    add(facts, \"TOTAL\", \"orders\", \"TW\", float(total_orders_tw), \"sum(Orders_TW)\")\n    add(facts, \"TOTAL\", \"orders\", \"LW\", float(total_orders_lw), \"sum(Orders_LW)\")\n\n    # ---- Per entity: revenue, share, rank, WoW, YoY ----\n    for _, row in df.iterrows():\n        ent = row[\"Entity\"]\n        add(facts, ent, \"revenue\", \"TW\", to_float(row[\"Revenue_TW\"]), \"Revenue_TW\")\n        add(facts, ent, \"share\", \"TW\", to_float(row[\"Share_Pct\"]),\n            \"Revenue_TW / sum(Revenue_TW) * 100\")\n        if \"Rank\" in row and not pd.isna(row[\"Rank\"]):\n            add(facts, ent, \"rank\", \"TW\", float(row[\"Rank\"]), \"Rank by Revenue_TW\")\n\n    for _, row in df.iterrows():\n        ent = row[\"Entity\"]\n        if not pd.isna(row.get(\"WoW_Pct\", np.nan)):\n            add(facts, ent, \"revenue\", \"WoW\", to_float(row[\"WoW_Pct\"]),\n                \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n\n    for _, row in df.iterrows():\n        ent = row[\"Entity\"]\n        if not pd.isna(row.get(\"YoY_Pct\", np.nan)):\n            add(facts, ent, \"revenue\", \"YoY\", to_float(row[\"YoY_Pct\"]),\n                \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    # ---- Top entity by revenue ----\n    if not df[\"Revenue_TW\"].dropna().empty:\n        top_row = df.loc[df[\"Revenue_TW\"].idxmax()]\n        add(facts, top_row[\"Entity\"], \"revenue\", \"TW\", to_float(top_row[\"Revenue_TW\"]),\n            \"max(Revenue_TW) across entities\")\n\n    # ---- Biggest WoW riser / faller ----\n    wow_valid = df.dropna(subset=[\"WoW_Pct\"])\n    if not wow_valid.empty:\n        riser = wow_valid.loc[wow_valid[\"WoW_Pct\"].idxmax()]\n        faller = wow_valid.loc[wow_valid[\"WoW_Pct\"].idxmin()]\n        add(facts, riser[\"Entity\"], \"revenue\", \"WoW\", to_float(riser[\"WoW_Pct\"]),\n            \"max WoW_Pct among entities\")\n        add(facts, faller[\"Entity\"], \"revenue\", \"WoW\", to_float(faller[\"WoW_Pct\"]),\n            \"min WoW_Pct among entities\")\n\n    # ---- Biggest YoY riser / faller (if any data) ----\n    yoy_valid = df.dropna(subset=[\"YoY_Pct\"])\n    if not yoy_valid.empty:\n        riser_y = yoy_valid.loc[yoy_valid[\"YoY_Pct\"].idxmax()]\n        faller_y = yoy_valid.loc[yoy_valid[\"YoY_Pct\"].idxmin()]\n        add(facts, riser_y[\"Entity\"], \"revenue\", \"YoY\", to_float(riser_y[\"YoY_Pct\"]),\n            \"max YoY_Pct among entities\")\n        add(facts, faller_y[\"Entity\"], \"revenue\", \"YoY\", to_float(faller_y[\"YoY_Pct\"]),\n            \"min YoY_Pct among entities\")\n\n    # Trim to 25 facts max\n    facts = facts[:25]\n\n    print(json.dumps(facts))\n\nif __name__ == \"__main__\":\n    main()\n```",
+    "input_tokens": 1048,
+    "output_tokens": 2966,
+    "cost_usd": 0.031756,
+    "latency_s": 24.883,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   },
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a list of facts that were already computed from the sales table. Use only these facts. Every number in the note must come from a fact value, copied exactly or rounded (for example \u00a312,345.67 may be written as \u00a312.3k). Do not compute new numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W21. Entity type: country.\n\nFacts (JSON):\n[\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 154660.65,\n  \"formula\": \"sum(Revenue_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LW\",\n  \"value\": 145045.82,\n  \"formula\": \"sum(Revenue_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 6.6,\n  \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 103003.0,\n  \"formula\": \"sum(Units_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"LW\",\n  \"value\": 84549.0,\n  \"formula\": \"sum(Units_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 397.0,\n  \"formula\": \"sum(Orders_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"LW\",\n  \"value\": 334.0,\n  \"formula\": \"sum(Orders_LW)\"\n },\n {\n  \"entity\": \"United Kingdom\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 143748.77,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"United Kingdom\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 92.9,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"United Kingdom\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 1.0,\n  \"formula\": \"Rank by Revenue_TW\"\n },\n {\n  \"entity\": \"Channel Islands\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3401.24,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"Channel Islands\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 2.2,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"Channel Islands\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 2.0,\n  \"formula\": \"Rank by Revenue_TW\"\n },\n {\n  \"entity\": \"EIRE\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1889.68,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"EIRE\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 1.2,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"EIRE\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 3.0,\n  \"formula\": \"Rank by Revenue_TW\"\n },\n {\n  \"entity\": \"Netherlands\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1834.67,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"Netherlands\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 1.2,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"Netherlands\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 4.0,\n  \"formula\": \"Rank by Revenue_TW\"\n },\n {\n  \"entity\": \"Switzerland\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1407.7,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"Switzerland\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 0.9,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"Switzerland\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 5.0,\n  \"formula\": \"Rank by Revenue_TW\"\n },\n {\n  \"entity\": \"France\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1271.21,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"France\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 0.8,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"France\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 6.0,\n  \"formula\": \"Rank by Revenue_TW\"\n }\n]\n\nWrite the insight note now.\n",
+    "text": "- TOTAL revenue TW was \u00a3154.7k vs LW \u00a3145.0k, WoW up 6.6%.\n- TOTAL units rose to 103,003 TW from 84,549 LW.\n- TOTAL orders increased to 397 TW from 334 LW.\n- United Kingdom led all countries with \u00a3143.7k TW revenue, a 92.9% share and rank 1.\n- Channel Islands ranked 2nd with \u00a33.4k TW revenue, 2.2% share.\n- EIRE held rank 3 with \u00a31.9k TW revenue, 1.2% share.\n- Netherlands followed at rank 4 with \u00a31.8k TW revenue, 1.2% share.\n- Switzerland and France rounded out the top six with \u00a31.4k and \u00a31.3k TW revenue respectively, each under 1% share.",
+    "input_tokens": 2119,
+    "output_tokens": 285,
+    "cost_usd": 0.007088,
+    "latency_s": 3.518,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [
+   {
+    "attempt": 0,
+    "code": "import sys, json\nimport pandas as pd\nimport numpy as np\n\ndef to_float(x):\n    return None if pd.isna(x) else round(float(x), 2)\n\ndef add(facts, entity, metric, period, value, formula):\n    if value is None or (isinstance(value, float) and np.isnan(value)):\n        return\n    facts.append({\n        \"entity\": entity,\n        \"metric\": metric,\n        \"period\": period,\n        \"value\": float(value),\n        \"formula\": formula\n    })\n\ndef main():\n    path = sys.argv[1]\n    df = pd.read_csv(path)\n\n    facts = []\n\n    # ---- Totals ----\n    total_tw = df[\"Revenue_TW\"].sum(skipna=True)\n    total_lw = df[\"Revenue_LW\"].sum(skipna=True)\n    total_ly = df[\"Revenue_LY\"].sum(skipna=True)\n    total_units_tw = df[\"Units_TW\"].sum(skipna=True)\n    total_units_lw = df[\"Units_LW\"].sum(skipna=True)\n    total_orders_tw = df[\"Orders_TW\"].sum(skipna=True)\n    total_orders_lw = df[\"Orders_LW\"].sum(skipna=True)\n\n    add(facts, \"TOTAL\", \"revenue\", \"TW\", round(total_tw, 2), \"sum(Revenue_TW)\")\n    add(facts, \"TOTAL\", \"revenue\", \"LW\", round(total_lw, 2), \"sum(Revenue_LW)\")\n    if not pd.isna(total_ly) and total_ly != 0:\n        add(facts, \"TOTAL\", \"revenue\", \"LY\", round(total_ly, 2), \"sum(Revenue_LY)\")\n\n    if total_lw and not pd.isna(total_lw) and total_lw != 0:\n        wow = (total_tw - total_lw) / total_lw * 100\n        add(facts, \"TOTAL\", \"revenue\", \"WoW\", round(wow, 1),\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\")\n\n    if not pd.isna(total_ly) and total_ly != 0:\n        yoy = (total_tw - total_ly) / total_ly * 100\n        add(facts, \"TOTAL\", \"revenue\", \"YoY\", round(yoy, 1),\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\")\n\n    add(facts, \"TOTAL\", \"units\", \"TW\", float(total_units_tw), \"sum(Units_TW)\")\n    add(facts, \"TOTAL\", \"units\", \"LW\", float(total_units_lw), \"sum(Units_LW)\")\n    add(facts, \"TOTAL\", \"orders\", \"TW\", float(total_orders_tw), \"sum(Orders_TW)\")\n    add(facts, \"TOTAL\", \"orders\", \"LW\", float(total_orders_lw), \"sum(Orders_LW)\")\n\n    # ---- Per entity: revenue, share, rank, WoW, YoY ----\n    for _, row in df.iterrows():\n        ent = row[\"Entity\"]\n        add(facts, ent, \"revenue\", \"TW\", to_float(row[\"Revenue_TW\"]), \"Revenue_TW\")\n        add(facts, ent, \"share\", \"TW\", to_float(row[\"Share_Pct\"]),\n            \"Revenue_TW / sum(Revenue_TW) * 100\")\n        if \"Rank\" in row and not pd.isna(row[\"Rank\"]):\n            add(facts, ent, \"rank\", \"TW\", float(row[\"Rank\"]), \"Rank by Revenue_TW\")\n\n    for _, row in df.iterrows():\n        ent = row[\"Entity\"]\n        if not pd.isna(row.get(\"WoW_Pct\", np.nan)):\n            add(facts, ent, \"revenue\", \"WoW\", to_float(row[\"WoW_Pct\"]),\n                \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n\n    for _, row in df.iterrows():\n        ent = row[\"Entity\"]\n        if not pd.isna(row.get(\"YoY_Pct\", np.nan)):\n            add(facts, ent, \"revenue\", \"YoY\", to_float(row[\"YoY_Pct\"]),\n                \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    # ---- Top entity by revenue ----\n    if not df[\"Revenue_TW\"].dropna().empty:\n        top_row = df.loc[df[\"Revenue_TW\"].idxmax()]\n        add(facts, top_row[\"Entity\"], \"revenue\", \"TW\", to_float(top_row[\"Revenue_TW\"]),\n            \"max(Revenue_TW) across entities\")\n\n    # ---- Biggest WoW riser / faller ----\n    wow_valid = df.dropna(subset=[\"WoW_Pct\"])\n    if not wow_valid.empty:\n        riser = wow_valid.loc[wow_valid[\"WoW_Pct\"].idxmax()]\n        faller = wow_valid.loc[wow_valid[\"WoW_Pct\"].idxmin()]\n        add(facts, riser[\"Entity\"], \"revenue\", \"WoW\", to_float(riser[\"WoW_Pct\"]),\n            \"max WoW_Pct among entities\")\n        add(facts, faller[\"Entity\"], \"revenue\", \"WoW\", to_float(faller[\"WoW_Pct\"]),\n            \"min WoW_Pct among entities\")\n\n    # ---- Biggest YoY riser / faller (if any data) ----\n    yoy_valid = df.dropna(subset=[\"YoY_Pct\"])\n    if not yoy_valid.empty:\n        riser_y = yoy_valid.loc[yoy_valid[\"YoY_Pct\"].idxmax()]\n        faller_y = yoy_valid.loc[yoy_valid[\"YoY_Pct\"].idxmin()]\n        add(facts, riser_y[\"Entity\"], \"revenue\", \"YoY\", to_float(riser_y[\"YoY_Pct\"]),\n            \"max YoY_Pct among entities\")\n        add(facts, faller_y[\"Entity\"], \"revenue\", \"YoY\", to_float(faller_y[\"YoY_Pct\"]),\n            \"min YoY_Pct among entities\")\n\n    # Trim to 25 facts max\n    facts = facts[:25]\n\n    print(json.dumps(facts))\n\nif __name__ == \"__main__\":\n    main()\n",
+    "error": "",
+    "stdout": ", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 143748.77, \"formula\": \"Revenue_TW\"}, {\"entity\": \"United Kingdom\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 92.9, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"United Kingdom\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 1.0, \"formula\": \"Rank by Revenue_TW\"}, {\"entity\": \"Channel Islands\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 3401.24, \"formula\": \"Revenue_TW\"}, {\"entity\": \"Channel Islands\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 2.2, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"Channel Islands\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 2.0, \"formula\": \"Rank by Revenue_TW\"}, {\"entity\": \"EIRE\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 1889.68, \"formula\": \"Revenue_TW\"}, {\"entity\": \"EIRE\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 1.2, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"EIRE\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 3.0, \"formula\": \"Rank by Revenue_TW\"}, {\"entity\": \"Netherlands\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 1834.67, \"formula\": \"Revenue_TW\"}, {\"entity\": \"Netherlands\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 1.2, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"Netherlands\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 4.0, \"formula\": \"Rank by Revenue_TW\"}, {\"entity\": \"Switzerland\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 1407.7, \"formula\": \"Revenue_TW\"}, {\"entity\": \"Switzerland\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 0.9, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"Switzerland\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 5.0, \"formula\": \"Rank by Revenue_TW\"}, {\"entity\": \"France\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 1271.21, \"formula\": \"Revenue_TW\"}, {\"entity\": \"France\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 0.8, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"France\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 6.0, \"formula\": \"Rank by Revenue_TW\"}]\n"
+   }
+  ],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "facts": [
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 154660.65,
+    "formula": "sum(Revenue_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LW",
+    "value": 145045.82,
+    "formula": "sum(Revenue_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 6.6,
+    "formula": "(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "TW",
+    "value": 103003.0,
+    "formula": "sum(Units_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "LW",
+    "value": 84549.0,
+    "formula": "sum(Units_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "TW",
+    "value": 397.0,
+    "formula": "sum(Orders_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "LW",
+    "value": 334.0,
+    "formula": "sum(Orders_LW)"
+   },
+   {
+    "entity": "United Kingdom",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 143748.77,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "United Kingdom",
+    "metric": "share",
+    "period": "TW",
+    "value": 92.9,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "United Kingdom",
+    "metric": "rank",
+    "period": "TW",
+    "value": 1.0,
+    "formula": "Rank by Revenue_TW"
+   },
+   {
+    "entity": "Channel Islands",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3401.24,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "Channel Islands",
+    "metric": "share",
+    "period": "TW",
+    "value": 2.2,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "Channel Islands",
+    "metric": "rank",
+    "period": "TW",
+    "value": 2.0,
+    "formula": "Rank by Revenue_TW"
+   },
+   {
+    "entity": "EIRE",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1889.68,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "EIRE",
+    "metric": "share",
+    "period": "TW",
+    "value": 1.2,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "EIRE",
+    "metric": "rank",
+    "period": "TW",
+    "value": 3.0,
+    "formula": "Rank by Revenue_TW"
+   },
+   {
+    "entity": "Netherlands",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1834.67,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "Netherlands",
+    "metric": "share",
+    "period": "TW",
+    "value": 1.2,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "Netherlands",
+    "metric": "rank",
+    "period": "TW",
+    "value": 4.0,
+    "formula": "Rank by Revenue_TW"
+   },
+   {
+    "entity": "Switzerland",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1407.7,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "Switzerland",
+    "metric": "share",
+    "period": "TW",
+    "value": 0.9,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "Switzerland",
+    "metric": "rank",
+    "period": "TW",
+    "value": 5.0,
+    "formula": "Rank by Revenue_TW"
+   },
+   {
+    "entity": "France",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1271.21,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "France",
+    "metric": "share",
+    "period": "TW",
+    "value": 0.8,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "France",
+    "metric": "rank",
+    "period": "TW",
+    "value": 6.0,
+    "formula": "Rank by Revenue_TW"
+   }
+  ],
+  "n_calls": 2,
+  "tokens_in": 3167,
+  "tokens_out": 3251,
+  "cost_usd": 0.038844,
+  "latency_s": 28.401
+ }
+}

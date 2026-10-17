@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £3.7k revenue TW, the highest performing product by sales value.\n- PARTY BUNTING achieved £2.8k revenue TW and tied for the most orders with 45 units in the week.\n- JUMBO BAG RED RETROSPOT delivered £2.7k revenue TW across 36 orders, ranking third in revenue performance.\n- PACK OF 12 SKULL TISSUES led unit sales with 2,244 units sold TW and showed strong WoW growth of 3,954.3 percent.\n- BAKING MOULD TOFFEE CUP CHOCOLATE experienced the largest WoW revenue increase at 7,855.9 percent TW versus LW.\n- CLASSIC METAL BIRDCAGE PLANT HOLDER demonstrated exceptional YoY growth of 4,253.3 percent, indicating strong year-on-year momentum.\n- 3 HOOK PHOTO SHELF ANTIQUE WHITE grew 3,059.0 percent YoY, showing sustained demand compared to the same week last year.\n- SET 10 LIGHTS NIGHT OWL showed dual strength with 1,011.2 percent WoW growth and 1,186.1 percent YoY growth.",
+ "input_tokens": 1967,
+ "output_tokens": 301,
+ "cost_usd": 0.0034720000000000003,
+ "latency_s": 3.926,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

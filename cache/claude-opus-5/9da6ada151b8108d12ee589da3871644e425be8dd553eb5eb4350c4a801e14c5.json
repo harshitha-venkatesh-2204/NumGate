@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £20,428.39 TW versus £23,564.33 LW, a WoW change of -13.3%, on 10,317 units and 392 orders TW.\n- Against LY of £14,527.17, TOTAL revenue TW is up 40.6% YoY.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £3,804.27, an 18.6% share of total TW revenue.\n- The top five products accounted for 43.7% of TOTAL revenue TW, led by PARTY BUNTING at £1,840.12 and PAPER CHAIN KIT EMPIRE at £1,266.57.\n- WHITE HANGING HEART T-LIGHT HOLDER fell £5,059.55 WoW (-83.1%) to £1,028.01 TW.\n- PARTY BUNTING declined £1,643.80 WoW (-47.2%), and ASSORTED COLOUR BIRD ORNAMENT fell £512.20 WoW.\n- REGENCY CAKESTAND 3 TIER gained £1,303.77 WoW, CERAMIC STRAWBERRY MONEY BOX gained £929.17 WoW (+11,249.0%), and VINTAGE RED KITCHEN CABINET gained £500.00 WoW.\n- ASSORTED COLOURS SILK FAN rose 275.6% WoW, and WOODEN UNION JACK BUNTING posted £981.83 TW.",
+ "input_tokens": 2491,
+ "output_tokens": 496,
+ "cost_usd": 0.024855000000000002,
+ "latency_s": 5.719,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

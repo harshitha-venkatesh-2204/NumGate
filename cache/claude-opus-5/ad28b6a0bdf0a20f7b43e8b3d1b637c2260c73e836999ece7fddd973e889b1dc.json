@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led TW at £3,740.45 across 308 units and 39 orders, up 43.0% WoW from £2,616.00 and up 48.9% YoY from £2,511.24.\n- PARTY BUNTING ranked 2 with £2,843.54 TW versus £1,301.83 LW (+118.4% WoW) and £1,014.34 LY (+180.3% YoY), with 606 units against 205 LW.\n- The nine JUMBO BAG lines combined for £13,456.71 TW, 35.2% of the £38,240.38 total across the 33 rows shown.\n- JUMBO BAG TOYS posted the largest WoW revenue gain at +789.2%, moving from £127.33 LW to £1,132.19 TW, with YoY up 580.5% from £166.37.\n- WHITE HANGING HEART T-LIGHT HOLDER was the only row with a negative YoY, at £1,264.96 TW versus £3,952.80 LY (-68.0%), while WoW was flat at +1.2%.\n- Three rows declined WoW: CHILLI LIGHTS £656.45 TW versus £1,516.30 LW (-56.7%), DOLLY GIRL BABY GIFT SET £580.11 versus £853.20 (-32.0%), and SPACEBOY BABY GIFT SET £646.98 versus £904.05 (-28.4%).\n- ASSORTED COLOURS SILK FAN moved 1,342 units TW versus 369 LW on £916.42 revenue (+224.9% WoW, +115.6% YoY) from 12 orders.\n- Total TW revenue for the 33 rows was £38,240.38 versus £22,126.46 LW, a WoW increase of 72.8%, with the top 5 products accounting for 33.8% share.",
+ "input_tokens": 3188,
+ "output_tokens": 1763,
+ "cost_usd": 0.060015,
+ "latency_s": 19.353,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

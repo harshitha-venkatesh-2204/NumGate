@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £36.9k vs LW £16.7k, WoW up 120.6%.\n- TOTAL units TW 14,987 vs LW 7,256.\n- TOTAL orders TW 626 vs LW 520.\n- REGENCY CAKESTAND 3 TIER ranked 1 in TW with revenue £4.55k, 12.3% share.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 in TW with revenue £3.21k, 8.7% share.\n- JUMBO BAG RED RETROSPOT ranked 3 in TW with revenue £2.49k, 6.7% share, and PAPER BUNTING RETRO SPOTS ranked 4 with £2.27k, 6.1% share.\n- CHILDS BREAKFAST SET DOLLY GIRL WoW revenue change of 9039.0%.\n- PAPER CHAIN KIT SKULLS WoW revenue change of 3983.9%, CHILDS BREAKFAST SET SPACEBOY WoW revenue change of 3144.7%.",
+ "input_tokens": 2310,
+ "output_tokens": 374,
+ "cost_usd": 0.00836,
+ "latency_s": 3.617,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

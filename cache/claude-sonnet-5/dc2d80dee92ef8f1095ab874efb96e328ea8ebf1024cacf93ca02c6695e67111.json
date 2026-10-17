@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue TW was £135,254.11 versus £159,100.49 LW, a WoW change of -15.0%, and versus LY the change was +57.9% YoY for ISO week 2011-W47.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 1 with revenue £5,701.16 TW, a 4.2% share TW, and a WoW change of -39.9%.\n- RABBIT NIGHT LIGHT ranked 2 with revenue £5,084.81 TW, a 3.8% share TW, and a WoW change of -52.4%.\n- CHILLI LIGHTS ranked 3 with revenue £4,960.25 TW, a 3.7% share TW, and a WoW change of +115.0%.\n- DOORMAT BLACK FLOCK had the largest WoW increase at +1544.7%, rising from £33.00 LW to £542.76 TW.\n- 3 HEARTS HANGING DECORATION RUSTIC had the largest WoW decrease at -73.8%, falling from £3,006.44 LW to £788.05 TW.\n- JAM MAKING SET WITH JARS had the largest YoY increase at +832.5%, compared to £93.50 LY.\n- HAND WARMER SCOTTY DOG DESIGN had the largest YoY decrease at -76.8%, compared to £2,126.08 LY, while RABBIT NIGHT LIGHT had the most orders with 105 TW versus 123 LW.",
+ "input_tokens": 846,
+ "output_tokens": 527,
+ "cost_usd": 0.006962,
+ "latency_s": 4.84,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

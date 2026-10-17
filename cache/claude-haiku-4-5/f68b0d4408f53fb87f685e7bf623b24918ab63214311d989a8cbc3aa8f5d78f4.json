@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT generated £10,739.38 revenue in TW, ranking 1st and representing 9.8% of total revenue, with a WoW increase of 18473.8% from £57.82 in LW.\n- ALARM CLOCK BAKELIKE RED achieved £2,423.41 in TW revenue (rank 2, 2.2% share) with a YoY increase of 307.3% compared to £595.04 in LY.\n- CHILLI LIGHTS delivered £2,285.12 in TW revenue (rank 3, 2.1% share) with a YoY increase of 123.7% from £1,021.67 in LY.\n- JUMBO BAG PAISLEY PARK generated £2,120.48 in TW revenue (rank 5, 1.9% share) with 1,131 units sold, representing new sales not present in LW.\n- FLOWERS CHANDELIER T-LIGHT HOLDER achieved £1,749.60 in TW revenue (rank 12, 1.6% share) with a WoW increase of 9231.2% from £18.75 in LW.\n- WORLD WAR 2 GLIDERS ASSTD DESIGNS recorded £1,161.12 in TW revenue (rank 24, 1.1% share) with a YoY increase of 513.2% from £189.36 in LY and 5,328 units sold.\n- BROCADE RING PURSE generated £505.56 in TW revenue (rank 79, 0.5% share) with a YoY increase of 6587.3% from £7.56 in LY despite a WoW increase of 578.4%.\n- CHRISTMAS CRAFT WHITE FAIRY achieved £418.00 in TW revenue (rank 117, 0.4% share) with a YoY increase of 28727.6% from £1.45 in LY.",
+ "input_tokens": 9161,
+ "output_tokens": 481,
+ "cost_usd": 0.011566,
+ "latency_s": 5.904,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

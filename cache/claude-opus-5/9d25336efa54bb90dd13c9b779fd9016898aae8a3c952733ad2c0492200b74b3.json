@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom led TW with £89,759.37 revenue, 86.5% share and Rank 1, down 15.9% WoW from £106,749.18 LW and up 20.5% YoY from £74,480.20 LY.\n- United Kingdom units fell to 44,149 TW from 62,225 LW, and orders fell to 204 TW from 263 LW.\n- Japan ranked 2 TW at £5,735.24 versus £45.57 LW, a WoW rise of 12,485.6%, on 2,962 units TW from 37 units LW across 1 order in both TW and LW.\n- Germany posted £2,840.80 TW, down 27.0% WoW from £3,894.00 LW and down 31.5% YoY from £4,144.93 LY, with orders at 4 TW versus 9 LW.\n- Cyprus entered the top 10 at Rank 4 with £1,993.96 TW and 494 units across 2 orders, against £0.00 LW and £0.00 LY.\n- France fell 85.1% WoW to £852.44 TW from £5,710.94 LW and 82.3% YoY from £4,804.52 LY, with units at 964 TW versus 2,992 LW.\n- Netherlands rose 280.4% WoW to £1,156.28 TW from £303.93 LW, and Belgium rose 69.2% WoW to £285.81 TW from £168.90 LW.\n- Australia recorded £259.95 TW at Rank 10, down 60.7% YoY from £662.25 LY, after £0.00 LW, while Spain fell 22.5% WoW to £594.11 and Poland fell 20.9% WoW to £266.85.",
+ "input_tokens": 1277,
+ "output_tokens": 558,
+ "cost_usd": 0.020335,
+ "latency_s": 6.835,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

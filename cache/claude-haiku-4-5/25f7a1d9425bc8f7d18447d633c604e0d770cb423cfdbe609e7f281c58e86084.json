@@ -1,0 +1,10 @@
+{
+ "text": "- LANDMARK FRAME COVENT GARDEN generated the highest revenue TW at £3,766.4, followed by LANDMARK FRAME OXFORD STREET at £3,753.9.\n- LANDMARK FRAME NOTTING HILL achieved £3,660.0 revenue TW, while LANDMARK FRAME LONDON BRIDGE and LANDMARK FRAME BAKER STREET generated £3,603.9 and £3,447.5 respectively.\n- GINGHAM HEART DECORATION led unit sales TW with 2,130 units, significantly ahead of 60 CAKE CASES VINTAGE CHRISTMAS at 1,551 units.\n- MINI PAINT SET VINTAGE sold 1,334 units TW, with MINI PLAYING CARDS SPACEBOY and MINI PLAYING CARDS DOLLY GIRL achieving 1,256 and 1,217 units respectively.\n- HOT WATER BOTTLE KEEP CALM recorded the highest order count TW at 50 orders, matched by PAPER CHAIN KIT 50'S CHRISTMAS and JUMBO BAG 50'S CHRISTMAS at 48 orders each.\n- CERAMIC CAKE STAND + HANGING CAKES showed the strongest WoW revenue growth at 2,392.0 percent, with GINGHAM HEART DECORATION at 2,054.1 percent WoW.\n- RED HARMONICA IN BOX demonstrated exceptional YoY revenue growth of 26,576.5 percent, while PLASTERS IN TIN WOODLAND ANIMALS grew 14,136.1 percent YoY.\n- SOMBRERO achieved 4,173.5 percent YoY revenue growth, with ROUND SNACK BOXES SET OF4 WOODLAND and SET/10 RED POLKADOT PARTY CANDLES growing 1,006.0 percent and 609.8 percent YoY respectively.",
+ "input_tokens": 1957,
+ "output_tokens": 438,
+ "cost_usd": 0.004147,
+ "latency_s": 4.683,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

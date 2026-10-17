@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £29,424.89 TW versus £31,085.63 LW, a change of -5.3% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 with £3,712.01 TW revenue, a 12.6% share TW, and a WoW change of -29.5%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with £2,481.58 TW revenue, an 8.4% share TW, and a WoW change of +1.6%.\n- JUMBO BAG RED RETROSPOT ranked 3 with £2,315.21 TW revenue, a 7.9% share TW, and a WoW change of -28.1%.\n- CARDHOLDER HOLLY WREATH METAL had the largest WoW increase, rising from £15.00 LW to £1,672.50 TW, a change of +11050.0% WoW.\n- VINTAGE UNION JACK BUNTING had the largest WoW decrease, falling from £1,509.60 LW to £501.50 TW, a change of -66.8% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER recorded the most orders with 52 TW compared to 44 LW.",
+ "input_tokens": 743,
+ "output_tokens": 442,
+ "cost_usd": 0.005906,
+ "latency_s": 5.522,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

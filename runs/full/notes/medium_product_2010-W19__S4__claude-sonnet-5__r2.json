@@ -1,0 +1,42 @@
+{
+ "note_id": "medium_product_2010-W19__S4__claude-sonnet-5__r2",
+ "table_id": "medium_product_2010-W19",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W19",
+ "n_rows": 23,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- Total revenue reached \u00a332,657.36 TW versus \u00a317,497.91 LW, a WoW change of +86.6%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 with \u00a32,963.43 revenue TW, a 9.1% share TW, and a WoW change of +3.9%.\n- RETRO SPOT TEA SET CERAMIC 11 PC ranked 2 with \u00a32,071.74 revenue TW, a 6.3% share TW, and a WoW change of +552.6%.\n- FAWN BLUE HOT WATER BOTTLE ranked 3 with \u00a31,903.35 revenue TW, a 5.8% share TW.\n- GLITTER HANGING BUTTERFLY STRING had the largest WoW increase at +4752.8%, rising from \u00a323.11 LW to \u00a31,121.49 TW.\n- REGENCY CAKESTAND 3 TIER had the largest WoW decrease at -55.8%, falling from \u00a33,730.99 LW to \u00a31,647.56 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 55 TW compared to 53 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W19. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a332,657.36 TW, revenue \u00a317,497.91 LW, revenue change +86.6% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 1, revenue \u00a32,963.43 TW, share 9.1% TW, revenue change +3.9% WoW\n- RETRO SPOT TEA SET CERAMIC 11 PC: rank 2, revenue \u00a32,071.74 TW, share 6.3% TW, revenue change +552.6% WoW\n- FAWN BLUE HOT WATER BOTTLE: rank 3, revenue \u00a31,903.35 TW, share 5.8% TW\n- GLITTER HANGING BUTTERFLY STRING (largest WoW increase): revenue change +4752.8% WoW, revenue \u00a31,121.49 TW versus \u00a323.11 LW\n- REGENCY CAKESTAND 3 TIER (largest WoW decrease): revenue change -55.8% WoW, revenue \u00a31,647.56 TW versus \u00a33,730.99 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 55 TW versus 53 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a332,657.36 TW versus \u00a317,497.91 LW, a WoW change of +86.6%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 with \u00a32,963.43 revenue TW, a 9.1% share TW, and a WoW change of +3.9%.\n- RETRO SPOT TEA SET CERAMIC 11 PC ranked 2 with \u00a32,071.74 revenue TW, a 6.3% share TW, and a WoW change of +552.6%.\n- FAWN BLUE HOT WATER BOTTLE ranked 3 with \u00a31,903.35 revenue TW, a 5.8% share TW.\n- GLITTER HANGING BUTTERFLY STRING had the largest WoW increase at +4752.8%, rising from \u00a323.11 LW to \u00a31,121.49 TW.\n- REGENCY CAKESTAND 3 TIER had the largest WoW decrease at -55.8%, falling from \u00a33,730.99 LW to \u00a31,647.56 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders with 55 TW compared to 53 LW.",
+    "input_tokens": 742,
+    "output_tokens": 426,
+    "cost_usd": 0.005744,
+    "latency_s": 4.084,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a332,657.36 TW, revenue \u00a317,497.91 LW, revenue change +86.6% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 1, revenue \u00a32,963.43 TW, share 9.1% TW, revenue change +3.9% WoW\n- RETRO SPOT TEA SET CERAMIC 11 PC: rank 2, revenue \u00a32,071.74 TW, share 6.3% TW, revenue change +552.6% WoW\n- FAWN BLUE HOT WATER BOTTLE: rank 3, revenue \u00a31,903.35 TW, share 5.8% TW\n- GLITTER HANGING BUTTERFLY STRING (largest WoW increase): revenue change +4752.8% WoW, revenue \u00a31,121.49 TW versus \u00a323.11 LW\n- REGENCY CAKESTAND 3 TIER (largest WoW decrease): revenue change -55.8% WoW, revenue \u00a31,647.56 TW versus \u00a33,730.99 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 55 TW versus 53 LW",
+  "n_calls": 1,
+  "tokens_in": 742,
+  "tokens_out": 426,
+  "cost_usd": 0.005744,
+  "latency_s": 4.084
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £88.5k versus LW £60.8k, a WoW increase of 45.6%.\n- TOTAL units sold TW reached 51,065.0 compared to LW at 24,813.0.\n- TOTAL orders TW totaled 2,019.0, up from LW at 1,928.0.\n- REGENCY CAKESTAND 3 TIER led product revenue TW with £6.0k, a 6.8% share of TOTAL.\n- ROTATING SILVER ANGELS T-LIGHT HLDR followed with £5.9k TW revenue, holding a 6.6% share.\n- PAPER CHAIN KIT 50'S CHRISTMAS generated £4.0k TW revenue, a 4.6% share of TOTAL.\n- BROCADE RING PURSE saw the largest WoW revenue increase among products at 3063.7%.\n- PARTY BUNTING declined WoW by 70.1%, while HEART OF WICKER LARGE fell 44.2% WoW.",
+ "input_tokens": 2236,
+ "output_tokens": 345,
+ "cost_usd": 0.007922,
+ "latency_s": 3.864,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

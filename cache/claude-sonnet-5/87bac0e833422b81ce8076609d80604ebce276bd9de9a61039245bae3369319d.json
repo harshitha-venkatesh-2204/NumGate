@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £13.7k vs LW £16.1k, WoW -14.8%.\n- TOTAL units TW 2,850 vs LW 3,815, WoW -25.3%.\n- TOTAL orders TW 250 vs LW 311, WoW -19.6%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with TW revenue £5.2k, 37.8% share of TOTAL, WoW -5.8% vs LW £5.5k.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with TW revenue £1.6k, 11.8% share, WoW -61.7% vs LW £4.2k.\n- VINTAGE UNION JACK BUNTING ranked 3 with TW revenue £1.3k, 9.2% share, WoW -25.9% vs LW £1.7k.\n- JUMBO BAG RED RETROSPOT recorded TW revenue of £1.3k.",
+ "input_tokens": 2358,
+ "output_tokens": 349,
+ "cost_usd": 0.008206,
+ "latency_s": 3.672,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

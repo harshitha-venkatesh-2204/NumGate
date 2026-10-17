@@ -1,0 +1,10 @@
+{
+ "text": "- PLEASE ONE PERSON METAL SIGN generated £2,773.43 revenue TW, the highest performing product, with 1,398 units sold and 41 orders.\n- PARTY BUNTING achieved £1,825.40 revenue TW and showed exceptional YoY growth of 5,654.7%, significantly outperforming the prior year.\n- HAND WARMER OWL DESIGN delivered £1,611.60 revenue TW with 836 units sold and demonstrated 2,458.1% YoY growth.\n- BEWARE OF THE CAT METAL SIGN led WoW performance with 3,836.8% revenue growth, followed by STAR WOODEN CHRISTMAS DECORATION at 3,710.9% WoW.\n- PLEASE ONE PERSON METAL SIGN showed strong WoW momentum with 3,286.4% revenue growth despite already being the top revenue generator TW.\n- COOK WITH WINE METAL SIGN generated £1,415.04 revenue TW with 744 units sold and achieved 2,621.2% WoW growth.\n- JUMBO BAG VINTAGE DOILY led order volume TW with 46 orders, while JUMBO BAG PINK POLKADOT achieved 657 units sold.\n- PAPER CHAIN KIT 50'S CHRISTMAS demonstrated strong YoY growth of 3,705.9%, indicating significant year-on-year performance improvement.",
+ "input_tokens": 1943,
+ "output_tokens": 340,
+ "cost_usd": 0.003643,
+ "latency_s": 4.203,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

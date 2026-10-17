@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £74.9k versus LW £48.6k, a WoW change of +54.19%.\n- TOTAL revenue TW was £74.9k versus LY £20.7k, a YoY change of +261.45%.\n- TOTAL units sold TW were 35,509 versus LW 22,846, and TOTAL orders TW were 1,803 versus LW 1,433.\n- JUMBO BAG RED RETROSPOT ranked 1 in TW revenue at £2.9k, a 3.9% share, with YoY change of +150750.8%.\n- REGENCY CAKESTAND 3 TIER ranked 2 in TW revenue at £2.9k, a 3.9% share of TOTAL.\n- PARTY BUNTING ranked 3 in TW revenue at £2.7k, a 3.6% share of TOTAL.\n- SMALL CHINESE STYLE SCISSOR had the largest WoW revenue change among listed products at +157681.0%.\n- SET OF TEA COFFEE SUGAR TINS PANTRY and SET OF 3 CAKE TINS PANTRY DESIGN saw WoW declines of -84.9% and -74.8% respectively.",
+ "input_tokens": 2508,
+ "output_tokens": 408,
+ "cost_usd": 0.009096,
+ "latency_s": 4.059,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- PICNIC BASKET WICKER 60 PIECES led TW at £39,619.50 from 61 units across 2 orders, a 31.7% share of TW revenue, against £0.00 LW and £0.00 LY.\n- The 11 doormat lines ranked 3 to 14 totalled £27,243.45 TW versus £2,122.64 LW, with DOORMAT BLACK FLOCK up 14,502.5% WoW (£15.90 LW to £2,321.80 TW).\n- PARTY BUNTING ranked 2 at £4,019.93 TW, up 72.8% WoW from £2,327.02 and up 24.3% YoY from £3,233.52 LY, on 663 units and 58 orders.\n- REGENCY CAKESTAND 3 TIER ranked 4 at £2,711.19 TW, down 10.9% WoW from £3,041.70 and down 50.9% YoY from £5,517.46 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER posted £1,085.90 TW, down 35.8% WoW from £1,691.11 and down 74.4% YoY from £4,245.80 LY, with units falling from 629 LW to 390 TW.\n- LUNCH BAG BLACK SKULL. fell 91.0% YoY to £363.19 TW from £4,044.23 LY, while LUNCH BAG WOODLAND fell 84.0% YoY to £599.82 and LUNCH BAG CARS BLUE fell 82.9% YoY to £639.80.\n- JUMBO BAG RED RETROSPOT ranked 15 at £1,835.74 TW, up 216.6% WoW from £579.84 and up 5.5% YoY from £1,740.29, on 883 units versus 273 LW.\n- SET/4 WHITE RETRO STORAGE CUBES dropped 68.1% WoW to £357.89 TW from £1,123.52 LW on 9 units versus 30 LW, though it remained 53.6% above the £233.00 LY level.",
+ "input_tokens": 8756,
+ "output_tokens": 1826,
+ "cost_usd": 0.08943000000000001,
+ "latency_s": 18.827,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £36.9k versus LW £16.7k, a WoW increase of 120.6%.\n- TOTAL units sold TW reached 14,987 compared with 7,256 LW.\n- TOTAL orders TW numbered 626 versus 520 LW.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with revenue of £4.6k and a 12.3% share of TOTAL revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER posted TW revenue of £3.2k, an 8.7% share of TOTAL revenue.\n- JUMBO BAG RED RETROSPOT recorded TW revenue of £2.5k, a 6.7% share of TOTAL revenue.\n- CHILDS BREAKFAST SET DOLLY GIRL had the largest WoW revenue change at 9039.0%.\n- PAPER CHAIN KIT SKULLS showed a WoW revenue change of 3983.9%, while ASSORTED COLOURS SILK FAN declined 5.0% WoW.",
+ "input_tokens": 2172,
+ "output_tokens": 370,
+ "cost_usd": 0.008043999999999999,
+ "latency_s": 4.001,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

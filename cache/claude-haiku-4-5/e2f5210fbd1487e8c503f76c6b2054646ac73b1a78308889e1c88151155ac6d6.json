@@ -1,0 +1,10 @@
+{
+ "text": "- PAPER CHAIN KIT 50'S CHRISTMAS generated £5,701.16 in TW revenue, the highest among all products, but declined 39.9% WoW from £9,485.15 in LW.\n- RABBIT NIGHT LIGHT fell 52.4% WoW to £5,084.81 in TW revenue, dropping from £10,687.69 in LW, representing the steepest decline in the portfolio.\n- CHILLI LIGHTS surged 115.0% WoW to £4,960.25 in TW revenue from £2,307.01 in LW, and grew 229.3% YoY compared to £1,506.40 in LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS sold 1,692 units in TW, down from 2,161 units in LW, while maintaining a 22.6% share of total TW revenue.\n- REGENCY CAKESTAND 3 TIER generated £3,543.60 in TW revenue with a 17.3% WoW increase, but declined 45.9% YoY from £6,552.99 in LY.\n- ROTATING SILVER ANGELS T-LIGHT HLDR achieved 42.7% YoY growth to £2,894.37 in TW revenue from £2,028.90 in LY, with 1,170 units sold.\n- RABBIT NIGHT LIGHT accounted for 20.2% of TW revenue at £5,084.81 despite a 52.4% WoW decline and 2,331 units sold across 105 orders.\n- Total portfolio revenue in TW reached £25,218.52, with six products generating orders ranging from 31 to 105 distinct invoices.",
+ "input_tokens": 947,
+ "output_tokens": 431,
+ "cost_usd": 0.0031019999999999997,
+ "latency_s": 4.601,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT generated £10.7k revenue TW, the highest performing product, with 5,593 units sold and 43 orders.\n- ALARM CLOCK BAKELIKE RED achieved £2.4k revenue TW, ranking second among products, followed by CHILLI LIGHTS at £2.3k revenue TW.\n- RABBIT NIGHT LIGHT showed the strongest WoW growth at 18,473.8% revenue increase, significantly outperforming other products.\n- FLOWERS CHANDELIER T-LIGHT HOLDER demonstrated substantial WoW momentum with a 9,231.2% revenue increase from LW to TW.\n- WORLD WAR 2 GLIDERS ASSTD DESIGNS led unit sales TW with 5,328 units, closely behind RABBIT NIGHT LIGHT's 5,593 units.\n- CHRISTMAS CRAFT WHITE FAIRY showed exceptional YoY performance with revenue growth of 28,727.6% compared to LY.\n- RED HARMONICA IN BOX delivered strong YoY growth of 11,954.9% revenue increase versus LY, indicating significant year-on-year momentum.\n- PAPER CHAIN KIT 50'S CHRISTMAS generated the most orders TW with 64 orders, despite ranking fourth in revenue at £2.3k.",
+ "input_tokens": 1948,
+ "output_tokens": 307,
+ "cost_usd": 0.003483,
+ "latency_s": 4.256,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

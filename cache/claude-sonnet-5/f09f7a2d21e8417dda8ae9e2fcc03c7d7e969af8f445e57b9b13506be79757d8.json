@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £27.6k versus LW £12.4k, a WoW increase of 123.6%.\n- TOTAL units sold rose to 9,487 TW from 4,071 LW, with orders up to 342 TW from 212 LW.\n- REGENCY CAKESTAND 3 TIER ranked 1 for TW with revenue of £7.5k, a 27.1% share of TOTAL revenue.\n- HAND WARMER RED POLKA DOT posted TW revenue of £3.7k, a 13.4% share of TOTAL revenue.\n- JUMBO BAG RED RETROSPOT recorded TW revenue of £3.1k, an 11.3% share of TOTAL revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER had TW revenue of £2.9k, a 10.5% share, with a WoW change of 3.4%.\n- ASSORTED COLOUR BIRD ORNAMENT reached £2.8k TW revenue, a 10.2% share of TOTAL revenue.\n- AFGHAN SLIPPER SOCK PAIR showed the largest WoW increase at 52,204.3%, reaching £1.8k TW revenue.",
+ "input_tokens": 2502,
+ "output_tokens": 868,
+ "cost_usd": 0.013684,
+ "latency_s": 8.189,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

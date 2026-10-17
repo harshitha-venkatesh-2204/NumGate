@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £135,254.11 TW versus £159,100.49 LW, a change of -15.0% WoW, and +57.9% YoY.\n- PAPER CHAIN KIT 50'S CHRISTMAS held rank 1 with £5,701.16 TW and a 4.2% TW share, a change of -39.9% WoW.\n- RABBIT NIGHT LIGHT took rank 2 with £5,084.81 TW and a 3.8% TW share, a change of -52.4% WoW.\n- CHILLI LIGHTS placed rank 3 with £4,960.25 TW and a 3.7% TW share, a change of +115.0% WoW.\n- DOORMAT BLACK FLOCK posted the largest WoW increase at +1544.7%, with £542.76 TW versus £33.00 LW.\n- 3 HEARTS HANGING DECORATION RUSTIC posted the largest WoW decrease at -73.8%, with £788.05 TW versus £3,006.44 LW.\n- JAM MAKING SET WITH JARS led YoY growth at +832.5% YoY against £93.50 LY, while HAND WARMER SCOTTY DOG DESIGN had the largest YoY decline at -76.8% YoY against £2,126.08 LY.\n- RABBIT NIGHT LIGHT recorded the most orders at 105 TW versus 123 LW.",
+ "input_tokens": 846,
+ "output_tokens": 472,
+ "cost_usd": 0.01603,
+ "latency_s": 5.263,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

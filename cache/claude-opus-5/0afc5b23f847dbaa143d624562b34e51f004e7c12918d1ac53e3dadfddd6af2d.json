@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £36.2k TW versus £16.3k LW, a WoW change of +122.2%.\n- TOTAL volume TW reached 60,748 units across 499 orders.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 TW with £3,952.80, a 10.9% share of TW revenue.\n- ENGLISH ROSE DESIGN QUILTED THROW took £2,982.60 TW (8.3% share) but fell £382.47 WoW.\n- REGENCY CAKESTAND 3 TIER delivered £2,511.24 TW (6.9% share), the largest WoW gain at +£2,511.24.\n- SET/6 WOODLAND PAPER PLATES reached £1,317.70 TW (3.6% share), up £1,312.72 WoW or +26,359.8%, while SET/6 WOODLAND PAPER CUPS rose +39,107.8% WoW.\n- DOOR MAT SPOTTY HOME SWEET HOME contributed £1,333.70 TW, a 3.7% share, with the top 5 products at 33.5% of TW revenue.\n- ASSORTED COLOUR BIRD ORNAMENT declined £429.90 WoW and JUMBO BAG RED WHITE SPOTTY declined £348.71 WoW.",
+ "input_tokens": 2550,
+ "output_tokens": 453,
+ "cost_usd": 0.024075,
+ "latency_s": 5.94,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

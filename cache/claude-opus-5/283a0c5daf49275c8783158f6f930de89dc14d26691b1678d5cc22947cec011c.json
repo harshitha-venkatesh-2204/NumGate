@@ -1,0 +1,10 @@
+{
+ "text": "- PLEASE ONE PERSON METAL SIGN led TW at £2,773.43, up from £81.90 LW (WoW +3,286.4%) and £603.92 LY (YoY +359.2%), holding 20.7% share at Rank 1.\n- PARTY BUNTING ranked 2 with £1,825.40 TW versus £1,410.09 LW (WoW +29.5%) and £31.72 LY (YoY +5,654.7%), on 300 units TW against 207 LW.\n- REGENCY CAKESTAND 3 TIER posted £1,825.17 TW versus £1,991.04 LW (WoW -8.3%) and £3,712.01 LY (YoY -50.8%), the steepest YoY decline among the 8 rows.\n- HAND WARMER OWL DESIGN reached £1,611.60 TW from £311.93 LW (WoW +416.7%), with units at 836 TW versus 159 LW and orders at 23 TW versus 7 LW.\n- COOK WITH WINE METAL SIGN recorded £1,415.04 TW against £52.00 LW (WoW +2,621.2%) and £146.56 LY (YoY +865.5%), taking 10.6% share.\n- PAPER CHAIN KIT 50'S CHRISTMAS delivered £1,347.29 TW versus £520.28 LW (WoW +159.0%) and £35.40 LY (YoY +3,705.9%), with 495 units TW.\n- JUMBO BAG PINK POLKADOT came in at £1,326.41 TW versus £573.29 LW (WoW +131.4%) on 36 orders TW against 25 LW, with no LY revenue recorded; WHITE HANGING HEART T-LIGHT HOLDER was Rank 8 at £1,285.11 TW (WoW +17.2%, YoY -48.2%).\n- The 8 listed products totalled £13,409.45 TW versus £6,036.77 LW (WoW +122.1%) and £7,074.19 LY (YoY +89.6%).",
+ "input_tokens": 1292,
+ "output_tokens": 1118,
+ "cost_usd": 0.034409999999999996,
+ "latency_s": 12.587,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

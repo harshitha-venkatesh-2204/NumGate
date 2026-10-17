@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue TW reached £90.0k, representing a 25.0% WoW increase from £72.0k LW.\n- REGENCY CAKESTAND 3 TIER generated the highest revenue TW at £7.6k across 54 orders.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £4.2k revenue TW with 1,467 units sold and 72 orders, the highest order count.\n- SMALL CHINESE STYLE SCISSOR led unit sales TW with 4,100 units and showed 7,769.0% WoW revenue growth.\n- COLOUR GLASS. STAR T-LIGHT HOLDER contributed £3.9k revenue TW from 1,412 units across strong demand.\n- Total units TW increased to 37.0k from 24.7k LW, a significant volume uplift.\n- DOORMAT HOME SWEET HOME BLUE demonstrated 6,118.9% WoW revenue growth, indicating exceptional week-on-week performance.\n- RED HANGING HEART T-LIGHT HOLDER and CANDLEHOLDER PINK HANGING HEART combined for £4.8k revenue TW.",
+ "input_tokens": 1888,
+ "output_tokens": 278,
+ "cost_usd": 0.0032779999999999997,
+ "latency_s": 3.592,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

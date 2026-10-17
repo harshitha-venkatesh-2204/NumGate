@@ -1,0 +1,10 @@
+{
+ "text": "- LANDMARK FRAME COVENT GARDEN generated the highest revenue in TW at £3,766.4, followed by LANDMARK FRAME OXFORD STREET at £3,753.9.\n- LANDMARK FRAME BAKER STREET recorded the lowest revenue among the top-performing frames in TW at £3,447.5, yet still maintained strong performance across the London store portfolio.\n- GINGHAM HEART DECORATION led unit sales in TW with 2,130 units, significantly outperforming POPCORN HOLDER which sold 1,164 units.\n- GINGHAM HEART DECORATION showed exceptional WoW revenue growth of 2,054.1%, demonstrating strong momentum week-on-week.\n- RED HARMONICA IN BOX achieved a YoY revenue increase of 26,576.5%, representing the strongest year-over-year performance in the product range.\n- HOT WATER BOTTLE KEEP CALM generated the highest order count in TW with 50 orders, followed by PAPER CHAIN KIT 50'S CHRISTMAS and JUMBO BAG 50'S CHRISTMAS, each with 48 orders.\n- BOX OF 6 CHRISTMAS CAKE DECORATIONS and WALL ART BIG LOVE showed robust WoW revenue growth of 332.6% and 242.0% respectively, indicating accelerating demand.\n- ROUND SNACK BOXES SET OF 4 WOODLAND demonstrated strong YoY revenue growth of 1,006.0%, reflecting significant year-on-year expansion.",
+ "input_tokens": 1938,
+ "output_tokens": 353,
+ "cost_usd": 0.003703,
+ "latency_s": 4.38,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

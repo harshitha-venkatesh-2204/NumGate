@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated the highest revenue TW at £4,290.54, followed by PARTY BUNTING at £4,021.56.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £2,503.60 in revenue TW and led order volume with 62 orders.\n- JUMBO BAG RED RETROSPOT delivered £2,339.73 in revenue TW while selling 1,206 units, the third highest unit volume.\n- SET/4 WHITE RETRO STORAGE CUBES showed the strongest WoW growth at 2,093% increase in revenue.\n- COLOUR GLASS. STAR T-LIGHT HOLDER demonstrated exceptional YoY performance with 1,981.9% revenue growth.\n- ASSORTED COLOURS SILK FAN led unit sales TW with 1,618 units, closely followed by SMALL CERAMIC TOP STORAGE JAR at 1,616 units.\n- SPOTTY BUNTING generated 67 orders TW, the highest order count, while also contributing £1,971.47 in revenue.\n- CHILLI LIGHTS showed strong YoY growth of 1,154.5%, indicating significant year-on-year revenue expansion.",
+ "input_tokens": 1941,
+ "output_tokens": 291,
+ "cost_usd": 0.0033959999999999997,
+ "latency_s": 3.821,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

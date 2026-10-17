@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £36.9k in TW versus £16.7k in LW, a WoW change of +120.6%.\n- TOTAL units came to 14,987 in TW, up 106.5% WoW, while TOTAL orders reached 626, up 20.4% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 in TW with £4,554.09, a 12.3% share of TOTAL revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 in TW with £3,214.95 and an 8.7% share, ahead of JUMBO BAG RED RETROSPOT at rank 3 with £2,489.35 and a 6.7% share.\n- The top 3 products held 27.8% of TOTAL revenue in TW and the top 5 held 38.5%.\n- REGENCY CAKESTAND 3 TIER added £2,097.77 WoW and PAPER CHAIN KIT SKULLS added £1,410.30 WoW.\n- PAPER BUNTING RETRO SPOTS rose 160.0% WoW and VINTAGE UNION JACK BUNTING rose 106.9% WoW.\n- ASSORTED COLOURS SILK FAN fell £50.57 WoW, equal to -5.0%, while LUNCH BAG RED SPOTTY was near flat at +0.3% WoW.",
+ "input_tokens": 2530,
+ "output_tokens": 474,
+ "cost_usd": 0.0245,
+ "latency_s": 6.142,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

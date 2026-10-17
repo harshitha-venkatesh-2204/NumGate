@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £47.2k versus LW £24.9k, a WoW increase of 89.7%.\n- TOTAL revenue TW of £47.2k compares to LY £12.1k, a YoY increase of 291.2%.\n- TOTAL units TW reached 18,901 versus LW 8,076 units.\n- TOTAL orders TW totaled 1,089 versus LW 665 orders.\n- REGENCY CAKESTAND 3 TIER ranked 1 with TW revenue of £4.29k and a 9.1% share.\n- PARTY BUNTING ranked 2 with TW revenue of £4.02k and an 8.5% share.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 3 with TW revenue of £2.50k and a 5.3% share.\n- SET/4 WHITE RETRO STORAGE CUBES was the top WoW gainer, up 2093.0%.",
+ "input_tokens": 2211,
+ "output_tokens": 320,
+ "cost_usd": 0.007622,
+ "latency_s": 3.283,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

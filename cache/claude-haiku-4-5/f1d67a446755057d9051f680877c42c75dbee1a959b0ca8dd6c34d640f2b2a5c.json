@@ -1,0 +1,10 @@
+{
+ "text": "- ENGLISH ROSE DESIGN QUILTED THROW generated £4577.17 in TW revenue, up 590.6% WoW from £662.74 in LW, capturing 17.9% of total revenue and ranking first.\n- REGENCY CAKESTAND 3 TIER declined 9.9% WoW to £2799.04 in TW from £3107.77 in LW, with 230 units sold TW versus 187 units LW.\n- WHITE HANGING HEART T-LIGHT HOLDER fell 20.3% WoW to £2420.03 in TW from £3036.12 in LW, despite selling 909 units TW compared to 900 units LW.\n- RED RETROSPOT CAKE STAND surged 1269.8% WoW to £1499.93 in TW from £109.50 in LW, with units increasing from 10 to 147.\n- CAMOFLAGE DESIGN TEDDY achieved the highest WoW growth at 6340.5%, reaching £811.50 in TW revenue from just £12.60 in LW with 386 units sold.\n- MAGNETS PACK OF 4 VINTAGE COLLAGE grew 4954.6% WoW to £821.37 in TW from £16.25 in LW, with units jumping from 13 to 771.\n- BLUE HAPPY BIRTHDAY BUNTING and PINK HAPPY BIRTHDAY BUNTING both declined sharply WoW, falling 59.4% and 61.5% respectively, to £771.52 and £760.50 in TW.\n- BLUE CUSHION COVER WITH FLOWER and BALLOON PUMP WITH 10 BALLOONS each generated new revenue in TW at £958.95 and £742.05 respectively, with zero sales recorded in LW.",
+ "input_tokens": 1744,
+ "output_tokens": 452,
+ "cost_usd": 0.004004,
+ "latency_s": 5.247,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

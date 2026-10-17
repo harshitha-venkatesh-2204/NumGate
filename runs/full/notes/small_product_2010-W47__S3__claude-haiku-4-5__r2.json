@@ -1,0 +1,49 @@
+{
+ "note_id": "small_product_2010-W47__S3__claude-haiku-4-5__r2",
+ "table_id": "small_product_2010-W47",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W47",
+ "n_rows": 10,
+ "strategy": "S3",
+ "model": "claude-haiku-4-5",
+ "repeat": 2,
+ "note": "- REGENCY CAKESTAND 3 TIER generated the highest revenue in TW at \u00a36552.99, representing 18.6% of total revenue across the 10 products shown, though it declined 8.3% WoW from \u00a37144.93 in LW.\n- WHITE HANGING HEART T-LIGHT HOLDER surged 125.6% WoW to \u00a35999.53 in TW, up from \u00a32659.73 in LW, with units nearly doubling from 891 to 2155.\n- PAPER CHAIN KIT 50'S CHRISTMAS fell 36.4% WoW to \u00a35735.62 in TW despite maintaining high unit volume of 1756 units, down from \u00a39020.33 in LW.\n- HOT WATER BOTTLE BABUSHKA more than doubled revenue WoW with a 113.1% increase to \u00a33215.95 in TW, driven by units rising from 335 to 718.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS declined 34.0% WoW to \u00a32500.80 in TW from \u00a33791.87 in LW, with units falling from 849 to 800.\n- HOT WATER BOTTLE TEA AND SYMPATHY grew 82.8% WoW to \u00a32459.61 in TW, with units increasing from 264 in LW to 478 in TW.\n- HAND WARMER SCOTTY DOG DESIGN dropped 29.1% WoW to \u00a32126.08 in TW from \u00a32998.66 in LW, with units declining from 1173 to 977.\n- JUMBO BAG RED RETROSPOT remained relatively stable WoW with only a 1.5% increase to \u00a32221.19 in TW, maintaining consistent unit sales of approximately 1220 units.",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W47. Entity type: product. The table has 10 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 6552.99 | 7144.93 |  | 511 | 573 | 69 | 62 | -8.3 |  | 18.6 | 1 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 5999.53 | 2659.73 |  | 2155 | 891 | 112 | 97 | 125.6 |  | 17.1 | 2 |\n| PAPER CHAIN KIT 50'S CHRISTMAS | 5735.62 | 9020.33 |  | 1756 | 1791 | 92 | 72 | -36.4 |  | 16.3 | 3 |\n| HOT WATER BOTTLE BABUSHKA | 3215.95 | 1509.10 |  | 718 | 335 | 49 | 40 | 113.1 |  | 9.1 | 4 |\n| PAPER CHAIN KIT VINTAGE CHRISTMAS | 2500.80 | 3791.87 |  | 800 | 849 | 74 | 67 | -34.0 |  | 7.1 | 5 |\n| HOT WATER BOTTLE TEA AND SYMPATHY | 2459.61 | 1345.84 |  | 478 | 264 | 60 | 49 | 82.8 |  | 7.0 | 6 |\n| JUMBO BAG RED RETROSPOT | 2221.19 | 2189.34 |  | 1223 | 1215 | 64 | 62 | 1.5 |  | 6.3 | 7 |\n| CHOCOLATE HOT WATER BOTTLE | 2201.63 | 2306.33 |  | 421 | 484 | 72 | 52 | -4.5 |  | 6.3 | 8 |\n| SCOTTIE DOG HOT WATER BOTTLE | 2148.86 | 1923.49 |  | 447 | 418 | 70 | 48 | 11.7 |  | 6.1 | 9 |\n| HAND WARMER SCOTTY DOG DESIGN | 2126.08 | 2998.66 |  | 977 | 1173 | 97 | 71 | -29.1 |  | 6.0 | 10 |\n\nWrite the insight note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER generated the highest revenue in TW at \u00a36552.99, representing 18.6% of total revenue across the 10 products shown, though it declined 8.3% WoW from \u00a37144.93 in LW.\n- WHITE HANGING HEART T-LIGHT HOLDER surged 125.6% WoW to \u00a35999.53 in TW, up from \u00a32659.73 in LW, with units nearly doubling from 891 to 2155.\n- PAPER CHAIN KIT 50'S CHRISTMAS fell 36.4% WoW to \u00a35735.62 in TW despite maintaining high unit volume of 1756 units, down from \u00a39020.33 in LW.\n- HOT WATER BOTTLE BABUSHKA more than doubled revenue WoW with a 113.1% increase to \u00a33215.95 in TW, driven by units rising from 335 to 718.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS declined 34.0% WoW to \u00a32500.80 in TW from \u00a33791.87 in LW, with units falling from 849 to 800.\n- HOT WATER BOTTLE TEA AND SYMPATHY grew 82.8% WoW to \u00a32459.61 in TW, with units increasing from 264 in LW to 478 in TW.\n- HAND WARMER SCOTTY DOG DESIGN dropped 29.1% WoW to \u00a32126.08 in TW from \u00a32998.66 in LW, with units declining from 1173 to 977.\n- JUMBO BAG RED RETROSPOT remained relatively stable WoW with only a 1.5% increase to \u00a32221.19 in TW, maintaining consistent unit sales of approximately 1220 units.",
+    "input_tokens": 1158,
+    "output_tokens": 446,
+    "cost_usd": 0.0033880000000000004,
+    "latency_s": 4.043,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 34,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- REGENCY CAKESTAND 3 TIER generated the highest revenue in TW at \u00a36552.99, representing 18.6% of total revenue across the 10 products shown, though it declined 8.3% WoW from \u00a37144.93 in LW.\n- WHITE HANGING HEART T-LIGHT HOLDER surged 125.6% WoW to \u00a35999.53 in TW, up from \u00a32659.73 in LW, with units nearly doubling from 891 to 2155.\n- PAPER CHAIN KIT 50'S CHRISTMAS fell 36.4% WoW to \u00a35735.62 in TW despite maintaining high unit volume of 1756 units, down from \u00a39020.33 in LW.\n- HOT WATER BOTTLE BABUSHKA more than doubled revenue WoW with a 113.1% increase to \u00a33215.95 in TW, driven by units rising from 335 to 718.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS declined 34.0% WoW to \u00a32500.80 in TW from \u00a33791.87 in LW, with units falling from 849 to 800.\n- HOT WATER BOTTLE TEA AND SYMPATHY grew 82.8% WoW to \u00a32459.61 in TW, with units increasing from 264 in LW to 478 in TW.\n- HAND WARMER SCOTTY DOG DESIGN dropped 29.1% WoW to \u00a32126.08 in TW from \u00a32998.66 in LW, with units declining from 1173 to 977.\n- JUMBO BAG RED RETROSPOT remained relatively stable WoW with only a 1.5% increase to \u00a32221.19 in TW, maintaining consistent unit sales of approximately 1220 units."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1158,
+  "tokens_out": 446,
+  "cost_usd": 0.0033880000000000004,
+  "latency_s": 4.043
+ }
+}

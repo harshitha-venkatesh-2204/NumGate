@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £13,409.45 TW versus £6,036.77 LW, a WoW change of +122.1%, and +89.6% YoY.\n- PLEASE ONE PERSON METAL SIGN ranked 1 with £2,773.43 TW revenue, a 20.7% share TW.\n- PARTY BUNTING ranked 2 with £1,825.40 TW revenue, a 13.6% share TW, up +29.5% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 3 with £1,825.17 TW revenue, a 13.6% share TW, down -8.3% WoW.\n- PLEASE ONE PERSON METAL SIGN posted the largest WoW increase at +3286.4%, rising from £81.90 LW to £2,773.43 TW.\n- REGENCY CAKESTAND 3 TIER posted the largest WoW decrease at -8.3%, falling from £1,991.04 LW to £1,825.17 TW.\n- PARTY BUNTING recorded the largest YoY increase at +5654.7%, up from £31.72 LY.\n- REGENCY CAKESTAND 3 TIER recorded the largest YoY decrease at -50.8%, down from £3,712.01 LY.",
+ "input_tokens": 842,
+ "output_tokens": 451,
+ "cost_usd": 0.006194,
+ "latency_s": 4.33,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

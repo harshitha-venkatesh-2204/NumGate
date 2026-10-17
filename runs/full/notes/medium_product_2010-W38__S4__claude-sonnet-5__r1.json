@@ -1,0 +1,42 @@
+{
+ "note_id": "medium_product_2010-W38__S4__claude-sonnet-5__r1",
+ "table_id": "medium_product_2010-W38",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W38",
+ "n_rows": 22,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a343,516.17 TW versus \u00a317,609.09 LW, a WoW change of +147.1% for ISO week 2010-W38.\n- REGENCY CAKESTAND 3 TIER ranked 1 with revenue \u00a37,503.00 TW, holding a 17.2% share TW, up +67.0% WoW.\n- HAND WARMER RED POLKA DOT ranked 2 with revenue \u00a33,707.40 TW, representing an 8.5% share TW.\n- JUMBO BAG RED RETROSPOT ranked 3 with revenue \u00a33,129.01 TW, a 7.2% share TW, up +54.7% WoW.\n- AFGHAN SLIPPER SOCK PAIR recorded the largest WoW increase among products, rising +52204.3% WoW from \u00a33.45 LW to \u00a31,804.50 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER recorded the largest WoW decrease among products, with revenue changing +3.4% WoW from \u00a32,798.40 LW to \u00a32,894.02 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders among products, with 67 orders TW compared to 60 orders LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W38. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a343,516.17 TW, revenue \u00a317,609.09 LW, revenue change +147.1% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a37,503.00 TW, share 17.2% TW, revenue change +67.0% WoW\n- HAND WARMER RED POLKA DOT: rank 2, revenue \u00a33,707.40 TW, share 8.5% TW\n- JUMBO BAG RED RETROSPOT: rank 3, revenue \u00a33,129.01 TW, share 7.2% TW, revenue change +54.7% WoW\n- AFGHAN SLIPPER SOCK PAIR (largest WoW increase): revenue change +52204.3% WoW, revenue \u00a31,804.50 TW versus \u00a33.45 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (largest WoW decrease): revenue change +3.4% WoW, revenue \u00a32,894.02 TW versus \u00a32,798.40 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 67 TW versus 60 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a343,516.17 TW versus \u00a317,609.09 LW, a WoW change of +147.1% for ISO week 2010-W38.\n- REGENCY CAKESTAND 3 TIER ranked 1 with revenue \u00a37,503.00 TW, holding a 17.2% share TW, up +67.0% WoW.\n- HAND WARMER RED POLKA DOT ranked 2 with revenue \u00a33,707.40 TW, representing an 8.5% share TW.\n- JUMBO BAG RED RETROSPOT ranked 3 with revenue \u00a33,129.01 TW, a 7.2% share TW, up +54.7% WoW.\n- AFGHAN SLIPPER SOCK PAIR recorded the largest WoW increase among products, rising +52204.3% WoW from \u00a33.45 LW to \u00a31,804.50 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER recorded the largest WoW decrease among products, with revenue changing +3.4% WoW from \u00a32,798.40 LW to \u00a32,894.02 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders among products, with 67 orders TW compared to 60 orders LW.",
+    "input_tokens": 731,
+    "output_tokens": 450,
+    "cost_usd": 0.005961999999999999,
+    "latency_s": 4.638,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a343,516.17 TW, revenue \u00a317,609.09 LW, revenue change +147.1% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a37,503.00 TW, share 17.2% TW, revenue change +67.0% WoW\n- HAND WARMER RED POLKA DOT: rank 2, revenue \u00a33,707.40 TW, share 8.5% TW\n- JUMBO BAG RED RETROSPOT: rank 3, revenue \u00a33,129.01 TW, share 7.2% TW, revenue change +54.7% WoW\n- AFGHAN SLIPPER SOCK PAIR (largest WoW increase): revenue change +52204.3% WoW, revenue \u00a31,804.50 TW versus \u00a33.45 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (largest WoW decrease): revenue change +3.4% WoW, revenue \u00a32,894.02 TW versus \u00a32,798.40 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 67 TW versus 60 LW",
+  "n_calls": 1,
+  "tokens_in": 731,
+  "tokens_out": 450,
+  "cost_usd": 0.005961999999999999,
+  "latency_s": 4.638
+ }
+}

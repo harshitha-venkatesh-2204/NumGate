@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue of £3804.27, up 52.1% WoW from £2500.50 LW and up 6.3% YoY from £3578.34 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to £1028.01 TW from £6087.56 LW, a WoW decline of 83.1%, and down 66.6% YoY versus £3074.72 LY.\n- PARTY BUNTING dropped to £1840.12 TW from £3483.92 LW, a WoW change of -47.2%, and YoY change of -13.0% versus £2114.56 LY.\n- CERAMIC STRAWBERRY MONEY BOX surged to £937.43 TW from £8.26 LW, a WoW increase of 11249.0%, with no LY revenue recorded.\n- PAPER CHAIN KIT EMPIRE reached £1266.57 TW, up 16.3% WoW from £1088.95 LW and up 279.4% YoY from £333.81 LY.\n- BALLOON WATER BOMB PACK OF 35 rose to £464.03 TW from £31.50 LW, a WoW increase of 1373.1%, and up 538.6% YoY from £72.66 LY.\n- ASSORTED COLOUR BIRD ORNAMENT declined to £440.72 TW from £952.92 LW, a WoW drop of 53.8%, and down 70.9% YoY from £1512.31 LY.\n- REGENCY CAKESTAND 3 TIER holds the top share at 18.6% of TW revenue across the 26 rows shown, with PARTY BUNTING second at 9.0% share.",
+ "input_tokens": 2661,
+ "output_tokens": 604,
+ "cost_usd": 0.011362,
+ "latency_s": 5.627,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

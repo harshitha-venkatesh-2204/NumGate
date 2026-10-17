@@ -1,0 +1,49 @@
+{
+ "note_id": "medium_product_2010-W38__S3__claude-opus-5__r1",
+ "table_id": "medium_product_2010-W38",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W38",
+ "n_rows": 22,
+ "strategy": "S3",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- Total TW revenue across the 22 products shown was \u00a343,516.17 versus \u00a317,609.09 LW, a WoW change of +147.1%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with \u00a37,503.00 TW against \u00a34,493.62 LW, up 67.0% WoW, on 624 units versus 380 LW and a 17.2% share.\n- HAND WARMER RED POLKA DOT ranked 2 at \u00a33,707.40 TW from \u00a30.00 LW, recorded on 2,004 units across 1 order TW.\n- WHITE HANGING HEART T-LIGHT HOLDER posted the smallest WoW move in the top five at +3.4%, \u00a32,894.02 TW versus \u00a32,798.40 LW, with 67 orders TW versus 60 LW.\n- Christmas lines moved sharply WoW: PAPER CHAIN KIT VINTAGE CHRISTMAS \u00a32,297.49 TW (+519.4%), SET OF 20 VINTAGE CHRISTMAS NAPKINS \u00a31,289.50 TW (+2,762.4%), and WOODEN ADVENT CALENDAR CREAM \u00a31,358.70 TW (+1,236.0%).\n- AFGHAN SLIPPER SOCK PAIR reached \u00a31,804.50 TW from \u00a33.45 LW, with 610 units TW versus 1 unit LW across 5 orders.\n- LARGE CIRCULAR MIRROR MOBILE (\u00a31,239.75 TW, 1,371 units) and SET OF 6 T-LIGHTS SANTA (\u00a31,095.07 TW, 405 units) both came from \u00a30.00 LW and hold 2.8% and 2.5% share TW.\n- No LY revenue is recorded for any of the 22 products, so YoY cannot be calculated for this week, including for rank 1 REGENCY CAKESTAND 3 TIER.",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W38. Entity type: product. The table has 22 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 7503.00 | 4493.62 |  | 624 | 380 | 58 | 53 | 67.0 |  | 17.2 | 1 |\n| HAND WARMER RED POLKA DOT | 3707.40 | 0.00 |  | 2004 | 0 | 1 | 0 |  |  | 8.5 | 2 |\n| JUMBO BAG RED RETROSPOT | 3129.01 | 2022.70 |  | 1515 | 1118 | 39 | 50 | 54.7 |  | 7.2 | 3 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 2894.02 | 2798.40 |  | 1088 | 1048 | 67 | 60 | 3.4 |  | 6.7 | 4 |\n| ASSORTED COLOUR BIRD ORNAMENT | 2829.76 | 984.67 |  | 1792 | 619 | 43 | 27 | 187.4 |  | 6.5 | 5 |\n| PAPER CHAIN KIT VINTAGE CHRISTMAS | 2297.49 | 370.90 |  | 819 | 142 | 59 | 7 | 519.4 |  | 5.3 | 6 |\n| AFGHAN SLIPPER SOCK PAIR | 1804.50 | 3.45 |  | 610 | 1 | 5 | 1 | 52204.3 |  | 4.1 | 7 |\n| SET OF 6 RIBBONS VINTAGE CHRISTMAS | 1797.01 | 1585.95 |  | 756 | 749 | 45 | 7 | 13.3 |  | 4.1 | 8 |\n| BABUSHKA LIGHTS STRING OF 10 | 1678.87 | 101.32 |  | 279 | 14 | 25 | 7 | 1557.0 |  | 3.9 | 9 |\n| 3 HEARTS HANGING DECORATION RUSTIC | 1468.91 | 415.97 |  | 549 | 139 | 23 | 24 | 253.1 |  | 3.4 | 10 |\n| WOODEN ADVENT CALENDAR CREAM | 1358.70 | 101.70 |  | 98 | 6 | 14 | 4 | 1236.0 |  | 3.1 | 11 |\n| HEART OF WICKER LARGE | 1308.70 | 972.71 |  | 482 | 345 | 41 | 40 | 34.5 |  | 3.0 | 12 |\n| SET OF 20 VINTAGE CHRISTMAS NAPKINS | 1289.50 | 45.05 |  | 1831 | 53 | 45 | 7 | 2762.4 |  | 3.0 | 13 |\n| SMALL POPCORN HOLDER | 1278.77 | 412.45 |  | 1709 | 534 | 23 | 23 | 210.0 |  | 2.9 | 14 |\n| LARGE CIRCULAR MIRROR MOBILE | 1239.75 | 0.00 |  | 1371 | 0 | 9 | 0 |  |  | 2.8 | 15 |\n| SET 7 BABUSHKA NESTING BOXES | 1232.50 | 744.60 |  | 157 | 90 | 16 | 24 | 65.5 |  | 2.8 | 16 |\n| PAPER CHAIN KIT 50'S CHRISTMAS | 1194.93 | 832.80 |  | 431 | 344 | 38 | 14 | 43.5 |  | 2.7 | 17 |\n| ROSES REGENCY TEACUP AND SAUCER | 1176.17 | 603.24 |  | 439 | 220 | 26 | 21 | 95.0 |  | 2.7 | 18 |\n| WOOD S/3 CABINET ANT WHITE FINISH | 1132.10 | 349.65 |  | 158 | 47 | 31 | 10 | 223.8 |  | 2.6 | 19 |\n| SET OF 6 T-LIGHTS SANTA | 1095.07 | 0.00 |  | 405 | 0 | 19 | 0 |  |  | 2.5 | 20 |\n| EDWARDIAN PARASOL BLACK | 1077.39 | 280.47 |  | 203 | 46 | 31 | 9 | 284.1 |  | 2.5 | 21 |\n| LUNCH BAG RED SPOTTY | 1022.62 | 489.44 |  | 590 | 304 | 27 | 24 | 108.9 |  | 2.3 | 22 |\n\nWrite the insight note now.\n",
+    "text": "- Total TW revenue across the 22 products shown was \u00a343,516.17 versus \u00a317,609.09 LW, a WoW change of +147.1%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with \u00a37,503.00 TW against \u00a34,493.62 LW, up 67.0% WoW, on 624 units versus 380 LW and a 17.2% share.\n- HAND WARMER RED POLKA DOT ranked 2 at \u00a33,707.40 TW from \u00a30.00 LW, recorded on 2,004 units across 1 order TW.\n- WHITE HANGING HEART T-LIGHT HOLDER posted the smallest WoW move in the top five at +3.4%, \u00a32,894.02 TW versus \u00a32,798.40 LW, with 67 orders TW versus 60 LW.\n- Christmas lines moved sharply WoW: PAPER CHAIN KIT VINTAGE CHRISTMAS \u00a32,297.49 TW (+519.4%), SET OF 20 VINTAGE CHRISTMAS NAPKINS \u00a31,289.50 TW (+2,762.4%), and WOODEN ADVENT CALENDAR CREAM \u00a31,358.70 TW (+1,236.0%).\n- AFGHAN SLIPPER SOCK PAIR reached \u00a31,804.50 TW from \u00a33.45 LW, with 610 units TW versus 1 unit LW across 5 orders.\n- LARGE CIRCULAR MIRROR MOBILE (\u00a31,239.75 TW, 1,371 units) and SET OF 6 T-LIGHTS SANTA (\u00a31,095.07 TW, 405 units) both came from \u00a30.00 LW and hold 2.8% and 2.5% share TW.\n- No LY revenue is recorded for any of the 22 products, so YoY cannot be calculated for this week, including for rank 1 REGENCY CAKESTAND 3 TIER.",
+    "input_tokens": 2261,
+    "output_tokens": 1511,
+    "cost_usd": 0.049080000000000006,
+    "latency_s": 17.047,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 39,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- Total TW revenue across the 22 products shown was \u00a343,516.17 versus \u00a317,609.09 LW, a WoW change of +147.1%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with \u00a37,503.00 TW against \u00a34,493.62 LW, up 67.0% WoW, on 624 units versus 380 LW and a 17.2% share.\n- HAND WARMER RED POLKA DOT ranked 2 at \u00a33,707.40 TW from \u00a30.00 LW, recorded on 2,004 units across 1 order TW.\n- WHITE HANGING HEART T-LIGHT HOLDER posted the smallest WoW move in the top five at +3.4%, \u00a32,894.02 TW versus \u00a32,798.40 LW, with 67 orders TW versus 60 LW.\n- Christmas lines moved sharply WoW: PAPER CHAIN KIT VINTAGE CHRISTMAS \u00a32,297.49 TW (+519.4%), SET OF 20 VINTAGE CHRISTMAS NAPKINS \u00a31,289.50 TW (+2,762.4%), and WOODEN ADVENT CALENDAR CREAM \u00a31,358.70 TW (+1,236.0%).\n- AFGHAN SLIPPER SOCK PAIR reached \u00a31,804.50 TW from \u00a33.45 LW, with 610 units TW versus 1 unit LW across 5 orders.\n- LARGE CIRCULAR MIRROR MOBILE (\u00a31,239.75 TW, 1,371 units) and SET OF 6 T-LIGHTS SANTA (\u00a31,095.07 TW, 405 units) both came from \u00a30.00 LW and hold 2.8% and 2.5% share TW.\n- No LY revenue is recorded for any of the 22 products, so YoY cannot be calculated for this week, including for rank 1 REGENCY CAKESTAND 3 TIER."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 2261,
+  "tokens_out": 1511,
+  "cost_usd": 0.049080000000000006,
+  "latency_s": 17.047
+ }
+}

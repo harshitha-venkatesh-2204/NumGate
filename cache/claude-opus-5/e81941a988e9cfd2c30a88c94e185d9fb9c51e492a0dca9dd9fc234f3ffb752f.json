@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER held Rank 1 with Revenue_TW £10,902.59 versus £11,450.57 LW (WoW -4.8%), taking 6.9% share on 851 units TW against 929 LW.\n- VINTAGE UNION JACK MEMOBOARD reached Rank 2 at £6,561.83 TW versus £403.00 LW (WoW +1,528.2%), with units at 1,018 TW versus 44 LW across 10 orders.\n- WOOD BLACK BOARD ANT WHITE FINISH posted £5,715.75 TW versus £414.66 LW (WoW +1,278.4%) at Rank 3, with 25 orders TW versus 13 LW.\n- CREAM HEART CARD HOLDER recorded £4,944.82 TW versus £448.38 LW (WoW +1,002.8%) and £1,180.10 LY (YoY +319.0%), while BLACK HEART CARD HOLDER reached £4,811.17 TW versus £289.65 LW (WoW +1,561.0%).\n- WHITE HANGING HEART T-LIGHT HOLDER fell to £3,539.40 TW from £4,721.11 LW (WoW -25.0%) and £4,942.19 LY (YoY -28.4%), with 1,122 units TW versus 1,649 LW.\n- HOT WATER BOTTLE TEA AND SYMPATHY rose to £3,538.37 TW from £2,605.15 LW (WoW +35.8%) and £1,778.15 LY (YoY +99.0%), and WHITE SKULL HOT WATER BOTTLE reached £3,365.38 TW (WoW +41.2%, YoY +329.6%).\n- HAND WARMER SCOTTY DOG DESIGN dropped to £716.54 TW from £2,587.91 LW (WoW -72.3%) and HAND WARMER OWL DESIGN to £633.57 TW from £2,542.97 LW (WoW -75.1%), with orders down from 79 to 31 and 89 to 23 respectively.\n- ROTATING SILVER ANGELS T-LIGHT HLDR came in at £1,792.58 TW versus £4,073.14 LY (YoY -56.0%) and ASSORTED COLOUR BIRD ORNAMENT at £1,355.01 TW versus £3,160.37 LY (YoY -57.1%).",
+ "input_tokens": 10040,
+ "output_tokens": 1481,
+ "cost_usd": 0.087225,
+ "latency_s": 14.875,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

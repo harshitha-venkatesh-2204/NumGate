@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £55.6k versus LW £24.8k and LY £27.5k, with WoW change of 124.5% and YoY change of 102.2%.\n- TOTAL units sold TW reached 29,321 across 941 orders.\n- RABBIT NIGHT LIGHT ranked 1 among products TW with revenue of £10.7k, a 19.3% share of total revenue.\n- RABBIT NIGHT LIGHT revenue rose 18473.8% WoW.\n- ALARM CLOCK BAKELIKE RED ranked 2 TW with revenue of £2.4k, a 4.4% share.\n- CHILLI LIGHTS ranked 3 TW with revenue of £2.3k, a 4.1% share.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 4 TW with revenue of £2.3k, a 4.1% share.\n- FLOWERS CHANDELIER T-LIGHT HOLDER revenue increased 9231.2% WoW, while ALARM CLOCK BAKELIKE PINK revenue increased 641.9% WoW.",
+ "input_tokens": 2319,
+ "output_tokens": 385,
+ "cost_usd": 0.008487999999999999,
+ "latency_s": 4.216,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

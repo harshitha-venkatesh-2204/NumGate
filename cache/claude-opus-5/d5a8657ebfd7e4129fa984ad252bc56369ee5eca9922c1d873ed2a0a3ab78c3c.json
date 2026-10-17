@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led TW at £4,443.21 revenue, 13.2% of the shown total, up 28.5% WoW from £3,457.20 LW on 355 units versus 296 LW.\n- PARTY BUNTING ranked 2 TW with £2,495.37, up 55.9% WoW from £1,600.50 LW, with units rising from 386 LW to 525 TW and orders from 29 LW to 47 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER fell 13.2% WoW to £1,961.04 TW from £2,259.40 LW, with units down from 848 LW to 696 TW despite orders rising from 45 LW to 60 TW.\n- PINK AND LILAC QUILTED THROW rose 3,873.7% WoW to £1,825.90 TW from £45.95 LW, with 53 units TW versus 1 unit LW across 4 orders TW.\n- ENGLISH ROSE DESIGN QUILTED THROW (£1,350.97 TW, rank 5) and CLASSIC METAL BIRDCAGE PLANT HOLDER (£1,193.55 TW, rank 8) both recorded £0.00 LW, so WoW is not computable.\n- GIANT BLACK SUNGLASSES posted £1,323.00 TW versus £3.90 LW, 450 units TW on a single order, a 3.9% share of TW revenue.\n- RED RETROSPOT JUMBO BAG declined 28.4% WoW to £1,115.45 TW from £1,558.65 LW, with units down from 907 LW to 595 TW.\n- WOODEN CROQUET GARDEN SET was the largest decliner among the top 25 at minus 34.4% WoW (£743.99 TW versus £1,133.73 LW), while VINTAGE UNION JACK BUNTING fell 29.8% WoW to £889.25 TW; LY revenue is blank for all 30 rows, so YoY is not available.",
+ "input_tokens": 2809,
+ "output_tokens": 682,
+ "cost_usd": 0.031094999999999998,
+ "latency_s": 8.049,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

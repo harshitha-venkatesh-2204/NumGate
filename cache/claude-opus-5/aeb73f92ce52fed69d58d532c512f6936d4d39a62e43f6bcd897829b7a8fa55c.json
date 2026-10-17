@@ -1,0 +1,10 @@
+{
+ "text": "- PICNIC BASKET WICKER 60 PIECES led TW at £39,619.50 from 61 units across 2 orders, 31.7% of TW revenue shown, versus £0.00 LW and £0.00 LY.\n- The 11 doormat lines ranked 3 to 14 totalled £27,243.45 TW against £2,122.64 LW, with DOORMAT KEEP CALM AND COME IN top of that group at £2,800.73 TW (WoW +339.7%).\n- PARTY BUNTING ranked 2 at £4,019.93 TW versus £2,327.02 LW (WoW +72.8%) and £3,233.52 LY (YoY +24.3%), on 663 units and 58 orders.\n- REGENCY CAKESTAND 3 TIER posted £2,711.19 TW versus £3,041.70 LW (WoW -10.9%) and £5,517.46 LY (YoY -50.9%), with 208 units TW against 263 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to £1,085.90 TW from £1,691.11 LW (WoW -35.8%) and £4,245.80 LY (YoY -74.4%).\n- JUMBO BAG RED RETROSPOT reached £1,835.74 TW versus £579.84 LW (WoW +216.6%) and £1,740.29 LY (YoY +5.5%), on 883 units TW versus 273 LW.\n- Three lunch bag lines declined sharply YoY: LUNCH BAG BLACK SKULL. £363.19 TW versus £4,044.23 LY (-91.0%), LUNCH BAG WOODLAND £599.82 versus £3,753.85 LY (-84.0%), and LUNCH BAG CARS BLUE £639.80 versus £3,737.92 LY (-82.9%).\n- SET/4 WHITE RETRO STORAGE CUBES dropped to £357.89 TW from £1,123.52 LW (WoW -68.1%) on 9 units versus 30 LW, while ASSORTED COLOURS SILK FAN rose to £1,240.70 TW from £183.19 LW (WoW +577.3%) on 1,610 units.",
+ "input_tokens": 8756,
+ "output_tokens": 1759,
+ "cost_usd": 0.087755,
+ "latency_s": 18.374,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

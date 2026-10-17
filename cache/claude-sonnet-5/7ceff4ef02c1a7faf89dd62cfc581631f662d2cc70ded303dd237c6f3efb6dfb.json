@@ -1,0 +1,10 @@
+{
+ "text": "- VINTAGE UNION JACK MEMOBOARD leads TW revenue at £6500.69, up from £9.95 LW, a WoW change of 65233.6%, and holds 11.0% share, Rank 1.\n- CREAM HEART CARD HOLDER posted TW revenue of £2403.53 versus £237.78 LW (WoW 910.8%) and £419.43 LY (YoY 473.0%), Rank 2.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN rose to £2319.75 TW from £60.00 LW, a WoW increase of 3766.2%, Rank 3.\n- REGENCY CAKESTAND 3 TIER recorded £1860.24 TW versus £1890.60 LW, a WoW decline of 1.6%, Rank 4.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to £1392.59 TW from £1616.72 LW (WoW -13.9%) and £1617.50 LY (YoY -13.9%), Rank 5.\n- JUMBO BAG RED RETROSPOT dropped to £568.66 TW from £1786.35 LW, a WoW decrease of 68.2%, Rank 19.\n- ASSORTED COLOUR BIRD ORNAMENT declined to £281.84 TW from £1429.93 LW (WoW -80.3%) and £788.48 LY (YoY -64.3%), Rank 61.\n- RECYCLING BAG RETROSPOT fell to £165.51 TW from £763.74 LW (WoW -78.3%) and £218.45 LY (YoY -24.2%), Rank 139.",
+ "input_tokens": 11236,
+ "output_tokens": 566,
+ "cost_usd": 0.028131999999999997,
+ "latency_s": 5.057,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

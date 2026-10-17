@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £74,914.30 TW versus £48,586.55 LW, a WoW change of +54.2%, and versus prior year this is +261.4% YoY.\n- JUMBO BAG RED RETROSPOT ranked 1 with £2,941.59 TW revenue, a 3.9% share TW, and +14.0% WoW change.\n- REGENCY CAKESTAND 3 TIER ranked 2 with £2,907.39 TW revenue, a 3.9% share TW, and +14.2% WoW change.\n- PARTY BUNTING ranked 3 with £2,730.41 TW revenue, a 3.6% share TW, and +33.1% WoW change.\n- SMALL CHINESE STYLE SCISSOR posted the largest WoW increase at +157681.0%, rising from £0.42 LW to £662.68 TW.\n- SET OF TEA COFFEE SUGAR TINS PANTRY posted the largest WoW decrease at -84.9%, falling from £2,159.90 LW to £325.70 TW.\n- JUMBO BAG RED RETROSPOT recorded the largest YoY increase at +150750.8%, up from £1.95 LY.\n- NATURAL SLATE HEART CHALKBOARD recorded the largest YoY decrease at -60.3%, down from £946.88 LY, while SPOTTY BUNTING had the most orders with 44 TW versus 37 LW.",
+ "input_tokens": 842,
+ "output_tokens": 487,
+ "cost_usd": 0.006554,
+ "latency_s": 4.494,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

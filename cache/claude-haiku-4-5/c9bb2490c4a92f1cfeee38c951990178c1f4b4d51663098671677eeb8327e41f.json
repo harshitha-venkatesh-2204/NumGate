@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT generated £10,739.38 in TW revenue, representing 19.3% of total sales and ranking first, with a WoW increase of 18473.8% from £57.82 in LW.\n- ALARM CLOCK BAKELIKE RED achieved £2,423.41 in TW revenue with a YoY increase of 307.3% compared to £595.04 in LY, ranking second across the 30 products.\n- FLOWERS CHANDELIER T-LIGHT HOLDER recorded a WoW revenue increase of 9231.2% in TW, growing from £18.75 in LW to £1,749.60, demonstrating exceptional week-on-week growth.\n- WORLD WAR 2 GLIDERS ASSTD DESIGNS showed a YoY increase of 513.2% with TW revenue of £1,161.12 versus £189.36 in LY, while units sold jumped from 975 in LW to 5,328 in TW.\n- JUMBO BAG PAISLEY PARK, VINTAGE DOILY JUMBO BAG RED, and LUNCH BAG PAISLEY PARK each generated new revenue in TW with zero sales in LW, contributing £2,120.48, £1,063.24, and £1,024.05 respectively.\n- REGENCY CAKESTAND 3 TIER declined 77.8% YoY from £7,558.58 in LY to £1,679.31 in TW, and fell 47.6% WoW from £3,205.71 in LW.\n- CHILLI LIGHTS and PAPER CHAIN KIT 50'S CHRISTMAS both showed positive YoY growth of 123.7% and 58.1% respectively, with TW revenues of £2,285.12 and £2,264.16.\n- JUMBO BAG RED RETROSPOT experienced a WoW decline of 38.7% from £2,021.85 in LW to £1,238.90 in TW, despite a YoY increase of 27.0% compared to £975.81 in LY.",
+ "input_tokens": 2589,
+ "output_tokens": 518,
+ "cost_usd": 0.005179,
+ "latency_s": 6.275,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

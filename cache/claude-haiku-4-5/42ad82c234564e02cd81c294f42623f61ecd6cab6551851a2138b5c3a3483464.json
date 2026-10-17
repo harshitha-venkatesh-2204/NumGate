@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £3,388.78 revenue in TW, ranking 1st with 5.2% share and a WoW increase of 14.4%.\n- PACK OF 12 SUKI TISSUES achieved £2,573.71 revenue in TW with a dramatic WoW surge of 5937.3%, selling 5,247 units compared to 147 units in LW.\n- PACK OF 12 HEARTS DESIGN TISSUES reached £2,504.11 revenue in TW with a WoW increase of 6087.6%, moving 5,007 units versus 127 units in LW.\n- WOODEN SKITTLES GARDEN SET generated £2,650.90 revenue in TW with a WoW jump of 465.4%, selling 230 units compared to 31 units in LW.\n- WOODEN CROQUET GARDEN SET produced £2,232.33 revenue in TW with a WoW increase of 591.9%, moving 239 units from 27 units in LW.\n- SOMBRERO showed exceptional growth with £1,000.00 revenue in TW and a WoW increase of 51182.1%, selling 800 units compared to 1 unit in LW.\n- DOOR MAT UNION FLAG and DOOR MAT RED SPOT both declined WoW, falling 37.1% to £773.73 and 36.8% to £718.81 respectively in TW.",
+ "input_tokens": 7502,
+ "output_tokens": 361,
+ "cost_usd": 0.009307,
+ "latency_s": 3.09,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

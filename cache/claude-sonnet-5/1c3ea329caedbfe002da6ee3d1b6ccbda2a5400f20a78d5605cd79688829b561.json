@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £58.8k versus LW £39.5k, a WoW increase of 48.9%.\n- TOTAL revenue TW of £58.8k versus LY £13.1k shows a YoY increase of 350.9%.\n- TOTAL units TW reached 25,436 compared to LW 16,315, while TOTAL orders fell to 1,474 TW from 1,676 LW.\n- VINTAGE UNION JACK MEMOBOARD led all products TW with revenue of £6.5k, an 11.0% share, ranked number 1.\n- VINTAGE UNION JACK MEMOBOARD revenue rose 65233.6% WoW, and PACK OF 12 SUKI TISSUES revenue rose 49201.7% WoW.\n- CREAM HEART CARD HOLDER posted TW revenue of £2.4k with a 4.1% share, and GROW A FLYTRAP OR SUNFLOWER IN TIN posted TW revenue of £2.3k with a 3.9% share.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN revenue rose 3766.2% WoW, while ASSORTED COLOUR BIRD ORNAMENT revenue fell 80.3% WoW.\n- RECYCLING BAG RETROSPOT revenue fell 78.3% WoW and ROSES REGENCY TEACUP AND SAUCER revenue fell 71.2% WoW.",
+ "input_tokens": 2455,
+ "output_tokens": 496,
+ "cost_usd": 0.00987,
+ "latency_s": 5.067,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

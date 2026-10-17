@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £89,976.85 TW versus £71,964.54 LW, a change of +25.0% WoW.\n- REGENCY CAKESTAND 3 TIER held rank 1 with £7,558.58 TW, an 8.4% TW share and +56.1% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER took rank 2 at £4,173.55 TW, 4.6% TW share, +87.5% WoW.\n- COLOUR GLASS. STAR T-LIGHT HOLDER ranked 3 with £3,915.56 TW, 4.4% TW share, and +1038.9% WoW.\n- SMALL CHINESE STYLE SCISSOR posted the largest WoW increase at +7769.0%, moving from £16.80 LW to £1,322.00 TW.\n- EDWARDIAN PARASOL BLACK posted the largest WoW decrease at -80.0%, from £2,169.57 LW to £434.67 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 72 orders TW versus 71 orders LW.",
+ "input_tokens": 751,
+ "output_tokens": 386,
+ "cost_usd": 0.013405,
+ "latency_s": 4.498,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER holds Rank 1 TW at £2,456.32 with 4.9% share, down 52.7% WoW from £5,198.05 LW on 178 units TW versus 449 units LW.\n- WHITE HANGING HEART T-LIGHT HOLDER is Rank 2 TW at £2,173.03, up 33.7% WoW from £1,625.34 LW, with 785 units TW versus 586 units LW.\n- JUMBO BAG RED RETROSPOT ranks 3 TW at £1,392.22, up 10.5% WoW from £1,259.80 LW, across 40 orders TW versus 41 orders LW.\n- VINTAGE UNION JACK MEMOBOARD rises 642.8% WoW to £1,108.64 TW from £149.25 LW, and BLACK HEART CARD HOLDER rises 3,930.0% WoW to £955.12 TW from £23.70 LW.\n- ASSORTED COLOURS SILK FAN posts £1,011.52 TW versus £176.12 LW, up 474.3% WoW, on 1,571 units TW versus 232 units LW.\n- NATURAL SLATE CHALKBOARD LARGE records £842.73 TW from £0.00 LW, and SET OF 2 ROUND TINS CAMEMBERT records £296.05 TW from £0.00 LW, so WoW is not computable for either.\n- Largest declines TW are DOOR MAT ENGLISH ROSE at £260.72, down 70.8% WoW from £891.83 LW, CERAMIC CAKE STAND + HANGING CAKES at £269.66, down 64.4% WoW, and EDWARDIAN PARASOL NATURAL at £498.99, down 58.0% WoW.\n- Revenue_LY is blank for all 97 products in week 2010-W25, including REGENCY CAKESTAND 3 TIER and JUMBO BAG RED RETROSPOT, so no YoY change is available this week.",
+ "input_tokens": 7513,
+ "output_tokens": 1276,
+ "cost_usd": 0.069465,
+ "latency_s": 14.212,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £5,198.05 in TW revenue, representing 37.8% of total product revenue and ranking first, though this reflects a 5.8% WoW decline from £5,517.46 in LW.\n- WHITE HANGING HEART T-LIGHT HOLDER experienced the largest WoW revenue drop at 61.7%, falling from £4,245.80 in LW to £1,625.34 in TW, despite maintaining the second-highest revenue share at 11.8%.\n- DOOR MAT RED SPOT achieved the strongest WoW growth at 119.5%, increasing from £436.26 in LW to £957.50 in TW with 140 units sold.\n- DOOR MAT FANCY FONT HOME SWEET HOME posted 79.6% WoW revenue growth, rising from £592.57 in LW to £1,064.30 in TW across 164 units.\n- SET/5 RED SPOTTY LID GLASS BOWLS grew 60.7% WoW from £743.50 to £1,194.65, with units increasing from 266 in LW to 447 in TW.\n- JUMBO BAG RED RETROSPOT declined 27.6% WoW from £1,740.29 to £1,259.80, with units falling from 947 in LW to 696 in TW.\n- VINTAGE UNION JACK BUNTING fell 25.9% WoW from £1,703.11 to £1,261.17, with 145 units sold in TW compared to 194 in LW.\n- EDWARDIAN PARASOL NATURAL remained relatively stable with 1.9% WoW growth, generating £1,187.47 in TW revenue from 223 units across 14 orders.",
+ "input_tokens": 1020,
+ "output_tokens": 448,
+ "cost_usd": 0.00326,
+ "latency_s": 4.434,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

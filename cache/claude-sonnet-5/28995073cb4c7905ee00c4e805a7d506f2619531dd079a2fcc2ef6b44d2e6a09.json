@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £51.9k versus LW £49.7k, a WoW change of 4.5%.\n- TOTAL revenue TW was £51.9k versus LY £23.9k, a YoY change of 117.3%.\n- TOTAL units TW reached 23,994 compared with LW 19,546, while TOTAL orders TW were 1,527 versus LW 1,629.\n- REGENCY CAKESTAND 3 TIER led products with TW revenue of £3,429.15, a 6.6% share of TOTAL TW revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER followed with TW revenue of £3,266.50, a 6.3% share of TOTAL TW revenue.\n- PARTY BUNTING recorded TW revenue of £1,795.82, a 3.5% share of TOTAL TW revenue.\n- POLKADOT PEN rose 18,121.5% WoW, while DOORMAT RED RETROSPOT fell 75.8% WoW.\n- BROCADE RING PURSE grew 10,158.9% YoY, while WOOD BLACK BOARD ANT WHITE FINISH declined 86.4% YoY.",
+ "input_tokens": 2514,
+ "output_tokens": 406,
+ "cost_usd": 0.009088,
+ "latency_s": 4.073,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

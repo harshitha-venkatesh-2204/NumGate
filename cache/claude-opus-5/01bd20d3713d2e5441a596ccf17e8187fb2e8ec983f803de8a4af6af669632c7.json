@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER held rank 1 with TW revenue of £2,616.00 against £4,096.80 LW, a WoW change of -36.1%, on 190 units TW versus 349 LW and an 8.0% share of TW revenue.\n- CHILLI LIGHTS moved to rank 2 at £1,516.30 TW versus £210.09 LW, a WoW change of +621.7%, with 270 units TW against 39 LW.\n- Three baby gift sets recorded zero LW revenue and combined £2,397.15 TW: SPACEBOY BABY GIFT SET £904.05, DOLLY GIRL BABY GIFT SET £853.20 and CIRCUS PARADE BABY GIFT SET £639.90, together 7.2% of TW revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER took £1,249.82 TW, up 15.3% WoW from £1,084.00 but down 47.2% YoY from £2,365.84 LY.\n- VINTAGE UNION JACK BUNTING fell 64.8% WoW to £805.26 from £2,288.50 while rising 196.1% YoY from £271.94 LY, with orders at 4 TW versus 20 LW.\n- Seven JUMBO BAG lines totalled £5,597.13 TW, 16.9% of TW revenue, led by JUMBO BAG RED RETROSPOT at £1,356.16 TW (+17.6% WoW) and JUMBO BAG WOODLAND ANIMALS at £839.89 TW (+606.7% WoW, +142.6% YoY).\n- MINI PAINT SET VINTAGE sold 1,261 units TW against 108 LW for £734.23, a WoW change of +945.9%, while SMALL POPCORN HOLDER reached 779 units TW versus 370 LW for £595.33 (+100.4% WoW, +1,205.0% YoY).\n- ASSORTED COLOUR BIRD ORNAMENT rose 158.6% WoW to £1,019.62 from £394.29 yet sat 29.4% below the LY level of £1,444.53, and JAM MAKING SET WITH JARS declined 28.4% WoW to £849.69 from £1,186.95.",
+ "input_tokens": 3560,
+ "output_tokens": 1611,
+ "cost_usd": 0.058075,
+ "latency_s": 18.538,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

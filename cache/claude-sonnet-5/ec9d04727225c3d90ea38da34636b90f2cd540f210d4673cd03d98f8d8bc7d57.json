@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER ranks 1 TW with revenue of £3952.80, up 67.1% WoW from £2365.84 LW, holding 10.9% share.\n- ENGLISH ROSE DESIGN QUILTED THROW ranks 2 TW with revenue of £2982.60, down 11.4% WoW from £3365.07 LW, holding 8.3% share.\n- REGENCY CAKESTAND 3 TIER ranks 3 TW with revenue of £2511.24 TW versus £0.00 LW, with 41 orders TW and 6.9% share.\n- SET/6 WOODLAND PAPER CUPS revenue rose 39107.8% WoW to £1301.70 TW from £3.32 LW, with units up from 2 LW to 12786 TW.\n- SET/6 WOODLAND PAPER PLATES revenue rose 26359.8% WoW to £1317.70 TW from £4.98 LW, with units up from 3 LW to 12976 TW.\n- ASSORTED COLOUR BIRD ORNAMENT revenue fell 29.8% WoW to £1014.63 TW from £1444.53 LW.\n- JUMBO BAG RED WHITE SPOTTY revenue fell 24.9% WoW to £1053.89 TW from £1402.60 LW.\n- GIN + TONIC DIET METAL SIGN ranks 28 TW with revenue of £747.91, the lowest among the 28 products shown, holding 2.1% share.",
+ "input_tokens": 2622,
+ "output_tokens": 522,
+ "cost_usd": 0.010464000000000001,
+ "latency_s": 4.877,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

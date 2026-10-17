@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led TW at £4,443.21 versus £3,457.20 LW, a WoW gain of 28.5%, holding a 6.5% share of TW revenue at rank 1.\n- PARTY BUNTING ranked 2 with £2,495.37 TW against £1,600.50 LW, up 55.9% WoW, on 525 units TW versus 386 units LW.\n- WHITE HANGING HEART T-LIGHT HOLDER fell 13.2% WoW to £1,961.04 TW from £2,259.40 LW, with units down to 696 TW from 848 LW.\n- PINK AND LILAC QUILTED THROW moved to £1,825.90 TW from £45.95 LW, a WoW change of 3,873.7%, with 53 units TW across 4 orders.\n- ENGLISH ROSE DESIGN QUILTED THROW (£1,350.97), CLASSIC METAL BIRDCAGE PLANT HOLDER (£1,193.55) and WOOD AND GLASS MEDICINE CABINET (£404.25) each recorded £0.00 LW and no WoW percentage.\n- GIANT BLACK SUNGLASSES reached £1,323.00 TW from £3.90 LW on 450 units in a single order, ranking 6 with a 1.9% share.\n- PLEASE ONE PERSON METAL SIGN and LUNCH BAG BLACK SKULL. both dropped 70.7% WoW, to £441.39 from £1,506.00 and to £337.70 from £1,152.30 respectively.\n- Door mats split TW: DOOR MAT UNION FLAG rose 43.0% WoW to £1,230.18, while DOOR MAT TOPIARY (-55.6% to £320.01), DOOR MAT NEW ENGLAND (-54.6% to £321.09) and DOOR MAT SPOTTY HOME SWEET HOME (-54.0% to £392.41) declined; LY revenue is blank for all 115 rows, so no YoY values are reported.",
+ "input_tokens": 8778,
+ "output_tokens": 1303,
+ "cost_usd": 0.076465,
+ "latency_s": 14.473,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

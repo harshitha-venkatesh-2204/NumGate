@@ -1,0 +1,49 @@
+{
+ "note_id": "small_product_2011-W47__S3__claude-haiku-4-5__r2",
+ "table_id": "small_product_2011-W47",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2011-W47",
+ "n_rows": 6,
+ "strategy": "S3",
+ "model": "claude-haiku-4-5",
+ "repeat": 2,
+ "note": "- PAPER CHAIN KIT 50'S CHRISTMAS generated \u00a35,701.16 in TW revenue, the highest among all products, but declined 39.9% WoW from \u00a39,485.15 in LW.\n- RABBIT NIGHT LIGHT fell 52.4% WoW to \u00a35,084.81 in TW revenue, dropping from \u00a310,687.69 in LW, representing the steepest decline in the portfolio.\n- CHILLI LIGHTS surged 115.0% WoW to \u00a34,960.25 in TW revenue from \u00a32,307.01 in LW, and grew 229.3% YoY compared to \u00a31,506.40 in LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS sold 1,692 units in TW, down from 2,161 units in LW, while maintaining a 22.6% share of total TW revenue.\n- REGENCY CAKESTAND 3 TIER generated \u00a33,543.60 in TW revenue with a 17.3% WoW increase, but declined 45.9% YoY from \u00a36,552.99 in LY.\n- ROTATING SILVER ANGELS T-LIGHT HLDR achieved 42.7% YoY growth to \u00a32,894.37 in TW revenue from \u00a32,028.90 in LY, with 1,170 units sold.\n- RABBIT NIGHT LIGHT accounted for 20.2% of TW revenue at \u00a35,084.81 despite a 52.4% WoW decline and 2,331 units sold across 105 orders.\n- Total portfolio revenue in TW reached \u00a325,218.52, with six products generating orders ranging from 31 to 105 distinct invoices.",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W47. Entity type: product. The table has 6 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| PAPER CHAIN KIT 50'S CHRISTMAS | 5701.16 | 9485.15 | 5735.62 | 1692 | 2161 | 96 | 100 | -39.9 | -0.6 | 22.6 | 1 |\n| RABBIT NIGHT LIGHT | 5084.81 | 10687.69 | 0.00 | 2331 | 4279 | 105 | 123 | -52.4 |  | 20.2 | 2 |\n| CHILLI LIGHTS | 4960.25 | 2307.01 | 1506.40 | 959 | 389 | 31 | 27 | 115.0 | 229.3 | 19.7 | 3 |\n| REGENCY CAKESTAND 3 TIER | 3543.60 | 3020.07 | 6552.99 | 261 | 235 | 50 | 47 | 17.3 | -45.9 | 14.1 | 4 |\n| PAPER CHAIN KIT VINTAGE CHRISTMAS | 3034.33 | 4510.32 | 2500.80 | 1043 | 1216 | 71 | 75 | -32.7 | 21.3 | 12.0 | 5 |\n| ROTATING SILVER ANGELS T-LIGHT HLDR | 2894.37 | 2617.39 | 2028.90 | 1170 | 735 | 37 | 42 | 10.6 | 42.7 | 11.5 | 6 |\n\nWrite the insight note now.\n",
+    "text": "- PAPER CHAIN KIT 50'S CHRISTMAS generated \u00a35,701.16 in TW revenue, the highest among all products, but declined 39.9% WoW from \u00a39,485.15 in LW.\n- RABBIT NIGHT LIGHT fell 52.4% WoW to \u00a35,084.81 in TW revenue, dropping from \u00a310,687.69 in LW, representing the steepest decline in the portfolio.\n- CHILLI LIGHTS surged 115.0% WoW to \u00a34,960.25 in TW revenue from \u00a32,307.01 in LW, and grew 229.3% YoY compared to \u00a31,506.40 in LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS sold 1,692 units in TW, down from 2,161 units in LW, while maintaining a 22.6% share of total TW revenue.\n- REGENCY CAKESTAND 3 TIER generated \u00a33,543.60 in TW revenue with a 17.3% WoW increase, but declined 45.9% YoY from \u00a36,552.99 in LY.\n- ROTATING SILVER ANGELS T-LIGHT HLDR achieved 42.7% YoY growth to \u00a32,894.37 in TW revenue from \u00a32,028.90 in LY, with 1,170 units sold.\n- RABBIT NIGHT LIGHT accounted for 20.2% of TW revenue at \u00a35,084.81 despite a 52.4% WoW decline and 2,331 units sold across 105 orders.\n- Total portfolio revenue in TW reached \u00a325,218.52, with six products generating orders ranging from 31 to 105 distinct invoices.",
+    "input_tokens": 947,
+    "output_tokens": 431,
+    "cost_usd": 0.0031019999999999997,
+    "latency_s": 4.601,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 30,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- PAPER CHAIN KIT 50'S CHRISTMAS generated \u00a35,701.16 in TW revenue, the highest among all products, but declined 39.9% WoW from \u00a39,485.15 in LW.\n- RABBIT NIGHT LIGHT fell 52.4% WoW to \u00a35,084.81 in TW revenue, dropping from \u00a310,687.69 in LW, representing the steepest decline in the portfolio.\n- CHILLI LIGHTS surged 115.0% WoW to \u00a34,960.25 in TW revenue from \u00a32,307.01 in LW, and grew 229.3% YoY compared to \u00a31,506.40 in LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS sold 1,692 units in TW, down from 2,161 units in LW, while maintaining a 22.6% share of total TW revenue.\n- REGENCY CAKESTAND 3 TIER generated \u00a33,543.60 in TW revenue with a 17.3% WoW increase, but declined 45.9% YoY from \u00a36,552.99 in LY.\n- ROTATING SILVER ANGELS T-LIGHT HLDR achieved 42.7% YoY growth to \u00a32,894.37 in TW revenue from \u00a32,028.90 in LY, with 1,170 units sold.\n- RABBIT NIGHT LIGHT accounted for 20.2% of TW revenue at \u00a35,084.81 despite a 52.4% WoW decline and 2,331 units sold across 105 orders.\n- Total portfolio revenue in TW reached \u00a325,218.52, with six products generating orders ranging from 31 to 105 distinct invoices."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 947,
+  "tokens_out": 431,
+  "cost_usd": 0.0031019999999999997,
+  "latency_s": 4.601
+ }
+}

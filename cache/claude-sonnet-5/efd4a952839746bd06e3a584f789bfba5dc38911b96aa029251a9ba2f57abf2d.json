@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £27.7k versus LW £30.3k, a WoW change of -8.4%, and versus LY £14.7k, a YoY change of 89.1%.\n- TOTAL units TW reached 9,955 compared to LW 6,349, up 56.8% WoW.\n- TOTAL orders TW were 367 versus LW 443, down 17.2% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 with TW revenue of £5.9k and a 21.4% share.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with TW revenue of £4.3k, a 15.3% share, but fell 49.4% YoY, the largest YoY decliner.\n- CHILLI LIGHTS ranked 3 with TW revenue of £2.5k and a 9.0% share.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN was the top WoW gainer at 8063.4%, while PAPER CHAIN KIT 50'S CHRISTMAS was the top WoW decliner at -46.9%.\n- ROTATING SILVER ANGELS T-LIGHT HLDR was the top YoY gainer at 1030.5%, and BLACK RECORD COVER FRAME had the lowest TW revenue among entities at £1,961.40.",
+ "input_tokens": 2338,
+ "output_tokens": 461,
+ "cost_usd": 0.009285999999999999,
+ "latency_s": 4.433,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

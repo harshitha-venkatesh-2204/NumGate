@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £32.7k vs LW £17.5k, WoW +86.6%.\n- TOTAL units sold TW 17,439 vs LW 6,123.\n- TOTAL orders TW 485 vs LW 437.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 1 with TW revenue £2.96k, 9.1% share.\n- RETRO SPOT TEA SET CERAMIC 11 PC ranks 2 with TW revenue £2.07k, 6.3% share.\n- FAWN BLUE HOT WATER BOTTLE ranks 3 with TW revenue £1.9k, 5.8% share.\n- GLITTER HANGING BUTTERFLY STRING WoW change +4752.8%.\n- FLAG OF ST GEORGE CAR FLAG WoW change +3253.7%, VINTAGE HEADS AND TAILS CARD GAME WoW change +2744.0%.",
+ "input_tokens": 1893,
+ "output_tokens": 358,
+ "cost_usd": 0.007365999999999999,
+ "latency_s": 3.845,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

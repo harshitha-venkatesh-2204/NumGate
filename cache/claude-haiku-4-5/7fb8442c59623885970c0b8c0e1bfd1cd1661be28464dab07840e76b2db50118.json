@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £2.7k revenue TW, the highest performing product by sales value across the portfolio.\n- PAPER CHAIN KIT 50'S CHRISTMAS achieved £2.3k revenue TW and led order volume with 53 orders, indicating strong customer demand.\n- PINK BLUE FELT CRAFT TRINKET BOX sold 1,515 units TW, the highest unit volume of any product this week.\n- PAPER LANTERN 9 POINT DELUXE STAR showed exceptional growth with revenue up 1,841% WoW, the strongest week-over-week performance.\n- WHITE HANGING HEART T-LIGHT HOLDER demonstrated dual strength with £1.9k revenue TW and 275.8% revenue growth WoW.\n- FELTCRAFT DOLL MOLLY surged 934.6% YoY in revenue while maintaining 888 units sold TW, indicating significant year-on-year expansion.\n- FELTCRAFT BUTTERFLY HEARTS grew 573.2% YoY with 1,072 units sold TW, showing strong momentum in the felt craft category.\n- RED WOOLLY HOTTIE WHITE HEART achieved 388.8% revenue growth WoW, demonstrating rapid acceleration in customer purchases this week.",
+ "input_tokens": 1963,
+ "output_tokens": 303,
+ "cost_usd": 0.003478,
+ "latency_s": 4.241,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

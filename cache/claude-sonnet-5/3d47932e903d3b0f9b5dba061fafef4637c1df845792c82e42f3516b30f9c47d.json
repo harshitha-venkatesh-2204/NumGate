@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £32.7k vs LW £17.5k, WoW change of 86.6%.\n- TOTAL units TW 17,439 vs LW 6,123 for ISO week 2010-W19.\n- TOTAL orders TW 485 vs LW 437 for the same period.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 1 with TW revenue £2,963.43, a 9.1% share of TOTAL revenue.\n- RETRO SPOT TEA SET CERAMIC 11 PC ranks 2 with TW revenue £2,071.74, a 6.3% share of TOTAL revenue.\n- FAWN BLUE HOT WATER BOTTLE ranks 3 with TW revenue £1,903.35, a 5.8% share of TOTAL revenue.\n- GLITTER HANGING BUTTERFLY STRING posted the largest WoW revenue increase at 4752.8%.\n- FLAG OF ST GEORGE CAR FLAG and VINTAGE HEADS AND TAILS CARD GAME saw WoW revenue increases of 3253.7% and 2744.0% respectively.",
+ "input_tokens": 1998,
+ "output_tokens": 412,
+ "cost_usd": 0.008116000000000002,
+ "latency_s": 3.935,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

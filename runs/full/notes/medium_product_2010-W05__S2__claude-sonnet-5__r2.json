@@ -1,0 +1,218 @@
+{
+ "note_id": "medium_product_2010-W05__S2__claude-sonnet-5__r2",
+ "table_id": "medium_product_2010-W05",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W05",
+ "n_rows": 26,
+ "strategy": "S2",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- TOTAL revenue TW was \u00a323.39k versus LW \u00a314.69k, a WoW increase of 59.2%.\n- TOTAL units sold rose to 8,300 TW from 4,732 LW, while TOTAL orders were nearly flat at 425 TW versus 427 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked #1 product TW with revenue of \u00a32,009.77 and an 8.6% share of TOTAL revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue fell 46.3% WoW despite holding the top rank TW.\n- COOK WITH WINE METAL SIGN generated \u00a31,506.02 TW, a 6.4% share, and surged 3118.0% WoW.\n- DOOR MAT RED SPOT posted \u00a31,497.76 TW revenue with a 6.4% share, while DOOR MAT BLACK FLOCK reached \u00a31,321.48 TW.\n- PLEASE ONE PERSON METAL SIGN and YOU'RE CONFUSING ME METAL SIGN both saw large WoW gains of 2101.3% and 1670.7% respectively.\n- DOOR MAT UNION FLAG and RED HANGING HEART T-LIGHT HOLDER declined WoW by 51.3% and 47.6% respectively.",
+ "trace": {
+  "strategy": "S2",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "code_0",
+    "system": "You are a data analyst who writes short, correct pandas code.\n\nWrite one Python script that:\n- reads the CSV file whose path is given in sys.argv[1] with pandas,\n- computes up to 25 facts that would be most useful for a weekly executive insight note (largest entities, biggest week over week and year over year movers, shares, totals),\n- prints one JSON array to stdout and nothing else.\n\nEach element of the array is an object with these keys:\n- \"entity\": the Entity value, or \"TOTAL\" for all rows combined.\n- \"metric\": one of revenue, units, orders, share, rank.\n- \"period\": one of TW, LW, LY, WoW, YoY. Use WoW or YoY for changes between periods.\n- \"value\": a plain number (not a string). Round money to 2 decimals and percentages to 1 decimal.\n- \"formula\": a short description of how the value was computed, for example \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\".\n\nUse only pandas, numpy, json and sys. Blank cells are NaN: skip them instead of crashing. Convert numpy numbers to Python floats before json.dumps.\nReturn only the code, inside one ```python block.\n",
+    "user": "The script will be run as: python facts.py table.csv\n\nThe CSV holds a weekly sales report for ISO week 2010-W05. Entity type: product. It has 26 rows and these columns (with pandas dtypes):\n- Entity: str\n- Revenue_TW: float64\n- Revenue_LW: float64\n- Revenue_LY: float64\n- Units_TW: int64\n- Units_LW: int64\n- Orders_TW: int64\n- Orders_LW: int64\n- WoW_Pct: float64\n- YoY_Pct: float64\n- Share_Pct: float64\n- Rank: int64\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\nFirst rows of the file:\nEntity,Revenue_TW,Revenue_LW,Revenue_LY,Units_TW,Units_LW,Orders_TW,Orders_LW,WoW_Pct,YoY_Pct,Share_Pct,Rank\nWHITE HANGING HEART T-LIGHT HOLDER,2009.77,3740.98,,727,1382,58,79,-46.3,,8.6,1\nCOOK WITH WINE METAL SIGN,1506.02,46.8,,874,24,20,4,3118.0,,6.4,2\nDOOR MAT RED SPOT,1497.76,0.0,,310,0,12,0,,,6.4,3\n\n",
+    "text": "```python\nimport sys\nimport json\nimport pandas as pd\nimport numpy as np\n\ndef to_float(x, nd=2):\n    return round(float(x), nd)\n\ndef main():\n    path = sys.argv[1]\n    df = pd.read_csv(path)\n\n    facts = []\n\n    # ---------- TOTAL level aggregates ----------\n    rev_tw_sum = df['Revenue_TW'].sum(skipna=True)\n    rev_lw_sum = df['Revenue_LW'].sum(skipna=True)\n    rev_ly_sum = df['Revenue_LY'].sum(skipna=True) if df['Revenue_LY'].notna().any() else np.nan\n    units_tw_sum = df['Units_TW'].sum(skipna=True)\n    units_lw_sum = df['Units_LW'].sum(skipna=True)\n    orders_tw_sum = df['Orders_TW'].sum(skipna=True)\n    orders_lw_sum = df['Orders_LW'].sum(skipna=True)\n\n    facts.append({\n        \"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"TW\",\n        \"value\": to_float(rev_tw_sum),\n        \"formula\": \"sum(Revenue_TW)\"\n    })\n    facts.append({\n        \"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"LW\",\n        \"value\": to_float(rev_lw_sum),\n        \"formula\": \"sum(Revenue_LW)\"\n    })\n    if not np.isnan(rev_ly_sum):\n        facts.append({\n            \"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"LY\",\n            \"value\": to_float(rev_ly_sum),\n            \"formula\": \"sum(Revenue_LY)\"\n        })\n\n    facts.append({\n        \"entity\": \"TOTAL\", \"metric\": \"units\", \"period\": \"TW\",\n        \"value\": to_float(units_tw_sum, 0),\n        \"formula\": \"sum(Units_TW)\"\n    })\n    facts.append({\n        \"entity\": \"TOTAL\", \"metric\": \"units\", \"period\": \"LW\",\n        \"value\": to_float(units_lw_sum, 0),\n        \"formula\": \"sum(Units_LW)\"\n    })\n    facts.append({\n        \"entity\": \"TOTAL\", \"metric\": \"orders\", \"period\": \"TW\",\n        \"value\": to_float(orders_tw_sum, 0),\n        \"formula\": \"sum(Orders_TW)\"\n    })\n    facts.append({\n        \"entity\": \"TOTAL\", \"metric\": \"orders\", \"period\": \"LW\",\n        \"value\": to_float(orders_lw_sum, 0),\n        \"formula\": \"sum(Orders_LW)\"\n    })\n\n    if rev_lw_sum and not np.isnan(rev_lw_sum) and rev_lw_sum != 0:\n        total_wow = (rev_tw_sum - rev_lw_sum) / rev_lw_sum * 100\n        facts.append({\n            \"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"WoW\",\n            \"value\": to_float(total_wow, 1),\n            \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\"\n        })\n\n    if not np.isnan(rev_ly_sum) and rev_ly_sum != 0:\n        total_yoy = (rev_tw_sum - rev_ly_sum) / rev_ly_sum * 100\n        facts.append({\n            \"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"YoY\",\n            \"value\": to_float(total_yoy, 1),\n            \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\"\n        })\n\n    # ---------- Top entities by revenue TW (rank) ----------\n    top_rev = df.dropna(subset=['Revenue_TW']).sort_values('Revenue_TW', ascending=False).head(5)\n    for _, row in top_rev.iterrows():\n        facts.append({\n            \"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"TW\",\n            \"value\": to_float(row['Revenue_TW']),\n            \"formula\": \"Revenue_TW\"\n        })\n\n    # ---------- Top Share leaders ----------\n    top_share = df.dropna(subset=['Share_Pct']).sort_values('Share_Pct', ascending=False).head(3)\n    for _, row in top_share.iterrows():\n        facts.append({\n            \"entity\": row['Entity'], \"metric\": \"share\", \"period\": \"TW\",\n            \"value\": to_float(row['Share_Pct'], 1),\n            \"formula\": \"Share_Pct\"\n        })\n\n    # ---------- Top WoW gainers / decliners ----------\n    wow_valid = df.dropna(subset=['WoW_Pct'])\n    top_wow_gain = wow_valid.sort_values('WoW_Pct', ascending=False).head(3)\n    for _, row in top_wow_gain.iterrows():\n        facts.append({\n            \"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"WoW\",\n            \"value\": to_float(row['WoW_Pct'], 1),\n            \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n        })\n\n    top_wow_decline = wow_valid.sort_values('WoW_Pct', ascending=True).head(3)\n    for _, row in top_wow_decline.iterrows():\n        facts.append({\n            \"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"WoW\",\n            \"value\": to_float(row['WoW_Pct'], 1),\n            \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n        })\n\n    # ---------- Top YoY gainers / decliners ----------\n    yoy_valid = df.dropna(subset=['YoY_Pct'])\n    if not yoy_valid.empty:\n        top_yoy_gain = yoy_valid.sort_values('YoY_Pct', ascending=False).head(3)\n        for _, row in top_yoy_gain.iterrows():\n            facts.append({\n                \"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"YoY\",\n                \"value\": to_float(row['YoY_Pct'], 1),\n                \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n            })\n\n        top_yoy_decline = yoy_valid.sort_values('YoY_Pct', ascending=True).head(3)\n        for _, row in top_yoy_decline.iterrows():\n            facts.append({\n                \"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"YoY\",\n                \"value\": to_float(row['YoY_Pct'], 1),\n                \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n            })\n\n    # ---------- Rank 1 entity ----------\n    rank1 = df.dropna(subset=['Rank']).sort_values('Rank').head(1)\n    for _, row in rank1.iterrows():\n        facts.append({\n            \"entity\": row['Entity'], \"metric\": \"rank\", \"period\": \"TW\",\n            \"value\": to_float(row['Rank'], 0),\n            \"formula\": \"Rank\"\n        })\n\n    # Trim to max 25 facts\n    facts = facts[:25]\n\n    # Ensure all values are plain python floats/ints\n    for f in facts:\n        if isinstance(f['value'], (np.floating, np.integer)):\n            f['value'] = float(f['value'])\n        else:\n            f['value'] = float(f['value'])\n\n    print(json.dumps(facts))\n\nif __name__ == \"__main__\":\n    main()\n```",
+    "input_tokens": 1077,
+    "output_tokens": 3748,
+    "cost_usd": 0.039634,
+    "latency_s": 28.358,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   },
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a list of facts that were already computed from the sales table. Use only these facts. Every number in the note must come from a fact value, copied exactly or rounded (for example \u00a312,345.67 may be written as \u00a312.3k). Do not compute new numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W05. Entity type: product.\n\nFacts (JSON):\n[\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 23394.39,\n  \"formula\": \"sum(Revenue_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LW\",\n  \"value\": 14694.01,\n  \"formula\": \"sum(Revenue_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 8300.0,\n  \"formula\": \"sum(Units_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"LW\",\n  \"value\": 4732.0,\n  \"formula\": \"sum(Units_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 425.0,\n  \"formula\": \"sum(Orders_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"LW\",\n  \"value\": 427.0,\n  \"formula\": \"sum(Orders_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 59.2,\n  \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 2009.77,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"COOK WITH WINE METAL SIGN\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1506.02,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"DOOR MAT RED SPOT\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1497.76,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"DOOR MAT BLACK FLOCK\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1321.48,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"RETRO SPOT CAKE STAND\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1092.98,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 8.6,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"COOK WITH WINE METAL SIGN\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 6.4,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"DOOR MAT RED SPOT\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 6.4,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"COOK WITH WINE METAL SIGN\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 3118.0,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"PLEASE ONE PERSON METAL SIGN\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 2101.3,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"YOU'RE CONFUSING ME METAL SIGN\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 1670.7,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"DOOR MAT UNION FLAG\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -51.3,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"RED HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -47.6,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -46.3,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 1.0,\n  \"formula\": \"Rank\"\n }\n]\n\nWrite the insight note now.\n",
+    "text": "- TOTAL revenue TW was \u00a323.39k versus LW \u00a314.69k, a WoW increase of 59.2%.\n- TOTAL units sold rose to 8,300 TW from 4,732 LW, while TOTAL orders were nearly flat at 425 TW versus 427 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked #1 product TW with revenue of \u00a32,009.77 and an 8.6% share of TOTAL revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue fell 46.3% WoW despite holding the top rank TW.\n- COOK WITH WINE METAL SIGN generated \u00a31,506.02 TW, a 6.4% share, and surged 3118.0% WoW.\n- DOOR MAT RED SPOT posted \u00a31,497.76 TW revenue with a 6.4% share, while DOOR MAT BLACK FLOCK reached \u00a31,321.48 TW.\n- PLEASE ONE PERSON METAL SIGN and YOU'RE CONFUSING ME METAL SIGN both saw large WoW gains of 2101.3% and 1670.7% respectively.\n- DOOR MAT UNION FLAG and RED HANGING HEART T-LIGHT HOLDER declined WoW by 51.3% and 47.6% respectively.",
+    "input_tokens": 2157,
+    "output_tokens": 479,
+    "cost_usd": 0.009104000000000001,
+    "latency_s": 5.107,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [
+   {
+    "attempt": 0,
+    "code": "import sys\nimport json\nimport pandas as pd\nimport numpy as np\n\ndef to_float(x, nd=2):\n    return round(float(x), nd)\n\ndef main():\n    path = sys.argv[1]\n    df = pd.read_csv(path)\n\n    facts = []\n\n    # ---------- TOTAL level aggregates ----------\n    rev_tw_sum = df['Revenue_TW'].sum(skipna=True)\n    rev_lw_sum = df['Revenue_LW'].sum(skipna=True)\n    rev_ly_sum = df['Revenue_LY'].sum(skipna=True) if df['Revenue_LY'].notna().any() else np.nan\n    units_tw_sum = df['Units_TW'].sum(skipna=True)\n    units_lw_sum = df['Units_LW'].sum(skipna=True)\n    orders_tw_sum = df['Orders_TW'].sum(skipna=True)\n    orders_lw_sum = df['Orders_LW'].sum(skipna=True)\n\n    facts.append({\n        \"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"TW\",\n        \"value\": to_float(rev_tw_sum),\n        \"formula\": \"sum(Revenue_TW)\"\n    })\n    facts.append({\n        \"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"LW\",\n        \"value\": to_float(rev_lw_sum),\n        \"formula\": \"sum(Revenue_LW)\"\n    })\n    if not np.isnan(rev_ly_sum):\n        facts.append({\n            \"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"LY\",\n            \"value\": to_float(rev_ly_sum),\n            \"formula\": \"sum(Revenue_LY)\"\n        })\n\n    facts.append({\n        \"entity\": \"TOTAL\", \"metric\": \"units\", \"period\": \"TW\",\n        \"value\": to_float(units_tw_sum, 0),\n        \"formula\": \"sum(Units_TW)\"\n    })\n    facts.append({\n        \"entity\": \"TOTAL\", \"metric\": \"units\", \"period\": \"LW\",\n        \"value\": to_float(units_lw_sum, 0),\n        \"formula\": \"sum(Units_LW)\"\n    })\n    facts.append({\n        \"entity\": \"TOTAL\", \"metric\": \"orders\", \"period\": \"TW\",\n        \"value\": to_float(orders_tw_sum, 0),\n        \"formula\": \"sum(Orders_TW)\"\n    })\n    facts.append({\n        \"entity\": \"TOTAL\", \"metric\": \"orders\", \"period\": \"LW\",\n        \"value\": to_float(orders_lw_sum, 0),\n        \"formula\": \"sum(Orders_LW)\"\n    })\n\n    if rev_lw_sum and not np.isnan(rev_lw_sum) and rev_lw_sum != 0:\n        total_wow = (rev_tw_sum - rev_lw_sum) / rev_lw_sum * 100\n        facts.append({\n            \"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"WoW\",\n            \"value\": to_float(total_wow, 1),\n            \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\"\n        })\n\n    if not np.isnan(rev_ly_sum) and rev_ly_sum != 0:\n        total_yoy = (rev_tw_sum - rev_ly_sum) / rev_ly_sum * 100\n        facts.append({\n            \"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"YoY\",\n            \"value\": to_float(total_yoy, 1),\n            \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\"\n        })\n\n    # ---------- Top entities by revenue TW (rank) ----------\n    top_rev = df.dropna(subset=['Revenue_TW']).sort_values('Revenue_TW', ascending=False).head(5)\n    for _, row in top_rev.iterrows():\n        facts.append({\n            \"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"TW\",\n            \"value\": to_float(row['Revenue_TW']),\n            \"formula\": \"Revenue_TW\"\n        })\n\n    # ---------- Top Share leaders ----------\n    top_share = df.dropna(subset=['Share_Pct']).sort_values('Share_Pct', ascending=False).head(3)\n    for _, row in top_share.iterrows():\n        facts.append({\n            \"entity\": row['Entity'], \"metric\": \"share\", \"period\": \"TW\",\n            \"value\": to_float(row['Share_Pct'], 1),\n            \"formula\": \"Share_Pct\"\n        })\n\n    # ---------- Top WoW gainers / decliners ----------\n    wow_valid = df.dropna(subset=['WoW_Pct'])\n    top_wow_gain = wow_valid.sort_values('WoW_Pct', ascending=False).head(3)\n    for _, row in top_wow_gain.iterrows():\n        facts.append({\n            \"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"WoW\",\n            \"value\": to_float(row['WoW_Pct'], 1),\n            \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n        })\n\n    top_wow_decline = wow_valid.sort_values('WoW_Pct', ascending=True).head(3)\n    for _, row in top_wow_decline.iterrows():\n        facts.append({\n            \"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"WoW\",\n            \"value\": to_float(row['WoW_Pct'], 1),\n            \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n        })\n\n    # ---------- Top YoY gainers / decliners ----------\n    yoy_valid = df.dropna(subset=['YoY_Pct'])\n    if not yoy_valid.empty:\n        top_yoy_gain = yoy_valid.sort_values('YoY_Pct', ascending=False).head(3)\n        for _, row in top_yoy_gain.iterrows():\n            facts.append({\n                \"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"YoY\",\n                \"value\": to_float(row['YoY_Pct'], 1),\n                \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n            })\n\n        top_yoy_decline = yoy_valid.sort_values('YoY_Pct', ascending=True).head(3)\n        for _, row in top_yoy_decline.iterrows():\n            facts.append({\n                \"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"YoY\",\n                \"value\": to_float(row['YoY_Pct'], 1),\n                \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n            })\n\n    # ---------- Rank 1 entity ----------\n    rank1 = df.dropna(subset=['Rank']).sort_values('Rank').head(1)\n    for _, row in rank1.iterrows():\n        facts.append({\n            \"entity\": row['Entity'], \"metric\": \"rank\", \"period\": \"TW\",\n            \"value\": to_float(row['Rank'], 0),\n            \"formula\": \"Rank\"\n        })\n\n    # Trim to max 25 facts\n    facts = facts[:25]\n\n    # Ensure all values are plain python floats/ints\n    for f in facts:\n        if isinstance(f['value'], (np.floating, np.integer)):\n            f['value'] = float(f['value'])\n        else:\n            f['value'] = float(f['value'])\n\n    print(json.dumps(facts))\n\nif __name__ == \"__main__\":\n    main()\n",
+    "error": "",
+    "stdout": "entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 2009.77, \"formula\": \"Revenue_TW\"}, {\"entity\": \"COOK WITH WINE METAL SIGN\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 1506.02, \"formula\": \"Revenue_TW\"}, {\"entity\": \"DOOR MAT RED SPOT\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 1497.76, \"formula\": \"Revenue_TW\"}, {\"entity\": \"DOOR MAT BLACK FLOCK\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 1321.48, \"formula\": \"Revenue_TW\"}, {\"entity\": \"RETRO SPOT CAKE STAND\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 1092.98, \"formula\": \"Revenue_TW\"}, {\"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 8.6, \"formula\": \"Share_Pct\"}, {\"entity\": \"COOK WITH WINE METAL SIGN\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 6.4, \"formula\": \"Share_Pct\"}, {\"entity\": \"DOOR MAT RED SPOT\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 6.4, \"formula\": \"Share_Pct\"}, {\"entity\": \"COOK WITH WINE METAL SIGN\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 3118.0, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"PLEASE ONE PERSON METAL SIGN\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 2101.3, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"YOU'RE CONFUSING ME METAL SIGN\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 1670.7, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"DOOR MAT UNION FLAG\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -51.3, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"RED HANGING HEART T-LIGHT HOLDER\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -47.6, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -46.3, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 1.0, \"formula\": \"Rank\"}]\n"
+   }
+  ],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "facts": [
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 23394.39,
+    "formula": "sum(Revenue_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LW",
+    "value": 14694.01,
+    "formula": "sum(Revenue_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "TW",
+    "value": 8300.0,
+    "formula": "sum(Units_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "LW",
+    "value": 4732.0,
+    "formula": "sum(Units_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "TW",
+    "value": 425.0,
+    "formula": "sum(Orders_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "LW",
+    "value": 427.0,
+    "formula": "sum(Orders_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 59.2,
+    "formula": "(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 2009.77,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "COOK WITH WINE METAL SIGN",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1506.02,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "DOOR MAT RED SPOT",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1497.76,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "DOOR MAT BLACK FLOCK",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1321.48,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "RETRO SPOT CAKE STAND",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1092.98,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "share",
+    "period": "TW",
+    "value": 8.6,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "COOK WITH WINE METAL SIGN",
+    "metric": "share",
+    "period": "TW",
+    "value": 6.4,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "DOOR MAT RED SPOT",
+    "metric": "share",
+    "period": "TW",
+    "value": 6.4,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "COOK WITH WINE METAL SIGN",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 3118.0,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "PLEASE ONE PERSON METAL SIGN",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 2101.3,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "YOU'RE CONFUSING ME METAL SIGN",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 1670.7,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "DOOR MAT UNION FLAG",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -51.3,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "RED HANGING HEART T-LIGHT HOLDER",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -47.6,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -46.3,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "rank",
+    "period": "TW",
+    "value": 1.0,
+    "formula": "Rank"
+   }
+  ],
+  "n_calls": 2,
+  "tokens_in": 3234,
+  "tokens_out": 4227,
+  "cost_usd": 0.048738000000000004,
+  "latency_s": 33.465
+ }
+}

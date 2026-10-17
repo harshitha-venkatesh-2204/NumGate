@@ -1,0 +1,49 @@
+{
+ "note_id": "small_product_2010-W24__S3__claude-opus-5__r2",
+ "table_id": "small_product_2010-W24",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W24",
+ "n_rows": 8,
+ "strategy": "S3",
+ "model": "claude-opus-5",
+ "repeat": 2,
+ "note": "- REGENCY CAKESTAND 3 TIER led TW at \u00a35,198.05 on 449 units, down 5.8% WoW from \u00a35,517.46 LW, and held a 37.8% share of the 8 rows shown; no LY figure is available, so YoY is not calculated.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 at \u00a31,625.34 TW versus \u00a34,245.80 LW, a WoW drop of 61.7%, with units falling from 1,596 LW to 586 TW.\n- DOOR MAT RED SPOT posted the largest WoW gain at +119.5%, rising from \u00a3436.26 LW to \u00a3957.50 TW, with orders up from 18 LW to 25 TW.\n- DOOR MAT FANCY FONT HOME SWEET HOME grew 79.6% WoW to \u00a31,064.30 TW from \u00a3592.57 LW, with units up from 85 LW to 164 TW.\n- SET/5 RED SPOTTY LID GLASS BOWLS rose 60.7% WoW to \u00a31,194.65 TW from \u00a3743.50 LW on 447 units TW versus 266 units LW.\n- VINTAGE UNION JACK BUNTING fell 25.9% WoW to \u00a31,261.17 TW and JUMBO BAG RED RETROSPOT fell 27.6% WoW to \u00a31,259.80 TW, separating ranks 3 and 4 by \u00a31.37.\n- EDWARDIAN PARASOL NATURAL was close to flat at \u00a31,187.47 TW versus \u00a31,165.81 LW, +1.9% WoW, on 14 orders in both TW and LW.\n- Combined TW revenue across the 8 products was \u00a313,748.28 versus \u00a316,144.80 LW, a WoW decline of 14.8%; LY revenue is blank for all 8 rows, so no YoY comparison is shown.",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W24. Entity type: product. The table has 8 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 5198.05 | 5517.46 |  | 449 | 458 | 52 | 74 | -5.8 |  | 37.8 | 1 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 1625.34 | 4245.80 |  | 586 | 1596 | 44 | 76 | -61.7 |  | 11.8 | 2 |\n| VINTAGE UNION JACK BUNTING | 1261.17 | 1703.11 |  | 145 | 194 | 38 | 37 | -25.9 |  | 9.2 | 3 |\n| JUMBO BAG RED RETROSPOT | 1259.80 | 1740.29 |  | 696 | 947 | 41 | 48 | -27.6 |  | 9.2 | 4 |\n| SET/5 RED SPOTTY LID GLASS BOWLS | 1194.65 | 743.50 |  | 447 | 266 | 24 | 30 | 60.7 |  | 8.7 | 5 |\n| EDWARDIAN PARASOL NATURAL | 1187.47 | 1165.81 |  | 223 | 207 | 14 | 14 | 1.9 |  | 8.6 | 6 |\n| DOOR MAT FANCY FONT HOME SWEET HOME | 1064.30 | 592.57 |  | 164 | 85 | 12 | 14 | 79.6 |  | 7.7 | 7 |\n| DOOR MAT RED SPOT | 957.50 | 436.26 |  | 140 | 62 | 25 | 18 | 119.5 |  | 7.0 | 8 |\n\nWrite the insight note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER led TW at \u00a35,198.05 on 449 units, down 5.8% WoW from \u00a35,517.46 LW, and held a 37.8% share of the 8 rows shown; no LY figure is available, so YoY is not calculated.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 at \u00a31,625.34 TW versus \u00a34,245.80 LW, a WoW drop of 61.7%, with units falling from 1,596 LW to 586 TW.\n- DOOR MAT RED SPOT posted the largest WoW gain at +119.5%, rising from \u00a3436.26 LW to \u00a3957.50 TW, with orders up from 18 LW to 25 TW.\n- DOOR MAT FANCY FONT HOME SWEET HOME grew 79.6% WoW to \u00a31,064.30 TW from \u00a3592.57 LW, with units up from 85 LW to 164 TW.\n- SET/5 RED SPOTTY LID GLASS BOWLS rose 60.7% WoW to \u00a31,194.65 TW from \u00a3743.50 LW on 447 units TW versus 266 units LW.\n- VINTAGE UNION JACK BUNTING fell 25.9% WoW to \u00a31,261.17 TW and JUMBO BAG RED RETROSPOT fell 27.6% WoW to \u00a31,259.80 TW, separating ranks 3 and 4 by \u00a31.37.\n- EDWARDIAN PARASOL NATURAL was close to flat at \u00a31,187.47 TW versus \u00a31,165.81 LW, +1.9% WoW, on 14 orders in both TW and LW.\n- Combined TW revenue across the 8 products was \u00a313,748.28 versus \u00a316,144.80 LW, a WoW decline of 14.8%; LY revenue is blank for all 8 rows, so no YoY comparison is shown.",
+    "input_tokens": 1239,
+    "output_tokens": 1024,
+    "cost_usd": 0.031795000000000004,
+    "latency_s": 11.619,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 40,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- REGENCY CAKESTAND 3 TIER led TW at \u00a35,198.05 on 449 units, down 5.8% WoW from \u00a35,517.46 LW, and held a 37.8% share of the 8 rows shown; no LY figure is available, so YoY is not calculated.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 at \u00a31,625.34 TW versus \u00a34,245.80 LW, a WoW drop of 61.7%, with units falling from 1,596 LW to 586 TW.\n- DOOR MAT RED SPOT posted the largest WoW gain at +119.5%, rising from \u00a3436.26 LW to \u00a3957.50 TW, with orders up from 18 LW to 25 TW.\n- DOOR MAT FANCY FONT HOME SWEET HOME grew 79.6% WoW to \u00a31,064.30 TW from \u00a3592.57 LW, with units up from 85 LW to 164 TW.\n- SET/5 RED SPOTTY LID GLASS BOWLS rose 60.7% WoW to \u00a31,194.65 TW from \u00a3743.50 LW on 447 units TW versus 266 units LW.\n- VINTAGE UNION JACK BUNTING fell 25.9% WoW to \u00a31,261.17 TW and JUMBO BAG RED RETROSPOT fell 27.6% WoW to \u00a31,259.80 TW, separating ranks 3 and 4 by \u00a31.37.\n- EDWARDIAN PARASOL NATURAL was close to flat at \u00a31,187.47 TW versus \u00a31,165.81 LW, +1.9% WoW, on 14 orders in both TW and LW.\n- Combined TW revenue across the 8 products was \u00a313,748.28 versus \u00a316,144.80 LW, a WoW decline of 14.8%; LY revenue is blank for all 8 rows, so no YoY comparison is shown."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1239,
+  "tokens_out": 1024,
+  "cost_usd": 0.031795000000000004,
+  "latency_s": 11.619
+ }
+}

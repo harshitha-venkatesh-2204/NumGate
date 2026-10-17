@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £65,307.27 TW versus £36,216.42 LW, a WoW change of +80.3%, and +177.6% YoY.\n- PLEASE ONE PERSON METAL SIGN ranked 1 with £2,773.43 TW revenue, a 4.2% share TW, and a WoW change of +3286.4%.\n- PARTY BUNTING ranked 2 with £1,825.40 TW revenue and a 2.8% share TW, up +29.5% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 3 with £1,825.17 TW revenue and a 2.8% share TW, down -8.3% WoW.\n- BEWARE OF THE CAT METAL SIGN posted the largest WoW increase, rising from £15.77 LW to £620.84 TW, a change of +3836.8%.\n- WOOD BLACK BOARD ANT WHITE FINISH posted the largest WoW decrease, falling from £2,057.46 LW to £489.41 TW, a change of -76.2%.\n- PARTY BUNTING showed the largest YoY increase, from £31.72 LY to the current TW level, a change of +5654.7%.\n- REGENCY CAKESTAND 3 TIER showed the largest YoY decrease, from £3,712.01 LY, a change of -50.8%, while JUMBO BAG VINTAGE DOILY led in orders with 46 TW versus 34 LW.",
+ "input_tokens": 842,
+ "output_tokens": 493,
+ "cost_usd": 0.006614,
+ "latency_s": 4.436,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- Total TW revenue across the 31 products was £29,424.89 against £31,085.63 LW, a WoW decline of 5.3%.\n- REGENCY CAKESTAND 3 TIER held Rank 1 at £3,712.01 TW versus £5,262.87 LW (WoW -29.5%), with units down from 449 to 297 while orders rose from 33 to 47.\n- WHITE HANGING HEART T-LIGHT HOLDER was the only top-three product to grow, at £2,481.58 TW versus £2,442.16 LW (WoW +1.6%) and an 8.4% share, while JUMBO BAG RED RETROSPOT fell to £2,315.21 TW from £3,219.09 LW (WoW -28.1%).\n- CARDHOLDER HOLLY WREATH METAL posted the largest WoW gain at £1,672.50 TW versus £15.00 LW (+11,050.0%), lifting it to Rank 4 with a 5.7% share on 446 units from 5 orders.\n- FOLK FELT HANGING MULTICOL GARLAND rose +2,400.0% WoW to £510.00 TW and MINI PAINT SET VINTAGE rose +2,005.8% WoW to £1,020.48 TW on 1,542 units versus 73 units LW.\n- HANGING JAM JAR T-LIGHT HOLDER gained +365.4% WoW to £1,202.52 TW, with units up from 348 LW to 1,460 TW across 4 orders.\n- The steepest WoW declines were VINTAGE UNION JACK BUNTING at -66.8% (£501.50 TW versus £1,509.60 LW), JUMBO BAG PINK VINTAGE PAISLEY at -65.2% (£639.96 TW), ASSORTED COLOUR BIRD ORNAMENT at -59.8% (£627.63 TW) and JUMBO BAG SCANDINAVIAN PAISLEY at -55.6% (£620.15 TW).\n- TEA TIME KITCHEN APRON recorded £531.75 TW from £0.00 LW with no WoW value, and Revenue_LY is blank for all 31 products, so no YoY comparison is available for this week.",
+ "input_tokens": 2874,
+ "output_tokens": 2019,
+ "cost_usd": 0.064845,
+ "latency_s": 21.703,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated the highest revenue TW at £3.7k, followed by WHITE HANGING HEART T-LIGHT HOLDER at £2.5k.\n- Total revenue TW was £29.4k, representing a WoW decline of 5.3% compared to LW revenue of £31.1k.\n- CARDHOLDER HOLLY WREATH METAL showed the strongest WoW growth at 11050.0%, while FOLK FELT HANGING MULTICOL GARLAND grew 2400.0% WoW.\n- MINI PAINT SET VINTAGE led unit sales TW with 1542 units, followed by HANGING JAM JAR T-LIGHT HOLDER with 1460 units.\n- Total units sold TW reached 14252.0 across all products.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the most orders TW with 52, followed by JUMBO BAG RED RETROSPOT with 48 orders.\n- Total orders TW was 676.0, indicating consistent customer engagement despite the revenue decline.\n- JUMBO BAG RED RETROSPOT achieved £2.3k revenue TW from 1313 units across 48 orders, demonstrating strong per-unit performance.",
+ "input_tokens": 1898,
+ "output_tokens": 298,
+ "cost_usd": 0.003388,
+ "latency_s": 3.596,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

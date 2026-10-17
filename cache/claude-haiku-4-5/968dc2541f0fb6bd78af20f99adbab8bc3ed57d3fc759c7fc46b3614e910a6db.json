@@ -1,0 +1,10 @@
+{
+ "text": "- JUMBO BAG RED RETROSPOT generated £2,941.59 in revenue TW, the highest performing product, with 1,518 units sold and 43 orders.\n- REGENCY CAKESTAND 3 TIER achieved £2,907.39 revenue TW, placing it as the second strongest revenue driver this week.\n- PARTY BUNTING delivered £2,730.41 revenue TW while showing 3,481.8% YoY growth, indicating significant year-on-year acceleration.\n- SMALL CHINESE STYLE SCISSOR led unit sales with 2,054 units sold TW and demonstrated exceptional 157,681% WoW revenue growth.\n- JUMBO BAG RED RETROSPOT showed 150,750.8% YoY revenue growth, reflecting substantial performance improvement compared to the same week last year.\n- SPOTTY BUNTING generated the highest order count at 44 orders TW while contributing £2,207.23 in revenue.\n- RABBIT NIGHT LIGHT achieved 36,973.4% WoW revenue growth, the second strongest week-over-week increase after SMALL CHINESE STYLE SCISSOR.\n- JUMBO BAG APPLES contributed £2,400.75 revenue TW with 1,265 units sold across multiple orders.",
+ "input_tokens": 1941,
+ "output_tokens": 305,
+ "cost_usd": 0.0034660000000000003,
+ "latency_s": 4.257,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

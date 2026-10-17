@@ -1,0 +1,42 @@
+{
+ "note_id": "medium_product_2010-W26__S4__claude-sonnet-5__r1",
+ "table_id": "medium_product_2010-W26",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W26",
+ "n_rows": 26,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a336,893.26 TW versus \u00a316,723.02 LW, a WoW change of +120.6%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with \u00a34,554.09 TW revenue, a 12.3% share TW, and a WoW change of +85.4%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with \u00a33,214.95 TW revenue, an 8.7% share TW, and a WoW change of +47.9%.\n- JUMBO BAG RED RETROSPOT ranked 3 with \u00a32,489.35 TW revenue, a 6.7% share TW, and a WoW change of +78.8%.\n- CHILDS BREAKFAST SET DOLLY GIRL posted the largest WoW increase, rising from \u00a39.95 LW to \u00a3909.33 TW, a WoW change of +9039.0%.\n- ASSORTED COLOURS SILK FAN posted the largest WoW decrease, falling from \u00a31,011.52 LW to \u00a3960.95 TW, a WoW change of -5.0%.\n- REGENCY CAKESTAND 3 TIER had the most orders among products, with 59 orders TW versus 53 orders LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W26. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a336,893.26 TW, revenue \u00a316,723.02 LW, revenue change +120.6% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a34,554.09 TW, share 12.3% TW, revenue change +85.4% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a33,214.95 TW, share 8.7% TW, revenue change +47.9% WoW\n- JUMBO BAG RED RETROSPOT: rank 3, revenue \u00a32,489.35 TW, share 6.7% TW, revenue change +78.8% WoW\n- CHILDS BREAKFAST SET DOLLY GIRL (largest WoW increase): revenue change +9039.0% WoW, revenue \u00a3909.33 TW versus \u00a39.95 LW\n- ASSORTED COLOURS SILK FAN (largest WoW decrease): revenue change -5.0% WoW, revenue \u00a3960.95 TW versus \u00a31,011.52 LW\n- REGENCY CAKESTAND 3 TIER (most orders): orders 59 TW versus 53 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a336,893.26 TW versus \u00a316,723.02 LW, a WoW change of +120.6%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with \u00a34,554.09 TW revenue, a 12.3% share TW, and a WoW change of +85.4%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with \u00a33,214.95 TW revenue, an 8.7% share TW, and a WoW change of +47.9%.\n- JUMBO BAG RED RETROSPOT ranked 3 with \u00a32,489.35 TW revenue, a 6.7% share TW, and a WoW change of +78.8%.\n- CHILDS BREAKFAST SET DOLLY GIRL posted the largest WoW increase, rising from \u00a39.95 LW to \u00a3909.33 TW, a WoW change of +9039.0%.\n- ASSORTED COLOURS SILK FAN posted the largest WoW decrease, falling from \u00a31,011.52 LW to \u00a3960.95 TW, a WoW change of -5.0%.\n- REGENCY CAKESTAND 3 TIER had the most orders among products, with 59 orders TW versus 53 orders LW.",
+    "input_tokens": 739,
+    "output_tokens": 414,
+    "cost_usd": 0.005618,
+    "latency_s": 3.836,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a336,893.26 TW, revenue \u00a316,723.02 LW, revenue change +120.6% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a34,554.09 TW, share 12.3% TW, revenue change +85.4% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a33,214.95 TW, share 8.7% TW, revenue change +47.9% WoW\n- JUMBO BAG RED RETROSPOT: rank 3, revenue \u00a32,489.35 TW, share 6.7% TW, revenue change +78.8% WoW\n- CHILDS BREAKFAST SET DOLLY GIRL (largest WoW increase): revenue change +9039.0% WoW, revenue \u00a3909.33 TW versus \u00a39.95 LW\n- ASSORTED COLOURS SILK FAN (largest WoW decrease): revenue change -5.0% WoW, revenue \u00a3960.95 TW versus \u00a31,011.52 LW\n- REGENCY CAKESTAND 3 TIER (most orders): orders 59 TW versus 53 LW",
+  "n_calls": 1,
+  "tokens_in": 739,
+  "tokens_out": 414,
+  "cost_usd": 0.005618,
+  "latency_s": 3.836
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue TW reached £25.2k, declining 22.7% WoW from £32.6k LW, but growing 37.6% YoY.\n- PAPER CHAIN KIT 50'S CHRISTMAS generated £5.7k revenue TW with 1,692 units sold, representing 22.6% of total revenue.\n- RABBIT NIGHT LIGHT achieved £5.1k revenue TW from 2,331 units across 105 orders, but declined 52.4% WoW.\n- CHILLI LIGHTS revenue surged 115% WoW to £5.0k TW and increased 229.3% YoY, showing strongest momentum.\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell 39.9% WoW but remained flat YoY at -0.6%, indicating seasonal volatility.\n- ROTATING SILVER ANGELS T-LIGHT HLDR sold 1,170 units TW with 42.7% YoY growth, outperforming year-ago performance.\n- REGENCY CAKESTAND 3 TIER grew 17.3% WoW but declined 45.9% YoY, reflecting significant year-over-year contraction.\n- Total orders TW reached 390 with RABBIT NIGHT LIGHT leading at 105 orders, followed by PAPER CHAIN KIT 50'S CHRISTMAS at 96 orders.",
+ "input_tokens": 1941,
+ "output_tokens": 339,
+ "cost_usd": 0.003636,
+ "latency_s": 4.085,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

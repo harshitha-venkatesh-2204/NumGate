@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT generated £2,152.90 revenue in TW, ranking 1st and representing 3.4% of total revenue, with a WoW increase of 40.6% from £1,531.13 in LW.\n- WOOD BLACK BOARD ANT WHITE FINISH achieved £2,057.46 revenue in TW with a 496.6% WoW surge from £344.85 in LW and a 87.0% YoY increase from £1,099.98 in LY.\n- REGENCY CAKESTAND 3 TIER declined to £1,991.04 revenue in TW, down 31.5% WoW from £2,907.39 in LW and down 62.2% YoY from £5,262.87 in LY.\n- RED HARMONICA IN BOX surged to £1,731.06 revenue in TW with 1,621 units sold, representing a 320.3% WoW increase from £411.90 in LW and a 120.2% YoY increase from £786.11 in LY.\n- SMALL ZINC HEART WALL ORGANISER exploded to £1,367.02 revenue in TW from just £11.50 in LW, a 11787.1% WoW increase with 409 units sold in TW versus 2 units in LW.\n- COLOUR GLASS STAR T-LIGHT HOLDER reached £1,092.71 revenue in TW with a 707.9% WoW jump from £135.25 in LW and a 427.8% YoY increase from £207.02 in LY.\n- JUMBO BAG ALPHABET fell sharply to £374.42 revenue in TW, down 79.6% WoW from £1,831.40 in LW, with units declining from 980 in LW to 169 in TW.\n- FELTCRAFT PRINCESS OLIVIA DOLL generated £884.85 revenue in TW with a 1210.9% WoW increase from £67.50 in LW and a 23496.0% YoY increase from £3.75 in LY.",
+ "input_tokens": 7928,
+ "output_tokens": 534,
+ "cost_usd": 0.010598,
+ "latency_s": 6.424,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

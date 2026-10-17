@@ -1,0 +1,10 @@
+{
+ "text": "- PAPER CHAIN KIT 50'S CHRISTMAS generated £5.7k revenue in TW, the highest performing product, with 1,692 units sold across 96 orders.\n- RABBIT NIGHT LIGHT achieved £5.1k revenue in TW with 2,331 units sold, demonstrating strong volume despite lower per-unit pricing than the top performer.\n- CHILLI LIGHTS delivered £5.0k revenue in TW and showed exceptional YoY growth of 229.3% compared to LY.\n- POPCORN HOLDER led unit sales in TW with 2,955 units, significantly outpacing the second-ranked RABBIT NIGHT LIGHT at 2,331 units.\n- COLOURED GLASS STAR T-LIGHT HOLDER surged 1,050.4% WoW in revenue, indicating a major spike in demand week-on-week.\n- WOODEN ADVENT CALENDAR RED showed outstanding YoY performance with 698.9% revenue growth compared to the same week last year.\n- JUMBO BAG 50'S CHRISTMAS declined 69.0% WoW in revenue, representing the largest week-on-week contraction among tracked products.\n- PAPER CHAIN KIT 50'S CHRISTMAS commanded 8.5% of total product revenue in TW, reflecting its dominant market position.",
+ "input_tokens": 1931,
+ "output_tokens": 313,
+ "cost_usd": 0.003496,
+ "latency_s": 4.193,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

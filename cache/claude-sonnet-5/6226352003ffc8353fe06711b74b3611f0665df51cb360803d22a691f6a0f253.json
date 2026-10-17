@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £33,628.20 versus LW £21,402.06, a WoW increase of 57.13%.\n- TOTAL units sold TW reached 9,130.0 compared to LW 6,837.0.\n- TOTAL orders TW were 770.0, up from LW 489.0.\n- REGENCY CAKESTAND 3 TIER ranked 1 for TW with revenue of £4,443.21 and a 13.2% share, the highest share among products.\n- PARTY BUNTING ranked 2 for TW with revenue of £2,495.37 and a 7.4% share.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 3 for TW with revenue of £1,961.04 and a 5.8% share.\n- GIANT BLACK SUNGLASSES posted a WoW revenue change of 33,823.10%.\n- WOODEN CROQUET GARDEN SET posted a WoW revenue change of -34.4%.",
+ "input_tokens": 2316,
+ "output_tokens": 330,
+ "cost_usd": 0.007932,
+ "latency_s": 3.433,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

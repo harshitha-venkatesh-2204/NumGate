@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £3041.70 revenue in TW, ranking 1st with a 43.7% WoW increase and 135.7% YoY growth.\n- PARTY BUNTING declined 50.0% WoW to £2327.02 in TW despite a 60.0% YoY increase, falling from rank 1 in LW to rank 2 in TW.\n- BLACK RECORD COVER FRAME achieved £1708.56 in TW revenue with zero sales in LW, representing a 764.6% YoY surge and rank 3 performance.\n- WHITE HANGING HEART T-LIGHT HOLDER fell 46.4% WoW to £1691.11 in TW, though it still grew 9.7% YoY and maintained rank 4.\n- SET/4 WHITE RETRO STORAGE CUBES surged 1306.2% WoW from £79.90 in LW to £1123.52 in TW, with 150.0% YoY growth.\n- WOODEN ROUNDERS GARDEN SET increased 423.5% WoW to £1085.30 in TW and grew 141.0% YoY, ranking 7th.\n- ROUND SNACK BOXES SET OF4 WOODLAND jumped 228.0% WoW to £996.62 in TW with exceptional 444.7% YoY growth.\n- SMALL POPCORN HOLDER collapsed 87.3% WoW to £422.63 in TW from £3331.18 in LW, though it still showed 232.0% YoY growth.",
+ "input_tokens": 8092,
+ "output_tokens": 406,
+ "cost_usd": 0.010122,
+ "latency_s": 5.524,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

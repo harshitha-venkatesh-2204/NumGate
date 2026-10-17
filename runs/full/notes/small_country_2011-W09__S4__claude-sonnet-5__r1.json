@@ -1,0 +1,42 @@
+{
+ "note_id": "small_country_2011-W09__S4__claude-sonnet-5__r1",
+ "table_id": "small_country_2011-W09",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2011-W09",
+ "n_rows": 7,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a3124,404.10 TW versus \u00a3121,297.26 LW, a WoW change of +2.6%, and compares to a YoY change of -21.5%.\n- United Kingdom ranked 1 with revenue \u00a394,054.57 TW, a 75.6% share TW, and a WoW change of -17.4%.\n- Australia ranked 2 with revenue \u00a316,726.84 TW, a 13.4% share TW, and the largest WoW increase at +3954.5%, up from \u00a3412.55 LW.\n- Finland ranked 3 with revenue \u00a34,418.02 TW, a 3.6% share TW, and a WoW change of +2575.0%.\n- Germany recorded the largest WoW decrease at -47.5%, falling to \u00a31,433.78 TW from \u00a32,728.99 LW.\n- Australia posted the largest YoY increase at +4139.0%, rising from \u00a3394.59 LY.\n- EIRE posted the largest YoY decrease at -67.6%, down from \u00a311,352.29 LY.\n- United Kingdom had the most orders with 250 TW compared to 264 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W09. Entity type: country.\n\nFacts packet:\n- Total: revenue \u00a3124,404.10 TW, revenue \u00a3121,297.26 LW, revenue change +2.6% WoW, revenue change -21.5% YoY\n- United Kingdom: rank 1, revenue \u00a394,054.57 TW, share 75.6% TW, revenue change -17.4% WoW\n- Australia: rank 2, revenue \u00a316,726.84 TW, share 13.4% TW, revenue change +3954.5% WoW\n- Finland: rank 3, revenue \u00a34,418.02 TW, share 3.6% TW, revenue change +2575.0% WoW\n- Australia (largest WoW increase): revenue change +3954.5% WoW, revenue \u00a316,726.84 TW versus \u00a3412.55 LW\n- Germany (largest WoW decrease): revenue change -47.5% WoW, revenue \u00a31,433.78 TW versus \u00a32,728.99 LW\n- Australia (largest YoY increase): revenue change +4139.0% YoY, revenue \u00a3394.59 LY\n- EIRE (largest YoY decrease): revenue change -67.6% YoY, revenue \u00a311,352.29 LY\n- United Kingdom (most orders): orders 250 TW versus 264 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a3124,404.10 TW versus \u00a3121,297.26 LW, a WoW change of +2.6%, and compares to a YoY change of -21.5%.\n- United Kingdom ranked 1 with revenue \u00a394,054.57 TW, a 75.6% share TW, and a WoW change of -17.4%.\n- Australia ranked 2 with revenue \u00a316,726.84 TW, a 13.4% share TW, and the largest WoW increase at +3954.5%, up from \u00a3412.55 LW.\n- Finland ranked 3 with revenue \u00a34,418.02 TW, a 3.6% share TW, and a WoW change of +2575.0%.\n- Germany recorded the largest WoW decrease at -47.5%, falling to \u00a31,433.78 TW from \u00a32,728.99 LW.\n- Australia posted the largest YoY increase at +4139.0%, rising from \u00a3394.59 LY.\n- EIRE posted the largest YoY decrease at -67.6%, down from \u00a311,352.29 LY.\n- United Kingdom had the most orders with 250 TW compared to 264 LW.",
+    "input_tokens": 745,
+    "output_tokens": 366,
+    "cost_usd": 0.00515,
+    "latency_s": 3.883,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a3124,404.10 TW, revenue \u00a3121,297.26 LW, revenue change +2.6% WoW, revenue change -21.5% YoY\n- United Kingdom: rank 1, revenue \u00a394,054.57 TW, share 75.6% TW, revenue change -17.4% WoW\n- Australia: rank 2, revenue \u00a316,726.84 TW, share 13.4% TW, revenue change +3954.5% WoW\n- Finland: rank 3, revenue \u00a34,418.02 TW, share 3.6% TW, revenue change +2575.0% WoW\n- Australia (largest WoW increase): revenue change +3954.5% WoW, revenue \u00a316,726.84 TW versus \u00a3412.55 LW\n- Germany (largest WoW decrease): revenue change -47.5% WoW, revenue \u00a31,433.78 TW versus \u00a32,728.99 LW\n- Australia (largest YoY increase): revenue change +4139.0% YoY, revenue \u00a3394.59 LY\n- EIRE (largest YoY decrease): revenue change -67.6% YoY, revenue \u00a311,352.29 LY\n- United Kingdom (most orders): orders 250 TW versus 264 LW",
+  "n_calls": 1,
+  "tokens_in": 745,
+  "tokens_out": 366,
+  "cost_usd": 0.00515,
+  "latency_s": 3.883
+ }
+}

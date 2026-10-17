@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £41.6k versus LW £30.0k, a WoW increase of 38.5%.\n- TOTAL units sold TW reached 19,061 compared with 12,302 LW.\n- TOTAL orders TW totaled 769 versus 720 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER led product revenue TW at £4,405.70, a 10.6% share.\n- PARTY BUNTING generated £3,220.36 TW revenue, a 7.7% share.\n- WALL MIRROR , RECT DIAMANTE, PINK/ saw the largest WoW revenue increase at 3923.3%.\n- JUMBO BAG STRAWBERRY declined WoW by 68.8% in revenue.\n- JUMBO STORAGE BAG SUKI fell WoW by 38.2% in revenue.",
+ "input_tokens": 2243,
+ "output_tokens": 296,
+ "cost_usd": 0.007446,
+ "latency_s": 3.4,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

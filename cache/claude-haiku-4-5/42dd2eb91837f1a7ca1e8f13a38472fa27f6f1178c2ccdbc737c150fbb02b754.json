@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT generated £2.2k revenue TW, the highest among all products tracked this week.\n- WOOD BLACK BOARD ANT WHITE FINISH achieved £2.1k revenue TW, placing it as the second strongest performer.\n- RED HARMONICA IN BOX led unit sales with 1,621 units sold TW, significantly outpacing MINI PAINT SET VINTAGE which sold 1,336 units TW.\n- JUMBO BAG RED RETROSPOT recorded the most orders TW with 44 orders, while generating £1.6k revenue TW.\n- SMALL ZINC HEART WALL ORGANISER showed exceptional growth of 11,787.1% WoW in revenue.\n- CHRISTMAS LIGHTS 10 REINDEER demonstrated strong momentum with 9,372.1% revenue growth WoW.\n- FELTCRAFT PRINCESS OLIVIA DOLL surged 23,496.0% YoY in revenue, the largest year-over-year increase among all products.\n- BINGO SET grew 7,200.0% YoY in revenue, indicating substantial demand acceleration compared to the same week last year.",
+ "input_tokens": 1943,
+ "output_tokens": 270,
+ "cost_usd": 0.003293,
+ "latency_s": 3.797,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated the highest revenue in TW at £6552.99, representing 18.6% of total revenue across the 10 products shown, though it declined 8.3% WoW from £7144.93 in LW.\n- WHITE HANGING HEART T-LIGHT HOLDER surged 125.6% WoW to £5999.53 in TW, up from £2659.73 in LW, with units nearly doubling from 891 to 2155.\n- PAPER CHAIN KIT 50'S CHRISTMAS fell 36.4% WoW to £5735.62 in TW despite maintaining high unit volume of 1756 units, down from £9020.33 in LW.\n- HOT WATER BOTTLE BABUSHKA more than doubled revenue WoW with a 113.1% increase to £3215.95 in TW, driven by units rising from 335 to 718.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS declined 34.0% WoW to £2500.80 in TW from £3791.87 in LW, with units falling from 849 to 800.\n- HOT WATER BOTTLE TEA AND SYMPATHY grew 82.8% WoW to £2459.61 in TW, with units increasing from 264 in LW to 478 in TW.\n- HAND WARMER SCOTTY DOG DESIGN dropped 29.1% WoW to £2126.08 in TW from £2998.66 in LW, with units declining from 1173 to 977.\n- JUMBO BAG RED RETROSPOT remained relatively stable WoW with only a 1.5% increase to £2221.19 in TW, maintaining consistent unit sales of approximately 1220 units.",
+ "input_tokens": 1158,
+ "output_tokens": 446,
+ "cost_usd": 0.0033880000000000004,
+ "latency_s": 4.043,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "```json\n{\n  \"claims\": [\n    {\n      \"line\": 0,\n      \"entity\": \"United Kingdom\",\n      \"metric\": \"revenue\",\n      \"period\": \"TW\",\n      \"value_text\": \"£143,748.77\",\n      \"direction\": \"none\",\n      \"qualifier\": \"none\"\n    },\n    {\n      \"line\": 0,\n      \"entity\": \"United Kingdom\",\n      \"metric\": \"revenue\",\n      \"period\": \"WoW\",\n      \"value_text\": \"10.1%\",\n      \"direction\": \"up\",\n      \"qualifier\": \"none\"\n    },\n    {\n      \"line\": 0,\n      \"entity\": \"United Kingdom\",\n      \"metric\": \"revenue\",\n      \"period\": \"LW\",\n      \"value_text\": \"£130,586.63\",\n      \"direction\": \"none\",\n      \"qualifier\": \"none\"\n    },\n    {\n      \"line\": 0,\n      \"entity\": \"TOTAL\",\n      \"metric\": \"share\",\n      \"period\": \"TW\",\n      \"value_text\": \"92.9%\",\n      \"direction\": \"none\",\n      \"qualifier\": \"none\"\n    },\n    {\n      \"line\": 1,\n      \"entity\": \"United Kingdom\",\n      \"metric\": \"units\",\n      \"period\": \"TW\",\n      \"value_text\": \"96,600\",\n      \"direction\": \"none\",\n      \"qualifier\": \"none\"\n    },\n    {\n      \"line\": 1,\n      \"entity\": \"United Kingdom\",\n      \"metric\": \"units\",\n      \"period\": \"LW\",\n      \"value_text\": \"76,814\",\n      \"direction\": \"none\",\n      \"qualifier\": \"none\"\n    },\n    {\n      \"line\": 1,\n      \"entity\": \"United Kingdom\",\n      \"metric\": \"orders\",\n      \"period\": \"TW\",\n      \"value_text\": \"382\",\n      \"direction\": \"none\",\n      \"qualifier\": \"none\"\n    },\n    {\n      \"line\": 1,\n      \"entity\": \"United Kingdom\",\n      \"metric\": \"orders\",\n      \"period\": \"LW\",\n      \"value_text\": \"319\",\n      \"direction\": \"none\",\n      \"qualifier\": \"none\"\n    }\n  ]\n}\n```",
+ "input_tokens": 664,
+ "output_tokens": 569,
+ "cost_usd": 0.003509,
+ "latency_s": 4.359,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

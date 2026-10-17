@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £4554.09 in TW revenue, ranking 1st and representing 12.3% of total revenue, with a WoW increase of 85.4% from £2456.32 in LW.\n- PAPER CHAIN KIT SKULLS achieved £1445.70 in TW revenue with a WoW surge of 3983.9% from just £35.40 in LW, driven by 566 units sold compared to 12 units in LW.\n- CHILDS BREAKFAST SET DOLLY GIRL recorded £909.33 in TW revenue with a WoW increase of 9039.0% from £9.95 in LW, with 102 units sold versus 1 unit in LW.\n- PAPER BUNTING RETRO SPOTS generated £2266.34 in TW revenue with a WoW increase of 160.0% from £871.55 in LW, selling 846 units across 33 orders.\n- LARGE RED SPOT WINDMILL contributed £1332.00 in TW revenue with 720 units sold and 1 order, compared to zero revenue and zero units in LW.\n- RETRO SPORT PARTY BAG + STICKER SET achieved £997.20 in TW revenue with a WoW increase of 812.2% from £109.32 in LW, with 680 units sold in TW.\n- ASSORTED COLOURS SILK FAN was the only product showing a WoW decline, falling 5.0% to £960.95 in TW from £1011.52 in LW, with units decreasing from 1571 to 1333.\n- WHITE HANGING HEART T-LIGHT HOLDER generated £3214.95 in TW revenue, ranking 2nd with 1209 units sold and a WoW increase of 47.9% from £2173.03 in LW.",
+ "input_tokens": 2129,
+ "output_tokens": 469,
+ "cost_usd": 0.004474,
+ "latency_s": 5.538,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

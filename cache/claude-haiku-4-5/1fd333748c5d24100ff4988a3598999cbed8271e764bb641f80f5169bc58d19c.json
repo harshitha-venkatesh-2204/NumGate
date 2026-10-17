@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £6.0k revenue TW, the highest performing product by sales value.\n- ROTATING SILVER ANGELS T-LIGHT HLDR achieved £5.9k revenue TW and sold 3,382 units, making it a strong volume driver.\n- BROCADE RING PURSE led unit sales with 5,632 units sold TW, significantly outpacing other products.\n- Total revenue reached £88.5k TW, representing a 45.6% WoW increase from £60.8k LW.\n- BROCADE RING PURSE showed exceptional growth with revenue up 3,063.7% WoW.\n- SET OF 3 BABUSHKA STACKING TINS revenue increased 2,482.8% WoW, indicating strong momentum in this category.\n- REGENCY CAKESTAND 3 TIER generated the most orders with 67 TW, followed by WHITE HANGING HEART T-LIGHT HOLDER with 58 orders.\n- Total units sold reached 51,065 TW, with BROCADE RING PURSE, WORLD WAR 2 GLIDERS ASSTD DESIGNS, and ROTATING SILVER ANGELS T-LIGHT HLDR accounting for the top three volume positions.",
+ "input_tokens": 1912,
+ "output_tokens": 312,
+ "cost_usd": 0.0034720000000000003,
+ "latency_s": 4.032,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

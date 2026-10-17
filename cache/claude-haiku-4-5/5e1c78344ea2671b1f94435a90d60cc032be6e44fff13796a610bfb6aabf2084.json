@@ -1,0 +1,10 @@
+{
+ "text": "- VINTAGE UNION JACK MEMOBOARD generated £6,500.69 revenue in TW, up 65,233.6% WoW from £9.95 in LW, capturing 11.0% of total weekly revenue at Rank 1.\n- CREAM HEART CARD HOLDER achieved £2,403.53 revenue in TW with 1,027 units sold, representing a 910.8% WoW increase and 473.0% YoY growth to Rank 2.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN reached £2,319.75 revenue in TW with 2,451 units sold, a 3,766.2% WoW surge from £60.00 in LW.\n- REGENCY CAKESTAND 3 TIER declined slightly to £1,860.24 revenue in TW, down 1.6% WoW from £1,890.60 in LW, maintaining Rank 4 with 139 units sold.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to £1,392.59 revenue in TW, down 13.9% WoW and 13.9% YoY, with 517 units sold across 31 orders.\n- PARTY BUNTING increased to £1,254.96 revenue in TW, up 17.1% WoW and 389.7% YoY, with 292 units sold at Rank 6.\n- PACK OF 12 SUKI TISSUES generated £285.95 revenue in TW from 1,297 units sold, representing a 49,201.7% WoW increase from £0.58 in LW.\n- PACK OF 12 PINK POLKADOT TISSUES reached £285.41 revenue in TW with 1,297 units sold, up 969.8% WoW from £26.68 in LW.",
+ "input_tokens": 9855,
+ "output_tokens": 465,
+ "cost_usd": 0.01218,
+ "latency_s": 5.927,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

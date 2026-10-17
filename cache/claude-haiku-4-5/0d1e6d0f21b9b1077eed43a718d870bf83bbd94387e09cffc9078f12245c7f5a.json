@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated the highest revenue TW at £3,429.15, followed by WHITE HANGING HEART T-LIGHT HOLDER at £3,266.50.\n- WHITE HANGING HEART T-LIGHT HOLDER led unit sales TW with 1,198 units, while WORLD WAR 2 GLIDERS ASSTD DESIGNS achieved 1,104 units.\n- WHITE HANGING HEART T-LIGHT HOLDER topped order counts TW with 46 orders, ahead of SPOTTY BUNTING with 45 orders.\n- POLKADOT PEN showed exceptional WoW revenue growth of 18,121.5%, significantly outperforming other products.\n- RED HANGING HEART T-LIGHT HOLDER achieved WoW revenue growth of 1,041.8%, demonstrating strong week-on-week momentum.\n- BROCADE RING PURSE delivered the strongest YoY revenue performance at 10,158.9% growth compared to the same week last year.\n- CAMOUFLAGE DESIGN TEDDY grew 1,239.9% YoY in revenue, while NO SINGING METAL SIGN increased 559.7% YoY.\n- PARTY BUNTING generated £1,795.82 revenue TW with 41 orders, establishing itself as a consistent performer in the top revenue products.",
+ "input_tokens": 1948,
+ "output_tokens": 325,
+ "cost_usd": 0.003573,
+ "latency_s": 4.121,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

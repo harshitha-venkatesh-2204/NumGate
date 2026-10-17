@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £240.2k versus LW £284.4k, a WoW change of -15.54%.\n- TOTAL units fell to 126,750 TW from 150,081 LW.\n- TOTAL orders were nearly flat, 542 TW versus 541 LW.\n- United Kingdom led all countries TW with £213.6k revenue, an 88.9% share and rank 1.\n- EIRE ranked 2 TW with £10.5k revenue, a 4.4% share.\n- Germany ranked 3 TW with £4.6k revenue, a 1.9% share.\n- Spain ranked 4 TW with £4.5k revenue, a 1.9% share.\n- Channel Islands ranked 5 TW with £2.7k revenue and France ranked 6 TW with £2.4k revenue.",
+ "input_tokens": 1961,
+ "output_tokens": 273,
+ "cost_usd": 0.006652,
+ "latency_s": 2.958,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

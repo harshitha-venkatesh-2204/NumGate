@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £162,343.01 TW versus £158,963.14 LW, a change of +2.1% WoW.\n- United Kingdom ranked 1 with revenue £133,081.75 TW and a share of 82.0% TW, a change of -3.0% WoW.\n- EIRE ranked 2 with revenue £16,455.16 TW and a share of 10.1% TW, a change of +395.9% WoW.\n- Netherlands ranked 3 with revenue £6,062.68 TW and a share of 3.7% TW, a change of -65.5% WoW.\n- Germany posted the largest WoW increase at +596.0%, with revenue £2,837.23 TW versus £407.67 LW.\n- Netherlands posted the largest WoW decrease at -65.5%, with revenue £6,062.68 TW versus £17,594.55 LW.\n- United Kingdom recorded the most orders at 304 TW versus 308 LW.",
+ "input_tokens": 655,
+ "output_tokens": 316,
+ "cost_usd": 0.011175000000000001,
+ "latency_s": 4.022,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

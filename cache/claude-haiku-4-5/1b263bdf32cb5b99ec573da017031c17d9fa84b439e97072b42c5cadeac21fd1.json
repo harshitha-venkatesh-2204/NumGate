@@ -1,0 +1,10 @@
+{
+ "text": "- PAPER CHAIN KIT 50'S CHRISTMAS generated the highest revenue TW at £5.7k, followed by RABBIT NIGHT LIGHT at £5.1k and CHILLI LIGHTS at £5.0k.\n- POPCORN HOLDER led unit sales TW with 2,955 units, while RABBIT NIGHT LIGHT achieved 2,331 units and PAPER CHAIN KIT 50'S CHRISTMAS sold 1,692 units.\n- RABBIT NIGHT LIGHT received the most orders TW at 105, compared to PAPER CHAIN KIT 50'S CHRISTMAS with 96 orders and HOT WATER BOTTLE KEEP CALM with 73 orders.\n- DOORMAT BLACK FLOCK showed the strongest WoW revenue growth at 1544.7%, followed by SET/3 VANILLA SCENTED CANDLE IN BOX at 1256.0% and COLOURED GLASS STAR T-LIGHT HOLDER at 1050.4%.\n- JAM MAKING SET WITH JARS demonstrated exceptional YoY revenue growth of 832.5%, while WOODEN ADVENT CALENDAR RED grew 698.9% and ZINC FOLKART SLEIGH BELLS increased 591.9%.\n- REGENCY CAKESTAND 3 TIER generated £3.5k revenue TW, placing it fourth among top revenue products.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS contributed £3.0k revenue TW with 1,043 units sold and 71 orders.\n- ROTATING SILVER ANGELS T-LIGHT HLDR achieved 1,170 units sold TW, ranking fourth in unit volume.",
+ "input_tokens": 1942,
+ "output_tokens": 389,
+ "cost_usd": 0.003887,
+ "latency_s": 4.522,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

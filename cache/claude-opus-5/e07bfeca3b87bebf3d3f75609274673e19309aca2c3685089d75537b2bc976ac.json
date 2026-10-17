@@ -1,0 +1,10 @@
+{
+ "text": "- JUMBO BAG RED RETROSPOT leads TW at £2,941.59 on 1,518 units, up 14.0% WoW from £2,581.23 and up from £1.95 LY.\n- REGENCY CAKESTAND 3 TIER ranks 2 TW with £2,907.39, up 14.2% WoW from £2,544.78 but down 11.0% YoY from £3,265.21.\n- PARTY BUNTING posts £2,730.41 TW, up 33.1% WoW from £2,050.94, with orders rising from 33 LW to 41 TW.\n- JUMBO BAG APPLES gains 90.1% WoW to £2,400.75 TW as units move from 664 LW to 1,265 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER rises 151.8% WoW to £2,054.09 TW and sits 32.5% below its LY level of £3,042.82.\n- The four ALARM CLOCK BAKELIKE colourways total £4,832.47 TW, with RED at £1,667.45 (+271.0% WoW) and GREEN at £1,096.99 (+182.3% WoW).\n- SET OF TEA COFFEE SUGAR TINS PANTRY falls 84.9% WoW to £325.70 TW and SET OF 3 CAKE TINS PANTRY DESIGN falls 74.8% WoW to £353.71 TW.\n- HAND WARMER OWL DESIGN records £509.40 TW and HOT WATER BOTTLE KEEP CALM £467.10 TW, both from £0.00 LW and £0.00 LY.",
+ "input_tokens": 8541,
+ "output_tokens": 1092,
+ "cost_usd": 0.070005,
+ "latency_s": 11.969,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

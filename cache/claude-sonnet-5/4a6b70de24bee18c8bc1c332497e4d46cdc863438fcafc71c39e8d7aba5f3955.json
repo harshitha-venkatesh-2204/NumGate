@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £65.3k vs LW £36.2k vs LY £23.5k, WoW +80.3%, YoY +177.6%.\n- TOTAL units TW 26,182 vs LW 12,664, WoW +106.7%.\n- TOTAL orders TW 1,838 vs LW 1,381, WoW +33.1%.\n- PLEASE ONE PERSON METAL SIGN ranks 1 with TW revenue £2.8k and 4.2% share.\n- PARTY BUNTING ranks 2 with TW revenue £1.8k and 2.8% share.\n- REGENCY CAKESTAND 3 TIER ranks 3 with TW revenue £1.8k and 2.8% share.\n- HAND WARMER OWL DESIGN ranks 4 with TW revenue £1.6k and 2.5% share.\n- COOK WITH WINE METAL SIGN TW revenue £1.4k with 2.2% share.",
+ "input_tokens": 2238,
+ "output_tokens": 327,
+ "cost_usd": 0.007745999999999999,
+ "latency_s": 3.233,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

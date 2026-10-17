@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 TW with £3041.70 revenue, up 43.7% WoW from £2116.26 LW and up 135.7% YoY from £1290.45 LY.\n- PARTY BUNTING ranks 2 TW with £2327.02, down 50.0% WoW from £4652.41 LW, but up 60.0% YoY from £1454.81 LY.\n- BLACK RECORD COVER FRAME ranks 3 TW with £1708.56 revenue versus £0.00 LW, and up 764.6% YoY from £197.61 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 4 TW at £1691.11, down 46.4% WoW from £3154.66 LW, up 9.7% YoY from £1540.94 LY.\n- HEART OF WICKER LARGE fell 75.1% WoW to £637.65 TW from £2562.85 LW, while up 58.9% YoY from £401.27 LY.\n- SMALL POPCORN HOLDER dropped 87.3% WoW to £422.63 TW from £3331.18 LW, with units down to 533 TW from 4562 LW.\n- ORANGE TV TRAY TABLE surged 18500.0% WoW to £362.70 TW from £1.95 LW, and YoY rose 4167.1% from £8.50 LY.\n- LARGE RED RETROSPOT WINDMILL rose 1330.6% WoW to £540.76 TW from £37.80 LW, and YoY climbed 25650.5% from £2.10 LY.",
+ "input_tokens": 9218,
+ "output_tokens": 546,
+ "cost_usd": 0.023896,
+ "latency_s": 5.085,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

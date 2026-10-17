@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £208,732.56 TW versus £288,848.88 LW, a WoW change of -27.7%, and versus LY a YoY change of -9.9%.\n- United Kingdom ranked 1 with revenue £193,356.23 TW, a 92.6% share TW, and a WoW change of -30.3%.\n- Germany ranked 2 with revenue £4,525.14 TW, a 2.2% share TW, and a WoW change of +16.2%.\n- Sweden ranked 3 with revenue £3,834.30 TW and a 1.8% share TW.\n- Spain had the largest WoW increase at +420.3%, rising from £174.72 LW to £909.01 TW.\n- France had the largest WoW decrease at -87.3%, falling from £4,050.16 LW to £515.12 TW.\n- Belgium had the largest YoY increase at +6266.6%, up from £8.50 LY.\n- France had the largest YoY decrease at -73.3%, down from £1,926.72 LY, and United Kingdom had the most orders with 413 TW versus 493 LW.",
+ "input_tokens": 722,
+ "output_tokens": 366,
+ "cost_usd": 0.005104,
+ "latency_s": 3.645,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

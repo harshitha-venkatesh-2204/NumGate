@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £51,928.98 TW, up 4.5% WoW from £49,691.65 LW and up 117.3% YoY.\n- REGENCY CAKESTAND 3 TIER generated £3,429.15 TW as the top product with 6.6% share TW, increasing 70.1% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £3,266.50 TW revenue with 6.3% share TW and surged 330.0% WoW, also recording 46 orders TW versus 26 LW.\n- PARTY BUNTING held rank 3 with £1,795.82 TW revenue and 3.5% share TW, but declined 62.6% WoW.\n- POLKADOT PEN experienced the largest WoW increase at 18121.5%, rising from £1.63 LW to £297.01 TW.\n- DOORMAT HEARTS posted the largest WoW decrease at -86.8%, falling from £2,345.43 LW to £309.46 TW.\n- BROCADE RING PURSE showed the largest YoY increase at 10158.9%, growing from £2.58 LY to current week revenue.\n- WOOD BLACK BOARD ANT WHITE FINISH recorded the largest YoY decrease at -86.4%, down from £2,130.35 LY.",
+ "input_tokens": 647,
+ "output_tokens": 356,
+ "cost_usd": 0.002427,
+ "latency_s": 2.903,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

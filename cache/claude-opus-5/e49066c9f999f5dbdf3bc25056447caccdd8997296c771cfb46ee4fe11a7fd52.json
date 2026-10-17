@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £65.3k TW versus £36.2k LW, a WoW gain of 80.3%.\n- TOTAL revenue was £23.5k LY, putting TW at 177.6% YoY growth.\n- TOTAL units hit 26,182 TW (+106.7% WoW) across 1,838 orders (+33.1% WoW).\n- PLEASE ONE PERSON METAL SIGN ranked 1 TW with £2,773.43, a 4.2% share of TOTAL revenue, and added £2,691.53 WoW.\n- PARTY BUNTING delivered £1,825.40 TW and REGENCY CAKESTAND 3 TIER £1,825.17 TW, with the top 5 products at 14.5% of TOTAL revenue TW.\n- COOK WITH WINE METAL SIGN rose £1,363.04 WoW to £1,415.04 TW, and HAND WARMER OWL DESIGN rose £1,299.67 WoW to £1,611.60 TW.\n- WOOD BLACK BOARD ANT WHITE FINISH fell £1,568.05 WoW, JUMBO BAG RED RETROSPOT fell £391.98 WoW and POPCORN HOLDER fell £259.62 WoW.\n- JUMBO BAG PINK POLKADOT grew 131.4% WoW and HOT WATER BOTTLE KEEP CALM grew 72.8% WoW.",
+ "input_tokens": 2460,
+ "output_tokens": 494,
+ "cost_usd": 0.02465,
+ "latency_s": 5.947,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

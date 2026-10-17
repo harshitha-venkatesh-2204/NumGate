@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £157.5k TW versus £130.0k LW, a WoW gain of 21.18%.\n- TOTAL revenue was £46.2k LY, putting TW at 241.22% YoY growth.\n- TOTAL units hit 48,585 TW (+7.58% WoW) while TOTAL orders came in at 3,529 TW (-1.70% WoW).\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £10.9k revenue, a 6.9% share of TOTAL, and the top 10 products held 32.6% of TOTAL revenue TW.\n- VINTAGE UNION JACK MEMOBOARD posted £6.6k TW and the largest WoW revenue gain at +£6,158.83, followed by WOOD BLACK BOARD ANT WHITE FINISH at £5.7k TW and +£5,301.09 WoW.\n- BLACK HEART CARD HOLDER reached £4.8k TW (+£4,521.52 WoW) and CREAM HEART CARD HOLDER delivered £4.9k TW.\n- RED WOOLLY HOTTIE WHITE HEART. fell £1,993.89 WoW, CHILLI LIGHTS fell £1,990.73 WoW, and HAND WARMER OWL DESIGN fell £1,909.40 WoW.\n- UTILTY CABINET WITH HOOKS rose 3,003.8% WoW and HALL CABINET WITH 3 DRAWERS rose 2,256.0% WoW.",
+ "input_tokens": 2488,
+ "output_tokens": 529,
+ "cost_usd": 0.025665,
+ "latency_s": 6.569,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

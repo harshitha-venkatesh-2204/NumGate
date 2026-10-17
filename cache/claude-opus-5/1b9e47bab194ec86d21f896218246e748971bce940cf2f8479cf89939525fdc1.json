@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £254.2k TW against £195.1k LW, a WoW gain of 30.3%, and £229.1k LY, a YoY gain of 10.9%.\n- TOTAL units came in at 146,905 TW, up 40.8% WoW, while T",
+ "input_tokens": 2340,
+ "output_tokens": 90,
+ "cost_usd": 0.01395,
+ "latency_s": 2.433,
+ "model": "claude-opus-5",
+ "stop_reason": "refusal",
+ "max_tokens": 16000
+}

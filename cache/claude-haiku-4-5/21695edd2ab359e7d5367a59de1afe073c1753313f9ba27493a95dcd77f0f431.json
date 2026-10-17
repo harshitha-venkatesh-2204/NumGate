@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £94.1k revenue in TW, representing 75.6% of total sales across all countries.\n- Australia achieved £16.7k revenue in TW with a WoW increase of 3954.5% and a YoY increase of 4139.0%.\n- Finland delivered £4.4k revenue in TW, up 2575.0% WoW, and now holds a 3.6% share of total revenue.\n- Total revenue reached £124.4k in TW, up 2.6% WoW but down 21.5% YoY compared to the same week last year.\n- United Kingdom processed 250 orders in TW, significantly higher than France with 9 orders and EIRE with 3 orders.\n- Total units sold were 67309 in TW, a slight decrease from 68040 units in LW.\n- Belgium revenue grew 179.4% WoW and 56.4% YoY, demonstrating strong momentum in this market.\n- France revenue declined 8.7% YoY despite maintaining order activity in TW.",
+ "input_tokens": 1788,
+ "output_tokens": 260,
+ "cost_usd": 0.003088,
+ "latency_s": 3.724,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- PICNIC BASKET WICKER 60 PIECES led TW revenue at £39,619.50 with 31.7% share, up from £0.00 LW, rank 1 of 107 products.\n- PARTY BUNTING posted TW revenue of £4,019.93, up 72.8% WoW from £2,327.02 LW and up 24.3% YoY from £3,233.52 LY.\n- DOORMAT KEEP CALM AND COME IN rose 339.7% WoW to £2,800.73 TW from £636.93 LW, with no LY comparison recorded.\n- REGENCY CAKESTAND 3 TIER fell to £2,711.19 TW from £3,041.70 LW (-10.9% WoW) and from £5,517.46 LY (-50.9% YoY).\n- DOORMAT UNION JACK GUNS AND ROSES jumped 11,548.5% WoW to £2,377.45 TW from £20.41 LW.\n- JUMBO BAG RED RETROSPOT reached £1,835.74 TW, up 216.6% WoW from £579.84 LW and up 5.5% YoY from £1,740.29 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER dropped to £1,085.90 TW from £1,691.11 LW (-35.8% WoW) and £4,245.80 LY (-74.4% YoY).\n- LUNCH BAG BLACK SKULL fell to £363.19 TW from £4,044.23 LY, a 91.0% YoY decline, with orders at 28 TW versus 18 LW.",
+ "input_tokens": 8756,
+ "output_tokens": 537,
+ "cost_usd": 0.022882,
+ "latency_s": 4.975,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

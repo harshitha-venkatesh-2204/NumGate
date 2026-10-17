@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue was £67.0k TW versus £79.2k LW, a WoW change of -15.3%.\n- TOTAL revenue of £67.0k TW compares with £39.1k LY, a YoY change of +71.3%.\n- TOTAL units reached 20,840 TW at -15.1% WoW, while TOTAL orders were 1,329 at -10.0% WoW.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 1 TW with £5,701.16, an 8.5% share of TOTAL revenue TW.\n- RABBIT NIGHT LIGHT delivered £5,084.81 TW and CHILLI LIGHTS £4,960.25 TW, followed by REGENCY CAKESTAND 3 TIER at £3,543.60 and PAPER CHAIN KIT VINTAGE CHRISTMAS at £3,034.33.\n- The top five products together accounted for 33.3% of TOTAL revenue TW.\n- CHILLI LIGHTS gained £2,653.24 WoW, CHILDRENS CUTLERY POLKADOT PINK gained £1,579.72 WoW (+323.6%), and SPOTTY BUNTING gained £1,348.06 WoW.\n- RABBIT NIGHT LIGHT fell £5,602.88 WoW (-52.4%), PAPER CHAIN KIT 50'S CHRISTMAS fell £3,783.99 WoW, and JUMBO BAG 50'S CHRISTMAS fell £2,568.26 WoW.",
+ "input_tokens": 2494,
+ "output_tokens": 536,
+ "cost_usd": 0.02587,
+ "latency_s": 6.367,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,42 @@
+{
+ "note_id": "small_product_2011-W47__S4__claude-opus-5__r2",
+ "table_id": "small_product_2011-W47",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2011-W47",
+ "n_rows": 6,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 2,
+ "note": "- Total revenue was \u00a325,218.52 TW versus \u00a332,627.63 LW, a change of -22.7% WoW, and +37.6% YoY.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 1 with revenue \u00a35,701.16 TW, a 22.6% share TW, and a change of -39.9% WoW.\n- RABBIT NIGHT LIGHT ranked 2 with revenue \u00a35,084.81 TW and a 20.2% share TW.\n- CHILLI LIGHTS ranked 3 with revenue \u00a34,960.25 TW and a 19.7% share TW.\n- CHILLI LIGHTS posted the largest WoW increase at +115.0% WoW, \u00a34,960.25 TW versus \u00a32,307.01 LW, and +229.3% YoY against \u00a31,506.40 LY.\n- RABBIT NIGHT LIGHT posted the largest WoW decrease at -52.4% WoW, \u00a35,084.81 TW versus \u00a310,687.69 LW.\n- REGENCY CAKESTAND 3 TIER recorded the largest YoY decrease at -45.9% YoY against \u00a36,552.99 LY.\n- RABBIT NIGHT LIGHT led on order count with 105 orders TW versus 123 orders LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W47. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a325,218.52 TW, revenue \u00a332,627.63 LW, revenue change -22.7% WoW, revenue change +37.6% YoY\n- PAPER CHAIN KIT 50'S CHRISTMAS: rank 1, revenue \u00a35,701.16 TW, share 22.6% TW, revenue change -39.9% WoW\n- RABBIT NIGHT LIGHT: rank 2, revenue \u00a35,084.81 TW, share 20.2% TW, revenue change -52.4% WoW\n- CHILLI LIGHTS: rank 3, revenue \u00a34,960.25 TW, share 19.7% TW, revenue change +115.0% WoW\n- CHILLI LIGHTS (largest WoW increase): revenue change +115.0% WoW, revenue \u00a34,960.25 TW versus \u00a32,307.01 LW\n- RABBIT NIGHT LIGHT (largest WoW decrease): revenue change -52.4% WoW, revenue \u00a35,084.81 TW versus \u00a310,687.69 LW\n- CHILLI LIGHTS (largest YoY increase): revenue change +229.3% YoY, revenue \u00a31,506.40 LY\n- REGENCY CAKESTAND 3 TIER (largest YoY decrease): revenue change -45.9% YoY, revenue \u00a36,552.99 LY\n- RABBIT NIGHT LIGHT (most orders): orders 105 TW versus 123 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue was \u00a325,218.52 TW versus \u00a332,627.63 LW, a change of -22.7% WoW, and +37.6% YoY.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 1 with revenue \u00a35,701.16 TW, a 22.6% share TW, and a change of -39.9% WoW.\n- RABBIT NIGHT LIGHT ranked 2 with revenue \u00a35,084.81 TW and a 20.2% share TW.\n- CHILLI LIGHTS ranked 3 with revenue \u00a34,960.25 TW and a 19.7% share TW.\n- CHILLI LIGHTS posted the largest WoW increase at +115.0% WoW, \u00a34,960.25 TW versus \u00a32,307.01 LW, and +229.3% YoY against \u00a31,506.40 LY.\n- RABBIT NIGHT LIGHT posted the largest WoW decrease at -52.4% WoW, \u00a35,084.81 TW versus \u00a310,687.69 LW.\n- REGENCY CAKESTAND 3 TIER recorded the largest YoY decrease at -45.9% YoY against \u00a36,552.99 LY.\n- RABBIT NIGHT LIGHT led on order count with 105 orders TW versus 123 orders LW.",
+    "input_tokens": 834,
+    "output_tokens": 435,
+    "cost_usd": 0.015045,
+    "latency_s": 5.031,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a325,218.52 TW, revenue \u00a332,627.63 LW, revenue change -22.7% WoW, revenue change +37.6% YoY\n- PAPER CHAIN KIT 50'S CHRISTMAS: rank 1, revenue \u00a35,701.16 TW, share 22.6% TW, revenue change -39.9% WoW\n- RABBIT NIGHT LIGHT: rank 2, revenue \u00a35,084.81 TW, share 20.2% TW, revenue change -52.4% WoW\n- CHILLI LIGHTS: rank 3, revenue \u00a34,960.25 TW, share 19.7% TW, revenue change +115.0% WoW\n- CHILLI LIGHTS (largest WoW increase): revenue change +115.0% WoW, revenue \u00a34,960.25 TW versus \u00a32,307.01 LW\n- RABBIT NIGHT LIGHT (largest WoW decrease): revenue change -52.4% WoW, revenue \u00a35,084.81 TW versus \u00a310,687.69 LW\n- CHILLI LIGHTS (largest YoY increase): revenue change +229.3% YoY, revenue \u00a31,506.40 LY\n- REGENCY CAKESTAND 3 TIER (largest YoY decrease): revenue change -45.9% YoY, revenue \u00a36,552.99 LY\n- RABBIT NIGHT LIGHT (most orders): orders 105 TW versus 123 LW",
+  "n_calls": 1,
+  "tokens_in": 834,
+  "tokens_out": 435,
+  "cost_usd": 0.015045,
+  "latency_s": 5.031
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "run_id": "full",
+ "models": [
+  "claude-opus-5",
+  "claude-sonnet-5",
+  "claude-haiku-4-5"
+ ],
+ "strategies": [
+  "S1",
+  "S2",
+  "S3",
+  "S4"
+ ],
+ "tables_per_size": 20,
+ "repeats": 2,
+ "budget_usd": 60.0
+}

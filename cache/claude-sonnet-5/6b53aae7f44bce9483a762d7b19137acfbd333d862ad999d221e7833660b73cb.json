@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £154.7k vs LW £145.0k, WoW up 6.6%.\n- TOTAL units rose to 103,003 TW from 84,549 LW.\n- TOTAL orders increased to 397 TW from 334 LW.\n- United Kingdom led all countries with £143.7k TW revenue, a 92.9% share and rank 1.\n- Channel Islands ranked 2nd with £3.4k TW revenue, 2.2% share.\n- EIRE held rank 3 with £1.9k TW revenue, 1.2% share.\n- Netherlands followed at rank 4 with £1.8k TW revenue, 1.2% share.\n- Switzerland and France rounded out the top six with £1.4k and £1.3k TW revenue respectively, each under 1% share.",
+ "input_tokens": 2119,
+ "output_tokens": 285,
+ "cost_usd": 0.007088,
+ "latency_s": 3.518,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,239 @@
+{
+ "note_id": "large_product_2011-W23__S2__claude-sonnet-5__r1",
+ "table_id": "large_product_2011-W23",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W23",
+ "n_rows": 107,
+ "strategy": "S2",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- TOTAL revenue TW was \u00a3124.9k versus LW \u00a340.4k, a WoW change of 209.3%, and versus LY \u00a347.1k, a YoY change of 165.1%.\n- TOTAL units sold TW reached 30,037 compared to LW 15,271, while orders TW were 2,181 versus LW 1,506.\n- PICNIC BASKET WICKER 60 PIECES led products with TW revenue of \u00a339.6k, representing 31.7% share of total revenue.\n- PARTY BUNTING recorded TW revenue of \u00a34.0k with a 3.2% share, and DOORMAT KEEP CALM AND COME IN posted \u00a32.8k TW revenue with a 2.2% share.\n- DOORMAT BLACK FLOCK grew 14502.5% WoW and DOORMAT UNION JACK GUNS AND ROSES grew 11548.5% WoW.\n- SET 3 WICKER OVAL BASKETS W LIDS rose 4529.2% WoW while SET/4 WHITE RETRO STORAGE CUBES fell 68.1% WoW.\n- JUMBO BAG DOILEY PATTERNS declined 42.2% WoW and IVORY KITCHEN SCALES declined 37.1% WoW.\n- TEA TIME PARTY BUNTING increased 2828.5% YoY and PAPER BUNTING VINTAGE PAISLEY increased 571.4% YoY, while LUNCH BAG BLACK SKULL. fell 91.0% YoY and LUNCH BAG WOODLAND fell 84.0% YoY.",
+ "trace": {
+  "strategy": "S2",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "code_0",
+    "system": "You are a data analyst who writes short, correct pandas code.\n\nWrite one Python script that:\n- reads the CSV file whose path is given in sys.argv[1] with pandas,\n- computes up to 25 facts that would be most useful for a weekly executive insight note (largest entities, biggest week over week and year over year movers, shares, totals),\n- prints one JSON array to stdout and nothing else.\n\nEach element of the array is an object with these keys:\n- \"entity\": the Entity value, or \"TOTAL\" for all rows combined.\n- \"metric\": one of revenue, units, orders, share, rank.\n- \"period\": one of TW, LW, LY, WoW, YoY. Use WoW or YoY for changes between periods.\n- \"value\": a plain number (not a string). Round money to 2 decimals and percentages to 1 decimal.\n- \"formula\": a short description of how the value was computed, for example \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\".\n\nUse only pandas, numpy, json and sys. Blank cells are NaN: skip them instead of crashing. Convert numpy numbers to Python floats before json.dumps.\nReturn only the code, inside one ```python block.\n",
+    "user": "The script will be run as: python facts.py table.csv\n\nThe CSV holds a weekly sales report for ISO week 2011-W23. Entity type: product. It has 107 rows and these columns (with pandas dtypes):\n- Entity: str\n- Revenue_TW: float64\n- Revenue_LW: float64\n- Revenue_LY: float64\n- Units_TW: int64\n- Units_LW: int64\n- Orders_TW: int64\n- Orders_LW: int64\n- WoW_Pct: float64\n- YoY_Pct: float64\n- Share_Pct: float64\n- Rank: int64\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\nFirst rows of the file:\nEntity,Revenue_TW,Revenue_LW,Revenue_LY,Units_TW,Units_LW,Orders_TW,Orders_LW,WoW_Pct,YoY_Pct,Share_Pct,Rank\nPICNIC BASKET WICKER 60 PIECES,39619.5,0.0,0.0,61,0,2,0,,,31.7,1\nPARTY BUNTING,4019.93,2327.02,3233.52,663,434,58,45,72.8,24.3,3.2,2\nDOORMAT KEEP CALM AND COME IN,2800.73,636.93,0.0,563,79,29,23,339.7,,2.2,3\n\n",
+    "text": "```python\nimport sys\nimport json\nimport numpy as np\nimport pandas as pd\n\ndef main():\n    path = sys.argv[1]\n    df = pd.read_csv(path)\n\n    facts = []\n\n    # ---- Totals ----\n    rev_tw = df['Revenue_TW'].sum(skipna=True)\n    rev_lw = df['Revenue_LW'].sum(skipna=True)\n    rev_ly = df['Revenue_LY'].sum(skipna=True)\n    units_tw = df['Units_TW'].sum(skipna=True)\n    units_lw = df['Units_LW'].sum(skipna=True)\n    orders_tw = df['Orders_TW'].sum(skipna=True)\n    orders_lw = df['Orders_LW'].sum(skipna=True)\n\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"TW\",\n                  \"value\": round(float(rev_tw), 2), \"formula\": \"sum(Revenue_TW)\"})\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"LW\",\n                  \"value\": round(float(rev_lw), 2), \"formula\": \"sum(Revenue_LW)\"})\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"LY\",\n                  \"value\": round(float(rev_ly), 2), \"formula\": \"sum(Revenue_LY)\"})\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"units\", \"period\": \"TW\",\n                  \"value\": round(float(units_tw), 2), \"formula\": \"sum(Units_TW)\"})\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"units\", \"period\": \"LW\",\n                  \"value\": round(float(units_lw), 2), \"formula\": \"sum(Units_LW)\"})\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"orders\", \"period\": \"TW\",\n                  \"value\": round(float(orders_tw), 2), \"formula\": \"sum(Orders_TW)\"})\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"orders\", \"period\": \"LW\",\n                  \"value\": round(float(orders_lw), 2), \"formula\": \"sum(Orders_LW)\"})\n\n    if rev_lw and not pd.isna(rev_lw) and rev_lw != 0:\n        wow_total = (rev_tw - rev_lw) / rev_lw * 100\n        facts.append({\"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"WoW\",\n                      \"value\": round(float(wow_total), 1),\n                      \"formula\": \"(sum(Revenue_TW)-sum(Revenue_LW))/sum(Revenue_LW)*100\"})\n\n    if rev_ly and not pd.isna(rev_ly) and rev_ly != 0:\n        yoy_total = (rev_tw - rev_ly) / rev_ly * 100\n        facts.append({\"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"YoY\",\n                      \"value\": round(float(yoy_total), 1),\n                      \"formula\": \"(sum(Revenue_TW)-sum(Revenue_LY))/sum(Revenue_LY)*100\"})\n\n    # ---- Top 3 entities by this week's revenue ----\n    top3 = df.dropna(subset=['Revenue_TW']).sort_values('Revenue_TW', ascending=False).head(3)\n    for _, row in top3.iterrows():\n        facts.append({\"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"TW\",\n                      \"value\": round(float(row['Revenue_TW']), 2), \"formula\": \"Revenue_TW\"})\n        if 'Share_Pct' in df.columns and not pd.isna(row.get('Share_Pct', np.nan)):\n            facts.append({\"entity\": row['Entity'], \"metric\": \"share\", \"period\": \"TW\",\n                          \"value\": round(float(row['Share_Pct']), 1), \"formula\": \"Share_Pct\"})\n\n    # ---- Top 3 WoW gainers / decliners ----\n    wow_valid = df.dropna(subset=['WoW_Pct'])\n    gainers = wow_valid.sort_values('WoW_Pct', ascending=False).head(3)\n    decliners = wow_valid.sort_values('WoW_Pct', ascending=True).head(3)\n    for _, row in gainers.iterrows():\n        facts.append({\"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"WoW\",\n                      \"value\": round(float(row['WoW_Pct']), 1),\n                      \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"})\n    for _, row in decliners.iterrows():\n        facts.append({\"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"WoW\",\n                      \"value\": round(float(row['WoW_Pct']), 1),\n                      \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"})\n\n    # ---- Top 2 YoY gainers / decliners ----\n    yoy_valid = df.dropna(subset=['YoY_Pct'])\n    yoy_gainers = yoy_valid.sort_values('YoY_Pct', ascending=False).head(2)\n    yoy_decliners = yoy_valid.sort_values('YoY_Pct', ascending=True).head(2)\n    for _, row in yoy_gainers.iterrows():\n        facts.append({\"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"YoY\",\n                      \"value\": round(float(row['YoY_Pct']), 1),\n                      \"formula\": \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\"})\n    for _, row in yoy_decliners.iterrows():\n        facts.append({\"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"YoY\",\n                      \"value\": round(float(row['YoY_Pct']), 1),\n                      \"formula\": \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\"})\n\n    facts = facts[:25]\n\n    print(json.dumps(facts))\n\nif __name__ == \"__main__\":\n    main()\n```",
+    "input_tokens": 1083,
+    "output_tokens": 5265,
+    "cost_usd": 0.054816000000000004,
+    "latency_s": 39.694,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   },
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a list of facts that were already computed from the sales table. Use only these facts. Every number in the note must come from a fact value, copied exactly or rounded (for example \u00a312,345.67 may be written as \u00a312.3k). Do not compute new numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W23. Entity type: product.\n\nFacts (JSON):\n[\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 124910.08,\n  \"formula\": \"sum(Revenue_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LW\",\n  \"value\": 40389.09,\n  \"formula\": \"sum(Revenue_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LY\",\n  \"value\": 47115.43,\n  \"formula\": \"sum(Revenue_LY)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 30037.0,\n  \"formula\": \"sum(Units_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"LW\",\n  \"value\": 15271.0,\n  \"formula\": \"sum(Units_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 2181.0,\n  \"formula\": \"sum(Orders_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"LW\",\n  \"value\": 1506.0,\n  \"formula\": \"sum(Orders_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 209.3,\n  \"formula\": \"(sum(Revenue_TW)-sum(Revenue_LW))/sum(Revenue_LW)*100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 165.1,\n  \"formula\": \"(sum(Revenue_TW)-sum(Revenue_LY))/sum(Revenue_LY)*100\"\n },\n {\n  \"entity\": \"PICNIC BASKET WICKER 60 PIECES\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 39619.5,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"PICNIC BASKET WICKER 60 PIECES\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 31.7,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"PARTY BUNTING\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 4019.93,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"PARTY BUNTING\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 3.2,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"DOORMAT KEEP CALM AND COME IN\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 2800.73,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"DOORMAT KEEP CALM AND COME IN\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 2.2,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"DOORMAT BLACK FLOCK\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 14502.5,\n  \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"\n },\n {\n  \"entity\": \"DOORMAT UNION JACK GUNS AND ROSES\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 11548.5,\n  \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"\n },\n {\n  \"entity\": \"SET 3 WICKER OVAL BASKETS W LIDS\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 4529.2,\n  \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"\n },\n {\n  \"entity\": \"SET/4 WHITE RETRO STORAGE CUBES\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -68.1,\n  \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"\n },\n {\n  \"entity\": \"JUMBO BAG DOILEY PATTERNS\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -42.2,\n  \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"\n },\n {\n  \"entity\": \"IVORY KITCHEN SCALES\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -37.1,\n  \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"\n },\n {\n  \"entity\": \"TEA TIME PARTY BUNTING\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 2828.5,\n  \"formula\": \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\"\n },\n {\n  \"entity\": \"PAPER BUNTING VINTAGE PAISLEY\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 571.4,\n  \"formula\": \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\"\n },\n {\n  \"entity\": \"LUNCH BAG  BLACK SKULL.\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": -91.0,\n  \"formula\": \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\"\n },\n {\n  \"entity\": \"LUNCH BAG WOODLAND\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": -84.0,\n  \"formula\": \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\"\n }\n]\n\nWrite the insight note now.\n",
+    "text": "- TOTAL revenue TW was \u00a3124.9k versus LW \u00a340.4k, a WoW change of 209.3%, and versus LY \u00a347.1k, a YoY change of 165.1%.\n- TOTAL units sold TW reached 30,037 compared to LW 15,271, while orders TW were 2,181 versus LW 1,506.\n- PICNIC BASKET WICKER 60 PIECES led products with TW revenue of \u00a339.6k, representing 31.7% share of total revenue.\n- PARTY BUNTING recorded TW revenue of \u00a34.0k with a 3.2% share, and DOORMAT KEEP CALM AND COME IN posted \u00a32.8k TW revenue with a 2.2% share.\n- DOORMAT BLACK FLOCK grew 14502.5% WoW and DOORMAT UNION JACK GUNS AND ROSES grew 11548.5% WoW.\n- SET 3 WICKER OVAL BASKETS W LIDS rose 4529.2% WoW while SET/4 WHITE RETRO STORAGE CUBES fell 68.1% WoW.\n- JUMBO BAG DOILEY PATTERNS declined 42.2% WoW and IVORY KITCHEN SCALES declined 37.1% WoW.\n- TEA TIME PARTY BUNTING increased 2828.5% YoY and PAPER BUNTING VINTAGE PAISLEY increased 571.4% YoY, while LUNCH BAG BLACK SKULL. fell 91.0% YoY and LUNCH BAG WOODLAND fell 84.0% YoY.",
+    "input_tokens": 2470,
+    "output_tokens": 544,
+    "cost_usd": 0.01038,
+    "latency_s": 5.249,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [
+   {
+    "attempt": 0,
+    "code": "import sys\nimport json\nimport numpy as np\nimport pandas as pd\n\ndef main():\n    path = sys.argv[1]\n    df = pd.read_csv(path)\n\n    facts = []\n\n    # ---- Totals ----\n    rev_tw = df['Revenue_TW'].sum(skipna=True)\n    rev_lw = df['Revenue_LW'].sum(skipna=True)\n    rev_ly = df['Revenue_LY'].sum(skipna=True)\n    units_tw = df['Units_TW'].sum(skipna=True)\n    units_lw = df['Units_LW'].sum(skipna=True)\n    orders_tw = df['Orders_TW'].sum(skipna=True)\n    orders_lw = df['Orders_LW'].sum(skipna=True)\n\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"TW\",\n                  \"value\": round(float(rev_tw), 2), \"formula\": \"sum(Revenue_TW)\"})\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"LW\",\n                  \"value\": round(float(rev_lw), 2), \"formula\": \"sum(Revenue_LW)\"})\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"LY\",\n                  \"value\": round(float(rev_ly), 2), \"formula\": \"sum(Revenue_LY)\"})\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"units\", \"period\": \"TW\",\n                  \"value\": round(float(units_tw), 2), \"formula\": \"sum(Units_TW)\"})\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"units\", \"period\": \"LW\",\n                  \"value\": round(float(units_lw), 2), \"formula\": \"sum(Units_LW)\"})\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"orders\", \"period\": \"TW\",\n                  \"value\": round(float(orders_tw), 2), \"formula\": \"sum(Orders_TW)\"})\n    facts.append({\"entity\": \"TOTAL\", \"metric\": \"orders\", \"period\": \"LW\",\n                  \"value\": round(float(orders_lw), 2), \"formula\": \"sum(Orders_LW)\"})\n\n    if rev_lw and not pd.isna(rev_lw) and rev_lw != 0:\n        wow_total = (rev_tw - rev_lw) / rev_lw * 100\n        facts.append({\"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"WoW\",\n                      \"value\": round(float(wow_total), 1),\n                      \"formula\": \"(sum(Revenue_TW)-sum(Revenue_LW))/sum(Revenue_LW)*100\"})\n\n    if rev_ly and not pd.isna(rev_ly) and rev_ly != 0:\n        yoy_total = (rev_tw - rev_ly) / rev_ly * 100\n        facts.append({\"entity\": \"TOTAL\", \"metric\": \"revenue\", \"period\": \"YoY\",\n                      \"value\": round(float(yoy_total), 1),\n                      \"formula\": \"(sum(Revenue_TW)-sum(Revenue_LY))/sum(Revenue_LY)*100\"})\n\n    # ---- Top 3 entities by this week's revenue ----\n    top3 = df.dropna(subset=['Revenue_TW']).sort_values('Revenue_TW', ascending=False).head(3)\n    for _, row in top3.iterrows():\n        facts.append({\"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"TW\",\n                      \"value\": round(float(row['Revenue_TW']), 2), \"formula\": \"Revenue_TW\"})\n        if 'Share_Pct' in df.columns and not pd.isna(row.get('Share_Pct', np.nan)):\n            facts.append({\"entity\": row['Entity'], \"metric\": \"share\", \"period\": \"TW\",\n                          \"value\": round(float(row['Share_Pct']), 1), \"formula\": \"Share_Pct\"})\n\n    # ---- Top 3 WoW gainers / decliners ----\n    wow_valid = df.dropna(subset=['WoW_Pct'])\n    gainers = wow_valid.sort_values('WoW_Pct', ascending=False).head(3)\n    decliners = wow_valid.sort_values('WoW_Pct', ascending=True).head(3)\n    for _, row in gainers.iterrows():\n        facts.append({\"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"WoW\",\n                      \"value\": round(float(row['WoW_Pct']), 1),\n                      \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"})\n    for _, row in decliners.iterrows():\n        facts.append({\"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"WoW\",\n                      \"value\": round(float(row['WoW_Pct']), 1),\n                      \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"})\n\n    # ---- Top 2 YoY gainers / decliners ----\n    yoy_valid = df.dropna(subset=['YoY_Pct'])\n    yoy_gainers = yoy_valid.sort_values('YoY_Pct', ascending=False).head(2)\n    yoy_decliners = yoy_valid.sort_values('YoY_Pct', ascending=True).head(2)\n    for _, row in yoy_gainers.iterrows():\n        facts.append({\"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"YoY\",\n                      \"value\": round(float(row['YoY_Pct']), 1),\n                      \"formula\": \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\"})\n    for _, row in yoy_decliners.iterrows():\n        facts.append({\"entity\": row['Entity'], \"metric\": \"revenue\", \"period\": \"YoY\",\n                      \"value\": round(float(row['YoY_Pct']), 1),\n                      \"formula\": \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\"})\n\n    facts = facts[:25]\n\n    print(json.dumps(facts))\n\nif __name__ == \"__main__\":\n    main()\n",
+    "error": "",
+    "stdout": ", \"period\": \"TW\", \"value\": 31.7, \"formula\": \"Share_Pct\"}, {\"entity\": \"PARTY BUNTING\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 4019.93, \"formula\": \"Revenue_TW\"}, {\"entity\": \"PARTY BUNTING\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 3.2, \"formula\": \"Share_Pct\"}, {\"entity\": \"DOORMAT KEEP CALM AND COME IN\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 2800.73, \"formula\": \"Revenue_TW\"}, {\"entity\": \"DOORMAT KEEP CALM AND COME IN\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 2.2, \"formula\": \"Share_Pct\"}, {\"entity\": \"DOORMAT BLACK FLOCK\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 14502.5, \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"}, {\"entity\": \"DOORMAT UNION JACK GUNS AND ROSES\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 11548.5, \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"}, {\"entity\": \"SET 3 WICKER OVAL BASKETS W LIDS\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 4529.2, \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"}, {\"entity\": \"SET/4 WHITE RETRO STORAGE CUBES\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -68.1, \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"}, {\"entity\": \"JUMBO BAG DOILEY PATTERNS\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -42.2, \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"}, {\"entity\": \"IVORY KITCHEN SCALES\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -37.1, \"formula\": \"(Revenue_TW-Revenue_LW)/Revenue_LW*100\"}, {\"entity\": \"TEA TIME PARTY BUNTING\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": 2828.5, \"formula\": \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\"}, {\"entity\": \"PAPER BUNTING VINTAGE PAISLEY\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": 571.4, \"formula\": \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\"}, {\"entity\": \"LUNCH BAG  BLACK SKULL.\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": -91.0, \"formula\": \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\"}, {\"entity\": \"LUNCH BAG WOODLAND\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": -84.0, \"formula\": \"(Revenue_TW-Revenue_LY)/Revenue_LY*100\"}]\n"
+   }
+  ],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "facts": [
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 124910.08,
+    "formula": "sum(Revenue_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LW",
+    "value": 40389.09,
+    "formula": "sum(Revenue_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LY",
+    "value": 47115.43,
+    "formula": "sum(Revenue_LY)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "TW",
+    "value": 30037.0,
+    "formula": "sum(Units_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "LW",
+    "value": 15271.0,
+    "formula": "sum(Units_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "TW",
+    "value": 2181.0,
+    "formula": "sum(Orders_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "LW",
+    "value": 1506.0,
+    "formula": "sum(Orders_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 209.3,
+    "formula": "(sum(Revenue_TW)-sum(Revenue_LW))/sum(Revenue_LW)*100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 165.1,
+    "formula": "(sum(Revenue_TW)-sum(Revenue_LY))/sum(Revenue_LY)*100"
+   },
+   {
+    "entity": "PICNIC BASKET WICKER 60 PIECES",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 39619.5,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "PICNIC BASKET WICKER 60 PIECES",
+    "metric": "share",
+    "period": "TW",
+    "value": 31.7,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "PARTY BUNTING",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 4019.93,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "PARTY BUNTING",
+    "metric": "share",
+    "period": "TW",
+    "value": 3.2,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "DOORMAT KEEP CALM AND COME IN",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 2800.73,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "DOORMAT KEEP CALM AND COME IN",
+    "metric": "share",
+    "period": "TW",
+    "value": 2.2,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "DOORMAT BLACK FLOCK",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 14502.5,
+    "formula": "(Revenue_TW-Revenue_LW)/Revenue_LW*100"
+   },
+   {
+    "entity": "DOORMAT UNION JACK GUNS AND ROSES",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 11548.5,
+    "formula": "(Revenue_TW-Revenue_LW)/Revenue_LW*100"
+   },
+   {
+    "entity": "SET 3 WICKER OVAL BASKETS W LIDS",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 4529.2,
+    "formula": "(Revenue_TW-Revenue_LW)/Revenue_LW*100"
+   },
+   {
+    "entity": "SET/4 WHITE RETRO STORAGE CUBES",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -68.1,
+    "formula": "(Revenue_TW-Revenue_LW)/Revenue_LW*100"
+   },
+   {
+    "entity": "JUMBO BAG DOILEY PATTERNS",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -42.2,
+    "formula": "(Revenue_TW-Revenue_LW)/Revenue_LW*100"
+   },
+   {
+    "entity": "IVORY KITCHEN SCALES",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -37.1,
+    "formula": "(Revenue_TW-Revenue_LW)/Revenue_LW*100"
+   },
+   {
+    "entity": "TEA TIME PARTY BUNTING",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 2828.5,
+    "formula": "(Revenue_TW-Revenue_LY)/Revenue_LY*100"
+   },
+   {
+    "entity": "PAPER BUNTING VINTAGE PAISLEY",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 571.4,
+    "formula": "(Revenue_TW-Revenue_LY)/Revenue_LY*100"
+   },
+   {
+    "entity": "LUNCH BAG  BLACK SKULL.",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": -91.0,
+    "formula": "(Revenue_TW-Revenue_LY)/Revenue_LY*100"
+   },
+   {
+    "entity": "LUNCH BAG WOODLAND",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": -84.0,
+    "formula": "(Revenue_TW-Revenue_LY)/Revenue_LY*100"
+   }
+  ],
+  "n_calls": 2,
+  "tokens_in": 3553,
+  "tokens_out": 5809,
+  "cost_usd": 0.065196,
+  "latency_s": 44.943000000000005
+ }
+}

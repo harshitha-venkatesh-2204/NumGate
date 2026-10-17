@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led TW at £6,009.01 versus £5,319.69 LW, +13.0% WoW, holding rank 1 with 6.8% share despite orders falling from 84 LW to 67 TW.\n- ROTATING SILVER ANGELS T-LIGHT HLDR ranked 2 at £5,866.33 TW versus £750.47 LW, +681.7% WoW, on 3,382 units TW against 300 units LW.\n- PAPER CHAIN KIT 50'S CHRISTMAS rose to £4,046.96 TW from £1,385.59 LW, +192.1% WoW, while PAPER CHAIN KIT VINTAGE CHRISTMAS fell to £1,588.97 TW from £2,338.26 LW, -32.0% WoW.\n- PARTY BUNTING posted the steepest decline among the top 20, £1,078.12 TW versus £3,601.04 LW, -70.1% WoW, with orders down from 36 LW to 16 TW.\n- JUMBO BAG RED RETROSPOT fell to £2,026.70 TW from £3,423.53 LW, -40.8% WoW, and HEART OF WICKER LARGE fell to £1,142.12 TW from £2,046.89 LW, -44.2% WoW.\n- BROCADE RING PURSE gained +3,063.7% WoW to £1,052.56 TW on 5,632 units, and SET OF 3 BABUSHKA STACKING TINS gained +2,482.8% WoW to £1,406.34 TW from £54.45 LW.\n- Five products recorded £0.00 LW and sales TW: GOLD WINE GLASS £976.32 on 1 order, HAND WARMER UNION JACK £764.40, DIAMANTE HEART SHAPED WALL MIRROR £736.50, POLKADOT PEN £630.50 and HOT WATER BOTTLE BABUSHKA £621.75.\n- The top 5 products by TW revenue account for 23.9% of the 84 rows shown, and LY revenue is blank for all 84 rows, so YoY is not available for ISO week 2010-W40.",
+ "input_tokens": 6624,
+ "output_tokens": 1343,
+ "cost_usd": 0.066695,
+ "latency_s": 14.305,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

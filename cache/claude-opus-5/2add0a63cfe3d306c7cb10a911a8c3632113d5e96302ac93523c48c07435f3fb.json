@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £13.9k TW versus £11.7k LW, a WoW change of +18.6%.\n- TOTAL units came in at 3,817 TW against 3,697 LW, up 3.2% WoW, while TOTAL orders hit 223 TW, up 23.2% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £3,265.21, equal to 23.5% of TOTAL revenue TW.\n- WHITE HANGING HEART T-LIGHT HOLDER posted £3,042.82 TW (21.9% share) and ASSORTED COLOUR BIRD ORNAMENT £1,575.76 TW (11.4% share), with the top three products at 56.8% of TOTAL revenue TW.\n- CAKE STAND LOVEBIRD 2 TIER PINK recorded the largest gain at +1,441.2% WoW, worth £1,154.10 TW versus LW.\n- WHITE HANGING HEART T-LIGHT HOLDER showed the largest decline at -30.9% WoW, or -£1,362.88 TW versus LW.\n- WHITE HANGING HEART T-LIGHT HOLDER led volume TW with 1,118 units and 69 orders.\n- REGENCY CAKESTAND 3 TIER units rose 34.2% WoW and orders rose 50.0% WoW; EDWARDIAN PARASOL BLACK was the smallest listed product at £1,065.69 TW.",
+ "input_tokens": 2565,
+ "output_tokens": 511,
+ "cost_usd": 0.025599999999999998,
+ "latency_s": 6.758,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

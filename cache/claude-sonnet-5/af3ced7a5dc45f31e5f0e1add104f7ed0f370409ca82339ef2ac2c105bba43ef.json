@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £123.4k versus LW £115.7k, a WoW change of 6.6%, while LY total revenue was £0.0.\n- TOTAL units TW reached 48,375 compared to LW 38,202 units.\n- TOTAL orders TW were 3,805 versus LW 3,132 orders.\n- REGENCY CAKESTAND 3 TIER led product revenue TW at £6.55k, a 5.3% share of TOTAL revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER posted TW revenue of £6.0k, representing 4.9% share.\n- PAPER CHAIN KIT 50'S CHRISTMAS recorded TW revenue of £5.74k with a 4.6% share, ahead of PAPER CHAIN KIT VINTAGE CHRISTMAS at £2.5k and 2.0% share.\n- SET OF 20 KIDS COOKIE CUTTERS saw the largest WoW increase at 5516.8%, followed by GINGERBREAD MAN COOKIE CUTTER at 4540.4% WoW.\n- ROTATING SILVER ANGELS T-LIGHT HLDR had a WoW decline of -53.3%, with 3 HEARTS HANGING DECORATION RUSTIC down -59.2% WoW.",
+ "input_tokens": 2524,
+ "output_tokens": 456,
+ "cost_usd": 0.009608,
+ "latency_s": 4.56,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

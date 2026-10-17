@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £68.7k vs LW £50.3k, WoW up 36.6%, LY £0.0.\n- TOTAL units TW 27,550 vs LW 21,252 units.\n- TOTAL orders TW 2,250 vs LW 1,546 orders.\n- REGENCY CAKESTAND 3 TIER led products with TW revenue £4,443.21, a 6.5% share of TOTAL TW revenue.\n- PARTY BUNTING TW revenue £2,495.37, 3.6% share of TOTAL TW revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER TW revenue £1,961.04, 2.9% share of TOTAL TW revenue.\n- GIANT BLACK SUNGLASSES WoW change 33,823.1%, the largest WoW gain among products.\n- PINK AND LILAC QUILTED THROW TW revenue £1,825.90 with 2.7% share and WoW change 3,873.7%.",
+ "input_tokens": 2412,
+ "output_tokens": 368,
+ "cost_usd": 0.008504000000000001,
+ "latency_s": 4.117,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

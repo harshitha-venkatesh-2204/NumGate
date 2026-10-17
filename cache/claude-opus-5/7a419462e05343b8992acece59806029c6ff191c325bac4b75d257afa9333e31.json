@@ -1,0 +1,10 @@
+{
+ "text": "- EMPIRE DESIGN ROSETTE ranked 1 at £3,277.92 TW versus £12.50 LW and £12.50 LY, with 3,966 units TW against 10 units LW (WoW +26,123.4%, YoY +26,123.4%).\n- REGENCY CAKESTAND 3 TIER held rank 2 at £2,529.33 TW versus £4,651.74 LW (WoW -45.6%), with 204 units TW against 400 LW and 33 orders in both TW and LW.\n- ASSORTED COLOUR MINI CASES reached £1,551.15 TW versus £71.55 LW (WoW +2,067.9%) and £147.75 LY (YoY +949.8%), at 2.3% share.\n- WHITE HANGING HEART T-LIGHT HOLDER posted £1,119.63 TW versus £1,000.83 LW (WoW +11.9%) and £2,501.43 LY (YoY -55.2%), on 401 units TW.\n- VINTAGE UNION JACK BUNTING recorded £1,111.39 TW versus £1,200.77 LW (WoW -7.4%) and £697.00 LY (YoY +59.5%), while PARTY BUNTING was £859.79 TW versus £390.27 LY (YoY +120.3%).\n- CHILLI LIGHTS fell to £487.56 TW from £1,588.33 LW (WoW -69.3%), JUMBO STORAGE BAG SUKI to £328.92 from £948.16 LW (WoW -65.3%, YoY -20.4%), and JAM MAKING SET WITH JARS to £502.74 from £1,332.70 LW (WoW -62.3%).\n- Three lines sold with £0.00 LW: CHILDRENS CUTLERY POLKADOT GREEN £357.14 TW on 92 units, RUSTIC SEVENTEEN DRAWER SIDEBOARD £330.00 TW on 2 units and 2 orders, and CAMOUFLAGE DESIGN TEDDY £302.40 TW on 144 units in 1 order.\n- JUMBO BAG RED RETROSPOT ranked 4 at £1,482.34 TW versus £1,732.75 LW (WoW -14.5%), with 810 units TW against 985 LW and 2.2% share of TW revenue.",
+ "input_tokens": 12275,
+ "output_tokens": 1056,
+ "cost_usd": 0.08777499999999999,
+ "latency_s": 11.186,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

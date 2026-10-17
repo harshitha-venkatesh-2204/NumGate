@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue of £3,041.70 versus £2,116.26 LW (WoW +43.7%) and £1,290.45 LY (YoY +135.7%), taking a 5.4% share of TW revenue.\n- PARTY BUNTING holds rank 2 at £2,327.02 TW against £4,652.41 LW (WoW -50.0%), while still sitting above its LY level of £1,454.81 (YoY +60.0%), with units at 434 TW versus 839 LW.\n- BLACK RECORD COVER FRAME enters rank 3 at £1,708.56 TW from £0.00 LW, on 504 units across 4 orders TW, versus £197.61 LY (YoY +764.6%).\n- WHITE HANGING HEART T-LIGHT HOLDER posts £1,691.11 TW versus £3,154.66 LW (WoW -46.4%) and £1,540.94 LY (YoY +9.7%), with 629 units TW against 1,026 LW.\n- HEART OF WICKER LARGE falls to £637.65 TW from £2,562.85 LW (WoW -75.1%) and HEART OF WICKER SMALL to £736.41 from £2,253.17 LW (WoW -67.3%), both above LY at £401.27 and £446.83 (YoY +58.9% and +64.8%).\n- SMALL POPCORN HOLDER records £422.63 TW versus £3,331.18 LW (WoW -87.3%), with units down to 533 TW from 4,562 LW, against £127.30 LY (YoY +232.0%).\n- SET/4 WHITE RETRO STORAGE CUBES reaches £1,123.52 TW from £79.90 LW (WoW +1,306.2%) on 30 units TW versus 2 LW, and £449.35 LY (YoY +150.0%).\n- JUMBO BAG RED RETROSPOT declines to £579.84 TW from £1,802.34 LW (WoW -67.8%) and £1,326.50 LY (YoY -56.3%), ranking 23 with a 1.0% share TW.",
+ "input_tokens": 9218,
+ "output_tokens": 1365,
+ "cost_usd": 0.08021500000000001,
+ "latency_s": 14.449,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

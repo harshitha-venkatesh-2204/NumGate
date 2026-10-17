@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £58,838.41 TW, representing a +48.9% WoW increase from £39,528.47 LW.\n- Total revenue grew +350.9% YoY, demonstrating significant year-over-year expansion in week 2011-W06.\n- VINTAGE UNION JACK MEMOBOARD dominated TW with £6,500.69 revenue and 11.0% share, driven by a +65233.6% WoW surge from £9.95 LW.\n- CREAM HEART CARD HOLDER ranked second TW with £2,403.53 revenue and 4.1% share, posting a +910.8% WoW increase.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN achieved third place TW with £2,319.75 revenue and 3.9% share, up +3766.2% WoW.\n- ASSORTED COLOUR BIRD ORNAMENT experienced the largest WoW decline, falling -80.3% to £281.84 TW from £1,429.93 LW.\n- BASKET OF FLOWERS SEWING KIT recorded the largest YoY increase at +1707.1%, reaching £10.20 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the most orders at 31 TW, down from 48 LW.",
+ "input_tokens": 664,
+ "output_tokens": 330,
+ "cost_usd": 0.002314,
+ "latency_s": 3.475,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

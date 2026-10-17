@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue TW was £61.8k versus LW £55.3k, a WoW increase of 11.8%.\n- Total units TW reached 21,178 compared to 18,670 LW, while orders were nearly flat at 1,154 TW versus 1,153 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER led all products TW with £8.4k revenue, a 13.6% share and rank 1.\n- EDWARDIAN PARASOL BLACK ranked second in TW revenue at £3.4k, holding a 5.6% share.\n- FAIRY CAKE CANDLES generated £3.1k TW revenue with a 5.0% share, closely followed by RED/WHITE DOTS RUFFLED UMBRELLA at £3.0k and 4.9% share.\n- EDWARDIAN PARASOL NATURAL posted £2.9k TW revenue, a 4.7% share.\n- BLACK RECORD COVER FRAME had the largest WoW revenue increase at 185.5%, followed by WILLOW BRANCH LIGHTS at 185.0% WoW.\n- PAPER CHAIN KIT 50'S CHRISTMAS saw the steepest WoW decline at -61.8%, with WHITE CHERRY LIGHTS down 54.1% WoW.",
+ "input_tokens": 2189,
+ "output_tokens": 446,
+ "cost_usd": 0.008838,
+ "latency_s": 4.55,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,42 @@
+{
+ "note_id": "medium_product_2010-W11__S4__claude-sonnet-5__r1",
+ "table_id": "medium_product_2010-W11",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W11",
+ "n_rows": 28,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a336,150.11 TW versus \u00a316,270.60 LW, a WoW change of +122.2%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 with revenue \u00a33,952.80 TW, a 10.9% share TW, and a WoW change of +67.1%.\n- ENGLISH ROSE DESIGN QUILTED THROW ranked 2 with revenue \u00a32,982.60 TW, an 8.3% share TW, and a WoW change of -11.4%.\n- REGENCY CAKESTAND 3 TIER ranked 3 with revenue \u00a32,511.24 TW and an 8.3% to 6.9% share TW.\n- SET/6 WOODLAND PAPER CUPS posted the largest WoW increase, rising from \u00a33.32 LW to \u00a31,301.70 TW, a WoW change of +39107.8%.\n- ASSORTED COLOUR BIRD ORNAMENT posted the largest WoW decrease, falling from \u00a31,444.53 LW to \u00a31,014.63 TW, a WoW change of -29.8%.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders, with 57 TW compared to 63 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W11. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a336,150.11 TW, revenue \u00a316,270.60 LW, revenue change +122.2% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 1, revenue \u00a33,952.80 TW, share 10.9% TW, revenue change +67.1% WoW\n- ENGLISH ROSE DESIGN QUILTED THROW: rank 2, revenue \u00a32,982.60 TW, share 8.3% TW, revenue change -11.4% WoW\n- REGENCY CAKESTAND 3 TIER: rank 3, revenue \u00a32,511.24 TW, share 6.9% TW\n- SET/6 WOODLAND PAPER CUPS (largest WoW increase): revenue change +39107.8% WoW, revenue \u00a31,301.70 TW versus \u00a33.32 LW\n- ASSORTED COLOUR BIRD ORNAMENT (largest WoW decrease): revenue change -29.8% WoW, revenue \u00a31,014.63 TW versus \u00a31,444.53 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 57 TW versus 63 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a336,150.11 TW versus \u00a316,270.60 LW, a WoW change of +122.2%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 with revenue \u00a33,952.80 TW, a 10.9% share TW, and a WoW change of +67.1%.\n- ENGLISH ROSE DESIGN QUILTED THROW ranked 2 with revenue \u00a32,982.60 TW, an 8.3% share TW, and a WoW change of -11.4%.\n- REGENCY CAKESTAND 3 TIER ranked 3 with revenue \u00a32,511.24 TW and an 8.3% to 6.9% share TW.\n- SET/6 WOODLAND PAPER CUPS posted the largest WoW increase, rising from \u00a33.32 LW to \u00a31,301.70 TW, a WoW change of +39107.8%.\n- ASSORTED COLOUR BIRD ORNAMENT posted the largest WoW decrease, falling from \u00a31,444.53 LW to \u00a31,014.63 TW, a WoW change of -29.8%.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders, with 57 TW compared to 63 LW.",
+    "input_tokens": 742,
+    "output_tokens": 418,
+    "cost_usd": 0.005664,
+    "latency_s": 3.895,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a336,150.11 TW, revenue \u00a316,270.60 LW, revenue change +122.2% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 1, revenue \u00a33,952.80 TW, share 10.9% TW, revenue change +67.1% WoW\n- ENGLISH ROSE DESIGN QUILTED THROW: rank 2, revenue \u00a32,982.60 TW, share 8.3% TW, revenue change -11.4% WoW\n- REGENCY CAKESTAND 3 TIER: rank 3, revenue \u00a32,511.24 TW, share 6.9% TW\n- SET/6 WOODLAND PAPER CUPS (largest WoW increase): revenue change +39107.8% WoW, revenue \u00a31,301.70 TW versus \u00a33.32 LW\n- ASSORTED COLOUR BIRD ORNAMENT (largest WoW decrease): revenue change -29.8% WoW, revenue \u00a31,014.63 TW versus \u00a31,444.53 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 57 TW versus 63 LW",
+  "n_calls": 1,
+  "tokens_in": 742,
+  "tokens_out": 418,
+  "cost_usd": 0.005664,
+  "latency_s": 3.895
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £25,218.52 TW versus £32,627.63 LW, a WoW change of -22.7%, and a YoY change of +37.6%.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 1 with revenue £5,701.16 TW, a 22.6% share TW, and a WoW change of -39.9%.\n- RABBIT NIGHT LIGHT ranked 2 with revenue £5,084.81 TW, a 20.2% share TW, and a WoW change of -52.4%.\n- CHILLI LIGHTS ranked 3 with revenue £4,960.25 TW, a 19.7% share TW, and a WoW change of +115.0%.\n- CHILLI LIGHTS posted the largest WoW increase, rising from £2,307.01 LW to £4,960.25 TW, a +115.0% WoW change.\n- RABBIT NIGHT LIGHT posted the largest WoW decrease, falling from £10,687.69 LW to £5,084.81 TW, a -52.4% WoW change.\n- CHILLI LIGHTS recorded the largest YoY increase at +229.3%, up from £1,506.40 LY.\n- REGENCY CAKESTAND 3 TIER recorded the largest YoY decrease at -45.9%, down from £6,552.99 LY.",
+ "input_tokens": 834,
+ "output_tokens": 455,
+ "cost_usd": 0.0062180000000000004,
+ "latency_s": 4.048,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,41 @@
+{
+ "note_id": "small_product_2010-W20__S1__claude-opus-5__r1",
+ "table_id": "small_product_2010-W20",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W20",
+ "n_rows": 7,
+ "strategy": "S1",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- WHITE HANGING HEART T-LIGHT HOLDER led TW at \u00a33,388.78, up 14.4% WoW from \u00a32,963.43 LW, holding 20.2% share at Rank 1.\n- WOODEN SKITTLES GARDEN SET reached \u00a32,650.90 TW versus \u00a3468.85 LW, a 465.4% WoW rise, taking Rank 2 with 15.8% share.\n- PACK OF 12 SUKI TISSUES moved to \u00a32,573.71 TW from \u00a342.63 LW, a 5,937.3% WoW change, with units at 5,247 TW against 147 LW.\n- PACK OF 12 HEARTS DESIGN TISSUES posted \u00a32,504.11 TW versus \u00a340.47 LW, up 6,087.6% WoW, on 5 orders TW compared with 6 LW.\n- WOODEN CROQUET GARDEN SET recorded \u00a32,232.33 TW against \u00a3322.65 LW, up 591.9% WoW, with orders rising from 14 LW to 25 TW.\n- PARTY BUNTING reported \u00a32,110.88 TW versus \u00a31,877.24 LW, up 12.4% WoW, with units at 450 TW against 442 LW.\n- PACK OF 12 PINK SPOT TISSUES ranked 7 at \u00a31,279.52 TW versus \u00a342.05 LW, a 2,942.9% WoW change and 7.6% share.\n- No LY revenue is recorded for any of the 7 products, so YoY is unavailable across the table for ISO week 2010-W20.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W20. Entity type: product. The table has 7 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| WHITE HANGING HEART T-LIGHT HOLDER | 3388.78 | 2963.43 |  | 1258 | 1105 | 62 | 55 | 14.4 |  | 20.2 | 1 |\n| WOODEN SKITTLES GARDEN SET | 2650.90 | 468.85 |  | 230 | 31 | 18 | 17 | 465.4 |  | 15.8 | 2 |\n| PACK OF 12 SUKI TISSUES | 2573.71 | 42.63 |  | 5247 | 147 | 13 | 5 | 5937.3 |  | 15.4 | 3 |\n| PACK OF 12 HEARTS DESIGN TISSUES | 2504.11 | 40.47 |  | 5007 | 127 | 5 | 6 | 6087.6 |  | 15.0 | 4 |\n| WOODEN CROQUET GARDEN SET | 2232.33 | 322.65 |  | 239 | 27 | 25 | 14 | 591.9 |  | 13.3 | 5 |\n| PARTY BUNTING | 2110.88 | 1877.24 |  | 450 | 442 | 35 | 36 | 12.4 |  | 12.6 | 6 |\n| PACK OF 12 PINK SPOT TISSUES | 1279.52 | 42.05 |  | 2600 | 145 | 8 | 2 | 2942.9 |  | 7.6 | 7 |\n\nWrite the insight note now.\n",
+    "text": "- WHITE HANGING HEART T-LIGHT HOLDER led TW at \u00a33,388.78, up 14.4% WoW from \u00a32,963.43 LW, holding 20.2% share at Rank 1.\n- WOODEN SKITTLES GARDEN SET reached \u00a32,650.90 TW versus \u00a3468.85 LW, a 465.4% WoW rise, taking Rank 2 with 15.8% share.\n- PACK OF 12 SUKI TISSUES moved to \u00a32,573.71 TW from \u00a342.63 LW, a 5,937.3% WoW change, with units at 5,247 TW against 147 LW.\n- PACK OF 12 HEARTS DESIGN TISSUES posted \u00a32,504.11 TW versus \u00a340.47 LW, up 6,087.6% WoW, on 5 orders TW compared with 6 LW.\n- WOODEN CROQUET GARDEN SET recorded \u00a32,232.33 TW against \u00a3322.65 LW, up 591.9% WoW, with orders rising from 14 LW to 25 TW.\n- PARTY BUNTING reported \u00a32,110.88 TW versus \u00a31,877.24 LW, up 12.4% WoW, with units at 450 TW against 442 LW.\n- PACK OF 12 PINK SPOT TISSUES ranked 7 at \u00a31,279.52 TW versus \u00a342.05 LW, a 2,942.9% WoW change and 7.6% share.\n- No LY revenue is recorded for any of the 7 products, so YoY is unavailable across the table for ISO week 2010-W20.",
+    "input_tokens": 1165,
+    "output_tokens": 526,
+    "cost_usd": 0.018975,
+    "latency_s": 6.796,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1165,
+  "tokens_out": 526,
+  "cost_usd": 0.018975,
+  "latency_s": 6.796
+ }
+}

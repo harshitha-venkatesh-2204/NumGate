@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £27.9k vs LW £13.6k vs LY £12.1k, WoW change 104.89%, YoY change 130.09%.\n- TOTAL units TW 11,366 vs LW 3,905; TOTAL orders TW 564 vs LW 297.\n- PARTY BUNTING ranked 1 with TW revenue £5.2k, an 18.7% share of TOTAL TW revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with TW revenue £3.1k, a 10.9% share of TOTAL TW revenue.\n- REGENCY CAKESTAND 3 TIER ranked 3 with TW revenue £2.1k, a 7.6% share of TOTAL TW revenue.\n- SPOTTY BUNTING ranked 4 with TW revenue £1.4k, a 5.1% share of TOTAL TW revenue.\n- BLACK RECORD COVER FRAME ranked 5 with TW revenue £1.4k, a 4.8% share of TOTAL TW revenue.\n- SMALL CHINESE STYLE SCISSOR recorded a WoW revenue change of 19,919.50%.",
+ "input_tokens": 2260,
+ "output_tokens": 412,
+ "cost_usd": 0.00864,
+ "latency_s": 3.752,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

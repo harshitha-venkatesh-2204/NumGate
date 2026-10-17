@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £162.3k TW versus £159.0k LW, a WoW change of +2.1%.\n- TOTAL units came in",
+ "input_tokens": 2295,
+ "output_tokens": 50,
+ "cost_usd": 0.012725,
+ "latency_s": 1.999,
+ "model": "claude-opus-5",
+ "stop_reason": "refusal",
+ "max_tokens": 16000
+}

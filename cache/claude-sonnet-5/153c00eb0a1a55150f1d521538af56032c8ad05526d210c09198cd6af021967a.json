@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £65.4k versus LW £38.6k, a WoW change of 69.4%.\n- TOTAL revenue TW £65.4k compares to LY £23.0k, a YoY change of 183.9%.\n- TOTAL units sold TW reached 35,746 versus LW 17,651.\n- TOTAL orders TW totaled 1,478 compared to LW 1,290.\n- REGENCY CAKESTAND 3 TIER led products with TW revenue of £3,740.45 and a 5.7% share.\n- PARTY BUNTING followed with TW revenue of £2,843.54, a 4.4% share, ahead of JUMBO BAG RED RETROSPOT at £2,718.16 and 4.2% share.\n- BAKING MOULD TOFFEE CUP CHOCOLATE posted the largest WoW increase at 7855.9%, while PACK OF 12 SKULL TISSUES rose 3954.3% WoW.\n- CHILLI LIGHTS declined 56.7% WoW and CHARLOTTE BAG SUKI DESIGN fell 55.9% WoW.",
+ "input_tokens": 2372,
+ "output_tokens": 385,
+ "cost_usd": 0.008594000000000001,
+ "latency_s": 4.069,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

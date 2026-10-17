@@ -1,0 +1,42 @@
+{
+ "note_id": "medium_product_2011-W10__S4__claude-opus-5__r1",
+ "table_id": "medium_product_2011-W10",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2011-W10",
+ "n_rows": 39,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a332,891.80 TW against \u00a319,857.32 LW, a change of +65.6% WoW and +245.6% YoY.\n- REGENCY CAKESTAND 3 TIER held rank 1 with \u00a32,616.00 TW and an 8.0% share TW, a change of -36.1% WoW.\n- CHILLI LIGHTS took rank 2 with \u00a31,516.30 TW and a 4.6% share TW, a change of +621.7% WoW.\n- HEART OF WICKER SMALL placed rank 3 with \u00a31,365.96 TW and a 4.2% share TW, a change of +300.0% WoW.\n- CHARLOTTE BAG SUKI DESIGN posted the largest WoW increase at +1286.1% WoW, moving from \u00a363.26 LW to \u00a3876.84 TW.\n- VINTAGE UNION JACK BUNTING posted the largest WoW decrease at -64.8% WoW, moving from \u00a32,288.50 LW to \u00a3805.26 TW.\n- DOORMAT HEARTS recorded the largest YoY increase at +5323.2% YoY from a base of \u00a313.50 LY, while WHITE HANGING HEART T-LIGHT HOLDER recorded the largest YoY decrease at -47.2% YoY from \u00a32,365.84 LY.\n- SET OF 3 CAKE TINS PANTRY DESIGN led on order count with 47 orders TW versus 45 orders LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W10. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a332,891.80 TW, revenue \u00a319,857.32 LW, revenue change +65.6% WoW, revenue change +245.6% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a32,616.00 TW, share 8.0% TW, revenue change -36.1% WoW\n- CHILLI LIGHTS: rank 2, revenue \u00a31,516.30 TW, share 4.6% TW, revenue change +621.7% WoW\n- HEART OF WICKER SMALL: rank 3, revenue \u00a31,365.96 TW, share 4.2% TW, revenue change +300.0% WoW\n- CHARLOTTE BAG SUKI DESIGN (largest WoW increase): revenue change +1286.1% WoW, revenue \u00a3876.84 TW versus \u00a363.26 LW\n- VINTAGE UNION JACK BUNTING (largest WoW decrease): revenue change -64.8% WoW, revenue \u00a3805.26 TW versus \u00a32,288.50 LW\n- DOORMAT HEARTS (largest YoY increase): revenue change +5323.2% YoY, revenue \u00a313.50 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (largest YoY decrease): revenue change -47.2% YoY, revenue \u00a32,365.84 LY\n- SET OF 3 CAKE TINS PANTRY DESIGN (most orders): orders 47 TW versus 45 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a332,891.80 TW against \u00a319,857.32 LW, a change of +65.6% WoW and +245.6% YoY.\n- REGENCY CAKESTAND 3 TIER held rank 1 with \u00a32,616.00 TW and an 8.0% share TW, a change of -36.1% WoW.\n- CHILLI LIGHTS took rank 2 with \u00a31,516.30 TW and a 4.6% share TW, a change of +621.7% WoW.\n- HEART OF WICKER SMALL placed rank 3 with \u00a31,365.96 TW and a 4.2% share TW, a change of +300.0% WoW.\n- CHARLOTTE BAG SUKI DESIGN posted the largest WoW increase at +1286.1% WoW, moving from \u00a363.26 LW to \u00a3876.84 TW.\n- VINTAGE UNION JACK BUNTING posted the largest WoW decrease at -64.8% WoW, moving from \u00a32,288.50 LW to \u00a3805.26 TW.\n- DOORMAT HEARTS recorded the largest YoY increase at +5323.2% YoY from a base of \u00a313.50 LY, while WHITE HANGING HEART T-LIGHT HOLDER recorded the largest YoY decrease at -47.2% YoY from \u00a32,365.84 LY.\n- SET OF 3 CAKE TINS PANTRY DESIGN led on order count with 47 orders TW versus 45 orders LW.",
+    "input_tokens": 845,
+    "output_tokens": 600,
+    "cost_usd": 0.019225,
+    "latency_s": 6.703,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a332,891.80 TW, revenue \u00a319,857.32 LW, revenue change +65.6% WoW, revenue change +245.6% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a32,616.00 TW, share 8.0% TW, revenue change -36.1% WoW\n- CHILLI LIGHTS: rank 2, revenue \u00a31,516.30 TW, share 4.6% TW, revenue change +621.7% WoW\n- HEART OF WICKER SMALL: rank 3, revenue \u00a31,365.96 TW, share 4.2% TW, revenue change +300.0% WoW\n- CHARLOTTE BAG SUKI DESIGN (largest WoW increase): revenue change +1286.1% WoW, revenue \u00a3876.84 TW versus \u00a363.26 LW\n- VINTAGE UNION JACK BUNTING (largest WoW decrease): revenue change -64.8% WoW, revenue \u00a3805.26 TW versus \u00a32,288.50 LW\n- DOORMAT HEARTS (largest YoY increase): revenue change +5323.2% YoY, revenue \u00a313.50 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (largest YoY decrease): revenue change -47.2% YoY, revenue \u00a32,365.84 LY\n- SET OF 3 CAKE TINS PANTRY DESIGN (most orders): orders 47 TW versus 45 LW",
+  "n_calls": 1,
+  "tokens_in": 845,
+  "tokens_out": 600,
+  "cost_usd": 0.019225,
+  "latency_s": 6.703
+ }
+}

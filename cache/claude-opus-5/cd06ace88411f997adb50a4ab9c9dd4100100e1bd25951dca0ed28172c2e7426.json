@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £88.5k in TW versus £60.8k in LW, a WoW increase of 45.6%.\n- TOTAL units hit 51,065 in TW, up 105.8% WoW, while TOTAL orders reached 2,019, up 4.7% WoW.\n- REGENCY CAKESTAND 3 TIER led TW with £6,009.01 in revenue, a 6.8% share of TOTAL.\n- ROTATING SILVER ANGELS T-LIGHT HLDR posted £5,866.33 in TW (6.6% share) and added £5,115.86 WoW, the largest absolute gain.\n- PAPER CHAIN KIT 50'S CHRISTMAS delivered £4,046.96 in TW (4.6% share) with a WoW gain of £2,661.37.\n- WHITE HANGING HEART T-LIGHT HOLDER took £2,754.49 and CHILLI LIGHTS £2,473.89 in TW, with the top 5 products at 23.9% of TOTAL revenue.\n- PARTY BUNTING fell £2,522.92 WoW (-70.1%) and JUMBO BAG RED RETROSPOT fell £1,396.83 WoW, while HEART OF WICKER LARGE declined 44.2% WoW.\n- SET OF 3 BABUSHKA STACKING TINS rose 2,482.8% WoW and BLACK RECORD COVER FRAME rose 1,445.8% WoW; BROCADE RING PURSE was the TW unit leader at 5,632 units.",
+ "input_tokens": 2517,
+ "output_tokens": 534,
+ "cost_usd": 0.025935,
+ "latency_s": 6.38,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

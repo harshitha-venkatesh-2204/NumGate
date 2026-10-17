@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER ranks 1 of 106 products TW with £3388.78 revenue, up from £2963.43 LW, a WoW increase of 14.4%.\n- WOODEN SKITTLES GARDEN SET revenue rose to £2650.90 TW from £468.85 LW, a WoW gain of 465.4%, holding rank 2 with 4.1% share.\n- PACK OF 12 HEARTS DESIGN TISSUES jumped to £2504.11 TW from £40.47 LW, a WoW increase of 6087.6%.\n- SOMBRERO revenue climbed to £1000.00 TW from £1.95 LW, a WoW increase of 51182.1%, moving to rank 12.\n- RETRO SPOT TEA SET CERAMIC 11 PC fell to £337.72 TW from £2071.74 LW, a WoW decline of 83.7%.\n- LUNCH BAG SUKI DESIGN dropped to £303.07 TW from £1424.37 LW, a WoW decline of 78.7%.\n- REGENCY CAKESTAND 3 TIER decreased to £407.96 TW from £1647.56 LW, a WoW decline of 75.2%.\n- Across the 106 products listed, the top 6 by TW revenue together hold 24.0% share, led by WHITE HANGING HEART T-LIGHT HOLDER at 5.2% share.",
+ "input_tokens": 8751,
+ "output_tokens": 537,
+ "cost_usd": 0.022872,
+ "latency_s": 4.463,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

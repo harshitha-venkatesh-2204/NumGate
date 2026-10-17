@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue TW was £44.3k against £59.7k LW, a WoW change of -25.9%.\n- Total revenue TW of £44.3k compares with £29.5k LY, a YoY change of +49.9%.\n- TOTAL volume TW reached 15,986 units across 997 orders.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £2,729.22, a 6.2% share of TW revenue, and the top 5 products together held 25.6% of TW revenue.\n- PAPER CHAIN KIT 50'S CHRISTMAS took £2,342.01 TW, FELTCRAFT DOLL MOLLY £2,289.28 TW and DOORMAT KEEP CALM AND COME IN £2,068.84 TW.\n- PAPER LANTERN 9 POINT DELUXE STAR rose +1,841.1% WoW, RED WOOLLY HOTTIE WHITE HEART. +388.8% WoW and WHITE HANGING HEART T-LIGHT HOLDER +275.8% WoW on £1,893.01 TW.\n- JUMBO BAG PINK POLKADOT fell -71.9% WoW, DOORMAT KEEP CALM AND COME IN -66.1% WoW and JUMBO BAG RED RETROSPOT -62.3% WoW.\n- FELTCRAFT DOLL MOLLY was +934.6% YoY and FELTCRAFT BUTTERFLY HEARTS +573.2% YoY, while ASSORTED COLOUR BIRD ORNAMENT was -79.6% YoY and PARTY BUNTING -54.2% YoY.",
+ "input_tokens": 2588,
+ "output_tokens": 570,
+ "cost_usd": 0.02719,
+ "latency_s": 6.629,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

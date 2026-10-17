@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led TW at £6,552.99 (18.6% share, Rank 1), down 8.3% WoW from £7,144.93 LW; LY not available, so no YoY.\n- WHITE HANGING HEART T-LIGHT HOLDER rose 125.6% WoW to £5,999.53 TW from £2,659.73 LW, with units up from 891 LW to 2,155 TW.\n- PAPER CHAIN KIT 50'S CHRISTMAS fell 36.4% WoW to £5,735.62 TW from £9,020.33 LW, while units were near flat at 1,756 TW versus 1,791 LW.\n- HOT WATER BOTTLE BABUSHKA gained 113.1% WoW to £3,215.95 TW from £1,509.10 LW, with orders at 49 TW versus 40 LW.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS declined 34.0% WoW to £2,500.80 TW from £3,791.87 LW, holding 7.1% share at Rank 5.\n- Four hot water bottle lines (BABUSHKA, TEA AND SYMPATHY, CHOCOLATE, SCOTTIE DOG) totalled £10,026.05 TW versus £7,084.76 LW, a 41.5% WoW increase.\n- JUMBO BAG RED RETROSPOT was the flattest line at £2,221.19 TW versus £2,189.34 LW, up 1.5% WoW on 1,223 units TW.\n- HAND WARMER SCOTTY DOG DESIGN ranked 10 at £2,126.08 TW, down 29.1% WoW from £2,998.66 LW, with units at 977 TW versus 1,173 LW; LY revenue is blank for all 10 rows, so YoY is unavailable.",
+ "input_tokens": 1414,
+ "output_tokens": 634,
+ "cost_usd": 0.02292,
+ "latency_s": 7.414,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

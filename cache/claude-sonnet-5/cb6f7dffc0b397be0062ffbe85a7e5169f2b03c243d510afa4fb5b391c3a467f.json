@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £67,441.41 TW versus £50,908.88 LW, a WoW change of +32.5%, and versus LY the change was +214.4% YoY.\n- EMPIRE DESIGN ROSETTE ranked 1 with revenue £3,277.92 TW, a 4.9% share TW, and the largest WoW increase at +26123.4%, up from £12.50 LW.\n- EMPIRE DESIGN ROSETTE also posted the largest YoY increase at +26123.4%, rising from £12.50 LY.\n- REGENCY CAKESTAND 3 TIER ranked 2 with revenue £2,529.33 TW, a 3.8% share TW, and a WoW change of -45.6%.\n- ASSORTED COLOUR MINI CASES ranked 3 with revenue £1,551.15 TW, a 2.3% share TW, and a WoW change of +2067.9%.\n- CHILLI LIGHTS recorded the largest WoW decrease at -69.3%, falling from £1,588.33 LW to £487.56 TW.\n- SET/4 WHITE RETRO STORAGE CUBES recorded the largest YoY decrease at -70.8%, down from £1,198.25 LY.\n- HEART OF WICKER SMALL had the most orders with 39 TW compared to 26 LW.",
+ "input_tokens": 844,
+ "output_tokens": 454,
+ "cost_usd": 0.006228,
+ "latency_s": 4.366,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

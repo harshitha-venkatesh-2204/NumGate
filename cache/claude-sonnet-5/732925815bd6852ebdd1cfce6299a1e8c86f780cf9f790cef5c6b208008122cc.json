@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £109,203.35 TW versus £88,233.35 LW, a WoW change of +23.8%, and versus LY, a YoY change of +116.5%.\n- RABBIT NIGHT LIGHT ranked 1 TW with revenue £10,739.38 and a share of 9.8% TW.\n- ALARM CLOCK BAKELIKE RED ranked 2 TW with revenue £2,423.41 and a share of 2.2% TW.\n- CHILLI LIGHTS ranked 3 TW with revenue £2,285.12 and a share of 2.1% TW.\n- RABBIT NIGHT LIGHT posted the largest WoW increase, up +18473.8% WoW, rising from £57.82 LW to £10,739.38 TW.\n- LANDMARK FRAME OXFORD STREET posted the largest WoW decrease, down -88.8% WoW, falling from £3,753.90 LW to £418.90 TW.\n- CHRISTMAS CRAFT WHITE FAIRY recorded the largest YoY increase at +28727.6% YoY, up from £1.45 LY.\n- RED HANGING HEART T-LIGHT HOLDER recorded the largest YoY decrease at -85.5% YoY, down from £2,774.28 LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS had the most orders, with 64 orders TW versus 48 orders LW.",
+ "input_tokens": 855,
+ "output_tokens": 490,
+ "cost_usd": 0.0066099999999999996,
+ "latency_s": 4.596,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

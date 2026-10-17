@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £27.9k TW versus £13.6k LW, a WoW change of 104.89%.\n- TOTAL revenue TW of £27.9k compares to £12.1k LY, a YoY change of 130.09%.\n- TOTAL units sold rose to 11,366 TW from 3,905 LW.\n- TOTAL orders increased to 564 TW from 297 LW.\n- PARTY BUNTING led all products TW with £5.2k revenue, an 18.7% share, ranked 1.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 TW with £3.1k revenue and a 10.9% share.\n- REGENCY CAKESTAND 3 TIER ranked 3 TW with £2.1k revenue and a 7.6% share.\n- SMALL CHINESE STYLE SCISSOR revenue grew 19919.5% WoW.",
+ "input_tokens": 2220,
+ "output_tokens": 309,
+ "cost_usd": 0.00753,
+ "latency_s": 3.449,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

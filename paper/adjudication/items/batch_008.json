@@ -1,0 +1,1016 @@
+[
+ {
+  "item_id": "it0421",
+  "table_csv": "data/tables/small_product_2010-W26.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER generated £4554.09 in revenue TW, the highest among all products, representing 24.3% share of total revenue and growing 85.4% WoW from £2456.32 LW.",
+   "2: - PAPER CHAIN KIT SKULLS achieved the largest WoW growth at 3983.9%, increasing from £35.40 LW to £1445.70 TW, though it ranks 8th by revenue share at 7.7%.",
+   "3: - PAPER BUNTING RETRO SPOTS showed 160.0% WoW revenue growth, rising from £871.55 LW to £2266.34 TW with 846 units sold TW compared to 269 units LW.",
+   "4: - WHITE HANGING HEART T-LIGHT HOLDER maintained the second-highest revenue at £3214.95 TW with 1209 units sold, up 47.9% WoW from £2173.03 LW.",
+   "5: - PAPER CHAIN KIT RETRO SPOT surged 708.2% WoW in revenue, from £194.74 LW to £1573.81 TW, with units increasing from 62 LW to 603 TW.",
+   "6: - JUMBO BAG RED RETROSPOT generated £2489.35 TW with 1405 units sold, representing 13.3% revenue share and growing 78.8% WoW from £1392.22 LW.",
+   "7: - VINTAGE UNION JACK BUNTING and JUMBO BAG STRAWBERRY both more than doubled WoW revenue, at 106.9% and 101.2% growth respectively, reaching £1688.33 and £1544.16 TW.",
+   "8: - Total revenue across all eight products TW reached £18776.73, with all products showing positive WoW growth and order counts ranging from 3 to 59 orders TW."
+  ],
+  "line": 8,
+  "number": "59",
+  "char_offset_in_line": 145
+ },
+ {
+  "item_id": "it0422",
+  "table_csv": "data/tables/medium_product_2010-W14.csv",
+  "note_lines": [
+   "1: - TOTAL revenue reached £25,571.27 TW versus £16,369.32 LW, a WoW gain of 56.21%.",
+   "2: - TOTAL units came in at 8,388 TW (WoW +114.25%) across 311 orders TW (WoW +14.34%).",
+   "3: - ENGLISH ROSE DESIGN QUILTED THROW ranked 1 TW with £4,577.17, holding 17.9% of TW revenue and adding £3,914.43 WoW.",
+   "4: - REGENCY CAKESTAND 3 TIER delivered £2,799.04 TW at a 10.9% share, with WHITE HANGING HEART T-LIGHT HOLDER at £2,420.03 TW and a 9.5% share.",
+   "5: - The top 3 products accounted for 38.3% of TOTAL revenue TW and the top 5 for 49.9%.",
+   "6: - RED RETROSPOT CAKE STAND rose £1,390.43 WoW (+1,269.8%) and EDWARDIAN PARASOL NATURAL rose £1,331.62 WoW (+1,051.9%).",
+   "7: - PINK HAPPY BIRTHDAY BUNTING fell £1,213.95 WoW and BLUE HAPPY BIRTHDAY BUNTING fell £1,126.75 WoW.",
+   "8: - CHILLI LIGHTS declined £822.60 WoW, a drop of 46.1%."
+  ],
+  "line": 3,
+  "number": "£4,577.17",
+  "char_offset_in_line": 53
+ },
+ {
+  "item_id": "it0423",
+  "table_csv": "data/tables/medium_product_2010-W38.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER led TW at £7,503.00 revenue, 17.2% share and Rank 1, up 67.0% WoW from £4,493.62 LW on 624 units TW versus 380 LW.",
+   "2: - Across the 22 rows TW revenue totalled £43,516.17 against £17,609.09 LW, a WoW gain of about 147.1%, with no LY figures available for any row.",
+   "3: - HAND WARMER RED POLKA DOT entered at Rank 2 with £3,707.40 TW and 2,004 units from a single order, against £0.00 and 0 units LW, so WoW is not calculable.",
+   "4: - AFGHAN SLIPPER SOCK PAIR posted the largest WoW move at 52,204.3%, rising from £3.45 LW to £1,804.50 TW on 610 units versus 1 unit LW.",
+   "5: - PAPER CHAIN KIT VINTAGE CHRISTMAS rose 519.4% WoW to £2,297.49 TW from £370.90 LW, with orders up from 7 LW to 59 TW.",
+   "6: - SET OF 20 VINTAGE CHRISTMAS NAPKINS gained 2,762.4% WoW to £1,289.50 TW and 1,831 units, while BABUSHKA LIGHTS STRING OF 10 gained 1,557.0% WoW to £1,678.87 TW.",
+   "7: - WHITE HANGING HEART T-LIGHT HOLDER was the flattest top-five line at £2,894.02 TW versus £2,798.40 LW, up 3.4% WoW, with 67 orders TW against 60 LW.",
+   "8: - LARGE CIRCULAR MIRROR MOBILE (£1,239.75 TW, 1,371 units) and SET OF 6 T-LIGHTS SANTA (£1,095.07 TW, 405 units) both recorded £0.00 LW, and JUMBO BAG RED RETROSPOT rose 54.7% WoW to £3,129.01 TW on 39 orders versus 50 LW."
+  ],
+  "line": 8,
+  "number": "1,371",
+  "char_offset_in_line": 46
+ },
+ {
+  "item_id": "it0424",
+  "table_csv": "data/tables/small_country_2010-W21.csv",
+  "note_lines": [
+   "1: - United Kingdom posted £143,748.77 TW versus £130,586.63 LW, a WoW gain of 10.1%, holding Rank 1 and 92.9% of TW revenue.",
+   "2: - United Kingdom units rose to 96,600 TW from 76,814 LW, with orders at 382 TW versus 319 LW.",
+   "3: - Channel Islands reached £3,401.24 TW against £782.80 LW, a WoW rise of 334.5%, ranking 2 with a 2.2% share of TW revenue.",
+   "4: - EIRE recorded £1,889.68 TW versus £2,637.72 LW, a WoW decline of 28.4%, on 1,013 units TW and 1,003 units LW.",
+   "5: - Netherlands contributed £1,834.67 TW from £0.00 LW, taking Rank 4 with 1,263 units TW and 2 orders TW.",
+   "6: - Switzerland fell to £1,407.70 TW from £7,802.09 LW, a WoW drop of 82.0%, with units at 787 TW versus 5,011 LW.",
+   "7: - France posted £1,271.21 TW versus £282.60 LW, a WoW increase of 349.8%, at Rank 6 and 0.8% of TW revenue.",
+   "8: - Germany reported £1,107.38 TW against £2,953.98 LW, a WoW decline of 62.5%, with 4 orders TW versus 6 orders LW; YoY figures are not available for any country in this week."
+  ],
+  "line": 7,
+  "number": "0.8%",
+  "char_offset_in_line": 88
+ },
+ {
+  "item_id": "it0425",
+  "table_csv": "data/tables/large_product_2010-W16.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER led TW at £4,443.21 versus £3,457.20 LW, a WoW gain of 28.5%, holding a 6.5% share of TW revenue at rank 1.",
+   "2: - PARTY BUNTING ranked 2 with £2,495.37 TW against £1,600.50 LW, up 55.9% WoW, on 525 units TW versus 386 units LW.",
+   "3: - WHITE HANGING HEART T-LIGHT HOLDER fell 13.2% WoW to £1,961.04 TW from £2,259.40 LW, with units down to 696 TW from 848 LW.",
+   "4: - PINK AND LILAC QUILTED THROW moved to £1,825.90 TW from £45.95 LW, a WoW change of 3,873.7%, with 53 units TW across 4 orders.",
+   "5: - ENGLISH ROSE DESIGN QUILTED THROW (£1,350.97), CLASSIC METAL BIRDCAGE PLANT HOLDER (£1,193.55) and WOOD AND GLASS MEDICINE CABINET (£404.25) each recorded £0.00 LW and no WoW percentage.",
+   "6: - GIANT BLACK SUNGLASSES reached £1,323.00 TW from £3.90 LW on 450 units in a single order, ranking 6 with a 1.9% share.",
+   "7: - PLEASE ONE PERSON METAL SIGN and LUNCH BAG BLACK SKULL. both dropped 70.7% WoW, to £441.39 from £1,506.00 and to £337.70 from £1,152.30 respectively.",
+   "8: - Door mats split TW: DOOR MAT UNION FLAG rose 43.0% WoW to £1,230.18, while DOOR MAT TOPIARY (-55.6% to £320.01), DOOR MAT NEW ENGLAND (-54.6% to £321.09) and DOOR MAT SPOTTY HOME SWEET HOME (-54.0% to £392.41) declined; LY revenue is blank for all 115 rows, so no YoY values are reported."
+  ],
+  "line": 8,
+  "number": "£392.41",
+  "char_offset_in_line": 203
+ },
+ {
+  "item_id": "it0426",
+  "table_csv": "data/tables/medium_product_2010-W11.csv",
+  "note_lines": [
+   "1: - Total revenue reached £36,150.11 TW versus £16,270.60 LW, a WoW change of +122.2%.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER ranked 1 with revenue £3,952.80 TW, a 10.9% share TW, and a WoW change of +67.1%.",
+   "3: - ENGLISH ROSE DESIGN QUILTED THROW ranked 2 with revenue £2,982.60 TW, an 8.3% share TW, and a WoW change of -11.4%.",
+   "4: - REGENCY CAKESTAND 3 TIER ranked 3 with revenue £2,511.24 TW and an 8.3% to 6.9% share TW.",
+   "5: - SET/6 WOODLAND PAPER CUPS posted the largest WoW increase, rising from £3.32 LW to £1,301.70 TW, a WoW change of +39107.8%.",
+   "6: - ASSORTED COLOUR BIRD ORNAMENT posted the largest WoW decrease, falling from £1,444.53 LW to £1,014.63 TW, a WoW change of -29.8%.",
+   "7: - WHITE HANGING HEART T-LIGHT HOLDER had the most orders, with 57 TW compared to 63 LW."
+  ],
+  "line": 2,
+  "number": "+67.1%",
+  "char_offset_in_line": 111
+ },
+ {
+  "item_id": "it0427",
+  "table_csv": "data/tables/large_product_2010-W47.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue of £6552.99, down from LW £7144.93, a WoW change of -8.3%.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER ranks 2 with TW revenue of £5999.53 versus LW £2659.73, a WoW increase of 125.6%.",
+   "3: - PAPER CHAIN KIT 50'S CHRISTMAS ranks 3 with TW revenue of £5735.62, down from LW £9020.33, a WoW change of -36.4%.",
+   "4: - SET OF 20 KIDS COOKIE CUTTERS shows the largest WoW jump among listed products, rising from LW £12.60 to TW £707.72, a WoW change of 5516.8%.",
+   "5: - GINGERBREAD MAN COOKIE CUTTER rose from LW £16.25 to TW £754.07, a WoW change of 4540.4%.",
+   "6: - ROTATING SILVER ANGELS T-LIGHT HLDR fell from LW £4341.94 to TW £2028.90, a WoW change of -53.3%.",
+   "7: - DOORMAT RED RETROSPOT dropped from LW £1541.40 to TW £773.13, a WoW change of -49.8%.",
+   "8: - CERAMIC CAKE STAND + HANGING CAKES recorded TW revenue of £2047.29 with 11 orders, up from LW revenue of £0.00 with 0 orders."
+  ],
+  "line": 3,
+  "number": "£5735.62",
+  "char_offset_in_line": 60
+ },
+ {
+  "item_id": "it0428",
+  "table_csv": "data/tables/large_product_2011-W42.csv",
+  "note_lines": [
+   "1: - TOTAL revenue TW was £112.6k versus LW £58.2k, a WoW change of 93.7%.",
+   "2: - TOTAL revenue TW was £112.6k versus LY £47.5k, a YoY change of 137.2%.",
+   "3: - TOTAL units TW reached 42,286 and TOTAL orders TW reached 2,461.",
+   "4: - LANDMARK FRAME COVENT GARDEN led products at £3,766.40 TW revenue, a 3.3% share of TOTAL revenue TW.",
+   "5: - CERAMIC CAKE STAND + HANGING CAKES had the largest WoW increase at 2392.0%, followed by GINGHAM HEART DECORATION at 2054.1% WoW.",
+   "6: - WHITE HANGING HEART T-LIGHT HOLDER declined 63.6% WoW and 69.0% YoY.",
+   "7: - RED  HARMONICA IN BOX posted the top YoY gain at 26576.5%, ahead of PLASTERS IN TIN WOODLAND ANIMALS at 14136.1% YoY.",
+   "8: - CHRISTMAS LIGHTS 10 REINDEER fell 77.1% YoY, the steepest YoY decline among products listed."
+  ],
+  "line": 5,
+  "number": "2054.1%",
+  "char_offset_in_line": 118
+ },
+ {
+  "item_id": "it0429",
+  "table_csv": "data/tables/small_country_2011-W06.csv",
+  "note_lines": [
+   "1: - TOTAL revenue TW was £103.7k versus LW £118.0k, a WoW change of -12.06%.",
+   "2: - TOTAL revenue TW was £103.7k versus LY £84.1k, a YoY change of 23.37%.",
+   "3: - TOTAL units TW were 51,540 versus LW 67,561 units.",
+   "4: - TOTAL orders TW were 222 versus LW 285 orders.",
+   "5: - United Kingdom ranked 1 with TW revenue of £89.8k, an 86.5% share, WoW -15.9% and YoY 20.5%.",
+   "6: - Japan ranked 2 with TW revenue of £5.7k, a 5.5% share, and the largest positive WoW change at 12,485.6%.",
+   "7: - France recorded the largest negative WoW change at -85.1% and the largest negative YoY change at -82.3%."
+  ],
+  "line": 5,
+  "number": "86.5%",
+  "char_offset_in_line": 56
+ },
+ {
+  "item_id": "it0430",
+  "table_csv": "data/tables/medium_product_2011-W17.csv",
+  "note_lines": [
+   "1: - Total revenue was £20,428.39 TW versus £23,564.33 LW, a change of -13.3% WoW, and +40.6% YoY.",
+   "2: - REGENCY CAKESTAND 3 TIER held rank 1 with revenue £3,804.27 TW, an 18.6% share TW and a change of +52.1% WoW.",
+   "3: - PARTY BUNTING ranked 2 with revenue £1,840.12 TW and a 9.0% share TW, a change of -47.2% WoW.",
+   "4: - PAPER CHAIN KIT EMPIRE ranked 3 with revenue £1,266.57 TW and a 6.2% share TW, a change of +16.3% WoW.",
+   "5: - CERAMIC STRAWBERRY MONEY BOX posted the largest WoW increase at +11249.0%, with revenue £937.43 TW versus £8.26 LW.",
+   "6: - WHITE HANGING HEART T-LIGHT HOLDER posted the largest WoW decrease at -83.1%, with revenue £1,028.01 TW versus £6,087.56 LW.",
+   "7: - UNION STRIPE WITH FRINGE  HAMMOCK led YoY growth at +729.0%, against revenue £87.45 LY, while ASSORTED COLOUR BIRD ORNAMENT fell -70.9% YoY from revenue £1,512.31 LY.",
+   "8: - PARTY BUNTING recorded the most orders at 35 TW versus 55 LW."
+  ],
+  "line": 5,
+  "number": "£937.43",
+  "char_offset_in_line": 90
+ },
+ {
+  "item_id": "it0431",
+  "table_csv": "data/tables/large_product_2011-W43.csv",
+  "note_lines": [
+   "1: - TOTAL revenue reached £109.2k TW versus £88.2k LW, a WoW gain of 23.8%.",
+   "2: - TOTAL revenue of £109.2k TW compares with £50.4k LY, a YoY increase of 116.5%.",
+   "3: - TOTAL units came in at 53,787 TW, up 86.5% WoW, while TOTAL orders reached 2,890 TW, up 24.0% WoW.",
+   "4: - RABBIT NIGHT LIGHT led TW at £10.7k revenue, taking a 9.8% share of TOTAL revenue and adding £10,681.60 WoW.",
+   "5: - ALARM CLOCK BAKELIKE RED posted £2,423.41 TW (2.2% share) and CHILLI LIGHTS £2,285.12 TW (2.1% share).",
+   "6: - PAPER CHAIN KIT 50'S CHRISTMAS recorded £2,264.16 TW and JUMBO BAG PAISLEY PARK £2,120.48 TW, the latter up £2,120.50 WoW.",
+   "7: - The top five products together accounted for 18.2% of TOTAL revenue TW, with ALARM CLOCK BAKELIKE RED up £2,082.50 WoW and ALARM CLOCK BAKELIKE PINK up 641.9% WoW.",
+   "8: - Largest WoW declines came from LANDMARK FRAME OXFORD STREET at -£3,335.00, LANDMARK FRAME COVENT GARDEN at -£3,316.10 and LANDMARK FRAME LONDON BRIDGE at -£3,166.30."
+  ],
+  "line": 6,
+  "number": "£2,120.50",
+  "char_offset_in_line": 110
+ },
+ {
+  "item_id": "it0432",
+  "table_csv": "data/tables/small_country_2010-W21.csv",
+  "note_lines": [
+   "1: - TOTAL revenue TW was £154.7k vs LW £145.0k, WoW up 6.6%.",
+   "2: - TOTAL units rose to 103,003 TW from 84,549 LW.",
+   "3: - TOTAL orders increased to 397 TW from 334 LW.",
+   "4: - United Kingdom led all countries with £143.7k TW revenue, a 92.9% share and rank 1.",
+   "5: - Channel Islands ranked 2nd with £3.4k TW revenue, 2.2% share.",
+   "6: - EIRE held rank 3 with £1.9k TW revenue, 1.2% share.",
+   "7: - Netherlands followed at rank 4 with £1.8k TW revenue, 1.2% share.",
+   "8: - Switzerland and France rounded out the top six with £1.4k and £1.3k TW revenue respectively, each under 1% share."
+  ],
+  "line": 8,
+  "number": "1%",
+  "char_offset_in_line": 106
+ },
+ {
+  "item_id": "it0433",
+  "table_csv": "data/tables/large_product_2010-W20.csv",
+  "note_lines": [
+   "1: - WHITE HANGING HEART T-LIGHT HOLDER holds rank 1 with TW revenue of £3,388.78 against LW £2,963.43, a WoW gain of 14.4% on 1,258 units versus 1,105 units LW, and a 5.2% share of TW revenue.",
+   "2: - The three wooden garden sets combine for £5,906.51 TW versus £1,551.36 LW: SKITTLES £2,650.90 (WoW +465.4%), CROQUET £2,232.33 (WoW +591.9%), ROUNDERS £1,023.28 (WoW +34.7%).",
+   "3: - Tissue packs total £6,357.34 TW versus £125.15 LW, with PACK OF 12 SUKI TISSUES at £2,573.71 on 5,247 units and PACK OF 12 HEARTS DESIGN TISSUES at £2,504.11 on 5,007 units across only 5 orders.",
+   "4: - Five cream enamel lines deliver £3,829.57 TW versus £327.90 LW, led by ENAMEL FLOWER JUG CREAM at £1,269.04 (WoW +827.3%) and ENAMEL BREAD BIN CREAM at £1,059.44 (WoW +2,669.8%).",
+   "5: - REGENCY CAKESTAND 3 TIER falls to £407.96 TW from £1,647.56 LW (WoW -75.2%) on 11 orders versus 39 LW, and RETRO SPOT TEA SET CERAMIC 11 PC falls to £337.72 from £2,071.74 LW (WoW -83.7%).",
+   "6: - LUNCH BAG SUKI DESIGN drops to £303.07 TW from £1,424.37 LW (WoW -78.7%) and JUMBO STORAGE BAG SUKI drops to £338.96 from £1,038.92 LW (WoW -67.4%).",
+   "7: - Four lines post zero LW revenue and register TW sales: CHILDS BREAKFAST SET SPACEBOY £626.90, CHILDS BREAKFAST SET DOLLY GIRL £540.65, CHILDS BREAKFAST SET CIRCUS PARADE £430.10 and PINK DIAMANTE PEN IN GIFT BOX £303.20.",
+   "8: - LY revenue is blank for all 106 rows, so no YoY percentage is available for any product this week, including the top 10 products that together hold 31.5% of TW revenue."
+  ],
+  "line": 4,
+  "number": "£1,269.04",
+  "char_offset_in_line": 100
+ },
+ {
+  "item_id": "it0434",
+  "table_csv": "data/tables/medium_product_2010-W50.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER generated £5919.72 revenue in TW, ranking 1st but declining 45.7% WoW from £10902.59 in LW, with units falling from 851 to 442.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER achieved £4251.25 revenue in TW (rank 2, 7.0% share) but declined 49.4% YoY compared to £8406.79 in LY, despite a 20.1% WoW increase.",
+   "3: - CHILLI LIGHTS showed strong YoY growth of 200.6%, reaching £2494.07 in TW versus £829.73 in LY, with units increasing 74.5% WoW from 337 to 589.",
+   "4: - GROW A FLYTRAP OR SUNFLOWER IN TIN surged 8063.4% WoW to £2449.01 in TW from just £30.00 in LW, with units jumping from 24 to 2569.",
+   "5: - ROTATING SILVER ANGELS T-LIGHT HLDR posted exceptional 1030.5% YoY growth to £2162.57 in TW from £191.29 in LY, with a 20.6% WoW increase.",
+   "6: - PAPER CHAIN KIT 50'S CHRISTMAS declined 46.9% WoW to £2149.75 in TW from £4048.91 in LW, though YoY change was flat at 0.3%.",
+   "7: - PHOTO CUBE experienced extraordinary 36541.4% YoY growth to £1256.80 in TW from £3.43 in LY, with a 151.2% WoW increase and units rising from 238 to 937.",
+   "8: - SET OF 3 BABUSHKA STACKING TINS surged 2900.0% WoW to £1188.00 in TW from £39.60 in LW, with units increasing from 8 to 240."
+  ],
+  "line": 3,
+  "number": "74.5%",
+  "char_offset_in_line": 120
+ },
+ {
+  "item_id": "it0435",
+  "table_csv": "data/tables/large_product_2011-W28.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER is the top product TW at £3429.15, up 70.1% WoW from £2015.58 LW and up 61.5% YoY from £2123.10 LY.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER ranks 2 TW with £3266.50, up 330.0% WoW from £759.60 LW, but down 3.1% YoY from £3370.47 LY.",
+   "3: - PARTY BUNTING fell 62.6% WoW to £1795.82 TW from £4796.67 LW, yet rose 462.6% YoY from £319.20 LY.",
+   "4: - JUMBO BAG RED RETROSPOT dropped 67.8% WoW to £866.33 TW from £2686.52 LW, and is down 43.2% YoY from £1524.83 LY.",
+   "5: - RED HANGING HEART T-LIGHT HOLDER surged 1041.8% WoW to £602.52 TW from £52.77 LW, and is up 311.3% YoY from £146.50 LY.",
+   "6: - DOORMAT HEARTS declined 86.8% WoW to £309.46 TW from £2345.43 LW, and fell 80.4% YoY from £1582.84 LY.",
+   "7: - POLKADOT PEN jumped from £1.63 LW to £297.01 TW, a WoW increase of 18121.5%.",
+   "8: - SET 40 HEART SHAPE PETIT FOUR CASES recorded £791.70 TW with zero revenue LW, ranking 9 among 96 products."
+  ],
+  "line": 2,
+  "number": "2",
+  "char_offset_in_line": 43
+ },
+ {
+  "item_id": "it0436",
+  "table_csv": "data/tables/small_product_2010-W47.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER ranks 1 in TW revenue at £6552.99, down from £7144.93 LW, a WoW change of -8.3%, with 18.6% share.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER TW revenue is £5999.53, up from £2659.73 LW, a WoW increase of 125.6%, ranking 2 with 17.1% share.",
+   "3: - PAPER CHAIN KIT 50'S CHRISTMAS TW revenue is £5735.62, down from £9020.33 LW, a WoW change of -36.4%, ranking 3 with 16.3% share.",
+   "4: - HOT WATER BOTTLE BABUSHKA TW revenue is £3215.95, up from £1509.10 LW, a WoW increase of 113.1%, ranking 4.",
+   "5: - PAPER CHAIN KIT VINTAGE CHRISTMAS TW revenue is £2500.80, down from £3791.87 LW, a WoW change of -34.0%, ranking 5.",
+   "6: - HOT WATER BOTTLE TEA AND SYMPATHY TW revenue is £2459.61, up from £1345.84 LW, a WoW increase of 82.8%, ranking 6.",
+   "7: - HAND WARMER SCOTTY DOG DESIGN TW revenue is £2126.08, down from £2998.66 LW, a WoW change of -29.1%, ranking 10 with 6.0% share.",
+   "8: - JUMBO BAG RED RETROSPOT TW revenue is £2221.19 with 64 orders TW versus 62 orders LW, a WoW increase of 1.5%, ranking 7."
+  ],
+  "line": 8,
+  "number": "1.5%",
+  "char_offset_in_line": 106
+ },
+ {
+  "item_id": "it0437",
+  "table_csv": "data/tables/medium_product_2010-W05.csv",
+  "note_lines": [
+   "1: - WHITE HANGING HEART T-LIGHT HOLDER ranks 1 TW with £2009.77, down from £3740.98 LW, a WoW change of -46.3%.",
+   "2: - COOK WITH WINE METAL SIGN revenue rose from £46.80 LW to £1506.02 TW, a WoW increase of 3118.0%, ranking 2.",
+   "3: - DOOR MAT RED SPOT recorded £1497.76 TW versus £0.00 LW, ranking 3 with 12 orders TW.",
+   "4: - RED HANGING HEART T-LIGHT HOLDER fell from £1807.91 LW to £948.00 TW, a WoW change of -47.6%.",
+   "5: - JUMBO BAG RED WHITE SPOTTY dropped from £1557.40 LW to £899.90 TW, a WoW change of -42.2%.",
+   "6: - DOOR MAT UNION FLAG declined from £1414.86 LW to £688.45 TW, a WoW change of -51.3%.",
+   "7: - PLEASE ONE PERSON METAL SIGN increased from £29.41 LW to £647.41 TW, a WoW change of 2101.3%.",
+   "8: - WHITE HANGING HEART T-LIGHT HOLDER holds the largest share of TW revenue at 8.6%, followed by COOK WITH WINE METAL SIGN at 6.4%."
+  ],
+  "line": 1,
+  "number": "£2009.77",
+  "char_offset_in_line": 53
+ },
+ {
+  "item_id": "it0438",
+  "table_csv": "data/tables/large_product_2010-W49.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER generated £10,902.59 in TW revenue, down 4.8% WoW from £11,450.57 in LW, representing the highest revenue product across all 122 entities.",
+   "2: - VINTAGE UNION JACK MEMOBOARD surged to £6,561.83 in TW revenue, up 1528.2% WoW from just £403.00 in LW, making it the second-ranked product by TW revenue.",
+   "3: - CREAM HEART CARD HOLDER achieved £4,944.82 in TW revenue with 2,074 units sold, up 319.0% YoY compared to £1,180.10 in the same week last year.",
+   "4: - WHITE HANGING HEART T-LIGHT HOLDER declined 25.0% WoW to £3,539.40 in TW revenue and fell 28.4% YoY from £4,942.19, with units dropping from 1,649 LW to 1,122 TW.",
+   "5: - HOT WATER BOTTLE TEA AND SYMPATHY increased 35.8% WoW to £3,538.37 in TW revenue and grew 99.0% YoY from £1,778.15, with 580 units sold TW.",
+   "6: - WHITE SKULL HOT WATER BOTTLE rose 41.2% WoW to £3,365.38 in TW revenue and surged 329.6% YoY from £783.34, demonstrating strong year-on-year growth.",
+   "7: - PAPER CHAIN KIT 50'S CHRISTMAS fell 4.0% WoW to £4,048.91 in TW revenue and declined 27.8% YoY from £5,604.38, with 1,055 units sold TW versus 1,149 LW.",
+   "8: - UTILTY CABINET WITH HOOKS exploded 3003.8% WoW to £2,509.44 in TW revenue from just £80.85 in LW, with only 126 units sold but representing significant growth momentum."
+  ],
+  "line": 5,
+  "number": "£1,778.15",
+  "char_offset_in_line": 107
+ },
+ {
+  "item_id": "it0439",
+  "table_csv": "data/tables/large_product_2011-W11.csv",
+  "note_lines": [
+   "1: - TOTAL revenue reached £65.4k in TW versus £38.6k in LW, a WoW gain of 69.4%.",
+   "2: - TOTAL revenue of £65.4k in TW compares with £23.0k in LY, a YoY gain of 183.9%.",
+   "3: - TOTAL units came to 35,746 in TW, up 102.5% WoW, while TOTAL orders reached 1,478, up 14.6% WoW.",
+   "4: - REGENCY CAKESTAND 3 TIER led products with £3,740.45 in TW, 5.7% of TOTAL revenue.",
+   "5: - PARTY BUNTING delivered £2,843.54 in TW for a 4.4% share, up £1,541.70 or 118.4% WoW.",
+   "6: - JUMBO BAG RED RETROSPOT recorded £2,718.16 in TW for a 4.2% share, up £1,362.00 or 100.4% WoW.",
+   "7: - JUMBO BAG PINK POLKADOT posted £1,917.87 in TW, up £1,213.70 or 172.4% WoW, and JUMBO BAG STRAWBERRY posted £1,707.48 in TW.",
+   "8: - CHILLI LIGHTS fell £859.80 WoW, and the top five products together held 19.8% of TOTAL revenue in TW."
+  ],
+  "line": 8,
+  "number": "£859.80",
+  "char_offset_in_line": 21
+ },
+ {
+  "item_id": "it0440",
+  "table_csv": "data/tables/large_product_2010-W04.csv",
+  "note_lines": [
+   "1: - WHITE HANGING HEART T-LIGHT HOLDER generated £3.7k revenue TW, the highest performing product, with 1,382 units sold across 79 orders.",
+   "2: - RED HANGING HEART T-LIGHT HOLDER achieved £1.8k revenue TW and ranked second by revenue, driven by 45 orders in the week.",
+   "3: - SET/3 RUSSIAN DOLL STACKING TINS and KENSINGTON COFFEE SET each contributed over £1.6k revenue TW, rounding out the top four products.",
+   "4: - ASSORTED FLOWER COLOUR \"LEIS\" led unit sales TW with 1,494 units, followed by PACK OF 72 RETRO SPOT CAKE CASES at 1,445 units.",
+   "5: - Total revenue reached £61.8k TW, representing a 46.0% WoW increase from £42.3k LW.",
+   "6: - CHERRY DESIGN PAPERLANTERNS showed exceptional growth with a 14,999.8% WoW revenue increase, while BALLERINA HEART DECORATION grew 12,688.5% WoW.",
+   "7: - Total units sold TW reached 29,849 across 1,820 orders, demonstrating strong customer engagement across the product range."
+  ],
+  "line": 6,
+  "number": "14,999.8%",
+  "char_offset_in_line": 63
+ },
+ {
+  "item_id": "it0441",
+  "table_csv": "data/tables/small_product_2010-W47.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER ranks 1 in TW revenue at £6552.99, down from £7144.93 LW, a WoW change of -8.3%, with 18.6% share.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER TW revenue is £5999.53, up from £2659.73 LW, a WoW increase of 125.6%, ranking 2 with 17.1% share.",
+   "3: - PAPER CHAIN KIT 50'S CHRISTMAS TW revenue is £5735.62, down from £9020.33 LW, a WoW change of -36.4%, ranking 3 with 16.3% share.",
+   "4: - HOT WATER BOTTLE BABUSHKA TW revenue is £3215.95, up from £1509.10 LW, a WoW increase of 113.1%, ranking 4.",
+   "5: - PAPER CHAIN KIT VINTAGE CHRISTMAS TW revenue is £2500.80, down from £3791.87 LW, a WoW change of -34.0%, ranking 5.",
+   "6: - HOT WATER BOTTLE TEA AND SYMPATHY TW revenue is £2459.61, up from £1345.84 LW, a WoW increase of 82.8%, ranking 6.",
+   "7: - HAND WARMER SCOTTY DOG DESIGN TW revenue is £2126.08, down from £2998.66 LW, a WoW change of -29.1%, ranking 10 with 6.0% share.",
+   "8: - JUMBO BAG RED RETROSPOT TW revenue is £2221.19 with 64 orders TW versus 62 orders LW, a WoW increase of 1.5%, ranking 7."
+  ],
+  "line": 5,
+  "number": "£2500.80",
+  "char_offset_in_line": 50
+ },
+ {
+  "item_id": "it0442",
+  "table_csv": "data/tables/large_product_2010-W43.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER led revenue TW at £7558.58, up 56.1% WoW from £4843.45 LW, holding 8.4% share and Rank 1.",
+   "2: - COLOUR GLASS. STAR T-LIGHT HOLDER rose 1038.9% WoW, from £343.79 LW to £3915.56 TW, ranking 3 with 4.4% share.",
+   "3: - SMALL CHINESE STYLE SCISSOR jumped 7769.0% WoW, from £16.80 LW to £1322.00 TW, reaching Rank 10.",
+   "4: - DOORMAT HOME SWEET HOME BLUE surged 6118.9% WoW, from £15.90 LW to £988.80 TW at Rank 19.",
+   "5: - EDWARDIAN PARASOL BLACK fell 80.0% WoW, from £2169.57 LW to £434.67 TW, dropping to Rank 93.",
+   "6: - CHRISTMAS LIGHTS 10 REINDEER declined 67.6% WoW, from £2374.88 LW to £770.08 TW, at Rank 25.",
+   "7: - ROTATING SILVER ANGELS T-LIGHT HLDR dropped 62.1% WoW, from £1565.72 LW to £593.52 TW, Rank 53.",
+   "8: - WHITE HANGING HEART T-LIGHT HOLDER grew 87.5% WoW, from £2226.27 LW to £4173.55 TW, holding Rank 2 with 4.6% share."
+  ],
+  "line": 5,
+  "number": "£434.67",
+  "char_offset_in_line": 62
+ },
+ {
+  "item_id": "it0443",
+  "table_csv": "data/tables/medium_product_2010-W16.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER ranks 1 TW with £4443.21 revenue, up 28.5% WoW from £3457.20 LW, holding 13.2% share.",
+   "2: - GIANT BLACK SUNGLASSES revenue rose to £1323.00 TW from £3.90 LW, a WoW increase of 33823.1% on 450 units TW versus 2 units LW.",
+   "3: - PINK AND LILAC QUILTED THROW revenue climbed to £1825.90 TW from £45.95 LW, up 3873.7% WoW, ranking 4 with 5.4% share.",
+   "4: - PARTY BUNTING revenue increased to £2495.37 TW from £1600.50 LW, up 55.9% WoW, ranking 2 with 7.4% share.",
+   "5: - WHITE HANGING HEART T-LIGHT HOLDER revenue fell to £1961.04 TW from £2259.40 LW, down 13.2% WoW, ranking 3 with 5.8% share.",
+   "6: - WOODEN CROQUET GARDEN SET revenue dropped to £743.99 TW from £1133.73 LW, down 34.4% WoW, ranking 21 with 2.2% share.",
+   "7: - CLASSIC METAL BIRDCAGE PLANT HOLDER recorded £1193.55 TW revenue versus £0.00 LW, ranking 8 with 3.5% share.",
+   "8: - VINTAGE UNION JACK BUNTING revenue declined to £889.25 TW from £1266.50 LW, down 29.8% WoW, ranking 16 with 2.6% share."
+  ],
+  "line": 1,
+  "number": "£3457.20",
+  "char_offset_in_line": 79
+ },
+ {
+  "item_id": "it0444",
+  "table_csv": "data/tables/small_product_2010-W26.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER generated £4554.09 in revenue TW, the highest among all products, representing 24.3% share of total revenue and growing 85.4% WoW from £2456.32 LW.",
+   "2: - PAPER CHAIN KIT SKULLS achieved the largest WoW growth at 3983.9%, increasing from £35.40 LW to £1445.70 TW, though it ranks 8th by revenue share at 7.7%.",
+   "3: - PAPER BUNTING RETRO SPOTS showed 160.0% WoW revenue growth, rising from £871.55 LW to £2266.34 TW with 846 units sold TW compared to 269 units LW.",
+   "4: - WHITE HANGING HEART T-LIGHT HOLDER maintained the second-highest revenue at £3214.95 TW with 1209 units sold, up 47.9% WoW from £2173.03 LW.",
+   "5: - PAPER CHAIN KIT RETRO SPOT surged 708.2% WoW in revenue, from £194.74 LW to £1573.81 TW, with units increasing from 62 LW to 603 TW.",
+   "6: - JUMBO BAG RED RETROSPOT generated £2489.35 TW with 1405 units sold, representing 13.3% revenue share and growing 78.8% WoW from £1392.22 LW.",
+   "7: - VINTAGE UNION JACK BUNTING and JUMBO BAG STRAWBERRY both more than doubled WoW revenue, at 106.9% and 101.2% growth respectively, reaching £1688.33 and £1544.16 TW.",
+   "8: - Total revenue across all eight products TW reached £18776.73, with all products showing positive WoW growth and order counts ranging from 3 to 59 orders TW."
+  ],
+  "line": 8,
+  "number": "3",
+  "char_offset_in_line": 140
+ },
+ {
+  "item_id": "it0445",
+  "table_csv": "data/tables/medium_product_2011-W43.csv",
+  "note_lines": [
+   "1: - TOTAL revenue TW was £55.6k versus LW £24.8k, a WoW change of 124.5%.",
+   "2: - TOTAL revenue TW £55.6k compares to LY £27.5k, a YoY change of 102.2%.",
+   "3: - TOTAL units sold TW were 29,321 versus LW 9,449.",
+   "4: - TOTAL orders TW reached 941 compared to LW 672.",
+   "5: - RABBIT NIGHT LIGHT ranked 1 with TW revenue of £10.7k, a 19.3% share of TOTAL revenue.",
+   "6: - RABBIT NIGHT LIGHT revenue rose WoW by 18473.8%.",
+   "7: - ALARM CLOCK BAKELIKE RED ranked 2 with TW revenue of £2.4k, a 4.4% share.",
+   "8: - CHILLI LIGHTS ranked 3 with TW revenue of £2.3k, a 4.1% share, just ahead of PAPER CHAIN KIT 50'S CHRISTMAS at rank 4 with £2.3k."
+  ],
+  "line": 4,
+  "number": "672",
+  "char_offset_in_line": 45
+ },
+ {
+  "item_id": "it0446",
+  "table_csv": "data/tables/small_country_2010-W18.csv",
+  "note_lines": [
+   "1: - United Kingdom generated £117,273.84 in revenue during TW, representing 74.4% of total revenue across all entities shown.",
+   "2: - United Kingdom revenue declined 30.4% WoW, falling from £168,403.05 in LW to £117,273.84 in TW.",
+   "3: - Netherlands revenue surged 1414.9% WoW, increasing from £1,188.30 in LW to £18,002.00 in TW.",
+   "4: - France revenue increased 568.6% WoW, rising from £1,348.33 in LW to £9,014.91 in TW.",
+   "5: - EIRE revenue grew 61.3% WoW, moving from £5,735.12 in LW to £9,248.22 in TW.",
+   "6: - United Kingdom units sold decreased from 93,805 in LW to 66,459 in TW, a decline of 27,346 units.",
+   "7: - Netherlands units sold increased from 922 in LW to 11,784 in TW, representing an addition of 10,862 units.",
+   "8: - Spain generated £1,731.65 in revenue during TW with 1,091 units sold, despite recording zero revenue and zero units in LW."
+  ],
+  "line": 8,
+  "number": "£1,731.65",
+  "char_offset_in_line": 18
+ },
+ {
+  "item_id": "it0447",
+  "table_csv": "data/tables/medium_product_2010-W14.csv",
+  "note_lines": [
+   "1: - Total revenue reached £25,571.27 TW versus £16,369.32 LW, a WoW change of +56.2%.",
+   "2: - ENGLISH ROSE DESIGN QUILTED THROW ranked 1 with £4,577.17 TW revenue, a 17.9% share TW, and a WoW change of +590.6%.",
+   "3: - REGENCY CAKESTAND 3 TIER ranked 2 with £2,799.04 TW revenue, a 10.9% share TW, and a WoW change of -9.9%.",
+   "4: - WHITE HANGING HEART T-LIGHT HOLDER ranked 3 with £2,420.03 TW revenue, a 9.5% share TW, and a WoW change of -20.3%.",
+   "5: - WHITE HANGING HEART T-LIGHT HOLDER had the most orders at 43 TW compared to 47 LW.",
+   "6: - CAMOFLAGE DESIGN TEDDY recorded the largest WoW increase, rising from £12.60 LW to £811.50 TW, a WoW change of +6340.5%.",
+   "7: - PINK HAPPY BIRTHDAY BUNTING recorded the largest WoW decrease, falling from £1,974.45 LW to £760.50 TW, a WoW change of -61.5%."
+  ],
+  "line": 6,
+  "number": "+6340.5%",
+  "char_offset_in_line": 113
+ },
+ {
+  "item_id": "it0448",
+  "table_csv": "data/tables/small_country_2010-W33.csv",
+  "note_lines": [
+   "1: - United Kingdom TW revenue is £133,081.75 versus LW £137,188.80, a WoW change of -3.0 percent, holding Rank 1 with 82.0 percent share.",
+   "2: - EIRE TW revenue is £16,455.16 versus LW £3,318.09, a WoW increase of 395.9 percent, ranked 2 with 10.1 percent share.",
+   "3: - Netherlands TW revenue is £6,062.68 versus LW £17,594.55, a WoW decline of 65.5 percent, ranked 3 with 3.7 percent share.",
+   "4: - Germany TW revenue is £2,837.23 versus LW £407.67, a WoW increase of 596.0 percent, ranked 4 with 1.7 percent share.",
+   "5: - United Arab Emirates TW revenue is £2,047.28 versus LW £0.00, with TW orders at 1 and LW orders at 0, ranked 5 with 1.3 percent share.",
+   "6: - Sweden TW revenue is £1,858.91 versus LW £454.03, a WoW increase of 309.4 percent, ranked 6 with 1.1 percent share.",
+   "7: - United Kingdom TW units are 84,187 versus LW units 79,042, with TW orders at 304 versus LW orders at 308.",
+   "8: - EIRE TW units are 11,157 versus LW units 1,573, with TW orders at 11 versus LW orders at 5."
+  ],
+  "line": 7,
+  "number": "308",
+  "char_offset_in_line": 103
+ },
+ {
+  "item_id": "it0449",
+  "table_csv": "data/tables/medium_product_2010-W50.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER TW revenue £5919.72 vs LW £10902.59, WoW -45.7%, ranked 1 with 9.7% share.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER TW £4251.25 vs LW £3539.40, WoW +20.1%, but YoY -49.4% against LY £8406.79.",
+   "3: - GROW A FLYTRAP OR SUNFLOWER IN TIN TW £2449.01 vs LW £30.00, WoW +8063.4%, units rose from 24 to 2569.",
+   "4: - CHILLI LIGHTS TW £2494.07 vs LY £829.73, YoY +200.6%, orders up from 22 to 28.",
+   "5: - ROTATING SILVER ANGELS T-LIGHT HLDR TW £2162.57 vs LY £191.29, YoY +1030.5%, WoW +20.6%.",
+   "6: - HOT WATER BOTTLE TEA AND SYMPATHY TW £1178.64 vs LW £3538.37, WoW -66.7%, orders fell from 48 to 4.",
+   "7: - PHOTO CUBE TW £1256.80 vs LY £3.43, YoY +36541.4%, units up from 238 to 937.",
+   "8: - WHITE SKULL HOT WATER BOTTLE TW £1389.83 vs LW £3365.38, WoW -58.7%, YoY +47.9% vs LY £939.40."
+  ],
+  "line": 4,
+  "number": "22",
+  "char_offset_in_line": 71
+ },
+ {
+  "item_id": "it0450",
+  "table_csv": "data/tables/large_product_2011-W28.csv",
+  "note_lines": [
+   "1: - Total revenue reached £51,928.98 TW versus £49,691.65 LW, a change of +4.5% WoW and +117.3% YoY.",
+   "2: - REGENCY CAKESTAND 3 TIER held rank 1 with £3,429.15 TW, a 6.6% share TW and +70.1% WoW.",
+   "3: - WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with £3,266.50 TW, a 6.3% share TW and +330.0% WoW.",
+   "4: - PARTY BUNTING ranked 3 with £1,795.82 TW and a 3.5% share TW, changing -62.6% WoW.",
+   "5: - POLKADOT PEN posted the largest WoW increase at +18121.5%, moving from £1.63 LW to £297.01 TW.",
+   "6: - DOORMAT HEARTS posted the largest WoW decrease at -86.8%, moving from £2,345.43 LW to £309.46 TW.",
+   "7: - BROCADE RING PURSE showed the largest YoY increase at +10158.9% against £2.58 LY, while WOOD BLACK BOARD ANT WHITE FINISH showed the largest YoY decrease at -86.4% against £2,130.35 LY.",
+   "8: - WHITE HANGING HEART T-LIGHT HOLDER led on order count with 46 orders TW versus 26 LW."
+  ],
+  "line": 2,
+  "number": "£3,429.15",
+  "char_offset_in_line": 44
+ },
+ {
+  "item_id": "it0451",
+  "table_csv": "data/tables/medium_product_2010-W38.csv",
+  "note_lines": [
+   "1: - TOTAL revenue TW was £43.5k versus LW £17.6k, a WoW change of 147.1%.",
+   "2: - TOTAL units sold TW reached 17,910 compared to LW 6,199 units.",
+   "3: - TOTAL orders TW totaled 685 versus LW 412 orders.",
+   "4: - REGENCY CAKESTAND 3 TIER ranked 1 in TW with £7.5k revenue and 17.2% share.",
+   "5: - HAND WARMER RED POLKA DOT ranked 2 in TW with £3.7k revenue and 8.5% share.",
+   "6: - JUMBO BAG RED RETROSPOT ranked 3 in TW with £3.1k revenue and 7.2% share.",
+   "7: - WHITE HANGING HEART T-LIGHT HOLDER ranked 4 in TW with £2.9k revenue and 6.7% share.",
+   "8: - AFGHAN SLIPPER SOCK PAIR revenue rose 52204.3% WoW, the largest WoW increase among products listed."
+  ],
+  "line": 3,
+  "number": "412",
+  "char_offset_in_line": 40
+ },
+ {
+  "item_id": "it0452",
+  "table_csv": "data/tables/small_country_2010-W18.csv",
+  "note_lines": [
+   "1: - United Kingdom generated £117,273.84 in revenue during TW, representing 74.4% of total revenue across all entities shown.",
+   "2: - United Kingdom revenue declined 30.4% WoW, falling from £168,403.05 in LW to £117,273.84 in TW.",
+   "3: - Netherlands revenue surged 1414.9% WoW, increasing from £1,188.30 in LW to £18,002.00 in TW.",
+   "4: - France revenue increased 568.6% WoW, rising from £1,348.33 in LW to £9,014.91 in TW.",
+   "5: - EIRE revenue grew 61.3% WoW, moving from £5,735.12 in LW to £9,248.22 in TW.",
+   "6: - United Kingdom units sold decreased from 93,805 in LW to 66,459 in TW, a decline of 27,346 units.",
+   "7: - Netherlands units sold increased from 922 in LW to 11,784 in TW, representing an addition of 10,862 units.",
+   "8: - Spain generated £1,731.65 in revenue during TW with 1,091 units sold, despite recording zero revenue and zero units in LW."
+  ],
+  "line": 1,
+  "number": "74.4%",
+  "char_offset_in_line": 74
+ },
+ {
+  "item_id": "it0453",
+  "table_csv": "data/tables/small_country_2011-W42.csv",
+  "note_lines": [
+   "1: - United Kingdom generated £196,490.10 in revenue TW, representing 77.3% of total revenue across all entities shown and ranking first.",
+   "2: - United Kingdom revenue increased 8.1% WoW from £181,722.47 LW, though it declined 8.0% YoY compared to £213,613.05 in the same ISO week last year.",
+   "3: - Netherlands entered the market with £29,458.10 revenue TW and 20,878 units sold, up from zero revenue and zero units LW, capturing 11.6% share.",
+   "4: - EIRE revenue surged 91.1% WoW to £13,751.42 TW from £7,196.47 LW, and grew 30.4% YoY versus £10,542.88 in the same week last year.",
+   "5: - Germany revenue increased 49.4% WoW to £9,191.85 TW from £6,153.87 LW, and more than doubled with 100.8% YoY growth from £4,577.05 last year.",
+   "6: - Sweden generated £5,296.96 revenue TW with 5,952 units sold from a single order, compared to zero revenue and zero units LW.",
+   "7: - United Kingdom processed 391 orders TW with 103,879 units sold, compared to 393 orders LW with 96,832 units sold.",
+   "8: - Netherlands achieved the highest YoY growth rate at 7641.5%, though this reflects a minimal base of £380.52 in the same week last year."
+  ],
+  "line": 1,
+  "number": "77.3%",
+  "char_offset_in_line": 67
+ },
+ {
+  "item_id": "it0454",
+  "table_csv": "data/tables/large_product_2010-W25.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER generated £2,456.32 revenue in TW (Rank 1), declining 52.7% WoW from £5,198.05 in LW, with units falling from 449 to 178.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER achieved £2,173.03 revenue in TW (Rank 2), up 33.7% WoW from £1,625.34 in LW, with units increasing from 586 to 785.",
+   "3: - VINTAGE UNION JACK MEMOBOARD surged to £1,108.64 revenue in TW (Rank 4), up 642.8% WoW from just £149.25 in LW, with units jumping from 15 to 156.",
+   "4: - BLACK HEART CARD HOLDER reached £955.12 revenue in TW (Rank 8), up 3930.0% WoW from £23.70 in LW, with units rising from 6 to 376.",
+   "5: - NATURAL SLATE CHALKBOARD LARGE generated £842.73 revenue in TW (Rank 15) with 223 units sold, compared to £0.00 in LW when no units were sold.",
+   "6: - ASSORTED COLOURS SILK FAN produced £1,011.52 revenue in TW (Rank 6), up 474.3% WoW from £176.12 in LW, despite units declining from 232 to 1,571.",
+   "7: - FLAG OF ST GEORGE CAR FLAG achieved £272.27 revenue in TW (Rank 88), up 3969.8% WoW from £6.69 in LW, though units fell from 15 to 1.",
+   "8: - DOOR MAT ENGLISH ROSE declined to £260.72 revenue in TW (Rank 97), down 70.8% WoW from £891.83 in LW, with units falling from 135 to 36."
+  ],
+  "line": 5,
+  "number": "£0.00",
+  "char_offset_in_line": 108
+ },
+ {
+  "item_id": "it0455",
+  "table_csv": "data/tables/medium_product_2010-W16.csv",
+  "note_lines": [
+   "1: - TOTAL revenue reached £33.6k TW versus £21.4k LW, a WoW increase of 57.1%.",
+   "2: - TOTAL units came in at 9,130 TW across 770 orders, with units up 33.5% WoW.",
+   "3: - REGENCY CAKESTAND 3 TIER ranked 1 TW with £4,443.21, equal to 13.2% of TW revenue.",
+   "4: - The top five products accounted for 35.9% of TOTAL revenue TW, led by PARTY BUNTING at £2,495.37 and WHITE HANGING HEART T-LIGHT HOLDER at £1,961.04.",
+   "5: - PINK AND LILAC QUILTED THROW added £1,780 WoW to reach £1,825.90 TW, and ENGLISH ROSE DESIGN QUILTED THROW added £1,351 WoW to reach £1,350.97 TW.",
+   "6: - GIANT BLACK SUNGLASSES gained £1,319.10 WoW, while JUMBO BAG STRAWBERRY rose 92.0% WoW and PARTY BUNTING rose 55.9% WoW.",
+   "7: - RED RETROSPOT JUMBO BAG fell £443.20 WoW, the largest TW decline in cash terms.",
+   "8: - WOODEN CROQUET GARDEN SET declined £389.70 WoW (-34.4%) and VINTAGE UNION JACK BUNTING declined £377.20 WoW (-29.8%); MULTI COLOUR SILVER T-LIGHT HOLDER led all products on volume with 823 units TW."
+  ],
+  "line": 8,
+  "number": "£377.20",
+  "char_offset_in_line": 98
+ },
+ {
+  "item_id": "it0456",
+  "table_csv": "data/tables/small_country_2010-W42.csv",
+  "note_lines": [
+   "1: - Total revenue was £240,207.44 TW versus £284,413.07 LW, a change of -15.5% WoW.",
+   "2: - United Kingdom ranked 1 with £213,613.05 revenue TW, holding an 88.9% share TW, a change of -17.3% WoW.",
+   "3: - EIRE ranked 2 with £10,542.88 revenue TW, holding a 4.4% share TW, a change of +48.8% WoW.",
+   "4: - Germany ranked 3 with £4,577.05 revenue TW, holding a 1.9% share TW, a change of +24.9% WoW.",
+   "5: - EIRE recorded the largest WoW increase, rising from £7,086.94 LW to £10,542.88 TW, a change of +48.8% WoW.",
+   "6: - France recorded the largest WoW decrease, falling from £9,041.24 LW to £2,393.87 TW, a change of -73.5% WoW.",
+   "7: - United Kingdom had the most orders with 502 TW compared to 512 LW."
+  ],
+  "line": 2,
+  "number": "88.9%",
+  "char_offset_in_line": 66
+ },
+ {
+  "item_id": "it0457",
+  "table_csv": "data/tables/small_country_2010-W18.csv",
+  "note_lines": [
+   "1: - United Kingdom generated £117,273.84 in revenue during TW, representing 74.4% of total revenue across all entities shown.",
+   "2: - United Kingdom revenue declined 30.4% WoW, falling from £168,403.05 in LW to £117,273.84 in TW.",
+   "3: - Netherlands revenue surged 1414.9% WoW, increasing from £1,188.30 in LW to £18,002.00 in TW.",
+   "4: - France revenue increased 568.6% WoW, rising from £1,348.33 in LW to £9,014.91 in TW.",
+   "5: - EIRE revenue grew 61.3% WoW, moving from £5,735.12 in LW to £9,248.22 in TW.",
+   "6: - United Kingdom units sold decreased from 93,805 in LW to 66,459 in TW, a decline of 27,346 units.",
+   "7: - Netherlands units sold increased from 922 in LW to 11,784 in TW, representing an addition of 10,862 units.",
+   "8: - Spain generated £1,731.65 in revenue during TW with 1,091 units sold, despite recording zero revenue and zero units in LW."
+  ],
+  "line": 7,
+  "number": "11,784",
+  "char_offset_in_line": 53
+ },
+ {
+  "item_id": "it0458",
+  "table_csv": "data/tables/large_product_2010-W43.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER generated £7558.58 revenue in TW, ranking 1st with 8.4% share and achieving 56.1% WoW growth from £4843.45 in LW.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER delivered £4173.55 revenue in TW, ranking 2nd with 4.6% share and posting 87.5% WoW increase from £2226.27 in LW.",
+   "3: - COLOUR GLASS STAR T-LIGHT HOLDER surged to £3915.56 revenue in TW with 1038.9% WoW growth from just £343.79 in LW, capturing 4.4% share at rank 3.",
+   "4: - SMALL CHINESE STYLE SCISSOR achieved 7769.0% WoW growth in TW, reaching £1322.00 revenue from £16.80 in LW with 4100 units sold versus 40 units in LW.",
+   "5: - DOORMAT FANCY FONT HOME SWEET HOME posted 3135.1% WoW increase to £1098.63 in TW from £33.96 in LW, with 157 units sold compared to 2 units in LW.",
+   "6: - SOMBRERO generated 4173.5% WoW growth reaching £500.00 revenue in TW from £11.70 in LW, selling 400 units versus 6 units in LW.",
+   "7: - ASSORTED COLOUR BIRD ORNAMENT declined 33.3% WoW to £1741.51 in TW from £2609.84 in LW, with units falling from 1736 to 1039.",
+   "8: - EDWARDIAN PARASOL BLACK fell 80.0% WoW to £434.67 in TW from £2169.57 in LW, with units dropping from 424 to 82."
+  ],
+  "line": 2,
+  "number": "4.6%",
+  "char_offset_in_line": 88
+ },
+ {
+  "item_id": "it0459",
+  "table_csv": "data/tables/small_product_2010-W47.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER ranks 1 in TW revenue at £6552.99, down from £7144.93 LW, a WoW change of -8.3%, with 18.6% share.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER TW revenue is £5999.53, up from £2659.73 LW, a WoW increase of 125.6%, ranking 2 with 17.1% share.",
+   "3: - PAPER CHAIN KIT 50'S CHRISTMAS TW revenue is £5735.62, down from £9020.33 LW, a WoW change of -36.4%, ranking 3 with 16.3% share.",
+   "4: - HOT WATER BOTTLE BABUSHKA TW revenue is £3215.95, up from £1509.10 LW, a WoW increase of 113.1%, ranking 4.",
+   "5: - PAPER CHAIN KIT VINTAGE CHRISTMAS TW revenue is £2500.80, down from £3791.87 LW, a WoW change of -34.0%, ranking 5.",
+   "6: - HOT WATER BOTTLE TEA AND SYMPATHY TW revenue is £2459.61, up from £1345.84 LW, a WoW increase of 82.8%, ranking 6.",
+   "7: - HAND WARMER SCOTTY DOG DESIGN TW revenue is £2126.08, down from £2998.66 LW, a WoW change of -29.1%, ranking 10 with 6.0% share.",
+   "8: - JUMBO BAG RED RETROSPOT TW revenue is £2221.19 with 64 orders TW versus 62 orders LW, a WoW increase of 1.5%, ranking 7."
+  ],
+  "line": 1,
+  "number": "£6552.99",
+  "char_offset_in_line": 52
+ },
+ {
+  "item_id": "it0460",
+  "table_csv": "data/tables/small_country_2010-W27.csv",
+  "note_lines": [
+   "1: - United Kingdom generated £118.1k revenue TW, representing 78.3% of total sales across all countries.",
+   "2: - Total revenue across all countries declined to £150.8k TW from £172.9k LW, a WoW decrease of 12.7%.",
+   "3: - United Kingdom revenue fell 15.6% WoW, declining from the previous week despite maintaining the largest market share.",
+   "4: - EIRE delivered £23.9k revenue TW with exceptional growth of 1040.5% WoW, the strongest performance among all markets.",
+   "5: - Germany contributed £3.9k revenue TW with a modest WoW decline of 6.8%, while France also experienced a 6.8% WoW decrease.",
+   "6: - Total units sold reached 75,004 TW, with United Kingdom accounting for 58,751 units and EIRE for 10,183 units.",
+   "7: - United Kingdom processed 320 orders TW, significantly higher than EIRE and Germany which each recorded 8 orders.",
+   "8: - Total order volume across all countries was 346 orders TW, with United Kingdom representing 92.5% of all transactions."
+  ],
+  "line": 5,
+  "number": "6.8%",
+  "char_offset_in_line": 68
+ },
+ {
+  "item_id": "it0461",
+  "table_csv": "data/tables/medium_product_2010-W33.csv",
+  "note_lines": [
+   "1: - Total revenue reached £41,585.07 TW, representing a +38.5% WoW increase from £30,034.16 LW.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER maintained rank 1 with revenue of £4,405.70 TW, accounting for 10.6% of total revenue TW, and grew +29.4% WoW.",
+   "3: - PARTY BUNTING achieved rank 2 with revenue of £3,220.36 TW, representing 7.7% of total revenue TW, and surged +89.8% WoW.",
+   "4: - REGENCY CAKESTAND 3 TIER held rank 3 with revenue of £2,446.96 TW, comprising 5.9% of total revenue TW, but declined -20.0% WoW.",
+   "5: - WALL MIRROR, RECT DIAMANTE, PINK/ experienced the largest WoW increase, growing +3923.3% from £16.13 LW to £648.96 TW.",
+   "6: - JUMBO BAG STRAWBERRY recorded the largest WoW decrease, falling -68.8% from £2,439.76 LW to £760.11 TW.",
+   "7: - WHITE HANGING HEART T-LIGHT HOLDER generated the most orders at 57 TW, down from 63 LW."
+  ],
+  "line": 5,
+  "number": "£16.13",
+  "char_offset_in_line": 96
+ },
+ {
+  "item_id": "it0462",
+  "table_csv": "data/tables/small_country_2011-W09.csv",
+  "note_lines": [
+   "1: - United Kingdom TW revenue is £94,054.57, down -17.4% WoW from £113,921.89 LW and down -32.0% YoY from £138,295.13 LY, holding Rank 1 with 75.6% Share_Pct.",
+   "2: - Australia TW revenue is £16,726.84, up 3954.5% WoW from £412.55 LW and up 4139.0% YoY from £394.59 LY, ranking 2 with 13.4% Share_Pct.",
+   "3: - Finland TW revenue is £4,418.02, up 2575.0% WoW from £165.16 LW, with no LY figure available, ranking 3 with 3.6% Share_Pct.",
+   "4: - EIRE TW revenue is £3,676.64, up 47.6% WoW from £2,491.28 LW but down -67.6% YoY from £11,352.29 LY, ranking 4 with 3.0% Share_Pct.",
+   "5: - France TW revenue is £3,110.18, up 153.9% WoW from £1,225.18 LW and down -8.7% YoY from £3,408.23 LY, ranking 5 with 2.5% Share_Pct.",
+   "6: - Germany TW revenue is £1,433.78, down -47.5% WoW from £2,728.99 LW and down -67.6% YoY from £4,421.14 LY, ranking 6 with 1.2% Share_Pct.",
+   "7: - Belgium TW revenue is £984.07, up 179.4% WoW from £352.21 LW and up 56.4% YoY from £629.02 LY, ranking 7 with 0.8% Share_Pct.",
+   "8: - United Kingdom TW orders are 250, down from 264 LW, while Australia TW orders are 1, unchanged from 1 LW."
+  ],
+  "line": 3,
+  "number": "£165.16",
+  "char_offset_in_line": 55
+ },
+ {
+  "item_id": "it0463",
+  "table_csv": "data/tables/large_product_2011-W23.csv",
+  "note_lines": [
+   "1: - PICNIC BASKET WICKER 60 PIECES led TW at £39,619.50 from 61 units across 2 orders, 31.7% of TW revenue shown, versus £0.00 LW and £0.00 LY.",
+   "2: - The 11 doormat lines ranked 3 to 14 totalled £27,243.45 TW against £2,122.64 LW, with DOORMAT KEEP CALM AND COME IN top of that group at £2,800.73 TW (WoW +339.7%).",
+   "3: - PARTY BUNTING ranked 2 at £4,019.93 TW versus £2,327.02 LW (WoW +72.8%) and £3,233.52 LY (YoY +24.3%), on 663 units and 58 orders.",
+   "4: - REGENCY CAKESTAND 3 TIER posted £2,711.19 TW versus £3,041.70 LW (WoW -10.9%) and £5,517.46 LY (YoY -50.9%), with 208 units TW against 263 LW.",
+   "5: - WHITE HANGING HEART T-LIGHT HOLDER fell to £1,085.90 TW from £1,691.11 LW (WoW -35.8%) and £4,245.80 LY (YoY -74.4%).",
+   "6: - JUMBO BAG RED RETROSPOT reached £1,835.74 TW versus £579.84 LW (WoW +216.6%) and £1,740.29 LY (YoY +5.5%), on 883 units TW versus 273 LW.",
+   "7: - Three lunch bag lines declined sharply YoY: LUNCH BAG BLACK SKULL. £363.19 TW versus £4,044.23 LY (-91.0%), LUNCH BAG WOODLAND £599.82 versus £3,753.85 LY (-84.0%), and LUNCH BAG CARS BLUE £639.80 versus £3,737.92 LY (-82.9%).",
+   "8: - SET/4 WHITE RETRO STORAGE CUBES dropped to £357.89 TW from £1,123.52 LW (WoW -68.1%) on 9 units versus 30 LW, while ASSORTED COLOURS SILK FAN rose to £1,240.70 TW from £183.19 LW (WoW +577.3%) on 1,610 units."
+  ],
+  "line": 2,
+  "number": "£27,243.45",
+  "char_offset_in_line": 47
+ },
+ {
+  "item_id": "it0464",
+  "table_csv": "data/tables/medium_product_2010-W36.csv",
+  "note_lines": [
+   "1: - Across the 31 products, TW revenue totalled £29,424.89 versus LW £31,085.63, a WoW change of -5.3%, with LY blank for every row so no YoY is available.",
+   "2: - REGENCY CAKESTAND 3 TIER held Rank 1 at £3,712.01 TW versus £5,262.87 LW (-29.5% WoW) on 297 units TW versus 449 LW, while orders rose to 47 TW from 33 LW, and it carried 12.6% share.",
+   "3: - WHITE HANGING HEART T-LIGHT HOLDER was Rank 2 at £2,481.58 TW versus £2,442.16 LW (+1.6% WoW), with 914 units TW versus 882 LW and 52 orders TW versus 44 LW.",
+   "4: - CARDHOLDER HOLLY WREATH METAL jumped to £1,672.50 TW from £15.00 LW (+11,050.0% WoW) on 446 units TW versus 4 LW across 5 orders, reaching Rank 4 and 5.7% share.",
+   "5: - Three further products posted triple-digit or larger WoW gains: FOLK FELT HANGING MULTICOL GARLAND £510.00 TW versus £20.40 LW (+2,400.0%), MINI PAINT SET VINTAGE £1,020.48 TW versus £48.46 LW (+2,005.8%), and HANGING JAM JAR T-LIGHT HOLDER £1,202.52 TW versus £258.36 LW (+365.4%).",
+   "6: - The jumbo bag range was mixed TW: JUMBO BAG RED RETROSPOT £2,315.21 (-28.1% WoW), JUMBO BAG PINK VINTAGE PAISLEY £639.96 (-65.2% WoW) and JUMBO BAG SCANDINAVIAN PAISLEY £620.15 (-55.6% WoW), against JUMBO SHOPPER VINTAGE RED PAISLEY £943.85 (+5.6% WoW) and JUMBO STORAGE BAG SKULLS £593.25 (+76.9% WoW).",
+   "7: - VINTAGE UNION JACK BUNTING fell to £501.50 TW from £1,509.60 LW (-66.8% WoW) on 59 units versus 170 LW, placing Rank 31, and ASSORTED COLOUR BIRD ORNAMENT fell to £627.63 TW from £1,562.67 LW (-59.8% WoW).",
+   "8: - TEA TIME KITCHEN APRON recorded £531.75 TW from £0.00 LW on 111 units and 7 orders, and LUNCH BAG CARS BLUE rose to £571.58 TW from £258.20 LW (+121.4% WoW) with orders at 25 TW versus 14 LW."
+  ],
+  "line": 4,
+  "number": "5.7%",
+  "char_offset_in_line": 152
+ },
+ {
+  "item_id": "it0465",
+  "table_csv": "data/tables/large_product_2011-W08.csv",
+  "note_lines": [
+   "1: - EMPIRE DESIGN ROSETTE ranks 1 this week with Revenue_TW of £3277.92, up 26123.4% WoW from Revenue_LW £12.50, and up 26123.4% YoY from Revenue_LY £12.50.",
+   "2: - REGENCY CAKESTAND 3 TIER ranks 2 with Revenue_TW of £2529.33, down 45.6% WoW from Revenue_LW £4651.74, with Revenue_LY at £0.00.",
+   "3: - ASSORTED COLOUR MINI CASES shows Revenue_TW of £1551.15, up 2067.9% WoW from Revenue_LW £71.55, and up 949.8% YoY from Revenue_LY £147.75.",
+   "4: - JUMBO BAG RED RETROSPOT posts Revenue_TW of £1482.34, down 14.5% WoW from Revenue_LW £1732.75, with Revenue_LY at £0.00.",
+   "5: - WHITE HANGING HEART T-LIGHT HOLDER records Revenue_TW of £1119.63, up 11.9% WoW from Revenue_LW £1000.83, but down 55.2% YoY from Revenue_LY £2501.43.",
+   "6: - VINTAGE UNION JACK BUNTING has Revenue_TW of £1111.39, down 7.4% WoW from Revenue_LW £1200.77, and up 59.5% YoY from Revenue_LY £697.00.",
+   "7: - SET/10 PINK POLKADOT PARTY CANDLES jumps to Revenue_TW of £467.70, up 4614.7% WoW from Revenue_LW £9.92, with Orders_TW at 12 versus Orders_LW at 3.",
+   "8: - The top 10 products by Revenue_TW together hold a Share_Pct total of 19.1% of this week's revenue across the 140 rows shown."
+  ],
+  "line": 8,
+  "number": "19.1%",
+  "char_offset_in_line": 71
+ },
+ {
+  "item_id": "it0466",
+  "table_csv": "data/tables/medium_product_2010-W50.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER TW revenue £5919.72 vs LW £10902.59, WoW -45.7%, ranked 1 with 9.7% share.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER TW £4251.25 vs LW £3539.40, WoW +20.1%, but YoY -49.4% against LY £8406.79.",
+   "3: - GROW A FLYTRAP OR SUNFLOWER IN TIN TW £2449.01 vs LW £30.00, WoW +8063.4%, units rose from 24 to 2569.",
+   "4: - CHILLI LIGHTS TW £2494.07 vs LY £829.73, YoY +200.6%, orders up from 22 to 28.",
+   "5: - ROTATING SILVER ANGELS T-LIGHT HLDR TW £2162.57 vs LY £191.29, YoY +1030.5%, WoW +20.6%.",
+   "6: - HOT WATER BOTTLE TEA AND SYMPATHY TW £1178.64 vs LW £3538.37, WoW -66.7%, orders fell from 48 to 4.",
+   "7: - PHOTO CUBE TW £1256.80 vs LY £3.43, YoY +36541.4%, units up from 238 to 937.",
+   "8: - WHITE SKULL HOT WATER BOTTLE TW £1389.83 vs LW £3365.38, WoW -58.7%, YoY +47.9% vs LY £939.40."
+  ],
+  "line": 7,
+  "number": "238",
+  "char_offset_in_line": 67
+ },
+ {
+  "item_id": "it0467",
+  "table_csv": "data/tables/small_product_2010-W24.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue £5198.05, down from LW £5517.46, a WoW change of -5.8%, holding 37.8% share.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER fell to TW £1625.34 from LW £4245.80, WoW -61.7%, with units down from 1596 LW to 586 TW.",
+   "3: - JUMBO BAG RED RETROSPOT recorded TW revenue £1259.80 versus LW £1740.29, a WoW decline of -27.6%, ranked 4.",
+   "4: - VINTAGE UNION JACK BUNTING posted TW revenue £1261.17 against LW £1703.11, WoW -25.9%, with orders down from 37 LW to 38 TW.",
+   "5: - DOOR MAT RED SPOT rose to TW £957.50 from LW £436.26, WoW +119.5%, the largest increase among the 8 products.",
+   "6: - DOOR MAT FANCY FONT HOME SWEET HOME increased to TW £1064.30 from LW £592.57, WoW +79.6%, ranked 7 with 7.7% share.",
+   "7: - SET/5 RED SPOTTY LID GLASS BOWLS grew to TW £1194.65 from LW £743.50, WoW +60.7%, with units up from 266 LW to 447 TW.",
+   "8: - EDWARDIAN PARASOL NATURAL held nearly flat at TW £1187.47 versus LW £1165.81, WoW +1.9%, ranked 6 with 8.6% share."
+  ],
+  "line": 1,
+  "number": "£5198.05",
+  "char_offset_in_line": 51
+ },
+ {
+  "item_id": "it0468",
+  "table_csv": "data/tables/large_product_2011-W43.csv",
+  "note_lines": [
+   "1: - TOTAL revenue TW was £109.2k versus LW £88.2k, a WoW increase of 23.8%, and versus LY £50.4k, a YoY increase of 116.5%.",
+   "2: - TOTAL units sold TW reached 53,787 compared with LW 28,845, while TOTAL orders TW were 2,890 versus LW 2,330.",
+   "3: - RABBIT NIGHT LIGHT led product revenue TW at £10.7k, representing 9.8% share, with WoW growth of 18,473.8%.",
+   "4: - ALARM CLOCK BAKELIKE RED generated £2,423.41 TW revenue, a 2.2% share of total sales.",
+   "5: - CHILLI LIGHTS posted £2,285.12 TW revenue with a 2.1% share, closely followed by PAPER CHAIN KIT 50'S CHRISTMAS at £2,264.16 also at 2.1% share.",
+   "6: - JUMBO BAG PAISLEY PARK recorded £2,120.48 TW revenue, a 1.9% share of total sales.",
+   "7: - FLOWERS CHANDELIER T-LIGHT HOLDER saw a WoW revenue increase of 9,231.2%, while TRADITIONAL NAUGHTS & CROSSES rose 2,400.0% WoW.",
+   "8: - CHRISTMAS CRAFT WHITE FAIRY achieved a YoY revenue increase of 28,727.6%, with RED HARMONICA IN BOX up 11,954.9% YoY and BROCADE RING PURSE up 6,587.3% YoY."
+  ],
+  "line": 5,
+  "number": "£2,264.16",
+  "char_offset_in_line": 117
+ },
+ {
+  "item_id": "it0469",
+  "table_csv": "data/tables/large_product_2011-W35.csv",
+  "note_lines": [
+   "1: - RABBIT NIGHT LIGHT ranks 1 with TW revenue of £2,152.90 versus £1,531.13 LW, a WoW gain of 40.6% on 1,160 units against 768 LW.",
+   "2: - WOOD BLACK BOARD ANT WHITE FINISH sits at rank 2 with £2,057.46 TW versus £344.85 LW (WoW +496.6%) and £1,099.98 LY (YoY +87.0%).",
+   "3: - REGENCY CAKESTAND 3 TIER holds rank 3 at £1,991.04 TW, down 31.5% WoW from £2,907.39 and down 62.2% YoY from £5,262.87.",
+   "4: - RED HARMONICA IN BOX reached £1,731.06 TW on 1,621 units across 8 orders, up 320.3% WoW from £411.90 and up 120.2% YoY from £786.11.",
+   "5: - SMALL ZINC HEART WALL ORGANISER posted £1,367.02 TW from £11.50 LW (WoW +11,787.1%) on 409 units in just 2 orders.",
+   "6: - Christmas lines rose together TW: CHRISTMAS LIGHTS 10 REINDEER £805.13 (WoW +9,372.1%), PAPER CHAIN KIT VINTAGE CHRISTMAS £665.83 (WoW +1,404.7%), 36 DOILIES VINTAGE CHRISTMAS £635.74 (WoW +554.4%) and PAPER CHAIN KIT 50'S CHRISTMAS £520.28 (WoW +503.0%).",
+   "7: - The ALARM CLOCK BAKELIKE range fell TW: RED £322.54 (WoW -80.7%), PINK £331.34 (WoW -79.1%) and GREEN £438.83 (WoW -60.0%), against LW totals of £1,667.45, £1,584.16 and £1,096.99.",
+   "8: - Core bag and holder lines declined on both bases: JUMBO BAG RED RETROSPOT £1,554.01 TW (WoW -47.2%, YoY -51.7%), WHITE HANGING HEART T-LIGHT HOLDER £1,096.24 TW (WoW -46.6%, YoY -55.1%) and ASSORTED COLOUR BIRD ORNAMENT £376.48 TW (WoW -71.5%, YoY -75.9%)."
+  ],
+  "line": 7,
+  "number": "£1,667.45",
+  "char_offset_in_line": 147
+ },
+ {
+  "item_id": "it0470",
+  "table_csv": "data/tables/large_product_2011-W36.csv",
+  "note_lines": [
+   "1: - PLEASE ONE PERSON METAL SIGN led TW at £2,773.43 on 1,398 units and 41 orders, up 3,286.4% WoW from £81.90 and up 359.2% YoY from £603.92, taking a 4.2% share.",
+   "2: - PARTY BUNTING ranked 2 at £1,825.40 TW versus £1,410.09 LW (+29.5% WoW) and £31.72 LY (+5,654.7% YoY), with orders down from 34 LW to 30 TW.",
+   "3: - REGENCY CAKESTAND 3 TIER posted £1,825.17 TW against £1,991.04 LW (-8.3% WoW) and £3,712.01 LY (-50.8% YoY), despite units rising from 147 LW to 150 TW.",
+   "4: - Cold-weather lines moved up: HAND WARMER OWL DESIGN £1,611.60 TW (+416.7% WoW, +2,458.1% YoY), HOT WATER BOTTLE KEEP CALM £1,198.31 TW (+72.8% WoW) and LOVE HOT WATER BOTTLE £1,046.40 TW (+155.1% WoW).",
+   "5: - Other metal signs climbed sharply TW: COOK WITH WINE £1,415.04 (+2,621.2% WoW), HOT BATHS £1,062.17 (+1,159.7% WoW), GIN + TONIC DIET £791.53 (+1,731.8% WoW) and BEWARE OF THE CAT £620.84 (+3,836.8% WoW).",
+   "6: - Christmas stock split two ways: PAPER CHAIN KIT 50'S CHRISTMAS reached £1,347.29 TW (+159.0% WoW, +3,705.9% YoY) while PAPER CHAIN KIT VINTAGE CHRISTMAS fell to £442.60 TW (-33.5% WoW).",
+   "7: - WOOD BLACK BOARD ANT WHITE FINISH dropped to £489.41 TW from £2,057.46 LW (-76.2% WoW) on 63 units versus 370 LW, and remains +99.1% YoY against £245.77.",
+   "8: - Four items recorded £0.00 LW and sales TW: LADIES & GENTLEMEN METAL SIGN £924.90, HAND OVER THE CHOCOLATE SIGN £839.99, YOU'RE CONFUSING ME METAL SIGN £591.92, and TRAY, BREAKFAST IN BED £591.30 from a single order."
+  ],
+  "line": 3,
+  "number": "-8.3%",
+  "char_offset_in_line": 69
+ },
+ {
+  "item_id": "it0471",
+  "table_csv": "data/tables/medium_product_2011-W19.csv",
+  "note_lines": [
+   "1: - Total revenue TW was £47.2k, up 89.7% WoW from £24.9k LW and up 291.2% YoY from £12.1k LY.",
+   "2: - Total units TW reached 18,901, up 134.0% WoW, while orders TW were 1,089, up 63.8% WoW.",
+   "3: - REGENCY CAKESTAND 3 TIER ranked 1 TW with £4,290.54 revenue and a 9.1% share of total TW revenue.",
+   "4: - PARTY BUNTING ranked 2 TW at £4,021.56 with an 8.5% share, and WHITE HANGING HEART T-LIGHT HOLDER ranked 3 at £2,503.60 with a 5.3% share.",
+   "5: - JUMBO BAG RED RETROSPOT delivered £2,339.73 TW and SPOTTY BUNTING delivered £1,971.47 TW.",
+   "6: - The top five products accounted for 32.1% of total revenue TW.",
+   "7: - REGENCY CAKESTAND 3 TIER gained £2,175.24 WoW and LUNCH BAG DOILEY PATTERN gained £1,655.22 WoW.",
+   "8: - PARTY BUNTING fell £1,204.68 WoW and WHITE HANGING HEART T-LIGHT HOLDER fell £554.00 WoW."
+  ],
+  "line": 2,
+  "number": "1,089",
+  "char_offset_in_line": 69
+ },
+ {
+  "item_id": "it0472",
+  "table_csv": "data/tables/small_product_2010-W38.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER generated £7503.00 in TW, representing 27.1% of total revenue and ranking first, with a WoW increase of 67.0% from £4493.62 in LW.",
+   "2: - HAND WARMER RED POLKA DOT achieved £3707.40 in TW revenue from 2004 units across 1 order, compared to zero revenue in LW, making it the second-ranked product.",
+   "3: - ASSORTED COLOUR BIRD ORNAMENT showed the strongest WoW growth at 187.4%, rising from £984.67 in LW to £2829.76 in TW with 1792 units sold.",
+   "4: - PAPER CHAIN KIT VINTAGE CHRISTMAS delivered a WoW increase of 519.4%, growing from £370.90 in LW to £2297.49 in TW across 59 orders.",
+   "5: - AFGHAN SLIPPER SOCK PAIR recorded the most dramatic WoW change at 52204.3%, expanding from £3.45 in LW to £1804.50 in TW with 610 units sold.",
+   "6: - BABUSHKA LIGHTS STRING OF 10 grew 1557.0% WoW, from £101.32 in LW to £1678.87 in TW, with units increasing from 14 to 279.",
+   "7: - WHITE HANGING HEART T-LIGHT HOLDER remained relatively stable with a modest WoW increase of 3.4%, generating £2894.02 in TW from 1088 units across 67 orders.",
+   "8: - SET OF 6 RIBBONS VINTAGE CHRISTMAS increased 13.3% WoW to £1797.01 in TW, with 756 units sold across 45 orders compared to 7 orders in LW."
+  ],
+  "line": 6,
+  "number": "14",
+  "char_offset_in_line": 114
+ },
+ {
+  "item_id": "it0473",
+  "table_csv": "data/tables/small_product_2010-W50.csv",
+  "note_lines": [
+   "1: - Total revenue across all products was £27,724.70 TW, down 8.4% WoW from £30,272.96 LW, though up 89.1% YoY.",
+   "2: - REGENCY CAKESTAND 3 TIER generated the highest revenue at £5,919.72 TW with a 21.4% share, but declined 45.7% WoW.",
+   "3: - WHITE HANGING HEART T-LIGHT HOLDER ranked second with £4,251.25 TW revenue and 15.3% share, growing 20.1% WoW despite falling 49.4% YoY from £8,406.79 LY.",
+   "4: - CHILLI LIGHTS achieved third place with £2,494.07 TW revenue representing 9.0% of total, up 26.4% WoW.",
+   "5: - GROW A FLYTRAP OR SUNFLOWER IN TIN surged 8063.4% WoW to £2,449.01 TW from just £30.00 LW.",
+   "6: - PAPER CHAIN KIT 50'S CHRISTMAS fell 46.9% WoW to £2,149.75 TW from £4,048.91 LW.",
+   "7: - ROTATING SILVER ANGELS T-LIGHT HLDR increased 1030.5% YoY to £191.29 TW.",
+   "8: - WHITE HANGING HEART T-LIGHT HOLDER recorded the most orders at 68 TW, down from 86 LW."
+  ],
+  "line": 7,
+  "number": "£191.29",
+  "char_offset_in_line": 63
+ },
+ {
+  "item_id": "it0474",
+  "table_csv": "data/tables/small_product_2010-W26.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER ranks 1 with £4,554.09 TW versus £2,456.32 LW, a WoW gain of 85.4%, and holds 24.3% of TW revenue across the 8 rows shown.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER sits at rank 2 with £3,214.95 TW against £2,173.03 LW, up 47.9% WoW, on 1,209 units TW versus 785 units LW.",
+   "3: - PAPER CHAIN KIT SKULLS posts the largest WoW move at 3,983.9%, rising from £35.40 LW to £1,445.70 TW, with orders at 3 TW versus 2 LW.",
+   "4: - PAPER CHAIN KIT RETRO SPOT grew 708.2% WoW to £1,573.81 TW from £194.74 LW, while orders fell to 12 TW from 13 LW.",
+   "5: - JUMBO BAG RED RETROSPOT holds rank 3 at £2,489.35 TW versus £1,392.22 LW, up 78.8% WoW, with units at 1,405 TW against 751 LW.",
+   "6: - PAPER BUNTING RETRO SPOTS rose 160.0% WoW to £2,266.34 TW from £871.55 LW, with orders at 33 TW versus 34 LW, and takes a 12.1% share TW.",
+   "7: - VINTAGE UNION JACK BUNTING (£1,688.33 TW, +106.9% WoW) and JUMBO BAG STRAWBERRY (£1,544.16 TW, +101.2% WoW) rank 5 and 7, with shares of 9.0% and 8.2% TW.",
+   "8: - Combined TW revenue for the 8 products is £18,776.73 versus £8,706.79 LW, up 115.6% WoW; LY revenue is blank for all 8 rows, so YoY is not available."
+  ],
+  "line": 8,
+  "number": "115.6%",
+  "char_offset_in_line": 79
+ },
+ {
+  "item_id": "it0475",
+  "table_csv": "data/tables/large_product_2010-W47.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue of £6552.99, down from LW £7144.93, a WoW change of -8.3%.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER ranks 2 with TW revenue of £5999.53 versus LW £2659.73, a WoW increase of 125.6%.",
+   "3: - PAPER CHAIN KIT 50'S CHRISTMAS ranks 3 with TW revenue of £5735.62, down from LW £9020.33, a WoW change of -36.4%.",
+   "4: - SET OF 20 KIDS COOKIE CUTTERS shows the largest WoW jump among listed products, rising from LW £12.60 to TW £707.72, a WoW change of 5516.8%.",
+   "5: - GINGERBREAD MAN COOKIE CUTTER rose from LW £16.25 to TW £754.07, a WoW change of 4540.4%.",
+   "6: - ROTATING SILVER ANGELS T-LIGHT HLDR fell from LW £4341.94 to TW £2028.90, a WoW change of -53.3%.",
+   "7: - DOORMAT RED RETROSPOT dropped from LW £1541.40 to TW £773.13, a WoW change of -49.8%.",
+   "8: - CERAMIC CAKE STAND + HANGING CAKES recorded TW revenue of £2047.29 with 11 orders, up from LW revenue of £0.00 with 0 orders."
+  ],
+  "line": 1,
+  "number": "£6552.99",
+  "char_offset_in_line": 54
+ },
+ {
+  "item_id": "it0476",
+  "table_csv": "data/tables/medium_product_2010-W36.csv",
+  "note_lines": [
+   "1: - Across the 31 products, TW revenue totalled £29,424.89 versus LW £31,085.63, a WoW change of -5.3%, with LY blank for every row so no YoY is available.",
+   "2: - REGENCY CAKESTAND 3 TIER held Rank 1 at £3,712.01 TW versus £5,262.87 LW (-29.5% WoW) on 297 units TW versus 449 LW, while orders rose to 47 TW from 33 LW, and it carried 12.6% share.",
+   "3: - WHITE HANGING HEART T-LIGHT HOLDER was Rank 2 at £2,481.58 TW versus £2,442.16 LW (+1.6% WoW), with 914 units TW versus 882 LW and 52 orders TW versus 44 LW.",
+   "4: - CARDHOLDER HOLLY WREATH METAL jumped to £1,672.50 TW from £15.00 LW (+11,050.0% WoW) on 446 units TW versus 4 LW across 5 orders, reaching Rank 4 and 5.7% share.",
+   "5: - Three further products posted triple-digit or larger WoW gains: FOLK FELT HANGING MULTICOL GARLAND £510.00 TW versus £20.40 LW (+2,400.0%), MINI PAINT SET VINTAGE £1,020.48 TW versus £48.46 LW (+2,005.8%), and HANGING JAM JAR T-LIGHT HOLDER £1,202.52 TW versus £258.36 LW (+365.4%).",
+   "6: - The jumbo bag range was mixed TW: JUMBO BAG RED RETROSPOT £2,315.21 (-28.1% WoW), JUMBO BAG PINK VINTAGE PAISLEY £639.96 (-65.2% WoW) and JUMBO BAG SCANDINAVIAN PAISLEY £620.15 (-55.6% WoW), against JUMBO SHOPPER VINTAGE RED PAISLEY £943.85 (+5.6% WoW) and JUMBO STORAGE BAG SKULLS £593.25 (+76.9% WoW).",
+   "7: - VINTAGE UNION JACK BUNTING fell to £501.50 TW from £1,509.60 LW (-66.8% WoW) on 59 units versus 170 LW, placing Rank 31, and ASSORTED COLOUR BIRD ORNAMENT fell to £627.63 TW from £1,562.67 LW (-59.8% WoW).",
+   "8: - TEA TIME KITCHEN APRON recorded £531.75 TW from £0.00 LW on 111 units and 7 orders, and LUNCH BAG CARS BLUE rose to £571.58 TW from £258.20 LW (+121.4% WoW) with orders at 25 TW versus 14 LW."
+  ],
+  "line": 4,
+  "number": "+11,050.0%",
+  "char_offset_in_line": 71
+ },
+ {
+  "item_id": "it0477",
+  "table_csv": "data/tables/small_country_2010-W21.csv",
+  "note_lines": [
+   "1: - TOTAL revenue TW was £154.7k versus LW £145.0k, a WoW increase of 6.6%.",
+   "2: - TOTAL units rose to 103,003 TW from 84,549 LW, and TOTAL orders rose to 397 TW from 334 LW.",
+   "3: - United Kingdom ranked 1 TW with revenue of £143.7k, representing a 92.9% share of TOTAL revenue.",
+   "4: - United Kingdom recorded 96,600 units and 382 orders TW.",
+   "5: - Channel Islands held a 2.2% share TW with revenue of £3.4k, 1,673 units, and 3 orders.",
+   "6: - EIRE and Netherlands each held a 1.2% share TW, with EIRE revenue at £1.9k and 1,013 units.",
+   "7: - France revenue grew 349.8% WoW, while Switzerland revenue fell 82.0% WoW.",
+   "8: - Switzerland and France each held a TW share between 0.8% and 0.9% of TOTAL revenue."
+  ],
+  "line": 8,
+  "number": "0.9%",
+  "char_offset_in_line": 63
+ },
+ {
+  "item_id": "it0478",
+  "table_csv": "data/tables/large_product_2010-W47.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER generated £6552.99 revenue in TW, the highest among all 98 products, but declined 8.3% WoW from £7144.93 in LW with units falling from 573 to 511.",
+   "2: - WHITE HANGING HEART T-LIGHT HOLDER surged 125.6% WoW to £5999.53 in TW from £2659.73 in LW, ranking second overall with units nearly doubling from 891 to 2155.",
+   "3: - PAPER CHAIN KIT 50'S CHRISTMAS dropped 36.4% WoW to £5735.62 in TW from £9020.33 in LW, representing the third largest revenue decline in absolute terms.",
+   "4: - GINGERBREAD MAN COOKIE CUTTER exploded 4540.4% WoW to £754.07 in TW from just £16.25 in LW, with units jumping from 13 to 643.",
+   "5: - HEART OF WICKER SMALL achieved 2158.1% WoW growth to £1806.28 in TW from £79.99 in LW, with units increasing from 19 to 1046.",
+   "6: - ROTATING SILVER ANGELS T-LIGHT HLDR fell 53.3% WoW to £2028.90 in TW from £4341.94 in LW, with units declining from 1426 to 647.",
+   "7: - CERAMIC CAKE STAND + HANGING CAKES generated £2047.29 revenue in TW with 235 units sold, representing new product entry with no LW sales data.",
+   "8: - Top 10 products by TW revenue collectively account for £33,179.34, representing 26.9% of total revenue across all 98 products in TW."
+  ],
+  "line": 8,
+  "number": "£33,179.34",
+  "char_offset_in_line": 57
+ },
+ {
+  "item_id": "it0479",
+  "table_csv": "data/tables/large_product_2010-W49.csv",
+  "note_lines": [
+   "1: - REGENCY CAKESTAND 3 TIER generated £10,902.59 in TW revenue, down 4.8% WoW from £11,450.57 in LW, representing the highest revenue product across all 122 entities.",
+   "2: - VINTAGE UNION JACK MEMOBOARD surged to £6,561.83 in TW revenue, up 1528.2% WoW from just £403.00 in LW, making it the second-ranked product by TW revenue.",
+   "3: - CREAM HEART CARD HOLDER achieved £4,944.82 in TW revenue with 2,074 units sold, up 319.0% YoY compared to £1,180.10 in the same week last year.",
+   "4: - WHITE HANGING HEART T-LIGHT HOLDER declined 25.0% WoW to £3,539.40 in TW revenue and fell 28.4% YoY from £4,942.19, with units dropping from 1,649 LW to 1,122 TW.",
+   "5: - HOT WATER BOTTLE TEA AND SYMPATHY increased 35.8% WoW to £3,538.37 in TW revenue and grew 99.0% YoY from £1,778.15, with 580 units sold TW.",
+   "6: - WHITE SKULL HOT WATER BOTTLE rose 41.2% WoW to £3,365.38 in TW revenue and surged 329.6% YoY from £783.34, demonstrating strong year-on-year growth.",
+   "7: - PAPER CHAIN KIT 50'S CHRISTMAS fell 4.0% WoW to £4,048.91 in TW revenue and declined 27.8% YoY from £5,604.38, with 1,055 units sold TW versus 1,149 LW.",
+   "8: - UTILTY CABINET WITH HOOKS exploded 3003.8% WoW to £2,509.44 in TW revenue from just £80.85 in LW, with only 126 units sold but representing significant growth momentum."
+  ],
+  "line": 7,
+  "number": "4.0%",
+  "char_offset_in_line": 38
+ },
+ {
+  "item_id": "it0480",
+  "table_csv": "data/tables/large_product_2011-W22.csv",
+  "note_lines": [
+   "1: - Total revenue was £56,180.18 TW, down 7.3% WoW from £60,592.49 LW, but up 183.2% YoY.",
+   "2: - REGENCY CAKESTAND 3 TIER generated £3,041.70 TW at rank 1 with 5.4% share TW and grew 43.7% WoW.",
+   "3: - PARTY BUNTING achieved rank 2 with £2,327.02 TW revenue and 4.1% share TW despite declining 50.0% WoW.",
+   "4: - BLACK RECORD COVER FRAME held rank 3 with £1,708.56 TW revenue and 3.0% share TW.",
+   "5: - ORANGE TV TRAY TABLE surged 18500.0% WoW, reaching £362.70 TW from £1.95 LW.",
+   "6: - SMALL POPCORN HOLDER fell 87.3% WoW, dropping to £422.63 TW from £3,331.18 LW.",
+   "7: - LARGE RED RETROSPOT WINDMILL increased 25650.5% YoY to £2.10 TW from £2.10 LY.",
+   "8: - PARTY BUNTING recorded 45 orders TW compared to 47 orders LW, representing the highest order volume."
+  ],
+  "line": 7,
+  "number": "£2.10",
+  "char_offset_in_line": 57
+ }
+]

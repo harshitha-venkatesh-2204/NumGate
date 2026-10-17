@@ -1,0 +1,49 @@
+{
+ "note_id": "medium_product_2010-W16__S3__claude-opus-5__r2",
+ "table_id": "medium_product_2010-W16",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W16",
+ "n_rows": 30,
+ "strategy": "S3",
+ "model": "claude-opus-5",
+ "repeat": 2,
+ "note": "- REGENCY CAKESTAND 3 TIER led TW at \u00a34,443.21 revenue, 13.2% of the shown total, up 28.5% WoW from \u00a33,457.20 LW on 355 units versus 296 LW.\n- PARTY BUNTING ranked 2 TW with \u00a32,495.37, up 55.9% WoW from \u00a31,600.50 LW, with units rising from 386 LW to 525 TW and orders from 29 LW to 47 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER fell 13.2% WoW to \u00a31,961.04 TW from \u00a32,259.40 LW, with units down from 848 LW to 696 TW despite orders rising from 45 LW to 60 TW.\n- PINK AND LILAC QUILTED THROW rose 3,873.7% WoW to \u00a31,825.90 TW from \u00a345.95 LW, with 53 units TW versus 1 unit LW across 4 orders TW.\n- ENGLISH ROSE DESIGN QUILTED THROW (\u00a31,350.97 TW, rank 5) and CLASSIC METAL BIRDCAGE PLANT HOLDER (\u00a31,193.55 TW, rank 8) both recorded \u00a30.00 LW, so WoW is not computable.\n- GIANT BLACK SUNGLASSES posted \u00a31,323.00 TW versus \u00a33.90 LW, 450 units TW on a single order, a 3.9% share of TW revenue.\n- RED RETROSPOT JUMBO BAG declined 28.4% WoW to \u00a31,115.45 TW from \u00a31,558.65 LW, with units down from 907 LW to 595 TW.\n- WOODEN CROQUET GARDEN SET was the largest decliner among the top 25 at minus 34.4% WoW (\u00a3743.99 TW versus \u00a31,133.73 LW), while VINTAGE UNION JACK BUNTING fell 29.8% WoW to \u00a3889.25 TW; LY revenue is blank for all 30 rows, so YoY is not available.",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W16. Entity type: product. The table has 30 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 4443.21 | 3457.20 |  | 355 | 296 | 59 | 53 | 28.5 |  | 13.2 | 1 |\n| PARTY BUNTING | 2495.37 | 1600.50 |  | 525 | 386 | 47 | 29 | 55.9 |  | 7.4 | 2 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 1961.04 | 2259.40 |  | 696 | 848 | 60 | 45 | -13.2 |  | 5.8 | 3 |\n| PINK AND LILAC QUILTED THROW | 1825.90 | 45.95 |  | 53 | 1 | 4 | 1 | 3873.7 |  | 5.4 | 4 |\n| ENGLISH ROSE DESIGN QUILTED THROW | 1350.97 | 0.00 |  | 53 | 0 | 4 | 0 |  |  | 4.0 | 5 |\n| GIANT BLACK SUNGLASSES | 1323.00 | 3.90 |  | 450 | 2 | 1 | 2 | 33823.1 |  | 3.9 | 6 |\n| DOOR MAT UNION FLAG | 1230.18 | 860.03 |  | 182 | 127 | 33 | 24 | 43.0 |  | 3.7 | 7 |\n| CLASSIC METAL BIRDCAGE PLANT HOLDER | 1193.55 | 0.00 |  | 153 | 0 | 7 | 0 |  |  | 3.5 | 8 |\n| RED RETROSPOT JUMBO BAG | 1115.45 | 1558.65 |  | 595 | 907 | 41 | 28 | -28.4 |  | 3.3 | 9 |\n| WHITE METAL LANTERN | 1054.88 | 348.51 |  | 296 | 101 | 23 | 10 | 202.7 |  | 3.1 | 10 |\n| PINK 3 PIECE MINI DOTS CUTLERY SET | 1039.65 | 101.25 |  | 289 | 27 | 21 | 7 | 926.8 |  | 3.1 | 11 |\n| JUMBO BAG STRAWBERRY | 951.74 | 495.75 |  | 518 | 285 | 29 | 16 | 92.0 |  | 2.8 | 12 |\n| LARGE CAKE STAND  HANGING STRAWBERY | 940.92 | 385.60 |  | 120 | 44 | 9 | 6 | 144.0 |  | 2.8 | 13 |\n| WOODEN PICTURE FRAME WHITE FINISH | 934.58 | 1032.60 |  | 395 | 460 | 45 | 28 | -9.5 |  | 2.8 | 14 |\n| EDWARDIAN PARASOL NATURAL | 892.11 | 345.10 |  | 161 | 58 | 14 | 9 | 158.5 |  | 2.7 | 15 |\n| VINTAGE UNION JACK BUNTING | 889.25 | 1266.50 |  | 100 | 149 | 25 | 27 | -29.8 |  | 2.6 | 16 |\n| ASSORTED COLOUR BIRD ORNAMENT | 870.00 | 1026.77 |  | 504 | 653 | 24 | 25 | -15.3 |  | 2.6 | 17 |\n| WOOD S/3 CABINET ANT WHITE FINISH | 865.66 | 325.85 |  | 112 | 43 | 30 | 13 | 165.7 |  | 2.6 | 18 |\n| WOODEN FRAME ANTIQUE WHITE | 839.43 | 1137.80 |  | 301 | 428 | 43 | 30 | -26.2 |  | 2.5 | 19 |\n| WOODEN SKITTLES GARDEN SET | 778.00 | 606.54 |  | 56 | 50 | 18 | 10 | 28.3 |  | 2.3 | 20 |\n| WOODEN CROQUET GARDEN SET | 743.99 | 1133.73 |  | 63 | 103 | 22 | 25 | -34.4 |  | 2.2 | 21 |\n| GREEN 3 PIECE MINI DOTS CUTLERY SET | 697.95 | 75.00 |  | 192 | 20 | 13 | 6 | 830.6 |  | 2.1 | 22 |\n| JUMBO  BAG BAROQUE BLACK WHITE | 697.75 | 792.60 |  | 377 | 468 | 19 | 11 | -12.0 |  | 2.1 | 23 |\n| CREAM CUPID HEARTS COAT HANGER | 695.08 | 469.75 |  | 236 | 163 | 31 | 10 | 48.0 |  | 2.1 | 24 |\n| JUMBO STORAGE BAG SUKI | 675.68 | 598.35 |  | 368 | 353 | 25 | 12 | 12.9 |  | 2.0 | 25 |\n| JUMBO BAG SCANDINAVIAN PAISLEY | 639.13 | 270.30 |  | 345 | 154 | 21 | 9 | 136.5 |  | 1.9 | 26 |\n| MULTI COLOUR SILVER T-LIGHT HOLDER | 634.84 | 203.69 |  | 823 | 269 | 11 | 5 | 211.7 |  | 1.9 | 27 |\n| SET/5 RED SPOTTY LID GLASS BOWLS | 628.41 | 427.70 |  | 207 | 158 | 26 | 20 | 46.9 |  | 1.9 | 28 |\n| WOOD 2 DRAWER CABINET WHITE FINISH | 624.61 | 309.00 |  | 114 | 60 | 29 | 11 | 102.1 |  | 1.9 | 29 |\n| STRAWBERRY CERAMIC TRINKET BOX | 595.87 | 264.04 |  | 491 | 224 | 36 | 17 | 125.7 |  | 1.8 | 30 |\n\nWrite the insight note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER led TW at \u00a34,443.21 revenue, 13.2% of the shown total, up 28.5% WoW from \u00a33,457.20 LW on 355 units versus 296 LW.\n- PARTY BUNTING ranked 2 TW with \u00a32,495.37, up 55.9% WoW from \u00a31,600.50 LW, with units rising from 386 LW to 525 TW and orders from 29 LW to 47 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER fell 13.2% WoW to \u00a31,961.04 TW from \u00a32,259.40 LW, with units down from 848 LW to 696 TW despite orders rising from 45 LW to 60 TW.\n- PINK AND LILAC QUILTED THROW rose 3,873.7% WoW to \u00a31,825.90 TW from \u00a345.95 LW, with 53 units TW versus 1 unit LW across 4 orders TW.\n- ENGLISH ROSE DESIGN QUILTED THROW (\u00a31,350.97 TW, rank 5) and CLASSIC METAL BIRDCAGE PLANT HOLDER (\u00a31,193.55 TW, rank 8) both recorded \u00a30.00 LW, so WoW is not computable.\n- GIANT BLACK SUNGLASSES posted \u00a31,323.00 TW versus \u00a33.90 LW, 450 units TW on a single order, a 3.9% share of TW revenue.\n- RED RETROSPOT JUMBO BAG declined 28.4% WoW to \u00a31,115.45 TW from \u00a31,558.65 LW, with units down from 907 LW to 595 TW.\n- WOODEN CROQUET GARDEN SET was the largest decliner among the top 25 at minus 34.4% WoW (\u00a3743.99 TW versus \u00a31,133.73 LW), while VINTAGE UNION JACK BUNTING fell 29.8% WoW to \u00a3889.25 TW; LY revenue is blank for all 30 rows, so YoY is not available.",
+    "input_tokens": 2809,
+    "output_tokens": 682,
+    "cost_usd": 0.031094999999999998,
+    "latency_s": 8.049,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 46,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- REGENCY CAKESTAND 3 TIER led TW at \u00a34,443.21 revenue, 13.2% of the shown total, up 28.5% WoW from \u00a33,457.20 LW on 355 units versus 296 LW.\n- PARTY BUNTING ranked 2 TW with \u00a32,495.37, up 55.9% WoW from \u00a31,600.50 LW, with units rising from 386 LW to 525 TW and orders from 29 LW to 47 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER fell 13.2% WoW to \u00a31,961.04 TW from \u00a32,259.40 LW, with units down from 848 LW to 696 TW despite orders rising from 45 LW to 60 TW.\n- PINK AND LILAC QUILTED THROW rose 3,873.7% WoW to \u00a31,825.90 TW from \u00a345.95 LW, with 53 units TW versus 1 unit LW across 4 orders TW.\n- ENGLISH ROSE DESIGN QUILTED THROW (\u00a31,350.97 TW, rank 5) and CLASSIC METAL BIRDCAGE PLANT HOLDER (\u00a31,193.55 TW, rank 8) both recorded \u00a30.00 LW, so WoW is not computable.\n- GIANT BLACK SUNGLASSES posted \u00a31,323.00 TW versus \u00a33.90 LW, 450 units TW on a single order, a 3.9% share of TW revenue.\n- RED RETROSPOT JUMBO BAG declined 28.4% WoW to \u00a31,115.45 TW from \u00a31,558.65 LW, with units down from 907 LW to 595 TW.\n- WOODEN CROQUET GARDEN SET was the largest decliner among the top 25 at minus 34.4% WoW (\u00a3743.99 TW versus \u00a31,133.73 LW), while VINTAGE UNION JACK BUNTING fell 29.8% WoW to \u00a3889.25 TW; LY revenue is blank for all 30 rows, so YoY is not available."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 2809,
+  "tokens_out": 682,
+  "cost_usd": 0.031094999999999998,
+  "latency_s": 8.049
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £25.2k vs LW £32.6k, WoW -22.7%.\n- TOTAL revenue TW £25.2k vs LY £18.3k, YoY +37.6%.\n- TOTAL units sold TW 7,456 vs LW 9,015.\n- TOTAL orders TW 390 vs LW 414.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 1 TW with revenue £5.7k, 22.6% share.\n- RABBIT NIGHT LIGHT ranked 2 TW with revenue £5.1k, 20.2% share.\n- CHILLI LIGHTS ranked 3 TW with revenue £5.0k, 19.7% share.\n- REGENCY CAKESTAND 3 TIER ranked 4 TW with revenue £3.5k, 14.1% share.",
+ "input_tokens": 2258,
+ "output_tokens": 398,
+ "cost_usd": 0.008496,
+ "latency_s": 4.314,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

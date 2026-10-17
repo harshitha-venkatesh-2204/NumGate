@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £55.6k in TW versus £24.8k in LW, a WoW change of +124.45%.\n- TOTAL revenue of £55.6k in TW compares with £27.5k in LY, a YoY change of +102.23%.\n- TOTAL units came in at 29,321 in TW, up 210.31% WoW, while TOTAL orders reached 941, up 40.03% WoW.\n- RABBIT NIGHT LIGHT ranked 1 in TW with £10.7k revenue, holding a 19.3% share of TOTAL revenue.\n- ALARM CLOCK BAKELIKE RED posted £2.4k in TW (4.4% share) and CHILLI LIGHTS £2.3k (4.1% share).\n- The top 5 products accounted for 35.7% of TOTAL revenue in TW, with PAPER CHAIN KIT 50'S CHRISTMAS at £2.3k and JUMBO BAG PAISLEY PARK at £2.1k.\n- Largest WoW gains came from RABBIT NIGHT LIGHT at +£10.7k, JUMBO BAG PAISLEY PARK at +£2.1k and ALARM CLOCK BAKELIKE RED at +£2.1k.\n- Largest WoW declines came from REGENCY CAKESTAND 3 TIER at -£1.5k, JUMBO BAG RED RETROSPOT at -£0.8k and CHOCOLATE HOT WATER BOTTLE at -£0.3k.",
+ "input_tokens": 2439,
+ "output_tokens": 519,
+ "cost_usd": 0.025169999999999998,
+ "latency_s": 6.591,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

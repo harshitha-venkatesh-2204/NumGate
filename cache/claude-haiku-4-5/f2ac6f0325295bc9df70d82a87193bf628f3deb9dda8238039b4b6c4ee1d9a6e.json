@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £3,388.78 revenue in TW, representing 20.2% of total product revenue and leading all items with 62 orders.\n- Total revenue reached £16,740.23 in TW, up 190.8% WoW from £5,757.32 in LW.\n- PACK OF 12 SUKI TISSUES achieved £2,573.71 revenue in TW with 5,247 units sold, accounting for 15.4% of total revenue.\n- WOODEN SKITTLES GARDEN SET contributed £2,650.90 revenue in TW, capturing 15.8% of total product revenue.\n- PACK OF 12 HEARTS DESIGN TISSUES revenue increased 6,087.6% WoW, with 5,007 units sold in TW.\n- PACK OF 12 SUKI TISSUES revenue grew 5,937.3% WoW, the second-largest percentage increase among tracked items.\n- Total units sold reached 15,031 in TW across all products, with tissue products accounting for 12,854 units.\n- PARTY BUNTING generated 35 orders in TW, the second-highest order count after WHITE HANGING HEART T-LIGHT HOLDER.",
+ "input_tokens": 1566,
+ "output_tokens": 305,
+ "cost_usd": 0.003091,
+ "latency_s": 3.579,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

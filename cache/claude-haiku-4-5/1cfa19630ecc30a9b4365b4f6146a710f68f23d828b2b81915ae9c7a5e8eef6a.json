@@ -1,0 +1,10 @@
+{
+ "text": "- PLEASE ONE PERSON METAL SIGN generated £2.8k revenue in TW, representing 20.7% of total product revenue and leading all items.\n- Total revenue reached £13.4k in TW, up 122.1% WoW from £6.0k in LW and up 89.6% YoY from £7.1k in LY.\n- PLEASE ONE PERSON METAL SIGN drove 1,398 units sold in TW, the highest volume across all products, with 41 orders.\n- PARTY BUNTING achieved £1.8k revenue in TW with a 5654.7% YoY increase, demonstrating exceptional growth versus LY performance.\n- COOK WITH WINE METAL SIGN revenue surged 2621.2% WoW in TW, indicating strong sequential momentum week over week.\n- HAND WARMER OWL DESIGN sold 836 units in TW with 416.7% WoW revenue growth and 2458.1% YoY revenue growth.\n- REGENCY CAKESTAND 3 TIER and PARTY BUNTING each captured 13.6% of TW revenue at £1.8k, tying as second-largest contributors.\n- Total units sold increased to 5,029 in TW from 1,413 in LW, representing a 256% increase in volume week over week.",
+ "input_tokens": 1931,
+ "output_tokens": 328,
+ "cost_usd": 0.003571,
+ "latency_s": 4.249,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom TW revenue was £196,490.10 versus LW £181,722.47, a WoW change of 8.1%, and versus LY £213,613.05, a YoY change of -8.0%.\n- United Kingdom held Rank 1 with a 77.3% share of TW revenue across the 5 countries shown.\n- Netherlands TW revenue was £29,458.10 versus LW £0.00, with YoY change of 7641.5% against LY revenue of £380.52.\n- EIRE TW revenue was £13,751.42 versus LW £7,196.47, a WoW change of 91.1%, and versus LY £10,542.88, a YoY change of 30.4%.\n- Germany TW revenue was £9,191.85 versus LW £6,153.87, a WoW change of 49.4%, and versus LY £4,577.05, a YoY change of 100.8%.\n- Sweden TW revenue was £5,296.96 versus LW £0.00, with no LY revenue recorded for comparison.\n- Germany TW orders were 17 versus LW 11, while EIRE TW orders were 14 versus LW 12.\n- Sweden held Rank 5 with a 2.1% share of TW revenue, the lowest among the 5 countries shown.",
+ "input_tokens": 989,
+ "output_tokens": 417,
+ "cost_usd": 0.006148000000000001,
+ "latency_s": 3.983,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

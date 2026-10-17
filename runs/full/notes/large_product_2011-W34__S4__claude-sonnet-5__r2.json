@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2011-W34__S4__claude-sonnet-5__r2",
+ "table_id": "large_product_2011-W34",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W34",
+ "n_rows": 104,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- Total revenue reached \u00a374,914.30 TW versus \u00a348,586.55 LW, a WoW change of +54.2%, and versus the comparable period LY a YoY change of +261.4%.\n- JUMBO BAG RED RETROSPOT ranked 1 with revenue \u00a32,941.59 TW and a 3.9% share TW, up +14.0% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 2 with revenue \u00a32,907.39 TW and a 3.9% share TW, up +14.2% WoW.\n- PARTY BUNTING ranked 3 with revenue \u00a32,730.41 TW and a 3.6% share TW, up +33.1% WoW.\n- SMALL CHINESE STYLE SCISSOR posted the largest WoW increase, rising +157681.0% WoW from \u00a30.42 LW to \u00a3662.68 TW.\n- SET OF TEA COFFEE SUGAR TINS PANTRY posted the largest WoW decrease, falling -84.9% WoW from \u00a32,159.90 LW to \u00a3325.70 TW.\n- JUMBO BAG RED RETROSPOT recorded the largest YoY increase, up +150750.8% YoY from \u00a31.95 LY.\n- NATURAL SLATE HEART CHALKBOARD recorded the largest YoY decrease, down -60.3% YoY from \u00a3946.88 LY, while SPOTTY BUNTING had the most orders at 44 TW versus 37 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W34. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a374,914.30 TW, revenue \u00a348,586.55 LW, revenue change +54.2% WoW, revenue change +261.4% YoY\n- JUMBO BAG RED RETROSPOT: rank 1, revenue \u00a32,941.59 TW, share 3.9% TW, revenue change +14.0% WoW\n- REGENCY CAKESTAND 3 TIER: rank 2, revenue \u00a32,907.39 TW, share 3.9% TW, revenue change +14.2% WoW\n- PARTY BUNTING: rank 3, revenue \u00a32,730.41 TW, share 3.6% TW, revenue change +33.1% WoW\n- SMALL CHINESE STYLE SCISSOR (largest WoW increase): revenue change +157681.0% WoW, revenue \u00a3662.68 TW versus \u00a30.42 LW\n- SET OF TEA COFFEE SUGAR TINS PANTRY (largest WoW decrease): revenue change -84.9% WoW, revenue \u00a3325.70 TW versus \u00a32,159.90 LW\n- JUMBO BAG RED RETROSPOT (largest YoY increase): revenue change +150750.8% YoY, revenue \u00a31.95 LY\n- NATURAL SLATE HEART CHALKBOARD (largest YoY decrease): revenue change -60.3% YoY, revenue \u00a3946.88 LY\n- SPOTTY BUNTING (most orders): orders 44 TW versus 37 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a374,914.30 TW versus \u00a348,586.55 LW, a WoW change of +54.2%, and versus the comparable period LY a YoY change of +261.4%.\n- JUMBO BAG RED RETROSPOT ranked 1 with revenue \u00a32,941.59 TW and a 3.9% share TW, up +14.0% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 2 with revenue \u00a32,907.39 TW and a 3.9% share TW, up +14.2% WoW.\n- PARTY BUNTING ranked 3 with revenue \u00a32,730.41 TW and a 3.6% share TW, up +33.1% WoW.\n- SMALL CHINESE STYLE SCISSOR posted the largest WoW increase, rising +157681.0% WoW from \u00a30.42 LW to \u00a3662.68 TW.\n- SET OF TEA COFFEE SUGAR TINS PANTRY posted the largest WoW decrease, falling -84.9% WoW from \u00a32,159.90 LW to \u00a3325.70 TW.\n- JUMBO BAG RED RETROSPOT recorded the largest YoY increase, up +150750.8% YoY from \u00a31.95 LY.\n- NATURAL SLATE HEART CHALKBOARD recorded the largest YoY decrease, down -60.3% YoY from \u00a3946.88 LY, while SPOTTY BUNTING had the most orders at 44 TW versus 37 LW.",
+    "input_tokens": 842,
+    "output_tokens": 497,
+    "cost_usd": 0.006653999999999999,
+    "latency_s": 4.518,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a374,914.30 TW, revenue \u00a348,586.55 LW, revenue change +54.2% WoW, revenue change +261.4% YoY\n- JUMBO BAG RED RETROSPOT: rank 1, revenue \u00a32,941.59 TW, share 3.9% TW, revenue change +14.0% WoW\n- REGENCY CAKESTAND 3 TIER: rank 2, revenue \u00a32,907.39 TW, share 3.9% TW, revenue change +14.2% WoW\n- PARTY BUNTING: rank 3, revenue \u00a32,730.41 TW, share 3.6% TW, revenue change +33.1% WoW\n- SMALL CHINESE STYLE SCISSOR (largest WoW increase): revenue change +157681.0% WoW, revenue \u00a3662.68 TW versus \u00a30.42 LW\n- SET OF TEA COFFEE SUGAR TINS PANTRY (largest WoW decrease): revenue change -84.9% WoW, revenue \u00a3325.70 TW versus \u00a32,159.90 LW\n- JUMBO BAG RED RETROSPOT (largest YoY increase): revenue change +150750.8% YoY, revenue \u00a31.95 LY\n- NATURAL SLATE HEART CHALKBOARD (largest YoY decrease): revenue change -60.3% YoY, revenue \u00a3946.88 LY\n- SPOTTY BUNTING (most orders): orders 44 TW versus 37 LW",
+  "n_calls": 1,
+  "tokens_in": 842,
+  "tokens_out": 497,
+  "cost_usd": 0.006653999999999999,
+  "latency_s": 4.518
+ }
+}

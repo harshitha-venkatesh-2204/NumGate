@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £6552.99 revenue in TW, the highest among all 98 products, but declined 8.3% WoW from £7144.93 in LW with units falling from 573 to 511.\n\n- WHITE HANGING HEART T-LIGHT HOLDER surged 125.6% WoW to £5999.53 in TW from £2659.73 in LW, ranking second overall with units nearly doubling from 891 to 2155.\n\n- PAPER CHAIN KIT 50'S CHRISTMAS dropped 36.4% WoW to £5735.62 in TW from £9020.33 in LW, representing the third largest revenue decline in absolute terms.\n\n- GINGERBREAD MAN COOKIE CUTTER exploded 4540.4% WoW to £754.07 in TW from just £16.25 in LW, with units jumping from 13 to 643.\n\n- HEART OF WICKER SMALL achieved 2158.1% WoW growth to £1806.28 in TW from £79.99 in LW, with units increasing from 19 to 1046.\n\n- ROTATING SILVER ANGELS T-LIGHT HLDR fell 53.3% WoW to £2028.90 in TW from £4341.94 in LW, with units declining from 1426 to 647.\n\n- CERAMIC CAKE STAND + HANGING CAKES generated £2047.29 revenue in TW with 235 units sold, representing new product entry with no LW sales data.\n\n- Top 10 products by TW revenue collectively account for £33,179.34, representing 26.9% of total revenue across all 98 products in TW.",
+ "input_tokens": 6602,
+ "output_tokens": 432,
+ "cost_usd": 0.008762,
+ "latency_s": 5.799,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

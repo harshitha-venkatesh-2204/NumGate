@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £89.8k revenue TW, representing 86.5% of total sales and demonstrating dominant market position.\n- Total revenue reached £103.7k TW but declined 12.1% WoW from £118.0k LW, indicating a significant weekly contraction.\n- Japan achieved strong growth with revenue increasing 12485.6% WoW, while maintaining 5.5% share of total sales at £5.7k TW.\n- Year-over-year performance shows total revenue up 23.4% YoY from £84.1k LY, with United Kingdom contributing 20.5% YoY growth.\n- Germany revenue fell 31.5% YoY to £2.8k TW, while Australia declined 60.7% YoY, indicating weakness in these markets.\n- United Kingdom processed 204 orders TW from 44149 units, while Japan generated 2962 units across the portfolio.\n- Netherlands revenue grew 280.4% WoW and Belgium increased 69.2% WoW, showing positive momentum in these smaller markets.\n- Total order volume reached 222 orders TW with 51540 units sold across all countries.",
+ "input_tokens": 1765,
+ "output_tokens": 278,
+ "cost_usd": 0.003155,
+ "latency_s": 3.87,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

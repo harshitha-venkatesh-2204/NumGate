@@ -1,0 +1,42 @@
+{
+ "note_id": "medium_product_2011-W18__S4__claude-sonnet-5__r2",
+ "table_id": "medium_product_2011-W18",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2011-W18",
+ "n_rows": 21,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- Total revenue for ISO week 2011-W18 was \u00a327,933.80 TW versus \u00a313,633.74 LW, a WoW change of +104.9%, and YoY change of +130.1%.\n- PARTY BUNTING ranked 1 with revenue \u00a35,226.24 TW, an 18.7% share TW, and a WoW change of +184.0%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with revenue \u00a33,057.60 TW, a 10.9% share TW, and a WoW change of +197.4%.\n- REGENCY CAKESTAND 3 TIER ranked 3 with revenue \u00a32,115.30 TW, a 7.6% share TW, and a WoW change of -44.4%.\n- SMALL CHINESE STYLE SCISSOR had the largest WoW increase, up +19919.5% WoW, from \u00a34.20 LW to \u00a3840.82 TW.\n- REGENCY CAKESTAND 3 TIER had the largest WoW decrease, down -44.4% WoW, from \u00a33,804.27 LW to \u00a32,115.30 TW.\n- EDWARDIAN PARASOL NATURAL had the largest YoY increase, up +315.0% YoY, from \u00a3223.43 LY.\n- REGENCY CAKESTAND 3 TIER had the largest YoY decrease, down -43.3% YoY, from \u00a33,730.99 LY.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W18. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a327,933.80 TW, revenue \u00a313,633.74 LW, revenue change +104.9% WoW, revenue change +130.1% YoY\n- PARTY BUNTING: rank 1, revenue \u00a35,226.24 TW, share 18.7% TW, revenue change +184.0% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a33,057.60 TW, share 10.9% TW, revenue change +197.4% WoW\n- REGENCY CAKESTAND 3 TIER: rank 3, revenue \u00a32,115.30 TW, share 7.6% TW, revenue change -44.4% WoW\n- SMALL CHINESE STYLE SCISSOR (largest WoW increase): revenue change +19919.5% WoW, revenue \u00a3840.82 TW versus \u00a34.20 LW\n- REGENCY CAKESTAND 3 TIER (largest WoW decrease): revenue change -44.4% WoW, revenue \u00a32,115.30 TW versus \u00a33,804.27 LW\n- EDWARDIAN PARASOL NATURAL (largest YoY increase): revenue change +315.0% YoY, revenue \u00a3223.43 LY\n- REGENCY CAKESTAND 3 TIER (largest YoY decrease): revenue change -43.3% YoY, revenue \u00a33,730.99 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 58 TW versus 28 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue for ISO week 2011-W18 was \u00a327,933.80 TW versus \u00a313,633.74 LW, a WoW change of +104.9%, and YoY change of +130.1%.\n- PARTY BUNTING ranked 1 with revenue \u00a35,226.24 TW, an 18.7% share TW, and a WoW change of +184.0%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with revenue \u00a33,057.60 TW, a 10.9% share TW, and a WoW change of +197.4%.\n- REGENCY CAKESTAND 3 TIER ranked 3 with revenue \u00a32,115.30 TW, a 7.6% share TW, and a WoW change of -44.4%.\n- SMALL CHINESE STYLE SCISSOR had the largest WoW increase, up +19919.5% WoW, from \u00a34.20 LW to \u00a3840.82 TW.\n- REGENCY CAKESTAND 3 TIER had the largest WoW decrease, down -44.4% WoW, from \u00a33,804.27 LW to \u00a32,115.30 TW.\n- EDWARDIAN PARASOL NATURAL had the largest YoY increase, up +315.0% YoY, from \u00a3223.43 LY.\n- REGENCY CAKESTAND 3 TIER had the largest YoY decrease, down -43.3% YoY, from \u00a33,730.99 LY.",
+    "input_tokens": 855,
+    "output_tokens": 473,
+    "cost_usd": 0.0064399999999999995,
+    "latency_s": 4.154,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a327,933.80 TW, revenue \u00a313,633.74 LW, revenue change +104.9% WoW, revenue change +130.1% YoY\n- PARTY BUNTING: rank 1, revenue \u00a35,226.24 TW, share 18.7% TW, revenue change +184.0% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a33,057.60 TW, share 10.9% TW, revenue change +197.4% WoW\n- REGENCY CAKESTAND 3 TIER: rank 3, revenue \u00a32,115.30 TW, share 7.6% TW, revenue change -44.4% WoW\n- SMALL CHINESE STYLE SCISSOR (largest WoW increase): revenue change +19919.5% WoW, revenue \u00a3840.82 TW versus \u00a34.20 LW\n- REGENCY CAKESTAND 3 TIER (largest WoW decrease): revenue change -44.4% WoW, revenue \u00a32,115.30 TW versus \u00a33,804.27 LW\n- EDWARDIAN PARASOL NATURAL (largest YoY increase): revenue change +315.0% YoY, revenue \u00a3223.43 LY\n- REGENCY CAKESTAND 3 TIER (largest YoY decrease): revenue change -43.3% YoY, revenue \u00a33,730.99 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 58 TW versus 28 LW",
+  "n_calls": 1,
+  "tokens_in": 855,
+  "tokens_out": 473,
+  "cost_usd": 0.0064399999999999995,
+  "latency_s": 4.154
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW is £29.4k versus LW £31.1k, a WoW change of -5.3%.\n- TOTAL units rose to 14,252 TW from 12,688 LW, while orders increased to 676 TW from 582 LW.\n- REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue of £3.7k and a 12.6% share of total TW revenue.\n- REGENCY CAKESTAND 3 TIER revenue fell by £1,550.86 WoW, the most negative change among all products.\n- WHITE HANGING HEART T-LIGHT HOLDER posted TW revenue of £2.5k with an 8.4% share and led all products with 52 orders TW.\n- JUMBO BAG RED RETROSPOT recorded TW revenue of £2,315.21 with a 7.9% share of total TW revenue.\n- CARDHOLDER HOLLY WREATH METAL had the largest WoW increase, up 11,050.0% and £1,657.50 in absolute revenue.\n- VINTAGE UNION JACK BUNTING had the steepest WoW decline among products at -66.8%, while MINI PAINT SET VINTAGE led all products with 1,542 units TW.",
+ "input_tokens": 2190,
+ "output_tokens": 419,
+ "cost_usd": 0.008570000000000001,
+ "latency_s": 4.745,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

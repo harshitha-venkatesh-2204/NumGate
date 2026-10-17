@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £138.0k revenue TW, representing 87.8% of total sales of £157.1k TW.\n- Total revenue declined 20.1% WoW to £157.1k TW from £196.6k LW, while total units fell to 82,352 TW from 98,928 LW.\n- Netherlands achieved exceptional growth with revenue up 1006.9% WoW to £10.4k TW and 465.4% YoY, now representing 6.6% of total sales.\n- Germany revenue decreased 21.9% WoW to £3.2k TW but grew 191.5% YoY, with 12 orders placed TW.\n- United Kingdom processed 315 orders TW generating 71,925 units, while Netherlands completed orders for 5,624 units TW.\n- France recorded 1,911 units across 8 orders TW with 120.7% YoY revenue growth.\n- Total revenue increased 4.9% YoY to £157.1k TW compared to £149.9k LY, despite the significant weekly decline.",
+ "input_tokens": 1755,
+ "output_tokens": 272,
+ "cost_usd": 0.003115,
+ "latency_s": 3.823,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

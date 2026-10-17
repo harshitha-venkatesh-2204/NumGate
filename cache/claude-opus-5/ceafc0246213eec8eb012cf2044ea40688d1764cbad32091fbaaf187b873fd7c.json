@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £27.9k TW versus £13.6k LW and £12.1k LY, a WoW gain of 104.9% and a YoY gain of 130.1%.\n- TOTAL units hit 11,366 TW, up 191.1% WoW, while TOTAL orders reached 564 TW, up 89.9% WoW.\n- PARTY BUNTING ranked 1 TW with £5,226.24 revenue, holding an 18.7% share of TOTAL TW revenue.\n- PARTY BUNTING added £3,386.10 of revenue WoW, the largest absolute WoW gain among products.\n- WHITE HANGING HEART T-LIGHT HOLDER posted £3,057.60 TW, a 10.9% share, up £2,029.60 WoW or 197.4% WoW.\n- REGENCY CAKESTAND 3 TIER recorded £2,115.30 TW and a 7.6% share, down £1,689.00 WoW or 44.4% WoW.\n- SPOTTY BUNTING delivered £1,414.10 TW and BLACK RECORD COVER FRAME £1,354.18 TW, with the top 5 products at 47.1% of TOTAL TW revenue.\n- JUMBO BAG RED RETROSPOT was broadly flat, down £3.90 WoW.",
+ "input_tokens": 2458,
+ "output_tokens": 451,
+ "cost_usd": 0.023565000000000003,
+ "latency_s": 5.566,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2011-W06__S4__claude-opus-5__r2",
+ "table_id": "large_product_2011-W06",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W06",
+ "n_rows": 139,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 2,
+ "note": "- Total revenue reached \u00a358,838.41 TW versus \u00a339,528.47 LW, a change of +48.9% WoW, and +350.9% YoY.\n- VINTAGE UNION JACK MEMOBOARD ranked 1 TW with revenue \u00a36,500.69 and an 11.0% share TW.\n- CREAM HEART CARD HOLDER ranked 2 TW with revenue \u00a32,403.53 and a 4.1% share TW, a change of +910.8% WoW.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN ranked 3 TW with revenue \u00a32,319.75 and a 3.9% share TW, a change of +3766.2% WoW.\n- VINTAGE UNION JACK MEMOBOARD posted the largest WoW increase at +65233.6%, with revenue \u00a36,500.69 TW versus \u00a39.95 LW.\n- ASSORTED COLOUR BIRD ORNAMENT posted the largest WoW decrease at -80.3%, with revenue \u00a3281.84 TW versus \u00a31,429.93 LW.\n- BASKET OF FLOWERS SEWING KIT recorded the largest YoY increase at +1707.1%, against revenue \u00a310.20 LY, while RED TOADSTOOL LED NIGHT LIGHT recorded the largest YoY decrease at -70.7%, against revenue \u00a3583.41 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 31 orders TW versus 48 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W06. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a358,838.41 TW, revenue \u00a339,528.47 LW, revenue change +48.9% WoW, revenue change +350.9% YoY\n- VINTAGE UNION JACK MEMOBOARD: rank 1, revenue \u00a36,500.69 TW, share 11.0% TW, revenue change +65233.6% WoW\n- CREAM HEART CARD HOLDER: rank 2, revenue \u00a32,403.53 TW, share 4.1% TW, revenue change +910.8% WoW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN: rank 3, revenue \u00a32,319.75 TW, share 3.9% TW, revenue change +3766.2% WoW\n- VINTAGE UNION JACK MEMOBOARD (largest WoW increase): revenue change +65233.6% WoW, revenue \u00a36,500.69 TW versus \u00a39.95 LW\n- ASSORTED COLOUR BIRD ORNAMENT (largest WoW decrease): revenue change -80.3% WoW, revenue \u00a3281.84 TW versus \u00a31,429.93 LW\n- BASKET OF FLOWERS SEWING KIT (largest YoY increase): revenue change +1707.1% YoY, revenue \u00a310.20 LY\n- RED TOADSTOOL LED NIGHT LIGHT (largest YoY decrease): revenue change -70.7% YoY, revenue \u00a3583.41 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 31 TW versus 48 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a358,838.41 TW versus \u00a339,528.47 LW, a change of +48.9% WoW, and +350.9% YoY.\n- VINTAGE UNION JACK MEMOBOARD ranked 1 TW with revenue \u00a36,500.69 and an 11.0% share TW.\n- CREAM HEART CARD HOLDER ranked 2 TW with revenue \u00a32,403.53 and a 4.1% share TW, a change of +910.8% WoW.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN ranked 3 TW with revenue \u00a32,319.75 and a 3.9% share TW, a change of +3766.2% WoW.\n- VINTAGE UNION JACK MEMOBOARD posted the largest WoW increase at +65233.6%, with revenue \u00a36,500.69 TW versus \u00a39.95 LW.\n- ASSORTED COLOUR BIRD ORNAMENT posted the largest WoW decrease at -80.3%, with revenue \u00a3281.84 TW versus \u00a31,429.93 LW.\n- BASKET OF FLOWERS SEWING KIT recorded the largest YoY increase at +1707.1%, against revenue \u00a310.20 LY, while RED TOADSTOOL LED NIGHT LIGHT recorded the largest YoY decrease at -70.7%, against revenue \u00a3583.41 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 31 orders TW versus 48 LW.",
+    "input_tokens": 877,
+    "output_tokens": 514,
+    "cost_usd": 0.017235,
+    "latency_s": 5.783,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a358,838.41 TW, revenue \u00a339,528.47 LW, revenue change +48.9% WoW, revenue change +350.9% YoY\n- VINTAGE UNION JACK MEMOBOARD: rank 1, revenue \u00a36,500.69 TW, share 11.0% TW, revenue change +65233.6% WoW\n- CREAM HEART CARD HOLDER: rank 2, revenue \u00a32,403.53 TW, share 4.1% TW, revenue change +910.8% WoW\n- GROW A FLYTRAP OR SUNFLOWER IN TIN: rank 3, revenue \u00a32,319.75 TW, share 3.9% TW, revenue change +3766.2% WoW\n- VINTAGE UNION JACK MEMOBOARD (largest WoW increase): revenue change +65233.6% WoW, revenue \u00a36,500.69 TW versus \u00a39.95 LW\n- ASSORTED COLOUR BIRD ORNAMENT (largest WoW decrease): revenue change -80.3% WoW, revenue \u00a3281.84 TW versus \u00a31,429.93 LW\n- BASKET OF FLOWERS SEWING KIT (largest YoY increase): revenue change +1707.1% YoY, revenue \u00a310.20 LY\n- RED TOADSTOOL LED NIGHT LIGHT (largest YoY decrease): revenue change -70.7% YoY, revenue \u00a3583.41 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 31 TW versus 48 LW",
+  "n_calls": 1,
+  "tokens_in": 877,
+  "tokens_out": 514,
+  "cost_usd": 0.017235,
+  "latency_s": 5.783
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £67.4k versus LW £50.9k, a WoW change of 32.5%.\n- TOTAL revenue TW was £67.4k versus LY £21.4k, a YoY change of 214.4%.\n- TOTAL units TW reached 31,218 compared with LW 19,769, while TOTAL orders TW were 1,940 versus LW 1,584.\n- EMPIRE DESIGN ROSETTE led product revenue TW at £3,277.92, with WoW and YoY both up 26,123.4%.\n- REGENCY CAKESTAND 3 TIER posted TW revenue of £2,529.33.\n- SET/10 PINK POLKADOT PARTY CANDLES rose 4,614.7% WoW, and ASSORTED COLOUR MINI CASES grew 2,067.9% WoW to TW revenue of £1,551.15.\n- CHILLI LIGHTS fell 69.3% WoW, JUMBO STORAGE BAG SUKI dropped 65.3% WoW, and JAM MAKING SET WITH JARS declined 62.3% WoW.\n- SET/4 WHITE RETRO STORAGE CUBES decreased 70.8% YoY, while DOORMAT HEARTS increased 3,023.2% YoY.",
+ "input_tokens": 2458,
+ "output_tokens": 443,
+ "cost_usd": 0.009346,
+ "latency_s": 4.486,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

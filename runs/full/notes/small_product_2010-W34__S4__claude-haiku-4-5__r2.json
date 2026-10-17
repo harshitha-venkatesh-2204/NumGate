@@ -1,0 +1,42 @@
+{
+ "note_id": "small_product_2010-W34__S4__claude-haiku-4-5__r2",
+ "table_id": "small_product_2010-W34",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W34",
+ "n_rows": 8,
+ "strategy": "S4",
+ "model": "claude-haiku-4-5",
+ "repeat": 2,
+ "note": "- Total revenue reached \u00a313,874.53 TW, up 18.6% WoW from \u00a311,697.34 LW.\n- REGENCY CAKESTAND 3 TIER generated \u00a33,265.21 TW, representing 23.5% of total revenue and ranking as the top product with 33.4% WoW growth.\n- WHITE HANGING HEART T-LIGHT HOLDER held rank 2 with \u00a33,042.82 TW revenue and 21.9% share, despite declining 30.9% WoW from \u00a34,405.70 LW.\n- ASSORTED COLOUR BIRD ORNAMENT achieved rank 3 with \u00a31,575.76 TW revenue, 11.4% share, and strong 49.0% WoW growth.\n- CAKE STAND LOVEBIRD 2 TIER PINK showed the largest WoW increase at 1441.2%, growing from \u00a380.08 LW to \u00a31,234.18 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER recorded the most orders at 69 TW compared to 57 LW, an increase of 12 orders.\n- WHITE HANGING HEART T-LIGHT HOLDER experienced the largest WoW revenue decrease at 30.9%, falling from \u00a34,405.70 LW to \u00a33,042.82 TW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W34. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a313,874.53 TW, revenue \u00a311,697.34 LW, revenue change +18.6% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a33,265.21 TW, share 23.5% TW, revenue change +33.4% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a33,042.82 TW, share 21.9% TW, revenue change -30.9% WoW\n- ASSORTED COLOUR BIRD ORNAMENT: rank 3, revenue \u00a31,575.76 TW, share 11.4% TW, revenue change +49.0% WoW\n- CAKE STAND LOVEBIRD 2 TIER PINK (largest WoW increase): revenue change +1441.2% WoW, revenue \u00a31,234.18 TW versus \u00a380.08 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (largest WoW decrease): revenue change -30.9% WoW, revenue \u00a33,042.82 TW versus \u00a34,405.70 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 69 TW versus 57 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a313,874.53 TW, up 18.6% WoW from \u00a311,697.34 LW.\n- REGENCY CAKESTAND 3 TIER generated \u00a33,265.21 TW, representing 23.5% of total revenue and ranking as the top product with 33.4% WoW growth.\n- WHITE HANGING HEART T-LIGHT HOLDER held rank 2 with \u00a33,042.82 TW revenue and 21.9% share, despite declining 30.9% WoW from \u00a34,405.70 LW.\n- ASSORTED COLOUR BIRD ORNAMENT achieved rank 3 with \u00a31,575.76 TW revenue, 11.4% share, and strong 49.0% WoW growth.\n- CAKE STAND LOVEBIRD 2 TIER PINK showed the largest WoW increase at 1441.2%, growing from \u00a380.08 LW to \u00a31,234.18 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER recorded the most orders at 69 TW compared to 57 LW, an increase of 12 orders.\n- WHITE HANGING HEART T-LIGHT HOLDER experienced the largest WoW revenue decrease at 30.9%, falling from \u00a34,405.70 LW to \u00a33,042.82 TW.",
+    "input_tokens": 581,
+    "output_tokens": 333,
+    "cost_usd": 0.002246,
+    "latency_s": 3.377,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a313,874.53 TW, revenue \u00a311,697.34 LW, revenue change +18.6% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a33,265.21 TW, share 23.5% TW, revenue change +33.4% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a33,042.82 TW, share 21.9% TW, revenue change -30.9% WoW\n- ASSORTED COLOUR BIRD ORNAMENT: rank 3, revenue \u00a31,575.76 TW, share 11.4% TW, revenue change +49.0% WoW\n- CAKE STAND LOVEBIRD 2 TIER PINK (largest WoW increase): revenue change +1441.2% WoW, revenue \u00a31,234.18 TW versus \u00a380.08 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (largest WoW decrease): revenue change -30.9% WoW, revenue \u00a33,042.82 TW versus \u00a34,405.70 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 69 TW versus 57 LW",
+  "n_calls": 1,
+  "tokens_in": 581,
+  "tokens_out": 333,
+  "cost_usd": 0.002246,
+  "latency_s": 3.377
+ }
+}

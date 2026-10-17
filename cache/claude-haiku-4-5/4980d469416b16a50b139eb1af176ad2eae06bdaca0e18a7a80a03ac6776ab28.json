@@ -1,0 +1,10 @@
+{
+ "text": "- PAPER CHAIN KIT 50'S CHRISTMAS generated £5,701.16 revenue in TW, the highest among all products, but declined 39.9% WoW from £9,485.15 in LW and fell 0.6% YoY versus £5,735.62 in LY.\n- RABBIT NIGHT LIGHT fell 52.4% WoW to £5,084.81 in TW from £10,687.69 in LW, representing the second-largest revenue product despite the sharp decline.\n- CHILLI LIGHTS surged 115.0% WoW to £4,960.25 in TW from £2,307.01 in LW and grew 229.3% YoY from £1,506.40 in LY.\n- REGENCY CAKESTAND 3 TIER generated £3,543.60 in TW revenue with 261 units sold across 50 orders, but declined 45.9% YoY from £6,552.99 in LY.\n- COLOURED GLASS STAR T-LIGHT HOLDER achieved the strongest WoW growth at 1050.4%, rising to £1,278.75 in TW from £111.16 in LW with 361 units sold.\n- PARTY BUNTING and BLACK RECORD COVER FRAME both more than doubled WoW, growing 106.7% and 118.4% respectively to £2,182.49 and £2,086.47 in TW.\n- JUMBO BAG 50'S CHRISTMAS, JUMBO BAG PAISLEY PARK, and JUMBO BAG VINTAGE DOILY collectively declined 57.5% to 69.0% WoW, totaling £3,334.82 in TW revenue.\n- WOODEN ADVENT CALENDAR RED showed exceptional YoY growth of 698.9% to £1,761.24 in TW from £220.45 in LY, despite a 5.8% WoW decline.",
+ "input_tokens": 2755,
+ "output_tokens": 485,
+ "cost_usd": 0.005180000000000001,
+ "latency_s": 6.138,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

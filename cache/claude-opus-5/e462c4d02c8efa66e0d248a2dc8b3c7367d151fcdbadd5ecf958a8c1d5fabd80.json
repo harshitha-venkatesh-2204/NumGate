@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £55,625.49 TW versus £24,782.75 LW, a change of +124.5% WoW and +102.2% YoY.\n- RABBIT NIGHT LIGHT ranked 1 TW with revenue £10,739.38 and a 19.3% share TW.\n- RABBIT NIGHT LIGHT posted the largest WoW increase at +18473.8%, moving from £57.82 LW to £10,739.38 TW.\n- ALARM CLOCK BAKELIKE RED ranked 2 TW with revenue £2,423.41 and a 4.4% share TW, a change of +610.8% WoW.\n- CHILLI LIGHTS ranked 3 TW with revenue £2,285.12 and a 4.1% share TW, a change of +221.7% WoW.\n- REGENCY CAKESTAND 3 TIER recorded the largest WoW decrease at -47.6%, with £1,679.31 TW versus £3,205.71 LW, and the largest YoY decrease at -77.8% against £7,558.58 LY.\n- ALARM CLOCK BAKELIKE PINK showed the largest YoY increase at +611.7%, measured against £266.37 LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS led on order count with 64 orders TW versus 48 LW.",
+ "input_tokens": 850,
+ "output_tokens": 455,
+ "cost_usd": 0.015625,
+ "latency_s": 5.055,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

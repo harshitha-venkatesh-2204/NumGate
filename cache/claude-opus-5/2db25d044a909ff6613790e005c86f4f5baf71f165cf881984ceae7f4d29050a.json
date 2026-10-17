@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £64,663.42 TW versus £45,711.64 LW, a change of +41.5% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER held rank 1 with revenue £3,388.78 TW, a 5.2% share TW and a change of +14.4% WoW.\n- WOODEN SKITTLES GARDEN SET placed rank 2 at £2,650.90 TW, 4.1% share TW, with a change of +465.4% WoW.\n- PACK OF 12 SUKI TISSUES placed rank 3 at £2,573.71 TW, 4.0% share TW, with a change of +5937.3% WoW.\n- SOMBRERO posted the largest WoW increase at +51182.1%, moving from £1.95 LW to £1,000.00 TW.\n- RETRO SPOT TEA SET CERAMIC 11 PC posted the largest WoW decrease at -83.7%, moving from £2,071.74 LW to £337.72 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 62 orders TW versus 55 orders LW.",
+ "input_tokens": 738,
+ "output_tokens": 390,
+ "cost_usd": 0.01344,
+ "latency_s": 5.011,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- PAPER CHAIN KIT 50'S CHRISTMAS leads TW at £5,701.16 (8.5% share, rank 1), down 39.9% WoW from £9,485.15 and down 0.6% YoY from £5,735.62.\n- RABBIT NIGHT LIGHT ranks 2 at £5,084.81 TW versus £10,687.69 LW (-52.4% WoW), with units at 2,331 TW against 4,279 LW.\n- CHILLI LIGHTS reached £4,960.25 TW, up 115.0% WoW from £2,307.01 and up 229.3% YoY from £1,506.40, on 959 units TW versus 389 LW.\n- REGENCY CAKESTAND 3 TIER posted £3,543.60 TW, up 17.3% WoW, but down 45.9% YoY from £6,552.99 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to £2,475.48 TW, -35.0% WoW and -58.7% YoY from £5,999.53 LY.\n- Four jumbo bag lines declined WoW: JUMBO BAG 50'S CHRISTMAS -69.0% to £1,151.45, JUMBO BAG VINTAGE DOILY -62.9% to £1,075.15, JUMBO BAG PAISLEY PARK -57.5% to £1,108.22, and JUMBO BAG RED RETROSPOT -49.0% to £1,581.84 (-28.8% YoY).\n- COLOURED GLASS STAR T-LIGHT HOLDER rose 1,050.4% WoW to £1,278.75 TW from £111.16 LW, and CHILDRENS CUTLERY POLKADOT PINK rose 323.6% WoW to £2,067.90 TW.\n- WOODEN ADVENT CALENDAR RED recorded £1,761.24 TW, -5.8% WoW and +698.9% YoY from £220.45 LY, on 7 orders TW versus 23 LW.",
+ "input_tokens": 3202,
+ "output_tokens": 1205,
+ "cost_usd": 0.046134999999999995,
+ "latency_s": 12.709,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

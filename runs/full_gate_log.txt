@@ -1,0 +1,11 @@
+Re-scoring run full (claude-opus-5, claude-sonnet-5, claude-haiku-4-5) without generating notes
+
+Wrote runs/full/notes.csv (1440 notes), numbers.csv, claims.csv
+
+          notes  failed  numbers_checked  unsupported_rate  claims_verifiable  binding_error_rate  claim_error_rate  format_ok  cost_per_note
+strategy                                                                                                                                     
+S1          360       0            13927            0.0060              14002              0.0028            0.0072     0.9667         0.0231
+S2          360       0             7535            0.0058               7573              0.0038            0.0116     0.9889         0.0514
+S3          360       0            13975            0.0029              14051              0.0028            0.0038     0.9722         0.0298
+S4          360       0             8650            0.0014               8723              0.0016            0.0016     0.9694         0.0077
+exit code: 0

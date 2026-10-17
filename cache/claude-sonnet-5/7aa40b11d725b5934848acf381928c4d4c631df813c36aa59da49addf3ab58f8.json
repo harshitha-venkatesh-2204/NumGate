@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 TW at £2456.32, down from £5198.05 LW, a WoW decline of 52.7%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 2 TW with £2173.03, up from £1625.34 LW, WoW growth of 33.7%.\n- FLAG OF ST GEORGE CAR FLAG rose from £6.69 LW to £272.27 TW, a WoW increase of 3969.8%, the largest WoW gain among the 97 products.\n- BLACK HEART CARD HOLDER climbed from £23.70 LW to £955.12 TW, WoW up 3930.0%, with orders rising from 2 to 16.\n- DOOR MAT ENGLISH ROSE fell from £891.83 LW to £260.72 TW, a WoW drop of 70.8%, the steepest WoW decline among the 97 products.\n- CERAMIC CAKE STAND + HANGING CAKES dropped from £758.11 LW to £269.66 TW, WoW down 64.4%.\n- NATURAL SLATE CHALKBOARD LARGE and SET OF 2 ROUND TINS CAMEMBERT both had £0.00 LW revenue, reaching £842.73 and £296.05 TW respectively.\n- Top 3 products by TW revenue, REGENCY CAKESTAND 3 TIER, WHITE HANGING HEART T-LIGHT HOLDER, and JUMBO BAG RED RETROSPOT, together hold 12.0% share of TW revenue across the 97 rows.",
+ "input_tokens": 8199,
+ "output_tokens": 1270,
+ "cost_usd": 0.029098,
+ "latency_s": 12.112,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

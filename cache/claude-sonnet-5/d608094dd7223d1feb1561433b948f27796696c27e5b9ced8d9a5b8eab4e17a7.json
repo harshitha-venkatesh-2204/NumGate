@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranked 1 TW with revenue of £10,902.59, down 4.8% WoW from £11,450.57 LW.\n- CREAM HEART CARD HOLDER revenue reached £4,944.82 TW, up 1002.8% WoW from £448.38 LW and up 319.0% YoY from £1,180.10 LY.\n- VINTAGE UNION JACK MEMOBOARD revenue climbed to £6,561.83 TW from £403.00 LW, a 1528.2% WoW increase.\n- WOOD BLACK BOARD ANT WHITE FINISH revenue rose to £5,715.75 TW from £414.66 LW, up 1278.4% WoW.\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue fell to £4,048.91 TW, down 27.8% YoY from £5,604.38 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue dropped to £3,539.40 TW, down 25.0% WoW from £4,721.11 LW and down 28.4% YoY from £4,942.19 LY.\n- WHITE SKULL HOT WATER BOTTLE revenue grew to £3,365.38 TW, up 41.2% WoW and up 329.6% YoY from £783.34 LY.\n- HAND WARMER OWL DESIGN revenue fell to £633.57 TW from £2,542.97 LW, down 75.1% WoW.",
+ "input_tokens": 10040,
+ "output_tokens": 1107,
+ "cost_usd": 0.03115,
+ "latency_s": 9.055,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2010-W43__S4__claude-haiku-4-5__r1",
+ "table_id": "large_product_2010-W43",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2010-W43",
+ "n_rows": 112,
+ "strategy": "S4",
+ "model": "claude-haiku-4-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a389,976.85 TW, up 25.0% WoW from \u00a371,964.54 LW.\n- REGENCY CAKESTAND 3 TIER generated \u00a37,558.58 TW with an 8.4% share TW, ranking first and growing 56.1% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved rank 2 with revenue \u00a34,173.55 TW, representing 4.6% share TW and increasing 87.5% WoW.\n- COLOUR GLASS. STAR T-LIGHT HOLDER ranked third with revenue \u00a33,915.56 TW, accounting for 4.4% share TW and surging 1038.9% WoW.\n- SMALL CHINESE STYLE SCISSOR recorded the largest WoW increase at 7769.0%, with revenue climbing from \u00a316.80 LW to \u00a31,322.00 TW.\n- EDWARDIAN PARASOL BLACK experienced the largest WoW decrease of -80.0%, declining from \u00a32,169.57 LW to \u00a3434.67 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the most orders at 72 TW compared to 71 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W43. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a389,976.85 TW, revenue \u00a371,964.54 LW, revenue change +25.0% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a37,558.58 TW, share 8.4% TW, revenue change +56.1% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a34,173.55 TW, share 4.6% TW, revenue change +87.5% WoW\n- COLOUR GLASS. STAR T-LIGHT HOLDER: rank 3, revenue \u00a33,915.56 TW, share 4.4% TW, revenue change +1038.9% WoW\n- SMALL CHINESE STYLE SCISSOR (largest WoW increase): revenue change +7769.0% WoW, revenue \u00a31,322.00 TW versus \u00a316.80 LW\n- EDWARDIAN PARASOL BLACK (largest WoW decrease): revenue change -80.0% WoW, revenue \u00a3434.67 TW versus \u00a32,169.57 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 72 TW versus 71 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a389,976.85 TW, up 25.0% WoW from \u00a371,964.54 LW.\n- REGENCY CAKESTAND 3 TIER generated \u00a37,558.58 TW with an 8.4% share TW, ranking first and growing 56.1% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved rank 2 with revenue \u00a34,173.55 TW, representing 4.6% share TW and increasing 87.5% WoW.\n- COLOUR GLASS. STAR T-LIGHT HOLDER ranked third with revenue \u00a33,915.56 TW, accounting for 4.4% share TW and surging 1038.9% WoW.\n- SMALL CHINESE STYLE SCISSOR recorded the largest WoW increase at 7769.0%, with revenue climbing from \u00a316.80 LW to \u00a31,322.00 TW.\n- EDWARDIAN PARASOL BLACK experienced the largest WoW decrease of -80.0%, declining from \u00a32,169.57 LW to \u00a3434.67 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the most orders at 72 TW compared to 71 LW.",
+    "input_tokens": 574,
+    "output_tokens": 308,
+    "cost_usd": 0.002114,
+    "latency_s": 3.096,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a389,976.85 TW, revenue \u00a371,964.54 LW, revenue change +25.0% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a37,558.58 TW, share 8.4% TW, revenue change +56.1% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 2, revenue \u00a34,173.55 TW, share 4.6% TW, revenue change +87.5% WoW\n- COLOUR GLASS. STAR T-LIGHT HOLDER: rank 3, revenue \u00a33,915.56 TW, share 4.4% TW, revenue change +1038.9% WoW\n- SMALL CHINESE STYLE SCISSOR (largest WoW increase): revenue change +7769.0% WoW, revenue \u00a31,322.00 TW versus \u00a316.80 LW\n- EDWARDIAN PARASOL BLACK (largest WoW decrease): revenue change -80.0% WoW, revenue \u00a3434.67 TW versus \u00a32,169.57 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 72 TW versus 71 LW",
+  "n_calls": 1,
+  "tokens_in": 574,
+  "tokens_out": 308,
+  "cost_usd": 0.002114,
+  "latency_s": 3.096
+ }
+}

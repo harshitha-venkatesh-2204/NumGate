@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £8406.79 revenue in TW, up 70.1% WoW from £4942.19 in LW, representing 13.6% of total revenue and ranking first.\n- FAIRY CAKE CANDLES achieved £3065.02 revenue in TW, up 121.8% WoW from £1381.85 in LW, with units sold increasing from 997 in LW to 2318 in TW.\n- PAPER CHAIN KIT 50'S CHRISTMAS declined to £2143.03 revenue in TW, down 61.8% WoW from £5604.38 in LW, with units falling from 2060 in LW to 663 in TW.\n- BLACK RECORD COVER FRAME surged to £1144.96 revenue in TW, up 185.5% WoW from £401.00 in LW, with orders increasing from 6 in LW to 13 in TW.\n- GREY HEART HOT WATER BOTTLE reached £1394.46 revenue in TW, up 126.7% WoW from £615.12 in LW, with units sold doubling from 167 in LW to 410 in TW.\n- ASSORTED COLOUR BIRD ORNAMENT fell to £2046.22 revenue in TW, down 35.3% WoW from £3160.37 in LW, despite 1213 units sold in TW.\n- EDWARDIAN PARASOL BLACK decreased to £3448.60 revenue in TW, down 12.2% WoW from £3927.55 in LW, ranking second overall.\n- WILLOW BRANCH LIGHTS surged to £1033.11 revenue in TW, up 185.0% WoW from £362.52 in LW, with units increasing from 52 in LW to 173 in TW.",
+ "input_tokens": 2412,
+ "output_tokens": 473,
+ "cost_usd": 0.004777,
+ "latency_s": 5.36,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £65.3k versus LW £36.2k, a WoW increase of 80.3%.\n- TOTAL revenue TW was £65.3k versus LY £23.5k, a YoY increase of 177.6%.\n- TOTAL units TW reached 26,182 compared with LW 12,664, while TOTAL orders TW were 1,838 versus LW 1,381.\n- PLEASE ONE PERSON METAL SIGN led product revenue TW at £2,773.43, with WoW growth of 3286.4%.\n- BEWARE OF THE CAT METAL SIGN and STAR WOODEN CHRISTMAS DECORATION posted the largest WoW gains at 3836.8% and 3710.9% respectively.\n- WOOD BLACK BOARD ANT WHITE FINISH fell 76.2% WoW, the steepest decline among tracked products.\n- PARTY BUNTING recorded TW revenue of £1,825.40 and a YoY gain of 5654.7%.\n- WHITE HANGING HEART T-LIGHT HOLDER and JUMBO BAG RED RETROSPOT both declined YoY, by 48.2% and 49.8% respectively.",
+ "input_tokens": 2542,
+ "output_tokens": 412,
+ "cost_usd": 0.009204,
+ "latency_s": 4.077,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

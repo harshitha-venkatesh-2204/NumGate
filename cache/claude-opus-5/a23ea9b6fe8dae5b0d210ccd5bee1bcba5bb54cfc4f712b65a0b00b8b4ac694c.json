@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led TW at £4,554.09 (24.3% share, Rank 1), up 85.4% WoW from £2,456.32 LW, with units rising from 178 LW to 391 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 at £3,214.95 TW versus £2,173.03 LW, a 47.9% WoW gain, on 1,209 units TW against 785 units LW.\n- JUMBO BAG RED RETROSPOT posted £2,489.35 TW versus £1,392.22 LW (+78.8% WoW) and moved the most units of any row at 1,405 TW, up from 751 LW.\n- PAPER CHAIN KIT SKULLS showed the largest WoW move at +3,983.9%, from £35.40 LW to £1,445.70 TW, with orders at 3 TW versus 2 LW.\n- PAPER CHAIN KIT RETRO SPOT rose 708.2% WoW to £1,573.81 TW from £194.74 LW, while orders fell from 13 LW to 12 TW.\n- PAPER BUNTING RETRO SPOTS reached £2,266.34 TW (+160.0% WoW) on 846 units versus 269 units LW, with orders at 33 TW against 34 LW.\n- VINTAGE UNION JACK BUNTING (£1,688.33 TW, +106.9% WoW) and JUMBO BAG STRAWBERRY (£1,544.16 TW, +101.2% WoW) both more than doubled versus LW.\n- The 8 listed products totalled £18,776.73 TW versus £8,706.79 LW, a WoW increase of £10,069.94 or 115.7%; YoY and LY revenue are not available for any of the 8 rows.",
+ "input_tokens": 1232,
+ "output_tokens": 876,
+ "cost_usd": 0.028059999999999998,
+ "latency_s": 10.46,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- PLEASE ONE PERSON METAL SIGN ranks 1 with TW revenue of £2773.43, up 3286.4% WoW from £81.90 LW, and up 359.2% YoY from £603.92 LY.\n- PARTY BUNTING posted TW revenue of £1825.40 versus LW £1410.09, a WoW increase of 29.5%, and YoY growth of 5654.7% versus £31.72 LY.\n- REGENCY CAKESTAND 3 TIER recorded TW revenue of £1825.17, down 8.3% WoW from £1991.04 LW and down 50.8% YoY from £3712.01 LY.\n- HAND WARMER OWL DESIGN reached TW revenue of £1611.60, up 416.7% WoW from £311.93 LW, with YoY growth of 2458.1% from £63.00 LY.\n- COOK WITH WINE METAL SIGN generated TW revenue of £1415.04, up 2621.2% WoW from £52.00 LW, and up 865.5% YoY from £146.56 LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS had TW revenue of £1347.29, up 159.0% WoW from £520.28 LW, and up 3705.9% YoY from £35.40 LY.\n- JUMBO BAG PINK POLKADOT achieved TW revenue of £1326.41, up 131.4% WoW from £573.29 LW, with LY revenue of £0.00.\n- WHITE HANGING HEART T-LIGHT HOLDER posted TW revenue of £1285.11, up 17.2% WoW from £1096.24 LW, and down 48.2% YoY from £2481.58 LY, holding a 9.6% share of TW revenue.",
+ "input_tokens": 1292,
+ "output_tokens": 599,
+ "cost_usd": 0.008574,
+ "latency_s": 5.393,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

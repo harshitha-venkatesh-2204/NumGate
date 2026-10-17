@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranked 1 TW with revenue £6009.01, up 13.0% WoW from £5319.69 LW.\n- ROTATING SILVER ANGELS T-LIGHT HLDR revenue rose 681.7% WoW to £5866.33 TW from £750.47 LW, ranked 2.\n- PAPER CHAIN KIT 50'S CHRISTMAS revenue grew 192.1% WoW to £4046.96 TW from £1385.59 LW, ranked 3.\n- BROCADE RING PURSE revenue increased 3063.7% WoW to £1052.56 TW from £33.27 LW, with units up to 5632 TW from 149 LW.\n- SET OF 3 BABUSHKA STACKING TINS revenue rose 2482.8% WoW to £1406.34 TW from £54.45 LW.\n- PARTY BUNTING revenue fell 70.1% WoW to £1078.12 TW from £3601.04 LW.\n- HEART OF WICKER LARGE revenue dropped 44.2% WoW to £1142.12 TW from £2046.89 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue was £2754.49 TW, up 8.8% WoW from £2531.22 LW, ranked 4.",
+ "input_tokens": 6624,
+ "output_tokens": 457,
+ "cost_usd": 0.017818,
+ "latency_s": 4.212,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

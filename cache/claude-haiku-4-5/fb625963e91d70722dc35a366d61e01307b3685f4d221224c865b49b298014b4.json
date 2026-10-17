@@ -1,0 +1,10 @@
+{
+ "text": "- VINTAGE UNION JACK MEMOBOARD generated £6,500.69 in revenue TW, representing a 65,233.6% increase WoW.\n- CREAM HEART CARD HOLDER achieved £2,403.53 in revenue TW with 1,027 units sold TW.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN recorded £2,319.75 in revenue TW and led all products with 2,451 units sold TW.\n- REGENCY CAKESTAND 3 TIER generated £1,860.24 in revenue TW across 29 orders TW.\n- WHITE HANGING HEART T-LIGHT HOLDER produced £1,392.59 in revenue TW with 31 orders TW, the highest order count.\n- PACK OF 12 SUKI TISSUES showed a 49,201.7% revenue increase WoW with 1,297 units sold TW.\n- BASKET OF FLOWERS SEWING KIT demonstrated a 1,707.1% revenue increase YoY.\n- PACK OF 12 HEARTS DESIGN TISSUES sold 1,332 units TW, the second highest unit volume.",
+ "input_tokens": 1998,
+ "output_tokens": 285,
+ "cost_usd": 0.0034230000000000003,
+ "latency_s": 3.452,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

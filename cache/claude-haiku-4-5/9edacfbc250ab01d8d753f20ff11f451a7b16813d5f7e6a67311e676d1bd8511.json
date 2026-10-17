@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £10,902.59 in TW revenue, down 4.8% WoW from £11,450.57 in LW, representing the highest revenue product across all 122 entities.\n\n- VINTAGE UNION JACK MEMOBOARD surged to £6,561.83 in TW revenue, up 1528.2% WoW from just £403.00 in LW, making it the second-ranked product by TW revenue.\n\n- CREAM HEART CARD HOLDER achieved £4,944.82 in TW revenue with 2,074 units sold, up 319.0% YoY compared to £1,180.10 in the same week last year.\n\n- WHITE HANGING HEART T-LIGHT HOLDER declined 25.0% WoW to £3,539.40 in TW revenue and fell 28.4% YoY from £4,942.19, with units dropping from 1,649 LW to 1,122 TW.\n\n- HOT WATER BOTTLE TEA AND SYMPATHY increased 35.8% WoW to £3,538.37 in TW revenue and grew 99.0% YoY from £1,778.15, with 580 units sold TW.\n\n- WHITE SKULL HOT WATER BOTTLE rose 41.2% WoW to £3,365.38 in TW revenue and surged 329.6% YoY from £783.34, demonstrating strong year-on-year growth.\n\n- PAPER CHAIN KIT 50'S CHRISTMAS fell 4.0% WoW to £4,048.91 in TW revenue and declined 27.8% YoY from £5,604.38, with 1,055 units sold TW versus 1,149 LW.\n\n- UTILTY CABINET WITH HOOKS exploded 3003.8% WoW to £2,509.44 in TW revenue from just £80.85 in LW, with only 126 units sold but representing significant growth momentum.",
+ "input_tokens": 8750,
+ "output_tokens": 500,
+ "cost_usd": 0.011250000000000001,
+ "latency_s": 6.258,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

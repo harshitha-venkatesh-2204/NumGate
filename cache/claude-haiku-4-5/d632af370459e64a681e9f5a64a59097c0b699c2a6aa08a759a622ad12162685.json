@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue TW was £20.4k, down 13.3% WoW from £23.6k LW, but up 40.6% YoY from £14.5k LY.\n- REGENCY CAKESTAND 3 TIER generated £3.8k revenue TW, the highest performing product by revenue this week.\n- PARTY BUNTING achieved £1.8k revenue TW and led order volume with 35 orders TW.\n- WORLD WAR 2 GLIDERS ASSTD DESIGNS sold 2592 units TW, the top product by unit volume.\n- CERAMIC STRAWBERRY MONEY BOX showed exceptional growth of 11249% WoW in revenue, indicating a significant surge from LW.\n- BALLOON WATER BOMB PACK OF 35 grew 1373.1% WoW in revenue and 538.6% YoY in revenue, demonstrating strong momentum.\n- UNION STRIPE WITH FRINGE HAMMOCK increased 729% YoY in revenue, reflecting substantial year-over-year improvement.\n- WHITE HANGING HEART T-LIGHT HOLDER generated £1.0k revenue TW with 28 orders, showing consistent customer demand.",
+ "input_tokens": 1905,
+ "output_tokens": 288,
+ "cost_usd": 0.003345,
+ "latency_s": 3.889,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

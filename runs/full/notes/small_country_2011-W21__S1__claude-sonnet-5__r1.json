@@ -1,0 +1,41 @@
+{
+ "note_id": "small_country_2011-W21__S1__claude-sonnet-5__r1",
+ "table_id": "small_country_2011-W21",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2011-W21",
+ "n_rows": 6,
+ "strategy": "S1",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- United Kingdom TW revenue was \u00a3138,020.95, down -22.5% WoW from LW \u00a3177,978.27, and down -4.0% YoY from LY \u00a3143,748.77.\n- United Kingdom holds the largest share of TW revenue at 87.8% and ranks 1 among the 6 countries shown.\n- Netherlands TW revenue was \u00a310,372.88, up 1006.9% WoW from LW \u00a3937.12, and up 465.4% YoY from LY \u00a31,834.67.\n- Germany TW revenue was \u00a33,227.89, down -21.9% WoW from LW \u00a34,131.21, but up 191.5% YoY from LY \u00a31,107.38.\n- France TW revenue was \u00a32,805.71, down -41.2% WoW from LW \u00a34,775.39, while up 120.7% YoY from LY \u00a31,271.21.\n- EIRE TW revenue was \u00a31,451.79, down -83.4% WoW from LW \u00a38,729.96, and down -23.2% YoY from LY \u00a31,889.68.\n- Poland recorded TW revenue of \u00a31,247.57 on 2 orders, compared with \u00a30.00 in LW and \u00a30.00 in LY.\n- Total TW orders for United Kingdom were 315, down from 412 LW, with units falling to 71,925 TW from 89,294 LW.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W21. Entity type: country. The table has 6 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| United Kingdom | 138020.95 | 177978.27 | 143748.77 | 71925 | 89294 | 315 | 412 | -22.5 | -4.0 | 87.8 | 1 |\n| Netherlands | 10372.88 | 937.12 | 1834.67 | 5624 | 534 | 2 | 2 | 1006.9 | 465.4 | 6.6 | 2 |\n| Germany | 3227.89 | 4131.21 | 1107.38 | 1682 | 2745 | 12 | 9 | -21.9 | 191.5 | 2.1 | 3 |\n| France | 2805.71 | 4775.39 | 1271.21 | 1911 | 2396 | 8 | 11 | -41.2 | 120.7 | 1.8 | 4 |\n| EIRE | 1451.79 | 8729.96 | 1889.68 | 713 | 3959 | 4 | 9 | -83.4 | -23.2 | 0.9 | 5 |\n| Poland | 1247.57 | 0.00 | 0.00 | 497 | 0 | 2 | 0 |  |  | 0.8 | 6 |\n\nWrite the insight note now.\n",
+    "text": "- United Kingdom TW revenue was \u00a3138,020.95, down -22.5% WoW from LW \u00a3177,978.27, and down -4.0% YoY from LY \u00a3143,748.77.\n- United Kingdom holds the largest share of TW revenue at 87.8% and ranks 1 among the 6 countries shown.\n- Netherlands TW revenue was \u00a310,372.88, up 1006.9% WoW from LW \u00a3937.12, and up 465.4% YoY from LY \u00a31,834.67.\n- Germany TW revenue was \u00a33,227.89, down -21.9% WoW from LW \u00a34,131.21, but up 191.5% YoY from LY \u00a31,107.38.\n- France TW revenue was \u00a32,805.71, down -41.2% WoW from LW \u00a34,775.39, while up 120.7% YoY from LY \u00a31,271.21.\n- EIRE TW revenue was \u00a31,451.79, down -83.4% WoW from LW \u00a38,729.96, and down -23.2% YoY from LY \u00a31,889.68.\n- Poland recorded TW revenue of \u00a31,247.57 on 2 orders, compared with \u00a30.00 in LW and \u00a30.00 in LY.\n- Total TW orders for United Kingdom were 315, down from 412 LW, with units falling to 71,925 TW from 89,294 LW.",
+    "input_tokens": 1056,
+    "output_tokens": 429,
+    "cost_usd": 0.006402000000000001,
+    "latency_s": 4.204,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1056,
+  "tokens_out": 429,
+  "cost_usd": 0.006402000000000001,
+  "latency_s": 4.204
+ }
+}

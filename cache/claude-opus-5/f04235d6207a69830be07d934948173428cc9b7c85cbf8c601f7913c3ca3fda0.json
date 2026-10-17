@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led TW at £2,729.22 on 214 units across 50 orders, down 44.1% WoW from £4,883.58 and down 36.4% YoY from £4,291.64.\n- The 40 listed products generated £44,269.00 TW against £59,718.06 LW, a WoW decline of 25.9%.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 2 with £2,342.01 TW, down 13.5% WoW from £2,708.63 and up 56.4% YoY from £1,497.38.\n- FELTCRAFT DOLL MOLLY posted the largest YoY gain at +934.6%, moving from £221.28 LY to £2,289.28 TW, with units at 888 TW versus 1,500 LW.\n- PAPER LANTERN 9 POINT DELUXE STAR rose 1,841.1% WoW to £1,419.90 TW from £73.15 LW, with orders at 4 TW versus 2 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER gained 275.8% WoW to £1,893.01 TW from £503.79 LW, while sitting 31.1% below its LY level of £2,745.95.\n- DOORMAT KEEP CALM AND COME IN recorded the steepest WoW drop in cash terms, falling £4,037.00 to £2,068.84 TW from £6,105.84 LW, with 272 units TW versus 844 LW.\n- ASSORTED COLOUR BIRD ORNAMENT showed the weakest YoY at -79.6%, at £709.80 TW versus £3,476.13 LY and £995.41 LW.",
+ "input_tokens": 3786,
+ "output_tokens": 1833,
+ "cost_usd": 0.064755,
+ "latency_s": 18.577,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

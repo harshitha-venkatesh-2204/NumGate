@@ -1,0 +1,10 @@
+{
+ "text": "- PARTY BUNTING generated £5.2k revenue TW, the highest-performing product, with 984 units sold across 53 orders.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £3.1k revenue TW from 1,144 units, representing the second-largest revenue contributor and highest order count at 58 orders.\n- SMALL CHINESE STYLE SCISSOR showed exceptional growth with revenue up 19,919.5% WoW, selling 2,621 units TW, the highest unit volume across all products.\n- Total revenue reached £27.9k TW compared to £13.6k LW, representing a 104.9% WoW increase.\n- EDWARDIAN PARASOL NATURAL demonstrated strong year-over-year performance with revenue up 315.0% YoY.\n- BLACK RECORD COVER FRAME grew 911.6% WoW and 199.7% YoY, generating £1.4k revenue TW.\n- REGENCY CAKESTAND 3 TIER contributed £2.1k revenue TW from 44 orders, ranking third in revenue generation.\n- Total revenue increased 129.8% YoY, with TW revenue of £27.9k versus £12.1k LY.",
+ "input_tokens": 1872,
+ "output_tokens": 301,
+ "cost_usd": 0.003377,
+ "latency_s": 3.866,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

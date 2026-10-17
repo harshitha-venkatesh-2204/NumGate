@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom posted TW revenue of £138,020.95, down 22.5% WoW from £177,978.27 LW and down 4.0% YoY from £143,748.77 LY, holding 87.8% share at Rank 1.\n- Netherlands reached TW revenue of £10,372.88 versus £937.12 LW, a 1,006.9% WoW rise, and £1,834.67 LY, a 465.4% YoY rise, taking Rank 2 with 6.6% share.\n- Germany recorded TW revenue of £3,227.89 against £4,131.21 LW (-21.9% WoW) and £1,107.38 LY (+191.5% YoY), at Rank 3 with 2.1% share.\n- France logged TW revenue of £2,805.71 versus £4,775.39 LW (-41.2% WoW) and £1,271.21 LY (+120.7% YoY), holding Rank 4 and 1.8% share.\n- EIRE fell to TW revenue of £1,451.79 from £8,729.96 LW (-83.4% WoW) and £1,889.68 LY (-23.2% YoY), with TW orders of 4 against 9 LW.\n- Poland registered TW revenue of £1,247.57 across 497 units and 2 orders, against £0.00 LW and £0.00 LY, placing Rank 6 with 0.8% share.\n- United Kingdom TW units were 71,925 from 315 orders, compared with 89,294 units and 412 orders LW, a decline of 17,369 units and 97 orders WoW.\n- Netherlands moved 5,624 units TW on 2 orders versus 534 units on 2 orders LW, an increase of 5,090 units WoW.",
+ "input_tokens": 1056,
+ "output_tokens": 572,
+ "cost_usd": 0.01958,
+ "latency_s": 6.756,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

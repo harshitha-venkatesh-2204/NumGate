@@ -1,0 +1,10 @@
+{
+ "text": "- LANDMARK FRAME COVENT GARDEN generated £3766.40 revenue in TW, ranking 1st and representing 3.3% of total revenue, with 340 units sold across 12 orders.\n\n- LANDMARK FRAME OXFORD STREET achieved £3753.90 revenue in TW, ranking 2nd with 3.3% share, selling 339 units in 13 orders, compared to £0.00 in LW.\n\n- REGENCY CAKESTAND 3 TIER declined 33.8% YoY to £3205.71 in TW from £4843.45 in LY, though it grew 17.5% WoW from £2729.22 in LW.\n\n- PAPER CHAIN KIT 50'S CHRISTMAS increased 72.3% YoY to £2222.96 in TW from £1289.88 in LY, despite a 5.1% WoW decline from £2342.01 in LW.\n\n- GINGHAM HEART DECORATION surged 2054.1% WoW to £1565.58 in TW from £72.68 in LW, with units jumping from 80 to 2130.\n\n- RED HARMONICA IN BOX exploded 26576.5% YoY to £1000.37 in TW from £3.75 in LY, and grew 205.8% WoW from £327.10 in LW with 830 units sold.\n\n- CHOCOLATE HOT WATER BOTTLE increased 134.4% WoW to £1594.49 in TW from £680.33 in LW, and grew 29.2% YoY from £1233.86 in LY.\n\n- ROUND SNACK BOXES SET OF4 WOODLAND surged 1006.0% YoY to £1044.04 in TW from £94.40 in LY, with 392 units sold across 22 orders.",
+ "input_tokens": 8893,
+ "output_tokens": 476,
+ "cost_usd": 0.011273,
+ "latency_s": 5.951,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

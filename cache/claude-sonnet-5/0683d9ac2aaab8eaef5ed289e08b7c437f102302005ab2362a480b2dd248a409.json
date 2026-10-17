@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £36,150.11 TW versus £16,270.60 LW, a WoW change of +122.2%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 with £3,952.80 TW revenue, a 10.9% share TW, and a WoW change of +67.1%.\n- ENGLISH ROSE DESIGN QUILTED THROW ranked 2 with £2,982.60 TW revenue, an 8.3% share TW, and a WoW change of -11.4%.\n- REGENCY CAKESTAND 3 TIER ranked 3 with £2,511.24 TW revenue, representing a 6.9% share TW.\n- SET/6 WOODLAND PAPER CUPS posted the largest WoW increase, rising from £3.32 LW to £1,301.70 TW, a WoW change of +39107.8%.\n- ASSORTED COLOUR BIRD ORNAMENT posted the largest WoW decrease, falling from £1,444.53 LW to £1,014.63 TW, a WoW change of -29.8%.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders, with 57 TW compared to 63 LW.",
+ "input_tokens": 742,
+ "output_tokens": 414,
+ "cost_usd": 0.005624,
+ "latency_s": 4.443,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

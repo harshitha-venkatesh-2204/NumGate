@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £162.3k vs LW £159.0k, WoW +2.1%.\n- TOTAL units TW 104,343 vs LW 93,270.\n- TOTAL orders TW 326 vs LW 321.\n- United Kingdom revenue TW £133.1k, 82.0% share, rank 1, WoW -3.0%.\n- EIRE revenue TW £16.5k, 10.1% share, rank 2, WoW +395.9%.\n- Netherlands revenue TW £6.1k, 3.7% share, rank 3, WoW -65.5%.\n- Germany revenue TW £2.8k, 1.7% share, rank 4, WoW +596.0%.\n- United Arab Emirates revenue TW £2.0k, 1.3% share.",
+ "input_tokens": 2082,
+ "output_tokens": 293,
+ "cost_usd": 0.007094,
+ "latency_s": 3.156,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

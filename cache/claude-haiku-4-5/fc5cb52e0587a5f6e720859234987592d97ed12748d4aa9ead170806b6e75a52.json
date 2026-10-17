@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated the highest revenue TW at £6.6k, followed by WHITE HANGING HEART T-LIGHT HOLDER at £6.0k.\n- PAPER CHAIN KIT 50'S CHRISTMAS achieved £5.7k revenue TW and ranked third in both revenue and orders with 92 orders TW.\n- SMALL POPCORN HOLDER led unit sales TW with 2207 units, while WHITE HANGING HEART T-LIGHT HOLDER was the top ordered product with 112 orders TW.\n- Total revenue TW reached £123.4k, representing a 6.6% increase WoW from £115.7k LW.\n- SET OF 20 KIDS COOKIE CUTTERS showed the strongest revenue growth WoW at 5516.8%, followed by GINGERBREAD MAN COOKIE CUTTER at 4540.4% WoW.\n- HEART OF WICKER SMALL demonstrated significant momentum with 2158.1% revenue growth WoW and 81 orders TW.\n- Total units sold TW reached 48375 across 3805 orders, indicating strong customer engagement across the product range.\n- HOMEMADE JAM SCENTED CANDLES and PHOTO FRAME CORNICE showed more modest growth WoW at 763.7% and 300.4% respectively.",
+ "input_tokens": 1897,
+ "output_tokens": 326,
+ "cost_usd": 0.0035269999999999998,
+ "latency_s": 4.113,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

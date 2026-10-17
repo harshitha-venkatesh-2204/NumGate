@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue across all products was £13,748.28 TW, down 14.8% WoW from £16,144.80 LW.\n- REGENCY CAKESTAND 3 TIER generated £5,198.05 TW, representing 37.8% of total revenue and ranking as the top product despite a 5.8% WoW decline.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to £1,625.34 TW with an 11.8% share, experiencing the largest WoW decrease of -61.7% from £4,245.80 LW.\n- VINTAGE UNION JACK BUNTING achieved £1,261.17 TW for a 9.2% revenue share, with a 25.9% WoW decline.\n- DOOR MAT RED SPOT showed the strongest WoW performance, increasing 119.5% to £957.50 TW from £436.26 LW.\n- REGENCY CAKESTAND 3 TIER recorded 52 orders TW, down from 74 orders LW despite maintaining the highest order volume.",
+ "input_tokens": 570,
+ "output_tokens": 269,
+ "cost_usd": 0.001915,
+ "latency_s": 2.966,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £61.8k versus LW £42.3k, a WoW change of 46.0%.\n- TOTAL units TW reached 29,849 across 1,820 orders for the week.\n- WHITE HANGING HEART T-LIGHT HOLDER led products with TW revenue of £3.7k, a 6.1% share of TOTAL TW revenue.\n- RED HANGING HEART T-LIGHT HOLDER posted TW revenue of £1.8k, holding a 2.9% share of TOTAL TW revenue.\n- SET/3 RUSSIAN DOLL STACKING TINS generated £1.7k TW, representing 2.8% of TOTAL TW revenue.\n- CHERRY DESIGN PAPERLANTERNS saw the largest WoW increase at 14999.8%, followed by BALLERINA HEART DECORATION. at 12688.5% WoW.\n- WOODLAND HEIGHT CHART STICKERS rose 9879.7% WoW, while KENSINGTON COFFEE SET fell 78.9% WoW.\n- ASSORTED COLOUR BIRD ORNAMENT declined 69.1% WoW and WOOD S/3 CABINET ANT WHITE FINISH dropped 40.5% WoW.",
+ "input_tokens": 2208,
+ "output_tokens": 440,
+ "cost_usd": 0.008816000000000001,
+ "latency_s": 4.735,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

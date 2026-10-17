@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £157,505.13 TW versus £129,975.51 LW, a WoW change of +21.2%, and compared to LY shows a YoY change of +241.2%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with revenue £10,902.59 TW, a 6.9% share TW, and a WoW change of -4.8%.\n- VINTAGE UNION JACK MEMOBOARD ranked 2 with revenue £6,561.83 TW, a 4.2% share TW, and a WoW change of +1528.2%.\n- WOOD BLACK BOARD ANT WHITE FINISH ranked 3 with revenue £5,715.75 TW, a 3.6% share TW, and a WoW change of +1278.4%.\n- UTILTY CABINET WITH HOOKS had the largest WoW increase at +3003.8%, rising from £80.85 LW to £2,509.44 TW.\n- HAND WARMER OWL DESIGN had the largest WoW decrease at -75.1%, falling from £2,542.97 LW to £633.57 TW.\n- ENGLISH ROSE HOT WATER BOTTLE had the largest YoY increase at +35879.3%, up from £1.50 LY.\n- ASSORTED COLOUR BIRD ORNAMENT had the largest YoY decrease at -57.1%, down from £3,160.37 LY, while WHITE HANGING HEART T-LIGHT HOLDER had the most orders at 86 TW versus 81 LW.",
+ "input_tokens": 872,
+ "output_tokens": 520,
+ "cost_usd": 0.006944,
+ "latency_s": 4.35,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

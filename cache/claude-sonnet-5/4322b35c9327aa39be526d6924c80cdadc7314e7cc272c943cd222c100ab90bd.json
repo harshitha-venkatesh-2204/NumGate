@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 TW with revenue of £2616.00, down from £4096.80 LW, a WoW change of -36.1%.\n- CHILLI LIGHTS revenue rose to £1516.30 TW from £210.09 LW, a WoW increase of 621.7%, ranking 2 TW.\n- HEART OF WICKER SMALL posted £1365.96 TW versus £341.48 LW, up 300.0% WoW, ranking 3 TW.\n- CHARLOTTE BAG SUKI DESIGN revenue jumped to £876.84 TW from £63.26 LW, a WoW change of 1286.1%.\n- VINTAGE UNION JACK BUNTING fell to £805.26 TW from £2288.50 LW, down 64.8% WoW, but up 196.1% YoY versus £271.94 LY.\n- DOORMAT HEARTS revenue of £732.13 TW compares to £13.50 LY, a YoY increase of 5323.2%.\n- SOMBRERO revenue reached £513.65 TW versus £11.70 LY, a YoY change of 4290.2%.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue declined to £1249.82 TW from £2365.84 LY, a YoY change of -47.2%, ranking 6 TW with 3.8% share.",
+ "input_tokens": 3560,
+ "output_tokens": 472,
+ "cost_usd": 0.01184,
+ "latency_s": 4.73,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £65,350.74 TW versus £38,569.58 LW, a change of +69.4% WoW and +183.9% YoY.\n- REGENCY CAKESTAND 3 TIER held rank 1 with £3,740.45 TW, a 5.7% TW share and a change of +43.0% WoW.\n- PARTY BUNTING took rank 2 with £2,843.54 TW, a 4.4% TW share and a change of +118.4% WoW.\n- JUMBO BAG RED RETROSPOT took rank 3 with £2,718.16 TW, a 4.2% TW share and a change of +100.4% WoW.\n- BAKING MOULD TOFFEE CUP CHOCOLATE posted the largest WoW increase at +7855.9%, moving from £5.10 LW to £405.75 TW.\n- CHILLI LIGHTS posted the largest WoW decrease at -56.7%, moving from £1,516.30 LW to £656.45 TW.\n- CLASSIC METAL BIRDCAGE PLANT HOLDER recorded the largest YoY increase at +4253.3% against £9.95 LY, while WHITE HANGING HEART T-LIGHT HOLDER recorded the largest YoY decrease at -68.0% against £3,952.80 LY.\n- PARTY BUNTING led on order count with 45 orders TW versus 28 orders LW.",
+ "input_tokens": 846,
+ "output_tokens": 476,
+ "cost_usd": 0.016130000000000002,
+ "latency_s": 5.852,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

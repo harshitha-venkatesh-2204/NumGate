@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranked 1 in TW with £4443.21 revenue, up 28.5% WoW from £3457.20 LW.\n- PARTY BUNTING posted TW revenue of £2495.37 versus £1600.50 LW, a 55.9% WoW increase, ranking 2 of 115 products.\n- WHITE HANGING HEART T-LIGHT HOLDER fell 13.2% WoW to £1961.04 TW from £2259.40 LW, ranking 3.\n- GIANT BLACK SUNGLASSES surged 33823.1% WoW, from £3.90 LW to £1323.00 TW, ranking 6.\n- PLEASE ONE PERSON METAL SIGN dropped 70.7% WoW, from £1506.00 LW to £441.39 TW, ranking 61.\n- LUNCH BAG BLACK SKULL fell 70.7% WoW to £337.70 TW from £1152.30 LW, ranking 100.\n- TEA TIME CAKE STAND IN GIFT BOX declined 57.6% WoW to £505.86 TW from £1192.80 LW, ranking 45.\n- Across the 115 products shown, REGENCY CAKESTAND 3 TIER holds the largest TW share at 6.5%, followed by PARTY BUNTING at 3.6%.",
+ "input_tokens": 8778,
+ "output_tokens": 465,
+ "cost_usd": 0.022205999999999997,
+ "latency_s": 4.528,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

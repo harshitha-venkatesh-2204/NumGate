@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 TW with revenue of £7503.00, up WoW 67.0% from £4493.62 LW, holding 27.1% share.\n- HAND WARMER RED POLKA DOT posted £3707.40 TW versus £0.00 LW, moving from 0 orders LW to 1 order TW, a 13.4% share.\n- JUMBO BAG RED RETROSPOT recorded £3129.01 TW against £2022.70 LW, a WoW increase of 54.7%, ranking 3 with 11.3% share.\n- WHITE HANGING HEART T-LIGHT HOLDER reached £2894.02 TW compared with £2798.40 LW, a WoW change of 3.4%, at rank 4.\n- ASSORTED COLOUR BIRD ORNAMENT grew to £2829.76 TW from £984.67 LW, a WoW rise of 187.4%, with 1792 units sold TW.\n- PAPER CHAIN KIT VINTAGE CHRISTMAS revenue climbed to £2297.49 TW from £370.90 LW, a WoW increase of 519.4%, with orders up from 7 LW to 59 TW.\n- AFGHAN SLIPPER SOCK PAIR jumped to £1804.50 TW from £3.45 LW, a WoW change of 52204.3%, with units rising from 1 LW to 610 TW.\n- BABUSHKA LIGHTS STRING OF 10 rose to £1678.87 TW from £101.32 LW, a WoW increase of 1557.0%, ranking 9 with 6.1% share.",
+ "input_tokens": 1330,
+ "output_tokens": 558,
+ "cost_usd": 0.00824,
+ "latency_s": 5.366,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

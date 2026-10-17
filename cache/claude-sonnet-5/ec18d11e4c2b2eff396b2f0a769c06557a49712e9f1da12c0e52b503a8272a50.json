@@ -1,0 +1,10 @@
+{
+ "text": "- JUMBO BAG RED RETROSPOT leads TW revenue at £2941.59, up 14.0% WoW from £2581.23 LW, and up sharply YoY from £1.95 LY, holding 3.9% share and Rank 1.\n- REGENCY CAKESTAND 3 TIER posted £2907.39 TW versus £2544.78 LW, a WoW gain of 14.2%, but YoY is down 11.0% versus £3265.21 LY, ranked 2.\n- PARTY BUNTING rose to £2730.41 TW from £2050.94 LW, WoW up 33.1%, and YoY up from £76.23 LY, ranked 3 with 3.6% share.\n- JUMBO BAG APPLES increased to £2400.75 TW from £1263.17 LW, a WoW rise of 90.1%, with LY revenue at £0.00, ranked 4.\n- WHITE HANGING HEART T-LIGHT HOLDER reached £2054.09 TW, up 151.8% WoW from £815.83 LW, but down 32.5% YoY from £3042.82 LY, ranked 6.\n- RABBIT NIGHT LIGHT jumped to £1531.13 TW from £4.13 LW, a WoW increase of 36973.4%, ranked 12 with 768 units sold TW.\n- SET OF TEA COFFEE SUGAR TINS PANTRY fell to £325.70 TW from £2159.90 LW, a WoW decline of 84.9%, ranked 84.\n- SMALL CHINESE STYLE SCISSOR surged to £662.68 TW from £0.42 LW, a WoW change of 157681.0%, with units rising from 1 LW to 2054 TW, ranked 33.",
+ "input_tokens": 8541,
+ "output_tokens": 594,
+ "cost_usd": 0.023022,
+ "latency_s": 5.883,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

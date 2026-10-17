@@ -1,0 +1,239 @@
+{
+ "note_id": "medium_product_2010-W33__S2__claude-opus-5__r2",
+ "table_id": "medium_product_2010-W33",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W33",
+ "n_rows": 40,
+ "strategy": "S2",
+ "model": "claude-opus-5",
+ "repeat": 2,
+ "note": "- TOTAL revenue reached \u00a341.6k in TW versus \u00a330.0k in LW, a WoW change of +38.5%.\n- TOTAL units came in at 19,061 in TW, up 54.9% WoW, while TOTAL orders reached 769, up 6.8% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 in TW with \u00a34,405.70, equal to 10.6% of TOTAL revenue.\n- PARTY BUNTING ranked 2 in TW with \u00a33,220.36 and a 7.7% share, and added \u00a31,523.87 WoW.\n- REGENCY CAKESTAND 3 TIER ranked 3 in TW with \u00a32,446.96 and a 5.9% share, down \u00a3611.83 WoW.\n- PLEASE ONE PERSON METAL SIGN posted \u00a31,475.70 in TW, the full amount of its \u00a31,475.70 WoW gain, and COOK WITH WINE METAL SIGN added \u00a31,141.92 WoW.\n- JUMBO BAG STRAWBERRY fell \u00a31,679.65 WoW and JUMBO STORAGE BAG SUKI fell \u00a3565.01 WoW; JUMBO BAG PINK VINTAGE PAISLEY recorded \u00a31,477.55 in TW.\n- The top 5 products together accounted for 31.3% of TOTAL revenue in TW.",
+ "trace": {
+  "strategy": "S2",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "code_0",
+    "system": "You are a data analyst who writes short, correct pandas code.\n\nWrite one Python script that:\n- reads the CSV file whose path is given in sys.argv[1] with pandas,\n- computes up to 25 facts that would be most useful for a weekly executive insight note (largest entities, biggest week over week and year over year movers, shares, totals),\n- prints one JSON array to stdout and nothing else.\n\nEach element of the array is an object with these keys:\n- \"entity\": the Entity value, or \"TOTAL\" for all rows combined.\n- \"metric\": one of revenue, units, orders, share, rank.\n- \"period\": one of TW, LW, LY, WoW, YoY. Use WoW or YoY for changes between periods.\n- \"value\": a plain number (not a string). Round money to 2 decimals and percentages to 1 decimal.\n- \"formula\": a short description of how the value was computed, for example \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\".\n\nUse only pandas, numpy, json and sys. Blank cells are NaN: skip them instead of crashing. Convert numpy numbers to Python floats before json.dumps.\nReturn only the code, inside one ```python block.\n",
+    "user": "The script will be run as: python facts.py table.csv\n\nThe CSV holds a weekly sales report for ISO week 2010-W33. Entity type: product. It has 40 rows and these columns (with pandas dtypes):\n- Entity: str\n- Revenue_TW: float64\n- Revenue_LW: float64\n- Revenue_LY: float64\n- Units_TW: int64\n- Units_LW: int64\n- Orders_TW: int64\n- Orders_LW: int64\n- WoW_Pct: float64\n- YoY_Pct: float64\n- Share_Pct: float64\n- Rank: int64\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\nFirst rows of the file:\nEntity,Revenue_TW,Revenue_LW,Revenue_LY,Units_TW,Units_LW,Orders_TW,Orders_LW,WoW_Pct,YoY_Pct,Share_Pct,Rank\nWHITE HANGING HEART T-LIGHT HOLDER,4405.7,3403.6,,1686,1229,57,63,29.4,,10.6,1\nPARTY BUNTING,3220.36,1696.49,,351,188,9,14,89.8,,7.7,2\nREGENCY CAKESTAND 3 TIER,2446.96,3058.79,,196,227,38,43,-20.0,,5.9,3\n\n",
+    "text": "```python\nimport sys\nimport json\nimport numpy as np\nimport pandas as pd\n\n\ndef main():\n    df = pd.read_csv(sys.argv[1])\n    facts = []\n\n    def add(entity, metric, period, value, formula, money=True):\n        if value is None:\n            return\n        try:\n            v = float(value)\n        except (TypeError, ValueError):\n            return\n        if not np.isfinite(v):\n            return\n        facts.append({\n            \"entity\": str(entity),\n            \"metric\": metric,\n            \"period\": period,\n            \"value\": round(v, 2) if money else round(v, 1),\n            \"formula\": formula,\n        })\n\n    num_cols = [\"Revenue_TW\", \"Revenue_LW\", \"Revenue_LY\", \"Units_TW\", \"Units_LW\",\n                \"Orders_TW\", \"Orders_LW\", \"WoW_Pct\", \"YoY_Pct\", \"Share_Pct\", \"Rank\"]\n    for c in num_cols:\n        if c in df.columns:\n            df[c] = pd.to_numeric(df[c], errors=\"coerce\")\n\n    # Totals\n    tw_total = df[\"Revenue_TW\"].sum(skipna=True)\n    lw_total = df[\"Revenue_LW\"].sum(skipna=True)\n    ly_total = df[\"Revenue_LY\"].sum(skipna=True)\n    add(\"TOTAL\", \"revenue\", \"TW\", tw_total, \"sum(Revenue_TW)\")\n    add(\"TOTAL\", \"revenue\", \"LW\", lw_total, \"sum(Revenue_LW)\")\n    if df[\"Revenue_LY\"].notna().any():\n        add(\"TOTAL\", \"revenue\", \"LY\", ly_total, \"sum(Revenue_LY)\")\n    if lw_total:\n        add(\"TOTAL\", \"revenue\", \"WoW\", (tw_total - lw_total) / lw_total * 100,\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\", money=False)\n    if df[\"Revenue_LY\"].notna().any() and ly_total:\n        add(\"TOTAL\", \"revenue\", \"YoY\", (tw_total - ly_total) / ly_total * 100,\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\", money=False)\n    add(\"TOTAL\", \"units\", \"TW\", df[\"Units_TW\"].sum(skipna=True), \"sum(Units_TW)\")\n    add(\"TOTAL\", \"orders\", \"TW\", df[\"Orders_TW\"].sum(skipna=True), \"sum(Orders_TW)\")\n    u_lw = df[\"Units_LW\"].sum(skipna=True)\n    if u_lw:\n        add(\"TOTAL\", \"units\", \"WoW\", (df[\"Units_TW\"].sum(skipna=True) - u_lw) / u_lw * 100,\n            \"(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100\", money=False)\n    o_lw = df[\"Orders_LW\"].sum(skipna=True)\n    if o_lw:\n        add(\"TOTAL\", \"orders\", \"WoW\", (df[\"Orders_TW\"].sum(skipna=True) - o_lw) / o_lw * 100,\n            \"(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100\", money=False)\n\n    # Top entities by revenue\n    top = df.dropna(subset=[\"Revenue_TW\"]).sort_values(\"Revenue_TW\", ascending=False)\n    for _, r in top.head(5).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"TW\", r[\"Revenue_TW\"], \"Revenue_TW for this entity\")\n    for _, r in top.head(3).iterrows():\n        if pd.notna(r.get(\"Share_Pct\")):\n            add(r[\"Entity\"], \"share\", \"TW\", r[\"Share_Pct\"],\n                \"Revenue_TW / sum(Revenue_TW) * 100\", money=False)\n        if pd.notna(r.get(\"Rank\")):\n            add(r[\"Entity\"], \"rank\", \"TW\", r[\"Rank\"], \"rank by Revenue_TW (1 is highest)\", money=False)\n\n    # Top 5 concentration\n    if tw_total:\n        add(\"TOTAL\", \"share\", \"TW\", top.head(5)[\"Revenue_TW\"].sum() / tw_total * 100,\n            \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\", money=False)\n\n    # Absolute WoW movers\n    d = df.dropna(subset=[\"Revenue_TW\", \"Revenue_LW\"]).copy()\n    if not d.empty:\n        d[\"delta\"] = d[\"Revenue_TW\"] - d[\"Revenue_LW\"]\n        up = d.sort_values(\"delta\", ascending=False).head(3)\n        for _, r in up.iterrows():\n            add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"delta\"], \"Revenue_TW - Revenue_LW\")\n        dn = d.sort_values(\"delta\").head(3)\n        for _, r in dn.iterrows():\n            add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"delta\"], \"Revenue_TW - Revenue_LW\")\n\n    # Percent WoW movers among material entities\n    p = df.dropna(subset=[\"WoW_Pct\", \"Revenue_TW\"]).copy()\n    if not p.empty:\n        thresh = p[\"Revenue_TW\"].quantile(0.5)\n        pm = p[p[\"Revenue_TW\"] >= thresh]\n        if pm.empty:\n            pm = p\n        for _, r in pm.sort_values(\"WoW_Pct\", ascending=False).head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"WoW_Pct\"],\n                \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\", money=False)\n        for _, r in pm.sort_values(\"WoW_Pct\").head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"WoW_Pct\"],\n                \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\", money=False)\n\n    # YoY movers\n    y = df.dropna(subset=[\"YoY_Pct\", \"Revenue_TW\"]).copy()\n    if not y.empty:\n        for _, r in y.sort_values(\"YoY_Pct\", ascending=False).head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"YoY\", r[\"YoY_Pct\"],\n                \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\", money=False)\n        for _, r in y.sort_values(\"YoY_Pct\").head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"YoY\", r[\"YoY_Pct\"],\n                \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\", money=False)\n\n    # Units leader\n    u = df.dropna(subset=[\"Units_TW\"]).sort_values(\"Units_TW\", ascending=False)\n    if not u.empty:\n        add(u.iloc[0][\"Entity\"], \"units\", \"TW\", u.iloc[0][\"Units_TW\"], \"max(Units_TW)\")\n    o = df.dropna(subset=[\"Orders_TW\"]).sort_values(\"Orders_TW\", ascending=False)\n    if not o.empty:\n        add(o.iloc[0][\"Entity\"], \"orders\", \"TW\", o.iloc[0][\"Orders_TW\"], \"max(Orders_TW)\")\n\n    print(json.dumps(facts[:25]))\n\n\nif __name__ == \"__main__\":\n    main()\n```",
+    "input_tokens": 1080,
+    "output_tokens": 2597,
+    "cost_usd": 0.070325,
+    "latency_s": 24.704,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   },
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a list of facts that were already computed from the sales table. Use only these facts. Every number in the note must come from a fact value, copied exactly or rounded (for example \u00a312,345.67 may be written as \u00a312.3k). Do not compute new numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W33. Entity type: product.\n\nFacts (JSON):\n[\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 41585.07,\n  \"formula\": \"sum(Revenue_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LW\",\n  \"value\": 30034.16,\n  \"formula\": \"sum(Revenue_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 38.5,\n  \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 19061.0,\n  \"formula\": \"sum(Units_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 769.0,\n  \"formula\": \"sum(Orders_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"WoW\",\n  \"value\": 54.9,\n  \"formula\": \"(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"WoW\",\n  \"value\": 6.8,\n  \"formula\": \"(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 4405.7,\n  \"formula\": \"Revenue_TW for this entity\"\n },\n {\n  \"entity\": \"PARTY BUNTING\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3220.36,\n  \"formula\": \"Revenue_TW for this entity\"\n },\n {\n  \"entity\": \"REGENCY CAKESTAND 3 TIER\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 2446.96,\n  \"formula\": \"Revenue_TW for this entity\"\n },\n {\n  \"entity\": \"JUMBO BAG PINK VINTAGE PAISLEY\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1477.55,\n  \"formula\": \"Revenue_TW for this entity\"\n },\n {\n  \"entity\": \"PLEASE ONE PERSON METAL SIGN\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1475.7,\n  \"formula\": \"Revenue_TW for this entity\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 10.6,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 1.0,\n  \"formula\": \"rank by Revenue_TW (1 is highest)\"\n },\n {\n  \"entity\": \"PARTY BUNTING\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 7.7,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"PARTY BUNTING\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 2.0,\n  \"formula\": \"rank by Revenue_TW (1 is highest)\"\n },\n {\n  \"entity\": \"REGENCY CAKESTAND 3 TIER\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 5.9,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"REGENCY CAKESTAND 3 TIER\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 3.0,\n  \"formula\": \"rank by Revenue_TW (1 is highest)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 31.3,\n  \"formula\": \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"PARTY BUNTING\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 1523.87,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"PLEASE ONE PERSON METAL SIGN\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 1475.7,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"COOK WITH WINE METAL SIGN\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 1141.92,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"JUMBO BAG STRAWBERRY\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -1679.65,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"REGENCY CAKESTAND 3 TIER\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -611.83,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"JUMBO STORAGE BAG SUKI\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -565.01,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n }\n]\n\nWrite the insight note now.\n",
+    "text": "- TOTAL revenue reached \u00a341.6k in TW versus \u00a330.0k in LW, a WoW change of +38.5%.\n- TOTAL units came in at 19,061 in TW, up 54.9% WoW, while TOTAL orders reached 769, up 6.8% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 in TW with \u00a34,405.70, equal to 10.6% of TOTAL revenue.\n- PARTY BUNTING ranked 2 in TW with \u00a33,220.36 and a 7.7% share, and added \u00a31,523.87 WoW.\n- REGENCY CAKESTAND 3 TIER ranked 3 in TW with \u00a32,446.96 and a 5.9% share, down \u00a3611.83 WoW.\n- PLEASE ONE PERSON METAL SIGN posted \u00a31,475.70 in TW, the full amount of its \u00a31,475.70 WoW gain, and COOK WITH WINE METAL SIGN added \u00a31,141.92 WoW.\n- JUMBO BAG STRAWBERRY fell \u00a31,679.65 WoW and JUMBO STORAGE BAG SUKI fell \u00a3565.01 WoW; JUMBO BAG PINK VINTAGE PAISLEY recorded \u00a31,477.55 in TW.\n- The top 5 products together accounted for 31.3% of TOTAL revenue in TW.",
+    "input_tokens": 2451,
+    "output_tokens": 472,
+    "cost_usd": 0.024055,
+    "latency_s": 6.372,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [
+   {
+    "attempt": 0,
+    "code": "import sys\nimport json\nimport numpy as np\nimport pandas as pd\n\n\ndef main():\n    df = pd.read_csv(sys.argv[1])\n    facts = []\n\n    def add(entity, metric, period, value, formula, money=True):\n        if value is None:\n            return\n        try:\n            v = float(value)\n        except (TypeError, ValueError):\n            return\n        if not np.isfinite(v):\n            return\n        facts.append({\n            \"entity\": str(entity),\n            \"metric\": metric,\n            \"period\": period,\n            \"value\": round(v, 2) if money else round(v, 1),\n            \"formula\": formula,\n        })\n\n    num_cols = [\"Revenue_TW\", \"Revenue_LW\", \"Revenue_LY\", \"Units_TW\", \"Units_LW\",\n                \"Orders_TW\", \"Orders_LW\", \"WoW_Pct\", \"YoY_Pct\", \"Share_Pct\", \"Rank\"]\n    for c in num_cols:\n        if c in df.columns:\n            df[c] = pd.to_numeric(df[c], errors=\"coerce\")\n\n    # Totals\n    tw_total = df[\"Revenue_TW\"].sum(skipna=True)\n    lw_total = df[\"Revenue_LW\"].sum(skipna=True)\n    ly_total = df[\"Revenue_LY\"].sum(skipna=True)\n    add(\"TOTAL\", \"revenue\", \"TW\", tw_total, \"sum(Revenue_TW)\")\n    add(\"TOTAL\", \"revenue\", \"LW\", lw_total, \"sum(Revenue_LW)\")\n    if df[\"Revenue_LY\"].notna().any():\n        add(\"TOTAL\", \"revenue\", \"LY\", ly_total, \"sum(Revenue_LY)\")\n    if lw_total:\n        add(\"TOTAL\", \"revenue\", \"WoW\", (tw_total - lw_total) / lw_total * 100,\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\", money=False)\n    if df[\"Revenue_LY\"].notna().any() and ly_total:\n        add(\"TOTAL\", \"revenue\", \"YoY\", (tw_total - ly_total) / ly_total * 100,\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\", money=False)\n    add(\"TOTAL\", \"units\", \"TW\", df[\"Units_TW\"].sum(skipna=True), \"sum(Units_TW)\")\n    add(\"TOTAL\", \"orders\", \"TW\", df[\"Orders_TW\"].sum(skipna=True), \"sum(Orders_TW)\")\n    u_lw = df[\"Units_LW\"].sum(skipna=True)\n    if u_lw:\n        add(\"TOTAL\", \"units\", \"WoW\", (df[\"Units_TW\"].sum(skipna=True) - u_lw) / u_lw * 100,\n            \"(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100\", money=False)\n    o_lw = df[\"Orders_LW\"].sum(skipna=True)\n    if o_lw:\n        add(\"TOTAL\", \"orders\", \"WoW\", (df[\"Orders_TW\"].sum(skipna=True) - o_lw) / o_lw * 100,\n            \"(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100\", money=False)\n\n    # Top entities by revenue\n    top = df.dropna(subset=[\"Revenue_TW\"]).sort_values(\"Revenue_TW\", ascending=False)\n    for _, r in top.head(5).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"TW\", r[\"Revenue_TW\"], \"Revenue_TW for this entity\")\n    for _, r in top.head(3).iterrows():\n        if pd.notna(r.get(\"Share_Pct\")):\n            add(r[\"Entity\"], \"share\", \"TW\", r[\"Share_Pct\"],\n                \"Revenue_TW / sum(Revenue_TW) * 100\", money=False)\n        if pd.notna(r.get(\"Rank\")):\n            add(r[\"Entity\"], \"rank\", \"TW\", r[\"Rank\"], \"rank by Revenue_TW (1 is highest)\", money=False)\n\n    # Top 5 concentration\n    if tw_total:\n        add(\"TOTAL\", \"share\", \"TW\", top.head(5)[\"Revenue_TW\"].sum() / tw_total * 100,\n            \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\", money=False)\n\n    # Absolute WoW movers\n    d = df.dropna(subset=[\"Revenue_TW\", \"Revenue_LW\"]).copy()\n    if not d.empty:\n        d[\"delta\"] = d[\"Revenue_TW\"] - d[\"Revenue_LW\"]\n        up = d.sort_values(\"delta\", ascending=False).head(3)\n        for _, r in up.iterrows():\n            add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"delta\"], \"Revenue_TW - Revenue_LW\")\n        dn = d.sort_values(\"delta\").head(3)\n        for _, r in dn.iterrows():\n            add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"delta\"], \"Revenue_TW - Revenue_LW\")\n\n    # Percent WoW movers among material entities\n    p = df.dropna(subset=[\"WoW_Pct\", \"Revenue_TW\"]).copy()\n    if not p.empty:\n        thresh = p[\"Revenue_TW\"].quantile(0.5)\n        pm = p[p[\"Revenue_TW\"] >= thresh]\n        if pm.empty:\n            pm = p\n        for _, r in pm.sort_values(\"WoW_Pct\", ascending=False).head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"WoW_Pct\"],\n                \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\", money=False)\n        for _, r in pm.sort_values(\"WoW_Pct\").head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"WoW\", r[\"WoW_Pct\"],\n                \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\", money=False)\n\n    # YoY movers\n    y = df.dropna(subset=[\"YoY_Pct\", \"Revenue_TW\"]).copy()\n    if not y.empty:\n        for _, r in y.sort_values(\"YoY_Pct\", ascending=False).head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"YoY\", r[\"YoY_Pct\"],\n                \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\", money=False)\n        for _, r in y.sort_values(\"YoY_Pct\").head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"YoY\", r[\"YoY_Pct\"],\n                \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\", money=False)\n\n    # Units leader\n    u = df.dropna(subset=[\"Units_TW\"]).sort_values(\"Units_TW\", ascending=False)\n    if not u.empty:\n        add(u.iloc[0][\"Entity\"], \"units\", \"TW\", u.iloc[0][\"Units_TW\"], \"max(Units_TW)\")\n    o = df.dropna(subset=[\"Orders_TW\"]).sort_values(\"Orders_TW\", ascending=False)\n    if not o.empty:\n        add(o.iloc[0][\"Entity\"], \"orders\", \"TW\", o.iloc[0][\"Orders_TW\"], \"max(Orders_TW)\")\n\n    print(json.dumps(facts[:25]))\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "error": "",
+    "stdout": "K VINTAGE PAISLEY\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 1477.55, \"formula\": \"Revenue_TW for this entity\"}, {\"entity\": \"PLEASE ONE PERSON METAL SIGN\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 1475.7, \"formula\": \"Revenue_TW for this entity\"}, {\"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 10.6, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 1.0, \"formula\": \"rank by Revenue_TW (1 is highest)\"}, {\"entity\": \"PARTY BUNTING\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 7.7, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"PARTY BUNTING\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 2.0, \"formula\": \"rank by Revenue_TW (1 is highest)\"}, {\"entity\": \"REGENCY CAKESTAND 3 TIER\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 5.9, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"REGENCY CAKESTAND 3 TIER\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 3.0, \"formula\": \"rank by Revenue_TW (1 is highest)\"}, {\"entity\": \"TOTAL\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 31.3, \"formula\": \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\"}, {\"entity\": \"PARTY BUNTING\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 1523.87, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"PLEASE ONE PERSON METAL SIGN\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 1475.7, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"COOK WITH WINE METAL SIGN\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 1141.92, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"JUMBO BAG STRAWBERRY\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -1679.65, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"REGENCY CAKESTAND 3 TIER\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -611.83, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"JUMBO STORAGE BAG SUKI\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -565.01, \"formula\": \"Revenue_TW - Revenue_LW\"}]\n"
+   }
+  ],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "facts": [
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 41585.07,
+    "formula": "sum(Revenue_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LW",
+    "value": 30034.16,
+    "formula": "sum(Revenue_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 38.5,
+    "formula": "(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "TW",
+    "value": 19061.0,
+    "formula": "sum(Units_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "TW",
+    "value": 769.0,
+    "formula": "sum(Orders_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "WoW",
+    "value": 54.9,
+    "formula": "(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "WoW",
+    "value": 6.8,
+    "formula": "(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 4405.7,
+    "formula": "Revenue_TW for this entity"
+   },
+   {
+    "entity": "PARTY BUNTING",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3220.36,
+    "formula": "Revenue_TW for this entity"
+   },
+   {
+    "entity": "REGENCY CAKESTAND 3 TIER",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 2446.96,
+    "formula": "Revenue_TW for this entity"
+   },
+   {
+    "entity": "JUMBO BAG PINK VINTAGE PAISLEY",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1477.55,
+    "formula": "Revenue_TW for this entity"
+   },
+   {
+    "entity": "PLEASE ONE PERSON METAL SIGN",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1475.7,
+    "formula": "Revenue_TW for this entity"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "share",
+    "period": "TW",
+    "value": 10.6,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "rank",
+    "period": "TW",
+    "value": 1.0,
+    "formula": "rank by Revenue_TW (1 is highest)"
+   },
+   {
+    "entity": "PARTY BUNTING",
+    "metric": "share",
+    "period": "TW",
+    "value": 7.7,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "PARTY BUNTING",
+    "metric": "rank",
+    "period": "TW",
+    "value": 2.0,
+    "formula": "rank by Revenue_TW (1 is highest)"
+   },
+   {
+    "entity": "REGENCY CAKESTAND 3 TIER",
+    "metric": "share",
+    "period": "TW",
+    "value": 5.9,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "REGENCY CAKESTAND 3 TIER",
+    "metric": "rank",
+    "period": "TW",
+    "value": 3.0,
+    "formula": "rank by Revenue_TW (1 is highest)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "share",
+    "period": "TW",
+    "value": 31.3,
+    "formula": "sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "PARTY BUNTING",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 1523.87,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "PLEASE ONE PERSON METAL SIGN",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 1475.7,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "COOK WITH WINE METAL SIGN",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 1141.92,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "JUMBO BAG STRAWBERRY",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -1679.65,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "REGENCY CAKESTAND 3 TIER",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -611.83,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "JUMBO STORAGE BAG SUKI",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -565.01,
+    "formula": "Revenue_TW - Revenue_LW"
+   }
+  ],
+  "n_calls": 2,
+  "tokens_in": 3531,
+  "tokens_out": 3069,
+  "cost_usd": 0.09437999999999999,
+  "latency_s": 31.076
+ }
+}

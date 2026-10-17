@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue of £6552.99, down from LW £7144.93, a WoW change of -8.3%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 2 with TW revenue of £5999.53 versus LW £2659.73, a WoW increase of 125.6%.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranks 3 with TW revenue of £5735.62, down from LW £9020.33, a WoW change of -36.4%.\n- SET OF 20 KIDS COOKIE CUTTERS shows the largest WoW jump among listed products, rising from LW £12.60 to TW £707.72, a WoW change of 5516.8%.\n- GINGERBREAD MAN COOKIE CUTTER rose from LW £16.25 to TW £754.07, a WoW change of 4540.4%.\n- ROTATING SILVER ANGELS T-LIGHT HLDR fell from LW £4341.94 to TW £2028.90, a WoW change of -53.3%.\n- DOORMAT RED RETROSPOT dropped from LW £1541.40 to TW £773.13, a WoW change of -49.8%.\n- CERAMIC CAKE STAND + HANGING CAKES recorded TW revenue of £2047.29 with 11 orders, up from LW revenue of £0.00 with 0 orders.",
+ "input_tokens": 8392,
+ "output_tokens": 784,
+ "cost_usd": 0.024624,
+ "latency_s": 6.574,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

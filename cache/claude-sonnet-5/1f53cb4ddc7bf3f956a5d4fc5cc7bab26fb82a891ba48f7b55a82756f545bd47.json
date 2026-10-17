@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW reached £16.7k versus LW £5.76k, a WoW increase of 190.8%.\n- TOTAL units sold TW were 15,031 compared to LW 2,024 units.\n- TOTAL orders TW numbered 166 versus LW 135 orders.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 with TW revenue of £3.39k, a 20.2% share, up 14.4% WoW.\n- WOODEN SKITTLES GARDEN SET ranked 2 with TW revenue of £2.65k, a 15.8% share, up 465.4% WoW.\n- PACK OF 12 SUKI TISSUES ranked 3 with TW revenue of £2.57k, a 15.4% share, up 5937.3% WoW.\n- PACK OF 12 HEARTS DESIGN TISSUES ranked 4 with TW revenue of £2.50k, a 15.0% share, up 6087.6% WoW.\n- WOODEN CROQUET GARDEN SET ranked 5 with TW revenue of £2.23k, a 13.3% share.",
+ "input_tokens": 2354,
+ "output_tokens": 385,
+ "cost_usd": 0.008558,
+ "latency_s": 3.636,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

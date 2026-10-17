@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £2,963.43 revenue TW, representing 9.1% of total revenue and leading all products with 55 orders.\n- RETRO SPOT TEA SET CERAMIC 11 PC achieved £2,071.74 revenue TW with a 6.3% revenue share, ranking second among products.\n- FAWN BLUE HOT WATER BOTTLE contributed £1,903.35 revenue TW, capturing 5.8% of total revenue.\n- PINK FAIRY CAKE COASTER led unit sales with 2,401 units sold TW, followed by COLOUR GLASS T-LIGHT HOLDER HANGING with 1,776 units.\n- Total revenue reached £32,657.36 TW, representing a 86.6% increase WoW from £17,497.91 LW.\n- GLITTER HANGING BUTTERFLY STRING showed exceptional growth of 4,752.8% WoW in revenue, while FLAG OF ST GEORGE CAR FLAG grew 3,253.7% WoW.\n- Total units sold TW reached 17,439 across 485 orders.\n- VINTAGE HEADS AND TAILS CARD GAME demonstrated strong momentum with 2,744.0% revenue growth WoW and 1,156 units sold TW.",
+ "input_tokens": 1875,
+ "output_tokens": 315,
+ "cost_usd": 0.00345,
+ "latency_s": 3.757,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

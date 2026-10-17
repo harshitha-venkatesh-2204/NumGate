@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £56.2k versus LW £60.6k, a WoW change of -7.3%.\n- TOTAL revenue TW was £56.2k versus LY £19.8k, a YoY change of 183.2%.\n- TOTAL orders fell from LW 1844 to TW 1675, while TOTAL units fell from LW 26,861 to TW 22,091.\n- REGENCY CAKESTAND 3 TIER ranked 1 in TW with revenue of £3.0k and a 5.4% share.\n- PARTY BUNTING ranked 2 in TW with revenue of £2.3k and a 4.1% share.\n- BLACK RECORD COVER FRAME ranked 3 in TW with revenue of £1.7k and a 3.0% share.\n- ORANGE TV TRAY TABLE revenue rose 18,500.0% WoW, while SMALL POPCORN HOLDER revenue fell 87.3% WoW.\n- LARGE RED RETROSPOT WINDMILL revenue grew 25,650.5% YoY, while RED RETROSPOT CAKE STAND revenue declined 66.6% YoY.",
+ "input_tokens": 2308,
+ "output_tokens": 393,
+ "cost_usd": 0.008546000000000002,
+ "latency_s": 3.737,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

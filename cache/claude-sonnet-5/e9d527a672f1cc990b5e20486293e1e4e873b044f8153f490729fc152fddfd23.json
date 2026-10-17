@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom TW revenue was £118,122.66 versus LW £139,889.90, a WoW change of -15.6%, holding Rank 1 with 78.3% Share_Pct.\n- EIRE TW revenue reached £23,853.27 versus LW £2,091.43, a WoW change of +1040.5%, moving to Rank 2 with 15.8% Share_Pct.\n- Germany TW revenue fell to £3,891.20 from LW £8,132.43, a WoW change of -52.2%, ranked 3 with 2.6% Share_Pct.\n- Netherlands TW revenue dropped to £451.45 from LW £15,223.88, a WoW change of -97.0%, ranked 8 with 0.3% Share_Pct.\n- Australia TW revenue was £294.88 versus LW £2,326.74, a WoW change of -87.3%, ranked 9 with 0.2% Share_Pct.\n- Portugal TW revenue was £232.10 versus LW £1,034.33, a WoW change of -77.6%, ranked 10 with 0.2% Share_Pct.\n- Thailand recorded TW revenue of £1,113.70 with 1 order, up from LW revenue of £0.00 and 0 orders.\n- Denmark recorded TW revenue of £555.66 with 1 order, up from LW revenue of £0.00 and 0 orders.",
+ "input_tokens": 1228,
+ "output_tokens": 466,
+ "cost_usd": 0.007116,
+ "latency_s": 4.248,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

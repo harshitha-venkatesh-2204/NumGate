@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT ranks 1 with TW revenue of £2,152.90 versus £1,531.13 LW, a WoW gain of 40.6% on 1,160 units against 768 LW.\n- WOOD BLACK BOARD ANT WHITE FINISH sits at rank 2 with £2,057.46 TW versus £344.85 LW (WoW +496.6%) and £1,099.98 LY (YoY +87.0%).\n- REGENCY CAKESTAND 3 TIER holds rank 3 at £1,991.04 TW, down 31.5% WoW from £2,907.39 and down 62.2% YoY from £5,262.87.\n- RED HARMONICA IN BOX reached £1,731.06 TW on 1,621 units across 8 orders, up 320.3% WoW from £411.90 and up 120.2% YoY from £786.11.\n- SMALL ZINC HEART WALL ORGANISER posted £1,367.02 TW from £11.50 LW (WoW +11,787.1%) on 409 units in just 2 orders.\n- Christmas lines rose together TW: CHRISTMAS LIGHTS 10 REINDEER £805.13 (WoW +9,372.1%), PAPER CHAIN KIT VINTAGE CHRISTMAS £665.83 (WoW +1,404.7%), 36 DOILIES VINTAGE CHRISTMAS £635.74 (WoW +554.4%) and PAPER CHAIN KIT 50'S CHRISTMAS £520.28 (WoW +503.0%).\n- The ALARM CLOCK BAKELIKE range fell TW: RED £322.54 (WoW -80.7%), PINK £331.34 (WoW -79.1%) and GREEN £438.83 (WoW -60.0%), against LW totals of £1,667.45, £1,584.16 and £1,096.99.\n- Core bag and holder lines declined on both bases: JUMBO BAG RED RETROSPOT £1,554.01 TW (WoW -47.2%, YoY -51.7%), WHITE HANGING HEART T-LIGHT HOLDER £1,096.24 TW (WoW -46.6%, YoY -55.1%) and ASSORTED COLOUR BIRD ORNAMENT £376.48 TW (WoW -71.5%, YoY -75.9%).",
+ "input_tokens": 9071,
+ "output_tokens": 1398,
+ "cost_usd": 0.080305,
+ "latency_s": 14.461,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 in TW revenue at £10902.59, down 4.8% WoW from LW £11450.57, with no LY data for comparison.\n- VINTAGE UNION JACK MEMOBOARD surged 1528.2% WoW to £6561.83 TW from £403.00 LW, ranking 2 with 4.2% share.\n- PAPER CHAIN KIT 50'S CHRISTMAS fell 4.0% WoW to £4048.91 TW and dropped 27.8% YoY versus £5604.38 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER declined 25.0% WoW to £3539.40 TW and fell 28.4% YoY from £4942.19 LY.\n- WHITE SKULL HOT WATER BOTTLE rose 41.2% WoW to £3365.38 TW and gained 329.6% YoY from £783.34 LY.\n- HAND WARMER OWL DESIGN dropped 75.1% WoW to £633.57 TW from £2542.97 LW, with orders falling to 23 TW from 89 LW.\n- HAND WARMER SCOTTY DOG DESIGN fell 72.3% WoW to £716.54 TW from £2587.91 LW.\n- Across the 122 products shown, REGENCY CAKESTAND 3 TIER holds the top share at 6.9%, followed by VINTAGE UNION JACK MEMOBOARD at 4.2% share.",
+ "input_tokens": 10040,
+ "output_tokens": 515,
+ "cost_usd": 0.025230000000000002,
+ "latency_s": 5.173,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

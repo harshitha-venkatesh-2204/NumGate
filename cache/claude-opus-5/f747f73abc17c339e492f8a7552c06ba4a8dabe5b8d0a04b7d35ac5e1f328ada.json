@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER holds Rank 1 with TW revenue of £2,616.00 against £4,096.80 LW, a WoW change of -36.1%, on 190 units TW versus 349 LW, and takes an 8.0% share of TW revenue.\n- CHILLI LIGHTS ranks 2 at £1,516.30 TW versus £210.09 LW, a WoW change of +621.7%, with 270 units TW against 39 units LW.\n- Three baby gift sets recorded £0.00 LW and combined £2,397.15 TW: SPACEBOY BABY GIFT SET £904.05 (Rank 9), DOLLY GIRL BABY GIFT SET £853.20 (Rank 12) and CIRCUS PARADE BABY GIFT SET £639.90 (Rank 29).\n- WHITE HANGING HEART T-LIGHT HOLDER posted £1,249.82 TW, +15.3% WoW from £1,084.00, but -47.2% YoY against £2,365.84 LY.\n- VINTAGE UNION JACK BUNTING fell -64.8% WoW to £805.26 from £2,288.50 LW with 4 orders TW versus 20 LW, while sitting +196.1% YoY against £271.94 LY.\n- CHARLOTTE BAG SUKI DESIGN shows the largest WoW move at +1,286.1%, £876.84 TW versus £63.26 LW, on 418 units TW against 68 units LW.\n- MINI PAINT SET VINTAGE moved 1,261 units TW versus 108 units LW for £734.23, a WoW change of +945.9%, and SMALL POPCORN HOLDER moved 779 units TW versus 370 LW for £595.33, +100.4% WoW and +1,205.0% YoY.\n- JUMBO BAG RED RETROSPOT leads the jumbo bag lines at £1,356.16 TW, +17.6% WoW, while JUMBO BAG PINK VINTAGE PAISLEY is at £795.44 TW, +109.1% WoW and +534.2% YoY versus £125.42 LY.",
+ "input_tokens": 3560,
+ "output_tokens": 1421,
+ "cost_usd": 0.053325,
+ "latency_s": 17.326,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

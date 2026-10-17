@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £118.1k revenue TW, representing 78.3% of total sales across all countries.\n- Total revenue across all countries declined to £150.8k TW from £172.9k LW, a WoW decrease of 12.7%.\n- United Kingdom revenue fell 15.6% WoW, declining from the previous week despite maintaining the largest market share.\n- EIRE delivered £23.9k revenue TW with exceptional growth of 1040.5% WoW, the strongest performance among all markets.\n- Germany contributed £3.9k revenue TW with a modest WoW decline of 6.8%, while France also experienced a 6.8% WoW decrease.\n- Total units sold reached 75,004 TW, with United Kingdom accounting for 58,751 units and EIRE for 10,183 units.\n- United Kingdom processed 320 orders TW, significantly higher than EIRE and Germany which each recorded 8 orders.\n- Total order volume across all countries was 346 orders TW, with United Kingdom representing 92.5% of all transactions.",
+ "input_tokens": 1461,
+ "output_tokens": 261,
+ "cost_usd": 0.0027660000000000002,
+ "latency_s": 3.419,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

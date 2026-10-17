@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £27,724.70 TW versus £30,272.96 LW, a WoW change of -8.4%, and versus LY a YoY change of +89.1%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with £5,919.72 TW revenue, a 21.4% share TW, and a WoW change of -45.7%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with £4,251.25 TW revenue, a 15.3% share TW, and a WoW change of +20.1%.\n- CHILLI LIGHTS ranked 3 with £2,494.07 TW revenue, a 9.0% share TW, and a WoW change of +26.4%.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN had the largest WoW increase at +8063.4%, rising from £30.00 LW to £2,449.01 TW.\n- PAPER CHAIN KIT 50'S CHRISTMAS had the largest WoW decrease at -46.9%, falling from £4,048.91 LW to £2,149.75 TW.\n- ROTATING SILVER ANGELS T-LIGHT HLDR had the largest YoY increase at +1030.5%, up from £191.29 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER had the largest YoY decrease at -49.4% from £8,406.79 LY, and recorded the most orders with 68 TW versus 86 LW.",
+ "input_tokens": 885,
+ "output_tokens": 506,
+ "cost_usd": 0.00683,
+ "latency_s": 4.115,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

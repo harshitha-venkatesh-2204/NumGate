@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £61.8k versus LW £42.3k, a WoW increase of 46.01%.\n- TOTAL units TW reached 29,849 versus LW 17,280, a WoW increase of 72.7%.\n- TOTAL orders TW totaled 1,820.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 by revenue TW with £3,740.98 and a 6.1% share.\n- RED HANGING HEART T-LIGHT HOLDER ranked 2 by revenue TW with £1,807.91 and a 2.9% share.\n- SET/3 RUSSIAN DOLL STACKING TINS ranked 3 by revenue TW with £1,718.73 and a 2.8% share.\n- CHERRY DESIGN PAPERLANTERNS revenue rose WoW by 14,999.8%, and BALLERINA HEART DECORATION. rose WoW by 12,688.5%.\n- KENSINGTON COFFEE SET revenue fell WoW by 78.9%, and ASSORTED COLOUR BIRD ORNAMENT fell WoW by 69.1%.",
+ "input_tokens": 2080,
+ "output_tokens": 395,
+ "cost_usd": 0.00811,
+ "latency_s": 3.919,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

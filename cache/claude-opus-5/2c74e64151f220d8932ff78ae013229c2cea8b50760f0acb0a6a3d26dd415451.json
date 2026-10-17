@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £47.2k TW versus £24.9k LW, a WoW gain of 89.7%.\n- Total revenue was £12.1k LY, putting TW at £47.2k and YoY growth at 291.2%.\n- TOTAL units came in at 18,901 TW, up 134.0% WoW, while orders reached 1,089 TW, up 63.8% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £4,290.54 revenue and a 9.1% share of total.\n- PARTY BUNTING ranked 2 TW at £4,021.56 (8.5% share), with WHITE HANGING HEART T-LIGHT HOLDER at rank 3 on £2,503.60 (5.3% share).\n- JUMBO BAG RED RETROSPOT delivered £2,339.73 TW and SPOTTY BUNTING £1,971.47 TW, with the top five products holding 32.1% of TOTAL revenue TW.\n- Largest WoW revenue gains came from REGENCY CAKESTAND 3 TIER at +£2,175.24 and LUNCH BAG DOILEY PATTERN at +£1,655.22.\n- Largest WoW revenue declines came from PARTY BUNTING at -£1,204.68 and WHITE HANGING HEART T-LIGHT HOLDER at -£554.00.",
+ "input_tokens": 2436,
+ "output_tokens": 471,
+ "cost_usd": 0.023955,
+ "latency_s": 6.259,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

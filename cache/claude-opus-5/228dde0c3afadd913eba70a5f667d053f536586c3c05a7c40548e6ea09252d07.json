@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER led TW at £5,198.05 on 449 units, down 5.8% WoW from £5,517.46 LW, and held a 37.8% share of the 8 rows shown; no LY figure is available, so YoY is not calculated.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 at £1,625.34 TW versus £4,245.80 LW, a WoW drop of 61.7%, with units falling from 1,596 LW to 586 TW.\n- DOOR MAT RED SPOT posted the largest WoW gain at +119.5%, rising from £436.26 LW to £957.50 TW, with orders up from 18 LW to 25 TW.\n- DOOR MAT FANCY FONT HOME SWEET HOME grew 79.6% WoW to £1,064.30 TW from £592.57 LW, with units up from 85 LW to 164 TW.\n- SET/5 RED SPOTTY LID GLASS BOWLS rose 60.7% WoW to £1,194.65 TW from £743.50 LW on 447 units TW versus 266 units LW.\n- VINTAGE UNION JACK BUNTING fell 25.9% WoW to £1,261.17 TW and JUMBO BAG RED RETROSPOT fell 27.6% WoW to £1,259.80 TW, separating ranks 3 and 4 by £1.37.\n- EDWARDIAN PARASOL NATURAL was close to flat at £1,187.47 TW versus £1,165.81 LW, +1.9% WoW, on 14 orders in both TW and LW.\n- Combined TW revenue across the 8 products was £13,748.28 versus £16,144.80 LW, a WoW decline of 14.8%; LY revenue is blank for all 8 rows, so no YoY comparison is shown.",
+ "input_tokens": 1239,
+ "output_tokens": 1024,
+ "cost_usd": 0.031795000000000004,
+ "latency_s": 11.619,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

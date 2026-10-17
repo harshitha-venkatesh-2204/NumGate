@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2011-W36__S4__claude-haiku-4-5__r1",
+ "table_id": "large_product_2011-W36",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W36",
+ "n_rows": 89,
+ "strategy": "S4",
+ "model": "claude-haiku-4-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a365,307.27 TW, up 80.3% WoW from \u00a336,216.42 LW, representing a 177.6% YoY increase.\n- PLEASE ONE PERSON METAL SIGN generated \u00a32,773.43 TW with a 4.2% share TW, achieving the highest rank at rank 1 with a 3286.4% WoW surge.\n- BEWARE OF THE CAT METAL SIGN recorded the largest WoW increase at 3836.8%, growing from \u00a315.77 LW to \u00a3620.84 TW.\n- PARTY BUNTING achieved the largest YoY increase at 5654.7%, rising from \u00a331.72 LY to \u00a31,825.40 TW with a 2.8% share TW.\n- REGENCY CAKESTAND 3 TIER ranked 3 with revenue \u00a31,825.17 TW but experienced the largest YoY decrease at -50.8% from \u00a33,712.01 LY.\n- WOOD BLACK BOARD ANT WHITE FINISH posted the largest WoW decrease at -76.2%, declining from \u00a32,057.46 LW to \u00a3489.41 TW.\n- JUMBO BAG VINTAGE DOILY recorded the most orders at 46 TW, up from 34 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W36. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a365,307.27 TW, revenue \u00a336,216.42 LW, revenue change +80.3% WoW, revenue change +177.6% YoY\n- PLEASE ONE PERSON METAL SIGN: rank 1, revenue \u00a32,773.43 TW, share 4.2% TW, revenue change +3286.4% WoW\n- PARTY BUNTING: rank 2, revenue \u00a31,825.40 TW, share 2.8% TW, revenue change +29.5% WoW\n- REGENCY CAKESTAND 3 TIER: rank 3, revenue \u00a31,825.17 TW, share 2.8% TW, revenue change -8.3% WoW\n- BEWARE OF THE CAT METAL SIGN (largest WoW increase): revenue change +3836.8% WoW, revenue \u00a3620.84 TW versus \u00a315.77 LW\n- WOOD BLACK BOARD ANT WHITE FINISH (largest WoW decrease): revenue change -76.2% WoW, revenue \u00a3489.41 TW versus \u00a32,057.46 LW\n- PARTY BUNTING (largest YoY increase): revenue change +5654.7% YoY, revenue \u00a331.72 LY\n- REGENCY CAKESTAND 3 TIER (largest YoY decrease): revenue change -50.8% YoY, revenue \u00a33,712.01 LY\n- JUMBO BAG VINTAGE DOILY (most orders): orders 46 TW versus 34 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a365,307.27 TW, up 80.3% WoW from \u00a336,216.42 LW, representing a 177.6% YoY increase.\n- PLEASE ONE PERSON METAL SIGN generated \u00a32,773.43 TW with a 4.2% share TW, achieving the highest rank at rank 1 with a 3286.4% WoW surge.\n- BEWARE OF THE CAT METAL SIGN recorded the largest WoW increase at 3836.8%, growing from \u00a315.77 LW to \u00a3620.84 TW.\n- PARTY BUNTING achieved the largest YoY increase at 5654.7%, rising from \u00a331.72 LY to \u00a31,825.40 TW with a 2.8% share TW.\n- REGENCY CAKESTAND 3 TIER ranked 3 with revenue \u00a31,825.17 TW but experienced the largest YoY decrease at -50.8% from \u00a33,712.01 LY.\n- WOOD BLACK BOARD ANT WHITE FINISH posted the largest WoW decrease at -76.2%, declining from \u00a32,057.46 LW to \u00a3489.41 TW.\n- JUMBO BAG VINTAGE DOILY recorded the most orders at 46 TW, up from 34 LW.",
+    "input_tokens": 652,
+    "output_tokens": 329,
+    "cost_usd": 0.002297,
+    "latency_s": 3.398,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a365,307.27 TW, revenue \u00a336,216.42 LW, revenue change +80.3% WoW, revenue change +177.6% YoY\n- PLEASE ONE PERSON METAL SIGN: rank 1, revenue \u00a32,773.43 TW, share 4.2% TW, revenue change +3286.4% WoW\n- PARTY BUNTING: rank 2, revenue \u00a31,825.40 TW, share 2.8% TW, revenue change +29.5% WoW\n- REGENCY CAKESTAND 3 TIER: rank 3, revenue \u00a31,825.17 TW, share 2.8% TW, revenue change -8.3% WoW\n- BEWARE OF THE CAT METAL SIGN (largest WoW increase): revenue change +3836.8% WoW, revenue \u00a3620.84 TW versus \u00a315.77 LW\n- WOOD BLACK BOARD ANT WHITE FINISH (largest WoW decrease): revenue change -76.2% WoW, revenue \u00a3489.41 TW versus \u00a32,057.46 LW\n- PARTY BUNTING (largest YoY increase): revenue change +5654.7% YoY, revenue \u00a331.72 LY\n- REGENCY CAKESTAND 3 TIER (largest YoY decrease): revenue change -50.8% YoY, revenue \u00a33,712.01 LY\n- JUMBO BAG VINTAGE DOILY (most orders): orders 46 TW versus 34 LW",
+  "n_calls": 1,
+  "tokens_in": 652,
+  "tokens_out": 329,
+  "cost_usd": 0.002297,
+  "latency_s": 3.398
+ }
+}

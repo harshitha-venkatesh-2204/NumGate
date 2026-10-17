@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £63.3k vs LW £59.2k, WoW up 6.9%.\n- TOTAL revenue TW £63.3k vs LY £38.2k, YoY up 65.9%.\n- TOTAL orders TW 1,807 vs LW 1,614; TOTAL units TW 27,369 vs LW 24,791.\n- RABBIT NIGHT LIGHT led products with TW revenue £2.2k, a 3.4% share.\n- WOOD BLACK BOARD ANT WHITE FINISH recorded TW revenue £2.1k, 3.2% share, ranking second.\n- SMALL ZINC HEART WALL ORGANISER had the largest WoW revenue increase at 11,787.1%, while ALARM CLOCK BAKELIKE RED fell 80.7% WoW.\n- FELTCRAFT PRINCESS OLIVIA DOLL posted the top YoY revenue gain of 23,496.0%, while ASSORTED COLOUR BIRD ORNAMENT dropped 75.9% YoY.\n- RED HARMONICA IN BOX led units TW with 1,621, and JUMBO BAG RED RETROSPOT led orders TW with 44.",
+ "input_tokens": 2413,
+ "output_tokens": 419,
+ "cost_usd": 0.009016,
+ "latency_s": 4.488,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

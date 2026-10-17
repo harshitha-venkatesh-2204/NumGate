@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER led TW at £3,388.78 (Rank 1, 20.2% share), up 14.4% WoW from £2,963.43 LW, with units rising from 1,105 LW to 1,258 TW.\n- WOODEN SKITTLES GARDEN SET ranked 2 at £2,650.90 TW versus £468.85 LW, a 465.4% WoW increase, on 230 units TW against 31 units LW.\n- PACK OF 12 SUKI TISSUES posted £2,573.71 TW versus £42.63 LW, a 5,937.3% WoW rise, with units moving from 147 LW to 5,247 TW across 13 orders TW.\n- PACK OF 12 HEARTS DESIGN TISSUES reached £2,504.11 TW versus £40.47 LW, a 6,087.6% WoW change, on 5,007 units TW from 5 orders TW compared with 6 orders LW.\n- WOODEN CROQUET GARDEN SET recorded £2,232.33 TW against £322.65 LW, up 591.9% WoW, with orders rising from 14 LW to 25 TW.\n- PARTY BUNTING generated £2,110.88 TW versus £1,877.24 LW, up 12.4% WoW, on 450 units TW against 442 units LW and 35 orders TW versus 36 LW.\n- PACK OF 12 PINK SPOT TISSUES ranked 7 at £1,279.52 TW versus £42.05 LW, up 2,942.9% WoW, holding a 7.6% share of TW revenue.\n- PACK OF 12 SUKI TISSUES, PACK OF 12 HEARTS DESIGN TISSUES and PACK OF 12 PINK SPOT TISSUES held TW shares of 15.4%, 15.0% and 7.6%; no LY revenue is recorded for any of the 7 products, so YoY is not available.",
+ "input_tokens": 2128,
+ "output_tokens": 1010,
+ "cost_usd": 0.035890000000000005,
+ "latency_s": 10.842,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

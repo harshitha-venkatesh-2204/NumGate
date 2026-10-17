@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER holds Rank 1 with TW revenue of £6,552.99 versus £7,144.93 LW, a WoW change of -8.3%, and a 5.3% share of this week's revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 2 at £5,999.53 TW versus £2,659.73 LW (WoW +125.6%), with units rising to 2,155 TW from 891 LW.\n- PAPER CHAIN KIT 50'S CHRISTMAS fell to £5,735.62 TW from £9,020.33 LW (WoW -36.4%) while PAPER CHAIN KIT VINTAGE CHRISTMAS fell to £2,500.80 from £3,791.87 (WoW -34.0%).\n- Hot water bottle lines rose: HOT WATER BOTTLE BABUSHKA £3,215.95 TW versus £1,509.10 LW (WoW +113.1%) and HOT WATER BOTTLE TEA AND SYMPATHY £2,459.61 TW versus £1,345.84 LW (WoW +82.8%).\n- Hand warmer lines declined: HAND WARMER OWL DESIGN £1,912.53 TW (WoW -41.6%), HAND WARMER BIRD DESIGN £1,569.50 TW (WoW -38.0%), and HAND WARMER SCOTTY DOG DESIGN £2,126.08 TW (WoW -29.1%).\n- CERAMIC CAKE STAND + HANGING CAKES recorded £2,047.29 TW at Rank 12 from £0.00 LW, on 235 units and 11 orders TW versus 0 units and 0 orders LW.\n- Largest WoW percentage gains came from SET OF 20 KIDS COOKIE CUTTERS at £707.72 TW versus £12.60 LW (+5,516.8%), GINGERBREAD MAN COOKIE CUTTER at £754.07 versus £16.25 (+4,540.4%), and HEART OF WICKER SMALL at £1,806.28 versus £79.99 (+2,158.1%).\n- Revenue_LY is blank for all 98 product rows in ISO week 2010-W47, so no YoY percentage is reported for any entity, including Rank 1 REGENCY CAKESTAND 3 TIER.",
+ "input_tokens": 7683,
+ "output_tokens": 1346,
+ "cost_usd": 0.07206499999999999,
+ "latency_s": 14.318,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

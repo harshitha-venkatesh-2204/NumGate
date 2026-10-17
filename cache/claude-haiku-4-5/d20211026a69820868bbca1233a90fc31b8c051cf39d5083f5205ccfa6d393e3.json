@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue across all countries reached £124,404.10 TW, representing a +2.6% WoW increase from £121,297.26 LW, despite a -21.5% YoY decline.\n\n- United Kingdom maintained rank 1 with revenue of £94,054.57 TW and a 75.6% share TW, but experienced a -17.4% WoW decrease and generated 250 orders TW compared to 264 LW.\n\n- Australia achieved rank 2 with revenue of £16,726.84 TW and a 13.4% share TW, driven by exceptional growth of +3954.5% WoW from £412.55 LW and +4139.0% YoY from £394.59 LY.\n\n- Finland secured rank 3 with revenue of £4,418.02 TW and a 3.6% share TW, supported by strong momentum of +2575.0% WoW.\n\n- Germany experienced the largest WoW decline among tracked countries with revenue of £1,433.78 TW, representing a -47.5% WoW decrease from £2,728.99 LW.\n\n- EIRE recorded the largest YoY decrease with revenue of £11,352.29 LY, indicating a -67.6% YoY contraction in the current period.",
+ "input_tokens": 595,
+ "output_tokens": 322,
+ "cost_usd": 0.0022050000000000004,
+ "latency_s": 3.57,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

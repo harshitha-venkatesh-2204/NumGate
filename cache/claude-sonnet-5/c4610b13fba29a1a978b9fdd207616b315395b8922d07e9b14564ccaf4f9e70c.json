@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER leads all products in TW with £8406.79 revenue, up 70.1% WoW from £4942.19 LW, holding 13.6% share and Rank 1.\n- PAPER CHAIN KIT 50'S CHRISTMAS fell the most WoW, dropping 61.8% from £5604.38 LW to £2143.03 TW, ranked 10th.\n- WILLOW BRANCH LIGHTS. rose 185.0% WoW, from £362.52 LW to £1033.11 TW, the largest percentage WoW gain among listed products.\n- BLACK RECORD COVER FRAME increased 185.5% WoW, from £401.00 LW to £1144.96 TW, ranking 24th by TW revenue.\n- ASSORTED COLOUR BIRD ORNAMENT declined 35.3% WoW, from £3160.37 LW to £2046.22 TW, ranked 12th.\n- FAIRY CAKE CANDLES revenue grew 121.8% WoW, from £1381.85 LW to £3065.02 TW, with units up from 997 LW to 2318 TW.\n- EDWARDIAN PARASOL RED revenue decreased 11.5% WoW, from £3114.25 LW to £2755.55 TW, with orders down from 23 LW to 20 TW.\n- No YoY comparison is available for any product since Revenue_LY values are blank across all 30 rows.",
+ "input_tokens": 2863,
+ "output_tokens": 498,
+ "cost_usd": 0.010706,
+ "latency_s": 4.96,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

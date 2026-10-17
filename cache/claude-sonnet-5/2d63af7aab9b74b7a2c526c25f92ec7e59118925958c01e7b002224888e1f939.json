@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 TW with £2456.32 revenue, down 52.7% WoW from £5198.05 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 2 TW with £2173.03, up 33.7% WoW from £1625.34 LW.\n- FLAG OF ST GEORGE CAR FLAG rose 3969.8% WoW to £272.27 TW from £6.69 LW.\n- BLACK HEART CARD HOLDER rose 3930.0% WoW to £955.12 TW from £23.70 LW.\n- DOOR MAT ENGLISH ROSE fell 70.8% WoW to £260.72 TW from £891.83 LW.\n- CERAMIC CAKE STAND + HANGING CAKES fell 64.4% WoW to £269.66 TW from £758.11 LW.\n- JUMBO BAG RED RETROSPOT holds rank 3 TW with £1392.22, up 10.5% WoW from £1259.80 LW.\n- Across 97 products shown, top 3 ranked items (REGENCY CAKESTAND 3 TIER, WHITE HANGING HEART T-LIGHT HOLDER, JUMBO BAG RED RETROSPOT) together hold 12.0% share of TW revenue.",
+ "input_tokens": 7513,
+ "output_tokens": 461,
+ "cost_usd": 0.019636,
+ "latency_s": 4.364,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

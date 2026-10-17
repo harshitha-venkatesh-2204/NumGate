@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £43.5k vs LW £17.6k, WoW up 147.1%.\n- TOTAL units TW 17,910 vs LW 6,199, and TOTAL orders TW 685 vs LW 412.\n- REGENCY CAKESTAND 3 TIER ranked 1 with TW revenue £7.5k, a 17.2% share of TOTAL revenue.\n- HAND WARMER RED POLKA DOT posted TW revenue £3.7k, 8.5% share, with TW units of 2,004.\n- JUMBO BAG RED RETROSPOT recorded TW revenue £3.1k, a 7.2% share of TOTAL revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER TW revenue £2.9k, up 3.4% WoW, with TW orders of 67.\n- AFGHAN SLIPPER SOCK PAIR revenue surged 52,204.3% WoW.\n- SET OF 20 VINTAGE CHRISTMAS NAPKINS reached TW units of 1,831, while PAPER CHAIN KIT VINTAGE CHRISTMAS had TW orders of 59.",
+ "input_tokens": 2280,
+ "output_tokens": 404,
+ "cost_usd": 0.0086,
+ "latency_s": 3.788,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

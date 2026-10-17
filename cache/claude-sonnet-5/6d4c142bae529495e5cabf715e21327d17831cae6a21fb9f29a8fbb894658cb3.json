@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER ranks 1 this week with Revenue_TW of £4405.70, up 29.4% WoW from £3403.60 LW, holding 10.6% share.\n- PARTY BUNTING ranks 2 with Revenue_TW of £3220.36, up 89.8% WoW from £1696.49 LW, with 351 units TW versus 188 units LW.\n- REGENCY CAKESTAND 3 TIER ranks 3 with Revenue_TW of £2446.96, down 20.0% WoW from £3058.79 LW.\n- JUMBO BAG STRAWBERRY fell 68.8% WoW, from Revenue_LW of £2439.76 to Revenue_TW of £760.11, dropping units from 1254 LW to 429 TW.\n- DOORMAT TOPIARY rose 919.8% WoW, from Revenue_LW of £67.41 to Revenue_TW of £687.43, with orders up from 3 LW to 5 TW.\n- WALL MIRROR , RECT DIAMANTE, PINK/ increased 3923.3% WoW, from Revenue_LW of £16.13 to Revenue_TW of £648.96, with Orders_TW at 1.\n- PLEASE ONE PERSON METAL SIGN had Revenue_TW of £1475.70 with no recorded Revenue_LW, generating 767 units across 26 orders TW.\n- JUMBO STORAGE BAG SUKI declined 38.2% WoW, from Revenue_LW of £1478.55 to Revenue_TW of £913.54, with Orders_TW at 22 versus Orders_LW of 15.",
+ "input_tokens": 4207,
+ "output_tokens": 1018,
+ "cost_usd": 0.018594,
+ "latency_s": 9.467,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue TW reached £27.6k, representing a 123.6% increase WoW from £12.4k LW.\n- REGENCY CAKESTAND 3 TIER generated £7.5k revenue TW and captured 27.1% of total product revenue share.\n- HAND WARMER RED POLKA DOT achieved £3.7k revenue TW with 2004 units sold, the highest unit volume for the week.\n- JUMBO BAG RED RETROSPOT contributed £3.1k revenue TW with 1515 units sold and an 11.3% revenue share.\n- AFGHAN SLIPPER SOCK PAIR showed exceptional growth with a 52204.3% revenue increase WoW.\n- ASSORTED COLOUR BIRD ORNAMENT recorded 1792 units sold TW, the second highest unit volume.\n- WHITE HANGING HEART T-LIGHT HOLDER led order volume with 67 orders TW, followed by PAPER CHAIN KIT VINTAGE CHRISTMAS with 59 orders.\n- Total order count TW reached 342 orders across all products.",
+ "input_tokens": 1589,
+ "output_tokens": 261,
+ "cost_usd": 0.002894,
+ "latency_s": 3.492,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

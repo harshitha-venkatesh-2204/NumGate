@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £193.4k revenue TW, representing 92.6% of total sales across all countries.\n- Total revenue TW was £208.7k, declining 27.7% WoW from £288.8k LW and down 9.9% YoY from £231.8k LY.\n- United Kingdom processed 413 orders TW from 96,172 units sold, the highest volume across all markets.\n- Sweden achieved exceptional YoY growth of 1244.0% in revenue TW, with £3.8k revenue from 3,954 units.\n- Germany revenue TW reached £4.5k with a 16.2% WoW increase, supported by 1,961 units across 10 orders.\n- Spain revenue showed the strongest WoW growth at 420.3%, while also posting 176.6% YoY expansion.\n- Australia revenue increased 60.6% WoW, demonstrating positive momentum in that market.\n- Belgium revenue surged 6266.6% YoY, indicating substantial year-over-year expansion in that territory.",
+ "input_tokens": 1767,
+ "output_tokens": 259,
+ "cost_usd": 0.0030619999999999996,
+ "latency_s": 3.676,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

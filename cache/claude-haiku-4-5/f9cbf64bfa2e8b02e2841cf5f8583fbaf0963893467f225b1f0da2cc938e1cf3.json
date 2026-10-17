@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £123,360.51 TW, up 6.6% WoW from £115,678.71 LW.\n- REGENCY CAKESTAND 3 TIER generated £6,552.99 TW with a 5.3% share TW, ranking as the top product despite declining 8.3% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £5,999.53 TW with a 4.9% share TW, surging 125.6% WoW and recording 112 orders TW versus 97 orders LW.\n- PAPER CHAIN KIT 50'S CHRISTMAS contributed £5,735.62 TW with a 4.6% share TW, falling 36.4% WoW.\n- SET OF 20 KIDS COOKIE CUTTERS experienced the largest growth, increasing 5516.8% WoW from £12.60 LW to £707.72 TW.\n- 3 HEARTS HANGING DECORATION RUSTIC posted the largest decline, dropping 59.2% WoW from £3,481.21 LW to £1,419.98 TW.",
+ "input_tokens": 579,
+ "output_tokens": 288,
+ "cost_usd": 0.002019,
+ "latency_s": 3.107,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

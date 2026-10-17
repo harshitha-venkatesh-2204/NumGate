@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2010-W16__S4__claude-opus-5__r1",
+ "table_id": "large_product_2010-W16",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2010-W16",
+ "n_rows": 115,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a368,686.56 TW versus \u00a350,270.15 LW, a change of +36.6% WoW.\n- REGENCY CAKESTAND 3 TIER held rank 1 with revenue \u00a34,443.21 TW, a 6.5% TW share and +28.5% WoW.\n- PARTY BUNTING placed rank 2 with revenue \u00a32,495.37 TW, a 3.6% TW share and +55.9% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER placed rank 3 with revenue \u00a31,961.04 TW, a 2.9% TW share and -13.2% WoW.\n- GIANT BLACK SUNGLASSES posted the largest WoW increase at +33823.1%, with revenue \u00a31,323.00 TW versus \u00a33.90 LW.\n- PLEASE ONE PERSON METAL SIGN posted the largest WoW decrease at -70.7%, with revenue \u00a3441.39 TW versus \u00a31,506.00 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 60 orders TW versus 45 orders LW.\n- The top three products, REGENCY CAKESTAND 3 TIER, PARTY BUNTING and WHITE HANGING HEART T-LIGHT HOLDER, carried TW shares of 6.5%, 3.6% and 2.9% of total revenue \u00a368,686.56 TW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W16. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a368,686.56 TW, revenue \u00a350,270.15 LW, revenue change +36.6% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a34,443.21 TW, share 6.5% TW, revenue change +28.5% WoW\n- PARTY BUNTING: rank 2, revenue \u00a32,495.37 TW, share 3.6% TW, revenue change +55.9% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 3, revenue \u00a31,961.04 TW, share 2.9% TW, revenue change -13.2% WoW\n- GIANT BLACK SUNGLASSES (largest WoW increase): revenue change +33823.1% WoW, revenue \u00a31,323.00 TW versus \u00a33.90 LW\n- PLEASE ONE PERSON METAL SIGN (largest WoW decrease): revenue change -70.7% WoW, revenue \u00a3441.39 TW versus \u00a31,506.00 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 60 TW versus 45 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a368,686.56 TW versus \u00a350,270.15 LW, a change of +36.6% WoW.\n- REGENCY CAKESTAND 3 TIER held rank 1 with revenue \u00a34,443.21 TW, a 6.5% TW share and +28.5% WoW.\n- PARTY BUNTING placed rank 2 with revenue \u00a32,495.37 TW, a 3.6% TW share and +55.9% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER placed rank 3 with revenue \u00a31,961.04 TW, a 2.9% TW share and -13.2% WoW.\n- GIANT BLACK SUNGLASSES posted the largest WoW increase at +33823.1%, with revenue \u00a31,323.00 TW versus \u00a33.90 LW.\n- PLEASE ONE PERSON METAL SIGN posted the largest WoW decrease at -70.7%, with revenue \u00a3441.39 TW versus \u00a31,506.00 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 60 orders TW versus 45 orders LW.\n- The top three products, REGENCY CAKESTAND 3 TIER, PARTY BUNTING and WHITE HANGING HEART T-LIGHT HOLDER, carried TW shares of 6.5%, 3.6% and 2.9% of total revenue \u00a368,686.56 TW.",
+    "input_tokens": 733,
+    "output_tokens": 485,
+    "cost_usd": 0.01579,
+    "latency_s": 5.672,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a368,686.56 TW, revenue \u00a350,270.15 LW, revenue change +36.6% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a34,443.21 TW, share 6.5% TW, revenue change +28.5% WoW\n- PARTY BUNTING: rank 2, revenue \u00a32,495.37 TW, share 3.6% TW, revenue change +55.9% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 3, revenue \u00a31,961.04 TW, share 2.9% TW, revenue change -13.2% WoW\n- GIANT BLACK SUNGLASSES (largest WoW increase): revenue change +33823.1% WoW, revenue \u00a31,323.00 TW versus \u00a33.90 LW\n- PLEASE ONE PERSON METAL SIGN (largest WoW decrease): revenue change -70.7% WoW, revenue \u00a3441.39 TW versus \u00a31,506.00 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 60 TW versus 45 LW",
+  "n_calls": 1,
+  "tokens_in": 733,
+  "tokens_out": 485,
+  "cost_usd": 0.01579,
+  "latency_s": 5.672
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "text": "```json\n{\n  \"claims\": []\n}\n```\n\nThe note contains only \"United\" which appears to be a header or entity name, not a numeric claim. There are no numbers to extract.",
+ "input_tokens": 573,
+ "output_tokens": 47,
+ "cost_usd": 0.000808,
+ "latency_s": 1.162,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

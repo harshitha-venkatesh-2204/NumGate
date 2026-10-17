@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £67.4k TW versus £50.9k LW, a WoW gain of 32.47%.\n- TOTAL revenue of £67.4k TW compares with £21.4k LY, a YoY increase of 214.43%.\n- TOTAL units came to 31,218 TW (up 57.91% WoW) across 1,940 orders TW (up 22.47% WoW).\n- EMPIRE DESIGN ROSETTE ranked 1 TW with £3,277.92, a 4.9% share of TOTAL revenue TW and a WoW gain of £3,265.42.\n- REGENCY CAKESTAND 3 TIER took £2,529.33 TW, down £2,122.41 WoW; the top 5 products together held 14.77% of TOTAL revenue TW.\n- ASSORTED COLOUR MINI CASES posted £1,551.15 TW, up £1,479.60 WoW (+2,067.9% WoW), while ANTIQUE SILVER TEA GLASS ENGRAVED rose 530.6% WoW.\n- JUMBO BAG RED RETROSPOT delivered £1,482.34 TW and WHITE HANGING HEART T-LIGHT HOLDER £1,119.63 TW.\n- CHILLI LIGHTS fell £1,100.77 WoW and JAM MAKING SET WITH JARS fell £829.96 WoW, against SET/2 RED RETROSPOT TEA TOWELS up £598.00 WoW.",
+ "input_tokens": 2511,
+ "output_tokens": 511,
+ "cost_usd": 0.02533,
+ "latency_s": 6.682,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

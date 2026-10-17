@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £67,040.96 TW versus £79,174.25 LW, a WoW change of -15.3%, and versus LY a YoY change of +71.3%.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 1 with revenue £5,701.16 TW, an 8.5% share TW, and a WoW change of -39.9%.\n- RABBIT NIGHT LIGHT ranked 2 with revenue £5,084.81 TW, a 7.6% share TW, and a WoW change of -52.4%.\n- CHILLI LIGHTS ranked 3 with revenue £4,960.25 TW, a 7.4% share TW, and a WoW change of +115.0%.\n- COLOURED GLASS STAR T-LIGHT HOLDER had the largest WoW increase, rising from £111.16 LW to £1,278.75 TW, a change of +1050.4%.\n- JUMBO BAG 50'S CHRISTMAS had the largest WoW decrease, falling from £3,719.71 LW to £1,151.45 TW, a change of -69.0%.\n- WOODEN ADVENT CALENDAR RED had the largest YoY increase, up +698.9% YoY from £220.45 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER had the largest YoY decrease, down -58.7% YoY from £5,999.53 LY, and RABBIT NIGHT LIGHT had the most orders with 105 TW versus 123 LW.",
+ "input_tokens": 861,
+ "output_tokens": 515,
+ "cost_usd": 0.006872,
+ "latency_s": 4.606,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £63.3k TW versus £59.2k LW, a WoW gain of 6.9%, and versus £38.2k LY, a YoY gain of 65.9%.\n- TOTAL units came in at 27,369 TW, up 10.4% WoW, while TOTAL orders reached 1,807 TW, up 12.0% WoW.\n- RABBIT NIGHT LIGHT ranked 1 TW with revenue of £2,152.90 and a 3.4% share of TOTAL revenue TW.\n- WOOD BLACK BOARD ANT WHITE FINISH delivered £2,057.46 TW for a 3.2% share, and REGENCY CAKESTAND 3 TIER delivered £1,991.04 TW for a 3.1% share.\n- RED HARMONICA IN BOX posted £1,731.06 TW and JUMBO BAG RED RETROSPOT posted £1,554.01 TW; the top five products together held 15.0% of TOTAL revenue TW.\n- WOOD BLACK BOARD ANT WHITE FINISH added £1,712.61 WoW, a 496.6% WoW increase, and SMALL ZINC HEART WALL ORGANISER added £1,355.52 WoW.\n- JUMBO BAG APPLES fell £1,802.85 WoW and JUMBO BAG ALPHABET fell £1,456.98 WoW.\n- RED HARMONICA IN BOX rose 320.3% WoW on revenue of £1,731.06 TW.",
+ "input_tokens": 2482,
+ "output_tokens": 522,
+ "cost_usd": 0.02546,
+ "latency_s": 6.345,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

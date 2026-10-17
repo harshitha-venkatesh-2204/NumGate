@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £196.5k revenue TW, representing 77.3% of total sales across all countries.\n- Total revenue across all markets reached £254.2k TW, with 146,905 units sold across 430 orders.\n- EIRE showed the strongest WoW growth at 91.1% TW, while United Kingdom grew 8.1% WoW and Netherlands revenue increased 49.4% WoW.\n- Netherlands revenue surged 7641.5% YoY TW, significantly outpacing Germany at 100.8% YoY and EIRE at 30.4% YoY.\n- Total revenue grew 30.3% WoW TW and 10.9% YoY TW, indicating strong momentum across the portfolio.\n- United Kingdom accounted for 103,879 units and 391 orders TW, while Netherlands delivered 20,878 units from just 7 orders TW.\n- Netherlands contributed 11.6% of total revenue TW, while EIRE represented 5.4% of the sales mix.",
+ "input_tokens": 1536,
+ "output_tokens": 254,
+ "cost_usd": 0.0028060000000000003,
+ "latency_s": 3.388,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

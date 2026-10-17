@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £3.7k revenue TW, the highest performing product, with 1,382 units sold across 79 orders.\n- RED HANGING HEART T-LIGHT HOLDER achieved £1.8k revenue TW and ranked second by revenue, driven by 45 orders in the week.\n- SET/3 RUSSIAN DOLL STACKING TINS and KENSINGTON COFFEE SET each contributed over £1.6k revenue TW, rounding out the top four products.\n- ASSORTED FLOWER COLOUR \"LEIS\" led unit sales TW with 1,494 units, followed by PACK OF 72 RETRO SPOT CAKE CASES at 1,445 units.\n- Total revenue reached £61.8k TW, representing a 46.0% WoW increase from £42.3k LW.\n- CHERRY DESIGN PAPERLANTERNS showed exceptional growth with a 14,999.8% WoW revenue increase, while BALLERINA HEART DECORATION grew 12,688.5% WoW.\n- Total units sold TW reached 29,849 across 1,820 orders, demonstrating strong customer engagement across the product range.",
+ "input_tokens": 1909,
+ "output_tokens": 292,
+ "cost_usd": 0.003369,
+ "latency_s": 3.692,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

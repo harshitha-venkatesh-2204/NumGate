@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT ranks 1 TW with revenue £10739.38, up from £57.82 LW, a WoW change of 18473.8%, holding 19.3% share of TW revenue.\n- ALARM CLOCK BAKELIKE RED revenue TW £2423.41 vs LW £340.94, WoW up 610.8%, and vs LY £595.04, YoY up 307.3%.\n- CHILLI LIGHTS revenue TW £2285.12 vs LW £710.37, WoW up 221.7%, and vs LY £1021.67, YoY up 123.7%.\n- REGENCY CAKESTAND 3 TIER revenue TW £1679.31, down from LW £3205.71 (WoW -47.6%) and down from LY £7558.58 (YoY -77.8%).\n- COLOUR GLASS. STAR T-LIGHT HOLDER revenue TW £2062.35, up from LW £312.07 (WoW 560.9%) but down from LY £3915.56 (YoY -47.3%).\n- WHITE HANGING HEART T-LIGHT HOLDER revenue TW £1271.33, up from LW £689.94 (WoW 84.3%) but down from LY £4173.55 (YoY -69.5%).\n- JUMBO BAG RED RETROSPOT revenue TW £1238.90, down from LW £2021.85 (WoW -38.7%) but up from LY £975.81 (YoY 27.0%).\n- JUMBO BAG PAISLEY PARK revenue TW £2120.48 with Orders_TW 46, up from Orders_LW 0 and Revenue_LW £0.00, ranked 5 TW.",
+ "input_tokens": 3831,
+ "output_tokens": 841,
+ "cost_usd": 0.016072000000000003,
+ "latency_s": 6.957,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

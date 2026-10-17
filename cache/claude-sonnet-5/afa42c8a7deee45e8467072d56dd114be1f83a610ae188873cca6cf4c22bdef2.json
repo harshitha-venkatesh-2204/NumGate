@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £20.4k versus LW £23.6k, a WoW change of -13.3%, and versus LY £14.5k, a YoY change of 40.6%.\n- TOTAL units rose to 10,317 TW from 9,601 LW, while TOTAL orders fell to 392 TW from 551 LW.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with revenue of £3.8k, representing 18.6% share.\n- PARTY BUNTING ranked 2 TW with revenue of £1.84k, representing 9.0% share.\n- PAPER CHAIN KIT EMPIRE ranked 3 TW with revenue of £1.27k, representing 6.2% share.\n- CERAMIC STRAWBERRY MONEY BOX revenue grew 11,249.0% WoW, the largest WoW increase among products.\n- WHITE HANGING HEART T-LIGHT HOLDER revenue fell 83.1% WoW and 66.6% YoY.\n- UNION STRIPE WITH FRINGE HAMMOCK revenue rose 729.0% YoY, the largest YoY increase among products.",
+ "input_tokens": 2406,
+ "output_tokens": 397,
+ "cost_usd": 0.008782,
+ "latency_s": 3.912,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

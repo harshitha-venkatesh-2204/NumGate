@@ -1,0 +1,225 @@
+{
+ "note_id": "large_product_2011-W06__S2__claude-sonnet-5__r1",
+ "table_id": "large_product_2011-W06",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2011-W06",
+ "n_rows": 139,
+ "strategy": "S2",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- TOTAL revenue TW was \u00a358.8k versus LW \u00a339.5k, a WoW increase of 48.85%.\n- TOTAL revenue TW was \u00a358.8k versus LY \u00a313.1k, a YoY increase of 350.86%.\n- TOTAL units TW reached 25,436 compared with LW 16,315, while orders TW were 1,474 versus LW 1,676.\n- VINTAGE UNION JACK MEMOBOARD led all products with TW revenue of \u00a36.5k, an 11.0% share and rank 1.\n- VINTAGE UNION JACK MEMOBOARD revenue rose 65233.6% WoW, and PACK OF 12 SUKI TISSUES revenue rose 49201.7% WoW.\n- ASSORTED COLOUR BIRD ORNAMENT revenue fell 80.3% WoW and RECYCLING BAG RETROSPOT revenue fell 78.3% WoW.\n- BASKET OF FLOWERS SEWING KIT revenue grew 1707.1% YoY and SET OF 3 BLACK FLYING DUCKS revenue grew 1265.1% YoY.\n- RED TOADSTOOL LED NIGHT LIGHT revenue declined 70.7% YoY and ASSORTED COLOUR BIRD ORNAMENT revenue declined 64.3% YoY.",
+ "trace": {
+  "strategy": "S2",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "code_0",
+    "system": "You are a data analyst who writes short, correct pandas code.\n\nWrite one Python script that:\n- reads the CSV file whose path is given in sys.argv[1] with pandas,\n- computes up to 25 facts that would be most useful for a weekly executive insight note (largest entities, biggest week over week and year over year movers, shares, totals),\n- prints one JSON array to stdout and nothing else.\n\nEach element of the array is an object with these keys:\n- \"entity\": the Entity value, or \"TOTAL\" for all rows combined.\n- \"metric\": one of revenue, units, orders, share, rank.\n- \"period\": one of TW, LW, LY, WoW, YoY. Use WoW or YoY for changes between periods.\n- \"value\": a plain number (not a string). Round money to 2 decimals and percentages to 1 decimal.\n- \"formula\": a short description of how the value was computed, for example \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\".\n\nUse only pandas, numpy, json and sys. Blank cells are NaN: skip them instead of crashing. Convert numpy numbers to Python floats before json.dumps.\nReturn only the code, inside one ```python block.\n",
+    "user": "The script will be run as: python facts.py table.csv\n\nThe CSV holds a weekly sales report for ISO week 2011-W06. Entity type: product. It has 139 rows and these columns (with pandas dtypes):\n- Entity: str\n- Revenue_TW: float64\n- Revenue_LW: float64\n- Revenue_LY: float64\n- Units_TW: int64\n- Units_LW: int64\n- Orders_TW: int64\n- Orders_LW: int64\n- WoW_Pct: float64\n- YoY_Pct: float64\n- Share_Pct: float64\n- Rank: int64\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\nFirst rows of the file:\nEntity,Revenue_TW,Revenue_LW,Revenue_LY,Units_TW,Units_LW,Orders_TW,Orders_LW,WoW_Pct,YoY_Pct,Share_Pct,Rank\nVINTAGE UNION JACK MEMOBOARD,6500.69,9.95,0.0,1015,1,5,1,65233.6,,11.0,1\nCREAM HEART CARD HOLDER,2403.53,237.78,419.43,1027,58,8,12,910.8,473.0,4.1,2\nGROW A FLYTRAP OR SUNFLOWER IN TIN,2319.75,60.0,0.0,2451,48,3,2,3766.2,,3.9,3\n\n",
+    "text": "```python\nimport pandas as pd\nimport numpy as np\nimport json\nimport sys\n\ndef to_float(x):\n    return float(x) if pd.notna(x) else None\n\ndef main():\n    path = sys.argv[1]\n    df = pd.read_csv(path)\n\n    facts = []\n\n    def add(entity, metric, period, value, formula):\n        if value is None or (isinstance(value, float) and np.isnan(value)):\n            return\n        if metric == \"revenue\":\n            val = round(float(value), 2)\n        elif metric in (\"share\", \"WoW\", \"YoY\") or metric in (\"units\", \"orders\"):\n            if metric in (\"units\", \"orders\"):\n                val = round(float(value), 0)\n            else:\n                val = round(float(value), 1)\n        elif metric == \"rank\":\n            val = round(float(value), 0)\n        else:\n            val = round(float(value), 2)\n        facts.append({\n            \"entity\": entity,\n            \"metric\": metric,\n            \"period\": period,\n            \"value\": val,\n            \"formula\": formula\n        })\n\n    # ---- Totals ----\n    total_rev_tw = df['Revenue_TW'].sum(skipna=True)\n    total_rev_lw = df['Revenue_LW'].sum(skipna=True)\n    total_rev_ly = df['Revenue_LY'].sum(skipna=True)\n    total_units_tw = df['Units_TW'].sum(skipna=True)\n    total_units_lw = df['Units_LW'].sum(skipna=True)\n    total_orders_tw = df['Orders_TW'].sum(skipna=True)\n    total_orders_lw = df['Orders_LW'].sum(skipna=True)\n\n    add(\"TOTAL\", \"revenue\", \"TW\", total_rev_tw, \"sum(Revenue_TW)\")\n    add(\"TOTAL\", \"revenue\", \"LW\", total_rev_lw, \"sum(Revenue_LW)\")\n    add(\"TOTAL\", \"revenue\", \"LY\", total_rev_ly, \"sum(Revenue_LY)\")\n    add(\"TOTAL\", \"units\", \"TW\", total_units_tw, \"sum(Units_TW)\")\n    add(\"TOTAL\", \"units\", \"LW\", total_units_lw, \"sum(Units_LW)\")\n    add(\"TOTAL\", \"orders\", \"TW\", total_orders_tw, \"sum(Orders_TW)\")\n    add(\"TOTAL\", \"orders\", \"LW\", total_orders_lw, \"sum(Orders_LW)\")\n\n    if total_rev_lw and total_rev_lw != 0:\n        wow_total = (total_rev_tw - total_rev_lw) / total_rev_lw * 100\n        add(\"TOTAL\", \"revenue\", \"WoW\", wow_total,\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\")\n\n    if total_rev_ly and total_rev_ly != 0:\n        yoy_total = (total_rev_tw - total_rev_ly) / total_rev_ly * 100\n        add(\"TOTAL\", \"revenue\", \"YoY\", yoy_total,\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\")\n\n    # ---- Top entities by Revenue_TW ----\n    top_entities = df.dropna(subset=['Revenue_TW']).sort_values(\n        'Revenue_TW', ascending=False).head(2)\n\n    for _, row in top_entities.iterrows():\n        ent = row['Entity']\n        add(ent, \"revenue\", \"TW\", row['Revenue_TW'], \"Revenue_TW\")\n        if pd.notna(row.get('Share_Pct')):\n            add(ent, \"share\", \"TW\", row['Share_Pct'], \"Share_Pct\")\n        if pd.notna(row.get('Rank')):\n            add(ent, \"rank\", \"TW\", row['Rank'], \"Rank\")\n\n    # ---- Top WoW gainers / decliners ----\n    wow_df = df.dropna(subset=['WoW_Pct'])\n    top_wow_gain = wow_df.sort_values('WoW_Pct', ascending=False).head(2)\n    top_wow_loss = wow_df.sort_values('WoW_Pct', ascending=True).head(2)\n\n    for _, row in top_wow_gain.iterrows():\n        add(row['Entity'], \"revenue\", \"WoW\", row['WoW_Pct'],\n            \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n\n    for _, row in top_wow_loss.iterrows():\n        add(row['Entity'], \"revenue\", \"WoW\", row['WoW_Pct'],\n            \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n\n    # ---- Top YoY gainers / decliners ----\n    yoy_df = df.dropna(subset=['YoY_Pct'])\n    top_yoy_gain = yoy_df.sort_values('YoY_Pct', ascending=False).head(2)\n    top_yoy_loss = yoy_df.sort_values('YoY_Pct', ascending=True).head(2)\n\n    for _, row in top_yoy_gain.iterrows():\n        add(row['Entity'], \"revenue\", \"YoY\", row['YoY_Pct'],\n            \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    for _, row in top_yoy_loss.iterrows():\n        add(row['Entity'], \"revenue\", \"YoY\", row['YoY_Pct'],\n            \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    # Limit to 25 facts max\n    facts = facts[:25]\n\n    print(json.dumps(facts))\n\nif __name__ == \"__main__\":\n    main()\n```",
+    "input_tokens": 1102,
+    "output_tokens": 3914,
+    "cost_usd": 0.041344,
+    "latency_s": 32.471,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   },
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a list of facts that were already computed from the sales table. Use only these facts. Every number in the note must come from a fact value, copied exactly or rounded (for example \u00a312,345.67 may be written as \u00a312.3k). Do not compute new numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W06. Entity type: product.\n\nFacts (JSON):\n[\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 58838.41,\n  \"formula\": \"sum(Revenue_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LW\",\n  \"value\": 39528.47,\n  \"formula\": \"sum(Revenue_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LY\",\n  \"value\": 13050.4,\n  \"formula\": \"sum(Revenue_LY)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 25436.0,\n  \"formula\": \"sum(Units_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"LW\",\n  \"value\": 16315.0,\n  \"formula\": \"sum(Units_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 1474.0,\n  \"formula\": \"sum(Orders_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"LW\",\n  \"value\": 1676.0,\n  \"formula\": \"sum(Orders_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 48.85,\n  \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 350.86,\n  \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\"\n },\n {\n  \"entity\": \"VINTAGE UNION JACK MEMOBOARD\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 6500.69,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"VINTAGE UNION JACK MEMOBOARD\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 11.0,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"VINTAGE UNION JACK MEMOBOARD\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 1.0,\n  \"formula\": \"Rank\"\n },\n {\n  \"entity\": \"CREAM HEART CARD HOLDER\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 2403.53,\n  \"formula\": \"Revenue_TW\"\n },\n {\n  \"entity\": \"CREAM HEART CARD HOLDER\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 4.1,\n  \"formula\": \"Share_Pct\"\n },\n {\n  \"entity\": \"CREAM HEART CARD HOLDER\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 2.0,\n  \"formula\": \"Rank\"\n },\n {\n  \"entity\": \"VINTAGE UNION JACK MEMOBOARD\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 65233.6,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"PACK OF 12 SUKI TISSUES\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 49201.7,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"ASSORTED COLOUR BIRD ORNAMENT\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -80.3,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"RECYCLING BAG RETROSPOT\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -78.3,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"BASKET OF FLOWERS SEWING KIT\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 1707.1,\n  \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n },\n {\n  \"entity\": \"SET OF 3 BLACK FLYING DUCKS\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": 1265.1,\n  \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n },\n {\n  \"entity\": \"RED TOADSTOOL LED NIGHT LIGHT\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": -70.7,\n  \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n },\n {\n  \"entity\": \"ASSORTED COLOUR BIRD ORNAMENT\",\n  \"metric\": \"revenue\",\n  \"period\": \"YoY\",\n  \"value\": -64.3,\n  \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"\n }\n]\n\nWrite the insight note now.\n",
+    "text": "- TOTAL revenue TW was \u00a358.8k versus LW \u00a339.5k, a WoW increase of 48.85%.\n- TOTAL revenue TW was \u00a358.8k versus LY \u00a313.1k, a YoY increase of 350.86%.\n- TOTAL units TW reached 25,436 compared with LW 16,315, while orders TW were 1,474 versus LW 1,676.\n- VINTAGE UNION JACK MEMOBOARD led all products with TW revenue of \u00a36.5k, an 11.0% share and rank 1.\n- VINTAGE UNION JACK MEMOBOARD revenue rose 65233.6% WoW, and PACK OF 12 SUKI TISSUES revenue rose 49201.7% WoW.\n- ASSORTED COLOUR BIRD ORNAMENT revenue fell 80.3% WoW and RECYCLING BAG RETROSPOT revenue fell 78.3% WoW.\n- BASKET OF FLOWERS SEWING KIT revenue grew 1707.1% YoY and SET OF 3 BLACK FLYING DUCKS revenue grew 1265.1% YoY.\n- RED TOADSTOOL LED NIGHT LIGHT revenue declined 70.7% YoY and ASSORTED COLOUR BIRD ORNAMENT revenue declined 64.3% YoY.",
+    "input_tokens": 2298,
+    "output_tokens": 464,
+    "cost_usd": 0.009236000000000001,
+    "latency_s": 4.486,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [
+   {
+    "attempt": 0,
+    "code": "import pandas as pd\nimport numpy as np\nimport json\nimport sys\n\ndef to_float(x):\n    return float(x) if pd.notna(x) else None\n\ndef main():\n    path = sys.argv[1]\n    df = pd.read_csv(path)\n\n    facts = []\n\n    def add(entity, metric, period, value, formula):\n        if value is None or (isinstance(value, float) and np.isnan(value)):\n            return\n        if metric == \"revenue\":\n            val = round(float(value), 2)\n        elif metric in (\"share\", \"WoW\", \"YoY\") or metric in (\"units\", \"orders\"):\n            if metric in (\"units\", \"orders\"):\n                val = round(float(value), 0)\n            else:\n                val = round(float(value), 1)\n        elif metric == \"rank\":\n            val = round(float(value), 0)\n        else:\n            val = round(float(value), 2)\n        facts.append({\n            \"entity\": entity,\n            \"metric\": metric,\n            \"period\": period,\n            \"value\": val,\n            \"formula\": formula\n        })\n\n    # ---- Totals ----\n    total_rev_tw = df['Revenue_TW'].sum(skipna=True)\n    total_rev_lw = df['Revenue_LW'].sum(skipna=True)\n    total_rev_ly = df['Revenue_LY'].sum(skipna=True)\n    total_units_tw = df['Units_TW'].sum(skipna=True)\n    total_units_lw = df['Units_LW'].sum(skipna=True)\n    total_orders_tw = df['Orders_TW'].sum(skipna=True)\n    total_orders_lw = df['Orders_LW'].sum(skipna=True)\n\n    add(\"TOTAL\", \"revenue\", \"TW\", total_rev_tw, \"sum(Revenue_TW)\")\n    add(\"TOTAL\", \"revenue\", \"LW\", total_rev_lw, \"sum(Revenue_LW)\")\n    add(\"TOTAL\", \"revenue\", \"LY\", total_rev_ly, \"sum(Revenue_LY)\")\n    add(\"TOTAL\", \"units\", \"TW\", total_units_tw, \"sum(Units_TW)\")\n    add(\"TOTAL\", \"units\", \"LW\", total_units_lw, \"sum(Units_LW)\")\n    add(\"TOTAL\", \"orders\", \"TW\", total_orders_tw, \"sum(Orders_TW)\")\n    add(\"TOTAL\", \"orders\", \"LW\", total_orders_lw, \"sum(Orders_LW)\")\n\n    if total_rev_lw and total_rev_lw != 0:\n        wow_total = (total_rev_tw - total_rev_lw) / total_rev_lw * 100\n        add(\"TOTAL\", \"revenue\", \"WoW\", wow_total,\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\")\n\n    if total_rev_ly and total_rev_ly != 0:\n        yoy_total = (total_rev_tw - total_rev_ly) / total_rev_ly * 100\n        add(\"TOTAL\", \"revenue\", \"YoY\", yoy_total,\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\")\n\n    # ---- Top entities by Revenue_TW ----\n    top_entities = df.dropna(subset=['Revenue_TW']).sort_values(\n        'Revenue_TW', ascending=False).head(2)\n\n    for _, row in top_entities.iterrows():\n        ent = row['Entity']\n        add(ent, \"revenue\", \"TW\", row['Revenue_TW'], \"Revenue_TW\")\n        if pd.notna(row.get('Share_Pct')):\n            add(ent, \"share\", \"TW\", row['Share_Pct'], \"Share_Pct\")\n        if pd.notna(row.get('Rank')):\n            add(ent, \"rank\", \"TW\", row['Rank'], \"Rank\")\n\n    # ---- Top WoW gainers / decliners ----\n    wow_df = df.dropna(subset=['WoW_Pct'])\n    top_wow_gain = wow_df.sort_values('WoW_Pct', ascending=False).head(2)\n    top_wow_loss = wow_df.sort_values('WoW_Pct', ascending=True).head(2)\n\n    for _, row in top_wow_gain.iterrows():\n        add(row['Entity'], \"revenue\", \"WoW\", row['WoW_Pct'],\n            \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n\n    for _, row in top_wow_loss.iterrows():\n        add(row['Entity'], \"revenue\", \"WoW\", row['WoW_Pct'],\n            \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n\n    # ---- Top YoY gainers / decliners ----\n    yoy_df = df.dropna(subset=['YoY_Pct'])\n    top_yoy_gain = yoy_df.sort_values('YoY_Pct', ascending=False).head(2)\n    top_yoy_loss = yoy_df.sort_values('YoY_Pct', ascending=True).head(2)\n\n    for _, row in top_yoy_gain.iterrows():\n        add(row['Entity'], \"revenue\", \"YoY\", row['YoY_Pct'],\n            \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    for _, row in top_yoy_loss.iterrows():\n        add(row['Entity'], \"revenue\", \"YoY\", row['YoY_Pct'],\n            \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    # Limit to 25 facts max\n    facts = facts[:25]\n\n    print(json.dumps(facts))\n\nif __name__ == \"__main__\":\n    main()\n",
+    "error": "",
+    "stdout": "venue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\"}, {\"entity\": \"VINTAGE UNION JACK MEMOBOARD\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 6500.69, \"formula\": \"Revenue_TW\"}, {\"entity\": \"VINTAGE UNION JACK MEMOBOARD\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 11.0, \"formula\": \"Share_Pct\"}, {\"entity\": \"VINTAGE UNION JACK MEMOBOARD\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 1.0, \"formula\": \"Rank\"}, {\"entity\": \"CREAM HEART CARD HOLDER\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 2403.53, \"formula\": \"Revenue_TW\"}, {\"entity\": \"CREAM HEART CARD HOLDER\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 4.1, \"formula\": \"Share_Pct\"}, {\"entity\": \"CREAM HEART CARD HOLDER\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 2.0, \"formula\": \"Rank\"}, {\"entity\": \"VINTAGE UNION JACK MEMOBOARD\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 65233.6, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"PACK OF 12 SUKI TISSUES\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 49201.7, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"ASSORTED COLOUR BIRD ORNAMENT\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -80.3, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"RECYCLING BAG RETROSPOT\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -78.3, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"BASKET OF FLOWERS SEWING KIT\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": 1707.1, \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"}, {\"entity\": \"SET OF 3 BLACK FLYING DUCKS\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": 1265.1, \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"}, {\"entity\": \"RED TOADSTOOL LED NIGHT LIGHT\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": -70.7, \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"}, {\"entity\": \"ASSORTED COLOUR BIRD ORNAMENT\", \"metric\": \"revenue\", \"period\": \"YoY\", \"value\": -64.3, \"formula\": \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\"}]\n"
+   }
+  ],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "facts": [
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 58838.41,
+    "formula": "sum(Revenue_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LW",
+    "value": 39528.47,
+    "formula": "sum(Revenue_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LY",
+    "value": 13050.4,
+    "formula": "sum(Revenue_LY)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "TW",
+    "value": 25436.0,
+    "formula": "sum(Units_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "LW",
+    "value": 16315.0,
+    "formula": "sum(Units_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "TW",
+    "value": 1474.0,
+    "formula": "sum(Orders_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "LW",
+    "value": 1676.0,
+    "formula": "sum(Orders_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 48.85,
+    "formula": "(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 350.86,
+    "formula": "(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100"
+   },
+   {
+    "entity": "VINTAGE UNION JACK MEMOBOARD",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 6500.69,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "VINTAGE UNION JACK MEMOBOARD",
+    "metric": "share",
+    "period": "TW",
+    "value": 11.0,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "VINTAGE UNION JACK MEMOBOARD",
+    "metric": "rank",
+    "period": "TW",
+    "value": 1.0,
+    "formula": "Rank"
+   },
+   {
+    "entity": "CREAM HEART CARD HOLDER",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 2403.53,
+    "formula": "Revenue_TW"
+   },
+   {
+    "entity": "CREAM HEART CARD HOLDER",
+    "metric": "share",
+    "period": "TW",
+    "value": 4.1,
+    "formula": "Share_Pct"
+   },
+   {
+    "entity": "CREAM HEART CARD HOLDER",
+    "metric": "rank",
+    "period": "TW",
+    "value": 2.0,
+    "formula": "Rank"
+   },
+   {
+    "entity": "VINTAGE UNION JACK MEMOBOARD",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 65233.6,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "PACK OF 12 SUKI TISSUES",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 49201.7,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "ASSORTED COLOUR BIRD ORNAMENT",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -80.3,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "RECYCLING BAG RETROSPOT",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -78.3,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "BASKET OF FLOWERS SEWING KIT",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 1707.1,
+    "formula": "(Revenue_TW - Revenue_LY) / Revenue_LY * 100"
+   },
+   {
+    "entity": "SET OF 3 BLACK FLYING DUCKS",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": 1265.1,
+    "formula": "(Revenue_TW - Revenue_LY) / Revenue_LY * 100"
+   },
+   {
+    "entity": "RED TOADSTOOL LED NIGHT LIGHT",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": -70.7,
+    "formula": "(Revenue_TW - Revenue_LY) / Revenue_LY * 100"
+   },
+   {
+    "entity": "ASSORTED COLOUR BIRD ORNAMENT",
+    "metric": "revenue",
+    "period": "YoY",
+    "value": -64.3,
+    "formula": "(Revenue_TW - Revenue_LY) / Revenue_LY * 100"
+   }
+  ],
+  "n_calls": 2,
+  "tokens_in": 3400,
+  "tokens_out": 4378,
+  "cost_usd": 0.05058,
+  "latency_s": 36.956999999999994
+ }
+}

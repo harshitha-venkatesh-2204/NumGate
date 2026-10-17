@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom TW revenue was £213,613.05 versus LW £258,385.96, a WoW change of -17.3%, and holds 88.9% share of TW revenue at Rank 1.\n- EIRE TW revenue of £10,542.88 rose WoW from £7,086.94, a 48.8% increase, ranking 2 with 4.4% share.\n- Germany TW revenue reached £4,577.05 compared to LW £3,663.41, up 24.9% WoW, ranking 3 with 1.9% share.\n- Spain TW revenue fell to £4,523.63 from LW £6,235.52, a WoW decline of -27.5%, ranking 4 with 1.9% share.\n- Channel Islands recorded TW revenue of £2,724.75 with zero LW revenue and 1,043 units sold, ranking 5 with 1.1% share.\n- France TW revenue dropped to £2,393.87 from LW £9,041.24, a WoW decrease of -73.5%, ranking 6 with 1.0% share.\n- Italy posted TW revenue of £1,832.21 against zero LW revenue, with 770 units sold, ranking 7 with 0.8% share.\n- Orders for United Kingdom totaled 502 TW versus 512 LW, while EIRE orders rose from 7 LW to 15 TW.",
+ "input_tokens": 1062,
+ "output_tokens": 448,
+ "cost_usd": 0.006604,
+ "latency_s": 4.167,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

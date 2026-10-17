@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £68.7k TW versus £50.3k LW, a WoW increase of 36.6%.\n- TOTAL units came in at 27,550 TW, up 29.6% WoW, with orders at 2,250 TW, up 45.5% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £4,443.21, holding a 6.5% share of TW revenue.\n- The top five products together accounted for 17.6% of TOTAL revenue TW, led by PARTY BUNTING at £2,495.37 and WHITE HANGING HEART T-LIGHT HOLDER at £1,961.04.\n- PINK AND LILAC QUILTED THROW delivered £1,825.90 TW, a WoW gain of £1,779.95 (+3,873.7%).\n- GIANT BLACK SUNGLASSES added £1,319.10 WoW (+33,823.1%), and ENGLISH ROSE DESIGN QUILTED THROW added £1,350.97 WoW to reach £1,350.97 TW.\n- PLEASE ONE PERSON METAL SIGN fell £1,064.61 WoW (-70.7%), the largest decline among products TW.\n- LUNCH BAG BLACK SKULL. declined £814.60 WoW (-70.7%) and TEA TIME CAKE STAND IN GIFT BOX declined £686.94 WoW.",
+ "input_tokens": 2526,
+ "output_tokens": 486,
+ "cost_usd": 0.02478,
+ "latency_s": 6.34,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

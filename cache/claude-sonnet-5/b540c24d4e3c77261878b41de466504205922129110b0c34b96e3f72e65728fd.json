@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £109.2k versus LW £88.2k, a WoW increase of 23.8%, and versus LY £50.4k, a YoY increase of 116.5%.\n- TOTAL units sold TW reached 53,787 compared with LW 28,845, while TOTAL orders TW were 2,890 versus LW 2,330.\n- RABBIT NIGHT LIGHT led product revenue TW at £10.7k, representing 9.8% share, with WoW growth of 18,473.8%.\n- ALARM CLOCK BAKELIKE RED generated £2,423.41 TW revenue, a 2.2% share of total sales.\n- CHILLI LIGHTS posted £2,285.12 TW revenue with a 2.1% share, closely followed by PAPER CHAIN KIT 50'S CHRISTMAS at £2,264.16 also at 2.1% share.\n- JUMBO BAG PAISLEY PARK recorded £2,120.48 TW revenue, a 1.9% share of total sales.\n- FLOWERS CHANDELIER T-LIGHT HOLDER saw a WoW revenue increase of 9,231.2%, while TRADITIONAL NAUGHTS & CROSSES rose 2,400.0% WoW.\n- CHRISTMAS CRAFT WHITE FAIRY achieved a YoY revenue increase of 28,727.6%, with RED HARMONICA IN BOX up 11,954.9% YoY and BROCADE RING PURSE up 6,587.3% YoY.",
+ "input_tokens": 2393,
+ "output_tokens": 527,
+ "cost_usd": 0.010056,
+ "latency_s": 4.94,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

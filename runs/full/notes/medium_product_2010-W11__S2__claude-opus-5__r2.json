@@ -1,0 +1,239 @@
+{
+ "note_id": "medium_product_2010-W11__S2__claude-opus-5__r2",
+ "table_id": "medium_product_2010-W11",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W11",
+ "n_rows": 28,
+ "strategy": "S2",
+ "model": "claude-opus-5",
+ "repeat": 2,
+ "note": "- Total revenue was \u00a336.2k TW versus \u00a316.3k LW, a WoW change of +122.2%.\n- TOTAL volume TW reached 60,748 units across 499 orders.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 TW with \u00a33,952.80, a 10.9% share of TW revenue.\n- ENGLISH ROSE DESIGN QUILTED THROW took \u00a32,982.60 TW (8.3% share) but fell \u00a3382.47 WoW.\n- REGENCY CAKESTAND 3 TIER delivered \u00a32,511.24 TW (6.9% share), the largest WoW gain at +\u00a32,511.24.\n- SET/6 WOODLAND PAPER PLATES reached \u00a31,317.70 TW (3.6% share), up \u00a31,312.72 WoW or +26,359.8%, while SET/6 WOODLAND PAPER CUPS rose +39,107.8% WoW.\n- DOOR MAT SPOTTY HOME SWEET HOME contributed \u00a31,333.70 TW, a 3.7% share, with the top 5 products at 33.5% of TW revenue.\n- ASSORTED COLOUR BIRD ORNAMENT declined \u00a3429.90 WoW and JUMBO BAG RED WHITE SPOTTY declined \u00a3348.71 WoW.",
+ "trace": {
+  "strategy": "S2",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "code_0",
+    "system": "You are a data analyst who writes short, correct pandas code.\n\nWrite one Python script that:\n- reads the CSV file whose path is given in sys.argv[1] with pandas,\n- computes up to 25 facts that would be most useful for a weekly executive insight note (largest entities, biggest week over week and year over year movers, shares, totals),\n- prints one JSON array to stdout and nothing else.\n\nEach element of the array is an object with these keys:\n- \"entity\": the Entity value, or \"TOTAL\" for all rows combined.\n- \"metric\": one of revenue, units, orders, share, rank.\n- \"period\": one of TW, LW, LY, WoW, YoY. Use WoW or YoY for changes between periods.\n- \"value\": a plain number (not a string). Round money to 2 decimals and percentages to 1 decimal.\n- \"formula\": a short description of how the value was computed, for example \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\".\n\nUse only pandas, numpy, json and sys. Blank cells are NaN: skip them instead of crashing. Convert numpy numbers to Python floats before json.dumps.\nReturn only the code, inside one ```python block.\n",
+    "user": "The script will be run as: python facts.py table.csv\n\nThe CSV holds a weekly sales report for ISO week 2010-W11. Entity type: product. It has 28 rows and these columns (with pandas dtypes):\n- Entity: str\n- Revenue_TW: float64\n- Revenue_LW: float64\n- Revenue_LY: float64\n- Units_TW: int64\n- Units_LW: int64\n- Orders_TW: int64\n- Orders_LW: int64\n- WoW_Pct: float64\n- YoY_Pct: float64\n- Share_Pct: float64\n- Rank: int64\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\nFirst rows of the file:\nEntity,Revenue_TW,Revenue_LW,Revenue_LY,Units_TW,Units_LW,Orders_TW,Orders_LW,WoW_Pct,YoY_Pct,Share_Pct,Rank\nWHITE HANGING HEART T-LIGHT HOLDER,3952.8,2365.84,,1496,848,57,63,67.1,,10.9,1\nENGLISH ROSE DESIGN QUILTED THROW,2982.6,3365.07,,144,171,13,16,-11.4,,8.3,2\nREGENCY CAKESTAND 3 TIER,2511.24,0.0,,200,0,41,0,,,6.9,3\n\n",
+    "text": "```python\nimport sys\nimport json\nimport numpy as np\nimport pandas as pd\n\n\ndef num(x, nd=2):\n    return round(float(x), nd)\n\n\ndef main():\n    df = pd.read_csv(sys.argv[1])\n    facts = []\n\n    def add(entity, metric, period, value, formula):\n        if value is None or (isinstance(value, float) and not np.isfinite(value)):\n            return\n        facts.append({\n            \"entity\": str(entity),\n            \"metric\": metric,\n            \"period\": period,\n            \"value\": float(value),\n            \"formula\": formula,\n        })\n\n    rev_tw = df[\"Revenue_TW\"].sum(skipna=True)\n    rev_lw = df[\"Revenue_LW\"].sum(skipna=True)\n    rev_ly = df[\"Revenue_LY\"].sum(skipna=True) if df[\"Revenue_LY\"].notna().any() else np.nan\n\n    # Totals\n    add(\"TOTAL\", \"revenue\", \"TW\", num(rev_tw), \"sum(Revenue_TW)\")\n    add(\"TOTAL\", \"revenue\", \"LW\", num(rev_lw), \"sum(Revenue_LW)\")\n    add(\"TOTAL\", \"units\", \"TW\", num(df[\"Units_TW\"].sum(skipna=True)), \"sum(Units_TW)\")\n    add(\"TOTAL\", \"orders\", \"TW\", num(df[\"Orders_TW\"].sum(skipna=True)), \"sum(Orders_TW)\")\n    if rev_lw and rev_lw != 0:\n        add(\"TOTAL\", \"revenue\", \"WoW\", num((rev_tw - rev_lw) / rev_lw * 100, 1),\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\")\n    if pd.notna(rev_ly) and rev_ly:\n        add(\"TOTAL\", \"revenue\", \"LY\", num(rev_ly), \"sum(Revenue_LY)\")\n        add(\"TOTAL\", \"revenue\", \"YoY\", num((rev_tw - rev_ly) / rev_ly * 100, 1),\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\")\n\n    # Top entities by this week's revenue\n    top = df.dropna(subset=[\"Revenue_TW\"]).sort_values(\"Revenue_TW\", ascending=False).head(5)\n    for _, r in top.iterrows():\n        add(r[\"Entity\"], \"revenue\", \"TW\", num(r[\"Revenue_TW\"]), \"Revenue_TW for this entity\")\n        if pd.notna(r.get(\"Share_Pct\")):\n            add(r[\"Entity\"], \"share\", \"TW\", num(r[\"Share_Pct\"], 1),\n                \"Revenue_TW / sum(Revenue_TW) * 100\")\n\n    # Rank 1 entity rank fact\n    if not top.empty and \"Rank\" in df.columns:\n        lead = df.loc[df[\"Rank\"].idxmin()]\n        add(lead[\"Entity\"], \"rank\", \"TW\", num(lead[\"Rank\"], 0), \"Rank by Revenue_TW (1 = highest)\")\n\n    # Top 5 concentration\n    if rev_tw:\n        top5_share = top[\"Revenue_TW\"].sum() / rev_tw * 100\n        add(\"TOTAL\", \"share\", \"TW\", num(top5_share, 1),\n            \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\")\n\n    # Biggest absolute WoW revenue movers\n    d = df.dropna(subset=[\"Revenue_TW\", \"Revenue_LW\"]).copy()\n    d[\"abs_wow\"] = d[\"Revenue_TW\"] - d[\"Revenue_LW\"]\n    for _, r in d.sort_values(\"abs_wow\", ascending=False).head(3).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"abs_wow\"]), \"Revenue_TW - Revenue_LW\")\n    for _, r in d.sort_values(\"abs_wow\").head(3).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"abs_wow\"]), \"Revenue_TW - Revenue_LW\")\n\n    # Biggest percent WoW movers (material base only)\n    p = df.dropna(subset=[\"WoW_Pct\", \"Revenue_TW\"]).copy()\n    if not p.empty:\n        thresh = p[\"Revenue_TW\"].quantile(0.5)\n        p = p[p[\"Revenue_TW\"] >= thresh]\n        for _, r in p.sort_values(\"WoW_Pct\", ascending=False).head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"WoW_Pct\"], 1),\n                \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n        for _, r in p.sort_values(\"WoW_Pct\").head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"WoW_Pct\"], 1),\n                \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n\n    # Biggest YoY movers if available\n    y = df.dropna(subset=[\"YoY_Pct\", \"Revenue_TW\"])\n    if not y.empty:\n        for _, r in y.sort_values(\"YoY_Pct\", ascending=False).head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"YoY\", num(r[\"YoY_Pct\"], 1),\n                \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n        for _, r in y.sort_values(\"YoY_Pct\").head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"YoY\", num(r[\"YoY_Pct\"], 1),\n                \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    # Units and orders leaders\n    if df[\"Units_TW\"].notna().any():\n        u = df.loc[df[\"Units_TW\"].idxmax()]\n        add(u[\"Entity\"], \"units\", \"TW\", num(u[\"Units_TW\"], 0), \"max(Units_TW)\")\n    if df[\"Orders_TW\"].notna().any():\n        o = df.loc[df[\"Orders_TW\"].idxmax()]\n        add(o[\"Entity\"], \"orders\", \"TW\", num(o[\"Orders_TW\"], 0), \"max(Orders_TW)\")\n\n    # Total units WoW change\n    u_tw = df[\"Units_TW\"].sum(skipna=True)\n    u_lw = df[\"Units_LW\"].sum(skipna=True)\n    if u_lw:\n        add(\"TOTAL\", \"units\", \"WoW\", num((u_tw - u_lw) / u_lw * 100, 1),\n            \"(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100\")\n    o_tw = df[\"Orders_TW\"].sum(skipna=True)\n    o_lw = df[\"Orders_LW\"].sum(skipna=True)\n    if o_lw:\n        add(\"TOTAL\", \"orders\", \"WoW\", num((o_tw - o_lw) / o_lw * 100, 1),\n            \"(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100\")\n\n    print(json.dumps(facts[:25]))\n\n\nif __name__ == \"__main__\":\n    main()\n```",
+    "input_tokens": 1089,
+    "output_tokens": 2538,
+    "cost_usd": 0.06889500000000001,
+    "latency_s": 25.137,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   },
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a list of facts that were already computed from the sales table. Use only these facts. Every number in the note must come from a fact value, copied exactly or rounded (for example \u00a312,345.67 may be written as \u00a312.3k). Do not compute new numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W11. Entity type: product.\n\nFacts (JSON):\n[\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 36150.11,\n  \"formula\": \"sum(Revenue_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"LW\",\n  \"value\": 16270.6,\n  \"formula\": \"sum(Revenue_LW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"units\",\n  \"period\": \"TW\",\n  \"value\": 60748.0,\n  \"formula\": \"sum(Units_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"orders\",\n  \"period\": \"TW\",\n  \"value\": 499.0,\n  \"formula\": \"sum(Orders_TW)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 122.2,\n  \"formula\": \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 3952.8,\n  \"formula\": \"Revenue_TW for this entity\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 10.9,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"ENGLISH ROSE DESIGN QUILTED THROW\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 2982.6,\n  \"formula\": \"Revenue_TW for this entity\"\n },\n {\n  \"entity\": \"ENGLISH ROSE DESIGN QUILTED THROW\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 8.3,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"REGENCY CAKESTAND 3 TIER\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 2511.24,\n  \"formula\": \"Revenue_TW for this entity\"\n },\n {\n  \"entity\": \"REGENCY CAKESTAND 3 TIER\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 6.9,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"DOOR MAT SPOTTY HOME SWEET HOME\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1333.7,\n  \"formula\": \"Revenue_TW for this entity\"\n },\n {\n  \"entity\": \"DOOR MAT SPOTTY HOME SWEET HOME\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 3.7,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"SET/6 WOODLAND PAPER PLATES\",\n  \"metric\": \"revenue\",\n  \"period\": \"TW\",\n  \"value\": 1317.7,\n  \"formula\": \"Revenue_TW for this entity\"\n },\n {\n  \"entity\": \"SET/6 WOODLAND PAPER PLATES\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 3.6,\n  \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"rank\",\n  \"period\": \"TW\",\n  \"value\": 1.0,\n  \"formula\": \"Rank by Revenue_TW (1 = highest)\"\n },\n {\n  \"entity\": \"TOTAL\",\n  \"metric\": \"share\",\n  \"period\": \"TW\",\n  \"value\": 33.5,\n  \"formula\": \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\"\n },\n {\n  \"entity\": \"REGENCY CAKESTAND 3 TIER\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 2511.24,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 1586.96,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"SET/6 WOODLAND PAPER PLATES\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 1312.72,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"ASSORTED COLOUR BIRD ORNAMENT\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -429.9,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"ENGLISH ROSE DESIGN QUILTED THROW\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -382.47,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"JUMBO BAG RED WHITE SPOTTY\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": -348.71,\n  \"formula\": \"Revenue_TW - Revenue_LW\"\n },\n {\n  \"entity\": \"SET/6 WOODLAND PAPER CUPS\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 39107.8,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n },\n {\n  \"entity\": \"SET/6 WOODLAND PAPER PLATES\",\n  \"metric\": \"revenue\",\n  \"period\": \"WoW\",\n  \"value\": 26359.8,\n  \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"\n }\n]\n\nWrite the insight note now.\n",
+    "text": "- Total revenue was \u00a336.2k TW versus \u00a316.3k LW, a WoW change of +122.2%.\n- TOTAL volume TW reached 60,748 units across 499 orders.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 TW with \u00a33,952.80, a 10.9% share of TW revenue.\n- ENGLISH ROSE DESIGN QUILTED THROW took \u00a32,982.60 TW (8.3% share) but fell \u00a3382.47 WoW.\n- REGENCY CAKESTAND 3 TIER delivered \u00a32,511.24 TW (6.9% share), the largest WoW gain at +\u00a32,511.24.\n- SET/6 WOODLAND PAPER PLATES reached \u00a31,317.70 TW (3.6% share), up \u00a31,312.72 WoW or +26,359.8%, while SET/6 WOODLAND PAPER CUPS rose +39,107.8% WoW.\n- DOOR MAT SPOTTY HOME SWEET HOME contributed \u00a31,333.70 TW, a 3.7% share, with the top 5 products at 33.5% of TW revenue.\n- ASSORTED COLOUR BIRD ORNAMENT declined \u00a3429.90 WoW and JUMBO BAG RED WHITE SPOTTY declined \u00a3348.71 WoW.",
+    "input_tokens": 2550,
+    "output_tokens": 453,
+    "cost_usd": 0.024075,
+    "latency_s": 5.94,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [
+   {
+    "attempt": 0,
+    "code": "import sys\nimport json\nimport numpy as np\nimport pandas as pd\n\n\ndef num(x, nd=2):\n    return round(float(x), nd)\n\n\ndef main():\n    df = pd.read_csv(sys.argv[1])\n    facts = []\n\n    def add(entity, metric, period, value, formula):\n        if value is None or (isinstance(value, float) and not np.isfinite(value)):\n            return\n        facts.append({\n            \"entity\": str(entity),\n            \"metric\": metric,\n            \"period\": period,\n            \"value\": float(value),\n            \"formula\": formula,\n        })\n\n    rev_tw = df[\"Revenue_TW\"].sum(skipna=True)\n    rev_lw = df[\"Revenue_LW\"].sum(skipna=True)\n    rev_ly = df[\"Revenue_LY\"].sum(skipna=True) if df[\"Revenue_LY\"].notna().any() else np.nan\n\n    # Totals\n    add(\"TOTAL\", \"revenue\", \"TW\", num(rev_tw), \"sum(Revenue_TW)\")\n    add(\"TOTAL\", \"revenue\", \"LW\", num(rev_lw), \"sum(Revenue_LW)\")\n    add(\"TOTAL\", \"units\", \"TW\", num(df[\"Units_TW\"].sum(skipna=True)), \"sum(Units_TW)\")\n    add(\"TOTAL\", \"orders\", \"TW\", num(df[\"Orders_TW\"].sum(skipna=True)), \"sum(Orders_TW)\")\n    if rev_lw and rev_lw != 0:\n        add(\"TOTAL\", \"revenue\", \"WoW\", num((rev_tw - rev_lw) / rev_lw * 100, 1),\n            \"(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100\")\n    if pd.notna(rev_ly) and rev_ly:\n        add(\"TOTAL\", \"revenue\", \"LY\", num(rev_ly), \"sum(Revenue_LY)\")\n        add(\"TOTAL\", \"revenue\", \"YoY\", num((rev_tw - rev_ly) / rev_ly * 100, 1),\n            \"(sum(Revenue_TW) - sum(Revenue_LY)) / sum(Revenue_LY) * 100\")\n\n    # Top entities by this week's revenue\n    top = df.dropna(subset=[\"Revenue_TW\"]).sort_values(\"Revenue_TW\", ascending=False).head(5)\n    for _, r in top.iterrows():\n        add(r[\"Entity\"], \"revenue\", \"TW\", num(r[\"Revenue_TW\"]), \"Revenue_TW for this entity\")\n        if pd.notna(r.get(\"Share_Pct\")):\n            add(r[\"Entity\"], \"share\", \"TW\", num(r[\"Share_Pct\"], 1),\n                \"Revenue_TW / sum(Revenue_TW) * 100\")\n\n    # Rank 1 entity rank fact\n    if not top.empty and \"Rank\" in df.columns:\n        lead = df.loc[df[\"Rank\"].idxmin()]\n        add(lead[\"Entity\"], \"rank\", \"TW\", num(lead[\"Rank\"], 0), \"Rank by Revenue_TW (1 = highest)\")\n\n    # Top 5 concentration\n    if rev_tw:\n        top5_share = top[\"Revenue_TW\"].sum() / rev_tw * 100\n        add(\"TOTAL\", \"share\", \"TW\", num(top5_share, 1),\n            \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\")\n\n    # Biggest absolute WoW revenue movers\n    d = df.dropna(subset=[\"Revenue_TW\", \"Revenue_LW\"]).copy()\n    d[\"abs_wow\"] = d[\"Revenue_TW\"] - d[\"Revenue_LW\"]\n    for _, r in d.sort_values(\"abs_wow\", ascending=False).head(3).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"abs_wow\"]), \"Revenue_TW - Revenue_LW\")\n    for _, r in d.sort_values(\"abs_wow\").head(3).iterrows():\n        add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"abs_wow\"]), \"Revenue_TW - Revenue_LW\")\n\n    # Biggest percent WoW movers (material base only)\n    p = df.dropna(subset=[\"WoW_Pct\", \"Revenue_TW\"]).copy()\n    if not p.empty:\n        thresh = p[\"Revenue_TW\"].quantile(0.5)\n        p = p[p[\"Revenue_TW\"] >= thresh]\n        for _, r in p.sort_values(\"WoW_Pct\", ascending=False).head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"WoW_Pct\"], 1),\n                \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n        for _, r in p.sort_values(\"WoW_Pct\").head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"WoW\", num(r[\"WoW_Pct\"], 1),\n                \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\")\n\n    # Biggest YoY movers if available\n    y = df.dropna(subset=[\"YoY_Pct\", \"Revenue_TW\"])\n    if not y.empty:\n        for _, r in y.sort_values(\"YoY_Pct\", ascending=False).head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"YoY\", num(r[\"YoY_Pct\"], 1),\n                \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n        for _, r in y.sort_values(\"YoY_Pct\").head(2).iterrows():\n            add(r[\"Entity\"], \"revenue\", \"YoY\", num(r[\"YoY_Pct\"], 1),\n                \"(Revenue_TW - Revenue_LY) / Revenue_LY * 100\")\n\n    # Units and orders leaders\n    if df[\"Units_TW\"].notna().any():\n        u = df.loc[df[\"Units_TW\"].idxmax()]\n        add(u[\"Entity\"], \"units\", \"TW\", num(u[\"Units_TW\"], 0), \"max(Units_TW)\")\n    if df[\"Orders_TW\"].notna().any():\n        o = df.loc[df[\"Orders_TW\"].idxmax()]\n        add(o[\"Entity\"], \"orders\", \"TW\", num(o[\"Orders_TW\"], 0), \"max(Orders_TW)\")\n\n    # Total units WoW change\n    u_tw = df[\"Units_TW\"].sum(skipna=True)\n    u_lw = df[\"Units_LW\"].sum(skipna=True)\n    if u_lw:\n        add(\"TOTAL\", \"units\", \"WoW\", num((u_tw - u_lw) / u_lw * 100, 1),\n            \"(sum(Units_TW) - sum(Units_LW)) / sum(Units_LW) * 100\")\n    o_tw = df[\"Orders_TW\"].sum(skipna=True)\n    o_lw = df[\"Orders_LW\"].sum(skipna=True)\n    if o_lw:\n        add(\"TOTAL\", \"orders\", \"WoW\", num((o_tw - o_lw) / o_lw * 100, 1),\n            \"(sum(Orders_TW) - sum(Orders_LW)) / sum(Orders_LW) * 100\")\n\n    print(json.dumps(facts[:25]))\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "error": "",
+    "stdout": "W) * 100\"}, {\"entity\": \"DOOR MAT SPOTTY HOME SWEET HOME\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 1333.7, \"formula\": \"Revenue_TW for this entity\"}, {\"entity\": \"DOOR MAT SPOTTY HOME SWEET HOME\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 3.7, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"SET/6 WOODLAND PAPER PLATES\", \"metric\": \"revenue\", \"period\": \"TW\", \"value\": 1317.7, \"formula\": \"Revenue_TW for this entity\"}, {\"entity\": \"SET/6 WOODLAND PAPER PLATES\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 3.6, \"formula\": \"Revenue_TW / sum(Revenue_TW) * 100\"}, {\"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\", \"metric\": \"rank\", \"period\": \"TW\", \"value\": 1.0, \"formula\": \"Rank by Revenue_TW (1 = highest)\"}, {\"entity\": \"TOTAL\", \"metric\": \"share\", \"period\": \"TW\", \"value\": 33.5, \"formula\": \"sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100\"}, {\"entity\": \"REGENCY CAKESTAND 3 TIER\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 2511.24, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"WHITE HANGING HEART T-LIGHT HOLDER\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 1586.96, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"SET/6 WOODLAND PAPER PLATES\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 1312.72, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"ASSORTED COLOUR BIRD ORNAMENT\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -429.9, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"ENGLISH ROSE DESIGN QUILTED THROW\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -382.47, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"JUMBO BAG RED WHITE SPOTTY\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": -348.71, \"formula\": \"Revenue_TW - Revenue_LW\"}, {\"entity\": \"SET/6 WOODLAND PAPER CUPS\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 39107.8, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}, {\"entity\": \"SET/6 WOODLAND PAPER PLATES\", \"metric\": \"revenue\", \"period\": \"WoW\", \"value\": 26359.8, \"formula\": \"(Revenue_TW - Revenue_LW) / Revenue_LW * 100\"}]\n"
+   }
+  ],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "facts": [
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 36150.11,
+    "formula": "sum(Revenue_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "LW",
+    "value": 16270.6,
+    "formula": "sum(Revenue_LW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "units",
+    "period": "TW",
+    "value": 60748.0,
+    "formula": "sum(Units_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "orders",
+    "period": "TW",
+    "value": 499.0,
+    "formula": "sum(Orders_TW)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 122.2,
+    "formula": "(sum(Revenue_TW) - sum(Revenue_LW)) / sum(Revenue_LW) * 100"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 3952.8,
+    "formula": "Revenue_TW for this entity"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "share",
+    "period": "TW",
+    "value": 10.9,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "ENGLISH ROSE DESIGN QUILTED THROW",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 2982.6,
+    "formula": "Revenue_TW for this entity"
+   },
+   {
+    "entity": "ENGLISH ROSE DESIGN QUILTED THROW",
+    "metric": "share",
+    "period": "TW",
+    "value": 8.3,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "REGENCY CAKESTAND 3 TIER",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 2511.24,
+    "formula": "Revenue_TW for this entity"
+   },
+   {
+    "entity": "REGENCY CAKESTAND 3 TIER",
+    "metric": "share",
+    "period": "TW",
+    "value": 6.9,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "DOOR MAT SPOTTY HOME SWEET HOME",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1333.7,
+    "formula": "Revenue_TW for this entity"
+   },
+   {
+    "entity": "DOOR MAT SPOTTY HOME SWEET HOME",
+    "metric": "share",
+    "period": "TW",
+    "value": 3.7,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "SET/6 WOODLAND PAPER PLATES",
+    "metric": "revenue",
+    "period": "TW",
+    "value": 1317.7,
+    "formula": "Revenue_TW for this entity"
+   },
+   {
+    "entity": "SET/6 WOODLAND PAPER PLATES",
+    "metric": "share",
+    "period": "TW",
+    "value": 3.6,
+    "formula": "Revenue_TW / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "rank",
+    "period": "TW",
+    "value": 1.0,
+    "formula": "Rank by Revenue_TW (1 = highest)"
+   },
+   {
+    "entity": "TOTAL",
+    "metric": "share",
+    "period": "TW",
+    "value": 33.5,
+    "formula": "sum(top 5 Revenue_TW) / sum(Revenue_TW) * 100"
+   },
+   {
+    "entity": "REGENCY CAKESTAND 3 TIER",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 2511.24,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 1586.96,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "SET/6 WOODLAND PAPER PLATES",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 1312.72,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "ASSORTED COLOUR BIRD ORNAMENT",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -429.9,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "ENGLISH ROSE DESIGN QUILTED THROW",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -382.47,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "JUMBO BAG RED WHITE SPOTTY",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": -348.71,
+    "formula": "Revenue_TW - Revenue_LW"
+   },
+   {
+    "entity": "SET/6 WOODLAND PAPER CUPS",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 39107.8,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   },
+   {
+    "entity": "SET/6 WOODLAND PAPER PLATES",
+    "metric": "revenue",
+    "period": "WoW",
+    "value": 26359.8,
+    "formula": "(Revenue_TW - Revenue_LW) / Revenue_LW * 100"
+   }
+  ],
+  "n_calls": 2,
+  "tokens_in": 3639,
+  "tokens_out": 2991,
+  "cost_usd": 0.09297000000000001,
+  "latency_s": 31.077
+ }
+}

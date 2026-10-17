@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2010-W40__S4__claude-opus-5__r1",
+ "table_id": "large_product_2010-W40",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2010-W40",
+ "n_rows": 84,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a388,458.98 TW versus \u00a360,773.25 LW, a change of +45.6% WoW.\n- REGENCY CAKESTAND 3 TIER held rank 1 with revenue \u00a36,009.01 TW, a 6.8% TW share and a change of +13.0% WoW.\n- ROTATING SILVER ANGELS T-LIGHT HLDR took rank 2 with revenue \u00a35,866.33 TW, a 6.6% TW share and a change of +681.7% WoW.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 3 with revenue \u00a34,046.96 TW, a 4.6% TW share and a change of +192.1% WoW.\n- BROCADE RING PURSE posted the largest increase at +3063.7% WoW, with revenue \u00a31,052.56 TW versus \u00a333.27 LW.\n- PARTY BUNTING posted the largest decrease at -70.1% WoW, with revenue \u00a31,078.12 TW versus \u00a33,601.04 LW.\n- REGENCY CAKESTAND 3 TIER led on order count with 67 orders TW versus 84 orders LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W40. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a388,458.98 TW, revenue \u00a360,773.25 LW, revenue change +45.6% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a36,009.01 TW, share 6.8% TW, revenue change +13.0% WoW\n- ROTATING SILVER ANGELS T-LIGHT HLDR: rank 2, revenue \u00a35,866.33 TW, share 6.6% TW, revenue change +681.7% WoW\n- PAPER CHAIN KIT 50'S CHRISTMAS: rank 3, revenue \u00a34,046.96 TW, share 4.6% TW, revenue change +192.1% WoW\n- BROCADE RING PURSE (largest WoW increase): revenue change +3063.7% WoW, revenue \u00a31,052.56 TW versus \u00a333.27 LW\n- PARTY BUNTING (largest WoW decrease): revenue change -70.1% WoW, revenue \u00a31,078.12 TW versus \u00a33,601.04 LW\n- REGENCY CAKESTAND 3 TIER (most orders): orders 67 TW versus 84 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a388,458.98 TW versus \u00a360,773.25 LW, a change of +45.6% WoW.\n- REGENCY CAKESTAND 3 TIER held rank 1 with revenue \u00a36,009.01 TW, a 6.8% TW share and a change of +13.0% WoW.\n- ROTATING SILVER ANGELS T-LIGHT HLDR took rank 2 with revenue \u00a35,866.33 TW, a 6.6% TW share and a change of +681.7% WoW.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 3 with revenue \u00a34,046.96 TW, a 4.6% TW share and a change of +192.1% WoW.\n- BROCADE RING PURSE posted the largest increase at +3063.7% WoW, with revenue \u00a31,052.56 TW versus \u00a333.27 LW.\n- PARTY BUNTING posted the largest decrease at -70.1% WoW, with revenue \u00a31,078.12 TW versus \u00a33,601.04 LW.\n- REGENCY CAKESTAND 3 TIER led on order count with 67 orders TW versus 84 orders LW.",
+    "input_tokens": 732,
+    "output_tokens": 392,
+    "cost_usd": 0.01346,
+    "latency_s": 4.927,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a388,458.98 TW, revenue \u00a360,773.25 LW, revenue change +45.6% WoW\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a36,009.01 TW, share 6.8% TW, revenue change +13.0% WoW\n- ROTATING SILVER ANGELS T-LIGHT HLDR: rank 2, revenue \u00a35,866.33 TW, share 6.6% TW, revenue change +681.7% WoW\n- PAPER CHAIN KIT 50'S CHRISTMAS: rank 3, revenue \u00a34,046.96 TW, share 4.6% TW, revenue change +192.1% WoW\n- BROCADE RING PURSE (largest WoW increase): revenue change +3063.7% WoW, revenue \u00a31,052.56 TW versus \u00a333.27 LW\n- PARTY BUNTING (largest WoW decrease): revenue change -70.1% WoW, revenue \u00a31,078.12 TW versus \u00a33,601.04 LW\n- REGENCY CAKESTAND 3 TIER (most orders): orders 67 TW versus 84 LW",
+  "n_calls": 1,
+  "tokens_in": 732,
+  "tokens_out": 392,
+  "cost_usd": 0.01346,
+  "latency_s": 4.927
+ }
+}

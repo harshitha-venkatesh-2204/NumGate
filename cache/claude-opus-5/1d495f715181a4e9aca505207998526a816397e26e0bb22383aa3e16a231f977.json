@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT led TW at £10,739.38 on 5,593 units across 43 orders, up from £57.82 LW (WoW +18,473.8%) and holding 19.3% share at rank 1.\n- ALARM CLOCK BAKELIKE RED ranked 2 with £2,423.41 TW versus £340.94 LW (WoW +610.8%) and £595.04 LY (YoY +307.3%).\n- The three ALARM CLOCK BAKELIKE colours (RED, GREEN, PINK) together posted £6,326.64 TW against £991.59 LW, with PINK at YoY +611.7%.\n- REGENCY CAKESTAND 3 TIER fell to £1,679.31 TW from £3,205.71 LW (WoW -47.6%) and £7,558.58 LY (YoY -77.8%), ranking 13.\n- WHITE HANGING HEART T-LIGHT HOLDER rose WoW +84.3% to £1,271.33 TW but sits YoY -69.5% against £4,173.55 LY; COLOUR GLASS. STAR T-LIGHT HOLDER is YoY -47.3% at £2,062.35 TW.\n- Four entries recorded £0.00 LW and entered TW with revenue: JUMBO BAG PAISLEY PARK £2,120.48 (rank 5), VINTAGE DOILY JUMBO BAG RED £1,063.24, LUNCH BAG PAISLEY PARK £1,024.05, alongside FLOWERS CHANDELIER T-LIGHT HOLDER at WoW +9,231.2%.\n- WORLD WAR 2 GLIDERS ASSTD DESIGNS moved 5,328 units TW versus 975 LW on just 12 orders, with revenue of £1,161.12 TW (WoW +338.5%, YoY +513.2%).\n- JUMBO BAG RED RETROSPOT declined to £1,238.90 TW from £2,021.85 LW (WoW -38.7%) while remaining YoY +27.0% versus £975.81 LY.",
+ "input_tokens": 3025,
+ "output_tokens": 719,
+ "cost_usd": 0.033100000000000004,
+ "latency_s": 8.716,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 with TW revenue £2616.00, down from LW £4096.80, a WoW change of -36.1%.\n- CHILLI LIGHTS revenue rose to TW £1516.30 from LW £210.09, a WoW increase of 621.7%, ranking 2.\n- HEART OF WICKER SMALL posted TW revenue £1365.96 versus LW £341.48, up 300.0% WoW, rank 3.\n- PARTY BUNTING recorded TW revenue £1301.83 against LY £1152.32, a YoY increase of 13.0%.\n- WHITE HANGING HEART T-LIGHT HOLDER had TW revenue £1249.82 compared to LY £2365.84, a YoY decline of 47.2%.\n- DOORMAT HEARTS showed TW revenue £732.13 versus LY £13.50, a YoY increase of 5323.2%.\n- SOMBRERO reached TW revenue £513.65 compared to LY £11.70, a YoY increase of 4290.2%, with 0 orders LW.\n- CIRCUS PARADE BABY GIFT SET generated TW revenue £639.90 from 4 orders, up from LW revenue £0.00.",
+ "input_tokens": 4122,
+ "output_tokens": 825,
+ "cost_usd": 0.016494,
+ "latency_s": 8.211,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

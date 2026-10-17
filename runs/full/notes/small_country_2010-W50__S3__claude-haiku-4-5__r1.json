@@ -1,0 +1,70 @@
+{
+ "note_id": "small_country_2010-W50__S3__claude-haiku-4-5__r1",
+ "table_id": "small_country_2010-W50",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2010-W50",
+ "n_rows": 10,
+ "strategy": "S3",
+ "model": "claude-haiku-4-5",
+ "repeat": 1,
+ "note": "- United Kingdom generated \u00a3193,356.23 in revenue in TW, representing 92.6% of total revenue across all entities shown.\n- United Kingdom revenue declined 30.3% WoW from \u00a3277,287.56 in LW to \u00a3193,356.23 in TW, and fell 13.0% YoY compared to \u00a3222,326.89 in the same ISO week LY.\n- United Kingdom orders decreased from 493 in LW to 413 in TW.\n- Germany achieved \u00a34,525.14 revenue in TW, up 16.2% WoW from \u00a33,893.44 in LW, and up 42.6% YoY from \u00a33,173.27 in LY.\n- Sweden generated \u00a33,834.30 revenue in TW with zero revenue in LW, representing a 1244.0% YoY increase from \u00a3285.30 in LY.\n- Spain revenue surged 420.3% WoW from \u00a3174.72 in LW to \u00a3909.01 in TW, and increased 176.6% YoY from \u00a3328.60 in LY.\n- France experienced a sharp 87.3% WoW revenue decline from \u00a34,050.16 in LW to \u00a3515.12 in TW, and fell 73.3% YoY from \u00a31,926.72 in LY.\n- Belgium recorded \u00a3541.16 revenue in TW with no sales in LW, representing a 6266.6% YoY increase from \u00a38.50 in LY.",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W50. Entity type: country. The table has 10 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| United Kingdom | 193356.23 | 277287.56 | 222326.89 | 96172 | 108703 | 413 | 493 | -30.3 | -13.0 | 92.6 | 1 |\n| Germany | 4525.14 | 3893.44 | 3173.27 | 1961 | 1836 | 10 | 7 | 16.2 | 42.6 | 2.2 | 2 |\n| Sweden | 3834.30 | 0.00 | 285.30 | 3954 | 0 | 2 | 0 |  | 1244.0 | 1.8 | 3 |\n| EIRE | 2392.28 | 3184.10 | 3253.23 | 1211 | 1278 | 4 | 5 | -24.9 | -26.5 | 1.1 | 4 |\n| Cyprus | 1590.82 | 0.00 | 0.00 | 917 | 0 | 1 | 0 |  |  | 0.8 | 5 |\n| Spain | 909.01 | 174.72 | 328.60 | 395 | 67 | 2 | 1 | 420.3 | 176.6 | 0.4 | 6 |\n| Finland | 652.80 | 0.00 | 469.08 | 1248 | 0 | 1 | 0 |  | 39.2 | 0.3 | 7 |\n| Belgium | 541.16 | 0.00 | 8.50 | 280 | 0 | 2 | 0 |  | 6266.6 | 0.3 | 8 |\n| France | 515.12 | 4050.16 | 1926.72 | 533 | 2280 | 4 | 8 | -87.3 | -73.3 | 0.2 | 9 |\n| Australia | 415.70 | 258.90 | 0.00 | 146 | 214 | 1 | 1 | 60.6 |  | 0.2 | 10 |\n\nWrite the insight note now.\n",
+    "text": "- United Kingdom generated \u00a3193,356.23 in revenue in TW, representing 92.6% of total revenue across all entities shown.\n- United Kingdom revenue declined 30.3% WoW from \u00a3277,287.56 in LW to \u00a3193,356.23 in TW, and fell 13.0% YoY compared to \u00a3222,326.89 in the same ISO week LY.\n- United Kingdom orders decreased from 493 in LW to 413 in TW, a decline of 16.3% WoW.\n- Germany achieved \u00a34,525.14 revenue in TW, up 16.2% WoW from \u00a33,893.44 in LW, and up 42.6% YoY from \u00a33,173.27 in LY.\n- Sweden generated \u00a33,834.30 revenue in TW with zero revenue in LW, representing a 1244.0% YoY increase from \u00a3285.30 in LY.\n- Spain revenue surged 420.3% WoW from \u00a3174.72 in LW to \u00a3909.01 in TW, and increased 176.6% YoY from \u00a3328.60 in LY.\n- France experienced a sharp 87.3% WoW revenue decline from \u00a34,050.16 in LW to \u00a3515.12 in TW, and fell 73.3% YoY from \u00a31,926.72 in LY.\n- Belgium recorded \u00a3541.16 revenue in TW with no sales in LW, representing a 6266.6% YoY increase from \u00a38.50 in LY.",
+    "input_tokens": 1118,
+    "output_tokens": 388,
+    "cost_usd": 0.003058,
+    "latency_s": 4.103,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   },
+   {
+    "step": "revise_1",
+    "system": "You are checking a draft executive insight note against its source sales table. An automatic check could not match some numbers in the draft to the table. For each flagged number, either correct it using the table or remove that claim. Leave every other line unchanged. Return the full corrected note and nothing else.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W50. Entity type: country.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| United Kingdom | 193356.23 | 277287.56 | 222326.89 | 96172 | 108703 | 413 | 493 | -30.3 | -13.0 | 92.6 | 1 |\n| Germany | 4525.14 | 3893.44 | 3173.27 | 1961 | 1836 | 10 | 7 | 16.2 | 42.6 | 2.2 | 2 |\n| Sweden | 3834.30 | 0.00 | 285.30 | 3954 | 0 | 2 | 0 |  | 1244.0 | 1.8 | 3 |\n| EIRE | 2392.28 | 3184.10 | 3253.23 | 1211 | 1278 | 4 | 5 | -24.9 | -26.5 | 1.1 | 4 |\n| Cyprus | 1590.82 | 0.00 | 0.00 | 917 | 0 | 1 | 0 |  |  | 0.8 | 5 |\n| Spain | 909.01 | 174.72 | 328.60 | 395 | 67 | 2 | 1 | 420.3 | 176.6 | 0.4 | 6 |\n| Finland | 652.80 | 0.00 | 469.08 | 1248 | 0 | 1 | 0 |  | 39.2 | 0.3 | 7 |\n| Belgium | 541.16 | 0.00 | 8.50 | 280 | 0 | 2 | 0 |  | 6266.6 | 0.3 | 8 |\n| France | 515.12 | 4050.16 | 1926.72 | 533 | 2280 | 4 | 8 | -87.3 | -73.3 | 0.2 | 9 |\n| Australia | 415.70 | 258.90 | 0.00 | 146 | 214 | 1 | 1 | 60.6 |  | 0.2 | 10 |\n\nDraft note:\n- United Kingdom generated \u00a3193,356.23 in revenue in TW, representing 92.6% of total revenue across all entities shown.\n- United Kingdom revenue declined 30.3% WoW from \u00a3277,287.56 in LW to \u00a3193,356.23 in TW, and fell 13.0% YoY compared to \u00a3222,326.89 in the same ISO week LY.\n- United Kingdom orders decreased from 493 in LW to 413 in TW, a decline of 16.3% WoW.\n- Germany achieved \u00a34,525.14 revenue in TW, up 16.2% WoW from \u00a33,893.44 in LW, and up 42.6% YoY from \u00a33,173.27 in LY.\n- Sweden generated \u00a33,834.30 revenue in TW with zero revenue in LW, representing a 1244.0% YoY increase from \u00a3285.30 in LY.\n- Spain revenue surged 420.3% WoW from \u00a3174.72 in LW to \u00a3909.01 in TW, and increased 176.6% YoY from \u00a3328.60 in LY.\n- France experienced a sharp 87.3% WoW revenue decline from \u00a34,050.16 in LW to \u00a3515.12 in TW, and fell 73.3% YoY from \u00a31,926.72 in LY.\n- Belgium recorded \u00a3541.16 revenue in TW with no sales in LW, representing a 6266.6% YoY increase from \u00a38.50 in LY.\n\nNumbers that could not be matched to the table:\n- line 3: \"16.3%\" in: - United Kingdom orders decreased from 493 in LW to 413 in TW, a decline of 16.3% WoW.\n\nReturn the corrected note now.\n",
+    "text": "- United Kingdom generated \u00a3193,356.23 in revenue in TW, representing 92.6% of total revenue across all entities shown.\n- United Kingdom revenue declined 30.3% WoW from \u00a3277,287.56 in LW to \u00a3193,356.23 in TW, and fell 13.0% YoY compared to \u00a3222,326.89 in the same ISO week LY.\n- United Kingdom orders decreased from 493 in LW to 413 in TW.\n- Germany achieved \u00a34,525.14 revenue in TW, up 16.2% WoW from \u00a33,893.44 in LW, and up 42.6% YoY from \u00a33,173.27 in LY.\n- Sweden generated \u00a33,834.30 revenue in TW with zero revenue in LW, representing a 1244.0% YoY increase from \u00a3285.30 in LY.\n- Spain revenue surged 420.3% WoW from \u00a3174.72 in LW to \u00a3909.01 in TW, and increased 176.6% YoY from \u00a3328.60 in LY.\n- France experienced a sharp 87.3% WoW revenue decline from \u00a34,050.16 in LW to \u00a3515.12 in TW, and fell 73.3% YoY from \u00a31,926.72 in LY.\n- Belgium recorded \u00a3541.16 revenue in TW with no sales in LW, representing a 6266.6% YoY increase from \u00a38.50 in LY.",
+    "input_tokens": 1594,
+    "output_tokens": 376,
+    "cost_usd": 0.0034739999999999997,
+    "latency_s": 3.235,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 31,
+    "n_unsupported": 1,
+    "unsupported_rate": 0.03225806451612903,
+    "note": "- United Kingdom generated \u00a3193,356.23 in revenue in TW, representing 92.6% of total revenue across all entities shown.\n- United Kingdom revenue declined 30.3% WoW from \u00a3277,287.56 in LW to \u00a3193,356.23 in TW, and fell 13.0% YoY compared to \u00a3222,326.89 in the same ISO week LY.\n- United Kingdom orders decreased from 493 in LW to 413 in TW, a decline of 16.3% WoW.\n- Germany achieved \u00a34,525.14 revenue in TW, up 16.2% WoW from \u00a33,893.44 in LW, and up 42.6% YoY from \u00a33,173.27 in LY.\n- Sweden generated \u00a33,834.30 revenue in TW with zero revenue in LW, representing a 1244.0% YoY increase from \u00a3285.30 in LY.\n- Spain revenue surged 420.3% WoW from \u00a3174.72 in LW to \u00a3909.01 in TW, and increased 176.6% YoY from \u00a3328.60 in LY.\n- France experienced a sharp 87.3% WoW revenue decline from \u00a34,050.16 in LW to \u00a3515.12 in TW, and fell 73.3% YoY from \u00a31,926.72 in LY.\n- Belgium recorded \u00a3541.16 revenue in TW with no sales in LW, representing a 6266.6% YoY increase from \u00a38.50 in LY."
+   },
+   {
+    "round": 1,
+    "n_checked": 30,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- United Kingdom generated \u00a3193,356.23 in revenue in TW, representing 92.6% of total revenue across all entities shown.\n- United Kingdom revenue declined 30.3% WoW from \u00a3277,287.56 in LW to \u00a3193,356.23 in TW, and fell 13.0% YoY compared to \u00a3222,326.89 in the same ISO week LY.\n- United Kingdom orders decreased from 493 in LW to 413 in TW.\n- Germany achieved \u00a34,525.14 revenue in TW, up 16.2% WoW from \u00a33,893.44 in LW, and up 42.6% YoY from \u00a33,173.27 in LY.\n- Sweden generated \u00a33,834.30 revenue in TW with zero revenue in LW, representing a 1244.0% YoY increase from \u00a3285.30 in LY.\n- Spain revenue surged 420.3% WoW from \u00a3174.72 in LW to \u00a3909.01 in TW, and increased 176.6% YoY from \u00a3328.60 in LY.\n- France experienced a sharp 87.3% WoW revenue decline from \u00a34,050.16 in LW to \u00a3515.12 in TW, and fell 73.3% YoY from \u00a31,926.72 in LY.\n- Belgium recorded \u00a3541.16 revenue in TW with no sales in LW, representing a 6266.6% YoY increase from \u00a38.50 in LY."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 2,
+  "tokens_in": 2712,
+  "tokens_out": 764,
+  "cost_usd": 0.006532,
+  "latency_s": 7.337999999999999
+ }
+}

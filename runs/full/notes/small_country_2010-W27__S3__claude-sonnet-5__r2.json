@@ -1,0 +1,49 @@
+{
+ "note_id": "small_country_2010-W27__S3__claude-sonnet-5__r2",
+ "table_id": "small_country_2010-W27",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2010-W27",
+ "n_rows": 10,
+ "strategy": "S3",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- United Kingdom TW revenue is \u00a3118,122.66, down -15.6% WoW from \u00a3139,889.90 LW, holding rank 1 with 78.3% share.\n- EIRE TW revenue is \u00a323,853.27, up 1040.5% WoW from \u00a32,091.43 LW, moving to rank 2 with 15.8% share.\n- Germany TW revenue is \u00a33,891.20, down -52.2% WoW from \u00a38,132.43 LW, ranked 3 with 2.6% share.\n- Netherlands TW revenue is \u00a3451.45, down -97.0% WoW from \u00a315,223.88 LW, ranked 8 with 0.3% share.\n- Australia TW revenue is \u00a3294.88, down -87.3% WoW from \u00a32,326.74 LW, ranked 9 with 0.2% share.\n- Portugal TW revenue is \u00a3232.10, down -77.6% WoW from \u00a31,034.33 LW, ranked 10 with 0.2% share.\n- Thailand TW revenue is \u00a31,113.70 on 524 units, up from \u00a30.00 LW, ranked 5 with 0.7% share.\n- Denmark TW revenue is \u00a3555.66 on 162 units, up from \u00a30.00 LW, ranked 6 with 0.4% share.",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W27. Entity type: country. The table has 10 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| United Kingdom | 118122.66 | 139889.90 |  | 58751 | 84543 | 320 | 328 | -15.6 |  | 78.3 | 1 |\n| EIRE | 23853.27 | 2091.43 |  | 10183 | 1069 | 8 | 4 | 1040.5 |  | 15.8 | 2 |\n| Germany | 3891.20 | 8132.43 |  | 3277 | 4501 | 8 | 12 | -52.2 |  | 2.6 | 3 |\n| France | 1816.12 | 1948.84 |  | 1056 | 1209 | 3 | 6 | -6.8 |  | 1.2 | 4 |\n| Thailand | 1113.70 | 0.00 |  | 524 | 0 | 1 | 0 |  |  | 0.7 | 5 |\n| Denmark | 555.66 | 0.00 |  | 162 | 0 | 1 | 0 |  |  | 0.4 | 6 |\n| Belgium | 508.37 | 2212.35 |  | 619 | 987 | 2 | 2 | -77.0 |  | 0.3 | 7 |\n| Netherlands | 451.45 | 15223.88 |  | 314 | 9380 | 1 | 4 | -97.0 |  | 0.3 | 8 |\n| Australia | 294.88 | 2326.74 |  | 48 | 1618 | 1 | 1 | -87.3 |  | 0.2 | 9 |\n| Portugal | 232.10 | 1034.33 |  | 70 | 575 | 1 | 1 | -77.6 |  | 0.2 | 10 |\n\nWrite the insight note now.\n",
+    "text": "- United Kingdom TW revenue is \u00a3118,122.66, down -15.6% WoW from \u00a3139,889.90 LW, holding rank 1 with 78.3% share.\n- EIRE TW revenue is \u00a323,853.27, up 1040.5% WoW from \u00a32,091.43 LW, moving to rank 2 with 15.8% share.\n- Germany TW revenue is \u00a33,891.20, down -52.2% WoW from \u00a38,132.43 LW, ranked 3 with 2.6% share.\n- Netherlands TW revenue is \u00a3451.45, down -97.0% WoW from \u00a315,223.88 LW, ranked 8 with 0.3% share.\n- Australia TW revenue is \u00a3294.88, down -87.3% WoW from \u00a32,326.74 LW, ranked 9 with 0.2% share.\n- Portugal TW revenue is \u00a3232.10, down -77.6% WoW from \u00a31,034.33 LW, ranked 10 with 0.2% share.\n- Thailand TW revenue is \u00a31,113.70 on 524 units, up from \u00a30.00 LW, ranked 5 with 0.7% share.\n- Denmark TW revenue is \u00a3555.66 on 162 units, up from \u00a30.00 LW, ranked 6 with 0.4% share.",
+    "input_tokens": 1228,
+    "output_tokens": 414,
+    "cost_usd": 0.006595999999999999,
+    "latency_s": 3.892,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 40,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- United Kingdom TW revenue is \u00a3118,122.66, down -15.6% WoW from \u00a3139,889.90 LW, holding rank 1 with 78.3% share.\n- EIRE TW revenue is \u00a323,853.27, up 1040.5% WoW from \u00a32,091.43 LW, moving to rank 2 with 15.8% share.\n- Germany TW revenue is \u00a33,891.20, down -52.2% WoW from \u00a38,132.43 LW, ranked 3 with 2.6% share.\n- Netherlands TW revenue is \u00a3451.45, down -97.0% WoW from \u00a315,223.88 LW, ranked 8 with 0.3% share.\n- Australia TW revenue is \u00a3294.88, down -87.3% WoW from \u00a32,326.74 LW, ranked 9 with 0.2% share.\n- Portugal TW revenue is \u00a3232.10, down -77.6% WoW from \u00a31,034.33 LW, ranked 10 with 0.2% share.\n- Thailand TW revenue is \u00a31,113.70 on 524 units, up from \u00a30.00 LW, ranked 5 with 0.7% share.\n- Denmark TW revenue is \u00a3555.66 on 162 units, up from \u00a30.00 LW, ranked 6 with 0.4% share."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1228,
+  "tokens_out": 414,
+  "cost_usd": 0.006595999999999999,
+  "latency_s": 3.892
+ }
+}

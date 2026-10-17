@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £124,910.08 TW against £40,389.09 LW, a change of +209.3% WoW and +165.1% YoY.\n- PICNIC BASKET WICKER 60 PIECES ranked 1 with revenue of £39,619.50 TW, holding a 31.7% share TW.\n- PARTY BUNTING ranked 2 at £4,019.93 TW, a 3.2% share TW and a change of +72.8% WoW.\n- DOORMAT KEEP CALM AND COME IN ranked 3 at £2,800.73 TW, a 2.2% share TW and a change of +339.7% WoW.\n- DOORMAT BLACK FLOCK posted the largest WoW increase at +14502.5%, moving from £15.90 LW to £2,321.80 TW.\n- SET/4 WHITE RETRO STORAGE CUBES recorded the largest WoW decrease at -68.1%, from £1,123.52 LW to £357.89 TW.\n- TEA TIME PARTY BUNTING showed the largest YoY increase at +2828.5% against £15.90 LY, while LUNCH BAG  BLACK SKULL. showed the largest YoY decrease at -91.0% against £4,044.23 LY.\n- JUMBO BAG RED RETROSPOT led on order count with 59 orders TW versus 29 LW.",
+ "input_tokens": 832,
+ "output_tokens": 463,
+ "cost_usd": 0.015735,
+ "latency_s": 5.524,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

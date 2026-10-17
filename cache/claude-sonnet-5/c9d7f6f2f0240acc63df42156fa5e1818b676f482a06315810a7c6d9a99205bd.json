@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £103.7k versus LW £118.0k, a WoW change of -12.06%.\n- TOTAL revenue TW was £103.7k versus LY £84.1k, a YoY change of 23.37%.\n- TOTAL units TW were 51,540 versus LW 67,561 units.\n- TOTAL orders TW were 222 versus LW 285 orders.\n- United Kingdom ranked 1 with TW revenue of £89.8k, an 86.5% share, WoW -15.9% and YoY 20.5%.\n- Japan ranked 2 with TW revenue of £5.7k, a 5.5% share, and the largest positive WoW change at 12,485.6%.\n- France recorded the largest negative WoW change at -85.1% and the largest negative YoY change at -82.3%.",
+ "input_tokens": 1896,
+ "output_tokens": 275,
+ "cost_usd": 0.006541999999999999,
+ "latency_s": 2.993,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

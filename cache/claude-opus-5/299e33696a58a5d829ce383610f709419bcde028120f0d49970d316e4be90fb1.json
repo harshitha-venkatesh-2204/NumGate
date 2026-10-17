@@ -1,0 +1,10 @@
+{
+ "text": "- VINTAGE UNION JACK MEMOBOARD ranks 1 at £6,500.69 TW versus £9.95 LW (+65,233.6% WoW), on 1,015 units across 5 orders and 11.0% of TW revenue.\n- CREAM HEART CARD HOLDER is rank 2 at £2,403.53 TW versus £237.78 LW (+910.8% WoW) and £419.43 LY (+473.0% YoY), with 1,027 units TW against 58 LW.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN posts £2,319.75 TW versus £60.00 LW (+3,766.2% WoW) on 2,451 units from just 3 orders.\n- REGENCY CAKESTAND 3 TIER holds rank 4 at £1,860.24 TW versus £1,890.60 LW (-1.6% WoW), with 139 units and 29 orders TW against 150 units and 33 orders LW.\n- WHITE HANGING HEART T-LIGHT HOLDER is £1,392.59 TW, -13.9% WoW from £1,616.72 and -13.9% YoY from £1,617.50, with orders down to 31 TW from 48 LW.\n- PARTY BUNTING reaches £1,254.96 TW, +17.1% WoW from £1,072.02 and +389.7% YoY from £256.25, on 292 units TW.\n- Largest WoW declines among top-ranked lines: ASSORTED COLOUR BIRD ORNAMENT £281.84 TW, -80.3% WoW and -64.3% YoY; RECYCLING BAG RETROSPOT £165.51 TW, -78.3% WoW; JUMBO BAG RED RETROSPOT £568.66 TW, -68.2% WoW from £1,786.35.\n- Three lines sold nothing LW and registered TW revenue: RUSTIC SEVENTEEN DRAWER SIDEBOARD £745.00 (5 units, 3 orders), REGENCY MIRROR WITH SHUTTERS £290.00 (2 units, 1 order), and COLOUR GLASS STAR T-LIGHT HOLDER £267.25 (97 units, 2 orders).",
+ "input_tokens": 11236,
+ "output_tokens": 1401,
+ "cost_usd": 0.09120500000000001,
+ "latency_s": 15.297,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

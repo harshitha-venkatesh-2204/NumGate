@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER holds Rank 1 with TW revenue of £10,902.59 versus LW £11,450.57 (WoW -4.8%), taking a 6.9% share of TW revenue across the 122 rows shown.\n- VINTAGE UNION JACK MEMOBOARD ranks 2 at £6,561.83 TW against £403.00 LW (WoW +1,528.2%), with units at 1,018 TW versus 44 LW.\n- WOOD BLACK BOARD ANT WHITE FINISH posts £5,715.75 TW versus £414.66 LW (WoW +1,278.4%) on 25 TW orders versus 13 LW orders.\n- CREAM HEART CARD HOLDER reaches £4,944.82 TW versus £1,180.10 LY (YoY +319.0%) and £448.38 LW (WoW +1,002.8%).\n- PAPER CHAIN KIT 50'S CHRISTMAS records £4,048.91 TW, down 4.0% WoW from £4,216.09 and down 27.8% YoY from £5,604.38.\n- WHITE HANGING HEART T-LIGHT HOLDER falls to £3,539.40 TW from £4,721.11 LW (WoW -25.0%) and £4,942.19 LY (YoY -28.4%), with 1,122 units TW versus 1,649 LW.\n- WHITE SKULL HOT WATER BOTTLE delivers £3,365.38 TW versus £783.34 LY (YoY +329.6%), while HOT WATER BOTTLE TEA AND SYMPATHY is at £3,538.37 TW versus £1,778.15 LY (YoY +99.0%).\n- HAND WARMER OWL DESIGN drops to £633.57 TW from £2,542.97 LW (WoW -75.1%) and HAND WARMER SCOTTY DOG DESIGN to £716.54 from £2,587.91 LW (WoW -72.3%).",
+ "input_tokens": 10040,
+ "output_tokens": 1355,
+ "cost_usd": 0.08407500000000001,
+ "latency_s": 14.768,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

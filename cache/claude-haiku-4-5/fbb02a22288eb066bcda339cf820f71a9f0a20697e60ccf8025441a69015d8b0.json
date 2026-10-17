@@ -1,0 +1,10 @@
+{
+ "text": "- PICNIC BASKET WICKER 60 PIECES generated £39.6k revenue in TW, significantly outperforming all other products.\n- PARTY BUNTING achieved £4.0k revenue in TW with 663 units sold across 58 orders.\n- ASSORTED COLOURS SILK FAN led unit sales in TW with 1,610 units, followed by HERB MARKER BASIL with 1,590 units.\n- DOORMAT BLACK FLOCK showed the strongest WoW revenue growth at 14,502.5% increase from LW.\n- DOORMAT UNION JACK GUNS AND ROSES demonstrated substantial WoW momentum with revenue growth of 11,548.5% from LW.\n- TEA TIME PARTY BUNTING recorded exceptional YoY revenue growth of 2,828.5% compared to LY.\n- JUMBO BAG RED RETROSPOT led order volume in TW with 59 orders, marginally ahead of PARTY BUNTING with 58 orders.\n- PAPER BUNTING VINTAGE PAISLEY showed strong YoY revenue performance with 571.4% growth versus LY.",
+ "input_tokens": 1948,
+ "output_tokens": 271,
+ "cost_usd": 0.0033030000000000004,
+ "latency_s": 3.404,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

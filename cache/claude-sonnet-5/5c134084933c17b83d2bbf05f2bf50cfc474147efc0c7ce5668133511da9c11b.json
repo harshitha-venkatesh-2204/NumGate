@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom TW revenue is £117,273.84, down from £168,403.05 LW, a WoW change of -30.4%.\n- United Kingdom holds the largest share of TW revenue at 74.4%, ranked 1 among 6 countries.\n- Netherlands TW revenue is £18,002.00 versus £1,188.30 LW, a WoW change of 1414.9%.\n- France TW revenue is £9,014.91 compared to £1,348.33 LW, a WoW change of 568.6%.\n- EIRE TW revenue is £9,248.22, up from £5,735.12 LW, a WoW change of 61.3%.\n- Germany TW revenue is £2,460.79 versus £2,366.84 LW, a WoW change of 4.0%.\n- Spain recorded TW revenue of £1,731.65 with 3 orders, up from £0.00 LW.\n- United Kingdom TW orders total 314, down from 397 LW, with units falling to 66,459 from 93,805 LW.",
+ "input_tokens": 1010,
+ "output_tokens": 357,
+ "cost_usd": 0.0055899999999999995,
+ "latency_s": 3.812,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

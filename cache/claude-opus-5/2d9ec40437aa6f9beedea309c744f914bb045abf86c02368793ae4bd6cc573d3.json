@@ -1,0 +1,10 @@
+{
+ "text": "- Across the 31 products, TW revenue totalled £29,424.89 versus LW £31,085.63, a WoW change of -5.3%, with LY blank for every row so no YoY is available.\n- REGENCY CAKESTAND 3 TIER held Rank 1 at £3,712.01 TW versus £5,262.87 LW (-29.5% WoW) on 297 units TW versus 449 LW, while orders rose to 47 TW from 33 LW, and it carried 12.6% share.\n- WHITE HANGING HEART T-LIGHT HOLDER was Rank 2 at £2,481.58 TW versus £2,442.16 LW (+1.6% WoW), with 914 units TW versus 882 LW and 52 orders TW versus 44 LW.\n- CARDHOLDER HOLLY WREATH METAL jumped to £1,672.50 TW from £15.00 LW (+11,050.0% WoW) on 446 units TW versus 4 LW across 5 orders, reaching Rank 4 and 5.7% share.\n- Three further products posted triple-digit or larger WoW gains: FOLK FELT HANGING MULTICOL GARLAND £510.00 TW versus £20.40 LW (+2,400.0%), MINI PAINT SET VINTAGE £1,020.48 TW versus £48.46 LW (+2,005.8%), and HANGING JAM JAR T-LIGHT HOLDER £1,202.52 TW versus £258.36 LW (+365.4%).\n- The jumbo bag range was mixed TW: JUMBO BAG RED RETROSPOT £2,315.21 (-28.1% WoW), JUMBO BAG PINK VINTAGE PAISLEY £639.96 (-65.2% WoW) and JUMBO BAG SCANDINAVIAN PAISLEY £620.15 (-55.6% WoW), against JUMBO SHOPPER VINTAGE RED PAISLEY £943.85 (+5.6% WoW) and JUMBO STORAGE BAG SKULLS £593.25 (+76.9% WoW).\n- VINTAGE UNION JACK BUNTING fell to £501.50 TW from £1,509.60 LW (-66.8% WoW) on 59 units versus 170 LW, placing Rank 31, and ASSORTED COLOUR BIRD ORNAMENT fell to £627.63 TW from £1,562.67 LW (-59.8% WoW).\n- TEA TIME KITCHEN APRON recorded £531.75 TW from £0.00 LW on 111 units and 7 orders, and LUNCH BAG CARS BLUE rose to £571.58 TW from £258.20 LW (+121.4% WoW) with orders at 25 TW versus 14 LW.",
+ "input_tokens": 3986,
+ "output_tokens": 1871,
+ "cost_usd": 0.066705,
+ "latency_s": 19.047,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

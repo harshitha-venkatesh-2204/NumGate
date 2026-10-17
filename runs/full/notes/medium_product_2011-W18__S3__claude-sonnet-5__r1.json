@@ -1,0 +1,49 @@
+{
+ "note_id": "medium_product_2011-W18__S3__claude-sonnet-5__r1",
+ "table_id": "medium_product_2011-W18",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2011-W18",
+ "n_rows": 21,
+ "strategy": "S3",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- PARTY BUNTING ranks 1 this week with TW revenue of \u00a35226.24 versus LW \u00a31840.12, WoW +184.0%, and versus LY \u00a32517.71, YoY +107.6%.\n- WHITE HANGING HEART T-LIGHT HOLDER is rank 2 with TW \u00a33057.60, up from LW \u00a31028.01 (WoW +197.4%) and up from LY \u00a32851.87 (YoY +7.2%).\n- REGENCY CAKESTAND 3 TIER fell to TW \u00a32115.30 from LW \u00a33804.27 (WoW -44.4%) and from LY \u00a33730.99 (YoY -43.3%), holding rank 3.\n- SMALL CHINESE STYLE SCISSOR TW revenue is \u00a3840.82 versus LW \u00a34.20, a WoW increase of 19919.5%, with units rising from 10 LW to 2621 TW.\n- BLACK RECORD COVER FRAME posted TW \u00a31354.18 against LW \u00a3133.86, WoW +911.6%, and versus LY \u00a3451.80, YoY +199.7%.\n- SPOTTY BUNTING recorded TW revenue of \u00a31414.10 with LW and LY both at \u00a30.00, ranking 4 this week.\n- DOORMAT KEEP CALM AND COME IN reached TW \u00a31151.56 versus LW \u00a3223.20, WoW +415.9%, with LY revenue at \u00a30.00.\n- PARTY BUNTING holds the largest share of TW revenue at 18.7%, followed by WHITE HANGING HEART T-LIGHT HOLDER at 10.9% and REGENCY CAKESTAND 3 TIER at 7.6%.",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W18. Entity type: product. The table has 21 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| PARTY BUNTING | 5226.24 | 1840.12 | 2517.71 | 984 | 276 | 53 | 35 | 184.0 | 107.6 | 18.7 | 1 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 3057.60 | 1028.01 | 2851.87 | 1144 | 375 | 58 | 28 | 197.4 | 7.2 | 10.9 | 2 |\n| REGENCY CAKESTAND 3 TIER | 2115.30 | 3804.27 | 3730.99 | 171 | 325 | 44 | 25 | -44.4 | -43.3 | 7.6 | 3 |\n| SPOTTY BUNTING | 1414.10 | 0.00 | 0.00 | 318 | 0 | 29 | 0 |  |  | 5.1 | 4 |\n| BLACK RECORD COVER FRAME | 1354.18 | 133.86 | 451.80 | 396 | 38 | 8 | 4 | 911.6 | 199.7 | 4.8 | 5 |\n| PAPER BUNTING WHITE LACE | 1290.51 | 853.39 | 365.80 | 477 | 301 | 25 | 18 | 51.2 | 252.8 | 4.6 | 6 |\n| PAPER BUNTING RETROSPOT | 1259.18 | 410.74 | 0.00 | 434 | 114 | 29 | 16 | 206.6 |  | 4.5 | 7 |\n| DOORMAT KEEP CALM AND COME IN | 1151.56 | 223.20 | 0.00 | 156 | 32 | 31 | 5 | 415.9 |  | 4.1 | 8 |\n| PICNIC BASKET WICKER LARGE | 1091.58 | 629.15 | 0.00 | 117 | 57 | 24 | 16 | 73.5 |  | 3.9 | 9 |\n| ASSORTED COLOUR BIRD ORNAMENT | 1015.30 | 440.72 | 577.98 | 594 | 264 | 35 | 19 | 130.4 | 75.7 | 3.6 | 10 |\n| JUMBO BAG APPLES | 955.41 | 611.47 | 0.00 | 477 | 299 | 34 | 21 | 56.2 |  | 3.4 | 11 |\n| EDWARDIAN PARASOL NATURAL | 927.20 | 297.50 | 223.43 | 176 | 50 | 8 | 5 | 211.7 | 315.0 | 3.3 | 12 |\n| PICNIC BASKET WICKER SMALL | 885.04 | 315.07 | 0.00 | 160 | 47 | 25 | 13 | 180.9 |  | 3.2 | 13 |\n| SMALL CHINESE STYLE SCISSOR | 840.82 | 4.20 | 0.00 | 2621 | 10 | 4 | 1 | 19919.5 |  | 3.0 | 14 |\n| UNION STRIPE WITH FRINGE  HAMMOCK | 833.64 | 724.97 | 337.80 | 118 | 104 | 20 | 9 | 15.0 | 146.8 | 3.0 | 15 |\n| JUMBO BAG RED RETROSPOT | 813.70 | 817.65 | 0.00 | 380 | 385 | 37 | 27 | -0.5 |  | 2.9 | 16 |\n| RED RETROSPOT PICNIC BAG | 813.52 | 330.18 | 298.85 | 300 | 110 | 20 | 19 | 146.4 | 172.2 | 2.9 | 17 |\n| JUMBO BAG ALPHABET | 777.31 | 281.16 | 0.00 | 392 | 142 | 26 | 16 | 176.5 |  | 2.8 | 18 |\n| ASSORTED COLOURS SILK FAN | 749.56 | 593.59 | 348.96 | 972 | 793 | 12 | 7 | 26.3 | 114.8 | 2.7 | 19 |\n| VICTORIAN GLASS HANGING T-LIGHT | 714.64 | 122.38 | 435.25 | 600 | 95 | 30 | 6 | 484.0 | 64.2 | 2.6 | 20 |\n| LUNCH BOX I LOVE LONDON | 647.41 | 172.11 | 0.00 | 379 | 88 | 12 | 7 | 276.2 |  | 2.3 | 21 |\n\nWrite the insight note now.\n",
+    "text": "- PARTY BUNTING ranks 1 this week with TW revenue of \u00a35226.24 versus LW \u00a31840.12, WoW +184.0%, and versus LY \u00a32517.71, YoY +107.6%.\n- WHITE HANGING HEART T-LIGHT HOLDER is rank 2 with TW \u00a33057.60, up from LW \u00a31028.01 (WoW +197.4%) and up from LY \u00a32851.87 (YoY +7.2%).\n- REGENCY CAKESTAND 3 TIER fell to TW \u00a32115.30 from LW \u00a33804.27 (WoW -44.4%) and from LY \u00a33730.99 (YoY -43.3%), holding rank 3.\n- SMALL CHINESE STYLE SCISSOR TW revenue is \u00a3840.82 versus LW \u00a34.20, a WoW increase of 19919.5%, with units rising from 10 LW to 2621 TW.\n- BLACK RECORD COVER FRAME posted TW \u00a31354.18 against LW \u00a3133.86, WoW +911.6%, and versus LY \u00a3451.80, YoY +199.7%.\n- SPOTTY BUNTING recorded TW revenue of \u00a31414.10 with LW and LY both at \u00a30.00, ranking 4 this week.\n- DOORMAT KEEP CALM AND COME IN reached TW \u00a31151.56 versus LW \u00a3223.20, WoW +415.9%, with LY revenue at \u00a30.00.\n- PARTY BUNTING holds the largest share of TW revenue at 18.7%, followed by WHITE HANGING HEART T-LIGHT HOLDER at 10.9% and REGENCY CAKESTAND 3 TIER at 7.6%.",
+    "input_tokens": 2238,
+    "output_tokens": 565,
+    "cost_usd": 0.010126,
+    "latency_s": 5.394,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 38,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- PARTY BUNTING ranks 1 this week with TW revenue of \u00a35226.24 versus LW \u00a31840.12, WoW +184.0%, and versus LY \u00a32517.71, YoY +107.6%.\n- WHITE HANGING HEART T-LIGHT HOLDER is rank 2 with TW \u00a33057.60, up from LW \u00a31028.01 (WoW +197.4%) and up from LY \u00a32851.87 (YoY +7.2%).\n- REGENCY CAKESTAND 3 TIER fell to TW \u00a32115.30 from LW \u00a33804.27 (WoW -44.4%) and from LY \u00a33730.99 (YoY -43.3%), holding rank 3.\n- SMALL CHINESE STYLE SCISSOR TW revenue is \u00a3840.82 versus LW \u00a34.20, a WoW increase of 19919.5%, with units rising from 10 LW to 2621 TW.\n- BLACK RECORD COVER FRAME posted TW \u00a31354.18 against LW \u00a3133.86, WoW +911.6%, and versus LY \u00a3451.80, YoY +199.7%.\n- SPOTTY BUNTING recorded TW revenue of \u00a31414.10 with LW and LY both at \u00a30.00, ranking 4 this week.\n- DOORMAT KEEP CALM AND COME IN reached TW \u00a31151.56 versus LW \u00a3223.20, WoW +415.9%, with LY revenue at \u00a30.00.\n- PARTY BUNTING holds the largest share of TW revenue at 18.7%, followed by WHITE HANGING HEART T-LIGHT HOLDER at 10.9% and REGENCY CAKESTAND 3 TIER at 7.6%."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 2238,
+  "tokens_out": 565,
+  "cost_usd": 0.010126,
+  "latency_s": 5.394
+ }
+}

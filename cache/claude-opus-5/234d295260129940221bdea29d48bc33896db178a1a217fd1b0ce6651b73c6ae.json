@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER led TW at £4,405.70 (10.6% share, Rank 1), up 29.4% WoW from £3,403.60 LW, with units rising from 1,229 LW to 1,686 TW; LY not available, so no YoY.\n- PARTY BUNTING ranked 2 at £3,220.36 TW versus £1,696.49 LW, a WoW gain of 89.8% on 351 units TW against 188 units LW, across 9 orders TW versus 14 LW.\n- REGENCY CAKESTAND 3 TIER fell 20.0% WoW to £2,446.96 TW from £3,058.79 LW, with units at 196 TW versus 227 LW and orders at 38 TW versus 43 LW.\n- PLEASE ONE PERSON METAL SIGN (£1,475.70), COOK WITH WINE METAL SIGN (£1,141.92), WHITE CHERRY LIGHTS (£784.80) and HOT BATHS METAL SIGN (£619.02) each recorded £0.00 LW, so WoW is not calculable; together they hold 9.6% of TW revenue.\n- JUMBO BAG STRAWBERRY posted the largest WoW decline at -68.8%, moving to £760.11 TW from £2,439.76 LW, with units down to 429 TW from 1,254 LW.\n- DOORMAT TOPIARY rose 919.8% WoW to £687.43 TW from £67.41 LW, while DOORMAT SPOTTY HOME SWEET HOME rose 251.2% to £896.27 TW from £255.23 LW.\n- WALL MIRROR , RECT DIAMANTE, PINK/ and DIAMANTE HEART SHAPED WALL MIRROR, tied at Rank 35 with £648.96 TW each, both on 96 units and 1 order TW, versus £16.13 and £38.25 LW.\n- Revenue_LY is blank for all 40 rows in week 2010-W33, so no YoY_Pct is reported for any product this week.",
+ "input_tokens": 3485,
+ "output_tokens": 709,
+ "cost_usd": 0.03515,
+ "latency_s": 8.611,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

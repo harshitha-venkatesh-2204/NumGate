@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £56.2k versus LW £60.6k, a WoW change of -7.3%.\n- TOTAL revenue TW £56.2k compares to LY £19.8k, a YoY change of 183.2%.\n- TOTAL units TW were 22,091 versus LW 26,861 units.\n- TOTAL orders TW were 1,675 versus LW 1,844 orders.\n- REGENCY CAKESTAND 3 TIER ranked 1 with TW revenue of £3.0k, a 5.4% share.\n- PARTY BUNTING ranked 2 with TW revenue of £2.3k, a 4.1% share.\n- BLACK RECORD COVER FRAME ranked 3 with TW revenue of £1.7k, a 3.0% share.\n- ORANGE TV TRAY TABLE had a WoW revenue change of 18,500.0%.",
+ "input_tokens": 2218,
+ "output_tokens": 301,
+ "cost_usd": 0.0074459999999999995,
+ "latency_s": 2.958,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

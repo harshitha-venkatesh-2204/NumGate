@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £2,456.32 revenue in TW (Rank 1), declining 52.7% WoW from £5,198.05 in LW, with units falling from 449 to 178.\n\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £2,173.03 revenue in TW (Rank 2), up 33.7% WoW from £1,625.34 in LW, with units increasing from 586 to 785.\n\n- VINTAGE UNION JACK MEMOBOARD surged to £1,108.64 revenue in TW (Rank 4), up 642.8% WoW from just £149.25 in LW, with units jumping from 15 to 156.\n\n- BLACK HEART CARD HOLDER reached £955.12 revenue in TW (Rank 8), up 3930.0% WoW from £23.70 in LW, with units rising from 6 to 376.\n\n- NATURAL SLATE CHALKBOARD LARGE generated £842.73 revenue in TW (Rank 15) with 223 units sold, compared to £0.00 in LW when no units were sold.\n\n- ASSORTED COLOURS SILK FAN produced £1,011.52 revenue in TW (Rank 6), up 474.3% WoW from £176.12 in LW, despite units declining from 232 to 1,571.\n\n- FLAG OF ST GEORGE CAR FLAG achieved £272.27 revenue in TW (Rank 88), up 3969.8% WoW from £6.69 in LW, though units fell from 15 to 1.\n\n- DOOR MAT ENGLISH ROSE declined to £260.72 revenue in TW (Rank 97), down 70.8% WoW from £891.83 in LW, with units falling from 135 to 36.",
+ "input_tokens": 6472,
+ "output_tokens": 474,
+ "cost_usd": 0.008842000000000001,
+ "latency_s": 5.328,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- LANDMARK FRAME COVENT GARDEN led all products TW with £3766.40 revenue, up from £0.00 LW and LY, ranking 1 of 125.\n- REGENCY CAKESTAND 3 TIER posted £3205.71 TW revenue, up 17.5% WoW from £2729.22 LW, but down 33.8% YoY from £4843.45 LY.\n- GINGHAM HEART DECORATION jumped 2054.1% WoW, from £72.68 LW to £1565.58 TW.\n- CHOCOLATE HOT WATER BOTTLE rose 134.4% WoW to £1594.49 TW from £680.33 LW, and gained 29.2% YoY versus £1233.86 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER fell 63.6% WoW to £689.94 TW from £1893.01 LW, and dropped 69.0% YoY from £2226.27 LY.\n- RED HARMONICA IN BOX surged 205.8% WoW to £1000.37 TW from £327.10 LW, and 26576.5% YoY from £3.75 LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS held £2222.96 TW revenue, down 5.1% WoW from £2342.01 LW, but up 72.3% YoY from £1289.88 LY.\n- CHRISTMAS LIGHTS 10 REINDEER dropped 77.1% YoY to £543.26 TW from £2374.88 LY, despite a 22.9% WoW gain from £442.00 LW.",
+ "input_tokens": 10211,
+ "output_tokens": 568,
+ "cost_usd": 0.026102,
+ "latency_s": 5.458,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

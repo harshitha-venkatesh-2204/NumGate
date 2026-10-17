@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER led TW at £2,009.77 from 727 units and 58 orders, down 46.3% WoW from £3,740.98 LW, holding an 8.6% share of TW revenue at rank 1.\n- COOK WITH WINE METAL SIGN ranked 2 TW at £1,506.02 versus £46.80 LW, a 3,118.0% WoW rise, with units moving from 24 LW to 874 TW.\n- Seven door mat lines totalled £7,296.79 TW, or 31.1% of TW revenue, led by DOOR MAT RED SPOT at £1,497.76 and DOOR MAT BLACK FLOCK at £1,321.48 (+840.6% WoW).\n- DOOR MAT RED SPOT, DOOR MAT SPOTTY HOME SWEET HOME and DOOR MAT HEARTS recorded £0.00 LW and £3,296.01 combined TW, equal to 14.1% share across 30 TW orders.\n- Five metal sign lines generated £4,261.21 TW, 18.2% of TW revenue, with PLEASE ONE PERSON METAL SIGN up 2,101.3% WoW to £647.41 and YOU'RE CONFUSING ME METAL SIGN up 1,670.7% WoW to £688.26.\n- Five of the 26 rows fell WoW: DOOR MAT UNION FLAG £688.45 (-51.3%), RED HANGING HEART T-LIGHT HOLDER £948.00 (-47.6%), WHITE HANGING HEART T-LIGHT HOLDER (-46.3%), JUMBO BAG RED WHITE SPOTTY £899.90 (-42.2%) and WHITE CHERRY LIGHTS £752.70 (-34.7%).\n- SOMBRERO delivered £641.95 TW on 513 units across just 3 orders, versus £250.00 on 200 units and 1 order LW, a 156.8% WoW increase.\n- LY revenue is blank for all 26 rows in week 2010-W05, so no YoY percentage is available for any product this week.",
+ "input_tokens": 2452,
+ "output_tokens": 1410,
+ "cost_usd": 0.04751,
+ "latency_s": 14.991,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

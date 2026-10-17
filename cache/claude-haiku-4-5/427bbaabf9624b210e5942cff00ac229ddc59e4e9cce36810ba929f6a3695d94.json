@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £112,643.90 TW, representing a +93.7% WoW increase from £58,152.40 LW.\n- Total revenue grew +137.2% YoY for ISO week 2011-W42.\n- LANDMARK FRAME COVENT GARDEN generated the highest revenue at £3,766.40 TW with a 3.3% share TW, ranking 1st.\n- LANDMARK FRAME OXFORD STREET achieved £3,753.90 TW revenue with a 3.3% share TW, ranking 2nd.\n- CERAMIC CAKE STAND + HANGING CAKES experienced the largest WoW surge, increasing +2392.0% from £19.90 LW to £495.90 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER saw the largest WoW decline, dropping -63.6% from £1,893.01 LW to £689.94 TW.\n- RED HARMONICA IN BOX recorded the largest YoY growth at +26576.5%, rising from £3.75 LY to current week levels.\n- HOT WATER BOTTLE KEEP CALM generated the most orders with 50 TW compared to 38 LW.",
+ "input_tokens": 622,
+ "output_tokens": 299,
+ "cost_usd": 0.002117,
+ "latency_s": 3.122,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,42 @@
+{
+ "note_id": "small_product_2010-W20__S4__claude-sonnet-5__r2",
+ "table_id": "small_product_2010-W20",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W20",
+ "n_rows": 7,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- Total revenue reached \u00a316,740.23 TW versus \u00a35,757.32 LW, a WoW change of +190.8%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 with \u00a33,388.78 TW revenue, a 20.2% share TW, and WoW change of +14.4%.\n- WOODEN SKITTLES GARDEN SET ranked 2 with \u00a32,650.90 TW revenue, a 15.8% share TW, and WoW change of +465.4%.\n- PACK OF 12 SUKI TISSUES ranked 3 with \u00a32,573.71 TW revenue, a 15.4% share TW, and WoW change of +5937.3%.\n- PACK OF 12 HEARTS DESIGN TISSUES posted the largest WoW increase at +6087.6%, rising from \u00a340.47 LW to \u00a32,504.11 TW.\n- PARTY BUNTING showed the smallest WoW change among tracked items at +12.4%, moving from \u00a31,877.24 LW to \u00a32,110.88 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders at 62 TW compared to 55 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W20. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a316,740.23 TW, revenue \u00a35,757.32 LW, revenue change +190.8% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 1, revenue \u00a33,388.78 TW, share 20.2% TW, revenue change +14.4% WoW\n- WOODEN SKITTLES GARDEN SET: rank 2, revenue \u00a32,650.90 TW, share 15.8% TW, revenue change +465.4% WoW\n- PACK OF 12 SUKI TISSUES: rank 3, revenue \u00a32,573.71 TW, share 15.4% TW, revenue change +5937.3% WoW\n- PACK OF 12 HEARTS DESIGN TISSUES (largest WoW increase): revenue change +6087.6% WoW, revenue \u00a32,504.11 TW versus \u00a340.47 LW\n- PARTY BUNTING (largest WoW decrease): revenue change +12.4% WoW, revenue \u00a32,110.88 TW versus \u00a31,877.24 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 62 TW versus 55 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a316,740.23 TW versus \u00a35,757.32 LW, a WoW change of +190.8%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 1 with \u00a33,388.78 TW revenue, a 20.2% share TW, and WoW change of +14.4%.\n- WOODEN SKITTLES GARDEN SET ranked 2 with \u00a32,650.90 TW revenue, a 15.8% share TW, and WoW change of +465.4%.\n- PACK OF 12 SUKI TISSUES ranked 3 with \u00a32,573.71 TW revenue, a 15.4% share TW, and WoW change of +5937.3%.\n- PACK OF 12 HEARTS DESIGN TISSUES posted the largest WoW increase at +6087.6%, rising from \u00a340.47 LW to \u00a32,504.11 TW.\n- PARTY BUNTING showed the smallest WoW change among tracked items at +12.4%, moving from \u00a31,877.24 LW to \u00a32,110.88 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER had the most orders at 62 TW compared to 55 LW.",
+    "input_tokens": 741,
+    "output_tokens": 399,
+    "cost_usd": 0.0054719999999999994,
+    "latency_s": 3.658,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a316,740.23 TW, revenue \u00a35,757.32 LW, revenue change +190.8% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 1, revenue \u00a33,388.78 TW, share 20.2% TW, revenue change +14.4% WoW\n- WOODEN SKITTLES GARDEN SET: rank 2, revenue \u00a32,650.90 TW, share 15.8% TW, revenue change +465.4% WoW\n- PACK OF 12 SUKI TISSUES: rank 3, revenue \u00a32,573.71 TW, share 15.4% TW, revenue change +5937.3% WoW\n- PACK OF 12 HEARTS DESIGN TISSUES (largest WoW increase): revenue change +6087.6% WoW, revenue \u00a32,504.11 TW versus \u00a340.47 LW\n- PARTY BUNTING (largest WoW decrease): revenue change +12.4% WoW, revenue \u00a32,110.88 TW versus \u00a31,877.24 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 62 TW versus 55 LW",
+  "n_calls": 1,
+  "tokens_in": 741,
+  "tokens_out": 399,
+  "cost_usd": 0.0054719999999999994,
+  "latency_s": 3.658
+ }
+}

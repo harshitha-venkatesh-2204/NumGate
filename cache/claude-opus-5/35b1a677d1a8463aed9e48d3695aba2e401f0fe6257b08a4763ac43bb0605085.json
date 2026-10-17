@@ -1,0 +1,10 @@
+{
+ "text": "- ENGLISH ROSE DESIGN QUILTED THROW led TW at £4,577.17 (17.9% share, rank 1) versus £662.74 LW, a WoW gain of 590.6% on 179 units TW against 26 LW.\n- The 20 listed products delivered £25,571.27 TW versus £16,369.32 LW, a WoW increase of 56.2%.\n- REGENCY CAKESTAND 3 TIER held rank 2 at £2,799.04 TW versus £3,107.77 LW (WoW -9.9%) while units rose to 230 TW from 187 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to £2,420.03 TW from £3,036.12 LW (WoW -20.3%) with units nearly flat at 909 TW versus 900 LW.\n- PINK HAPPY BIRTHDAY BUNTING (£760.50 TW, WoW -61.5%) and BLUE HAPPY BIRTHDAY BUNTING (£771.52 TW, WoW -59.4%) together fell to £1,532.02 TW from £3,872.72 LW.\n- CAMOFLAGE DESIGN TEDDY posted the largest WoW move at 6,340.5% (£811.50 TW versus £12.60 LW), followed by MAGNETS PACK OF 4 VINTAGE COLLAGE at 4,954.6% (£821.37 TW versus £16.25 LW).\n- BLUE CUSHION COVER WITH FLOWER (£958.95 TW, rank 8) and BALLOON PUMP WITH 10 BALLOONS (£742.05 TW, rank 18) recorded £0.00 LW and 0 units LW.\n- PACK OF 72 RETRO SPOT CAKE CASES moved the most units at 1,724 TW versus 559 LW for £764.96 TW (WoW 92.9%), ranking 16 by revenue; LY revenue is unavailable for all 20 products, so no YoY comparison is shown.",
+ "input_tokens": 2086,
+ "output_tokens": 1419,
+ "cost_usd": 0.045905,
+ "latency_s": 15.704,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

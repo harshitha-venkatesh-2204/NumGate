@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £32.9k versus LW £19.9k, WoW up 65.6%, versus LY £9.5k, YoY up 245.6%.\n- TOTAL units TW 11,786 compared with LW 5,820, and orders TW 697 compared with LW 619.\n- REGENCY CAKESTAND 3 TIER led products with TW revenue £2.6k, an 8.0% share of TOTAL TW revenue.\n- CHILLI LIGHTS posted TW revenue £1.5k with a 4.6% share, followed by HEART OF WICKER SMALL at £1.4k and 4.2% share.\n- JUMBO BAG RED RETROSPOT recorded TW revenue £1,356.16 with a 4.1% share, and PARTY BUNTING had TW revenue £1,301.83 with a 4.0% share.\n- CHARLOTTE BAG SUKI DESIGN revenue rose WoW by 1,286.1%, while VINTAGE UNION JACK BUNTING fell WoW by 64.8%.\n- DOORMAT HEARTS revenue increased YoY by 5,323.2%, while WHITE HANGING HEART T-LIGHT HOLDER declined YoY by 47.2%.\n- MINI PAINT SET VINTAGE had the highest TW units at 1,261, and SET OF 3 CAKE TINS PANTRY DESIGN had the highest TW orders at 47.",
+ "input_tokens": 2312,
+ "output_tokens": 493,
+ "cost_usd": 0.009554,
+ "latency_s": 4.826,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

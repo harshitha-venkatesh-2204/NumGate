@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £67.4k versus LW £50.9k, a WoW increase of 32.5%.\n- TOTAL revenue TW was £67.4k versus LY £21.4k, a YoY increase of 214.4%.\n- TOTAL orders rose to 1,940 TW from 1,584 LW, while units rose to 31,218 TW from 19,769 LW.\n- EMPIRE DESIGN ROSETTE led products with £3.3k revenue TW, a 4.9% share of TOTAL revenue TW.\n- EMPIRE DESIGN ROSETTE revenue grew 26,123.4% WoW and 26,123.4% YoY.\n- SET/10 PINK POLKADOT PARTY CANDLES revenue grew 4,614.7% WoW.\n- ASSORTED COLOUR MINI CASES posted £1.6k revenue TW, up 2,067.9% WoW and 949.8% YoY.\n- DOORMAT HEARTS revenue increased 3,023.2% YoY.",
+ "input_tokens": 2525,
+ "output_tokens": 353,
+ "cost_usd": 0.00858,
+ "latency_s": 3.75,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

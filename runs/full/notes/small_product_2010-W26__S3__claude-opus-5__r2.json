@@ -1,0 +1,70 @@
+{
+ "note_id": "small_product_2010-W26__S3__claude-opus-5__r2",
+ "table_id": "small_product_2010-W26",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W26",
+ "n_rows": 8,
+ "strategy": "S3",
+ "model": "claude-opus-5",
+ "repeat": 2,
+ "note": "- REGENCY CAKESTAND 3 TIER ranks 1 with \u00a34,554.09 TW versus \u00a32,456.32 LW, a WoW gain of 85.4%, and holds 24.3% of TW revenue across the 8 rows shown.\n- WHITE HANGING HEART T-LIGHT HOLDER sits at rank 2 with \u00a33,214.95 TW against \u00a32,173.03 LW, up 47.9% WoW, on 1,209 units TW versus 785 units LW.\n- PAPER CHAIN KIT SKULLS posts the largest WoW move at 3,983.9%, rising from \u00a335.40 LW to \u00a31,445.70 TW, with orders at 3 TW versus 2 LW.\n- PAPER CHAIN KIT RETRO SPOT grew 708.2% WoW to \u00a31,573.81 TW from \u00a3194.74 LW, while orders fell to 12 TW from 13 LW.\n- JUMBO BAG RED RETROSPOT holds rank 3 at \u00a32,489.35 TW versus \u00a31,392.22 LW, up 78.8% WoW, with units at 1,405 TW against 751 LW.\n- PAPER BUNTING RETRO SPOTS rose 160.0% WoW to \u00a32,266.34 TW from \u00a3871.55 LW, with orders at 33 TW versus 34 LW, and takes a 12.1% share TW.\n- VINTAGE UNION JACK BUNTING (\u00a31,688.33 TW, +106.9% WoW) and JUMBO BAG STRAWBERRY (\u00a31,544.16 TW, +101.2% WoW) rank 5 and 7, with shares of 9.0% and 8.2% TW.\n- Combined TW revenue for the 8 products is \u00a318,776.73 versus \u00a38,706.79 LW, up 115.7% WoW; LY revenue is blank for all 8 rows, so YoY is not available.",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W26. Entity type: product. The table has 8 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 4554.09 | 2456.32 |  | 391 | 178 | 59 | 53 | 85.4 |  | 24.3 | 1 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 3214.95 | 2173.03 |  | 1209 | 785 | 57 | 55 | 47.9 |  | 17.1 | 2 |\n| JUMBO BAG RED RETROSPOT | 2489.35 | 1392.22 |  | 1405 | 751 | 46 | 40 | 78.8 |  | 13.3 | 3 |\n| PAPER BUNTING RETRO SPOTS | 2266.34 | 871.55 |  | 846 | 269 | 33 | 34 | 160.0 |  | 12.1 | 4 |\n| VINTAGE UNION JACK BUNTING | 1688.33 | 815.92 |  | 198 | 92 | 28 | 25 | 106.9 |  | 9.0 | 5 |\n| PAPER CHAIN KIT RETRO SPOT | 1573.81 | 194.74 |  | 603 | 62 | 12 | 13 | 708.2 |  | 8.4 | 6 |\n| JUMBO BAG STRAWBERRY | 1544.16 | 767.61 |  | 894 | 419 | 32 | 27 | 101.2 |  | 8.2 | 7 |\n| PAPER CHAIN KIT SKULLS | 1445.70 | 35.40 |  | 566 | 12 | 3 | 2 | 3983.9 |  | 7.7 | 8 |\n\nWrite the insight note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER ranks 1 with \u00a34,554.09 TW versus \u00a32,456.32 LW, a WoW gain of 85.4%, and holds 24.3% of TW revenue across the 8 rows shown.\n- WHITE HANGING HEART T-LIGHT HOLDER sits at rank 2 with \u00a33,214.95 TW against \u00a32,173.03 LW, up 47.9% WoW, on 1,209 units TW versus 785 units LW.\n- PAPER CHAIN KIT SKULLS posts the largest WoW move at 3,983.9%, rising from \u00a335.40 LW to \u00a31,445.70 TW, with orders at 3 TW versus 2 LW.\n- PAPER CHAIN KIT RETRO SPOT grew 708.2% WoW to \u00a31,573.81 TW from \u00a3194.74 LW, while orders fell to 12 TW from 13 LW.\n- JUMBO BAG RED RETROSPOT holds rank 3 at \u00a32,489.35 TW versus \u00a31,392.22 LW, up 78.8% WoW, with units at 1,405 TW against 751 LW.\n- PAPER BUNTING RETRO SPOTS rose 160.0% WoW to \u00a32,266.34 TW from \u00a3871.55 LW, with orders at 33 TW versus 34 LW, and takes a 12.1% share TW.\n- VINTAGE UNION JACK BUNTING (\u00a31,688.33 TW, +106.9% WoW) and JUMBO BAG STRAWBERRY (\u00a31,544.16 TW, +101.2% WoW) rank 5 and 7, with shares of 9.0% and 8.2% TW.\n- Combined TW revenue for the 8 products is \u00a318,776.73 versus \u00a38,706.79 LW, up 115.6% WoW; LY revenue is blank for all 8 rows, so YoY is not available.",
+    "input_tokens": 1232,
+    "output_tokens": 893,
+    "cost_usd": 0.028485,
+    "latency_s": 10.647,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   },
+   {
+    "step": "revise_1",
+    "system": "You are checking a draft executive insight note against its source sales table. An automatic check could not match some numbers in the draft to the table. For each flagged number, either correct it using the table or remove that claim. Leave every other line unchanged. Return the full corrected note and nothing else.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W26. Entity type: product.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 4554.09 | 2456.32 |  | 391 | 178 | 59 | 53 | 85.4 |  | 24.3 | 1 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 3214.95 | 2173.03 |  | 1209 | 785 | 57 | 55 | 47.9 |  | 17.1 | 2 |\n| JUMBO BAG RED RETROSPOT | 2489.35 | 1392.22 |  | 1405 | 751 | 46 | 40 | 78.8 |  | 13.3 | 3 |\n| PAPER BUNTING RETRO SPOTS | 2266.34 | 871.55 |  | 846 | 269 | 33 | 34 | 160.0 |  | 12.1 | 4 |\n| VINTAGE UNION JACK BUNTING | 1688.33 | 815.92 |  | 198 | 92 | 28 | 25 | 106.9 |  | 9.0 | 5 |\n| PAPER CHAIN KIT RETRO SPOT | 1573.81 | 194.74 |  | 603 | 62 | 12 | 13 | 708.2 |  | 8.4 | 6 |\n| JUMBO BAG STRAWBERRY | 1544.16 | 767.61 |  | 894 | 419 | 32 | 27 | 101.2 |  | 8.2 | 7 |\n| PAPER CHAIN KIT SKULLS | 1445.70 | 35.40 |  | 566 | 12 | 3 | 2 | 3983.9 |  | 7.7 | 8 |\n\nDraft note:\n- REGENCY CAKESTAND 3 TIER ranks 1 with \u00a34,554.09 TW versus \u00a32,456.32 LW, a WoW gain of 85.4%, and holds 24.3% of TW revenue across the 8 rows shown.\n- WHITE HANGING HEART T-LIGHT HOLDER sits at rank 2 with \u00a33,214.95 TW against \u00a32,173.03 LW, up 47.9% WoW, on 1,209 units TW versus 785 units LW.\n- PAPER CHAIN KIT SKULLS posts the largest WoW move at 3,983.9%, rising from \u00a335.40 LW to \u00a31,445.70 TW, with orders at 3 TW versus 2 LW.\n- PAPER CHAIN KIT RETRO SPOT grew 708.2% WoW to \u00a31,573.81 TW from \u00a3194.74 LW, while orders fell to 12 TW from 13 LW.\n- JUMBO BAG RED RETROSPOT holds rank 3 at \u00a32,489.35 TW versus \u00a31,392.22 LW, up 78.8% WoW, with units at 1,405 TW against 751 LW.\n- PAPER BUNTING RETRO SPOTS rose 160.0% WoW to \u00a32,266.34 TW from \u00a3871.55 LW, with orders at 33 TW versus 34 LW, and takes a 12.1% share TW.\n- VINTAGE UNION JACK BUNTING (\u00a31,688.33 TW, +106.9% WoW) and JUMBO BAG STRAWBERRY (\u00a31,544.16 TW, +101.2% WoW) rank 5 and 7, with shares of 9.0% and 8.2% TW.\n- Combined TW revenue for the 8 products is \u00a318,776.73 versus \u00a38,706.79 LW, up 115.6% WoW; LY revenue is blank for all 8 rows, so YoY is not available.\n\nNumbers that could not be matched to the table:\n- line 8: \"115.6%\" in: - Combined TW revenue for the 8 products is \u00a318,776.73 versus \u00a38,706.79 LW, up 115.6% WoW;\n\nReturn the corrected note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER ranks 1 with \u00a34,554.09 TW versus \u00a32,456.32 LW, a WoW gain of 85.4%, and holds 24.3% of TW revenue across the 8 rows shown.\n- WHITE HANGING HEART T-LIGHT HOLDER sits at rank 2 with \u00a33,214.95 TW against \u00a32,173.03 LW, up 47.9% WoW, on 1,209 units TW versus 785 units LW.\n- PAPER CHAIN KIT SKULLS posts the largest WoW move at 3,983.9%, rising from \u00a335.40 LW to \u00a31,445.70 TW, with orders at 3 TW versus 2 LW.\n- PAPER CHAIN KIT RETRO SPOT grew 708.2% WoW to \u00a31,573.81 TW from \u00a3194.74 LW, while orders fell to 12 TW from 13 LW.\n- JUMBO BAG RED RETROSPOT holds rank 3 at \u00a32,489.35 TW versus \u00a31,392.22 LW, up 78.8% WoW, with units at 1,405 TW against 751 LW.\n- PAPER BUNTING RETRO SPOTS rose 160.0% WoW to \u00a32,266.34 TW from \u00a3871.55 LW, with orders at 33 TW versus 34 LW, and takes a 12.1% share TW.\n- VINTAGE UNION JACK BUNTING (\u00a31,688.33 TW, +106.9% WoW) and JUMBO BAG STRAWBERRY (\u00a31,544.16 TW, +101.2% WoW) rank 5 and 7, with shares of 9.0% and 8.2% TW.\n- Combined TW revenue for the 8 products is \u00a318,776.73 versus \u00a38,706.79 LW, up 115.7% WoW; LY revenue is blank for all 8 rows, so YoY is not available.",
+    "input_tokens": 1989,
+    "output_tokens": 958,
+    "cost_usd": 0.033895,
+    "latency_s": 10.28,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 44,
+    "n_unsupported": 1,
+    "unsupported_rate": 0.022727272727272728,
+    "note": "- REGENCY CAKESTAND 3 TIER ranks 1 with \u00a34,554.09 TW versus \u00a32,456.32 LW, a WoW gain of 85.4%, and holds 24.3% of TW revenue across the 8 rows shown.\n- WHITE HANGING HEART T-LIGHT HOLDER sits at rank 2 with \u00a33,214.95 TW against \u00a32,173.03 LW, up 47.9% WoW, on 1,209 units TW versus 785 units LW.\n- PAPER CHAIN KIT SKULLS posts the largest WoW move at 3,983.9%, rising from \u00a335.40 LW to \u00a31,445.70 TW, with orders at 3 TW versus 2 LW.\n- PAPER CHAIN KIT RETRO SPOT grew 708.2% WoW to \u00a31,573.81 TW from \u00a3194.74 LW, while orders fell to 12 TW from 13 LW.\n- JUMBO BAG RED RETROSPOT holds rank 3 at \u00a32,489.35 TW versus \u00a31,392.22 LW, up 78.8% WoW, with units at 1,405 TW against 751 LW.\n- PAPER BUNTING RETRO SPOTS rose 160.0% WoW to \u00a32,266.34 TW from \u00a3871.55 LW, with orders at 33 TW versus 34 LW, and takes a 12.1% share TW.\n- VINTAGE UNION JACK BUNTING (\u00a31,688.33 TW, +106.9% WoW) and JUMBO BAG STRAWBERRY (\u00a31,544.16 TW, +101.2% WoW) rank 5 and 7, with shares of 9.0% and 8.2% TW.\n- Combined TW revenue for the 8 products is \u00a318,776.73 versus \u00a38,706.79 LW, up 115.6% WoW; LY revenue is blank for all 8 rows, so YoY is not available."
+   },
+   {
+    "round": 1,
+    "n_checked": 44,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- REGENCY CAKESTAND 3 TIER ranks 1 with \u00a34,554.09 TW versus \u00a32,456.32 LW, a WoW gain of 85.4%, and holds 24.3% of TW revenue across the 8 rows shown.\n- WHITE HANGING HEART T-LIGHT HOLDER sits at rank 2 with \u00a33,214.95 TW against \u00a32,173.03 LW, up 47.9% WoW, on 1,209 units TW versus 785 units LW.\n- PAPER CHAIN KIT SKULLS posts the largest WoW move at 3,983.9%, rising from \u00a335.40 LW to \u00a31,445.70 TW, with orders at 3 TW versus 2 LW.\n- PAPER CHAIN KIT RETRO SPOT grew 708.2% WoW to \u00a31,573.81 TW from \u00a3194.74 LW, while orders fell to 12 TW from 13 LW.\n- JUMBO BAG RED RETROSPOT holds rank 3 at \u00a32,489.35 TW versus \u00a31,392.22 LW, up 78.8% WoW, with units at 1,405 TW against 751 LW.\n- PAPER BUNTING RETRO SPOTS rose 160.0% WoW to \u00a32,266.34 TW from \u00a3871.55 LW, with orders at 33 TW versus 34 LW, and takes a 12.1% share TW.\n- VINTAGE UNION JACK BUNTING (\u00a31,688.33 TW, +106.9% WoW) and JUMBO BAG STRAWBERRY (\u00a31,544.16 TW, +101.2% WoW) rank 5 and 7, with shares of 9.0% and 8.2% TW.\n- Combined TW revenue for the 8 products is \u00a318,776.73 versus \u00a38,706.79 LW, up 115.7% WoW; LY revenue is blank for all 8 rows, so YoY is not available."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 2,
+  "tokens_in": 3221,
+  "tokens_out": 1851,
+  "cost_usd": 0.062380000000000005,
+  "latency_s": 20.927
+ }
+}

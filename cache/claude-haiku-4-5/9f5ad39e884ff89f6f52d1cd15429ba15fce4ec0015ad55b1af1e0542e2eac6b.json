@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue TW reached £27.7k across 367 orders, representing an 89.1% increase YoY from £14.7k in the same week last year.\n- Total revenue declined 8.4% WoW, falling from £30.3k in LW to £27.7k in TW.\n- REGENCY CAKESTAND 3 TIER generated £5.9k revenue TW and holds the top rank with a 21.4% share of total revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £4.3k revenue TW, ranking second with a 15.3% revenue share.\n- CHILLI LIGHTS produced £2.5k revenue TW, ranking third with a 9.0% revenue share, and showed strong YoY growth of 200.6%.\n- ROTATING SILVER ANGELS T-LIGHT HLDR demonstrated exceptional YoY performance with 1030.5% revenue growth.\n- Total units sold TW reached 9955 across all products.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN showed WoW revenue growth of 8063.4%.",
+ "input_tokens": 1507,
+ "output_tokens": 272,
+ "cost_usd": 0.002867,
+ "latency_s": 3.514,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £60,737.68 TW versus £64,813.45 LW, a WoW change of -6.3%, and versus LY the change was +93.1%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with £5,919.72 TW revenue and 9.7% share TW, down -45.7% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with £4,251.25 TW revenue and 7.0% share TW, up +20.1% WoW.\n- CHILLI LIGHTS ranked 3 with £2,494.07 TW revenue and 4.1% share TW, up +26.4% WoW.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN had the largest WoW increase at +8063.4%, rising from £30.00 LW to £2,449.01 TW.\n- HOT WATER BOTTLE TEA AND SYMPATHY had the largest WoW decrease at -66.7%, falling from £3,538.37 LW to £1,178.64 TW.\n- PHOTO CUBE had the largest YoY increase at +36541.4%, rising from £3.43 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER had the largest YoY decrease at -49.4% versus £8,406.79 LY, and orders fell to 68 TW from 86 LW.",
+ "input_tokens": 869,
+ "output_tokens": 473,
+ "cost_usd": 0.006468,
+ "latency_s": 4.476,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

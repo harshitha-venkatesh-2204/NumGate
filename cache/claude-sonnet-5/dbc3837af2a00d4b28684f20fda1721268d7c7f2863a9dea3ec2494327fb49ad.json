@@ -1,0 +1,10 @@
+{
+ "text": "- PLEASE ONE PERSON METAL SIGN ranks 1 in TW revenue at £2773.43, up 3286.4% WoW from £81.90 LW and up 359.2% YoY from £603.92 LY.\n- PARTY BUNTING holds rank 2 with TW revenue £1825.40, up 29.5% WoW from £1410.09 LW and up 5654.7% YoY from £31.72 LY.\n- REGENCY CAKESTAND 3 TIER ranks 3 with TW revenue £1825.17, down 8.3% WoW from £1991.04 LW and down 50.8% YoY from £3712.01 LY.\n- HAND WARMER OWL DESIGN posts TW revenue £1611.60, up 416.7% WoW from £311.93 LW and up 2458.1% YoY from £63.00 LY.\n- WOOD BLACK BOARD ANT WHITE FINISH shows TW revenue £489.41, down 76.2% WoW from £2057.46 LW, the largest WoW decline among rows shown.\n- JUMBO BAG RED RETROSPOT records TW revenue £1162.03 at rank 10, down 25.2% WoW from £1554.01 LW and down 49.8% YoY from £2315.21 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER has TW revenue £1285.11 at rank 8, up 17.2% WoW from £1096.24 LW but down 48.2% YoY from £2481.58 LY.\n- TRAY, BREAKFAST IN BED recorded TW revenue £591.30 from 1 order with LW revenue £0.00 and LY revenue £0.00.",
+ "input_tokens": 7441,
+ "output_tokens": 573,
+ "cost_usd": 0.020612,
+ "latency_s": 4.994,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £50.3k TW versus £41.3k LW, a WoW increase of 21.8%.\n- TOTAL units came in at 22,179 TW (+20.2% WoW) and TOTAL orders at 1,661 TW (+12.1% WoW).\n- REGENCY CAKESTAND 3 TIER led products with £2,456.32 TW, a 4.9% share of TOTAL revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER posted £2,173.03 TW (4.3% share) and JUMBO BAG RED RETROSPOT £1,392.22 TW (2.8% share).\n- The top 10 products accounted for 25.7% of TOTAL revenue TW, with VINTAGE UNION JACK MEMOBOARD at £1,108.64 TW and WOOD BLACK BOARD ANT WHITE FINISH at £1,032.62 TW.\n- Largest WoW gains came from VINTAGE UNION JACK MEMOBOARD (+£959.39), BLACK HEART CARD HOLDER (+£931.42) and JUMBO BAG SCANDINAVIAN PAISLEY (+£866.30).\n- Largest WoW declines came from REGENCY CAKESTAND 3 TIER (-£2,741.73), EDWARDIAN PARASOL NATURAL (-£688.48) and DOOR MAT ENGLISH ROSE (-£631.11).\n- On a percentage basis WoW, DOOR MAT UNION FLAG rose 74.6% and RED RETROSPOT CAKE STAND rose 40.5%, while DOOR MAT ENGLISH ROSE fell 70.8%.",
+ "input_tokens": 2550,
+ "output_tokens": 586,
+ "cost_usd": 0.0274,
+ "latency_s": 6.997,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

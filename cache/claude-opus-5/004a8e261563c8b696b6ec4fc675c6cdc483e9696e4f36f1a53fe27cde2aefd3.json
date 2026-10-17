@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER leads at £4,443.21 TW versus £3,457.20 LW, WoW +28.5%, holding 6.5% share and Rank 1 on 355 units.\n- PARTY BUNTING is Rank 2 at £2,495.37 TW versus £1,600.50 LW, WoW +55.9%, with units up from 386 LW to 525 TW and orders up from 29 to 47.\n- WHITE HANGING HEART T-LIGHT HOLDER fell to £1,961.04 TW from £2,259.40 LW, WoW -13.2%, with units down from 848 to 696.\n- PINK AND LILAC QUILTED THROW jumped to £1,825.90 TW from £45.95 LW, WoW +3,873.7%, on 53 units TW versus 1 unit LW.\n- ENGLISH ROSE DESIGN QUILTED THROW (£1,350.97 TW), CLASSIC METAL BIRDCAGE PLANT HOLDER (£1,193.55 TW) and WOOD AND GLASS MEDICINE CABINET (£404.25 TW) each recorded £0.00 LW.\n- PLEASE ONE PERSON METAL SIGN and LUNCH BAG BLACK SKULL. both posted WoW -70.7%, falling to £441.39 TW from £1,506.00 LW and to £337.70 TW from £1,152.30 LW.\n- Door mats split TW: DOOR MAT UNION FLAG rose to £1,230.18 TW from £860.03 LW (WoW +43.0%), while DOOR MAT TOPIARY (-55.6%), DOOR MAT NEW ENGLAND (-54.6%) and DOOR MAT SPOTTY HOME SWEET HOME (-54.0%) all declined WoW.\n- LY revenue is blank for all 115 rows in week 2010-W16, so YoY percent change is not available for any product including Rank 1 REGENCY CAKESTAND 3 TIER.",
+ "input_tokens": 8778,
+ "output_tokens": 1328,
+ "cost_usd": 0.07708999999999999,
+ "latency_s": 14.152,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £3712.01 revenue in TW, the highest among all products, but declined 29.5% WoW from £5262.87 in LW with units falling from 449 to 297.\n- WHITE HANGING HEART T-LIGHT HOLDER maintained stable performance at £2481.58 in TW, up 1.6% WoW from £2442.16 in LW, ranking second with 8.4% share of TW revenue.\n- CARDHOLDER HOLLY WREATH METAL surged 11050.0% WoW to £1672.50 in TW from just £15.00 in LW, with orders increasing from 2 to 5.\n- MINI PAINT SET VINTAGE exploded 2005.8% WoW to £1020.48 in TW from £48.46 in LW, with units jumping from 73 to 1542.\n- JUMBO BAG PINK VINTAGE PAISLEY collapsed 65.2% WoW to £639.96 in TW from £1837.72 in LW, with units declining sharply from 1067 to 352.\n- FOLK FELT HANGING MULTICOL GARLAND increased 2400.0% WoW to £510.00 in TW from £20.40 in LW, though orders remained minimal at 3 in TW.\n- LUNCH BAG CARS BLUE more than doubled revenue 121.4% WoW to £571.58 in TW from £258.20 in LW, with units rising from 126 to 366.\n- RETRO SPOT TEA SET CERAMIC 11 PC grew 146.5% WoW to £554.69 in TW from £224.99 in LW, with units increasing from 43 to 113.",
+ "input_tokens": 2437,
+ "output_tokens": 453,
+ "cost_usd": 0.004702,
+ "latency_s": 5.467,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

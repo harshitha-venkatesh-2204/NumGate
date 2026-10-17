@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW £60.7k vs LW £64.8k, WoW -6.3%; vs LY £31.5k, YoY +93.1%.\n- TOTAL units TW 20,702 vs LW 16,492; TOTAL orders TW 1,158 vs LW 1,444.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with revenue £5.9k and 9.7% share.\n- WHITE HANGING HEART T-LIGHT HOLDER TW revenue £4.3k, 7.0% share, 1,529 units TW, YoY -49.4%.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN TW revenue £2.4k, 2,569 units TW, WoW +8063.4%.\n- CHILLI LIGHTS TW revenue £2.5k with 4.1% share.\n- HOT WATER BOTTLE BABUSHKA TW revenue £2.2k; HAND WARMER BABUSHKA DESIGN TW units 2,006.\n- PHOTO CUBE YoY +36541.4%; HOT WATER BOTTLE TEA AND SYMPATHY WoW -66.7%.",
+ "input_tokens": 2379,
+ "output_tokens": 411,
+ "cost_usd": 0.008868000000000001,
+ "latency_s": 3.888,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

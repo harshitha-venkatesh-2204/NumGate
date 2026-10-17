@@ -1,0 +1,42 @@
+{
+ "note_id": "medium_product_2011-W47__S4__claude-sonnet-5__r2",
+ "table_id": "medium_product_2011-W47",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2011-W47",
+ "n_rows": 32,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 2,
+ "note": "- Total revenue was \u00a367,040.96 TW versus \u00a379,174.25 LW, a WoW change of -15.3%, and versus LY a YoY change of +71.3%.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 1 with \u00a35,701.16 TW revenue, an 8.5% share TW, and a WoW change of -39.9%.\n- RABBIT NIGHT LIGHT ranked 2 with \u00a35,084.81 TW revenue, a 7.6% share TW, and a WoW change of -52.4%.\n- CHILLI LIGHTS ranked 3 with \u00a34,960.25 TW revenue, a 7.4% share TW, and a WoW change of +115.0%.\n- COLOURED GLASS STAR T-LIGHT HOLDER had the largest WoW increase, rising from \u00a3111.16 LW to \u00a31,278.75 TW, a change of +1050.4%.\n- JUMBO BAG 50'S CHRISTMAS had the largest WoW decrease, falling from \u00a33,719.71 LW to \u00a31,151.45 TW, a change of -69.0%.\n- WOODEN ADVENT CALENDAR RED had the largest YoY increase, up +698.9% YoY from \u00a3220.45 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER had the largest YoY decrease, down -58.7% YoY from \u00a35,999.53 LY, and RABBIT NIGHT LIGHT had the most orders with 105 TW versus 123 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W47. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a367,040.96 TW, revenue \u00a379,174.25 LW, revenue change -15.3% WoW, revenue change +71.3% YoY\n- PAPER CHAIN KIT 50'S CHRISTMAS: rank 1, revenue \u00a35,701.16 TW, share 8.5% TW, revenue change -39.9% WoW\n- RABBIT NIGHT LIGHT: rank 2, revenue \u00a35,084.81 TW, share 7.6% TW, revenue change -52.4% WoW\n- CHILLI LIGHTS: rank 3, revenue \u00a34,960.25 TW, share 7.4% TW, revenue change +115.0% WoW\n- COLOURED GLASS STAR T-LIGHT HOLDER (largest WoW increase): revenue change +1050.4% WoW, revenue \u00a31,278.75 TW versus \u00a3111.16 LW\n- JUMBO BAG 50'S CHRISTMAS (largest WoW decrease): revenue change -69.0% WoW, revenue \u00a31,151.45 TW versus \u00a33,719.71 LW\n- WOODEN ADVENT CALENDAR RED (largest YoY increase): revenue change +698.9% YoY, revenue \u00a3220.45 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (largest YoY decrease): revenue change -58.7% YoY, revenue \u00a35,999.53 LY\n- RABBIT NIGHT LIGHT (most orders): orders 105 TW versus 123 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue was \u00a367,040.96 TW versus \u00a379,174.25 LW, a WoW change of -15.3%, and versus LY a YoY change of +71.3%.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 1 with \u00a35,701.16 TW revenue, an 8.5% share TW, and a WoW change of -39.9%.\n- RABBIT NIGHT LIGHT ranked 2 with \u00a35,084.81 TW revenue, a 7.6% share TW, and a WoW change of -52.4%.\n- CHILLI LIGHTS ranked 3 with \u00a34,960.25 TW revenue, a 7.4% share TW, and a WoW change of +115.0%.\n- COLOURED GLASS STAR T-LIGHT HOLDER had the largest WoW increase, rising from \u00a3111.16 LW to \u00a31,278.75 TW, a change of +1050.4%.\n- JUMBO BAG 50'S CHRISTMAS had the largest WoW decrease, falling from \u00a33,719.71 LW to \u00a31,151.45 TW, a change of -69.0%.\n- WOODEN ADVENT CALENDAR RED had the largest YoY increase, up +698.9% YoY from \u00a3220.45 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER had the largest YoY decrease, down -58.7% YoY from \u00a35,999.53 LY, and RABBIT NIGHT LIGHT had the most orders with 105 TW versus 123 LW.",
+    "input_tokens": 861,
+    "output_tokens": 515,
+    "cost_usd": 0.006872,
+    "latency_s": 4.474,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a367,040.96 TW, revenue \u00a379,174.25 LW, revenue change -15.3% WoW, revenue change +71.3% YoY\n- PAPER CHAIN KIT 50'S CHRISTMAS: rank 1, revenue \u00a35,701.16 TW, share 8.5% TW, revenue change -39.9% WoW\n- RABBIT NIGHT LIGHT: rank 2, revenue \u00a35,084.81 TW, share 7.6% TW, revenue change -52.4% WoW\n- CHILLI LIGHTS: rank 3, revenue \u00a34,960.25 TW, share 7.4% TW, revenue change +115.0% WoW\n- COLOURED GLASS STAR T-LIGHT HOLDER (largest WoW increase): revenue change +1050.4% WoW, revenue \u00a31,278.75 TW versus \u00a3111.16 LW\n- JUMBO BAG 50'S CHRISTMAS (largest WoW decrease): revenue change -69.0% WoW, revenue \u00a31,151.45 TW versus \u00a33,719.71 LW\n- WOODEN ADVENT CALENDAR RED (largest YoY increase): revenue change +698.9% YoY, revenue \u00a3220.45 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (largest YoY decrease): revenue change -58.7% YoY, revenue \u00a35,999.53 LY\n- RABBIT NIGHT LIGHT (most orders): orders 105 TW versus 123 LW",
+  "n_calls": 1,
+  "tokens_in": 861,
+  "tokens_out": 515,
+  "cost_usd": 0.006872,
+  "latency_s": 4.474
+ }
+}

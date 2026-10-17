@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue was £20.4k TW versus £23.6k LW, a WoW change of -13.3%.\n- TOTAL revenue was £14.5k LY, putting TW at +40.6% YoY.\n- TOTAL units reached 10,317 TW against 9,601 LW, up 7.5% WoW, while TOTAL orders were 392 TW, down 28.9% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £3,804.27, an 18.6% share of TOTAL revenue and +£1,303.77 WoW.\n- PARTY BUNTING delivered £1,840.12 TW (9.0% share) and PAPER CHAIN KIT EMPIRE £1,266.57 TW (6.2% share), with the top 3 products at 33.8% of TOTAL revenue TW.\n- CERAMIC STRAWBERRY MONEY BOX rose 11,249.0% WoW, equal to +£929.17 TW versus LW.\n- BALLOON WATER BOMB PACK OF 35 increased 1,373.1% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER fell 83.1% WoW, equal to -£5,059.55, and ASSORTED COLOUR BIRD ORNAMENT fell 53.8% WoW.",
+ "input_tokens": 2507,
+ "output_tokens": 458,
+ "cost_usd": 0.023985,
+ "latency_s": 5.556,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

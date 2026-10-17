@@ -1,0 +1,49 @@
+{
+ "note_id": "medium_product_2010-W26__S3__claude-opus-5__r1",
+ "table_id": "medium_product_2010-W26",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W26",
+ "n_rows": 26,
+ "strategy": "S3",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- REGENCY CAKESTAND 3 TIER led TW at \u00a34,554.09, up 85.4 percent WoW from \u00a32,456.32 LW, on 391 units TW versus 178 LW; no LY figure is available.\n- The top three products TW, REGENCY CAKESTAND 3 TIER, WHITE HANGING HEART T-LIGHT HOLDER (\u00a33,214.95) and JUMBO BAG RED RETROSPOT (\u00a32,489.35), together hold 27.7 percent of TW revenue across the 26 rows.\n- The 26 listed products total \u00a336,893.26 TW versus \u00a316,723.02 LW, a WoW increase of 120.6 percent; YoY is not calculable because LY revenue is blank for all 26 rows.\n- Seven JUMBO BAG lines sum to \u00a39,170.67 TW, 24.9 percent of TW revenue, led by JUMBO BAG RED RETROSPOT at \u00a32,489.35 TW versus \u00a31,392.22 LW (+78.8 percent WoW).\n- ASSORTED COLOURS SILK FAN is the only decliner, at \u00a3960.95 TW versus \u00a31,011.52 LW (-5.0 percent WoW), with units down to 1,333 TW from 1,571 LW.\n- LARGE RED SPOT WINDMILL posted \u00a31,332.00 TW from \u00a30.00 LW, recorded on 720 units and 1 order TW versus 0 orders LW.\n- CHILDS BREAKFAST SET DOLLY GIRL rose 9,039.0 percent WoW to \u00a3909.33 TW from \u00a39.95 LW, and CHILDS BREAKFAST SET SPACEBOY rose 3,144.7 percent WoW to \u00a3968.55 TW from \u00a329.85 LW.\n- PAPER CHAIN KIT SKULLS reached \u00a31,445.70 TW versus \u00a335.40 LW (+3,983.9 percent WoW) on 3 orders TW, while PAPER CHAIN KIT RETRO SPOT reached \u00a31,573.81 TW versus \u00a3194.74 LW (+708.2 percent WoW) on 12 orders TW.",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W26. Entity type: product. The table has 26 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 4554.09 | 2456.32 |  | 391 | 178 | 59 | 53 | 85.4 |  | 12.3 | 1 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 3214.95 | 2173.03 |  | 1209 | 785 | 57 | 55 | 47.9 |  | 8.7 | 2 |\n| JUMBO BAG RED RETROSPOT | 2489.35 | 1392.22 |  | 1405 | 751 | 46 | 40 | 78.8 |  | 6.7 | 3 |\n| PAPER BUNTING RETRO SPOTS | 2266.34 | 871.55 |  | 846 | 269 | 33 | 34 | 160.0 |  | 6.1 | 4 |\n| VINTAGE UNION JACK BUNTING | 1688.33 | 815.92 |  | 198 | 92 | 28 | 25 | 106.9 |  | 4.6 | 5 |\n| PAPER CHAIN KIT RETRO SPOT | 1573.81 | 194.74 |  | 603 | 62 | 12 | 13 | 708.2 |  | 4.3 | 6 |\n| JUMBO BAG STRAWBERRY | 1544.16 | 767.61 |  | 894 | 419 | 32 | 27 | 101.2 |  | 4.2 | 7 |\n| PAPER CHAIN KIT SKULLS | 1445.70 | 35.40 |  | 566 | 12 | 3 | 2 | 3983.9 |  | 3.9 | 8 |\n| LARGE RED SPOT WINDMILL | 1332.00 | 0.00 |  | 720 | 0 | 1 | 0 |  |  | 3.6 | 9 |\n| PICNIC BASKET WICKER LARGE | 1158.61 | 579.12 |  | 127 | 56 | 19 | 24 | 100.1 |  | 3.1 | 10 |\n| JUMBO  BAG BAROQUE BLACK WHITE | 1131.77 | 473.56 |  | 655 | 260 | 19 | 15 | 139.0 |  | 3.1 | 11 |\n| JUMBO BAG PINK WITH WHITE SPOTS | 1085.14 | 864.12 |  | 598 | 460 | 27 | 23 | 25.6 |  | 2.9 | 12 |\n| ASSORTED COLOUR BIRD ORNAMENT | 1071.56 | 449.88 |  | 692 | 252 | 20 | 19 | 138.2 |  | 2.9 | 13 |\n| RETRO SPORT PARTY BAG + STICKER SET | 997.20 | 109.32 |  | 680 | 70 | 8 | 6 | 812.2 |  | 2.7 | 14 |\n| JUMBO BAG OWLS | 977.67 | 149.66 |  | 549 | 64 | 18 | 12 | 553.3 |  | 2.6 | 15 |\n| JUMBO BAG SCANDINAVIAN PAISLEY | 977.14 | 897.81 |  | 558 | 515 | 23 | 20 | 8.8 |  | 2.6 | 16 |\n| NATURAL SLATE HEART CHALKBOARD | 973.08 | 448.47 |  | 340 | 145 | 32 | 18 | 117.0 |  | 2.6 | 17 |\n| EDWARDIAN PARASOL NATURAL | 971.75 | 498.99 |  | 182 | 88 | 16 | 11 | 94.7 |  | 2.6 | 18 |\n| CHILDS BREAKFAST SET SPACEBOY | 968.55 | 29.85 |  | 109 | 3 | 15 | 2 | 3144.7 |  | 2.6 | 19 |\n| JUMBO BAG PINK VINTAGE PAISLEY | 965.44 | 868.25 |  | 552 | 501 | 22 | 18 | 11.2 |  | 2.6 | 20 |\n| ASSORTED COLOURS SILK FAN | 960.95 | 1011.52 |  | 1333 | 1571 | 22 | 25 | -5.0 |  | 2.6 | 21 |\n| PINK HAPPY BIRTHDAY BUNTING | 935.62 | 478.35 |  | 189 | 90 | 20 | 17 | 95.6 |  | 2.5 | 22 |\n| SET/5 RED SPOTTY LID GLASS BOWLS | 934.08 | 232.11 |  | 344 | 77 | 28 | 12 | 302.4 |  | 2.5 | 23 |\n| CHILDS BREAKFAST SET DOLLY GIRL | 909.33 | 9.95 |  | 102 | 1 | 14 | 1 | 9039.0 |  | 2.5 | 24 |\n| SKULLS PARTY BAG + STICKER SET | 889.65 | 41.31 |  | 609 | 24 | 8 | 6 | 2053.6 |  | 2.4 | 25 |\n| LUNCH BAG RED SPOTTY | 876.99 | 873.96 |  | 536 | 511 | 44 | 42 | 0.3 |  | 2.4 | 26 |\n\nWrite the insight note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER led TW at \u00a34,554.09, up 85.4 percent WoW from \u00a32,456.32 LW, on 391 units TW versus 178 LW; no LY figure is available.\n- The top three products TW, REGENCY CAKESTAND 3 TIER, WHITE HANGING HEART T-LIGHT HOLDER (\u00a33,214.95) and JUMBO BAG RED RETROSPOT (\u00a32,489.35), together hold 27.7 percent of TW revenue across the 26 rows.\n- The 26 listed products total \u00a336,893.26 TW versus \u00a316,723.02 LW, a WoW increase of 120.6 percent; YoY is not calculable because LY revenue is blank for all 26 rows.\n- Seven JUMBO BAG lines sum to \u00a39,170.67 TW, 24.9 percent of TW revenue, led by JUMBO BAG RED RETROSPOT at \u00a32,489.35 TW versus \u00a31,392.22 LW (+78.8 percent WoW).\n- ASSORTED COLOURS SILK FAN is the only decliner, at \u00a3960.95 TW versus \u00a31,011.52 LW (-5.0 percent WoW), with units down to 1,333 TW from 1,571 LW.\n- LARGE RED SPOT WINDMILL posted \u00a31,332.00 TW from \u00a30.00 LW, recorded on 720 units and 1 order TW versus 0 orders LW.\n- CHILDS BREAKFAST SET DOLLY GIRL rose 9,039.0 percent WoW to \u00a3909.33 TW from \u00a39.95 LW, and CHILDS BREAKFAST SET SPACEBOY rose 3,144.7 percent WoW to \u00a3968.55 TW from \u00a329.85 LW.\n- PAPER CHAIN KIT SKULLS reached \u00a31,445.70 TW versus \u00a335.40 LW (+3,983.9 percent WoW) on 3 orders TW, while PAPER CHAIN KIT RETRO SPOT reached \u00a31,573.81 TW versus \u00a3194.74 LW (+708.2 percent WoW) on 12 orders TW.",
+    "input_tokens": 2518,
+    "output_tokens": 1764,
+    "cost_usd": 0.056690000000000004,
+    "latency_s": 19.552,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 40,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- REGENCY CAKESTAND 3 TIER led TW at \u00a34,554.09, up 85.4 percent WoW from \u00a32,456.32 LW, on 391 units TW versus 178 LW; no LY figure is available.\n- The top three products TW, REGENCY CAKESTAND 3 TIER, WHITE HANGING HEART T-LIGHT HOLDER (\u00a33,214.95) and JUMBO BAG RED RETROSPOT (\u00a32,489.35), together hold 27.7 percent of TW revenue across the 26 rows.\n- The 26 listed products total \u00a336,893.26 TW versus \u00a316,723.02 LW, a WoW increase of 120.6 percent; YoY is not calculable because LY revenue is blank for all 26 rows.\n- Seven JUMBO BAG lines sum to \u00a39,170.67 TW, 24.9 percent of TW revenue, led by JUMBO BAG RED RETROSPOT at \u00a32,489.35 TW versus \u00a31,392.22 LW (+78.8 percent WoW).\n- ASSORTED COLOURS SILK FAN is the only decliner, at \u00a3960.95 TW versus \u00a31,011.52 LW (-5.0 percent WoW), with units down to 1,333 TW from 1,571 LW.\n- LARGE RED SPOT WINDMILL posted \u00a31,332.00 TW from \u00a30.00 LW, recorded on 720 units and 1 order TW versus 0 orders LW.\n- CHILDS BREAKFAST SET DOLLY GIRL rose 9,039.0 percent WoW to \u00a3909.33 TW from \u00a39.95 LW, and CHILDS BREAKFAST SET SPACEBOY rose 3,144.7 percent WoW to \u00a3968.55 TW from \u00a329.85 LW.\n- PAPER CHAIN KIT SKULLS reached \u00a31,445.70 TW versus \u00a335.40 LW (+3,983.9 percent WoW) on 3 orders TW, while PAPER CHAIN KIT RETRO SPOT reached \u00a31,573.81 TW versus \u00a3194.74 LW (+708.2 percent WoW) on 12 orders TW."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 2518,
+  "tokens_out": 1764,
+  "cost_usd": 0.056690000000000004,
+  "latency_s": 19.552
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £124.9k in TW, up 209.3% WoW from £40.4k in LW and up 165.1% YoY from £47.1k in LY.\n- TOTAL units came to 30,037 in TW, up 96.7% WoW, while TOTAL orders reached 2,181 in TW, up 44.8% WoW.\n- PICNIC BASKET WICKER 60 PIECES ranked 1 in TW with £39.6k revenue, holding a 31.7% share of TW total revenue.\n- PARTY BUNTING followed with £4,019.93 in TW at a 3.2% share, ahead of DOORMAT KEEP CALM AND COME IN at £2,800.73 and a 2.2% share.\n- REGENCY CAKESTAND 3 TIER posted £2,711.19 in TW and DOORMAT RED RETROSPOT posted £2,668.64 in TW, with the top five products accounting for 41.5% of TW revenue.\n- PICNIC BASKET WICKER 60 PIECES was the largest WoW gainer at £39,619.50, followed by DOORMAT FANCY FONT HOME SWEET HOME at £2,501.44 and DOORMAT NEW ENGLAND at £2,485.66 WoW.\n- SET/4 WHITE RETRO STORAGE CUBES fell £765.63 WoW and WHITE HANGING HEART T-LIGHT HOLDER fell £605.21 WoW.\n- JUMBO BAG DOILEY PATTERNS declined £387.34 WoW, the third largest TW decrease among products listed.",
+ "input_tokens": 2467,
+ "output_tokens": 548,
+ "cost_usd": 0.026035000000000003,
+ "latency_s": 7.076,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue TW was £25.6k versus £16.4k LW, a WoW change of +56.2%.\n- TOTAL units TW reached 8,388, up 114.3% WoW, while TOTAL orders TW were 311, up 14.3% WoW.\n- ENGLISH ROSE DESIGN QUILTED THROW ranked 1 TW with £4,577.17, holding a 17.9% share of TW revenue.\n- REGENCY CAKESTAND 3 TIER ranked 2 TW at £2,799.04 (10.9% share) and WHITE HANGING HEART T-LIGHT HOLDER ranked 3 at £2,420.03 (9.5% share).\n- The top 5 products accounted for 49.9% of TOTAL revenue TW.\n- ENGLISH ROSE DESIGN QUILTED THROW added £3,914.43 WoW (+590.6%), and RED RETROSPOT CAKE STAND added £1,390.43 WoW.\n- PINK HAPPY BIRTHDAY BUNTING fell £1,213.95 WoW (-61.5%), the largest decline of the week.\n- BLUE HAPPY BIRTHDAY BUNTING declined £1,126.75 WoW (-59.4%), while ASSORTED COLOUR BIRD ORNAMENT rose 143.5% WoW.",
+ "input_tokens": 2583,
+ "output_tokens": 463,
+ "cost_usd": 0.024489999999999998,
+ "latency_s": 5.349,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

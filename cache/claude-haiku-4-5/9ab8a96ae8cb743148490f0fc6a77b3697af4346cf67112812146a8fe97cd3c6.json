@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated the highest revenue in TW at £3.0k, followed by PARTY BUNTING at £2.3k.\n- WORLD WAR 2 GLIDERS ASSTD DESIGNS led unit sales in TW with 1,445 units, while VICTORIAN GLASS HANGING T-LIGHT achieved 739 units.\n- PARTY BUNTING received the most orders in TW with 45 orders, compared to 38 orders for SPOTTY BUNTING.\n- ORANGE TV TRAY TABLE showed exceptional WoW growth of 18,500% in revenue, while FAIRY TALE COTTAGE NIGHTLIGHT grew 7,792.3% WoW.\n- LARGE RED RETROSPOT WINDMILL demonstrated the strongest YoY performance with revenue growth of 25,650.5% compared to LY.\n- GUMBALL COAT RACK achieved 5,509.2% YoY revenue growth, significantly outpacing ORANGE TV TRAY TABLE's 4,167.1% YoY increase.\n- BLACK RECORD COVER FRAME generated £1.7k revenue in TW while also showing 764.6% YoY growth.\n- WHITE HANGING HEART T-LIGHT HOLDER maintained consistent performance with £1.7k revenue in TW, 629 units sold, and 34 orders placed.",
+ "input_tokens": 1932,
+ "output_tokens": 328,
+ "cost_usd": 0.0035719999999999997,
+ "latency_s": 4.075,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

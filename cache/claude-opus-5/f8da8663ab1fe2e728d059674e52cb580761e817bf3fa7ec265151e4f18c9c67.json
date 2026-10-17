@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £56.2k TW versus £60.6k LW, a WoW change of -7.3%.\n- TOTAL revenue of £56.2k TW compares with £19.8k LY, a YoY change of +183.2%.\n- TOTAL units came in at 22,091 TW, down 17.8% WoW, while TOTAL orders were 1,675 TW, down 9.2% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £3,041.70 revenue and a 5.4% share of TOTAL revenue TW.\n- PARTY BUNTING posted £2,327.02 TW (4.1% share), ahead of BLACK RECORD COVER FRAME at £1,708.56 TW (3.0% share).\n- WHITE HANGING HEART T-LIGHT HOLDER delivered £1,691.11 TW (3.0% share) and SPOTTY BUNTING £1,341.43 TW (2.4% share), with the top 5 products at 17.9% of TOTAL revenue TW.\n- Largest WoW revenue gains came from BLACK RECORD COVER FRAME at +£1,708.56, SET/4 WHITE RETRO STORAGE CUBES at +£1,043.62 and REGENCY CAKESTAND 3 TIER at +£925.44.\n- SMALL POPCORN HOLDER recorded the largest WoW revenue decline at -£2,908.55.",
+ "input_tokens": 2426,
+ "output_tokens": 495,
+ "cost_usd": 0.024505,
+ "latency_s": 6.208,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

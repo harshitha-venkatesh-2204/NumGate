@@ -1,0 +1,10 @@
+{
+ "text": "- PARTY BUNTING generated £5,226.24 in TW revenue, up 184.0% WoW from £1,840.12 in LW, and up 107.6% YoY from £2,517.71 in LY, ranking 1st with 18.7% share.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £3,057.60 in TW revenue, up 197.4% WoW from £1,028.01 in LW, ranking 2nd with 10.9% share despite only 7.2% YoY growth.\n- REGENCY CAKESTAND 3 TIER declined to £2,115.30 in TW revenue, down 44.4% WoW from £3,804.27 in LW and down 43.3% YoY from £3,730.99 in LY.\n- SMALL CHINESE STYLE SCISSOR surged to £840.82 in TW revenue with 19,919.5% WoW growth from just £4.20 in LW, driven by 2,621 units sold TW versus 10 units LW.\n- BLACK RECORD COVER FRAME reached £1,354.18 in TW revenue, up 911.6% WoW from £133.86 in LW and up 199.7% YoY from £451.80 in LY.\n- SPOTTY BUNTING generated £1,414.10 in TW revenue with 318 units sold across 29 orders, with no sales recorded in LW or LY.\n- PAPER BUNTING WHITE LACE achieved £1,290.51 in TW revenue, up 51.2% WoW from £853.39 in LW and up 252.8% YoY from £365.80 in LY.\n- EDWARDIAN PARASOL NATURAL reached £927.20 in TW revenue, up 211.7% WoW from £297.50 in LW and up 315.0% YoY from £223.43 in LY.",
+ "input_tokens": 1920,
+ "output_tokens": 507,
+ "cost_usd": 0.004455,
+ "latency_s": 5.734,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

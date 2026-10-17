@@ -1,0 +1,10 @@
+{
+ "text": "- PAPER CHAIN KIT 50'S CHRISTMAS ranks 1 TW with £5701.16 revenue, down 39.9% WoW from £9485.15 LW, roughly flat YoY at -0.6% versus £5735.62 LY.\n- RABBIT NIGHT LIGHT ranks 2 TW with £5084.81, falling 52.4% WoW from £10687.69 LW, with no LY revenue recorded.\n- CHILLI LIGHTS ranks 3 TW at £4960.25, up 115.0% WoW from £2307.01 LW and up 229.3% YoY from £1506.40 LY.\n- SET/3 VANILLA SCENTED CANDLE IN BOX rose 1256.0% WoW to £803.96 TW from £59.29 LW, and is up 166.4% YoY versus £301.79 LY.\n- DOORMAT BLACK FLOCK increased 1544.7% WoW to £542.76 TW from £33.00 LW, with YoY up 95.1% from £278.16 LY.\n- JUMBO BAG 50'S CHRISTMAS fell 69.0% WoW to £1151.45 TW from £3719.71 LW, with no LY revenue recorded.\n- WOODEN ADVENT CALENDAR RED revenue of £1761.24 TW is up 698.9% YoY from £220.45 LY, despite a 5.8% WoW decline from £1870.03 LW.\n- Top 3 products by TW revenue (PAPER CHAIN KIT 50'S CHRISTMAS, RABBIT NIGHT LIGHT, CHILLI LIGHTS) together account for 11.7% of total TW revenue share shown across 135 rows.",
+ "input_tokens": 11935,
+ "output_tokens": 1001,
+ "cost_usd": 0.03388,
+ "latency_s": 8.726,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

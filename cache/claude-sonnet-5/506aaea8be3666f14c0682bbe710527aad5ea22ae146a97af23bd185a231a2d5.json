@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 TW with £3712.01, down from £5262.87 LW, a WoW change of -29.5%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 2 TW with £2481.58, up from £2442.16 LW, a WoW change of 1.6%.\n- JUMBO BAG RED RETROSPOT ranks 3 TW with £2315.21, down from £3219.09 LW, a WoW change of -28.1%.\n- CARDHOLDER HOLLY WREATH METAL rose from £15.00 LW to £1672.50 TW, a WoW change of 11050.0%.\n- MINI PAINT SET VINTAGE rose from £48.46 LW to £1020.48 TW, a WoW change of 2005.8%.\n- VINTAGE UNION JACK BUNTING fell from £1509.60 LW to £501.50 TW, a WoW change of -66.8%.\n- JUMBO BAG PINK VINTAGE PAISLEY fell from £1837.72 LW to £639.96 TW, a WoW change of -65.2%.\n- TEA TIME KITCHEN APRON had £0.00 revenue LW and reached £531.75 TW with 111 units sold.",
+ "input_tokens": 2874,
+ "output_tokens": 438,
+ "cost_usd": 0.010128,
+ "latency_s": 3.986,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

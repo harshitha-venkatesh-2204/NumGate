@@ -1,0 +1,10 @@
+{
+ "text": "- JUMBO BAG RED RETROSPOT generated £2941.59 revenue in TW, ranking 1st with 3.9% share and growing 14.0% WoW from £2581.23 in LW.\n- PARTY BUNTING achieved £2730.41 revenue in TW, ranking 3rd with 3.6% share and surging 33.1% WoW, while YoY growth reached 3481.8% versus £76.23 in LY.\n- JUMBO BAG APPLES delivered £2400.75 revenue in TW, ranking 4th with 3.2% share and accelerating 90.1% WoW from £1263.17 in LW with 1265 units sold.\n- RABBIT NIGHT LIGHT generated £1531.13 revenue in TW, ranking 12th with 2.0% share and exploding 36973.4% WoW from just £4.13 in LW with 768 units sold.\n- WHITE HANGING HEART T-LIGHT HOLDER produced £2054.09 revenue in TW, ranking 6th with 2.7% share and surging 151.8% WoW, though declining 32.5% YoY from £3042.82 in LY.\n- SMALL CHINESE STYLE SCISSOR achieved £662.68 revenue in TW, ranking 33rd with 0.9% share and rocketing 157681.0% WoW from £0.42 in LW, driven by 2054 units sold.\n- REGENCY CAKESTAND 3 TIER generated £2907.39 revenue in TW, ranking 2nd with 3.9% share and growing 14.2% WoW, though declining 11.0% YoY from £3265.21 in LY.\n- SET OF 3 CAKE TINS PANTRY DESIGN fell to £353.71 revenue in TW, ranking 79th with 0.5% share and plummeting 74.8% WoW from £1406.40 in LW with only 69 units sold.",
+ "input_tokens": 7486,
+ "output_tokens": 515,
+ "cost_usd": 0.010061,
+ "latency_s": 6.199,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

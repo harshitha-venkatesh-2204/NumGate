@@ -1,0 +1,10 @@
+{
+ "text": "- SMALL FAIRY CAKE FRIDGE MAGNETS generated £6.5k revenue in TW, representing 41.0% of total product revenue of £15.8k.\n- BLACK AND WHITE PAISLEY FLOWER MUG sold 19,165 units in TW, the highest volume among all products, while generating £1.9k revenue with a 12.3% share.\n- DOOR MAT RED SPOT achieved 250.6% WoW revenue growth in TW, reaching £2.0k, and captured 12.8% of total revenue.\n- JUMBO BAG RED WHITE SPOTTY showed 85.9% WoW revenue growth in TW with 1,014 units sold across 36 orders.\n- WHITE HANGING HEART T-LIGHT HOLDER led order volume in TW with 47 orders, though revenue grew only 17.6% WoW.\n- DOOR MAT SPOTTY HOME SWEET HOME delivered the strongest WoW revenue growth at 417.3% in TW.\n- Total product revenue increased 354.5% WoW in TW, reaching £15.8k across 33,476 units and 136 orders.",
+ "input_tokens": 1596,
+ "output_tokens": 280,
+ "cost_usd": 0.002996,
+ "latency_s": 3.366,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

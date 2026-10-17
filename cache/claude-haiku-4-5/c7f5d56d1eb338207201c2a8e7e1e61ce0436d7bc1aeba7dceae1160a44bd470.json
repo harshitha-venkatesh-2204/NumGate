@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £196,490.10 in revenue TW, representing 77.3% of total revenue across all entities shown and ranking first.\n- United Kingdom revenue increased 8.1% WoW from £181,722.47 LW, though it declined 8.0% YoY compared to £213,613.05 in the same ISO week last year.\n- Netherlands entered the market with £29,458.10 revenue TW and 20,878 units sold, up from zero revenue and zero units LW, capturing 11.6% share.\n- EIRE revenue surged 91.1% WoW to £13,751.42 TW from £7,196.47 LW, and grew 30.4% YoY versus £10,542.88 in the same week last year.\n- Germany revenue increased 49.4% WoW to £9,191.85 TW from £6,153.87 LW, and more than doubled with 100.8% YoY growth from £4,577.05 last year.\n- Sweden generated £5,296.96 revenue TW with 5,952 units sold from a single order, compared to zero revenue and zero units LW.\n- United Kingdom processed 391 orders TW with 103,879 units sold, compared to 393 orders LW with 96,832 units sold.\n- Netherlands achieved the highest YoY growth rate at 7641.5%, though this reflects a minimal base of £380.52 in the same week last year.",
+ "input_tokens": 826,
+ "output_tokens": 365,
+ "cost_usd": 0.002651,
+ "latency_s": 4.178,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

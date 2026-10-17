@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £13.4k versus LW £6.0k, a WoW change of 122.1%.\n- TOTAL revenue TW £13.4k versus LY £7.1k reflects a YoY change of 89.6%.\n- TOTAL units sold TW reached 5029.0 compared to LW 1413.0.\n- TOTAL orders TW totaled 243.0 versus LW 146.0.\n- PLEASE ONE PERSON METAL SIGN ranked 1 with TW revenue of £2.8k, a 20.7% share of TOTAL.\n- PARTY BUNTING ranked 2 with TW revenue of £1.8k, a 13.6% share of TOTAL.\n- REGENCY CAKESTAND 3 TIER ranked 3 with TW revenue of £1.8k, a 13.6% share of TOTAL.\n- HAND WARMER OWL DESIGN ranked 4 with TW revenue of £1.6k, a 12.0% share of TOTAL.",
+ "input_tokens": 2202,
+ "output_tokens": 342,
+ "cost_usd": 0.007824,
+ "latency_s": 3.84,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

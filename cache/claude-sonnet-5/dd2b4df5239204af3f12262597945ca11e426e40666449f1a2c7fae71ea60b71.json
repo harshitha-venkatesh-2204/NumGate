@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £58.3k versus LW £23.3k and LY £20.8k, WoW change of 150.8% and YoY change of 180.6%.\n- TOTAL units sold TW reached 14,739 compared to 7,209 LW.\n- TOTAL orders TW were 839 versus 678 LW.\n- LANDMARK FRAME COVENT GARDEN ranked 1 among products TW with £3,766.40 revenue and 6.5% share.\n- LANDMARK FRAME OXFORD STREET ranked 2 TW with £3,753.90 revenue and 6.4% share.\n- LANDMARK FRAME NOTTING HILL ranked 3 TW with £3,660.00 revenue and 6.3% share.\n- LANDMARK FRAME LONDON BRIDGE ranked 4 TW with £3,603.90 revenue and 6.2% share, and LANDMARK FRAME BAKER STREET ranked 5 TW with £3,447.50 revenue and 5.9% share.\n- GINGHAM HEART DECORATION revenue WoW change was 2054.1%.",
+ "input_tokens": 2258,
+ "output_tokens": 381,
+ "cost_usd": 0.008326,
+ "latency_s": 3.931,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

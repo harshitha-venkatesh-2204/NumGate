@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £124.4k versus LW £121.3k, a WoW change of 2.6%, and versus LY £158.5k, a YoY change of -21.5%.\n- TOTAL units TW were 67,309 compared with LW 68,040, while TOTAL orders TW were 271 versus LW 281.\n- United Kingdom ranked 1 with TW revenue of £94.1k, representing a 75.6% share of TOTAL revenue.\n- United Kingdom revenue fell from LW £113.9k to TW £94.1k, a WoW change of -17.4%, and from LY £138.3k, a YoY change of -32.0%.\n- Australia ranked 2 with TW revenue of £16.7k, a 13.4% share, and recorded a WoW change of 3954.5%.\n- Australia also posted the largest YoY change among countries at 4139.0%.\n- Finland ranked 3 with TW revenue of £4.4k, a 3.6% share of TOTAL revenue.\n- Germany recorded the largest WoW decline among countries at -47.5%.",
+ "input_tokens": 2181,
+ "output_tokens": 363,
+ "cost_usd": 0.007992,
+ "latency_s": 3.92,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

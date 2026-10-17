@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £5919.72 revenue in TW, ranking 1st but declining 45.7% WoW from £10902.59 in LW, with units falling from 851 to 442.\n\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £4251.25 revenue in TW (rank 2, 7.0% share) but declined 49.4% YoY compared to £8406.79 in LY, despite a 20.1% WoW increase.\n\n- CHILLI LIGHTS showed strong YoY growth of 200.6%, reaching £2494.07 in TW versus £829.73 in LY, with units increasing 74.5% WoW from 337 to 589.\n\n- GROW A FLYTRAP OR SUNFLOWER IN TIN surged 8063.4% WoW to £2449.01 in TW from just £30.00 in LW, with units jumping from 24 to 2569.\n\n- ROTATING SILVER ANGELS T-LIGHT HLDR posted exceptional 1030.5% YoY growth to £2162.57 in TW from £191.29 in LY, with a 20.6% WoW increase.\n\n- PAPER CHAIN KIT 50'S CHRISTMAS declined 46.9% WoW to £2149.75 in TW from £4048.91 in LW, though YoY change was flat at 0.3%.\n\n- PHOTO CUBE experienced extraordinary 36541.4% YoY growth to £1256.80 in TW from £3.43 in LY, with a 151.2% WoW increase and units rising from 238 to 937.\n\n- SET OF 3 BABUSHKA STACKING TINS surged 2900.0% WoW to £1188.00 in TW from £39.60 in LW, with units increasing from 8 to 240.",
+ "input_tokens": 3279,
+ "output_tokens": 488,
+ "cost_usd": 0.005719,
+ "latency_s": 6.242,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

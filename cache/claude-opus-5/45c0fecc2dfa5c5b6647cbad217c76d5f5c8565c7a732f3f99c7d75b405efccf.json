@@ -1,0 +1,10 @@
+{
+ "text": "- PARTY BUNTING led TW at £5,226.24, up 184.0% WoW from £1,840.12 and up 107.6% YoY from £2,517.71, taking an 18.7% share of TW revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 at £3,057.60 TW versus £1,028.01 LW (+197.4% WoW) and £2,851.87 LY (+7.2% YoY), on 1,144 units TW against 375 units LW.\n- REGENCY CAKESTAND 3 TIER was the only row down on both comparisons, at £2,115.30 TW versus £3,804.27 LW (-44.4% WoW) and £3,730.99 LY (-43.3% YoY), with units falling from 325 LW to 171 TW.\n- SPOTTY BUNTING entered at rank 4 with £1,414.10 TW, 318 units and 29 orders, against £0.00 in both LW and LY.\n- BLACK RECORD COVER FRAME rose 911.6% WoW to £1,354.18 TW from £133.86 LW and 199.7% YoY from £451.80 LY, with orders at 8 TW versus 4 LW.\n- The four bunting lines (PARTY, SPOTTY, PAPER BUNTING WHITE LACE, PAPER BUNTING RETROSPOT) combined for £9,190.03 TW, or 32.9% of TW revenue across the 21 rows.\n- SMALL CHINESE STYLE SCISSOR moved 2,621 units TW across 4 orders for £840.82, versus 10 units and £4.20 LW, a WoW change of 19,919.5%.\n- JUMBO BAG RED RETROSPOT was flat at £813.70 TW versus £817.65 LW (-0.5% WoW), with 380 units TW against 385 units LW.",
+ "input_tokens": 2238,
+ "output_tokens": 1249,
+ "cost_usd": 0.042415,
+ "latency_s": 13.59,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

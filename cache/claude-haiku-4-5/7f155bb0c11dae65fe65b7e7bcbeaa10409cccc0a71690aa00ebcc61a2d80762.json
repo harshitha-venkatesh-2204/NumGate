@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £15,781.74 TW, representing a +354.5% WoW increase from £3,472.13 LW.\n- SMALL FAIRY CAKE FRIDGE MAGNETS generated £6,467.60 TW and captured 41.0% of total revenue, ranking as the top product.\n- DOOR MAT RED SPOT achieved £2,021.25 TW with a 12.8% revenue share and posted a +250.6% WoW increase.\n- BLACK AND WHITE PAISLEY FLOWER MUG contributed £1,946.33 TW representing 12.3% of total revenue in rank 3 position.\n- DOOR MAT SPOTTY HOME SWEET HOME experienced the largest WoW growth at +417.3%, rising from £322.50 LW to £1,668.35 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER recorded £1,901.87 TW with a +17.6% WoW increase from £1,617.50 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the most orders at 47 TW compared to 45 LW.",
+ "input_tokens": 551,
+ "output_tokens": 282,
+ "cost_usd": 0.001961,
+ "latency_s": 3.085,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

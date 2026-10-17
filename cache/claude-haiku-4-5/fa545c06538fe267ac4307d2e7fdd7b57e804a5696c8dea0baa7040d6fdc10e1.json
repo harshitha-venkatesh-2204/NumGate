@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated £5919.72 revenue in TW, the highest among all products, but declined 45.7% WoW from £10902.59 in LW.\n- WHITE HANGING HEART T-LIGHT HOLDER achieved £4251.25 revenue in TW with 1529 units sold, up 20.1% WoW, though down 49.4% YoY versus £8406.79 in the same ISO week last year.\n- CHILLI LIGHTS showed strong momentum with £2494.07 revenue in TW, up 26.4% WoW and up 200.6% YoY from £829.73 in LY.\n- GROW A FLYTRAP OR SUNFLOWER IN TIN surged to £2449.01 revenue in TW, up 8063.4% WoW from just £30.00 in LW, with 2569 units sold compared to 24 units in LW.\n- ROTATING SILVER ANGELS T-LIGHT HOLDER generated £2162.57 revenue in TW, up 20.6% WoW and up 1030.5% YoY from £191.29 in LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS declined to £2149.75 revenue in TW, down 46.9% WoW from £4048.91 in LW, though essentially flat YoY at 0.3% change.\n- HAND WARMER BABUSHKA DESIGN reached £1998.10 revenue in TW with 2006 units sold, up 8.2% WoW from £1847.14 in LW.\n- BLACK RECORD COVER FRAME generated £1961.40 revenue in TW with 575 units sold, down 1.0% WoW but up 71.3% YoY from £1144.96 in LY.",
+ "input_tokens": 1223,
+ "output_tokens": 468,
+ "cost_usd": 0.003563,
+ "latency_s": 4.602,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

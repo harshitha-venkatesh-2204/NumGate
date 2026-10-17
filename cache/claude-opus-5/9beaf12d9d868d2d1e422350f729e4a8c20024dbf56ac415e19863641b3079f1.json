@@ -1,0 +1,10 @@
+{
+ "text": "",
+ "input_tokens": 1228,
+ "output_tokens": 128,
+ "cost_usd": 0.00934,
+ "latency_s": 2.815,
+ "model": "claude-opus-5",
+ "stop_reason": "refusal",
+ "max_tokens": 16000
+}

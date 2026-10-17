@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £88,458.98 TW, up 45.6% WoW from £60,773.25 LW.\n- REGENCY CAKESTAND 3 TIER generated £6,009.01 TW revenue, holding rank 1 with 6.8% share TW, despite order volume declining to 67 TW from 84 LW.\n- ROTATING SILVER ANGELS T-LIGHT HLDR achieved rank 2 with £5,866.33 TW revenue and 6.6% share TW, with exceptional growth of +681.7% WoW.\n- PAPER CHAIN KIT 50'S CHRISTMAS ranked 3rd with £4,046.96 TW revenue and 4.6% share TW, growing +192.1% WoW.\n- BROCADE RING PURSE showed the largest WoW increase at +3063.7%, rising from £33.27 LW to £1,052.56 TW.\n- PARTY BUNTING experienced the largest WoW decrease at -70.1%, falling from £3,601.04 LW to £1,078.12 TW.",
+ "input_tokens": 574,
+ "output_tokens": 285,
+ "cost_usd": 0.001999,
+ "latency_s": 3.133,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

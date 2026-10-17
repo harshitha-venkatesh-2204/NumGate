@@ -1,0 +1,10 @@
+{
+ "text": "- ENGLISH ROSE DESIGN QUILTED THROW ranks 1 with TW revenue of £4577.17, up 590.6% WoW from £662.74 LW, holding 17.9% share.\n- REGENCY CAKESTAND 3 TIER ranks 2 with TW revenue of £2799.04, down 9.9% WoW from £3107.77 LW, with 10.9% share.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 3 with TW revenue of £2420.03, down 20.3% WoW from £3036.12 LW, representing 9.5% share.\n- CAMOFLAGE DESIGN TEDDY rose 6340.5% WoW, from £12.60 LW to £811.50 TW, the largest WoW percent gain among the 20 products.\n- PINK HAPPY BIRTHDAY BUNTING fell 61.5% WoW, from £1974.45 LW to £760.50 TW.\n- BLUE HAPPY BIRTHDAY BUNTING fell 59.4% WoW, from £1898.27 LW to £771.52 TW.\n- BLUE CUSHION COVER WITH FLOWER and BALLOON PUMP WITH 10 BALLOONS both moved from £0.00 LW to TW revenues of £958.95 and £742.05 respectively.\n- No YoY figures are available for any of the 20 products in this report.",
+ "input_tokens": 2086,
+ "output_tokens": 481,
+ "cost_usd": 0.008982,
+ "latency_s": 4.522,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

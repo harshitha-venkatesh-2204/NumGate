@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £124.9k versus LW £40.4k, a WoW change of 209.3%, and versus LY £47.1k, a YoY change of 165.1%.\n- TOTAL units sold TW reached 30,037 compared to LW 15,271, while orders TW were 2,181 versus LW 1,506.\n- PICNIC BASKET WICKER 60 PIECES led products with TW revenue of £39.6k, representing 31.7% share of total revenue.\n- PARTY BUNTING recorded TW revenue of £4.0k with a 3.2% share, and DOORMAT KEEP CALM AND COME IN posted £2.8k TW revenue with a 2.2% share.\n- DOORMAT BLACK FLOCK grew 14502.5% WoW and DOORMAT UNION JACK GUNS AND ROSES grew 11548.5% WoW.\n- SET 3 WICKER OVAL BASKETS W LIDS rose 4529.2% WoW while SET/4 WHITE RETRO STORAGE CUBES fell 68.1% WoW.\n- JUMBO BAG DOILEY PATTERNS declined 42.2% WoW and IVORY KITCHEN SCALES declined 37.1% WoW.\n- TEA TIME PARTY BUNTING increased 2828.5% YoY and PAPER BUNTING VINTAGE PAISLEY increased 571.4% YoY, while LUNCH BAG BLACK SKULL. fell 91.0% YoY and LUNCH BAG WOODLAND fell 84.0% YoY.",
+ "input_tokens": 2470,
+ "output_tokens": 544,
+ "cost_usd": 0.01038,
+ "latency_s": 5.249,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

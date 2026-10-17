@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom generated £117,273.84 in revenue during TW, representing 74.4% of total revenue across all entities shown.\n- United Kingdom revenue declined 30.4% WoW, falling from £168,403.05 in LW to £117,273.84 in TW.\n- Netherlands revenue surged 1414.9% WoW, increasing from £1,188.30 in LW to £18,002.00 in TW.\n- France revenue increased 568.6% WoW, rising from £1,348.33 in LW to £9,014.91 in TW.\n- EIRE revenue grew 61.3% WoW, moving from £5,735.12 in LW to £9,248.22 in TW.\n- United Kingdom units sold decreased from 93,805 in LW to 66,459 in TW, a decline of 27,346 units.\n- Netherlands units sold increased from 922 in LW to 11,784 in TW, representing an addition of 10,862 units.\n- Spain generated £1,731.65 in revenue during TW with 1,091 units sold, despite recording zero revenue and zero units in LW.",
+ "input_tokens": 848,
+ "output_tokens": 297,
+ "cost_usd": 0.002333,
+ "latency_s": 3.272,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

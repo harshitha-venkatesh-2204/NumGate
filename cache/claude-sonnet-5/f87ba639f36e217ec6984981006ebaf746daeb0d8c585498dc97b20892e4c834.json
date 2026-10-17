@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 TW with £4443.21 revenue, up 28.5% WoW from £3457.20 LW, holding 13.2% share.\n- PARTY BUNTING revenue rose to £2495.37 TW from £1600.50 LW, a 55.9% WoW increase, ranking 2 with 7.4% share.\n- WHITE HANGING HEART T-LIGHT HOLDER fell 13.2% WoW to £1961.04 TW from £2259.40 LW, ranking 3 with 5.8% share.\n- GIANT BLACK SUNGLASSES surged 33823.1% WoW, from £3.90 LW to £1323.00 TW, ranking 6 with 3.9% share.\n- PINK AND LILAC QUILTED THROW jumped 3873.7% WoW, from £45.95 LW to £1825.90 TW, ranking 4 with 5.4% share.\n- WOODEN CROQUET GARDEN SET dropped 34.4% WoW to £743.99 TW from £1133.73 LW, ranking 21 with 2.2% share.\n- VINTAGE UNION JACK BUNTING declined 29.8% WoW to £889.25 TW from £1266.50 LW, ranking 16 with 2.6% share.\n- RED RETROSPOT JUMBO BAG revenue dropped 28.4% WoW to £1115.45 TW from £1558.65 LW, ranking 9 with 3.3% share.",
+ "input_tokens": 2809,
+ "output_tokens": 512,
+ "cost_usd": 0.010738000000000001,
+ "latency_s": 4.56,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- RABBIT NIGHT LIGHT led TW at £10,739.38 (9.8% share, rank 1) versus £57.82 LW, a WoW gain of 18,473.8%, on 5,593 units TW against 14 units LW.\n- The ALARM CLOCK BAKELIKE trio posted £6,326.64 TW combined (RED £2,423.41, GREEN £2,007.43, PINK £1,895.80), with WoW moves of +610.8%, +408.1% and +641.9% and YoY moves of +307.3%, +332.4% and +611.7%.\n- CHILLI LIGHTS reached £2,285.12 TW versus £710.37 LW and £1,021.67 LY, up 221.7% WoW and 123.7% YoY, on 431 units TW against 109 LW.\n- PAPER CHAIN KIT 50'S CHRISTMAS held rank 4 at £2,264.16 TW, up 1.9% WoW from £2,222.96 and up 58.1% YoY from £1,432.05, with orders at 64 TW versus 48 LW.\n- The five LANDMARK FRAME lines fell to £2,257.39 TW from £18,206.70 LW, with OXFORD STREET down 88.8% WoW to £418.90 and COVENT GARDEN down 88.0% WoW to £450.30.\n- REGENCY CAKESTAND 3 TIER recorded £1,679.31 TW versus £3,205.71 LW and £7,558.58 LY, down 47.6% WoW and 77.8% YoY, on 135 units TW against 268 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER came in at £1,271.33 TW, up 84.3% WoW but down 69.5% YoY from £4,173.55, while RED HANGING HEART T-LIGHT HOLDER was £402.04 TW, down 85.5% YoY from £2,774.28.\n- Four lines with zero LW revenue entered the top 60 TW: JUMBO BAG PAISLEY PARK £2,120.48 (rank 5, 1,131 units), VINTAGE DOILY JUMBO BAG RED £1,063.24, LUNCH BAG PAISLEY PARK £1,024.05 and CINDERELLA CHANDELIER £800.00 across 2 orders.",
+ "input_tokens": 10482,
+ "output_tokens": 1596,
+ "cost_usd": 0.09231,
+ "latency_s": 17.423,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

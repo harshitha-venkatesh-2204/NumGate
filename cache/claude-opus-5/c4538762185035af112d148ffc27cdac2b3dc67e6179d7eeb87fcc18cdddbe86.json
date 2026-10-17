@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £51.9k TW versus £49.7k LW, a WoW gain of 4.5%, and £23.9k LY, a YoY gain of 117.3%.\n- TOTAL volume TW stood at 23,994 units across 1,527 orders.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £3,429.15, holding a 6.6% share of TW revenue.\n- WHITE HANGING HEART T-LIGHT HOLDER posted £3,266.50 TW, up £2,506.90 WoW (+330.0%).\n- REGENCY CAKESTAND 3 TIER added £1,413.57 WoW (+70.1%), while SET 40 HEART SHAPE PETIT FOUR CASES added £791.70 WoW.\n- PARTY BUNTING came in at £1,795.82 TW after a WoW decline of £3,000.85, and JUMBO BAG RED RETROSPOT fell £1,820.19 WoW.\n- DOORMAT HEARTS dropped £2,035.97 WoW (-86.8%) and ASSORTED COLOURS SILK FAN fell 79.4% WoW.\n- The top five products, including SET OF 3 REGENCY CAKE TINS at £1,262.18 TW and SPOTTY BUNTING at £1,105.23 TW, accounted for 20.9% of TW revenue.",
+ "input_tokens": 2474,
+ "output_tokens": 478,
+ "cost_usd": 0.02432,
+ "latency_s": 5.766,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

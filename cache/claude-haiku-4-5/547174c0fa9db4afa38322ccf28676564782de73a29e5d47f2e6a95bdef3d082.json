@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER generated the highest revenue TW at £7.5k, followed by HAND WARMER RED POLKA DOT at £3.7k.\n- HAND WARMER RED POLKA DOT led unit sales TW with 2004 units, while SET OF 20 VINTAGE CHRISTMAS NAPKINS achieved 1831 units.\n- Total revenue TW reached £43.5k, representing a 147.1% increase WoW from £17.6k in LW.\n- AFGHAN SLIPPER SOCK PAIR showed exceptional growth WoW with revenue increasing 52204.3%, though absolute TW revenue was not provided in the data.\n- WHITE HANGING HEART T-LIGHT HOLDER received the most orders TW at 67, compared to PAPER CHAIN KIT VINTAGE CHRISTMAS with 59 orders.\n- SET OF 20 VINTAGE CHRISTMAS NAPKINS revenue grew £2.8k WoW, while BABUSHKA LIGHTS STRING OF 10 added £1.6k WoW.\n- Total units sold TW across all products reached 17910 units, with top performers concentrated in seasonal and decorative categories.\n- No year-over-year comparison available as LY revenue was £0.0k for the same ISO week period.",
+ "input_tokens": 1892,
+ "output_tokens": 310,
+ "cost_usd": 0.0034419999999999997,
+ "latency_s": 4.118,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

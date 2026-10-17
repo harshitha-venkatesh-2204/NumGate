@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £2.0k revenue TW, the highest performing product, with 727 units sold across 58 orders.\n- COOK WITH WINE METAL SIGN achieved £1.5k revenue TW and led unit sales with 874 units, while showing exceptional WoW growth of 3118.0%.\n- DOOR MAT RED SPOT and DOOR MAT BLACK FLOCK combined for £2.8k revenue TW, representing strong performance in the door mat category.\n- Total revenue reached £23.4k TW, up 59.2% WoW from £14.7k LW, indicating significant week-over-week acceleration.\n- Total units sold reached 8,300 TW with 425 orders, demonstrating broad customer engagement across the product range.\n- PLEASE ONE PERSON METAL SIGN and YOU'RE CONFUSING ME METAL SIGN showed exceptional momentum with WoW revenue growth of 2101.3% and 1670.7% respectively.\n- RETRO SPOT CAKE STAND contributed £1.1k revenue TW, rounding out the top five revenue-generating products.\n- PINK BLUE FELT CRAFT TRINKET BOX led unit volume among mid-tier products with 657 units sold TW.",
+ "input_tokens": 1719,
+ "output_tokens": 305,
+ "cost_usd": 0.0032440000000000004,
+ "latency_s": 3.926,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

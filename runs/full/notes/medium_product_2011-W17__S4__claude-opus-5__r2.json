@@ -1,0 +1,42 @@
+{
+ "note_id": "medium_product_2011-W17__S4__claude-opus-5__r2",
+ "table_id": "medium_product_2011-W17",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2011-W17",
+ "n_rows": 26,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 2,
+ "note": "- Total revenue was \u00a320,428.39 TW versus \u00a323,564.33 LW, a change of -13.3% WoW, and +40.6% YoY.\n- REGENCY CAKESTAND 3 TIER held rank 1 with revenue \u00a33,804.27 TW, an 18.6% share TW and a change of +52.1% WoW.\n- PARTY BUNTING ranked 2 with revenue \u00a31,840.12 TW and a 9.0% share TW, a change of -47.2% WoW.\n- PAPER CHAIN KIT EMPIRE ranked 3 with revenue \u00a31,266.57 TW and a 6.2% share TW, a change of +16.3% WoW.\n- CERAMIC STRAWBERRY MONEY BOX posted the largest WoW increase at +11249.0%, with revenue \u00a3937.43 TW versus \u00a38.26 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER posted the largest WoW decrease at -83.1%, with revenue \u00a31,028.01 TW versus \u00a36,087.56 LW.\n- UNION STRIPE WITH FRINGE  HAMMOCK led YoY growth at +729.0%, against revenue \u00a387.45 LY, while ASSORTED COLOUR BIRD ORNAMENT fell -70.9% YoY from revenue \u00a31,512.31 LY.\n- PARTY BUNTING recorded the most orders at 35 TW versus 55 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W17. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a320,428.39 TW, revenue \u00a323,564.33 LW, revenue change -13.3% WoW, revenue change +40.6% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a33,804.27 TW, share 18.6% TW, revenue change +52.1% WoW\n- PARTY BUNTING: rank 2, revenue \u00a31,840.12 TW, share 9.0% TW, revenue change -47.2% WoW\n- PAPER CHAIN KIT EMPIRE: rank 3, revenue \u00a31,266.57 TW, share 6.2% TW, revenue change +16.3% WoW\n- CERAMIC STRAWBERRY MONEY BOX (largest WoW increase): revenue change +11249.0% WoW, revenue \u00a3937.43 TW versus \u00a38.26 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (largest WoW decrease): revenue change -83.1% WoW, revenue \u00a31,028.01 TW versus \u00a36,087.56 LW\n- UNION STRIPE WITH FRINGE  HAMMOCK (largest YoY increase): revenue change +729.0% YoY, revenue \u00a387.45 LY\n- ASSORTED COLOUR BIRD ORNAMENT (largest YoY decrease): revenue change -70.9% YoY, revenue \u00a31,512.31 LY\n- PARTY BUNTING (most orders): orders 35 TW versus 55 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue was \u00a320,428.39 TW versus \u00a323,564.33 LW, a change of -13.3% WoW, and +40.6% YoY.\n- REGENCY CAKESTAND 3 TIER held rank 1 with revenue \u00a33,804.27 TW, an 18.6% share TW and a change of +52.1% WoW.\n- PARTY BUNTING ranked 2 with revenue \u00a31,840.12 TW and a 9.0% share TW, a change of -47.2% WoW.\n- PAPER CHAIN KIT EMPIRE ranked 3 with revenue \u00a31,266.57 TW and a 6.2% share TW, a change of +16.3% WoW.\n- CERAMIC STRAWBERRY MONEY BOX posted the largest WoW increase at +11249.0%, with revenue \u00a3937.43 TW versus \u00a38.26 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER posted the largest WoW decrease at -83.1%, with revenue \u00a31,028.01 TW versus \u00a36,087.56 LW.\n- UNION STRIPE WITH FRINGE  HAMMOCK led YoY growth at +729.0%, against revenue \u00a387.45 LY, while ASSORTED COLOUR BIRD ORNAMENT fell -70.9% YoY from revenue \u00a31,512.31 LY.\n- PARTY BUNTING recorded the most orders at 35 TW versus 55 LW.",
+    "input_tokens": 853,
+    "output_tokens": 489,
+    "cost_usd": 0.016489999999999998,
+    "latency_s": 5.93,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a320,428.39 TW, revenue \u00a323,564.33 LW, revenue change -13.3% WoW, revenue change +40.6% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a33,804.27 TW, share 18.6% TW, revenue change +52.1% WoW\n- PARTY BUNTING: rank 2, revenue \u00a31,840.12 TW, share 9.0% TW, revenue change -47.2% WoW\n- PAPER CHAIN KIT EMPIRE: rank 3, revenue \u00a31,266.57 TW, share 6.2% TW, revenue change +16.3% WoW\n- CERAMIC STRAWBERRY MONEY BOX (largest WoW increase): revenue change +11249.0% WoW, revenue \u00a3937.43 TW versus \u00a38.26 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (largest WoW decrease): revenue change -83.1% WoW, revenue \u00a31,028.01 TW versus \u00a36,087.56 LW\n- UNION STRIPE WITH FRINGE  HAMMOCK (largest YoY increase): revenue change +729.0% YoY, revenue \u00a387.45 LY\n- ASSORTED COLOUR BIRD ORNAMENT (largest YoY decrease): revenue change -70.9% YoY, revenue \u00a31,512.31 LY\n- PARTY BUNTING (most orders): orders 35 TW versus 55 LW",
+  "n_calls": 1,
+  "tokens_in": 853,
+  "tokens_out": 489,
+  "cost_usd": 0.016489999999999998,
+  "latency_s": 5.93
+ }
+}

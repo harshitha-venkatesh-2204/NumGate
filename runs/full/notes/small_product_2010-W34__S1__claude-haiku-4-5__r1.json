@@ -1,0 +1,41 @@
+{
+ "note_id": "small_product_2010-W34__S1__claude-haiku-4-5__r1",
+ "table_id": "small_product_2010-W34",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W34",
+ "n_rows": 8,
+ "strategy": "S1",
+ "model": "claude-haiku-4-5",
+ "repeat": 1,
+ "note": "- REGENCY CAKESTAND 3 TIER generated \u00a33265.21 in TW revenue, the highest among all products, representing 23.5% of total revenue and growing 33.4% WoW from \u00a32446.96 in LW.\n- WHITE HANGING HEART T-LIGHT HOLDER declined 30.9% WoW to \u00a33042.82 in TW revenue from \u00a34405.70 in LW, despite maintaining the second-largest share at 21.9%.\n- CAKE STAND LOVEBIRD 2 TIER PINK surged 1441.2% WoW to \u00a31234.18 in TW revenue from just \u00a380.08 in LW, with units increasing from 7 to 205.\n- ASSORTED COLOUR BIRD ORNAMENT grew 49.0% WoW to \u00a31575.76 in TW revenue from \u00a31057.36 in LW, with units rising from 664 to 1000.\n- RED RETROSPOT CAKE STAND increased 182.8% WoW to \u00a31201.80 in TW revenue from \u00a3424.95 in LW, with units climbing from 41 to 148.\n- EDWARDIAN PARASOL NATURAL achieved \u00a31148.67 in TW revenue with a 30.6% WoW increase from \u00a3879.39 in LW across 202 units.\n- PLEASE ONE PERSON METAL SIGN declined 9.2% WoW to \u00a31340.40 in TW revenue from \u00a31475.70 in LW, with units falling from 767 to 684.\n- EDWARDIAN PARASOL BLACK grew 14.9% WoW to \u00a31065.69 in TW revenue from \u00a3927.20 in LW, generating 13 orders in TW versus 14 orders in LW.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W34. Entity type: product. The table has 8 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| REGENCY CAKESTAND 3 TIER | 3265.21 | 2446.96 |  | 263 | 196 | 57 | 38 | 33.4 |  | 23.5 | 1 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 3042.82 | 4405.70 |  | 1118 | 1686 | 69 | 57 | -30.9 |  | 21.9 | 2 |\n| ASSORTED COLOUR BIRD ORNAMENT | 1575.76 | 1057.36 |  | 1000 | 664 | 24 | 21 | 49.0 |  | 11.4 | 3 |\n| PLEASE ONE PERSON METAL SIGN | 1340.40 | 1475.70 |  | 684 | 767 | 34 | 26 | -9.2 |  | 9.7 | 4 |\n| CAKE STAND LOVEBIRD 2 TIER PINK | 1234.18 | 80.08 |  | 205 | 7 | 2 | 4 | 1441.2 |  | 8.9 | 5 |\n| RED RETROSPOT CAKE STAND | 1201.80 | 424.95 |  | 148 | 41 | 13 | 11 | 182.8 |  | 8.7 | 6 |\n| EDWARDIAN PARASOL NATURAL | 1148.67 | 879.39 |  | 202 | 160 | 11 | 10 | 30.6 |  | 8.3 | 7 |\n| EDWARDIAN PARASOL BLACK | 1065.69 | 927.20 |  | 197 | 176 | 13 | 14 | 14.9 |  | 7.7 | 8 |\n\nWrite the insight note now.\n",
+    "text": "- REGENCY CAKESTAND 3 TIER generated \u00a33265.21 in TW revenue, the highest among all products, representing 23.5% of total revenue and growing 33.4% WoW from \u00a32446.96 in LW.\n- WHITE HANGING HEART T-LIGHT HOLDER declined 30.9% WoW to \u00a33042.82 in TW revenue from \u00a34405.70 in LW, despite maintaining the second-largest share at 21.9%.\n- CAKE STAND LOVEBIRD 2 TIER PINK surged 1441.2% WoW to \u00a31234.18 in TW revenue from just \u00a380.08 in LW, with units increasing from 7 to 205.\n- ASSORTED COLOUR BIRD ORNAMENT grew 49.0% WoW to \u00a31575.76 in TW revenue from \u00a31057.36 in LW, with units rising from 664 to 1000.\n- RED RETROSPOT CAKE STAND increased 182.8% WoW to \u00a31201.80 in TW revenue from \u00a3424.95 in LW, with units climbing from 41 to 148.\n- EDWARDIAN PARASOL NATURAL achieved \u00a31148.67 in TW revenue with a 30.6% WoW increase from \u00a3879.39 in LW across 202 units.\n- PLEASE ONE PERSON METAL SIGN declined 9.2% WoW to \u00a31340.40 in TW revenue from \u00a31475.70 in LW, with units falling from 767 to 684.\n- EDWARDIAN PARASOL BLACK grew 14.9% WoW to \u00a31065.69 in TW revenue from \u00a3927.20 in LW, generating 13 orders in TW versus 14 orders in LW.",
+    "input_tokens": 1021,
+    "output_tokens": 446,
+    "cost_usd": 0.0032510000000000004,
+    "latency_s": 4.348,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1021,
+  "tokens_out": 446,
+  "cost_usd": 0.0032510000000000004,
+  "latency_s": 4.348
+ }
+}

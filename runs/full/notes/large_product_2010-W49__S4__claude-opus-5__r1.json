@@ -1,0 +1,42 @@
+{
+ "note_id": "large_product_2010-W49__S4__claude-opus-5__r1",
+ "table_id": "large_product_2010-W49",
+ "size": "large",
+ "entity_type": "product",
+ "week": "2010-W49",
+ "n_rows": 122,
+ "strategy": "S4",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a3157,505.13 TW versus \u00a3129,975.51 LW, a change of +21.2% WoW and +241.2% YoY.\n- REGENCY CAKESTAND 3 TIER held rank 1 with \u00a310,902.59 TW and a 6.9% TW share, a change of -4.8% WoW.\n- VINTAGE UNION JACK MEMOBOARD ranked 2 with \u00a36,561.83 TW and a 4.2% TW share, a change of +1528.2% WoW.\n- WOOD BLACK BOARD ANT WHITE FINISH ranked 3 with \u00a35,715.75 TW and a 3.6% TW share, a change of +1278.4% WoW.\n- UTILTY CABINET WITH HOOKS posted the largest WoW increase at +3003.8%, with \u00a32,509.44 TW versus \u00a380.85 LW.\n- HAND WARMER OWL DESIGN posted the largest WoW decrease at -75.1%, with \u00a3633.57 TW versus \u00a32,542.97 LW.\n- ENGLISH ROSE HOT WATER BOTTLE recorded the largest YoY increase at +35879.3%, against \u00a31.50 LY, while ASSORTED COLOUR BIRD ORNAMENT recorded the largest YoY decrease at -57.1%, against \u00a33,160.37 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 86 orders TW versus 81 orders LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W49. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a3157,505.13 TW, revenue \u00a3129,975.51 LW, revenue change +21.2% WoW, revenue change +241.2% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a310,902.59 TW, share 6.9% TW, revenue change -4.8% WoW\n- VINTAGE UNION JACK MEMOBOARD: rank 2, revenue \u00a36,561.83 TW, share 4.2% TW, revenue change +1528.2% WoW\n- WOOD BLACK BOARD ANT WHITE FINISH: rank 3, revenue \u00a35,715.75 TW, share 3.6% TW, revenue change +1278.4% WoW\n- UTILTY CABINET WITH HOOKS (largest WoW increase): revenue change +3003.8% WoW, revenue \u00a32,509.44 TW versus \u00a380.85 LW\n- HAND WARMER OWL DESIGN (largest WoW decrease): revenue change -75.1% WoW, revenue \u00a3633.57 TW versus \u00a32,542.97 LW\n- ENGLISH ROSE HOT WATER BOTTLE (largest YoY increase): revenue change +35879.3% YoY, revenue \u00a31.50 LY\n- ASSORTED COLOUR BIRD ORNAMENT (largest YoY decrease): revenue change -57.1% YoY, revenue \u00a33,160.37 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 86 TW versus 81 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a3157,505.13 TW versus \u00a3129,975.51 LW, a change of +21.2% WoW and +241.2% YoY.\n- REGENCY CAKESTAND 3 TIER held rank 1 with \u00a310,902.59 TW and a 6.9% TW share, a change of -4.8% WoW.\n- VINTAGE UNION JACK MEMOBOARD ranked 2 with \u00a36,561.83 TW and a 4.2% TW share, a change of +1528.2% WoW.\n- WOOD BLACK BOARD ANT WHITE FINISH ranked 3 with \u00a35,715.75 TW and a 3.6% TW share, a change of +1278.4% WoW.\n- UTILTY CABINET WITH HOOKS posted the largest WoW increase at +3003.8%, with \u00a32,509.44 TW versus \u00a380.85 LW.\n- HAND WARMER OWL DESIGN posted the largest WoW decrease at -75.1%, with \u00a3633.57 TW versus \u00a32,542.97 LW.\n- ENGLISH ROSE HOT WATER BOTTLE recorded the largest YoY increase at +35879.3%, against \u00a31.50 LY, while ASSORTED COLOUR BIRD ORNAMENT recorded the largest YoY decrease at -57.1%, against \u00a33,160.37 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 86 orders TW versus 81 orders LW.",
+    "input_tokens": 872,
+    "output_tokens": 502,
+    "cost_usd": 0.01691,
+    "latency_s": 5.388,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a3157,505.13 TW, revenue \u00a3129,975.51 LW, revenue change +21.2% WoW, revenue change +241.2% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a310,902.59 TW, share 6.9% TW, revenue change -4.8% WoW\n- VINTAGE UNION JACK MEMOBOARD: rank 2, revenue \u00a36,561.83 TW, share 4.2% TW, revenue change +1528.2% WoW\n- WOOD BLACK BOARD ANT WHITE FINISH: rank 3, revenue \u00a35,715.75 TW, share 3.6% TW, revenue change +1278.4% WoW\n- UTILTY CABINET WITH HOOKS (largest WoW increase): revenue change +3003.8% WoW, revenue \u00a32,509.44 TW versus \u00a380.85 LW\n- HAND WARMER OWL DESIGN (largest WoW decrease): revenue change -75.1% WoW, revenue \u00a3633.57 TW versus \u00a32,542.97 LW\n- ENGLISH ROSE HOT WATER BOTTLE (largest YoY increase): revenue change +35879.3% YoY, revenue \u00a31.50 LY\n- ASSORTED COLOUR BIRD ORNAMENT (largest YoY decrease): revenue change -57.1% YoY, revenue \u00a33,160.37 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 86 TW versus 81 LW",
+  "n_calls": 1,
+  "tokens_in": 872,
+  "tokens_out": 502,
+  "cost_usd": 0.01691,
+  "latency_s": 5.388
+ }
+}

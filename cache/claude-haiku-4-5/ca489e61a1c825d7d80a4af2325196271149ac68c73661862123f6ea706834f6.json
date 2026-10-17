@@ -1,0 +1,10 @@
+{
+ "text": "- ENGLISH ROSE DESIGN QUILTED THROW generated £4.6k revenue TW, the highest performing product by revenue this week.\n- Total revenue reached £25.6k TW, representing a 56.2% WoW increase from £16.4k LW.\n- CAMOFLAGE DESIGN TEDDY surged 6340.5% WoW in revenue, the strongest growth rate among all products.\n- PACK OF 72 RETRO SPOT CAKE CASES led unit sales with 1724 units TW, followed by WHITE HANGING HEART T-LIGHT HOLDER at 909 units TW.\n- WHITE HANGING HEART T-LIGHT HOLDER generated £2.4k revenue TW across 43 orders, the highest order count for any product.\n- PINK HAPPY BIRTHDAY BUNTING and BLUE HAPPY BIRTHDAY BUNTING both declined 61.5% and 59.4% WoW respectively in revenue.\n- Total units sold reached 8388 TW, with MAGNETS PACK OF 4 VINTAGE COLLAGE achieving 4954.6% WoW revenue growth despite lower absolute sales.\n- RED RETROSPOT CAKE STAND generated £1.5k revenue TW with 1269.8% WoW growth, demonstrating strong momentum week over week.",
+ "input_tokens": 1913,
+ "output_tokens": 312,
+ "cost_usd": 0.003473,
+ "latency_s": 3.597,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

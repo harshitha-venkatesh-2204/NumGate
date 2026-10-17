@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £38.2k TW versus £22.1k LW, a WoW gain of 72.8%.\n- TOTAL revenue of £38.2k TW compares with £13.1k LY, a YoY increase of 191.8%.\n- TOTAL units hit 18,990 TW, up 118.2% WoW, while orders reached 669 TW, up 11.7% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 1 TW with £3,740.45 revenue, a 9.8% share of TW total.\n- PARTY BUNTING delivered £2,843.54 TW at a 7.4% share, up £1,541.71 WoW.\n- JUMBO BAG RED RETROSPOT posted £2,718.16 TW at a 7.1% share, up £1,362.00 WoW.\n- JUMBO BAG PINK POLKADOT reached £1,917.87 TW (+172.4% WoW) and JUMBO BAG STRAWBERRY £1,707.48 TW (+142.9% WoW), with the top 5 products holding 33.8% of TW revenue.\n- CHILLI LIGHTS fell £859.85 WoW and DOLLY GIRL BABY GIFT SET fell £273.09 WoW.",
+ "input_tokens": 2446,
+ "output_tokens": 431,
+ "cost_usd": 0.023004999999999998,
+ "latency_s": 5.431,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

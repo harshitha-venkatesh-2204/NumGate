@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £4405.70 revenue in TW (2010-W33), the highest among all products, with a WoW increase of 29.4% and 1686 units sold.\n- PARTY BUNTING achieved £3220.36 revenue in TW, representing an 89.8% WoW increase from £1696.49 in LW, with 351 units sold across 9 orders.\n- REGENCY CAKESTAND 3 TIER declined 20.0% WoW to £2446.96 in TW from £3058.79 in LW, despite maintaining 196 units sold across 38 orders.\n- PLEASE ONE PERSON METAL SIGN and COOK WITH WINE METAL SIGN each generated new revenue in TW with £1475.70 and £1141.92 respectively, having zero sales in LW.\n- DOORMAT TOPIARY surged 919.8% WoW to £687.43 in TW from £67.41 in LW, with only 107 units sold across 5 orders.\n- WALL MIRROR RECT DIAMANTE PINK and DIAMANTE HEART SHAPED WALL MIRROR each generated £648.96 revenue in TW with extreme WoW increases of 3923.3% and 1596.6% respectively from minimal LW sales.\n- JUMBO BAG STRAWBERRY fell 68.8% WoW to £760.11 in TW from £2439.76 in LW, with units declining from 1254 to 429.\n- PACK OF 72 RETRO SPOT CAKE CASES decreased 32.6% WoW to £871.56 in TW from £1292.68 in LW, despite selling 1859 units across 36 orders.",
+ "input_tokens": 2967,
+ "output_tokens": 443,
+ "cost_usd": 0.005182,
+ "latency_s": 5.697,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

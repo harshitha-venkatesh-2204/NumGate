@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £25,571.27 TW versus £16,369.32 LW, a change of +56.2% WoW.\n- ENGLISH ROSE DESIGN QUILTED THROW ranked 1 with revenue £4,577.17 TW, a 17.9% TW share and a change of +590.6% WoW.\n- REGENCY CAKESTAND 3 TIER ranked 2 with revenue £2,799.04 TW, a 10.9% TW share and a change of -9.9% WoW.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 3 with revenue £2,420.03 TW, a 9.5% TW share and a change of -20.3% WoW.\n- CAMOFLAGE DESIGN TEDDY posted the largest WoW increase at +6340.5% WoW, with revenue £811.50 TW versus £12.60 LW.\n- PINK HAPPY BIRTHDAY BUNTING posted the largest WoW decrease at -61.5% WoW, with revenue £760.50 TW versus £1,974.45 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER led on order count with 43 orders TW versus 47 orders LW.",
+ "input_tokens": 750,
+ "output_tokens": 415,
+ "cost_usd": 0.014125,
+ "latency_s": 5.235,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

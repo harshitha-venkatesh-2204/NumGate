@@ -1,0 +1,42 @@
+{
+ "note_id": "small_product_2010-W07__S4__claude-haiku-4-5__r2",
+ "table_id": "small_product_2010-W07",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2010-W07",
+ "n_rows": 6,
+ "strategy": "S4",
+ "model": "claude-haiku-4-5",
+ "repeat": 2,
+ "note": "- Total revenue reached \u00a315,781.74 TW, representing a +354.5% WoW increase from \u00a33,472.13 LW.\n- SMALL FAIRY CAKE FRIDGE MAGNETS generated \u00a36,467.60 TW and captured 41.0% of total revenue, ranking as the top product.\n- DOOR MAT RED SPOT achieved \u00a32,021.25 TW with a 12.8% revenue share and posted a +250.6% WoW increase.\n- BLACK AND WHITE PAISLEY FLOWER MUG contributed \u00a31,946.33 TW representing 12.3% of total revenue in rank 3 position.\n- DOOR MAT SPOTTY HOME SWEET HOME experienced the largest WoW growth at +417.3%, rising from \u00a3322.50 LW to \u00a31,668.35 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER recorded \u00a31,901.87 TW with a +17.6% WoW increase from \u00a31,617.50 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the most orders at 47 TW compared to 45 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W07. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a315,781.74 TW, revenue \u00a33,472.13 LW, revenue change +354.5% WoW\n- SMALL FAIRY CAKE FRIDGE MAGNETS: rank 1, revenue \u00a36,467.60 TW, share 41.0% TW\n- DOOR MAT RED SPOT: rank 2, revenue \u00a32,021.25 TW, share 12.8% TW, revenue change +250.6% WoW\n- BLACK AND WHITE PAISLEY FLOWER MUG: rank 3, revenue \u00a31,946.33 TW, share 12.3% TW\n- DOOR MAT SPOTTY HOME SWEET HOME (largest WoW increase): revenue change +417.3% WoW, revenue \u00a31,668.35 TW versus \u00a3322.50 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (largest WoW decrease): revenue change +17.6% WoW, revenue \u00a31,901.87 TW versus \u00a31,617.50 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 47 TW versus 45 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a315,781.74 TW, representing a +354.5% WoW increase from \u00a33,472.13 LW.\n- SMALL FAIRY CAKE FRIDGE MAGNETS generated \u00a36,467.60 TW and captured 41.0% of total revenue, ranking as the top product.\n- DOOR MAT RED SPOT achieved \u00a32,021.25 TW with a 12.8% revenue share and posted a +250.6% WoW increase.\n- BLACK AND WHITE PAISLEY FLOWER MUG contributed \u00a31,946.33 TW representing 12.3% of total revenue in rank 3 position.\n- DOOR MAT SPOTTY HOME SWEET HOME experienced the largest WoW growth at +417.3%, rising from \u00a3322.50 LW to \u00a31,668.35 TW.\n- WHITE HANGING HEART T-LIGHT HOLDER recorded \u00a31,901.87 TW with a +17.6% WoW increase from \u00a31,617.50 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER generated the most orders at 47 TW compared to 45 LW.",
+    "input_tokens": 551,
+    "output_tokens": 282,
+    "cost_usd": 0.001961,
+    "latency_s": 3.137,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a315,781.74 TW, revenue \u00a33,472.13 LW, revenue change +354.5% WoW\n- SMALL FAIRY CAKE FRIDGE MAGNETS: rank 1, revenue \u00a36,467.60 TW, share 41.0% TW\n- DOOR MAT RED SPOT: rank 2, revenue \u00a32,021.25 TW, share 12.8% TW, revenue change +250.6% WoW\n- BLACK AND WHITE PAISLEY FLOWER MUG: rank 3, revenue \u00a31,946.33 TW, share 12.3% TW\n- DOOR MAT SPOTTY HOME SWEET HOME (largest WoW increase): revenue change +417.3% WoW, revenue \u00a31,668.35 TW versus \u00a3322.50 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (largest WoW decrease): revenue change +17.6% WoW, revenue \u00a31,901.87 TW versus \u00a31,617.50 LW\n- WHITE HANGING HEART T-LIGHT HOLDER (most orders): orders 47 TW versus 45 LW",
+  "n_calls": 1,
+  "tokens_in": 551,
+  "tokens_out": 282,
+  "cost_usd": 0.001961,
+  "latency_s": 3.137
+ }
+}

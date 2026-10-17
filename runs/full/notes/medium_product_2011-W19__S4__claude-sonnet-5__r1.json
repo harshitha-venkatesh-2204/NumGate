@@ -1,0 +1,42 @@
+{
+ "note_id": "medium_product_2011-W19__S4__claude-sonnet-5__r1",
+ "table_id": "medium_product_2011-W19",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2011-W19",
+ "n_rows": 30,
+ "strategy": "S4",
+ "model": "claude-sonnet-5",
+ "repeat": 1,
+ "note": "- Total revenue reached \u00a347,157.12 TW versus \u00a324,854.28 LW, a WoW change of +89.7%, and versus LY a YoY change of +291.2%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with \u00a34,290.54 revenue TW, a 9.1% share TW, and a WoW change of +102.8%.\n- PARTY BUNTING ranked 2 with \u00a34,021.56 revenue TW, a 8.5% share TW, and a WoW change of -23.1%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 3 with \u00a32,503.60 revenue TW, a 5.3% share TW, a WoW change of -18.1%, and a YoY change of -15.5% versus \u00a32,963.43 LY.\n- SET/4 WHITE RETRO STORAGE CUBES posted the largest WoW increase at +2093.0%, rising to \u00a31,278.32 TW from \u00a358.29 LW.\n- PAPER BUNTING RETROSPOT posted the largest WoW decrease at -24.8%, falling to \u00a3946.76 TW from \u00a31,259.18 LW.\n- COLOUR GLASS. STAR T-LIGHT HOLDER recorded the largest YoY increase at +1981.9%, up from \u00a359.04 LY.\n- SPOTTY BUNTING had the most orders with 67 TW compared to 29 LW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-sonnet-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W19. Entity type: product.\n\nFacts packet:\n- Total: revenue \u00a347,157.12 TW, revenue \u00a324,854.28 LW, revenue change +89.7% WoW, revenue change +291.2% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a34,290.54 TW, share 9.1% TW, revenue change +102.8% WoW\n- PARTY BUNTING: rank 2, revenue \u00a34,021.56 TW, share 8.5% TW, revenue change -23.1% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 3, revenue \u00a32,503.60 TW, share 5.3% TW, revenue change -18.1% WoW\n- SET/4 WHITE RETRO STORAGE CUBES (largest WoW increase): revenue change +2093.0% WoW, revenue \u00a31,278.32 TW versus \u00a358.29 LW\n- PAPER BUNTING RETROSPOT (largest WoW decrease): revenue change -24.8% WoW, revenue \u00a3946.76 TW versus \u00a31,259.18 LW\n- COLOUR GLASS. STAR T-LIGHT HOLDER (largest YoY increase): revenue change +1981.9% YoY, revenue \u00a359.04 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (largest YoY decrease): revenue change -15.5% YoY, revenue \u00a32,963.43 LY\n- SPOTTY BUNTING (most orders): orders 67 TW versus 29 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue reached \u00a347,157.12 TW versus \u00a324,854.28 LW, a WoW change of +89.7%, and versus LY a YoY change of +291.2%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with \u00a34,290.54 revenue TW, a 9.1% share TW, and a WoW change of +102.8%.\n- PARTY BUNTING ranked 2 with \u00a34,021.56 revenue TW, a 8.5% share TW, and a WoW change of -23.1%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 3 with \u00a32,503.60 revenue TW, a 5.3% share TW, a WoW change of -18.1%, and a YoY change of -15.5% versus \u00a32,963.43 LY.\n- SET/4 WHITE RETRO STORAGE CUBES posted the largest WoW increase at +2093.0%, rising to \u00a31,278.32 TW from \u00a358.29 LW.\n- PAPER BUNTING RETROSPOT posted the largest WoW decrease at -24.8%, falling to \u00a3946.76 TW from \u00a31,259.18 LW.\n- COLOUR GLASS. STAR T-LIGHT HOLDER recorded the largest YoY increase at +1981.9%, up from \u00a359.04 LY.\n- SPOTTY BUNTING had the most orders with 67 TW compared to 29 LW.",
+    "input_tokens": 857,
+    "output_tokens": 477,
+    "cost_usd": 0.006484,
+    "latency_s": 4.413,
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a347,157.12 TW, revenue \u00a324,854.28 LW, revenue change +89.7% WoW, revenue change +291.2% YoY\n- REGENCY CAKESTAND 3 TIER: rank 1, revenue \u00a34,290.54 TW, share 9.1% TW, revenue change +102.8% WoW\n- PARTY BUNTING: rank 2, revenue \u00a34,021.56 TW, share 8.5% TW, revenue change -23.1% WoW\n- WHITE HANGING HEART T-LIGHT HOLDER: rank 3, revenue \u00a32,503.60 TW, share 5.3% TW, revenue change -18.1% WoW\n- SET/4 WHITE RETRO STORAGE CUBES (largest WoW increase): revenue change +2093.0% WoW, revenue \u00a31,278.32 TW versus \u00a358.29 LW\n- PAPER BUNTING RETROSPOT (largest WoW decrease): revenue change -24.8% WoW, revenue \u00a3946.76 TW versus \u00a31,259.18 LW\n- COLOUR GLASS. STAR T-LIGHT HOLDER (largest YoY increase): revenue change +1981.9% YoY, revenue \u00a359.04 LY\n- WHITE HANGING HEART T-LIGHT HOLDER (largest YoY decrease): revenue change -15.5% YoY, revenue \u00a32,963.43 LY\n- SPOTTY BUNTING (most orders): orders 67 TW versus 29 LW",
+  "n_calls": 1,
+  "tokens_in": 857,
+  "tokens_out": 477,
+  "cost_usd": 0.006484,
+  "latency_s": 4.413
+ }
+}

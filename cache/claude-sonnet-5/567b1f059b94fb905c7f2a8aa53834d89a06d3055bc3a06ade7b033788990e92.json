@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £63.3k versus LW £59.2k, a WoW change of 6.9%.\n- TOTAL revenue TW was £63.3k versus LY £38.2k, a YoY change of 65.9%.\n- TOTAL units TW reached 27,369 versus LW 24,791, with TW orders at 1,807 versus LW 1,614.\n- RABBIT NIGHT LIGHT ranked 1 for TW with revenue of £2,152.90 and a 3.4% share.\n- WOOD BLACK BOARD ANT WHITE FINISH posted TW revenue of £2,057.46, a 3.2% share.\n- REGENCY CAKESTAND 3 TIER recorded TW revenue of £1,991.04, a 3.1% share, while RED HARMONICA IN BOX had £1,731.06, a 2.7% share.\n- SMALL ZINC HEART WALL ORGANISER saw a WoW revenue change of 11,787.1%, and CHRISTMAS LIGHTS 10 REINDEER saw a WoW change of 9,372.1%.\n- ALARM CLOCK BAKELIKE RED fell -80.7% WoW and JUMBO BAG ALPHABET fell -79.6% WoW.",
+ "input_tokens": 2362,
+ "output_tokens": 432,
+ "cost_usd": 0.009044,
+ "latency_s": 4.124,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

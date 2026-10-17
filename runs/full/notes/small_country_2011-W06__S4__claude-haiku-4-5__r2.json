@@ -1,0 +1,42 @@
+{
+ "note_id": "small_country_2011-W06__S4__claude-haiku-4-5__r2",
+ "table_id": "small_country_2011-W06",
+ "size": "small",
+ "entity_type": "country",
+ "week": "2011-W06",
+ "n_rows": 10,
+ "strategy": "S4",
+ "model": "claude-haiku-4-5",
+ "repeat": 2,
+ "note": "- Total revenue across all countries reached \u00a3103,744.81 TW, representing a decline of 12.1% WoW from \u00a3117,975.95 LW.\n- Total revenue increased 23.4% YoY, demonstrating strong year-over-year growth despite the weekly decline.\n- United Kingdom maintained rank 1 with revenue of \u00a389,759.37 TW, accounting for 86.5% of total revenue TW, but declined 15.9% WoW.\n- Japan achieved the largest WoW increase with revenue change of +12485.6% WoW, growing from \u00a345.57 LW to \u00a35,735.24 TW and reaching rank 2.\n- Germany held rank 3 with revenue of \u00a32,840.80 TW representing 2.7% of total revenue TW, declining 27.0% WoW.\n- United Kingdom showed the largest YoY increase with revenue change of +20.5% YoY, growing from \u00a374,480.20 LY to \u00a389,759.37 TW.\n- France experienced the largest WoW decrease with revenue change of -85.1% WoW, falling from \u00a35,710.94 LW to \u00a3852.44 TW.\n- France recorded the largest YoY decrease with revenue change of -82.3% YoY, declining from \u00a34,804.52 LY to \u00a3852.44 TW.",
+ "trace": {
+  "strategy": "S4",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You are given a facts packet computed from the sales table. Every number in the note must be copied exactly as it is written in the packet: do not round, recompute, or add numbers.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W06. Entity type: country.\n\nFacts packet:\n- Total: revenue \u00a3103,744.81 TW, revenue \u00a3117,975.95 LW, revenue change -12.1% WoW, revenue change +23.4% YoY\n- United Kingdom: rank 1, revenue \u00a389,759.37 TW, share 86.5% TW, revenue change -15.9% WoW\n- Japan: rank 2, revenue \u00a35,735.24 TW, share 5.5% TW, revenue change +12485.6% WoW\n- Germany: rank 3, revenue \u00a32,840.80 TW, share 2.7% TW, revenue change -27.0% WoW\n- Japan (largest WoW increase): revenue change +12485.6% WoW, revenue \u00a35,735.24 TW versus \u00a345.57 LW\n- France (largest WoW decrease): revenue change -85.1% WoW, revenue \u00a3852.44 TW versus \u00a35,710.94 LW\n- United Kingdom (largest YoY increase): revenue change +20.5% YoY, revenue \u00a374,480.20 LY\n- France (largest YoY decrease): revenue change -82.3% YoY, revenue \u00a34,804.52 LY\n- United Kingdom (most orders): orders 204 TW versus 263 LW\n\nWrite the insight note now.\n",
+    "text": "- Total revenue across all countries reached \u00a3103,744.81 TW, representing a decline of 12.1% WoW from \u00a3117,975.95 LW.\n\n- Total revenue increased 23.4% YoY, demonstrating strong year-over-year growth despite the weekly decline.\n\n- United Kingdom maintained rank 1 with revenue of \u00a389,759.37 TW, accounting for 86.5% of total revenue TW, but declined 15.9% WoW.\n\n- Japan achieved the largest WoW increase with revenue change of +12485.6% WoW, growing from \u00a345.57 LW to \u00a35,735.24 TW and reaching rank 2.\n\n- Germany held rank 3 with revenue of \u00a32,840.80 TW representing 2.7% of total revenue TW, declining 27.0% WoW.\n\n- United Kingdom showed the largest YoY increase with revenue change of +20.5% YoY, growing from \u00a374,480.20 LY to \u00a389,759.37 TW.\n\n- France experienced the largest WoW decrease with revenue change of -85.1% WoW, falling from \u00a35,710.94 LW to \u00a3852.44 TW.\n\n- France recorded the largest YoY decrease with revenue change of -82.3% YoY, declining from \u00a34,804.52 LY to \u00a3852.44 TW.",
+    "input_tokens": 592,
+    "output_tokens": 340,
+    "cost_usd": 0.0022919999999999998,
+    "latency_s": 3.576,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "packet": "- Total: revenue \u00a3103,744.81 TW, revenue \u00a3117,975.95 LW, revenue change -12.1% WoW, revenue change +23.4% YoY\n- United Kingdom: rank 1, revenue \u00a389,759.37 TW, share 86.5% TW, revenue change -15.9% WoW\n- Japan: rank 2, revenue \u00a35,735.24 TW, share 5.5% TW, revenue change +12485.6% WoW\n- Germany: rank 3, revenue \u00a32,840.80 TW, share 2.7% TW, revenue change -27.0% WoW\n- Japan (largest WoW increase): revenue change +12485.6% WoW, revenue \u00a35,735.24 TW versus \u00a345.57 LW\n- France (largest WoW decrease): revenue change -85.1% WoW, revenue \u00a3852.44 TW versus \u00a35,710.94 LW\n- United Kingdom (largest YoY increase): revenue change +20.5% YoY, revenue \u00a374,480.20 LY\n- France (largest YoY decrease): revenue change -82.3% YoY, revenue \u00a34,804.52 LY\n- United Kingdom (most orders): orders 204 TW versus 263 LW",
+  "n_calls": 1,
+  "tokens_in": 592,
+  "tokens_out": 340,
+  "cost_usd": 0.0022919999999999998,
+  "latency_s": 3.576
+ }
+}

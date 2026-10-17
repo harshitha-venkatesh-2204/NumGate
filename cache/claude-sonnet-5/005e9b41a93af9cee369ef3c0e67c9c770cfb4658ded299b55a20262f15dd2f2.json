@@ -1,0 +1,10 @@
+{
+ "text": "- REGENCY CAKESTAND 3 TIER ranks 1 TW with revenue of £3429.15, up 70.1% WoW from £2015.58 LW and up 61.5% YoY from £2123.10 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER ranks 2 TW with £3266.50, up 330.0% WoW from £759.60 LW, but down 3.1% YoY from £3370.47 LY.\n- PARTY BUNTING fell 62.6% WoW to £1795.82 TW from £4796.67 LW, while YoY revenue rose 462.6% from £319.20 LY.\n- DOORMAT HEARTS dropped 86.8% WoW to £309.46 TW from £2345.43 LW, and fell 80.4% YoY from £1582.84 LY.\n- POLKADOT PEN revenue rose from £1.63 LW to £297.01 TW, a WoW increase of 18121.5%.\n- JUMBO BAG RED RETROSPOT revenue fell 67.8% WoW to £866.33 TW from £2686.52 LW, and declined 43.2% YoY from £1524.83 LY.\n- SET 40 HEART SHAPE PETIT FOUR CASES generated £791.70 TW from 538 units across 7 orders, with £0.00 recorded LW.\n- BROCADE RING PURSE revenue rose 187.0% WoW to £264.68 TW from £92.22 LW, and climbed 10158.9% YoY from £2.58 LY.",
+ "input_tokens": 7862,
+ "output_tokens": 524,
+ "cost_usd": 0.020963999999999997,
+ "latency_s": 4.927,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER remains TW rank 1 with £3740.98 revenue, down 1.4% WoW from £3792.77 LW.\n- RED HANGING HEART T-LIGHT HOLDER rose to £1807.91 TW from £822.00 LW, a WoW increase of 119.9%.\n- SET/3 RUSSIAN DOLL STACKING TINS jumped to £1718.73 TW from £159.75 LW, up 975.9% WoW.\n- KENSINGTON COFFEE SET fell sharply to £1632.90 TW from £7750.05 LW, a WoW decline of 78.9%.\n- JUMBO BAG RED WHITE SPOTTY increased to £1557.40 TW from £1136.55 LW, up 37.0% WoW.\n- ASSORTED COLOUR BIRD ORNAMENT dropped to £427.99 TW from £1386.13 LW, down 69.1% WoW.\n- CHERRY DESIGN PAPERLANTERNS surged to £635.70 TW from £4.21 LW, a WoW rise of 14999.8%.\n- Total rows reported: 109 products, with WHITE HANGING HEART T-LIGHT HOLDER holding the top Share_Pct of 6.1% TW.",
+ "input_tokens": 8418,
+ "output_tokens": 450,
+ "cost_usd": 0.021336,
+ "latency_s": 4.96,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

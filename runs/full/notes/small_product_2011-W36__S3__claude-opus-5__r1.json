@@ -1,0 +1,49 @@
+{
+ "note_id": "small_product_2011-W36__S3__claude-opus-5__r1",
+ "table_id": "small_product_2011-W36",
+ "size": "small",
+ "entity_type": "product",
+ "week": "2011-W36",
+ "n_rows": 8,
+ "strategy": "S3",
+ "model": "claude-opus-5",
+ "repeat": 1,
+ "note": "- PLEASE ONE PERSON METAL SIGN led TW at \u00a32,773.43, up from \u00a381.90 LW (WoW +3,286.4%) and \u00a3603.92 LY (YoY +359.2%), holding 20.7% share at Rank 1.\n- PARTY BUNTING ranked 2 with \u00a31,825.40 TW versus \u00a31,410.09 LW (WoW +29.5%) and \u00a331.72 LY (YoY +5,654.7%), on 300 units TW against 207 LW.\n- REGENCY CAKESTAND 3 TIER posted \u00a31,825.17 TW versus \u00a31,991.04 LW (WoW -8.3%) and \u00a33,712.01 LY (YoY -50.8%), the steepest YoY decline among the 8 rows.\n- HAND WARMER OWL DESIGN reached \u00a31,611.60 TW from \u00a3311.93 LW (WoW +416.7%), with units at 836 TW versus 159 LW and orders at 23 TW versus 7 LW.\n- COOK WITH WINE METAL SIGN recorded \u00a31,415.04 TW against \u00a352.00 LW (WoW +2,621.2%) and \u00a3146.56 LY (YoY +865.5%), taking 10.6% share.\n- PAPER CHAIN KIT 50'S CHRISTMAS delivered \u00a31,347.29 TW versus \u00a3520.28 LW (WoW +159.0%) and \u00a335.40 LY (YoY +3,705.9%), with 495 units TW.\n- JUMBO BAG PINK POLKADOT came in at \u00a31,326.41 TW versus \u00a3573.29 LW (WoW +131.4%) on 36 orders TW against 25 LW, with no LY revenue recorded; WHITE HANGING HEART T-LIGHT HOLDER was Rank 8 at \u00a31,285.11 TW (WoW +17.2%, YoY -48.2%).\n- The 8 listed products totalled \u00a313,409.45 TW versus \u00a36,036.77 LW (WoW +122.1%) and \u00a37,074.19 LY (YoY +89.6%).",
+ "trace": {
+  "strategy": "S3",
+  "model": "claude-opus-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2011-W36. Entity type: product. The table has 8 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| PLEASE ONE PERSON METAL SIGN | 2773.43 | 81.90 | 603.92 | 1398 | 39 | 41 | 5 | 3286.4 | 359.2 | 20.7 | 1 |\n| PARTY BUNTING | 1825.40 | 1410.09 | 31.72 | 300 | 207 | 30 | 34 | 29.5 | 5654.7 | 13.6 | 2 |\n| REGENCY CAKESTAND 3 TIER | 1825.17 | 1991.04 | 3712.01 | 150 | 147 | 28 | 27 | -8.3 | -50.8 | 13.6 | 3 |\n| HAND WARMER OWL DESIGN | 1611.60 | 311.93 | 63.00 | 836 | 159 | 23 | 7 | 416.7 | 2458.1 | 12.0 | 4 |\n| COOK WITH WINE METAL SIGN | 1415.04 | 52.00 | 146.56 | 744 | 25 | 23 | 3 | 2621.2 | 865.5 | 10.6 | 5 |\n| PAPER CHAIN KIT 50'S CHRISTMAS | 1347.29 | 520.28 | 35.40 | 495 | 192 | 25 | 12 | 159.0 | 3705.9 | 10.0 | 6 |\n| JUMBO BAG PINK POLKADOT | 1326.41 | 573.29 | 0.00 | 657 | 248 | 36 | 25 | 131.4 |  | 9.9 | 7 |\n| WHITE HANGING HEART T-LIGHT HOLDER | 1285.11 | 1096.24 | 2481.58 | 449 | 396 | 37 | 33 | 17.2 | -48.2 | 9.6 | 8 |\n\nWrite the insight note now.\n",
+    "text": "- PLEASE ONE PERSON METAL SIGN led TW at \u00a32,773.43, up from \u00a381.90 LW (WoW +3,286.4%) and \u00a3603.92 LY (YoY +359.2%), holding 20.7% share at Rank 1.\n- PARTY BUNTING ranked 2 with \u00a31,825.40 TW versus \u00a31,410.09 LW (WoW +29.5%) and \u00a331.72 LY (YoY +5,654.7%), on 300 units TW against 207 LW.\n- REGENCY CAKESTAND 3 TIER posted \u00a31,825.17 TW versus \u00a31,991.04 LW (WoW -8.3%) and \u00a33,712.01 LY (YoY -50.8%), the steepest YoY decline among the 8 rows.\n- HAND WARMER OWL DESIGN reached \u00a31,611.60 TW from \u00a3311.93 LW (WoW +416.7%), with units at 836 TW versus 159 LW and orders at 23 TW versus 7 LW.\n- COOK WITH WINE METAL SIGN recorded \u00a31,415.04 TW against \u00a352.00 LW (WoW +2,621.2%) and \u00a3146.56 LY (YoY +865.5%), taking 10.6% share.\n- PAPER CHAIN KIT 50'S CHRISTMAS delivered \u00a31,347.29 TW versus \u00a3520.28 LW (WoW +159.0%) and \u00a335.40 LY (YoY +3,705.9%), with 495 units TW.\n- JUMBO BAG PINK POLKADOT came in at \u00a31,326.41 TW versus \u00a3573.29 LW (WoW +131.4%) on 36 orders TW against 25 LW, with no LY revenue recorded; WHITE HANGING HEART T-LIGHT HOLDER was Rank 8 at \u00a31,285.11 TW (WoW +17.2%, YoY -48.2%).\n- The 8 listed products totalled \u00a313,409.45 TW versus \u00a36,036.77 LW (WoW +122.1%) and \u00a37,074.19 LY (YoY +89.6%).",
+    "input_tokens": 1292,
+    "output_tokens": 1118,
+    "cost_usd": 0.034409999999999996,
+    "latency_s": 12.587,
+    "model": "claude-opus-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": true
+   }
+  ],
+  "code_runs": [],
+  "rounds": [
+   {
+    "round": 0,
+    "n_checked": 53,
+    "n_unsupported": 0,
+    "unsupported_rate": 0.0,
+    "note": "- PLEASE ONE PERSON METAL SIGN led TW at \u00a32,773.43, up from \u00a381.90 LW (WoW +3,286.4%) and \u00a3603.92 LY (YoY +359.2%), holding 20.7% share at Rank 1.\n- PARTY BUNTING ranked 2 with \u00a31,825.40 TW versus \u00a31,410.09 LW (WoW +29.5%) and \u00a331.72 LY (YoY +5,654.7%), on 300 units TW against 207 LW.\n- REGENCY CAKESTAND 3 TIER posted \u00a31,825.17 TW versus \u00a31,991.04 LW (WoW -8.3%) and \u00a33,712.01 LY (YoY -50.8%), the steepest YoY decline among the 8 rows.\n- HAND WARMER OWL DESIGN reached \u00a31,611.60 TW from \u00a3311.93 LW (WoW +416.7%), with units at 836 TW versus 159 LW and orders at 23 TW versus 7 LW.\n- COOK WITH WINE METAL SIGN recorded \u00a31,415.04 TW against \u00a352.00 LW (WoW +2,621.2%) and \u00a3146.56 LY (YoY +865.5%), taking 10.6% share.\n- PAPER CHAIN KIT 50'S CHRISTMAS delivered \u00a31,347.29 TW versus \u00a3520.28 LW (WoW +159.0%) and \u00a335.40 LY (YoY +3,705.9%), with 495 units TW.\n- JUMBO BAG PINK POLKADOT came in at \u00a31,326.41 TW versus \u00a3573.29 LW (WoW +131.4%) on 36 orders TW against 25 LW, with no LY revenue recorded; WHITE HANGING HEART T-LIGHT HOLDER was Rank 8 at \u00a31,285.11 TW (WoW +17.2%, YoY -48.2%).\n- The 8 listed products totalled \u00a313,409.45 TW versus \u00a36,036.77 LW (WoW +122.1%) and \u00a37,074.19 LY (YoY +89.6%)."
+   }
+  ],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 1292,
+  "tokens_out": 1118,
+  "cost_usd": 0.034409999999999996,
+  "latency_s": 12.587
+ }
+}

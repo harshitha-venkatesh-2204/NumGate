@@ -513,7 +513,7 @@ footer p { margin: 0; max-width: 110ch; }
       <div class="mctl">
         <div class="legend" id="mlegend">
           <span><i class="lt0"></i>matches a table cell</span><span><i class="lt1"></i>derived from the table</span><span><i class="lt2"></i>skipped</span>
-          <span><i class="lt3"></i>error under the current gate</span><span><i class="lt4"></i>flagged by gate v1 only</span><span><i class="lt5"></i>cleared on hand check (stet)</span>
+          <span><i class="lt3"></i>error under the current gate</span><span><i class="lt4"></i>flagged by gate v1 only</span><span><i class="lt5"></i>cleared on table check (stet)</span>
         </div>
         <button type="button" class="ctlbtn" id="motionBtn">Motion: on</button>
         <button type="button" class="ctlbtn" id="replayBtn">Replay the sort</button>
@@ -542,7 +542,7 @@ footer p { margin: 0; max-width: 110ch; }
           <div class="formula" id="wformula"></div>
           <p class="natural" id="wnatural" style="margin:10px 0 4px"></p>
           <p class="small" id="wout" style="margin:0"></p>
-          <p class="small" style="margin:8px 0 0;font-weight:600">Flags are for triage: a person must look.</p>
+          <p class="small" style="margin:8px 0 0;font-weight:600">Flags are for triage: each one needs a check against the table.</p>
         </div>
       </div></div>
     </section>
@@ -612,7 +612,7 @@ footer p { margin: 0; max-width: 110ch; }
             <li>Intervals are 95% percentile bootstrap intervals over notes (1,000 resamples), computed in the browser, so they can differ slightly from results/summary.csv.</li>
             <li>S2 notes whose facts script failed twice are excluded from rates.</li>
             <li>Gate v1 flags come from re-scoring the same notes with the first version of the gate (paper/rescore_v1.py).</li>
-            <li>The hand check is the paper's adjudication of the pilot.</li>
+            <li>The table check is the paper's adjudication of the pilot: every flag compared with the source table, with AI assistance and programmatic cell lookups, not a human audit. The full study's verdicts come from a blind review by AI agents (paper/adjudication).</li>
             <li>Rebuild this page with <span class="mono">python src/analyze.py</span>.</li>
           </ul></div>
       </div>
@@ -751,7 +751,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   var BIN_NAMES = ["Matches a table cell", "Derived from the table", "Skipped", "Flagged"];
   var BIN_SHORT = ["CELL", "DERIVED", "SKIPPED", "FLAGGED"];
   var CLAIM_PILL = { Correct: "good", Wrong_entity: "bad", Wrong_metric: "bad", Wrong_value: "bad", Unverifiable: "neutral" };
-  var GATE_LABEL = { v1: "Gate v1, first", hand: "Hand check", v3: "Gate v3, current" };
+  var GATE_LABEL = { v1: "Gate v1, first", hand: "Table check", v3: "Gate v3, current" };
   var LIST_LIMIT = 150;
   var mqReduce = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
   var REDUCED = mqReduce.matches;
@@ -1138,13 +1138,15 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   function wholeRun(R) {
     var ok = R.notes.filter(function (n) { return !n.failed; });
     var checked = sum(ok, function (n) { return n.nChecked; }), uns = sum(ok, function (n) { return n.nUns; });
-    var f3 = 0, v1 = 0, real = 0, lines = new Set();
+    var f3 = 0, v1 = 0, real = 0, confirmed = 0, lines = new Set();
     for (var i = 0; i < R.numbers.length; i++) {
-      if (R.flags && R.flags[i]) { f3++; lines.add(R.numbers[i][0] + "|" + R.numbers[i][1]); if (R.v1 && R.v1[i]) real++; }
+      if (R.flags && R.flags[i]) { f3++; lines.add(R.numbers[i][0] + "|" + R.numbers[i][1]); if (R.v1 && R.v1[i]) real++; if (R.review && R.review[i] === 2) confirmed++; }
       if (R.v1 && R.v1[i]) v1++;
     }
-    return { numbers: R.numbers.length, checked: checked, uns: uns, f3: f3, v1: v1, real: real, sentences: lines.size, tables: uniq(R.notes.map(function (n) { return n.table; })).length,
-      oneIn: uns ? Math.round(checked / uns) : null };
+    // with a blind review, "numbers wrong" counts confirmed errors, not raw gate flags
+    var wrong = R.review ? confirmed : uns;
+    return { numbers: R.numbers.length, checked: checked, uns: uns, f3: f3, v1: v1, real: real, confirmed: confirmed, sentences: lines.size, tables: uniq(R.notes.map(function (n) { return n.table; })).length,
+      oneIn: wrong ? Math.round(checked / wrong) : null };
   }
   function aliveCounts() {
     var B = M.b, out = { v1: 0, f3: 0, real: 0, uns: 0, claimOnly: 0 };
@@ -1162,7 +1164,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var R = run(), W = wholeRun(R), ok = handOK(R);
     var title = PAPER.title.split(":")[0];
     $("h1").textContent = title;
-    $("findEyebrow").textContent = (R.isMock ? "Test run · " : "Pilot run · ") + R.label + " · " + R.notes.length + " notes · " + W.tables + " weekly tables";
+    $("findEyebrow").textContent = (R.isMock ? "Test run \u00b7 " : R.v1 ? "Pilot run \u00b7 " : "Full study \u00b7 ") + R.label + " · " + R.notes.length + " notes · " + W.tables + " weekly tables";
     var L = $("lede"); clear(L);
     if (R.isMock) {
       L.append("The mock model is a template writer that plants errors on purpose. It wrote ", fig(int(R.notes.length)), " notes containing ", fig(int(W.numbers)),
@@ -1170,7 +1172,8 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     } else {
       L.append(R.label + " wrote ", fig(int(R.notes.length)), " weekly sales notes containing ", fig(int(W.numbers)), " numbers. The gate checked ", fig(int(W.checked)), " of them against the source tables.");
       if (R.v1) L.append(" Its first version flagged ", fig(int(W.v1)), ".");
-      if (ok) L.append(" A person checked every flag: ", fig(int(W.real), true), " were wrong, " + (W.sentences === 1 ? "all in one sentence." : "in " + W.sentences + " sentences."));
+      if (ok) L.append(" Every flag was checked against the table: ", fig(int(W.real), true), " were wrong, " + (W.sentences === 1 ? "all in one sentence." : "in " + W.sentences + " sentences."));
+      else if (R.review) L.append(" The gate flags ", fig(int(W.f3)), " of them; a blind review confirmed ", fig(int(W.confirmed), true), " as real errors.");
       else L.append(" The current gate flags ", fig(int(W.f3), true), ".");
     }
     var bt = $("beats");
@@ -1204,8 +1207,10 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
         tile(oneIn(), "numbers unsupported", "", { go: "bench", key: "tile:bench", onclick: function () { setBench(W.oneIn ? 1 / W.oneIn : null, "mock"); scrollToEl($("bench-plate")); } }));
     } else {
       if (R.v1) box.append(tile(int(A.v1), "flagged by gate v1", "alarm", { pressed: g === "v1", go: "pull", key: "tile:v1", onclick: function () { setGate("v1"); }, title: "Show gate v1's flags in the machine" }));
-      if (handOK(R)) box.append(tile(int(A.real), "real errors on hand check", "err", { pressed: g === "hand", go: "check", key: "tile:hand", onclick: function () { setGate("hand"); } }));
+      if (handOK(R)) box.append(tile(int(A.real), "real errors on table check", "err", { pressed: g === "hand", go: "check", key: "tile:hand", onclick: function () { setGate("hand"); } }));
       box.append(tile(int(A.f3), "flagged by gate v3, current", "err", { pressed: g === "v3", go: R.v1 ? "pull" : null, key: "tile:v3", onclick: function () { setGate("v3"); } }));
+      var rcT = reviewCounts();
+      if (rcT && rcT.reviewed && !R.v1) box.append(tile(int(rcT.wrong), "confirmed real errors (blind review)", "err", { button: false }));
       box.append(tile(oneIn(), "numbers wrong", "", { go: "bench", key: "tile:bench", onclick: function () { setBench(STORY && R.v1 ? STORY.base : W.oneIn ? 1 / W.oneIn : null, "pilot"); scrollToEl($("bench-plate")); } }));
     }
     var cap = h("p", { cls: "tiles-cap" }, [R.isMock ? "Planted errors test the pipeline. They say nothing about real models." : "Same notes, same numbers. Only the gate's rules change."]);
@@ -1775,7 +1780,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var A = aliveCounts(), g = state.gate, B = M.b, moved = 0;
     for (var i = 0; i < B.n; i++) if (B.alive[i] && B.f1[i] && !B.f3[i]) moved++;
     if (g === "v1") announce("Gate v1: " + A.v1 + " numbers flagged, " + moved + " of them moved from the cell and derived bins.");
-    else if (g === "hand") announce("Hand check: " + A.real + " real errors, " + moved + " cleared.");
+    else if (g === "hand") announce("Table check: " + A.real + " real errors, " + moved + " cleared.");
     else announce("Gate v3: " + A.f3 + " numbers flagged.");
   }
   function buildLever() {
@@ -1891,7 +1896,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     });
     renderLever(); updateBinLabels(true); setReadout(M.cursor); updateRulesLabel();
   }
-  function updateRulesLabel() { if (M.rulesBtn) M.rulesBtn.textContent = "Rules " + (state.gate === "v1" ? "v1" : state.gate === "hand" ? "v1 + hand check" : "v3"); }
+  function updateRulesLabel() { if (M.rulesBtn) M.rulesBtn.textContent = "Rules " + (state.gate === "v1" ? "v1" : state.gate === "hand" ? "v1 + table check" : "v3"); }
   var popEl = null;
   function closePopover() { if (popEl) { popEl.remove(); popEl = null; if (M.rulesBtn) M.rulesBtn.setAttribute("aria-expanded", "false"); } }
   function togglePopover(btn) {
@@ -1900,7 +1905,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var body = g === "v3"
       ? "Level 1 checks, in order: cells of the entities the line names; values derived from them and from named groups and families; table-level aggregates; any other cell. Anything else is unsupported. Names, week labels and counting phrases are skipped. Level 2 then checks that each claim's value belongs to the entity, metric and period it is attached to."
       : g === "v1" ? "Gate v1 was the first version, written before any real notes existed. On the pilot its false alarms came mostly from group or top-k figures read as whole-table totals, levels next to an LW or LY label read as changes, and direction words applied to levels."
-      : "A person compared every number gate v1 flagged on the pilot with the source table: the paper's adjudication. Cleared numbers keep their place in the flagged bin with a stet mark.";
+      : "Every number gate v1 flagged on the pilot was checked against the source table, with AI assistance and programmatic cell lookups (not a human audit): the paper's adjudication. Cleared numbers keep their place in the flagged bin with a stet mark.";
     popEl = h("div", { cls: "popover", id: "rulesPop", role: "dialog", "aria-label": "Gate rules" }, [h("h3", { text: GATE_LABEL[g] }), h("p", { style: "margin:0", text: body }),
       h("button", { type: "button", cls: "linkbtn", text: "Close", onclick: closePopover })]);
     popEl.style.left = Math.max(G.pad, Math.min(G.W - 420 - G.pad, G.gx)) + "px"; popEl.style.top = (G.gy + G.gh + 6) + "px";
@@ -1970,7 +1975,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     if (B.f3[i] && B.lab[i] !== 3) { var c = claimFor(i); return (x[4] || "matched") + " at Level 1, but its claim is " + (c ? c[6].replace("_", " ").replace("Wrong", "wrong") : "wrong"); }
     if (B.lab[i] === 3) return "no table cell or derived value matches";
     if (B.lab[i] === 2) return "skipped: " + skipKind(x[4]);
-    if (g === "hand" && B.f1[i]) return (x[4] || "") + ", flagged by gate v1, cleared on hand check (stet)";
+    if (g === "hand" && B.f1[i]) return (x[4] || "") + ", flagged by gate v1, cleared on table check (stet)";
     if (g !== "v3" && B.f1[i]) return (x[4] || "") + ", but gate v1 flagged it";
     return x[4] || "";
   }
@@ -2042,11 +2047,13 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var ev = x[4] && B.lab[i] !== 2 ? x[4] : B.lab[i] === 2 ? "reason: " + skipKind(x[4]) : B.lab[i] === 3 ? "no table cell or derived value matches" : "";
     if (ev) ticket.append(h("div", { cls: "ev", text: ev }));
     var diff = null;
-    if (B.f1[i] && !B.f3[i]) diff = "Gate v1 flagged this number. Gate v3 matches it" + (x[4] ? ": " + x[4] : "") + "." + (handOK(R) ? " Cleared on hand check (stet)." : "");
+    if (B.f1[i] && !B.f3[i]) diff = "Gate v1 flagged this number. Gate v3 matches it" + (x[4] ? ": " + x[4] : "") + "." + (handOK(R) ? " Cleared on table check (stet)." : "");
     else if (B.f3[i] && B.lab[i] !== 3) { var c = claimFor(i); diff = "Level 1 matched " + (B.lab[i] === 1 ? "a derived value" : "a cell") + ", but its claim was marked " + (c ? c[6].replace("_", " ").toLowerCase() : "wrong") + (c && c[7] ? ": " + c[7] : "") + "."; }
-    else if (B.f3[i] && B.f1[i] && handOK(R)) diff = "Confirmed as a real error on hand check.";
+    else if (B.f3[i] && B.f1[i] && handOK(R)) diff = "Confirmed as a real error on table check.";
     if (g === "v3" && B.f1[i] && !B.f3[i]) diff = "Only gate v1 flagged this number; gate v3 matches it" + (x[4] ? ": " + x[4] : "") + ".";
     if (diff) ticket.append(h("div", { cls: "td", text: diff }));
+    if (R.review && R.review[i]) ticket.append(h("div", { cls: "td", text: "Blind review: " + ["", "correct", "wrong", "unclear", "not a measurement"][R.review[i]] +
+      (B.f3[i] || B.lab[i] === 3 ? (R.review[i] === 2 ? ", so this flag is a real error." : ", so this flag is a false alarm.") : " (one of the sampled unflagged numbers).") }));
     if (sheet) {
       ticket.append(h("div", { cls: "tb" }, [h("button", { type: "button", cls: "ctlbtn", text: "Open note", onclick: function () { hideTicket(); openDrawer(n.idx, i, M.wrap); } }),
         h("button", { type: "button", cls: "ctlbtn", text: "Close", onclick: hideTicket })]));
@@ -2264,8 +2271,25 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var m = /(\d[\d,]*)\s*\/\s*(\d[\d,]*)\s*\(([\d.]+)\)/.exec(str || "");
     return m ? { k: +m[1].replace(/,/g, ""), n: +m[2].replace(/,/g, ""), pct: +m[3] } : null;
   }
+  function reviewCounts() {
+    var R = run(), B = M.b, out = { flags: 0, reviewed: 0, wrong: 0, unclear: 0 };
+    if (!R.review || !B) return null;
+    for (var i = 0; i < B.n; i++) {
+      if (!B.alive[i] || !(B.f3[i] || B.lab[i] === 3)) continue;
+      out.flags++;
+      if (R.review[i]) { out.reviewed++; if (R.review[i] === 2) out.wrong++; else if (R.review[i] === 3) out.unclear++; }
+    }
+    return out;
+  }
   function renderCaption() {
     var R = run(), A = aliveCounts(), g = state.gate, cap = $("mcap"), B = M.b; clear(cap);
+    var rc = reviewCounts();
+    if (rc && rc.reviewed && !R.isMock) {
+      cap.append("The gate flags " + int(rc.flags) + (rc.flags === 1 ? " number" : " numbers") + " in these notes. A blind review of every flag confirmed " + int(rc.wrong) + " as real errors; " +
+        int(rc.reviewed - rc.wrong - rc.unclear) + " are false alarms" + (rc.unclear ? " and " + int(rc.unclear) + " could not be settled" : "") + ". ");
+      cap.append(h("button", { type: "button", cls: "linkbtn", text: "See the test bench", onclick: function () { scrollToEl($("bench-plate")); flashCalib(); } }));
+      return;
+    }
     if (R.isMock) {
       cap.append("The mock writer plants errors on purpose: the gate flags " + int(A.f3) + " numbers in these notes, " + int(A.uns) + " not found in the table and " + int(A.claimOnly) + " that are the values of wrong claims.");
       return;
@@ -2285,7 +2309,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
         cap.append("Gate v1 flagged " + int(A.v1) + " numbers in " + notesWith.size + " of " + filtered().length + " notes. Ochre dots are numbers only gate v1 flagged.");
         if (top && A.v1) cap.append(" Most came from " + top + ": " + byTable[top] + " of " + int(A.v1) + ".");
       } else {
-        cap.append("Hand check from the paper's adjudication of the pilot: " + int(A.v1 - A.real) + " of the " + int(A.v1) + " numbers were correct and are marked stet. The " + A.real + " that remain are the real errors.");
+        cap.append("Table check from the paper's adjudication of the pilot: " + int(A.v1 - A.real) + " of the " + int(A.v1) + " numbers were correct and are marked stet. The " + A.real + " that remain are the real errors.");
       }
     }
   }
@@ -2311,7 +2335,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     if (cs._key !== key) {
       cs._key = key; clear(cs);
       st.forEach(function (s_) {
-        var b = h("button", { type: "button", role: "radio", "data-stop": s_, text: s_ === "v1" ? "Gate v1" : s_ === "hand" ? "Hand check" : "Gate v3" });
+        var b = h("button", { type: "button", role: "radio", "data-stop": s_, text: s_ === "v1" ? "Gate v1" : s_ === "hand" ? "Table check" : "Gate v3" });
         b.addEventListener("click", function () { M.leverTouched = true; setGate(s_); });
         b.addEventListener("keydown", function (e) {
           var d = e.key === "ArrowRight" || e.key === "ArrowDown" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowUp" ? -1 : e.key === "Home" ? -9 : e.key === "End" ? 9 : 0;
@@ -2394,7 +2418,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       box.append(
         h("div", { cls: "vrow" }, [h("div", { cls: "vl" }, [h("b", { text: "Gate v1" }), h("span", { cls: "mono small", text: int(v1d.length) + " numbers" })]),
           h("div", { cls: "small muted", text: (vc.numberFlags != null ? vc.numberFlags + " number flags and " + vc.claimFlags + " claim flags, " : "") + int(v1d.length) + " numbers marked" }), dots(v1d)]),
-        handOK(pr) ? h("div", { cls: "vrow" }, [h("div", { cls: "vl" }, [h("b", { text: "Hand check" }), h("span", { cls: "mono small", text: real + " numbers" })]),
+        handOK(pr) ? h("div", { cls: "vrow" }, [h("div", { cls: "vl" }, [h("b", { text: "Table check" }), h("span", { cls: "mono small", text: real + " numbers" })]),
           h("div", { cls: "small muted", text: STORY.v1RealErrors + " real errors" }), dots(v1d.filter(function (k) { return k === "e"; }))]) : null,
         h("div", { cls: "vrow" }, [h("div", { cls: "vl" }, [h("b", { text: "Gate v3" }), h("span", { cls: "mono small", text: v3d.length + " numbers" })]),
           h("div", { cls: "small muted", text: STORY.v3Numbers + " number flags and " + STORY.v3Claims + " claim flags" }), dots(v3d)]),
@@ -3084,7 +3108,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     box.appendChild(noteBox);
     var lgd = h("div", { cls: "marks" });
     [["t0", "matches a table cell"], ["t1", "derived from the table"], ["t2", "skipped"], ["t3", "flagged by gate v3"]].forEach(function (k) { lgd.appendChild(h("span", null, [h("span", { cls: "n " + k[0], text: "12.3" }), " " + k[1]])); });
-    if (R.v1) lgd.appendChild(h("span", null, [h("span", { cls: "n t0 v1x", text: "12.3" }), " flagged by gate v1 only (shown at the v1 and hand-check stops)"]));
+    if (R.v1) lgd.appendChild(h("span", null, [h("span", { cls: "n t0 v1x", text: "12.3" }), " flagged by gate v1 only (shown at the v1 and table-check stops)"]));
     box.appendChild(lgd);
     receipts.forEach(function (rc) { box.appendChild(renderReceipt(rc, !keepScroll && !instant)); });
     if (claims.length) {

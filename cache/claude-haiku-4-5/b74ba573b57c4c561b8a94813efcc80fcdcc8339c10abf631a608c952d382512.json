@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £3.9k revenue TW, the highest performing product, with 57 orders.\n- ENGLISH ROSE DESIGN QUILTED THROW achieved £2.9k revenue TW, placing it as the second strongest revenue driver.\n- SET/6 WOODLAND PAPER PLATES led unit sales with 12,976 units TW, followed closely by SET/6 STRAWBERRY PAPER CUPS at 12,960 units TW.\n- SET/6 WOODLAND PAPER CUPS showed exceptional growth of 39,107.8% WoW in revenue, indicating a significant surge in demand.\n- SET/6 WOODLAND PAPER PLATES demonstrated strong momentum with 26,359.8% revenue growth WoW.\n- Total revenue reached £36.2k TW compared to £16.3k LW, representing a 122.2% WoW increase across all products.\n- Total unit volume TW was 60,748 units across 499 orders, demonstrating strong customer engagement.\n- REGENCY CAKESTAND 3 TIER contributed £2.5k revenue TW with 41 orders, establishing itself as a consistent performer.",
+ "input_tokens": 1899,
+ "output_tokens": 281,
+ "cost_usd": 0.003304,
+ "latency_s": 3.53,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

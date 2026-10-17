@@ -1,0 +1,10 @@
+{
+ "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated £3,740.98 revenue in TW, ranking 1st with a 6.1% share, down 1.4% WoW from £3,792.77 in LW.\n- RED HANGING HEART T-LIGHT HOLDER achieved £1,807.91 revenue in TW, up 119.9% WoW from £822.00 in LW, with 673 units sold versus 296 units in LW.\n- SET/3 RUSSIAN DOLL STACKING TINS surged to £1,718.73 revenue in TW, up 975.9% WoW from £159.75 in LW, with 343 units sold compared to 27 units in LW.\n- KENSINGTON COFFEE SET declined to £1,632.90 revenue in TW, down 78.9% WoW from £7,750.05 in LW, with 186 units sold versus 915 units in LW.\n- JUMBO BAG RED WHITE SPOTTY generated £1,557.40 revenue in TW, up 37.0% WoW from £1,136.55 in LW, with 864 units sold compared to 627 units in LW.\n- CHERRY DESIGN PAPERLANTERNS achieved £635.70 revenue in TW, up 14,999.8% WoW from £4.21 in LW, with 326 units sold versus 1 unit in LW.\n- LUNCHBAG SPACEBOY DESIGN reached £567.20 revenue in TW, up 5,629.3% WoW from £9.90 in LW, with 368 units sold compared to 6 units in LW.\n- TOY TIDY PINK RETROSPOT generated £376.13 revenue in TW, up 8,855.5% WoW from £4.20 in LW, with 188 units sold versus 2 units in LW.",
+ "input_tokens": 7267,
+ "output_tokens": 487,
+ "cost_usd": 0.009702,
+ "latency_s": 6.143,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

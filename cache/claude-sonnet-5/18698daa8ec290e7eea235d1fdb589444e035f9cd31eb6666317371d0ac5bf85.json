@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue was £13,874.53 TW versus £11,697.34 LW, a WoW change of +18.6%.\n- REGENCY CAKESTAND 3 TIER ranked 1 with £3,265.21 TW revenue, a 23.5% share TW, and a WoW change of +33.4%.\n- WHITE HANGING HEART T-LIGHT HOLDER ranked 2 with £3,042.82 TW revenue, a 21.9% share TW, and a WoW change of -30.9%.\n- ASSORTED COLOUR BIRD ORNAMENT ranked 3 with £1,575.76 TW revenue, an 11.4% share TW, and a WoW change of +49.0%.\n- CAKE STAND LOVEBIRD 2 TIER PINK had the largest WoW increase, rising from £80.08 LW to £1,234.18 TW, a WoW change of +1441.2%.\n- WHITE HANGING HEART T-LIGHT HOLDER had the largest WoW decrease, falling from £4,405.70 LW to £3,042.82 TW, a WoW change of -30.9%.\n- WHITE HANGING HEART T-LIGHT HOLDER recorded the most orders with 69 TW versus 57 LW.",
+ "input_tokens": 760,
+ "output_tokens": 427,
+ "cost_usd": 0.00579,
+ "latency_s": 3.813,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

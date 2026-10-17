@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue across all countries reached £154.7k TW, representing a 6.6% increase WoW from £145.0k LW.\n- United Kingdom dominated with £143.7k revenue TW, accounting for 92.9% of total sales and growing 10.1% WoW.\n- Channel Islands generated £3.4k revenue TW with a market share of 2.2%, showing exceptional growth of 334.5% WoW.\n- United Kingdom processed 382 orders TW from 96,600 units sold, significantly outpacing other markets.\n- EIRE contributed £1.9k revenue TW with a 1.2% market share, representing the third-largest country by revenue.\n- Netherlands recorded 1,263 units sold TW, while Channel Islands achieved 1,673 units from just 3 orders.\n- France demonstrated strong momentum with revenue growth of 349.8% WoW, though absolute values remain modest.\n- Total order volume reached 397 orders TW, with United Kingdom accounting for 96.2% of all orders processed.",
+ "input_tokens": 1436,
+ "output_tokens": 254,
+ "cost_usd": 0.002706,
+ "latency_s": 3.714,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

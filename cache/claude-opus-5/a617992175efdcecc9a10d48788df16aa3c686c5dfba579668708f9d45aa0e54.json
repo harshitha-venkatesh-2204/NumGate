@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue reached £25,571.27 TW versus £16,369.32 LW, a WoW gain of 56.21%.\n- TOTAL units came in at 8,388 TW (WoW +114.25%) across 311 orders TW (WoW +14.34%).\n- ENGLISH ROSE DESIGN QUILTED THROW ranked 1 TW with £4,577.17, holding 17.9% of TW revenue and adding £3,914.43 WoW.\n- REGENCY CAKESTAND 3 TIER delivered £2,799.04 TW at a 10.9% share, with WHITE HANGING HEART T-LIGHT HOLDER at £2,420.03 TW and a 9.5% share.\n- The top 3 products accounted for 38.3% of TOTAL revenue TW and the top 5 for 49.9%.\n- RED RETROSPOT CAKE STAND rose £1,390.43 WoW (+1,269.8%) and EDWARDIAN PARASOL NATURAL rose £1,331.62 WoW (+1,051.9%).\n- PINK HAPPY BIRTHDAY BUNTING fell £1,213.95 WoW and BLUE HAPPY BIRTHDAY BUNTING fell £1,126.75 WoW.\n- CHILLI LIGHTS declined £822.60 WoW, a drop of 46.1%.",
+ "input_tokens": 2538,
+ "output_tokens": 470,
+ "cost_usd": 0.02444,
+ "latency_s": 5.951,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £109.2k versus LW £88.2k, a WoW increase of 23.8%.\n- TOTAL revenue TW of £109.2k compares to LY £50.4k, a YoY increase of 116.5%.\n- TOTAL units sold rose to 53,787 TW from 28,845 LW, while orders rose to 2,890 TW from 2,330 LW.\n- RABBIT NIGHT LIGHT led all products TW with £10.7k revenue, a 9.8% share and rank 1, up 18473.8% WoW.\n- ALARM CLOCK BAKELIKE RED posted £2.4k revenue TW with a 2.2% share.\n- CHILLI LIGHTS generated £2.3k revenue TW, holding a 2.1% share.\n- FLOWERS CHANDELIER T-LIGHT HOLDER grew 9231.2% WoW, while TRADITIONAL NAUGHTS & CROSSES rose 2400.0% WoW.\n- LANDMARK FRAME OXFORD STREET fell 88.8% WoW and LANDMARK FRAME COVENT GARDEN fell 88.0% WoW.",
+ "input_tokens": 2421,
+ "output_tokens": 422,
+ "cost_usd": 0.009062,
+ "latency_s": 4.758,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £47,157.12 TW, representing an increase of +89.7% WoW from £24,854.28 LW.\n- Total revenue grew +291.2% YoY, demonstrating significant year-over-year expansion in TW.\n- REGENCY CAKESTAND 3 TIER generated the highest revenue at £4,290.54 TW with a 9.1% share, up +102.8% WoW.\n- PARTY BUNTING ranked second with £4,021.56 TW revenue and 8.5% share, though it declined -23.1% WoW.\n- SET/4 WHITE RETRO STORAGE CUBES surged +2093.0% WoW, growing from £58.29 LW to £1,278.32 TW.\n- COLOUR GLASS. STAR T-LIGHT HOLDER achieved the largest YoY increase at +1981.9%, rising from £59.04 LY to current levels.\n- WHITE HANGING HEART T-LIGHT HOLDER experienced the largest YoY decrease of -15.5%, falling from £2,963.43 LY to £2,503.60 TW.\n- SPOTTY BUNTING generated the most orders with 67 TW compared to 29 LW, representing a +131.0% increase in order volume.",
+ "input_tokens": 658,
+ "output_tokens": 329,
+ "cost_usd": 0.002303,
+ "latency_s": 3.483,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- United Kingdom posted £138,020.95 TW against £177,978.27 LW, a WoW change of -22.5%, and £143,748.77 LY, a YoY change of -4.0%.\n- United Kingdom held 87.8% share of TW revenue at Rank 1, on 71,925 units TW versus 89,294 units LW.\n- Netherlands reached £10,372.88 TW versus £937.12 LW, a WoW change of +1,006.9%, and £1,834.67 LY, a YoY change of +465.4%.\n- Netherlands recorded 5,624 units TW against 534 units LW from 2 orders in both TW and LW, taking Rank 2 with 6.6% share.\n- Germany logged £3,227.89 TW versus £4,131.21 LW (-21.9% WoW) and £1,107.38 LY (+191.5% YoY), with orders rising from 9 LW to 12 TW.\n- France recorded £2,805.71 TW versus £4,775.39 LW (-41.2% WoW) and £1,271.21 LY (+120.7% YoY), at 1.8% share.\n- EIRE fell to £1,451.79 TW from £8,729.96 LW (-83.4% WoW) and sits -23.2% against £1,889.68 LY, with units at 713 TW versus 3,959 LW.\n- Poland registered £1,247.57 TW on 497 units and 2 orders, against £0.00 in both LW and LY, for 0.8% share at Rank 6.",
+ "input_tokens": 1056,
+ "output_tokens": 504,
+ "cost_usd": 0.01788,
+ "latency_s": 6.137,
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

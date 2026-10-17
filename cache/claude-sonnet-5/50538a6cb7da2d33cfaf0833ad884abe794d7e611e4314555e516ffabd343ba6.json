@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW was £64.7k versus LW £45.7k, a WoW increase of 41.5%.\n- TOTAL units sold TW reached 35,010 compared to LW 19,639.\n- TOTAL orders TW totaled 1,777 versus LW 1,478.\n- WHITE HANGING HEART T-LIGHT HOLDER led all products TW with £3.4k revenue, a 5.2% share and rank 1.\n- SOMBRERO saw the largest WoW revenue change among products, up 51182.1%.\n- PACK OF 12 HEARTS DESIGN TISSUES revenue rose 6087.6% WoW, reaching £2.5k TW.\n- PACK OF 12 SUKI TISSUES revenue grew 5937.3% WoW, totaling £2.6k TW.\n- RETRO SPOT TEA SET CERAMIC 11 PC declined 83.7% WoW, the only product on the list with a WoW decrease.",
+ "input_tokens": 2029,
+ "output_tokens": 332,
+ "cost_usd": 0.007378,
+ "latency_s": 3.643,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

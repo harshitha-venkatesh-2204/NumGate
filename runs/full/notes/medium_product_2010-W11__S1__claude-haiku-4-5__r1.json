@@ -1,0 +1,41 @@
+{
+ "note_id": "medium_product_2010-W11__S1__claude-haiku-4-5__r1",
+ "table_id": "medium_product_2010-W11",
+ "size": "medium",
+ "entity_type": "product",
+ "week": "2010-W11",
+ "n_rows": 28,
+ "strategy": "S1",
+ "model": "claude-haiku-4-5",
+ "repeat": 1,
+ "note": "- WHITE HANGING HEART T-LIGHT HOLDER generated \u00a33952.80 in TW revenue, up 67.1% WoW from \u00a32365.84 in LW, ranking 1st across all products.\n- SET/6 WOODLAND PAPER PLATES achieved \u00a31317.70 in TW revenue with a 26359.8% WoW increase from just \u00a34.98 in LW, driven by 12976 units sold TW versus 3 units LW.\n- SET/6 WOODLAND PAPER CUPS generated \u00a31301.70 in TW revenue, up 39107.8% WoW from \u00a33.32 in LW, with 12786 units sold TW compared to 2 units LW.\n- REGENCY CAKESTAND 3 TIER contributed \u00a32511.24 in TW revenue with 200 units sold across 41 orders, representing new sales not present in LW.\n- DOOR MAT SPOTTY HOME SWEET HOME increased 328.3% WoW to \u00a31333.70 in TW revenue from \u00a3311.43 in LW, with units rising from 43 to 258.\n- ASSORTED COLOUR BIRD ORNAMENT declined 29.8% WoW to \u00a31014.63 in TW revenue from \u00a31444.53 in LW, with units falling from 917 to 551.\n- COLOUR GLASS T-LIGHT HOLDER HANGING surged 427.6% WoW to \u00a3937.60 in TW revenue from \u00a3177.72 in LW, with 1664 units sold TW versus 282 units LW.\n- ENGLISH ROSE DESIGN QUILTED THROW decreased 11.4% WoW to \u00a32982.60 in TW revenue from \u00a33365.07 in LW, ranking 2nd despite the decline.",
+ "trace": {
+  "strategy": "S1",
+  "model": "claude-haiku-4-5",
+  "calls": [
+   {
+    "step": "write",
+    "system": "You are a retail analyst who writes the weekly executive insight note for senior leaders. You report only what the sales table shows.\n\nFormat rules for the note:\n- Write 6 to 8 bullet lines. Start each line with \"- \" and state exactly one insight per line.\n- Every line names at least one entity from the data and contains at least one number.\n- Label every period explicitly: TW (this week), LW (last week), LY (same ISO week last year), WoW (week over week change), YoY (year over year change).\n- Revenue is in GBP. Write money with the \u00a3 sign.\n- State facts only. Do not give recommendations, advice, or explanations of causes.\n- Plain text only. No title, no headings, no markdown tables, no bold, no text before or after the bullets.\n- Do not use em dashes.\n\n",
+    "user": "Weekly sales report for ISO week 2010-W11. Entity type: product. The table has 28 rows.\n\nColumn guide:\n- Entity: the country or product.\n- Revenue_TW, Revenue_LW, Revenue_LY: revenue in GBP for this week, last week, and the same ISO week last year (blank when that week is not in the data).\n- Units_TW, Units_LW: units sold this week and last week.\n- Orders_TW, Orders_LW: distinct invoices this week and last week.\n- WoW_Pct: revenue percent change this week versus last week (blank when last week was zero).\n- YoY_Pct: revenue percent change this week versus the same week last year (blank when not available).\n- Share_Pct: this entity's percent share of this week's revenue across the rows shown.\n- Rank: rank by this week's revenue among the rows shown (1 is highest).\n\n\n| Entity | Revenue_TW | Revenue_LW | Revenue_LY | Units_TW | Units_LW | Orders_TW | Orders_LW | WoW_Pct | YoY_Pct | Share_Pct | Rank |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| WHITE HANGING HEART T-LIGHT HOLDER | 3952.80 | 2365.84 |  | 1496 | 848 | 57 | 63 | 67.1 |  | 10.9 | 1 |\n| ENGLISH ROSE DESIGN QUILTED THROW | 2982.60 | 3365.07 |  | 144 | 171 | 13 | 16 | -11.4 |  | 8.3 | 2 |\n| REGENCY CAKESTAND 3 TIER | 2511.24 | 0.00 |  | 200 | 0 | 41 | 0 |  |  | 6.9 | 3 |\n| DOOR MAT SPOTTY HOME SWEET HOME | 1333.70 | 311.43 |  | 258 | 43 | 19 | 12 | 328.3 |  | 3.7 | 4 |\n| SET/6 WOODLAND PAPER PLATES | 1317.70 | 4.98 |  | 12976 | 3 | 4 | 2 | 26359.8 |  | 3.6 | 5 |\n| SET/6 WOODLAND PAPER CUPS | 1301.70 | 3.32 |  | 12786 | 2 | 5 | 1 | 39107.8 |  | 3.6 | 6 |\n| SET/6 STRAWBERRY PAPER CUPS | 1296.00 | 15.60 |  | 12960 | 24 | 1 | 2 | 8207.7 |  | 3.6 | 7 |\n| SET/6 STRAWBERRY PAPER PLATES | 1249.66 | 11.86 |  | 12481 | 13 | 2 | 2 | 10436.8 |  | 3.5 | 8 |\n| DOOR MAT HEARTS | 1206.37 | 136.67 |  | 241 | 15 | 11 | 9 | 782.7 |  | 3.3 | 9 |\n| PINK PAISLEY QUILT | 1173.00 | 51.00 |  | 92 | 4 | 4 | 1 | 2200.0 |  | 3.2 | 10 |\n| DOOR MAT BLACK FLOCK | 1134.51 | 70.99 |  | 231 | 11 | 14 | 2 | 1498.1 |  | 3.1 | 11 |\n| PLEASE ONE PERSON METAL SIGN | 1131.90 | 640.85 |  | 589 | 323 | 26 | 20 | 76.6 |  | 3.1 | 12 |\n| DOOR MAT 3 SMILEY CATS | 1127.89 | 155.55 |  | 229 | 23 | 12 | 5 | 625.1 |  | 3.1 | 13 |\n| DOOR MAT WELCOME PUPPIES | 1101.73 | 113.04 |  | 225 | 16 | 12 | 5 | 874.6 |  | 3.0 | 14 |\n| JUMBO BAG RED WHITE SPOTTY | 1053.89 | 1402.60 |  | 555 | 800 | 34 | 30 | -24.9 |  | 2.9 | 15 |\n| PINK CHERRY LIGHTS | 1053.75 | 595.04 |  | 185 | 100 | 11 | 8 | 77.1 |  | 2.9 | 16 |\n| RECYCLING BAG RETROSPOT | 1047.37 | 533.91 |  | 556 | 251 | 19 | 21 | 96.2 |  | 2.9 | 17 |\n| DOOR MAT UNION FLAG | 1029.69 | 908.22 |  | 153 | 138 | 30 | 20 | 13.4 |  | 2.8 | 18 |\n| WHITE CHERRY LIGHTS | 1020.81 | 522.30 |  | 169 | 82 | 20 | 12 | 95.4 |  | 2.8 | 19 |\n| ASSORTED COLOUR BIRD ORNAMENT | 1014.63 | 1444.53 |  | 551 | 917 | 29 | 26 | -29.8 |  | 2.8 | 20 |\n| PARTY BUNTING | 1014.34 | 1152.32 |  | 224 | 262 | 26 | 23 | -12.0 |  | 2.8 | 21 |\n| BATHROOM SET LOVE HEART DESIGN | 972.00 | 0.00 |  | 432 | 0 | 1 | 0 |  |  | 2.7 | 22 |\n| COLOUR GLASS T-LIGHT HOLDER HANGING | 937.60 | 177.72 |  | 1664 | 282 | 15 | 9 | 427.6 |  | 2.6 | 23 |\n| DOOR MAT RED SPOT | 908.66 | 583.67 |  | 134 | 83 | 28 | 16 | 55.7 |  | 2.5 | 24 |\n| ROSE DES PADDED FLOOR CUSHION | 895.95 | 404.23 |  | 301 | 125 | 8 | 9 | 121.6 |  | 2.5 | 25 |\n| RETRO SPOT CAKE STAND | 847.33 | 575.57 |  | 79 | 51 | 18 | 15 | 47.2 |  | 2.3 | 26 |\n| COOK WITH WINE METAL SIGN | 785.38 | 254.12 |  | 444 | 136 | 20 | 11 | 209.1 |  | 2.2 | 27 |\n| GIN + TONIC DIET METAL SIGN | 747.91 | 470.17 |  | 393 | 234 | 19 | 18 | 59.1 |  | 2.1 | 28 |\n\nWrite the insight note now.\n",
+    "text": "- WHITE HANGING HEART T-LIGHT HOLDER generated \u00a33952.80 in TW revenue, up 67.1% WoW from \u00a32365.84 in LW, ranking 1st across all products.\n- SET/6 WOODLAND PAPER PLATES achieved \u00a31317.70 in TW revenue with a 26359.8% WoW increase from just \u00a34.98 in LW, driven by 12976 units sold TW versus 3 units LW.\n- SET/6 WOODLAND PAPER CUPS generated \u00a31301.70 in TW revenue, up 39107.8% WoW from \u00a33.32 in LW, with 12786 units sold TW compared to 2 units LW.\n- REGENCY CAKESTAND 3 TIER contributed \u00a32511.24 in TW revenue with 200 units sold across 41 orders, representing new sales not present in LW.\n- DOOR MAT SPOTTY HOME SWEET HOME increased 328.3% WoW to \u00a31333.70 in TW revenue from \u00a3311.43 in LW, with units rising from 43 to 258.\n- ASSORTED COLOUR BIRD ORNAMENT declined 29.8% WoW to \u00a31014.63 in TW revenue from \u00a31444.53 in LW, with units falling from 917 to 551.\n- COLOUR GLASS T-LIGHT HOLDER HANGING surged 427.6% WoW to \u00a3937.60 in TW revenue from \u00a3177.72 in LW, with 1664 units sold TW versus 282 units LW.\n- ENGLISH ROSE DESIGN QUILTED THROW decreased 11.4% WoW to \u00a32982.60 in TW revenue from \u00a33365.07 in LW, ranking 2nd despite the decline.",
+    "input_tokens": 2234,
+    "output_tokens": 448,
+    "cost_usd": 0.004474,
+    "latency_s": 5.281,
+    "model": "claude-haiku-4-5",
+    "stop_reason": "end_turn",
+    "max_tokens": 16000,
+    "cached": false
+   }
+  ],
+  "code_runs": [],
+  "rounds": [],
+  "failed": false,
+  "error": "",
+  "n_calls": 1,
+  "tokens_in": 2234,
+  "tokens_out": 448,
+  "cost_usd": 0.004474,
+  "latency_s": 5.281
+ }
+}

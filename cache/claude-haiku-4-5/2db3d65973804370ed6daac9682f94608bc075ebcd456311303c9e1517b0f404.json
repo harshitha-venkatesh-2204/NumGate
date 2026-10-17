@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £109,203.35 TW, representing a +23.8% WoW increase from £88,233.35 LW.\n- Total revenue grew +116.5% YoY for ISO week 2011-W43.\n- RABBIT NIGHT LIGHT generated £10,739.38 TW revenue, ranking 1st with a 9.8% share TW and surging +18473.8% WoW from £57.82 LW.\n- ALARM CLOCK BAKELIKE RED achieved rank 2 with £2,423.41 TW revenue, a 2.2% share TW, and a +610.8% WoW increase.\n- CHILLI LIGHTS held rank 3 with £2,285.12 TW revenue, representing a 2.1% share TW and a +221.7% WoW rise.\n- LANDMARK FRAME OXFORD STREET experienced the largest WoW decline at -88.8%, falling from £3,753.90 LW to £418.90 TW.\n- CHRISTMAS CRAFT WHITE FAIRY showed the largest YoY increase at +28727.6%, growing from £1.45 LY.\n- PAPER CHAIN KIT 50'S CHRISTMAS recorded the most orders at 64 TW, up from 48 LW.",
+ "input_tokens": 644,
+ "output_tokens": 322,
+ "cost_usd": 0.002254,
+ "latency_s": 3.318,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

@@ -1,0 +1,10 @@
+{
+ "text": "- TOTAL revenue TW stands at £135.3k, down from LW £159.1k (WoW -15.0%) but up from LY £85.7k (YoY +57.9%).\n- TOTAL units sold TW reached 46,342 compared to LW 51,871, while TOTAL orders TW were 4,027 versus LW 4,290.\n- PAPER CHAIN KIT 50'S CHRISTMAS led product revenue TW at £5,701.16, a 4.2% share of TOTAL revenue.\n- RABBIT NIGHT LIGHT followed with TW revenue of £5,084.81, representing 3.8% of TOTAL revenue, and CHILLI LIGHTS posted £4,960.25 TW, a 3.7% share.\n- DOORMAT BLACK FLOCK had the largest WoW gain at +1544.7%, ahead of SET/3 VANILLA SCENTED CANDLE IN BOX at +1256.0% and COLOURED GLASS STAR T-LIGHT HOLDER at +1050.4%.\n- 3 HEARTS HANGING DECORATION RUSTIC fell -73.8% WoW, RED WOOLLY HOTTIE WHITE HEART. dropped -70.6% WoW, and VINTAGE CHRISTMAS BUNTING declined -69.7% WoW.\n- JAM MAKING SET WITH JARS recorded the top YoY increase at +832.5%, with WOODEN ADVENT CALENDAR RED up +698.9% YoY.\n- HAND WARMER SCOTTY DOG DESIGN fell -76.8% YoY, while VICTORIAN GLASS HANGING T-LIGHT declined -74.0% YoY.",
+ "input_tokens": 2555,
+ "output_tokens": 1070,
+ "cost_usd": 0.015809999999999998,
+ "latency_s": 8.552,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

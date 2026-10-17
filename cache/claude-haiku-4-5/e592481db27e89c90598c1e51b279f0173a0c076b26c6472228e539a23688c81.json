@@ -1,0 +1,10 @@
+{
+ "text": "- EMPIRE DESIGN ROSETTE generated £3.3k revenue TW, the highest performing product, with 3966 units sold and a WoW revenue increase of 26123.4%.\n- REGENCY CAKESTAND 3 TIER achieved £2.5k revenue TW across 33 orders, making it the second highest revenue product.\n- ASSORTED COLOUR MINI CASES delivered £1.6k revenue TW with a WoW growth of 2067.9% and a YoY increase of 949.8%.\n- JUMBO BAG RED RETROSPOT generated £1.5k revenue TW from 810 units sold, representing strong unit volume performance.\n- WHITE HANGING HEART T-LIGHT HOLDER produced £1.1k revenue TW with 37 orders, indicating consistent customer demand.\n- EMPIRE DESIGN ROSETTE showed exceptional YoY growth of 26123.4%, significantly outpacing the prior year performance.\n- HEART OF WICKER SMALL led order volume TW with 39 orders, followed closely by WHITE HANGING HEART T-LIGHT HOLDER at 37 orders.\n- SMALL POPCORN HOLDER achieved 1312 units sold TW, the second highest unit volume after EMPIRE DESIGN ROSETTE.",
+ "input_tokens": 1969,
+ "output_tokens": 301,
+ "cost_usd": 0.0034739999999999997,
+ "latency_s": 3.977,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

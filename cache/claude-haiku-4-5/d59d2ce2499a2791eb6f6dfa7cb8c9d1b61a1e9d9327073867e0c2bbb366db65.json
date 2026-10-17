@@ -1,0 +1,10 @@
+{
+ "text": "- Total revenue reached £254,188.43 TW, representing a +30.3% WoW increase from £195,072.81 LW.\n- United Kingdom generated £196,490.10 TW, accounting for 77.3% of total revenue TW, with a +8.1% WoW change.\n- EIRE achieved the strongest weekly growth at +91.1% WoW, rising from £7,196.47 LW to £13,751.42 TW.\n- Netherlands ranked second with £29,458.10 TW revenue and 11.6% share TW, while showing exceptional +7641.5% YoY growth from £380.52 LY.\n- United Kingdom experienced a -8.0% YoY decline, with revenue of £196,490.10 TW compared to £213,613.05 LY.\n- EIRE holds third position with £13,751.42 TW revenue and 5.4% share TW.\n- Total revenue increased +10.9% YoY in ISO week 2011-W42.\n- United Kingdom processed 391 orders TW, down from 393 orders LW.",
+ "input_tokens": 587,
+ "output_tokens": 282,
+ "cost_usd": 0.001997,
+ "latency_s": 3.323,
+ "model": "claude-haiku-4-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

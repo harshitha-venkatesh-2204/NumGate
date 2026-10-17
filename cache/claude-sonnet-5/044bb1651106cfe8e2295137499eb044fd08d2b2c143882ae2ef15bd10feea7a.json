@@ -1,0 +1,10 @@
+{
+ "text": "- SMALL FAIRY CAKE FRIDGE MAGNETS leads TW revenue at £6467.60, holding 41.0% share and rank 1, up from £0.00 LW.\n- DOOR MAT SPOTTY HOME SWEET HOME revenue rose 417.3% WoW, from £322.50 LW to £1668.35 TW.\n- DOOR MAT RED SPOT grew 250.6% WoW, moving from £576.44 LW to £2021.25 TW with orders steady at 25.\n- JUMBO BAG RED WHITE SPOTTY increased 85.9% WoW, from £955.69 LW to £1776.34 TW, with orders up from 22 to 36.\n- BLACK AND WHITE PAISLEY FLOWER MUG posted £1946.33 TW revenue on 19165 units, versus £0.00 LW.\n- WHITE HANGING HEART T-LIGHT HOLDER rose 17.6% WoW, from £1617.50 LW to £1901.87 TW, with 47 orders TW versus 45 LW.\n- Across the 6 products, TW revenue ranges from £1668.35 to £6467.60, with SMALL FAIRY CAKE FRIDGE MAGNETS at rank 1 and DOOR MAT SPOTTY HOME SWEET HOME at rank 6.",
+ "input_tokens": 1100,
+ "output_tokens": 481,
+ "cost_usd": 0.007010000000000001,
+ "latency_s": 4.818,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

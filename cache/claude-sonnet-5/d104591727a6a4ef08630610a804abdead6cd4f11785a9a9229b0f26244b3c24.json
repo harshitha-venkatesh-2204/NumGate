@@ -1,0 +1,10 @@
+{
+ "text": "- PAPER CHAIN KIT 50'S CHRISTMAS ranks 1 TW with £5701.16 revenue, down 39.9% WoW from £9485.15 LW, roughly flat YoY at -0.6% versus £5735.62 LY.\n- RABBIT NIGHT LIGHT ranks 2 TW at £5084.81, down 52.4% WoW from £10687.69 LW, with £0.00 recorded LY.\n- CHILLI LIGHTS ranks 3 TW with £4960.25, up 115.0% WoW from £2307.01 LW and up 229.3% YoY from £1506.40 LY.\n- SET/3 VANILLA SCENTED CANDLE IN BOX shows the largest WoW surge among top entities, up 1256.0% from £59.29 LW to £803.96 TW.\n- DOORMAT BLACK FLOCK rose 1544.7% WoW, from £33.00 LW to £542.76 TW, and is up 95.1% YoY versus £278.16 LY.\n- WOODEN ADVENT CALENDAR RED posted the largest YoY gain among ranked items shown, up 698.9% from £220.45 LY to £1761.24 TW.\n- 3 HEARTS HANGING DECORATION RUSTIC fell 73.8% WoW, from £3006.44 LW to £788.05 TW, and is down 44.5% YoY versus £1419.98 LY.\n- WHITE HANGING HEART T-LIGHT HOLDER dropped 58.7% YoY, from £5999.53 LY to £2475.48 TW, and fell 35.0% WoW from £3810.94 LW.",
+ "input_tokens": 11211,
+ "output_tokens": 567,
+ "cost_usd": 0.028092,
+ "latency_s": 5.469,
+ "model": "claude-sonnet-5",
+ "stop_reason": "end_turn",
+ "max_tokens": 16000
+}

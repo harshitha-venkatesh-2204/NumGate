@@ -60,7 +60,7 @@ button { cursor: pointer; }
 .eyebrow { font-family: var(--mono); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); }
 .muted { color: var(--ink-2); }
 .small { font-size: 13px; }
-h1, h2, h3 { margin: 0; text-wrap: balance; }
+h1, h2, h3, h4 { margin: 0; text-wrap: balance; }
 a { color: inherit; }
 
 /* plates */
@@ -293,7 +293,7 @@ mark.q.t3 { background: var(--err-soft); color: var(--err-ink); outline: 1.5px s
 .chart { width: 100%; position: relative; }
 .chart svg { display: block; width: 100%; height: auto; overflow: visible; }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.pair h3 { font-size: 12.5px; font-weight: 600; color: var(--ink-2); font-family: var(--sans); }
+.pair h4 { font-size: 12.5px; font-weight: 600; color: var(--ink-2); font-family: var(--sans); }
 .seg { display: inline-flex; border: 1px solid var(--rule-2); border-radius: 2px; overflow: hidden; }
 .seg button { border: 0; background: var(--plate); padding: 4px 10px; font-size: 12px; color: var(--ink-2); min-height: 30px; }
 .seg button + button { border-left: 1px solid var(--rule-2); }
@@ -336,7 +336,7 @@ tr.sel td { background: color-mix(in srgb, var(--hl) 55%, var(--plate)) !importa
 tr.clickable { cursor: pointer; }
 tr.dim td { opacity: .4; }
 tr.tint td { background: color-mix(in srgb, var(--hl) 30%, var(--plate)); }
-.rack .tscroll { max-height: 560px; }
+.rack .tscroll { max-height: min(560px, 65vh); }
 .tools { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: 13px; }
 .tools label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; min-height: 32px; }
 
@@ -407,6 +407,58 @@ footer { color: var(--ink-3); font-size: 12px; display: flex; flex-direction: co
 footer p { margin: 0; max-width: 110ch; }
 .method { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--ink-2); }
 
+/* page organisation: run picker, section nav, filter band, chapter labels (layout only) */
+.runpick { display: flex; align-items: center; gap: 8px; }
+.chapter { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+.chapter-label { margin: 8px 0 -14px; }
+.tile.nogo .tl { padding-right: 0; }
+.tiles > .tile:nth-child(odd):nth-last-child(2) { grid-column: 1 / -1; }
+.secnav { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; gap: 8px 12px; padding: 8px 0; background: var(--page); border-bottom: 1px solid var(--rule); }
+.secnav-links { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; flex: 1 1 auto; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.secnav-links::-webkit-scrollbar { display: none; }
+.secnav-links li { flex: none; }
+.secnav a { text-decoration: none; color: inherit; white-space: nowrap; }
+.secnav a[aria-current="true"] { background: var(--ink); color: var(--plate); border-color: var(--ink); }
+.secnav-scope { flex: none; }
+.nw-short { display: none; }
+.srt { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.mastend { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.plate-head .seg + .ctlbtn { margin-left: auto; }
+#r3 .plate-head .seg { order: 3; flex: 1 1 100%; margin-left: 0; }
+#r3 .plate-head .seg button { flex: 1 1 0; }
+@media (min-width: 761px) and (max-width: 900px) {
+  #navScope .nw-long { display: none; }
+  #navScope .nw-short { display: inline; }
+  .secnav a { padding-inline: 7px; }
+  .secnav-links { gap: 4px; }
+}
+@media (max-width: 900px) {
+  #bench-plate .plate-head .plate-spec { flex: 1 1 100%; margin-left: 0; }
+  .plate-head .seg { order: 3; flex: 1 1 100%; margin-left: 0; }
+  .plate-head .seg button { flex: 1 1 0; }
+}
+/* mouse users get no sideways scroll strip, so links that do not fit wrap instead of being cut off */
+@media (min-width: 761px) and (pointer: fine) {
+  .secnav-links { flex-wrap: wrap; overflow-x: visible; row-gap: 6px; }
+}
+#filterband .intake { border-bottom: 0; }
+#filterband details.fallback { padding-top: 0; }
+#filterband .plate-head .ctlbtn { margin-left: 0; }
+.readouts > .sechead { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+.grouplbl { margin-left: auto; }
+.plate-spec.longspec { flex: 1 1 100%; margin-left: 0; }
+#bench-plate .plate-head .tag { align-self: center; }
+details.fallback summary::before { content: "+"; font-family: var(--mono); margin-right: 6px; }
+details.fallback[open] > summary::before { content: "\2212"; }
+.benchcap { margin: 6px 0 0; }
+@media (min-width: 1101px) {
+  .bench { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .bench > div:not(#worthBox) { grid-column: 1; }
+  #worthBox { grid-column: 2; grid-row: 1 / span 2; }
+}
+#wformD .formula { white-space: normal; overflow-wrap: anywhere; }
+.paperbody { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 32px; }
+
 @media (max-width: 1100px) {
   .bench { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .bench > :last-child { grid-column: 1 / -1; }
@@ -440,10 +492,32 @@ footer p { margin: 0; max-width: 110ch; }
   .lever .lv-stops { height: 46px; }
 }
 @media (max-width: 760px), (pointer: coarse) {
-  .lever .lv-stops button, .rulesbtn, table.t th button, .chip, .textbtn, .linkbtn, .seg button, .ctlbtn, #console .cseg button, .tools label, details.fallback summary, .themebtn { min-height: 44px; }
+  .lever .lv-stops button, .rulesbtn, table.t th button, .chip, .textbtn, .linkbtn, .seg button, .ctlbtn, #console .cseg button, .tools label, details.fallback summary, .themebtn, .secnav a { min-height: 44px; }
   .rulesbtn { display: inline-flex; align-items: center; }
   .slider input[type=range] { height: 44px; }
   #console .pticket .pmain { min-height: 44px !important; }
+}
+@media (max-width: 760px) {
+  .mastend > .pticket[data-paper="ticket"] { display: none; }
+  .brand { flex: 1 1 0; min-width: 0; }
+  .mastend { order: 2; }
+  .runpick { order: 3; flex: 1 1 100%; flex-direction: column; align-items: stretch; gap: 4px; }
+  .runseg { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; }
+  .runseg button { padding: 6px 8px; }
+  .nw-long { display: none; }
+  .nw-short { display: inline; }
+  #console { flex-wrap: nowrap; }
+  #console .cflag { display: flex; align-items: baseline; flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; }
+  #console .cflag > span { white-space: pre; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  #console .cflag b { flex: none; }
+  #console .cseg { flex: none; }
+  #console .cseg button { padding-inline: 6px; white-space: nowrap; }
+  .plate-head .seg { order: 3; flex: 1 1 100%; margin-left: 0; }
+  .plate-head .seg button { flex: 1 1 0; }
+  .plate-head .seg + .ctlbtn { margin-left: auto; }
+  .grouplbl { flex: 1 1 100%; margin-left: 0; }
+  .readouts .plate-head > .plate-title { flex: 1 1 0; min-width: 0; }
+  .paperbody { grid-template-columns: minmax(0, 1fr); }
 }
 @media (prefers-reduced-motion: no-preference) {
   html:not([data-motion="off"]) .runseg button, html:not([data-motion="off"]) .chip, html:not([data-motion="off"]) .seg button,
@@ -470,7 +544,7 @@ footer p { margin: 0; max-width: 110ch; }
 @keyframes cellflash { from { background: transparent; } 50% { background: var(--hl); } }
 </style>
 
-<a class="skip-link" href="#rack">Skip to the note rack</a>
+<a class="skip-link" href="#rack">Skip to all notes</a>
 <div class="wrap">
   <header class="mast">
     <div class="brand">
@@ -480,32 +554,73 @@ footer p { margin: 0; max-width: 110ch; }
         <div class="tagline">Every number in LLM-written sales notes, checked against its table</div>
       </div>
     </div>
-    <div class="runseg" id="runbar" role="group" aria-label="Choose a run"></div>
+    <div class="runpick"><span class="eyebrow" id="runLbl">Run</span><div class="runseg" id="runbar" role="group" aria-labelledby="runLbl"></div></div>
+    <div class="mastend">
     <div class="pticket" data-paper="ticket">
       <span class="slip" aria-hidden="true"></span>
-      <button type="button" class="pmain" data-paper-act="download"><b><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v7M3 5l3 3 3-3M1.5 10.5h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="plabel" style="font-family:var(--sans);font-size:13.5px;opacity:1">Read the paper</span></b><span class="pspec">PDF</span></button>
+      <button type="button" class="pmain" data-paper-act="download"><b><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1v7M3 5l3 3 3-3M1.5 10.5h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="plabel" style="font-family:var(--sans);font-size:13.5px;opacity:1">Download the paper</span></b><span class="pspec">PDF</span></button>
       <button type="button" class="popen" data-paper-act="open" aria-label="Open the paper in a new tab"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2v8h8V7M7 1.5h3.5V5M10.5 1.5 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Open</button>
     </div>
     <button type="button" class="themebtn" id="themeBtn">Theme: Auto</button>
+    </div>
   </header>
 
   <main id="main" style="display:flex;flex-direction:column;gap:28px">
-    <section class="finding" aria-labelledby="h1">
+    <section class="finding" id="answer" aria-labelledby="h1">
       <div>
         <div class="eyebrow" id="findEyebrow"></div>
         <h1 id="h1">When the Checker Is Noisier Than the Model</h1>
+        <p class="beats" id="whatIs">NumGate checks every number in LLM-written weekly sales notes against the table it came from. Each number is matched to a table cell, derived from the table, skipped, or flagged.</p>
         <p class="lede" id="lede"></p>
         <p class="beats" id="beats"></p>
         <p class="cite" id="cite"></p>
       </div>
-      <div class="tiles" id="tiles" role="group" aria-label="The finding in four figures"></div>
+      <div class="tiles" id="tiles" role="group" aria-label="Key figures for the whole run"></div>
+    </section>
+
+    <nav class="secnav" id="secnav" aria-label="Sections" data-filtered="false">
+      <button type="button" class="ctlbtn secnav-scope" id="navScope" aria-controls="filterband"></button>
+      <ol class="secnav-links">
+        <li><a class="ctlbtn" href="#meters-plate" data-nav="meters-plate"><span class="mono">01</span> Flag rates</a></li>
+        <li><a class="ctlbtn" href="#machine" data-nav="machine"><span class="mono">02</span> Sorting gate</a></li>
+        <li><a class="ctlbtn" href="#readouts" data-nav="readouts"><span class="mono">03</span> By group</a></li>
+        <li><a class="ctlbtn" href="#rack" data-nav="rack"><span class="mono">04</span> All notes</a></li>
+        <li><a class="ctlbtn" href="#bench-plate" data-nav="bench-plate"><span class="mono">05</span> Trusting flags</a></li>
+        <li><a class="ctlbtn" href="#paper" data-nav="paper"><span class="mono">06</span> Paper</a></li>
+      </ol>
+    </nav>
+
+    <section class="chapter" id="chResultsGroup" aria-labelledby="chResults">
+    <p class="eyebrow chapter-label" id="chResults">Results for this run</p>
+
+    <section class="plate" id="filterband" aria-labelledby="fTitle">
+      <div class="plate-head"><h2 class="plate-title" id="fTitle">Filters</h2><span class="plate-spec" id="fScope"></span><span id="fFocus" hidden></span>
+        <button type="button" class="ctlbtn" id="fToggle" aria-expanded="true" aria-controls="filterBody">Hide filters</button></div>
+      <div id="filterBody">
+        <div class="intake" id="filters" role="group" aria-label="Filters"></div>
+        <details class="fallback" id="fHelp"><summary>What the filters mean</summary><ul class="method">
+          <li>Every chip starts on, so all notes are shown. Press a chip to leave that group out; press it again to bring it back. One chip in each group always stays on.</li>
+          <li>S1 Direct: the table is in the prompt.</li>
+          <li>S2 Compute-then-write: the model writes pandas code, the code runs, and the note is written from its results.</li>
+          <li>S3 Write-then-verify: an S1 draft is checked by the gate and corrected for up to two rounds.</li>
+          <li>S4 Facts-template: numbers are copied verbatim from a precomputed facts packet (an upper bound).</li>
+          <li id="fSizes"></li>
+          <li>Rows are: whether each table lists countries or products.</li>
+          <li>Filters apply to 01 to 04 and to the gate bar at the bottom of the screen. They do not change the key figures at the top, 05 or 06, except the filtered-notes button in 05 (c).</li>
+        </ul></details>
+      </div>
+    </section>
+
+    <section class="plate" id="meters-plate" aria-labelledby="metTitle">
+      <div class="plate-head"><span class="plate-no">01</span><h2 class="plate-title" id="metTitle">Gate flag rates</h2><span class="plate-spec">For the filtered notes. 95% intervals from resampling notes.</span><span class="tag" data-scope hidden></span></div>
+      <div class="meternote"><span id="meterNote">Rates and charts use gate v3, the current gate. Gate v1 was kept only as a flag on each number, so its claim-level rates cannot be recomputed here.</span><span class="tag v1" id="v1chip" hidden>The sorting gate shows gate v1; these rates use gate v3</span></div>
+      <div class="meters" id="kpis" aria-label="Gate flag rates, notes and cost"></div>
     </section>
 
     <section class="plate" id="machine" aria-labelledby="mTitle">
-      <div class="plate-head"><span class="plate-no">03</span><h2 class="plate-title" id="mTitle">The sorting gate</h2><span class="plate-spec" id="mSpec">One dot per number. Hover or tap a dot to read its sentence.</span></div>
-      <div class="intake" id="filters" aria-label="Filters"></div>
+      <div class="plate-head"><span class="plate-no">02</span><h2 class="plate-title" id="mTitle">The sorting gate</h2><span class="plate-spec" id="mSpec">One dot per number. Hover or tap a dot to read its sentence.</span><span class="tag" data-scope hidden></span></div>
       <div class="rig" id="rig" hidden><b>Test rig</b><span>Mock model. A template writer that plants errors on purpose, so these rates test the pipeline and say nothing about real LLMs.</span></div>
-      <div class="mwrap" id="mwrap" tabindex="0" role="group" aria-label="Sorting machine">
+      <div class="mwrap" id="mwrap" tabindex="0" role="group" aria-label="Sorting gate">
         <canvas id="mcanvas" aria-hidden="true"></canvas>
         <div id="movl"></div>
       </div>
@@ -513,68 +628,45 @@ footer p { margin: 0; max-width: 110ch; }
       <div class="mctl">
         <div class="legend" id="mlegend">
           <span><i class="lt0"></i>matches a table cell</span><span><i class="lt1"></i>derived from the table</span><span><i class="lt2"></i>skipped</span>
-          <span><i class="lt3"></i>error under the current gate</span><span><i class="lt4"></i>flagged by gate v1 only</span><span><i class="lt5"></i>cleared on table check (stet)</span>
+          <span><i class="lt3"></i>flagged by the current gate</span><span id="lgV1"><i class="lt4"></i>flagged by gate v1 only</span><span id="lgStet"><i class="lt5"></i>cleared on table check (stet)</span>
         </div>
         <button type="button" class="ctlbtn" id="motionBtn">Motion: on</button>
         <button type="button" class="ctlbtn" id="replayBtn">Replay the sort</button>
         <button type="button" class="ctlbtn" id="spotBtn">Spot-check a random number</button>
+        <span class="small muted" id="keyHint" style="flex:1 1 100%"></span>
       </div>
-      <details class="fallback" id="mfallback"><summary>Machine contents as a table</summary><div class="tscroll" id="mtable"></div></details>
+      <details class="fallback" id="mfallback"><summary>Sorting gate counts as a table</summary><div class="tscroll" id="mtable"></div></details>
     </section>
 
-    <section class="plate" id="meters-plate" aria-labelledby="metTitle">
-      <div class="plate-head"><span class="plate-no">04</span><h2 class="plate-title" id="metTitle">Output meters</h2><span class="plate-spec">95% bootstrap intervals over notes, recomputed for the filters</span></div>
-      <div class="meternote"><span>Rates and charts use gate v3, the current gate. Gate v1 was kept only as a flag on each number, so its claim-level rates cannot be recomputed here.</span><span class="tag v1" id="v1chip" hidden>Machine shows gate v1; rates below use gate v3</span></div>
-      <div class="meters" id="kpis" aria-label="Headline figures"></div>
-    </section>
-
-    <section class="plate" id="bench-plate" aria-labelledby="benchTitle">
-      <div class="plate-head"><span class="plate-no">05</span><h2 class="plate-title" id="benchTitle">Test bench: how far to trust the gate</h2><span class="plate-spec">Pilot evidence from the paper. Filters do not change this section.</span></div>
-      <div class="plate-body"><div class="bench">
-        <div><h3 class="eyebrow" style="margin-bottom:10px">(a) Same notes, three checkers</h3><div id="versions" style="display:flex;flex-direction:column;gap:0"></div></div>
-        <div><h3 class="eyebrow" style="margin-bottom:10px">(b) Calibration log</h3><div class="tscroll" style="border:0"><table class="calib" id="calib"></table></div><p class="small muted" id="calibNote" style="margin:10px 0 0"></p></div>
-        <div id="worthBox"><h3 class="eyebrow" style="margin-bottom:10px">(c) What a flag is worth</h3>
-          <div class="worth"><div class="tray" id="tray" role="img"></div><div class="wbig" id="wbig"></div></div>
-          <div class="slider" style="margin-top:14px"><label for="benchN"><span>If the writer got 1 number in <b class="mono" id="benchNv"></b> wrong</span></label>
-            <input type="range" id="benchN" min="0" max="1000" step="1" aria-describedby="wmodel">
-            <div class="marks-row" id="benchMarks"></div></div>
-          <p class="small muted" id="wmodel" style="margin:10px 0 6px"></p>
-          <div class="formula" id="wformula"></div>
-          <p class="natural" id="wnatural" style="margin:10px 0 4px"></p>
-          <p class="small" id="wout" style="margin:0"></p>
-          <p class="small" style="margin:8px 0 0;font-weight:600">Flags are for triage: each one needs a check against the table.</p>
-        </div>
-      </div></div>
-    </section>
-
-    <section class="readouts" aria-label="Readouts">
+    <section class="readouts" id="readouts" aria-labelledby="roTitle">
+      <div class="sechead"><span class="plate-no">03</span><h2 class="plate-title" id="roTitle">Rates by group</h2><span class="tag" data-scope hidden></span><span class="plate-spec longspec">Where gate v3 flags cluster: by strategy, kind of claim, table size, cost and revision round. These are flag rates, not confirmed errors. Hover or tap a mark to highlight the same group everywhere.</span></div>
       <article class="plate span7" id="r1">
-        <div class="plate-head"><span class="plate-no">06.1</span><h2 class="plate-title">Error rate by strategy</h2><button type="button" class="ctlbtn" data-table="r1">Table</button></div>
+        <div class="plate-head"><span class="plate-no">03.1</span><h3 class="plate-title">Flag rate by strategy</h3><button type="button" class="ctlbtn" data-table="r1">Table</button></div>
         <div class="plate-body"><div class="take" id="r1take"></div>
-          <div class="pair" data-plot="r1"><div><h3>Numbers unsupported</h3><div class="chart" id="chStratL1"></div></div><div><h3>Wrong entity or metric</h3><div class="chart" id="chStratL2"></div></div></div>
+          <div class="pair" data-plot="r1"><div><h4>Flagged: not found in table</h4><div class="chart" id="chStratL1"></div></div><div><h4>Flagged: wrong entity, metric or period</h4><div class="chart" id="chStratL2"></div></div></div>
           <div class="tscroll" data-tab="r1" hidden></div></div>
       </article>
       <article class="plate span5" id="r2">
-        <div class="plate-head"><span class="plate-no">06.2</span><h2 class="plate-title">Kinds of claim error</h2><button type="button" class="ctlbtn" data-table="r2">Table</button></div>
+        <div class="plate-head"><span class="plate-no">03.2</span><h3 class="plate-title">Kinds of claim flag</h3><button type="button" class="ctlbtn" data-table="r2">Table</button></div>
         <div class="plate-body"><div class="take" id="r2take"></div><div class="legend" id="lgMix"></div><div data-plot="r2"><div class="chart" id="chMix"></div></div><div class="tscroll" data-tab="r2" hidden></div></div>
       </article>
       <article class="plate span6" id="r3">
-        <div class="plate-head"><span class="plate-no">06.3</span><h2 class="plate-title">Error rate by table size</h2>
-          <div class="seg" role="group" aria-label="Measure"><button type="button" id="szL1" aria-pressed="true">Unsupported</button><button type="button" id="szB" aria-pressed="false">Wrong entity or metric</button><button type="button" id="szL2" aria-pressed="false">Any claim error</button></div>
+        <div class="plate-head"><span class="plate-no">03.3</span><h3 class="plate-title">Flag rate by table size</h3>
+          <div class="seg" role="group" aria-label="Measure"><button type="button" id="szL1" aria-pressed="true" aria-label="Flagged: not found in table" title="Flagged: not found in table">Not found</button><button type="button" id="szB" aria-pressed="false" aria-label="Flagged: wrong entity, metric or period" title="Flagged: wrong entity, metric or period">Entity, metric or period</button><button type="button" id="szL2" aria-pressed="false">Any claim flag</button></div>
           <button type="button" class="ctlbtn" data-table="r3">Table</button></div>
         <div class="plate-body"><div class="take" id="r3take"></div><div class="legend" id="lgSize"></div><div data-plot="r3"><div class="chart" id="chSize"></div></div><div class="tscroll" data-tab="r3" hidden></div></div>
       </article>
       <article class="plate span6" id="r4">
-        <div class="plate-head"><span class="plate-no">06.4</span><h2 class="plate-title">Error rate versus cost</h2><button type="button" class="ctlbtn" data-table="r4">Table</button></div>
+        <div class="plate-head"><span class="plate-no">03.4</span><h3 class="plate-title">Not-found flags vs cost</h3><button type="button" class="ctlbtn" data-table="r4">Table</button></div>
         <div class="plate-body"><div class="take" id="r4take"></div><div class="legend" id="lgCost"></div><div data-plot="r4"><div class="chart" id="chCost"></div></div><div class="tscroll" data-tab="r4" hidden></div></div>
       </article>
-      <article class="plate span6" id="r5">
-        <div class="plate-head"><span class="plate-no">06.5</span><h2 class="plate-title">Write-then-verify, round by round</h2><button type="button" class="ctlbtn" data-table="r5">Table</button></div>
+      <article class="plate span12" id="r5">
+        <div class="plate-head"><span class="plate-no">03.5</span><h3 class="plate-title">Write-then-verify, round by round</h3><button type="button" class="ctlbtn" data-table="r5">Table</button></div>
         <div class="plate-body"><div class="take" id="r5take"></div><div data-plot="r5"><div class="chart" id="chS3"></div></div><div class="tscroll" data-tab="r5" hidden></div></div>
       </article>
-      <article class="plate span6" id="r6">
-        <div class="plate-head"><span class="plate-no">06.6</span><h2 class="plate-title">Breakdown</h2>
-          <label class="small muted" for="groupSel" style="margin-left:auto">Group by
+      <article class="plate span12" id="r6">
+        <div class="plate-head"><span class="plate-no">03.6</span><h3 class="plate-title">Rates by group, as a table</h3>
+          <label class="small muted grouplbl" for="groupSel">Group by
             <select id="groupSel" style="margin-left:6px;min-height:32px;background:var(--plate);border:1px solid var(--rule-2);border-radius:2px;padding:2px 6px">
               <option value="strategy">Strategy</option><option value="model">Model</option><option value="size">Table size</option><option value="strategy_size">Strategy and size</option><option value="strategy_model">Strategy and model</option>
             </select></label></div>
@@ -583,17 +675,42 @@ footer p { margin: 0; max-width: 110ch; }
     </section>
 
     <section class="plate rack" id="rack" aria-labelledby="rackTitle" tabindex="-1">
-      <div class="plate-head"><span class="plate-no">07</span><h2 class="plate-title" id="rackTitle">Note rack</h2><span class="plate-spec">Click a note to open it with every number marked</span></div>
+      <div class="plate-head"><span class="plate-no">04</span><h2 class="plate-title" id="rackTitle">All notes</h2><span class="plate-spec">Click a note to open it with every number marked.</span><span class="tag" data-scope hidden></span></div>
       <div class="plate-body">
-        <div class="tools"><label for="onlyErr"><input type="checkbox" id="onlyErr"> Only notes with errors</label><span class="muted" id="listCount"></span></div>
+        <div class="tools"><label for="onlyErr"><input type="checkbox" id="onlyErr"> Only notes with flags</label><label for="onlyConf" id="onlyConfL" hidden><input type="checkbox" id="onlyConf"> Only notes with a confirmed error</label><span class="muted" id="listCount"></span></div>
         <div class="tscroll" id="listScroll"><table class="t stick1" id="noteTable"></table></div>
         <button type="button" class="linkbtn" id="moreBtn" hidden>Show all notes</button>
       </div>
     </section>
 
+    </section>
+
+    <section class="chapter" id="chBackgroundGroup" aria-labelledby="chBackground">
+    <p class="eyebrow chapter-label" id="chBackground">Background: trust and method</p>
+
+    <section class="plate" id="bench-plate" aria-labelledby="benchTitle">
+      <div class="plate-head"><span class="plate-no">05</span><h2 class="plate-title" id="benchTitle">How far to trust a flag</h2><span class="tag">Filters affect only the filtered-notes button in (c)</span><span class="plate-spec">(a) and (b) are fixed results from the paper. (c) starts at the chosen run's rate.</span></div>
+      <div class="plate-body"><p class="small" style="margin:0 0 14px;max-width:72ch">A flag is a lead, not a verdict. When real errors are rare, even a small false-alarm rate means most flags are false alarms. (a) shows the Opus pilot under three checkers, (b) the measured accuracy on test sets, and (c) works out how many flags to expect to be real.</p><div class="bench">
+        <div><h3 class="eyebrow" style="margin-bottom:10px">(a) Same notes, three checkers (Opus pilot)</h3><div id="versions" style="display:flex;flex-direction:column;gap:0"></div></div>
+        <div><h3 class="eyebrow" style="margin-bottom:10px">(b) Accuracy on test sets and the pilot</h3><div class="tscroll" style="border:0"><table class="calib" id="calib"></table></div><p class="small muted" id="calibNote" style="margin:10px 0 0"></p></div>
+        <div id="worthBox"><h3 class="eyebrow" style="margin-bottom:10px">(c) What a flag is worth</h3>
+          <div class="worth"><div class="tray" id="tray" role="img"></div><div class="wbig" id="wbig"></div></div>
+          <p class="small" id="wobs" hidden style="margin:10px 0 0"></p>
+          <div class="slider" style="margin-top:14px"><label for="benchN"><span>If the writer got 1 number in <b class="mono" id="benchNv"></b> wrong</span></label>
+            <input type="range" id="benchN" min="0" max="1000" step="1" aria-describedby="wmodel">
+            <div class="marks-row" id="benchMarks"></div><p class="small muted benchcap" id="benchCap"></p></div>
+          <p class="small muted" id="wmodel" style="margin:10px 0 6px"></p>
+          <details class="fallback" style="padding:0" id="wformD"><summary>How the model works</summary><p class="small muted" style="margin:0 0 6px">precision: share of flags that are real; recall: share of wrong values caught on fresh test set 2; fa: false-alarm rate on correct numbers; b: share of numbers wrong (1 in N).</p><div class="formula" id="wformula"></div></details>
+          <p class="natural" id="wnatural" style="margin:10px 0 4px"></p>
+          <p class="small" id="wout" style="margin:0"></p>
+          <p class="small" style="margin:8px 0 0;font-weight:600">Flags are leads, not verdicts: check each one against the table.</p>
+        </div>
+      </div></div>
+    </section>
+
     <section class="plate" id="paper" aria-labelledby="paperTitle">
-      <div class="plate-head"><span class="plate-no">08</span><h2 class="plate-title" id="paperTitle">Paper and method</h2></div>
-      <div class="plate-body" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 32px" id="paperBody">
+      <div class="plate-head"><span class="plate-no">06</span><h2 class="plate-title" id="paperTitle">Paper and method</h2></div>
+      <div class="plate-body paperbody" id="paperBody">
         <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
           <div class="eyebrow">Preprint</div>
           <div id="paperFull" style="font-family:var(--display);font-weight:800;font-size:26px;line-height:1.05"></div>
@@ -608,23 +725,28 @@ footer p { margin: 0; max-width: 110ch; }
         </div>
         <div style="min-width:0"><div class="eyebrow" style="margin-bottom:8px">Method notes</div>
           <ul class="method">
-            <li>Rates pool numbers or claims over notes.</li>
+            <li>Level 1 checks each number against the table. Level 2 checks each claim's entity, metric and period.</li>
+            <li>Each rate is total flagged over total checked, across all filtered notes.</li>
+            <li>A flag is the gate's call. A confirmed error is a flag the blind AI review marked wrong (full study) or the table check found wrong (Opus pilot).</li>
             <li>Intervals are 95% percentile bootstrap intervals over notes (1,000 resamples), computed in the browser, so they can differ slightly from results/summary.csv.</li>
-            <li>S2 notes whose facts script failed twice are excluded from rates.</li>
-            <li>Gate v1 flags come from re-scoring the same notes with the first version of the gate (paper/rescore_v1.py).</li>
-            <li>The table check is the paper's adjudication of the pilot: every flag compared with the source table, with AI assistance and programmatic cell lookups, not a human audit. The full study's verdicts come from a blind review by AI agents (paper/adjudication).</li>
-            <li>Rebuild this page with <span class="mono">python src/analyze.py</span>.</li>
+            <li>Each table, strategy and model was run twice (repeat 1 and 2).</li>
+            <li id="mScope" hidden></li>
+            <li>S2 notes whose fact-computing code failed twice (no note written) are left out of rates.</li>
+            <li>Opus pilot only: gate v1 flags come from re-scoring the pilot notes with the first version of the gate (paper/rescore_v1.py).</li>
+            <li>The table check is the paper's check of every pilot flag against the source table, with AI assistance and programmatic cell lookups, not a human audit. The full study's verdicts come from a blind review by AI agents (paper/adjudication).</li>
+            <li>Rebuild this page with <span class="mono">python src/dashboard.py</span> (<span class="mono">src/analyze.py</span> also runs it).</li>
           </ul></div>
       </div>
+    </section>
     </section>
   </main>
   <footer><p id="footMeta"></p></footer>
 </div>
 
-<div id="console" hidden aria-label="Machine console">
-  <div class="cseg" role="radiogroup" aria-label="Gate rulebook" id="cseg"></div>
+<div id="console" hidden aria-label="Gate controls">
+  <div class="cseg" role="radiogroup" aria-label="Gate version" id="cseg"></div>
   <span class="cflag" id="cflag"></span>
-  <div class="pticket cpaper" data-paper="console"><span class="slip" aria-hidden="true"></span><button type="button" class="pmain" data-paper-act="download" style="min-height:36px;padding:4px 14px 4px 18px"><b><span class="plabel" style="font-family:var(--sans);font-size:12.5px;opacity:1">Paper</span></b></button></div>
+  <div class="pticket cpaper" data-paper="console"><span class="slip" aria-hidden="true"></span><button type="button" class="pmain" data-paper-act="download" aria-label="Download PDF of the paper" style="min-height:36px;padding:4px 14px 4px 18px"><b><span class="plabel" style="font-family:var(--sans);font-size:12.5px;opacity:1"><span class="nw-long">Download </span>PDF</span></b></button></div>
 </div>
 <aside id="drawer" role="dialog" aria-modal="false" aria-labelledby="dTitle" hidden>
   <div class="dhead">
@@ -743,6 +865,8 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   var NS = "http://www.w3.org/2000/svg";
   var STRATS = ["S1", "S2", "S3", "S4"];
   var STRAT_NAMES = { S1: "Direct", S2: "Compute-then-write", S3: "Write-then-verify", S4: "Facts-template" };
+  var STRAT_DEF = { S1: "the table is in the prompt", S2: "the model writes pandas code, the code runs, and the note is written from its results",
+    S3: "an S1 draft is checked by the gate and corrected for up to two rounds", S4: "numbers are copied verbatim from a precomputed facts packet (an upper bound)" };
   var STRAT_COLOR = { S1: "var(--s1)", S2: "var(--s2)", S3: "var(--s3)", S4: "var(--s4)" };
   var STRAT_SHAPE = { S1: "circle", S2: "square", S3: "triangle", S4: "diamond" };
   var SIZE_ORDER = ["small", "medium", "large"];
@@ -761,7 +885,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   var STORY = DATA.meta.story || null;
 
   var state = { run: 0, gate: "v3", f: {}, focus: null, focusPinned: false, sel: null, selNum: null,
-    sort: { key: "flags", dir: -1 }, onlyErr: false, showAll: false, group: "strategy", sizeMetric: "l1", benchB: null };
+    sort: { key: "flags", dir: -1 }, onlyErr: false, onlyConf: false, showAll: false, group: "strategy", sizeMetric: "l1", benchB: null };
 
   /* ---------- helpers ---------- */
   function $(id) { return document.getElementById(id); }
@@ -805,6 +929,21 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   function sizeRank(z) { var i = SIZE_ORDER.indexOf(z); return i < 0 ? 9 : i; }
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
   function stratName(st) { return st + " " + (STRAT_NAMES[st] || ""); }
+  function modelName(id) { return (DATA.meta.modelNames && DATA.meta.modelNames[id]) || id; }
+  function shortModel(id) { return String(modelName(id)).replace(/^Claude /, ""); }
+  /* two-letter model codes (Hk, Sn, Op) that cannot be read as strategy codes (S1 to S4); the full family name if two would clash */
+  var MODEL_CODE = { haiku: "Hk", sonnet: "Sn", opus: "Op" };
+  function modelCodes(models) {
+    var out = {}, seen = {};
+    models.forEach(function (md) {
+      if (out[md]) return;
+      var fam = shortModel(md).split(" ")[0], c = MODEL_CODE[fam.toLowerCase()] || fam.slice(0, 2);
+      if (seen[c]) c = shortModel(md);
+      seen[c] = 1; out[md] = c;
+    });
+    return out;
+  }
+  function isReviewed(R) { return !!(R && R.review && !R.isMock); }
   function words(n) { return ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"][n] || String(n); }
   function run() { return DATA.runs[state.run]; }
   function pilotRun() { return DATA.runs.find(function (r) { return !r.isMock && r.v1; }) || null; }
@@ -840,6 +979,126 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var out = values.slice();
     for (var k = 1; k < idx.length; k++) if (out[idx[k]] - out[idx[k - 1]] < gap) out[idx[k]] = out[idx[k - 1]] + gap;
     return out;
+  }
+  /* like spread, then shifts the whole block so every label stays between lo and hi */
+  function spreadWithin(ys, gap, lo, hi) {
+    var idx = ys.map(function (v, i) { return i; }).sort(function (a, b) { return ys[a] - ys[b]; });
+    var out = ys.slice();
+    for (var k = 1; k < idx.length; k++) if (out[idx[k]] - out[idx[k - 1]] < gap) out[idx[k]] = out[idx[k - 1]] + gap;
+    if (!idx.length) return out;
+    var last = out[idx[idx.length - 1]], shift = last > hi ? hi - last : 0;
+    if (out[idx[0]] + shift < lo) shift = lo - out[idx[0]];
+    idx.forEach(function (i) { out[i] += shift; });
+    return out;
+  }
+  /* point labels: try spots around each point, keep the first that hits no marker, error bar or placed label;
+     spots away from the point get a thin leader line. items: {text, w, cx, cy}; obstacles and bounds: [x0, x1, y0, y1] */
+  function placeLabels(items, obstacles, bounds) {
+    var LH = 13, placed, links;
+    function hits(r, a) { return r[0] < a[1] && r[1] > a[0] && r[2] < a[3] && r[3] > a[2]; }
+    function side(a, b, c) { return (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0]); }
+    function crosses(p, q) { return side(p[0], p[1], q[0]) * side(p[0], p[1], q[1]) < 0 && side(q[0], q[1], p[0]) * side(q[0], q[1], p[1]) < 0; }
+    function d2(a, b) { return (a[0] - b[0]) * (a[0] - b[0]) + (a[1] - b[1]) * (a[1] - b[1]); }
+    function cost(r, it, right) {
+      if (r[0] < bounds[0] || r[1] > bounds[1] || r[2] < bounds[2] || r[3] > bounds[3]) return 1e6;
+      var c = 0; obstacles.forEach(function (o) { if (hits(r, o)) c += 10; }); placed.forEach(function (o) { if (hits(r, o)) c += 100; });
+      /* a label's link (point to the near end of the label) must not cross another link, and the label must sit closer to its own point than to any other */
+      var end = [right ? r[0] : r[1], (r[2] + r[3]) / 2], link = [[it.cx, it.cy], end], own = d2(end, link[0]);
+      links.forEach(function (l) { if (crosses(link, l)) c += 40; });
+      items.forEach(function (o) {
+        if (o === it) return;
+        if (d2(end, [o.cx, o.cy]) < own) c += 8;
+        /* another point right beside the label text reads as its owner */
+        var dx = Math.max(r[0] - o.cx, 0, o.cx - r[1]), dy = Math.max(r[2] - o.cy, 0, o.cy - r[3]);
+        if (dx * dx + dy * dy < 100) c += 8;
+      });
+      return c;
+    }
+    var spots = [[9, 0], [-9, 0], [9, -5], [-9, -5], [9, 5], [-9, 5], [6, -12], [6, 12], [-6, -12], [-6, 12]];
+    [12, 30].forEach(function (dx) { [16, 30, 44, 58, 72].forEach(function (d) { spots.push([dx, -d], [dx, d], [-dx, -d], [-dx, d]); }); });
+    /* greedy placement in one order; returns the total cost and each item's chosen spot */
+    function attempt(order) {
+      placed = []; links = [];
+      var total = 0, pick = [];
+      order.forEach(function (i) {
+        var it = items[i], best = null;
+        spots.forEach(function (sp, k) {
+          var right = sp[0] > 0, x0 = right ? it.cx + sp[0] : it.cx + sp[0] - it.w, mid = it.cy + sp[1];
+          var r = [x0, x0 + it.w, mid - LH / 2, mid + LH / 2], c = cost(r, it, right) + k * 0.01;
+          if (!best || c < best.c) best = { c: c, r: r, right: right, sp: sp };
+        });
+        placed.push(best.r); links.push([[it.cx, it.cy], [best.right ? best.r[0] : best.r[1], (best.r[2] + best.r[3]) / 2]]);
+        total += best.c; pick[i] = best;
+      });
+      return { total: total, pick: pick };
+    }
+    /* try a few orders (left to right, right to left, top down, bottom up, most crowded first) and keep the cheapest layout */
+    var idx = items.map(function (it, i) { return i; });
+    function crowd(i) { return items.filter(function (o) { return d2([o.cx, o.cy], [items[i].cx, items[i].cy]) < 900; }).length; }
+    var orders = [
+      idx.slice().sort(function (a, b) { return items[a].cx - items[b].cx; }),
+      idx.slice().sort(function (a, b) { return items[b].cx - items[a].cx; }),
+      idx.slice().sort(function (a, b) { return items[a].cy - items[b].cy; }),
+      idx.slice().sort(function (a, b) { return items[b].cy - items[a].cy; }),
+      idx.slice().sort(function (a, b) { return crowd(b) - crowd(a) || items[a].cx - items[b].cx; })
+    ];
+    var win = null;
+    orders.forEach(function (o) { var a = attempt(o); if (!win || a.total < win.total) win = a; });
+    /* points that still could not get a clean spot, with their close neighbours, get their labels in one column
+       to the right of the cluster, in the same top-to-bottom order as the points, each with a leader line */
+    var seed = idx.filter(function (i) { return win.pick[i].c >= 5; });
+    function inRect(x, y, r) { return x > r[0] && x < r[1] && y > r[2] && y < r[3]; }
+    function tryColumn(radius, gap) {
+      var hard = seed.slice(), grow = true;
+      while (grow) { grow = false; idx.forEach(function (i) { if (hard.indexOf(i) < 0 && hard.some(function (j) { return d2([items[i].cx, items[i].cy], [items[j].cx, items[j].cy]) < radius * radius; })) { hard.push(i); grow = true; } }); }
+      hard.sort(function (a, b) { return items[a].cy - items[b].cy || items[a].cx - items[b].cx; });
+      var maxX = Math.max.apply(null, hard.map(function (i) { return items[i].cx; })), wMax = Math.max.apply(null, hard.map(function (i) { return items[i].w; }));
+      /* keep each label as close to its point's height as the gap allows: push down, then back up from the bottom edge */
+      var ys = hard.map(function (i) { return items[i].cy; }), lo = bounds[2] + LH / 2, hi = bounds[3] - LH / 2;
+      for (var q = 0; q < ys.length; q++) ys[q] = Math.max(ys[q], q ? ys[q - 1] + gap : lo);
+      for (q = ys.length - 1; q >= 0; q--) ys[q] = Math.min(ys[q], q < ys.length - 1 ? ys[q + 1] - gap : hi);
+      if (ys[0] < lo) return false;
+      var keepRects = idx.filter(function (i) { return hard.indexOf(i) < 0; }).map(function (i) { return win.pick[i].r; });
+      var col = null;
+      [14, 28, 42, 56, 70, 84, 98].some(function (dx) {
+        var x0 = maxX + dx, rects = hard.map(function (i, k) { return [x0, x0 + items[i].w, ys[k] - LH / 2, ys[k] + LH / 2]; });
+        if (x0 + wMax > bounds[1]) return false;
+        var ok = rects.every(function (r) { return !obstacles.some(function (o) { return hits(r, o); }) && !keepRects.some(function (o) { return hits(r, o); }); });
+        /* each leader must clear the other points' markers and the labels kept where they were */
+        ok = ok && hard.every(function (i, k) {
+          var a = [items[i].cx + 5, items[i].cy], b = [x0 - 2, ys[k]], n = Math.ceil(Math.sqrt(d2(a, b)) / 2);
+          for (var t = 1; t < n; t++) {
+            var x = a[0] + (b[0] - a[0]) * t / n, y = a[1] + (b[1] - a[1]) * t / n;
+            if (keepRects.some(function (r) { return inRect(x, y, r); })) return false;
+            if (items.some(function (o, j) { return j !== i && d2([o.cx, o.cy], [x, y]) < 49; })) return false;
+          }
+          return true;
+        });
+        if (ok) col = rects;
+        return ok;
+      });
+      if (col) hard.forEach(function (i, k) { win.pick[i] = { r: col[k], right: true, sp: [col[k][0] - items[i].cx, 99], col: true }; });
+      return !!col;
+    }
+    /* wider gaps give steeper leaders that clear neighbouring markers */
+    var colOK = seed.length > 1 && [30, 36, 42, 48, 60].some(function (rad) { return [LH, LH + 4, LH + 8].some(function (gap) { return tryColumn(rad, gap); }); });
+    /* no room for a column (narrow charts): leave the crowded points unlabelled rather than label them misleadingly */
+    if (!colOK) seed.forEach(function (i) { items[i].hidden = true; });
+    items.forEach(function (it, i) {
+      var best = win.pick[i];
+      if (best.col) {
+        it.x = best.r[0]; it.y = (best.r[2] + best.r[3]) / 2 + 3.5; it.anchor = null;
+        it.leader = [it.cx + 5, it.cy, best.r[0] - 2, (best.r[2] + best.r[3]) / 2];
+        return;
+      }
+      it.x = best.right ? best.r[0] : best.r[1]; it.y = (best.r[2] + best.r[3]) / 2 + 3.5; it.anchor = best.right ? null : "end";
+      it.leader = null;
+      if (Math.abs(best.sp[1]) > 6) {
+        var ly = best.sp[1] > 0 ? best.r[2] + 2 : best.r[3] - 2;
+        it.leader = [it.cx + (best.right ? 4 : -4), it.cy + (best.sp[1] > 0 ? 4 : -4), best.right ? best.r[0] - 1 : best.r[1] + 1, ly];
+      }
+    });
+    return items;
   }
   /* rebuild a group of controls without losing keyboard focus: the focused control is found again by its data-key */
   function refocus(box, build) {
@@ -903,7 +1162,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   function applyTheme() {
     var t = THEMES[themeIdx];
     if (t === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", t);
-    $("themeBtn").textContent = t.charAt(0).toUpperCase() + t.slice(1);
+    $("themeBtn").textContent = "Theme: " + t.charAt(0).toUpperCase() + t.slice(1);
     $("themeBtn").setAttribute("aria-label", "Theme: " + t + ". Click to change.");
     $("themeBtn").title = "Theme: " + t;
     try { localStorage.setItem("numgate-theme", t); } catch (e) { /* storage unavailable */ }
@@ -953,9 +1212,9 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     if (tk && motionOn()) { tk.classList.remove("printing"); void tk.offsetWidth; tk.classList.add("printing"); }
     var lab = tk ? tk.querySelector(".plabel") : btn;
     if (lab) {
-      if (!lab._orig) lab._orig = lab.textContent;
+      if (lab._orig == null) lab._orig = lab.innerHTML;
       lab.textContent = "✓ " + text;
-      clearTimeout(lab._timer); lab._timer = setTimeout(function () { lab.textContent = lab._orig; }, 2000);
+      clearTimeout(lab._timer); lab._timer = setTimeout(function () { lab.innerHTML = lab._orig; }, 2000);
     }
     announce(text);
   }
@@ -1036,9 +1295,9 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   /* ---------- filters ---------- */
   var DIMS = [
     { key: "strategy", label: "Strategy", fmt: stratName, icon: shapeIcon, order: function (a, b) { return a < b ? -1 : 1; } },
-    { key: "model", label: "Model", fmt: function (v) { return v; } },
+    { key: "model", label: "Model", fmt: modelName },
     { key: "size", label: "Table size", fmt: function (v) { return v; }, order: function (a, b) { return sizeRank(a) - sizeRank(b); } },
-    { key: "etype", label: "Entities", fmt: function (v) { return v === "country" ? "countries" : v === "product" ? "products" : v; } }
+    { key: "etype", label: "Rows are", fmt: function (v) { return v === "country" ? "countries" : v === "product" ? "products" : v; } }
   ];
   function valuesOf(key) {
     var d = DIMS.find(function (x) { return x.key === key; });
@@ -1054,10 +1313,16 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var box = $("filters"); clear(box);
     DIMS.forEach(function (d) {
       var vals = valuesOf(d.key);
+      if (vals.length < 2) {
+        box.appendChild(h("div", { cls: "fgroup" }, [h("span", { cls: "tag", text: d.label + ": " + d.fmt(vals[0]) + " (only one in this run)" })]));
+        return;
+      }
       var g = h("div", { cls: "fgroup", role: "group", "aria-label": d.label }, [h("span", { cls: "eyebrow", text: d.label })]);
+      var ranges = d.key === "size" ? sizeRanges() : null;
       vals.forEach(function (v) {
         var on = state.f[d.key].has(v);
-        var b = h("button", { type: "button", cls: "chip", "data-key": "f:" + d.key + ":" + v, "aria-pressed": String(on), title: vals.length > 1 ? "Show or hide " + d.fmt(v) : "Only value in this run" });
+        var tt = d.key === "strategy" ? "Show or hide " + stratName(v) + ": " + (STRAT_DEF[v] || "") : ranges && ranges[v] ? v + " tables, " + ranges[v][0] + " to " + ranges[v][1] + " rows" : "Show or hide " + d.fmt(v);
+        var b = h("button", { type: "button", cls: "chip", "data-key": "f:" + d.key + ":" + v, "aria-pressed": String(on), title: tt });
         if (d.icon) b.appendChild(d.icon(v));
         b.appendChild(document.createTextNode(d.fmt(v)));
         b.addEventListener("click", function () {
@@ -1073,18 +1338,66 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     if (state.focus && state.focusPinned) {
       box.appendChild(h("button", { type: "button", cls: "chip focus", "data-key": "focuschip", "aria-label": "Clear focus on " + focusLabel(state.focus), onclick: function () { setFocus(null); } }, ["Focus: " + focusLabel(state.focus) + " ×"]));
     }
-    box.appendChild(h("span", { cls: "fcount", text: filtered().length + " of " + run().notes.length + " notes" }));
+    box.appendChild(h("span", { cls: "fcount", text: int(filtered().length) + " of " + int(run().notes.length) + " notes" }));
+    renderScope();
   }
+  function sizeRanges() {
+    var out = {};
+    run().notes.forEach(function (n) {
+      if (n.nRows == null) return;
+      var r = out[n.size] || (out[n.size] = [n.nRows, n.nRows]);
+      r[0] = Math.min(r[0], n.nRows); r[1] = Math.max(r[1], n.nRows);
+    });
+    return out;
+  }
+  /* where the filters apply: band head, nav button, section tags, the collapsed-band focus link and the size ranges */
+  function renderScope() {
+    var R = run(); if (!R) return;
+    var tot = R.notes.length, k = filtered().length, act = k !== tot;
+    var rest = " Applies to sections 01 to 04, not to the key figures above or to 05 and 06, except the filtered-notes button in 05 (c).";
+    $("fScope").textContent = (act ? int(k) + " of " + int(tot) + " notes shown." : "All " + int(tot) + " notes.") + rest;
+    var ns = $("navScope"), pin = !!(state.focus && state.focusPinned), nh0 = $("secnav").offsetHeight;
+    clear(ns);
+    if (pin) {
+      ns.append(h("span", { cls: "nw-long", text: "Focus: " + focusLabel(state.focus) + " ×" }), h("span", { cls: "nw-short", text: "Clear focus ×" }));
+      ns.setAttribute("aria-label", "Clear focus on " + focusLabel(state.focus));
+      ns.removeAttribute("aria-controls");
+    } else {
+      ns.append(h("span", { cls: "nw-long", text: act ? "Filters: " + int(k) + " of " + int(tot) + " notes" : "Filters: all " + int(tot) + " notes" }),
+        h("span", { cls: "nw-short", text: act ? "Filters " + int(k) + "/" + int(tot) : "Filters" }));
+      ns.setAttribute("aria-label", act ? "Filters: " + int(k) + " of " + int(tot) + " notes shown. Go to filters." : "Filters: all " + int(tot) + " notes shown. Go to filters.");
+      ns.setAttribute("aria-controls", "filterband");
+    }
+    $("secnav").setAttribute("data-filtered", String(act || pin));
+    if ($("secnav").offsetHeight !== nh0) navOffset();
+    document.querySelectorAll("[data-scope]").forEach(function (t) { t.textContent = "Filtered: " + int(k) + " of " + int(tot) + " notes"; t.hidden = !act; });
+    var ff = $("fFocus"), had = ff.contains(document.activeElement);
+    clear(ff);
+    if (state.focus && state.focusPinned && $("filterBody").hidden) {
+      ff.appendChild(h("button", { type: "button", cls: "linkbtn", text: "Clear focus: " + focusLabel(state.focus), onclick: function () { setFocus(null); } }));
+    } else if (had) $("fToggle").focus({ preventScroll: true });
+    ff.hidden = !ff.firstChild;
+    var rg = sizeRanges(), parts = SIZE_ORDER.filter(function (z) { return rg[z]; }).concat(Object.keys(rg).filter(function (z) { return SIZE_ORDER.indexOf(z) < 0; }));
+    $("fSizes").textContent = parts.length ? "Table size: " + parts.map(function (z, i) { return z + " (" + rg[z][0] + " to " + rg[z][1] + (i ? "" : " rows") + ")"; }).join(", ") + "." : "";
+    $("fSizes").hidden = !parts.length;
+  }
+  function setFilterOpen(open) {
+    $("filterBody").hidden = !open;
+    $("fToggle").setAttribute("aria-expanded", String(open));
+    $("fToggle").textContent = open ? "Hide filters" : "Show filters";
+    renderScope();
+  }
+  $("fToggle").addEventListener("click", function () { setFilterOpen($("filterBody").hidden); });
 
   /* ---------- soft focus: hover a group anywhere and every view responds ---------- */
   function focusLabel(f) {
     if (!f) return "";
     if (f.dim === "strategy") return stratName(f.value);
     if (f.dim === "size") return f.value + " tables";
-    if (f.dim === "model") return f.value;
-    if (f.dim === "group") return f.value;
+    if (f.dim === "model") return modelName(f.value);
+    if (f.dim === "group") return f.label || f.value;
     if (f.dim === "cell") return f.label;
-    if (f.dim === "sm") return stratName(f.value) + ", " + f.model;
+    if (f.dim === "sm") return stratName(f.value) + ", " + modelName(f.model);
     return "";
   }
   function focusNote(n) {
@@ -1138,14 +1451,18 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   function wholeRun(R) {
     var ok = R.notes.filter(function (n) { return !n.failed; });
     var checked = sum(ok, function (n) { return n.nChecked; }), uns = sum(ok, function (n) { return n.nUns; });
-    var f3 = 0, v1 = 0, real = 0, confirmed = 0, lines = new Set();
+    var f3 = 0, v1 = 0, real = 0, confirmed = 0, reviewed = 0, unclear = 0, lines = new Set();
     for (var i = 0; i < R.numbers.length; i++) {
-      if (R.flags && R.flags[i]) { f3++; lines.add(R.numbers[i][0] + "|" + R.numbers[i][1]); if (R.v1 && R.v1[i]) real++; if (R.review && R.review[i] === 2) confirmed++; }
+      if (R.flags && R.flags[i]) {
+        f3++; lines.add(R.numbers[i][0] + "|" + R.numbers[i][1]); if (R.v1 && R.v1[i]) real++;
+        if (R.review && R.review[i]) { reviewed++; if (R.review[i] === 2) confirmed++; else if (R.review[i] === 3) unclear++; }
+      }
       if (R.v1 && R.v1[i]) v1++;
     }
     // with a blind review, "numbers wrong" counts confirmed errors, not raw gate flags
     var wrong = R.review ? confirmed : uns;
-    return { numbers: R.numbers.length, checked: checked, uns: uns, f3: f3, v1: v1, real: real, confirmed: confirmed, sentences: lines.size, tables: uniq(R.notes.map(function (n) { return n.table; })).length,
+    return { numbers: R.numbers.length, checked: checked, uns: uns, f3: f3, v1: v1, real: real, confirmed: confirmed, sentences: lines.size,
+      reviewed: reviewed, unclear: unclear, falseAlarm: reviewed - confirmed - unclear, settled: reviewed - unclear, tables: uniq(R.notes.map(function (n) { return n.table; })).length,
       oneIn: wrong ? Math.round(checked / wrong) : null };
   }
   function aliveCounts() {
@@ -1164,34 +1481,47 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var R = run(), W = wholeRun(R), ok = handOK(R);
     var title = PAPER.title.split(":")[0];
     $("h1").textContent = title;
-    $("findEyebrow").textContent = (R.isMock ? "Test run \u00b7 " : R.v1 ? "Pilot run \u00b7 " : "Full study \u00b7 ") + R.label + " · " + R.notes.length + " notes · " + W.tables + " weekly tables";
+    var nm = R.name || R.label;
+    $("findEyebrow").textContent = nm + (R.isMock || nm === R.label ? "" : " · " + R.label) + " · " + int(R.notes.length) + " notes · " + W.tables + " weekly tables";
     var L = $("lede"); clear(L);
     if (R.isMock) {
       L.append("The mock model is a template writer that plants errors on purpose. It wrote ", fig(int(R.notes.length)), " notes containing ", fig(int(W.numbers)),
         " numbers. The gate checked ", fig(int(W.checked)), " and flagged ", fig(int(W.f3), true), ": ", fig(int(W.uns)), " not found in the table and ", fig(int(W.f3 - W.uns)), " that are the values of wrong claims.");
+    } else if (isReviewed(R) && !R.v1) {
+      L.append(R.label + " wrote ", fig(int(R.notes.length)), " weekly sales notes containing ", fig(int(W.numbers)), " numbers. The gate checked ", fig(int(W.checked)),
+        " of them against the source tables and flagged ", fig(int(W.f3)), ". A blind review of every flag by AI agents confirmed ", fig(int(W.confirmed), true), " as real errors",
+        W.unclear ? ", judged " : " and judged ", fig(int(W.falseAlarm)), " false alarms");
+      if (W.unclear) L.append(" and could not settle ", fig(int(W.unclear)));
+      L.append(".");
     } else {
       L.append(R.label + " wrote ", fig(int(R.notes.length)), " weekly sales notes containing ", fig(int(W.numbers)), " numbers. The gate checked ", fig(int(W.checked)), " of them against the source tables.");
       if (R.v1) L.append(" Its first version flagged ", fig(int(W.v1)), ".");
       if (ok) L.append(" Every flag was checked against the table: ", fig(int(W.real), true), " were wrong, " + (W.sentences === 1 ? "all in one sentence." : "in " + W.sentences + " sentences."));
-      else if (R.review) L.append(" The gate flags ", fig(int(W.f3)), " of them; a blind review confirmed ", fig(int(W.confirmed), true), " as real errors.");
-      else L.append(" The current gate flags ", fig(int(W.f3), true), ".");
+      else if (R.review) L.append(" The gate flags ", fig(int(W.f3)), " of them; a blind review by AI agents confirmed ", fig(int(W.confirmed), true), " as real errors.");
+      else { L.append(" The current gate flags ", fig(int(W.f3), true), "."); if (!R.v1) L.append(" These flags have not been reviewed, so they are not confirmed errors."); }
     }
     var bt = $("beats");
-    if (ok && STORY) {
+    if (isReviewed(R) && !R.v1) {
       bt.hidden = false;
-      bt.textContent = W.real + " wrong in " + int(W.checked) + " checked numbers. " + (W.v1 - W.real) + " of the " + W.v1 + " numbers gate v1 flagged were correct. At this error rate about " +
-        Math.round(100 * STORY.precision) + " in 100 flags are real.";
+      var ratio = !W.confirmed ? "none of its flags was confirmed" : W.falseAlarm >= W.confirmed ? "the gate raised about " + int(Math.round(W.falseAlarm / W.confirmed)) + " false alarms for every real one"
+        : "the gate raised about " + int(Math.round(W.confirmed / Math.max(1, W.falseAlarm))) + " real errors for every false alarm";
+      bt.textContent = "In plain words: " + (W.oneIn ? "about 1 in " + int(W.oneIn) + " checked numbers was a confirmed error, and " : "no checked number was a confirmed error, and ") + ratio +
+        ". A flag is the gate's call; a confirmed error is a flag the review marked wrong.";
+    } else if (ok && STORY) {
+      bt.hidden = false;
+      bt.textContent = W.real + " wrong in " + int(W.checked) + " checked numbers. " + (W.v1 - W.real) + " of the " + W.v1 + " numbers gate v1 flagged were correct. At this error rate, the model in 05 expects about " +
+        Math.round(100 * STORY.precision) + " in 100 gate v3 flags to be real on notes it was not tuned on.";
     } else bt.hidden = true;
     var c = $("cite"); clear(c);
     c.append(h("span", null, ["Paper: ", h("i", { text: PAPER.title }), ". Preprint."]),
       PAPER.ok() ? h("button", { type: "button", cls: "textbtn", "data-paper-act": "download", text: "Download PDF" }) : h("button", { type: "button", cls: "textbtn", disabled: true, text: "Paper not bundled" }),
-      PAPER.ok() ? h("button", { type: "button", cls: "textbtn", "data-paper-act": "open", text: "Open" }) : null);
+      PAPER.ok() ? h("button", { type: "button", cls: "textbtn", "data-paper-act": "open", text: "Open in new tab" }) : null);
     wirePaper(c);
     renderTiles();
   }
   function tile(value, label, cls, opts) {
     opts = opts || {};
-    var t = h(opts.button === false ? "div" : "button", { type: opts.button === false ? null : "button", cls: "tile " + (cls || ""), "data-key": opts.key || null, "aria-pressed": opts.pressed == null ? null : String(opts.pressed), title: opts.title || null }, [
+    var t = h(opts.button === false ? "div" : "button", { type: opts.button === false ? null : "button", cls: "tile " + (cls || "") + (opts.go ? "" : " nogo"), "data-key": opts.key || null, "aria-pressed": opts.pressed == null ? null : String(opts.pressed), title: opts.title || null }, [
       h("span", { cls: "tv" }, [value]), h("span", { cls: "tl", text: label }), opts.go ? h("span", { cls: "go", "aria-hidden": "true", text: opts.go }) : null]);
     if (opts.onclick) t.addEventListener("click", opts.onclick);
     return t;
@@ -1199,23 +1529,39 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   function renderTiles() { refocus($("tiles"), renderTilesInner); }
   function renderTilesInner() {
     var R = run(), box = $("tiles"); clear(box);
-    var A = aliveCounts(), W = wholeRun(R), g = state.gate;
+    var W = wholeRun(R), g = state.gate;
     function oneIn() { return W.oneIn ? h("span", null, ["1", h("small", { text: " in " }), int(W.oneIn)]) : "0"; }
-    if (R.isMock) {
-      box.append(tile(int(A.f3), "flagged by gate v3", "err", { button: false }), tile(int(A.uns), "not found in the table", "", { button: false }),
-        tile(int(A.claimOnly), "values of wrong claims", "", { button: false }),
-        tile(oneIn(), "numbers unsupported", "", { go: "bench", key: "tile:bench", onclick: function () { setBench(W.oneIn ? 1 / W.oneIn : null, "mock"); scrollToEl($("bench-plate")); } }));
-    } else {
-      if (R.v1) box.append(tile(int(A.v1), "flagged by gate v1", "alarm", { pressed: g === "v1", go: "pull", key: "tile:v1", onclick: function () { setGate("v1"); }, title: "Show gate v1's flags in the machine" }));
-      if (handOK(R)) box.append(tile(int(A.real), "real errors on table check", "err", { pressed: g === "hand", go: "check", key: "tile:hand", onclick: function () { setGate("hand"); } }));
-      box.append(tile(int(A.f3), "flagged by gate v3, current", "err", { pressed: g === "v3", go: R.v1 ? "pull" : null, key: "tile:v3", onclick: function () { setGate("v3"); } }));
-      var rcT = reviewCounts();
-      if (rcT && rcT.reviewed && !R.v1) box.append(tile(int(rcT.wrong), "confirmed real errors (blind review)", "err", { button: false }));
-      box.append(tile(oneIn(), "numbers wrong", "", { go: "bench", key: "tile:bench", onclick: function () { setBench(STORY && R.v1 ? STORY.base : W.oneIn ? 1 / W.oneIn : null, "pilot"); scrollToEl($("bench-plate")); } }));
+    function toBench(rate, mark) { return function () { setBench(rate, mark); scrollToEl($("bench-plate")); }; }
+    function gateTile(stop) {
+      return function () {
+        setGate(stop);
+        var r = $("machine").getBoundingClientRect(); if (r.top > innerHeight * 0.6) scrollToEl($("machine"));
+      };
     }
-    var cap = h("p", { cls: "tiles-cap" }, [R.isMock ? "Planted errors test the pipeline. They say nothing about real models." : "Same notes, same numbers. Only the gate's rules change."]);
-    if (filtersActive()) cap.appendChild(h("span", { cls: "tag", text: "Filtered: " + filtered().length + " of " + R.notes.length + " notes" }));
-    box.appendChild(cap);
+    var cap;
+    if (R.isMock) {
+      box.append(tile(int(W.f3), "flagged by gate v3", "err", { button: false }), tile(int(W.uns), "not found in table", "", { button: false }),
+        tile(int(W.f3 - W.uns), "values of wrong claims", "", { button: false }),
+        tile(oneIn(), "checked numbers flagged as not found", "", { go: "see 05", key: "tile:bench", onclick: toBench(W.oneIn ? 1 / W.oneIn : null, "mock") }));
+      cap = "Whole run, before filters. Planted errors test the pipeline. They say nothing about real models.";
+    } else if (R.v1) {
+      box.append(tile(int(W.v1), "flagged by gate v1", "alarm", { pressed: g === "v1", go: "show", key: "tile:v1", onclick: gateTile("v1"), title: "Show gate v1's flags in the sorting gate (02)" }));
+      if (handOK(R)) box.append(tile(int(W.real), "real errors on table check", "err", { pressed: g === "hand", go: "show", key: "tile:hand", onclick: gateTile("hand"), title: "Show the table check's real errors in the sorting gate (02)" }));
+      box.append(tile(int(W.f3), "flagged by gate v3, current", "err", { pressed: g === "v3", go: "show", key: "tile:v3", onclick: gateTile("v3"), title: "Show gate v3's flags in the sorting gate (02)" }));
+      box.append(tile(oneIn(), "checked numbers wrong (table check)", "", { go: "see 05", key: "tile:bench", onclick: toBench(STORY && STORY.base ? STORY.base : W.oneIn ? 1 / W.oneIn : null, "pilot") }));
+      cap = "Whole run, before filters. Same notes, same numbers; only the gate's rules change. Press a figure to show it in the sorting gate.";
+    } else {
+      box.append(tile(int(W.f3), "flagged by gate v3", "err", { go: "show", key: "tile:v3", onclick: function () { scrollToEl($("machine")); }, title: "Go to the sorting gate (02)" }));
+      if (isReviewed(R)) {
+        box.append(tile(int(W.confirmed), "confirmed real errors (blind AI review)", "err", { button: false }));
+        box.append(tile(oneIn(), "checked numbers confirmed wrong", "", { go: "see 05", key: "tile:bench", onclick: toBench(W.oneIn ? 1 / W.oneIn : null, "full") }));
+        cap = "Whole run, before filters. Flags come from gate v3; confirmed errors come from a blind review by AI agents.";
+      } else {
+        box.append(tile(oneIn(), "checked numbers flagged as not found", "", { go: "see 05", key: "tile:bench", onclick: toBench(W.oneIn ? 1 / W.oneIn : null, null) }));
+        cap = "Whole run, before filters.";
+      }
+    }
+    box.appendChild(h("p", { cls: "tiles-cap" }, [cap]));
   }
 
   /* =====================================================================================
@@ -1788,7 +2134,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var track = h("div", { cls: "lv-track" }, [h("div", { cls: "lv-rail" })]);
     var knob = h("div", { cls: "lv-knob v3", "aria-hidden": "true" });
     track.appendChild(knob);
-    var stops = h("div", { cls: "lv-stops", role: "radiogroup", "aria-label": "Gate rulebook" });
+    var stops = h("div", { cls: "lv-stops", role: "radiogroup", "aria-label": "Gate version" });
     var hint = h("div", { cls: "lv-hint" });
     L.append(track, stops, hint);
     M.lever = { el: L, track: track, knob: knob, stops: stops, hint: hint, key: "" };
@@ -1847,7 +2193,8 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     });
     Lv.el.setAttribute("aria-disabled", String(n < 2));
     var R = run();
-    Lv.hint.textContent = !R.v1 ? "This run was not rescored with gate v1." : g === "v3" ? "Pull to gate v1 to see its " + int(A.v1) + " flags" : g === "v1" ? "Gate v1 flags " + int(A.v1) + " numbers" : int(A.real) + " real errors remain";
+    Lv.hint.title = !R.v1 ? "Gate v1 and the table check apply to the Opus pilot only." : "";
+    Lv.hint.textContent = !R.v1 ? "Other gate versions: Opus pilot only" : g === "v3" ? "Pull to gate v1 to see its " + int(A.v1) + " flags" : g === "v1" ? "Gate v1 flags " + int(A.v1) + " numbers" : int(A.real) + " real errors remain";
   }
 
   /* ---------- overlays: all machine text is HTML placed from the layout ---------- */
@@ -1863,7 +2210,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       if (!G.phone) {
         var rev = "";
         if (F.st === "S3") { var s3n = alive.filter(function (n) { return n.s3 && n.s3.length; }); rev = " · " + s3n.filter(function (n) { return n.s3.length > 1; }).length + " of " + s3n.length + " drafts revised"; }
-        var txt = alive.length + " notes · " + int(nums) + " numbers · " + int(checked) + " checked" + rev;
+        var txt = int(checked) + " checked · " + int(nums) + " numbers · " + alive.length + " notes" + rev;
         el = h("div", { cls: "ov feeder pe", style: pos(F.x, 2, F.w, G.hy - 6), title: stratName(F.st) + ": " + txt }, [h("b", null, [shapeIcon(F.st), stratName(F.st)]), h("span", { text: txt })]);
       } else {
         el = h("div", { cls: "ov feeder phone pe", style: pos(G.pad, F.y - 1, G.gutter - 4, Math.max(14, F.h)), title: stratName(F.st) }, [F.st]);
@@ -1905,8 +2252,8 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var body = g === "v3"
       ? "Level 1 checks, in order: cells of the entities the line names; values derived from them and from named groups and families; table-level aggregates; any other cell. Anything else is unsupported. Names, week labels and counting phrases are skipped. Level 2 then checks that each claim's value belongs to the entity, metric and period it is attached to."
       : g === "v1" ? "Gate v1 was the first version, written before any real notes existed. On the pilot its false alarms came mostly from group or top-k figures read as whole-table totals, levels next to an LW or LY label read as changes, and direction words applied to levels."
-      : "Every number gate v1 flagged on the pilot was checked against the source table, with AI assistance and programmatic cell lookups (not a human audit): the paper's adjudication. Cleared numbers keep their place in the flagged bin with a stet mark.";
-    popEl = h("div", { cls: "popover", id: "rulesPop", role: "dialog", "aria-label": "Gate rules" }, [h("h3", { text: GATE_LABEL[g] }), h("p", { style: "margin:0", text: body }),
+      : "Every number gate v1 flagged on the pilot was checked against the source table, with AI assistance and programmatic cell lookups (not a human audit): the paper's table check. Cleared numbers keep their place in the flagged bin, marked stet (leave as is).";
+    popEl = h("div", { cls: "popover", id: "rulesPop", role: "dialog", "aria-label": "Gate version" }, [h("h3", { text: GATE_LABEL[g] }), h("p", { style: "margin:0", text: body }),
       h("button", { type: "button", cls: "linkbtn", text: "Close", onclick: closePopover })]);
     popEl.style.left = Math.max(G.pad, Math.min(G.W - 420 - G.pad, G.gx)) + "px"; popEl.style.top = (G.gy + G.gh + 6) + "px";
     M.ovl.appendChild(popEl); btn.setAttribute("aria-expanded", "true");
@@ -1962,8 +2309,8 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       if (b < 3 && g !== "v3" && moved[b]) kids[3].classList.add("moved"); else kids[3].classList.remove("moved");
     });
     var ac = M.wrap;
-    ac.setAttribute("aria-label", "Sorting machine: " + int(sum(B.noteAlive.map(function (a, ni) { return a ? B.nEnd[ni] - B.nStart[ni] : 0; }))) + " numbers in " + filtered().length + " notes. " +
-      GATE_LABEL[g] + ": " + int(c[0]) + " match a cell, " + int(c[1]) + " derived, " + int(c[2]) + " skipped, " + int(c[3]) + " flagged. Keys, in a screen reader's focus mode: arrows move between numbers, F jumps to the next flag, Enter opens the note, 1 to 3 set the gate. The lever and the note rack work in browse mode.");
+    ac.setAttribute("aria-label", "Sorting gate: " + int(sum(B.noteAlive.map(function (a, ni) { return a ? B.nEnd[ni] - B.nStart[ni] : 0; }))) + " numbers in " + filtered().length + " notes. " +
+      GATE_LABEL[g] + ": " + int(c[0]) + " match a cell, " + int(c[1]) + " derived, " + int(c[2]) + " skipped, " + int(c[3]) + " flagged. Keys, in a screen reader's focus mode: arrows move between numbers, F jumps to the next flag, Enter opens the note, 1 to 3 set the gate (Opus pilot only). The lever and the list of all notes work in browse mode.");
   }
   function firstFlag() {
     var B = M.b, g = state.gate === "hand" ? "v3" : state.gate;
@@ -1972,7 +2319,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   }
   function evidenceFor(i) {
     var B = M.b, x = B.R.numbers[i], g = state.gate;
-    if (B.f3[i] && B.lab[i] !== 3) { var c = claimFor(i); return (x[4] || "matched") + " at Level 1, but its claim is " + (c ? c[6].replace("_", " ").replace("Wrong", "wrong") : "wrong"); }
+    if (B.f3[i] && B.lab[i] !== 3) { var c = claimFor(i); return (x[4] ? x[4] + " matched" : "Matched") + " at Level 1, but the gate marked its claim " + (c ? c[6].replace("_", " ").replace("Wrong", "wrong") : "wrong"); }
     if (B.lab[i] === 3) return "no table cell or derived value matches";
     if (B.lab[i] === 2) return "skipped: " + skipKind(x[4]);
     if (g === "hand" && B.f1[i]) return (x[4] || "") + ", flagged by gate v1, cleared on table check (stet)";
@@ -2031,7 +2378,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   }
   function verdictText(i) {
     var B = M.b, g = state.gate;
-    if (B.f3[i] && B.lab[i] !== 3) { var c = claimFor(i); return "Flagged: claim is " + (c ? c[6].replace("_", " ").toLowerCase() : "wrong"); }
+    if (B.f3[i] && B.lab[i] !== 3) { var c = claimFor(i); return "Flagged: the gate marked its claim " + (c ? c[6].replace("_", " ").toLowerCase() : "wrong"); }
     if (B.lab[i] === 3) return LAB_TEXT[3];
     if (g === "v1" && B.f1[i]) return "Flagged by gate v1";
     if (g === "hand" && B.f1[i]) return "Flagged by gate v1, cleared (stet)";
@@ -2052,8 +2399,8 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     else if (B.f3[i] && B.f1[i] && handOK(R)) diff = "Confirmed as a real error on table check.";
     if (g === "v3" && B.f1[i] && !B.f3[i]) diff = "Only gate v1 flagged this number; gate v3 matches it" + (x[4] ? ": " + x[4] : "") + ".";
     if (diff) ticket.append(h("div", { cls: "td", text: diff }));
-    if (R.review && R.review[i]) ticket.append(h("div", { cls: "td", text: "Blind review: " + ["", "correct", "wrong", "unclear", "not a measurement"][R.review[i]] +
-      (B.f3[i] || B.lab[i] === 3 ? (R.review[i] === 2 ? ", so this flag is a real error." : ", so this flag is a false alarm.") : " (one of the sampled unflagged numbers).") }));
+    if (R.review && R.review[i]) ticket.append(h("div", { cls: "td", text: "Blind AI review: " + ["", "correct", "wrong", "unclear", "not a measurement"][R.review[i]] +
+      (B.f3[i] || B.lab[i] === 3 ? (R.review[i] === 2 ? ", so this flag is a real error." : R.review[i] === 3 ? ", so this flag could not be settled." : ", so this flag is a false alarm.") : " (a randomly sampled unflagged number).") }));
     if (sheet) {
       ticket.append(h("div", { cls: "tb" }, [h("button", { type: "button", cls: "ctlbtn", text: "Open note", onclick: function () { hideTicket(); openDrawer(n.idx, i, M.wrap); } }),
         h("button", { type: "button", cls: "ctlbtn", text: "Close", onclick: hideTicket })]));
@@ -2285,9 +2632,9 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var R = run(), A = aliveCounts(), g = state.gate, cap = $("mcap"), B = M.b; clear(cap);
     var rc = reviewCounts();
     if (rc && rc.reviewed && !R.isMock) {
-      cap.append("The gate flags " + int(rc.flags) + (rc.flags === 1 ? " number" : " numbers") + " in these notes. A blind review of every flag confirmed " + int(rc.wrong) + " as real errors; " +
+      cap.append("The gate flags " + int(rc.flags) + (rc.flags === 1 ? " number" : " numbers") + " in these notes. A blind review of every flag, by AI agents, confirmed " + int(rc.wrong) + " as real errors; " +
         int(rc.reviewed - rc.wrong - rc.unclear) + " are false alarms" + (rc.unclear ? " and " + int(rc.unclear) + " could not be settled" : "") + ". ");
-      cap.append(h("button", { type: "button", cls: "linkbtn", text: "See the test bench", onclick: function () { scrollToEl($("bench-plate")); flashCalib(); } }));
+      cap.append(h("button", { type: "button", cls: "linkbtn", text: "See 05: how far to trust a flag", onclick: function () { scrollToEl($("bench-plate")); flashCalib(); } }));
       return;
     }
     if (R.isMock) {
@@ -2296,10 +2643,10 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     }
     if (g === "v3") {
       var ho = heldOut2();
-      cap.append("Gate v3 flags " + int(A.f3) + (A.f3 === 1 ? " number" : " numbers") + " in these notes" + (handOK(R) && !filtersActive() ? ", exactly the " + A.f3 + " real errors, but its rules were revised on them." : "."));
+      cap.append("Gate v3 flags " + int(A.f3) + (A.f3 === 1 ? " number" : " numbers") + " in these notes" + (handOK(R) && !filtersActive() ? ", exactly the " + A.f3 + " real errors, but its rules were tuned on these notes." : "."));
       if (ho && ho.l1 && ho.l2) {
-        cap.append(" On fresh notes it never saw, it flagged " + ho.l1.k + " of " + int(ho.l1.n) + " correct numbers (" + fmtRate(ho.l1.k / ho.l1.n) + ") and " + ho.l2.k + " of " + int(ho.l2.n) + " correct claims (" + fmtRate(ho.l2.k / ho.l2.n) + "). ");
-        cap.append(h("button", { type: "button", cls: "linkbtn", text: "See the test bench", onclick: function () { scrollToEl($("bench-plate")); flashCalib(); } }));
+        cap.append(" On fresh test set 2 (held-out set 2 in the paper), which it never saw, it flagged " + ho.l1.k + " of " + int(ho.l1.n) + " correct numbers (" + fmtRate(ho.l1.k / ho.l1.n) + ") and " + ho.l2.k + " of " + int(ho.l2.n) + " correct claims (" + fmtRate(ho.l2.k / ho.l2.n) + "). ");
+        cap.append(h("button", { type: "button", cls: "linkbtn", text: "See 05: how far to trust a flag", onclick: function () { scrollToEl($("bench-plate")); flashCalib(); } }));
       }
     } else {
       var notesWith = new Set(), byTable = {};
@@ -2309,7 +2656,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
         cap.append("Gate v1 flagged " + int(A.v1) + " numbers in " + notesWith.size + " of " + filtered().length + " notes. Ochre dots are numbers only gate v1 flagged.");
         if (top && A.v1) cap.append(" Most came from " + top + ": " + byTable[top] + " of " + int(A.v1) + ".");
       } else {
-        cap.append("Table check from the paper's adjudication of the pilot: " + int(A.v1 - A.real) + " of the " + int(A.v1) + " numbers were correct and are marked stet. The " + A.real + " that remain are the real errors.");
+        cap.append("Table check (the paper's AI-assisted check of every pilot flag): " + int(A.v1 - A.real) + " of the " + int(A.v1) + " numbers were correct and are marked stet (leave as is). The " + A.real + " that remain are the real errors.");
       }
     }
   }
@@ -2350,9 +2697,16 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     }
     cs.querySelectorAll("button").forEach(function (b) { var on = b.getAttribute("data-stop") === g; b.setAttribute("aria-checked", String(on)); b.tabIndex = on ? 0 : -1; });
     cs.hidden = st.length < 2;
-    var n = state.gate === "v3" ? A.f3 : state.gate === "v1" ? A.v1 : A.real;
     var cf = $("cflag"); clear(cf);
-    cf.append(state.gate === "hand" ? "Real " : "Flagged ", h("b", { text: int(n) }));
+    /* the visible labels shorten on a phone; screen readers always hear the full wording */
+    function lbl(long, short) { cf.append(h("span", { cls: "srt", text: long }), h("span", { cls: "nw-long", "aria-hidden": "true", text: long }), h("span", { cls: "nw-short", "aria-hidden": "true", text: short })); }
+    if (state.gate === "v1") { lbl("Flagged by gate v1: ", "v1 "); cf.append(h("b", { text: int(A.v1) })); }
+    else if (state.gate === "hand") { lbl("Real errors after table check: ", "Real "); cf.append(h("b", { text: int(A.real) })); }
+    else {
+      var rcc = st.length < 2 ? reviewCounts() : null;
+      lbl("Flagged by gate v3: ", rcc ? "v3 flags " : "v3 "); cf.append(h("b", { text: int(A.f3) }));
+      if (rcc) cf.append(h("span", { text: " \u00b7 confirmed " }), h("b", { text: int(rcc.wrong) }));
+    }
   }
   function gateChanged() {
     renderLever(); renderTiles(); renderCaption(); renderRack(); renderConsole(); renderFallback(); updateRulesLabel(); closePopover();
@@ -2367,7 +2721,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   function renderMeters(notes) {
     var box = $("kpis");
     if (!METERS) {
-      METERS = ["Numbers unsupported", "Wrong entity or metric", "Any claim error", "Notes", "API cost"].map(function (lab, k) {
+      METERS = ["Flagged: not found in table", "Flagged: wrong entity, metric or period", "Any claim flag", "Notes", "API cost, writing (estimated)"].map(function (lab, k) {
         var mv = h("div", { cls: "mv" }), rail = h("div", { cls: "mrail", "aria-hidden": "true" }, [h("span", { cls: "mw" }), h("span", { cls: "mp" })]), ms = h("div", { cls: "ms" });
         var el = h("div", { cls: "meter" }, [h("div", { cls: "eyebrow", text: lab }), mv, k < 3 ? rail : h("div", { cls: "mrail", style: "visibility:hidden" }), ms]);
         box.appendChild(el);
@@ -2379,9 +2733,9 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     rates.forEach(function (r) { [r.rate, r.hi].forEach(function (v) { if (isFinite(v)) top = Math.max(top, v); }); });
     top *= 1.2;
     var unver = sum(notes, function (n) { return n.failed ? 0 : n.nUnv; });
-    var subs = [int(a.num) + " of " + int(a.den) + " checked · 95% CI " + ciText(a),
-      int(c.num) + " of " + int(c.den) + " verifiable claims" + (unver ? ", " + int(unver) + " unverifiable" : "") + " · 95% CI " + ciText(c),
-      int(b.num) + " of " + int(b.den) + " claims, including wrong values · 95% CI " + ciText(b)];
+    var subs = [int(a.num) + " of " + int(a.den) + " checked numbers flagged · 95% interval " + ciText(a),
+      int(c.num) + " of " + int(c.den) + " checkable claims flagged" + (unver ? ", " + int(unver) + " not checkable" : "") + " · 95% interval " + ciText(c),
+      int(b.num) + " of " + int(b.den) + " claims flagged, including wrong values · 95% interval " + ciText(b)];
     rates.forEach(function (r, k) {
       var m = METERS[k], zero = r.rate === 0;
       m.el.className = "meter" + (r.rate > 0.05 ? " alert" : zero ? " zero" : "");
@@ -2393,9 +2747,18 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       mp.style.left = (isFinite(r.rate) ? 100 * r.rate / top : 0) + "%";
       m.ms.textContent = subs[k];
     });
-    var failed = notes.filter(function (n) { return n.failed; }).length, fmtOk = notes.filter(function (n) { return n.formatOk; }).length, cost = sum(notes, function (n) { return n.cost; });
-    meterValue(METERS[3], String(notes.length), (failed ? failed + " failed (S2 script), " : "") + fmtOk + " follow the note format");
-    meterValue(METERS[4], run().isMock ? "free" : money(cost), notes.length ? (run().isMock ? "the mock model costs nothing" : money(cost / notes.length) + " per note") : "");
+    var failed = notes.filter(function (n) { return n.failed; }).length, fmtOk = notes.filter(function (n) { return n.formatOk; }).length, cost = sum(notes, function (n) { return n.cost; }), xcost = sum(notes, function (n) { return n.xcost; });
+    meterValue(METERS[3], int(notes.length), (failed ? int(failed) + " failed (S2 script), " : "") + int(fmtOk) + " follow the note format");
+    var R = run(), mn = $("meterNote");
+    if (isReviewed(R)) {
+      var rc = reviewCounts();
+      mn.textContent = "These rates count gate v3 flags, not confirmed errors." + (rc ? " In these notes the blind AI review confirmed " + int(rc.wrong) + " of " + int(rc.flags) + " flagged numbers." : "");
+    } else if (R.v1) mn.textContent = "Opus pilot: rates and charts count gate v3 flags. Gate v1 was kept only as a flag on each number, so its claim-level rates cannot be recomputed here.";
+    else if (R.isMock) mn.textContent = "These rates count gate v3 flags on planted errors.";
+    else mn.textContent = "These rates count gate v3 flags, not confirmed errors.";
+    var costSub = money(cost / notes.length) + " per note" + (xcost ? " · plus " + money(xcost) + " for claim reading" : "") +
+      (R.id === "full" ? ". These add up per-note costs, which count cached calls in every note that uses them; the actual bill for writing and claim reading was USD 39.86 (paper)" : "");
+    meterValue(METERS[4], R.isMock ? "free" : money(cost), notes.length ? (R.isMock ? "the mock model costs nothing" : costSub) : "");
   }
   function meterValue(m, v, sub) {
     if (!m.o) { m.o = h("span"); m.mv.appendChild(m.o); }
@@ -2405,6 +2768,11 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
 
   /* ================= test bench ================= */
   function renderBench() {
+    var P = STORY && STORY.primary;
+    if (P && P.tables && P.primaryTables && P.tables !== P.primaryTables) {
+      $("mScope").textContent = "Full-study figures on this page cover all " + P.tables + " tables, including the " + (P.tables - P.primaryTables) + " pilot tables. The paper's pre-registered main outcome uses the " + P.primaryTables + " primary tables, so its figures differ slightly.";
+      $("mScope").hidden = false;
+    }
     var pr = pilotRun(), box = $("versions"); clear(box);
     if (!STORY) { $("bench-plate").hidden = true; return; }
     if (pr && pr.v1) {
@@ -2417,12 +2785,12 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       var vc = pr.v1Counts || {};
       box.append(
         h("div", { cls: "vrow" }, [h("div", { cls: "vl" }, [h("b", { text: "Gate v1" }), h("span", { cls: "mono small", text: int(v1d.length) + " numbers" })]),
-          h("div", { cls: "small muted", text: (vc.numberFlags != null ? vc.numberFlags + " number flags and " + vc.claimFlags + " claim flags, " : "") + int(v1d.length) + " numbers marked" }), dots(v1d)]),
+          h("div", { cls: "small muted", text: (vc.numberFlags != null ? vc.numberFlags + " number flags and " + vc.claimFlags + " claim flags, " : "") + "on " + int(v1d.length) + " distinct numbers" }), dots(v1d)]),
         handOK(pr) ? h("div", { cls: "vrow" }, [h("div", { cls: "vl" }, [h("b", { text: "Table check" }), h("span", { cls: "mono small", text: real + " numbers" })]),
           h("div", { cls: "small muted", text: STORY.v1RealErrors + " real errors" }), dots(v1d.filter(function (k) { return k === "e"; }))]) : null,
         h("div", { cls: "vrow" }, [h("div", { cls: "vl" }, [h("b", { text: "Gate v3" }), h("span", { cls: "mono small", text: v3d.length + " numbers" })]),
-          h("div", { cls: "small muted", text: STORY.v3Numbers + " number flags and " + STORY.v3Claims + " claim flags" }), dots(v3d)]),
-        h("p", { cls: "small muted", style: "margin:10px 0 0", text: "One square per number on the " + STORY.pilotNotes + " pilot notes. Ochre: flagged by gate v1 only. Vermilion: a real error." }));
+          h("div", { cls: "small muted", text: STORY.v3Numbers + " number flags and " + STORY.v3Claims + " claim flags, on " + int(v3d.length) + " distinct numbers" }), dots(v3d)]),
+        h("p", { cls: "small muted", style: "margin:10px 0 0", text: "One square per number on the " + STORY.pilotNotes + " pilot notes. Ochre (yellow-brown): flagged by gate v1 only. Vermilion (red): a real error." }));
     } else box.parentNode.hidden = true;
     var tbl = $("calib"); clear(tbl);
     var sets = (STORY.rows || []).map(function (r) {
@@ -2433,7 +2801,11 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var tb = h("tbody");
     sets.forEach(function (x) {
       var tuned = /tuned|revised|adjudicated/i.test(x.raw), hot = /^Held-out set 2/i.test(x.name);
-      var tr = h("tr", { cls: (tuned ? "tuned" : "") + (hot ? " hs2" : "") }, [h("td", { cls: "set" }, [x.name, tuned ? h("span", { cls: "tagline-s", text: "rules revised on this set" }) : null])]);
+      /* short set name on the first line; the gate version and whether rules were revised on the set go on the small second line */
+      var parts = x.name.split(/,\s*/), base = parts[0], gate = parts.filter(function (q) { return /^gate /i.test(q); })[0] || "", hm = /^Held-out set (\d+)/i.exec(base);
+      var shown = /^Regression suites/i.test(base) ? "Built-in test cases" : hm ? "Fresh test set " + hm[1] : /adjudicated/i.test(x.name) ? base + ", after table check" : base;
+      var sub = [gate, tuned ? "rules revised on this set" : ""].filter(Boolean).join(" · ");
+      var tr = h("tr", { cls: (tuned ? "tuned" : "") + (hot ? " hs2" : "") }, [h("td", { cls: "set" }, [shown, sub ? h("span", { cls: "tagline-s", text: sub }) : null])]);
       x.cells.forEach(function (cl, k) {
         if (!cl) { tr.appendChild(h("td", { text: "n/a" })); return; }
         var bar = h("div", { cls: "bar" + (k % 2 === 0 ? " fa" : "") }, [h("i", { style: "width:" + Math.min(100, (k % 2 === 0 ? cl.k / cl.n * 100 / 0.08 : cl.k / cl.n * 100)) + "%" })]);
@@ -2443,25 +2815,61 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       tb.appendChild(tr);
     });
     tbl.appendChild(tb);
-    $("calibNote").textContent = "Wrong numbers caught counts every wrong number, including real cells attached to the wrong row or period, which Level 1 is not designed to see. The model in (c) uses the catch rate for wrong values only: " + fmtRate(STORY.recall) + " on held-out set 2. False-alarm bars use a 0 to 8% scale; catch bars use 0 to 100%.";
+    $("calibNote").textContent = "Fresh test sets are notes the gate never saw while its rules were written (the paper's held-out sets 1 and 2); built-in test cases are the paper's regression suites. Wrong numbers caught counts every wrong number, including real cells attached to the wrong row or period, which the number check (Level 1) is not designed to see. The model in (c) uses the catch rate for wrong values only: " + fmtRate(STORY.recall) + " on fresh test set 2. False-alarm bars use a 0 to 8% scale; catch bars use 0 to 100%.";
     if (STORY.precision == null) { $("worthBox").hidden = true; return; }
     var marks = $("benchMarks"); clear(marks);
     var mk = [];
-    if (pr && STORY.base) mk.push(["Opus pilot: 1 in " + int(STORY.oneIn), STORY.base, "pilot"]);
+    var fr = DATA.runs.find(function (r) { return isReviewed(r); }), frW = fr ? wholeRun(fr) : null;
+    if (frW && frW.oneIn) mk.push([(fr.name || "Full study") + ": 1 in " + int(frW.oneIn), 1 / frW.oneIn, "full", "confirmed errors from the blind AI review"]);
+    if (pr && STORY.base) mk.push(["Opus pilot: 1 in " + int(STORY.oneIn), STORY.base, "pilot", "real errors on the table check"]);
     var mock = DATA.runs.find(function (r) { return r.isMock; });
-    if (mock) { var W = wholeRun(mock); if (W.oneIn) mk.push(["Mock run: 1 in " + int(W.oneIn), 1 / W.oneIn, "mock"]); }
-    mk.forEach(function (m) { marks.appendChild(h("button", { type: "button", cls: "ctlbtn", "data-mark": m[2], text: m[0], onclick: function () { setBench(m[1], m[2]); } })); });
-    marks.appendChild(h("button", { type: "button", cls: "ctlbtn", text: "Use the filtered notes' rate", onclick: function () {
-      var ok = filtered().filter(function (n) { return !n.failed; }), ch = sum(ok, function (n) { return n.nChecked; }), un = sum(ok, function (n) { return n.nUns; });
-      if (!un) { $("wout").textContent = "No wrong numbers in these notes, so any flag here would be a false alarm."; return; }
+    if (mock) { var W = wholeRun(mock); if (W.oneIn) mk.push(["Mock test run: 1 in " + int(W.oneIn), 1 / W.oneIn, "mock", "numbers flagged as not found in table"]); }
+    BENCH_MARKS = {};
+    mk.forEach(function (m) { BENCH_MARKS[m[2]] = m[1]; marks.appendChild(h("button", { type: "button", cls: "ctlbtn", "data-mark": m[2], text: m[0], title: m[0] + ", " + m[3], "aria-label": m[0] + ", " + m[3], onclick: function () { setBench(m[1], m[2]); } })); });
+    var bcap = $("benchCap"); if (bcap) bcap.textContent = "Presets: " + mk.map(function (m) { return m[0].split(":")[0].toLowerCase().replace(/^opus/, "Opus") + " uses " + m[3]; }).join("; ") + ".";
+    marks.appendChild(h("button", { type: "button", cls: "ctlbtn", id: "benchFilt", text: "Use the filtered notes' rate", onclick: function () {
+      var ok = filtered().filter(function (n) { return !n.failed; }), ch = sum(ok, function (n) { return n.nChecked; });
+      if (isReviewed(run())) {
+        var rc = reviewCounts();
+        if (!rc || !rc.wrong || !ch) { $("wout").textContent = "No confirmed errors in these notes, so there is no rate to use."; return; }
+        setBench(rc.wrong / ch, null);
+        return;
+      }
+      var un = sum(ok, function (n) { return n.nUns; });
+      if (!un) { $("wout").textContent = "No numbers flagged in these notes, so there is no rate to use."; return; }
       setBench(un / ch, null);
     } }));
     var tray = $("tray"); clear(tray);
     for (var t = 0; t < 100; t++) tray.appendChild(h("i"));
-    $("wmodel").textContent = "Model built from held-out set 2: false alarms on " + fmtRate(STORY.fa) + " of correct numbers, " + fmtRate(STORY.recall) + " of wrong values caught.";
+    $("wmodel").textContent = "Model from fresh test set 2 (held-out set 2 in the paper): false alarms on " + fmtRate(STORY.fa) + " of correct numbers, " + fmtRate(STORY.recall) + " of wrong values caught.";
     $("wformula").textContent = "precision = recall · b / (recall · b + fa · (1 − b)),  b = 1/N,  recall = " + STORY.recall.toFixed(3) + ",  fa = " + STORY.fa.toFixed(4);
     $("benchN").addEventListener("input", function () { setBench(1 / sliderN(+this.value), null, true); });
-    setBench(STORY.base || (STORY.oneIn ? 1 / STORY.oneIn : 0.002), "pilot", true);
+    benchBuilt = true;
+    syncBench();
+  }
+  /* the parts of the bench that follow the chosen run: the filtered-rate button, the observed line and the default preset */
+  var benchBuilt = false, BENCH_MARKS = {};
+  function syncBench() {
+    if (!benchBuilt || !STORY || STORY.precision == null) return;
+    var R = run(), rv = isReviewed(R), wo = $("wobs"), W = wholeRun(R);
+    $("benchFilt").textContent = rv ? "Use the filtered notes' confirmed rate" : "Use the filtered notes' not-found rate";
+    if (rv && W.settled) {
+      wo.textContent = "Observed in " + (R.id === "full" ? "the full study" : R.name || R.label) + ": the blind AI review found " + int(W.confirmed) + " of the " + int(W.reviewed) + " flags real (about " +
+        Math.round(100 * W.confirmed / W.reviewed) + " in 100)" + (W.unclear ? "; " + int(W.unclear) + " could not be settled" : "") + ". The model uses gate v3's rates on fresh test set 2, so the two need not match." + primaryNote(R);
+      wo.hidden = false;
+    } else if (R.v1 && handOK(R)) {
+      wo.textContent = "Observed on the Opus pilot: gate v1 flagged " + int(W.v1) + " numbers and " + int(W.real) + " were real errors on the table check. Gate v3, tuned on these notes, flags " + (W.f3 === W.real ? "exactly the " + int(W.real) + " real errors" : int(W.f3) + " numbers") + ". The model uses gate v3's rates on fresh test set 2, which it never saw, so the two need not match.";
+      wo.hidden = false;
+    } else wo.hidden = true;
+    if (rv && BENCH_MARKS.full) setBench(BENCH_MARKS.full, "full", true);
+    else if (R.isMock && BENCH_MARKS.mock) setBench(BENCH_MARKS.mock, "mock", true);
+    else setBench(STORY.base || (STORY.oneIn ? 1 / STORY.oneIn : 0.002), "pilot", true);
+  }
+  /* the paper's pre-registered figures use the primary tables only; say so where the page's all-table figures appear */
+  function primaryNote(R) {
+    var P = STORY && STORY.primary;
+    if (!P || P.run !== R.id || !P.tables || P.tables === P.primaryTables) return "";
+    return " These figures cover all " + P.tables + " tables. On the paper's " + P.primaryTables + " primary tables: " + int(P.confirmed) + " of " + int(P.flags) + " flags were real" + (P.unclear ? " (" + P.unclear + " unclear)" : "") + ", and about 1 in " + int(Math.round(P.checked / P.confirmed)) + " checked numbers was a confirmed error.";
   }
   function sliderN(v) { return 5 * Math.pow(1000, v / 1000); }
   function sliderV(N) { return clamp(Math.round(1000 * Math.log(N / 5) / Math.log(1000)), 0, 1000); }
@@ -2481,15 +2889,15 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
         else el.classList.toggle("real", real);
       }
     }
-    tray.setAttribute("aria-label", k + " of 100 flags are real errors");
+    tray.setAttribute("aria-label", k + " of 100 flags would be real, by the model in 05");
     var wb = $("wbig");
-    if (!wb._o) { wb._o = h("span"); wb.append(wb._o, h("small", { text: "flags are real errors" })); }
+    if (!wb._o) { wb._o = h("span"); wb.append(wb._o, h("small", { text: "flags would be real (model)" })); }
     odo(wb._o, k + " in 100");
     var wrong = Math.round(10000 * b), caught = Math.round(10000 * b * r), falseF = Math.round((10000 - 10000 * b) * fa), flags = caught + falseF;
     $("wnatural").textContent = "Picture 10,000 numbers at 1 wrong in " + int(Math.round(N)) + ": about " + int(wrong) + " are wrong. The gate catches about " + int(caught) + " of them and also flags about " + int(falseF) + " correct ones, so " + int(caught) + " of its " + int(flags) + " flags are real.";
     var ratio = "";
     if (p > 0 && p < 1) ratio = p >= 0.5 ? "About " + int(Math.round(p / (1 - p))) + " real flags for every false one. " : "About " + int(Math.max(1, Math.round((1 - p) / p))) + " false flags for every real one. ";
-    $("wout").textContent = ratio + "Exact precision " + fmtRate(p) + ".";
+    $("wout").textContent = ratio + "Model: " + fmtRate(p) + " of flags real.";
   }
   function flashCalib() {
     var tr = document.querySelector("#calib tr.hs2"); if (!tr) return;
@@ -2521,7 +2929,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   function barChart(box, groups, measure, top) {
     clear(box);
     var W = Math.max(240, box.clientWidth || 320), H = 210, m = { l: 40, r: 8, t: 22, b: 30 };
-    var svg = s("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": (measure === "l1" ? "Numbers unsupported" : "Claims with wrong entity or metric") + " by strategy" }, box);
+    var svg = s("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": (measure === "l1" ? "Numbers flagged as not found in table" : "Claims flagged for wrong entity, metric or period") + " by strategy" }, box);
     if (!groups.length) { box.appendChild(h("div", { cls: "empty", text: "No notes match the filters." })); return; }
     var nt = niceTicks(top), y = function (v) { return m.t + (H - m.t - m.b) * (1 - v / nt.top); };
     nt.ticks.forEach(function (t) {
@@ -2531,7 +2939,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var band = (W - m.l - m.r) / groups.length, bw = Math.min(42, band * 0.52);
     groups.forEach(function (g, i) {
       var r = g.r, cx = m.l + band * (i + 0.5), color = STRAT_COLOR[g.key] || "var(--ink-3)";
-      var grp = s("g", { "data-g": "strategy:" + g.key, tabindex: "0", role: "button", "aria-label": stratName(g.key) + ": " + int(r.num) + " of " + int(r.den) + (measure === "l1" ? " checked numbers unsupported, " : " verifiable claims mis-bound, ") + fmtRate(r.rate) + ", 95% CI " + ciText(r) }, svg);
+      var grp = s("g", { "data-g": "strategy:" + g.key, tabindex: "0", role: "button", "aria-label": stratName(g.key) + ": " + int(r.num) + " of " + int(r.den) + (measure === "l1" ? " checked numbers flagged as not found in table, " : " checkable claims flagged for wrong entity, metric or period, ") + fmtRate(r.rate) + ", 95% interval " + ciText(r) }, svg);
       stext(grp, cx, H - m.b + 16, g.key, "lab", "middle");
       if (!isFinite(r.rate)) { stext(grp, cx, y(0) - 6, "none", null, "middle"); return; }
       var hgt = Math.max(0, y(0) - y(r.rate));
@@ -2544,7 +2952,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       stext(grp, cx, Math.min(y(r.rate), isFinite(r.hi) ? y(r.hi) : y(r.rate)) - 5, fmtRate(r.rate), "val", "middle");
       s("rect", { x: m.l + band * i + 2, y: m.t, width: band - 4, height: H - m.t - m.b, "class": "hit" }, grp);
       hover(grp, function (e) {
-        showTip(e, stratName(g.key), [{ color: color, value: fmtRate(r.rate), label: measure === "l1" ? "numbers unsupported" : "claims with wrong entity or metric" },
+        showTip(e, stratName(g.key), [{ color: color, value: fmtRate(r.rate), label: measure === "l1" ? "numbers flagged as not found in table" : "claims flagged for wrong entity, metric or period" },
           { value: ciText(r), label: "95% interval" }, { value: int(r.num) + " / " + int(r.den), label: measure === "l1" ? "numbers" : "claims" }, { value: String(r.units), label: "notes" }]);
       });
       linkFocus(grp, { dim: "strategy", value: g.key });
@@ -2562,8 +2970,8 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     barChart($("chStratL1"), g1, "l1", top * 1.12);
     barChart($("chStratL2"), g2, "l2", top * 1.12);
     var best = g1.filter(function (g) { return isFinite(g.r.rate); }).sort(function (a, b) { return b.r.rate - a.r.rate; })[0];
-    $("r1take").textContent = best && best.r.rate > 0 ? "Highest: " + stratName(best.key) + ", " + int(best.r.num) + " of " + int(best.r.den) + " checked (" + fmtRate(best.r.rate) + ")" : "No unsupported numbers in these notes";
-    TABLES.r1 = { head: ["Strategy", "Unsupported", "of checked", "95% CI", "Wrong entity or metric", "of claims", "95% CI"],
+    $("r1take").textContent = best && best.r.rate > 0 ? "Highest: " + stratName(best.key) + ", " + int(best.r.num) + " of " + int(best.r.den) + " checked numbers flagged as not found in table (" + fmtRate(best.r.rate) + ")" : "No numbers flagged as not found in table in these notes";
+    TABLES.r1 = { head: ["Strategy", "Flagged: not found", "of checked", "95% interval", "Flagged: wrong entity, metric or period", "of claims", "95% interval"],
       rows: g1.map(function (g, k) { var b = g2[k].r; return [stratName(g.key), int(g.r.num), int(g.r.den), ciText(g.r), int(b.num), int(b.den), ciText(b)]; }) };
   }
   function renderR2(notes) {
@@ -2573,7 +2981,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     kinds.forEach(function (d, j) { var i = h("i", { style: j === 0 ? "background:var(--err)" : "background:repeating-linear-gradient(" + (j === 1 ? 45 : 135) + "deg,var(--err) 0 2px,transparent 2px 5px);box-shadow:inset 0 0 0 1px var(--err)" }); lg.appendChild(h("span", null, [i, d.label])); });
     var strategies = strategiesOn(), by = S.groupBy(notes.filter(function (n) { return !n.failed; }), function (n) { return n.strategy; });
     var W = Math.max(260, box.clientWidth || 360), rowH = 34, m = { l: 34, r: 70, t: 6, b: 6 }, H = m.t + m.b + rowH * strategies.length;
-    var svg = s("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Kinds of claim error by strategy" }, box);
+    var svg = s("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Kinds of claim flag by strategy" }, box);
     var defs = s("defs", null, svg);
     [["h45", 45], ["h135", 135]].forEach(function (d) {
       var pt = s("pattern", { id: d[0], patternUnits: "userSpaceOnUse", width: 5, height: 5, patternTransform: "rotate(" + d[1] + ")" }, defs);
@@ -2589,7 +2997,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       stext(grp, 0, y0 + bh / 2 + 4, st, "lab");
       if (!total) {
         s("rect", { x: m.l, y: y0, width: w, height: bh, style: "fill:none;stroke:var(--rule-2);stroke-dasharray:3 3" }, grp);
-        stext(grp, m.l + 8, y0 + bh / 2 + 4, ns.length ? "no claim errors" : "no scored notes", null);
+        stext(grp, m.l + 8, y0 + bh / 2 + 4, ns.length ? "no claim flags" : "no scored notes", null);
         return;
       }
       var x = m.l;
@@ -2597,15 +3005,15 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
         if (!c) return;
         var sw = w * c / total;
         var seg = s("rect", { x: x, y: y0, width: Math.max(1, sw - 1), height: bh, "class": "hbar-el", "data-k": st + j, "data-v": sw, style: "fill:" + kinds[j].fill + ";stroke:var(--err);stroke-width:1" }, grp);
-        var hit = s("rect", { x: x, y: y0 - 3, width: sw, height: bh + 6, "class": "hit", tabindex: "0", "aria-label": stratName(st) + ": " + c + " " + kinds[j].label.toLowerCase() }, grp);
-        hover(hit, function (e) { seg.classList.add("hot"); showTip(e, stratName(st) + ": " + kinds[j].label, [{ color: "var(--err)", value: String(c), label: "of " + total + " claim errors (" + Math.round(100 * c / total) + "%)" }]); });
+        var hit = s("rect", { x: x, y: y0 - 3, width: sw, height: bh + 6, "class": "hit", tabindex: "0", "aria-label": stratName(st) + ": " + c + " flagged as " + kinds[j].label.toLowerCase() }, grp);
+        hover(hit, function (e) { seg.classList.add("hot"); showTip(e, stratName(st) + ": " + kinds[j].label, [{ color: "var(--err)", value: String(c), label: "of " + total + " claim flags (" + Math.round(100 * c / total) + "%)" }]); });
         x += sw;
       });
-      stext(grp, W - m.r + 8, y0 + bh / 2 + 4, total + (total === 1 ? " error" : " errors"), "val");
+      stext(grp, W - m.r + 8, y0 + bh / 2 + 4, total + (total === 1 ? " flag" : " flags"), "val");
       linkFocus(grp, { dim: "strategy", value: st });
     });
     var tot = totalAll[0] + totalAll[1] + totalAll[2], unv = sum(notes, function (n) { return n.failed ? 0 : n.nUnv; });
-    $("r2take").textContent = tot ? int(tot) + " claim errors: " + totalAll[0] + " wrong value, " + totalAll[1] + " wrong entity, " + totalAll[2] + " wrong metric or period" + (unv ? "; " + int(unv) + " claims unverifiable" : "") : "No claim errors in these notes" + (unv ? "; " + int(unv) + " claims unverifiable" : "");
+    $("r2take").textContent = tot ? int(tot) + " claim flags: " + int(totalAll[0]) + " wrong value, " + int(totalAll[1]) + " wrong entity, " + int(totalAll[2]) + " wrong metric or period" + (unv ? "; " + int(unv) + " claims not checkable" : "") : "No claim flags in these notes" + (unv ? "; " + int(unv) + " claims not checkable" : "");
     TABLES.r2 = { head: ["Strategy", "Wrong value", "Wrong entity", "Wrong metric or period"], rows: rows };
     morph(svg, "chMix");
   }
@@ -2621,7 +3029,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var top = 0.01, best = null;
     series.forEach(function (sr) { sr.pts.forEach(function (p) { [p.r.rate, p.r.hi].forEach(function (v) { if (isFinite(v)) top = Math.max(top, v); }); if (isFinite(p.r.rate) && (!best || p.r.rate > best.r.rate)) best = { st: sr.st, z: p.z, r: p.r }; }); });
     var W = Math.max(280, box.clientWidth || 420), H = 240, m = { l: 42, r: 40, t: 12, b: 34 };
-    var svg = s("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Error rate by table size and strategy" }, box);
+    var svg = s("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Flag rate by table size and strategy" }, box);
     if (!sizes.length || !strategies.length) { box.appendChild(h("div", { cls: "empty", text: "No notes match the filters." })); return; }
     var nt = niceTicks(top * 1.08), y = function (v) { return m.t + (H - m.t - m.b) * (1 - v / nt.top); };
     var step = (W - m.l - m.r) / sizes.length, x = function (i) { return m.l + step * (i + 0.5); };
@@ -2646,7 +3054,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       var last = sr.pts.map(function (p, i) { return { p: p, i: i }; }).filter(function (q) { return isFinite(q.p.r.rate); }).pop();
       if (last) ends.push({ st: sr.st, x: x(last.i) + dodge, y: y(last.p.r.rate), grp: grp });
     });
-    var ys = spread(ends.map(function (e) { return e.y; }), 13);
+    var ys = spreadWithin(ends.map(function (e) { return e.y; }), 13, m.t + 4, H - m.b - 18);
     ends.forEach(function (e, i) { stext(e.grp, e.x + 9, ys[i] + 4, e.st, "lab"); });
     sizes.forEach(function (z, i) {
       var hit = s("rect", { x: m.l + step * i, y: m.t, width: step, height: H - m.t - m.b, "class": "hit", tabindex: "0", "aria-label": z + " tables" }, svg);
@@ -2656,9 +3064,9 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       }, function () { cross.setAttribute("visibility", "hidden"); });
       linkFocus(hit, { dim: "size", value: z });
     });
-    var mname = measure === "l1" ? "unsupported" : measure === "bind" ? "wrong entity or metric" : "any claim error";
-    $("r3take").textContent = best && best.r.rate > 0 ? "Highest " + mname + ": " + stratName(best.st) + " on " + best.z + " tables, " + fmtRate(best.r.rate) : "No " + mname + " in these notes";
-    TABLES.r3 = { head: ["Strategy", "Table size", "Rate", "95% CI", "Notes"], rows: rows };
+    var mname = measure === "l1" ? "flagged as not found in table" : measure === "bind" ? "flagged for wrong entity, metric or period" : "any claim flag";
+    $("r3take").textContent = best && best.r.rate > 0 ? "Highest rate (" + mname + "): " + stratName(best.st) + " on " + best.z + " tables, " + fmtRate(best.r.rate) : "No flags of this kind in these notes";
+    TABLES.r3 = { head: ["Strategy", "Table size", "Rate", "95% interval", "Notes"], rows: rows };
     morph(svg, "chSize");
   }
   function renderR4(notes) {
@@ -2671,7 +3079,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       if (isFinite(r.rate)) pts.push({ st: parts[0], model: parts[1], r: r, cost: c, n: ns.length });
     });
     var W = Math.max(280, box.clientWidth || 420), H = 240, m = { l: 42, r: 16, t: 12, b: 36 };
-    var svg = s("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Unsupported rate versus mean cost per note" }, box);
+    var svg = s("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Numbers flagged as not found, versus writing cost per note" }, box);
     if (!pts.length) { box.appendChild(h("div", { cls: "empty", text: notes.length ? "Every matching note failed, so there are no rates to plot." : "No notes match the filters." })); $("r4take").textContent = ""; return; }
     var top = 0.01; pts.forEach(function (p) { [p.r.rate, p.r.hi].forEach(function (v) { if (isFinite(v)) top = Math.max(top, v); }); });
     var maxCost = Math.max.apply(null, pts.map(function (p) { return p.cost; }));
@@ -2682,25 +3090,41 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       stext(svg, m.l - 6, y(t) + 3.5, tickLabel(t, nt.step, true), null, "end");
     });
     ct.ticks.forEach(function (t) { stext(svg, x(t), H - m.b + 15, tickLabel(t, ct.step, false), null, "middle"); });
-    stext(svg, (m.l + W - m.r) / 2, H - 4, "mean cost per note (USD)", null, "middle");
-    if (maxCost === 0) stext(svg, W - m.r, m.t + 10, "all notes cost $0 (mock model)", null, "end");
-    var labelY = spread(pts.map(function (p) { return y(p.r.rate); }), 13);
+    stext(svg, (m.l + W - m.r) / 2, H - 4, "mean writing cost per note (USD)", null, "middle");
+    stext(svg, m.l + 4, m.t + 10, "flagged not found", null, "start");
+    if (maxCost === 0) stext(svg, W - m.r, m.t + 24, "all notes cost $0 (mock model)", null, "end");
+    var mm = uniq(pts.map(function (p) { return p.model; })).length > 1, MC = mm ? modelCodes(pts.map(function (p) { return p.model; })) : null;
+    if (mm) Object.keys(MC).forEach(function (md) { lg.appendChild(h("span", { cls: "mono" }, [MC[md] + " = " + shortModel(md)])); });
+    /* several models: a short code (cost is on the x axis, the legend explains the code); one model: strategy and cost */
+    var labs = pts.map(function (p) { var t = mm ? p.st + " " + MC[p.model] : p.st + " " + money(p.cost); return { text: t, w: t.length * 6.4 + 1, cx: x(p.cost), cy: y(p.r.rate) }; });
+    var obst = [];
+    pts.forEach(function (p) {
+      var cx = x(p.cost), cy = y(p.r.rate);
+      obst.push([cx - 6.5, cx + 6.5, cy - 6.5, cy + 6.5]);
+      if (isFinite(p.r.lo)) obst.push([cx - 1.5, cx + 1.5, y(p.r.hi), y(p.r.lo)]);
+    });
+    obst.push([m.l, m.l + 4 + 112, m.t, m.t + 13]);
+    placeLabels(labs, obst, [m.l + 2, W - 2, m.t, H - m.b + 4]);
+    if (labs.some(function (L) { return L.hidden; })) lg.appendChild(h("span", { cls: "small muted", style: "white-space:normal", text: "Crowded points are unlabelled: hover or tap one, or use Table" }));
     pts.forEach(function (p, i) {
       var color = STRAT_COLOR[p.st], cx = x(p.cost), cy = y(p.r.rate);
-      var grp = s("g", { "data-g": "sm:" + p.st + ":" + p.model, tabindex: "0", role: "button", "aria-label": stratName(p.st) + ", " + p.model + ": " + fmtRate(p.r.rate) + " unsupported at " + money(p.cost) + " per note" }, svg);
+      var grp = s("g", { "data-g": "sm:" + p.st + ":" + p.model, tabindex: "0", role: "button", "aria-label": stratName(p.st) + ", " + modelName(p.model) + ": " + fmtRate(p.r.rate) + " flagged as not found in table at " + money(p.cost) + " writing cost per note" }, svg);
       if (isFinite(p.r.lo)) s("line", { x1: cx, x2: cx, y1: y(p.r.lo), y2: y(p.r.hi), style: "stroke-width:1.2;opacity:.55;stroke:" + color }, grp);
       marker(grp, STRAT_SHAPE[p.st], cx, cy, 5.5, color, { "data-k": p.st + p.model, "data-x": cx, "data-y": cy });
-      stext(grp, cx + 10, labelY[i] + 4, p.st + " " + money(p.cost), "lab");
+      var L = labs[i];
+      if (!L.hidden && L.leader) s("line", { x1: L.leader[0], y1: L.leader[1], x2: L.leader[2], y2: L.leader[3], style: "stroke:var(--ink-3);stroke-width:.8" }, grp);
+      if (!L.hidden) stext(grp, L.x, L.y, L.text, "lab", L.anchor);
       s("circle", { cx: cx, cy: cy, r: 13, "class": "hit" }, grp);
       hover(grp, function (e) {
-        showTip(e, stratName(p.st) + ", " + p.model, [{ color: color, value: fmtRate(p.r.rate), label: "numbers unsupported (" + ciText(p.r) + ")" },
-          { value: money(p.cost), label: "mean cost per note" }, { value: String(p.n), label: "notes" }]);
+        showTip(e, stratName(p.st) + ", " + modelName(p.model), [{ color: color, value: fmtRate(p.r.rate), label: "numbers flagged as not found in table (" + ciText(p.r) + ")" },
+          { value: money(p.cost), label: "mean writing cost per note" }, { value: String(p.n), label: "notes" }]);
       });
       linkFocus(grp, { dim: "sm", value: p.st, model: p.model });
     });
     var cheap = pts.slice().sort(function (a, b) { return a.cost - b.cost; }), lo = cheap[0], hi = cheap[cheap.length - 1];
-    $("r4take").textContent = maxCost === 0 ? "The mock model is free, so cost does not separate the strategies" : "Cheapest: " + stratName(lo.st) + " at " + money(lo.cost) + " per note (" + fmtRate(lo.r.rate) + " unsupported); most expensive: " + stratName(hi.st) + " at " + money(hi.cost);
-    TABLES.r4 = { head: ["Strategy", "Model", "Unsupported", "95% CI", "Mean cost per note", "Notes"], rows: pts.map(function (p) { return [stratName(p.st), p.model, fmtRate(p.r.rate), ciText(p.r), money(p.cost), String(p.n)]; }) };
+    function withModel(p) { return stratName(p.st) + (mm ? " with " + shortModel(p.model) : ""); }
+    $("r4take").textContent = maxCost === 0 ? "The mock model is free, so cost does not separate the strategies" : "Cheapest: " + withModel(lo) + " at " + money(lo.cost) + " writing cost per note (" + fmtRate(lo.r.rate) + " flagged as not found); most expensive: " + withModel(hi) + " at " + money(hi.cost);
+    TABLES.r4 = { head: ["Strategy", "Model", "Flagged: not found", "95% interval", "Mean writing cost per note", "Notes"], rows: pts.map(function (p) { return [stratName(p.st), modelName(p.model), fmtRate(p.r.rate), ciText(p.r), money(p.cost), String(p.n)]; }) };
     morph(svg, "chCost");
   }
   function renderR5(notes) {
@@ -2715,7 +3139,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       $("r5take").textContent = ""; TABLES.r5 = { head: [], rows: [] }; return;
     }
     var W = Math.max(280, box.clientWidth || 420), H = 220, m = { l: 42, r: 110, t: 12, b: 32 };
-    var svg = s("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "S3 unsupported rate per revision round" }, box);
+    var svg = s("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "S3 not-found rate per revision round" }, box);
     var top = 0.01;
     series.forEach(function (sr) { sr.pts.forEach(function (p) { [p.mean, p.hi].forEach(function (v) { if (isFinite(v)) top = Math.max(top, v); }); }); });
     s3.forEach(function (n) { n.s3.forEach(function (v) { if (isFinite(v)) top = Math.max(top, v || 0); }); });
@@ -2725,7 +3149,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       s("line", { x1: m.l, x2: W - m.r, y1: y(t), y2: y(t), "class": t === 0 ? "axis-line" : "grid-line" }, svg);
       stext(svg, m.l - 6, y(t) + 3.5, tickLabel(t, nt.step, true), null, "end");
     });
-    for (var i = 0; i <= maxR; i++) stext(svg, x(i), H - m.b + 16, i === 0 ? "draft" : "after round " + i, "lab", "middle");
+    for (var i = 0; i <= maxR; i++) stext(svg, x(i), H - m.b + 16, i === 0 ? "draft" : (W < 420 ? "round " : "after round ") + i, "lab", "middle");
     s3.forEach(function (n) {
       var r = n.s3.map(function (v) { return v == null ? 0 : v; }); while (r.length < maxR + 1) r.push(r[r.length - 1]);
       var d = r.map(function (v, k) { return (k ? "L" : "M") + x(k) + "," + y(v); }).join(" ");
@@ -2746,17 +3170,18 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       });
       ends.push({ md: sr.md, y: y(sr.pts[maxR].mean), v: sr.pts[maxR].mean });
     });
-    var ys = spread(ends.map(function (e) { return e.y; }), 13);
-    ends.forEach(function (e, k) { stext(svg, x(maxR) + 10, ys[k] + 4, "mean " + fmtRate(e.v), "lab"); });
+    var mm5 = series.length > 1;
+    var ys = spreadWithin(ends.map(function (e) { return e.y; }), 13, m.t, H - m.b - 4);
+    ends.forEach(function (e, k) { stext(svg, x(maxR) + 10, ys[k] + 4, (mm5 ? shortModel(e.md) + ": " : "mean ") + fmtRate(e.v), "lab"); });
     var rev = s3.filter(function (n) { return n.s3.length > 1; });
-    var txt = rev.length + " of " + s3.length + " drafts revised";
+    var txt = int(rev.length) + " of " + int(s3.length) + " drafts revised";
     if (rev.length) {
       var d0 = sum(rev, function (n) { return n.s3[0] || 0; }) / rev.length, d1 = sum(rev, function (n) { return n.s3[n.s3.length - 1] || 0; }) / rev.length;
-      txt += ": " + fmtRate(d0) + " to " + fmtRate(d1) + (rev.length > 1 ? " on average" : "");
+      txt += "; " + (rev.length === 1 ? "its" : "their") + " not-found rate " + (d1 <= d0 ? "fell" : "rose") + " from " + fmtRate(d0) + " to " + fmtRate(d1) + (rev.length > 1 ? " on average" : "");
     }
-    $("r5take").textContent = txt + ". Thin lines are single notes; click one to open it.";
-    TABLES.r5 = { head: ["Model", "Round", "Mean unsupported", "95% CI", "Notes"], rows: [] };
-    series.forEach(function (sr) { sr.pts.forEach(function (p, k) { TABLES.r5.rows.push([sr.md, k ? "after round " + k : "draft", fmtRate(p.mean), isFinite(p.lo) ? fmtRate(p.lo) + " to " + fmtRate(p.hi) : "no interval", String(p.units)]); }); });
+    $("r5take").textContent = txt + ". " + (mm5 ? "End labels show each model's mean after round " + maxR + ", over all its S3 notes (revised or not). " : "The end label shows the mean after round " + maxR + ", over all S3 notes (revised or not). ") + "Thin lines are single notes; click one to open it.";
+    TABLES.r5 = { head: ["Model", "Round", "Mean flagged not found", "95% interval", "Notes"], rows: [] };
+    series.forEach(function (sr) { sr.pts.forEach(function (p, k) { TABLES.r5.rows.push([modelName(sr.md), k ? "after round " + k : "draft", fmtRate(p.mean), isFinite(p.lo) ? fmtRate(p.lo) + " to " + fmtRate(p.hi) : "no interval", String(p.units)]); }); });
     morph(svg, "chS3");
   }
   function renderR6(notes) {
@@ -2771,16 +3196,17 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       return 0;
     });
     var t = h("table", { cls: "t stick1" });
-    var head = ["Group", "Notes", "Checked", "Unsupported", "95% CI", "Claims", "Wrong entity or metric", "95% CI", "Any claim error", "Cost / note"];
+    var head = ["Group", "Notes", "Checked", "Flagged: not found", "95% interval", "Claims", "Flagged: wrong entity, metric or period", "95% interval", "Any claim flag", "Writing cost per note"];
     t.appendChild(h("thead", null, [h("tr", null, head.map(function (c, i) { return h("th", { cls: i ? "r" : "", text: c, scope: "col" }); }))]));
     var tb = h("tbody");
     groups.forEach(function (g) {
       var ns = g[1], a = SM.l1(ns, "bd|" + g[0]), b = SM.l2(ns, "bd|" + g[0]), c = SM.bind(ns, "bd|" + g[0]), cost = sum(ns, function (n) { return n.cost; }) / ns.length;
-      var tr = h("tr", { tabindex: "0", "aria-label": g[0] + " breakdown row" }, [h("td", { text: g[0] }), h("td", { cls: "r num", text: String(ns.length) }), h("td", { cls: "r num", text: int(a.den) }),
+      var disp = g[0].split(" / ").map(function (part) { return modelName(part); }).join(" / ");
+      var tr = h("tr", { tabindex: "0", "aria-label": disp + " group row" }, [h("td", { text: disp }), h("td", { cls: "r num", text: int(ns.length) }), h("td", { cls: "r num", text: int(a.den) }),
         h("td", { cls: "r num", text: fmtRate(a.rate) }), h("td", { cls: "r num", text: ciText(a) }), h("td", { cls: "r num", text: int(b.den) }),
         h("td", { cls: "r num", text: fmtRate(c.rate) }), h("td", { cls: "r num", text: ciText(c) }), h("td", { cls: "r num", text: fmtRate(b.rate) }), h("td", { cls: "r num", text: money(cost) })]);
       var fn = keyFns[state.group], key = g[0];
-      linkFocus(tr, { dim: "group", value: key, test: function (n) { return fn(n) === key; } });
+      linkFocus(tr, { dim: "group", value: key, label: disp, test: function (n) { return fn(n) === key; } });
       tb.appendChild(tr);
     });
     t.appendChild(tb); box.appendChild(t);
@@ -2816,33 +3242,54 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     for (var i = B.nStart[ni]; i < B.nEnd[ni]; i++) c += g === "v3" ? (B.f3[i] || B.lab[i] === 3 ? 1 : 0) : (B.f1[i] ? 1 : 0);
     return c;
   }
+  /* flagged numbers in a note that the blind review confirmed as wrong */
+  /* blind-review verdicts on one note's gate v3 flags: confirmed wrong and could not be settled */
+  function noteReview(idx) {
+    var B = M.b, R = run(), out = { wrong: 0, unclear: 0 }; if (!B || !R.review) return out;
+    for (var i = B.nStart[idx]; i < B.nEnd[idx]; i++) if (B.f3[i] || B.lab[i] === 3) { if (R.review[i] === 2) out.wrong++; else if (R.review[i] === 3) out.unclear++; }
+    return out;
+  }
+  function noteConfirmed(idx) { return noteReview(idx).wrong; }
   var COLS = [
     { key: "table", label: "Table", get: function (n) { return n.table; } },
-    { key: "strategy", label: "Strat.", get: function (n) { return n.strategy; } },
+    { key: "flags", label: "Status", get: function (n) {
+      if (n.failed) return -1;
+      var base = noteFlags(n.idx, state.gate === "v3" ? "v3" : "v1") * 1000 + S.claimErrors(n);
+      /* reviewed runs: notes with confirmed errors first, then by flag count */
+      return state.gate === "v3" && isReviewed(run()) ? noteConfirmed(n.idx) * 1e6 + base : base;
+    } },
+    { key: "strategy", label: "Strategy", get: function (n) { return n.strategy; } },
     { key: "model", label: "Model", get: function (n) { return n.model; } },
-    { key: "repeat", label: "Rep", r: true, get: function (n) { return n.repeat; } },
-    { key: "nNums", label: "Nums", r: true, get: function (n) { return M.b ? M.b.nEnd[n.idx] - M.b.nStart[n.idx] : n.nChecked; } },
-    { key: "flags", label: "Status", get: function (n) { return n.failed ? -1 : noteFlags(n.idx, state.gate === "v3" ? "v3" : "v1") * 1000 + S.claimErrors(n); } },
-    { key: "cost", label: "Cost", r: true, get: function (n) { return n.cost || 0; } }
+    { key: "repeat", label: "Rep.", full: "Repeat", r: true, get: function (n) { return n.repeat; } },
+    { key: "nNums", label: "Nums", full: "Numbers in the note", r: true, get: function (n) { return M.b ? M.b.nEnd[n.idx] - M.b.nStart[n.idx] : n.nChecked; } },
+    { key: "cost", label: "Cost", full: "Writing cost", r: true, get: function (n) { return n.cost || 0; } }
   ];
-  function statusPill(n) {
+  function statusPill(n, inDrawer) {
     if (n.failed) return h("span", { cls: "pill warn", text: "! failed" });
     var g = state.gate;
     if (g !== "v3" && run().v1) {
       var k1 = noteFlags(n.idx, "v1");
-      if (!k1) return h("span", { cls: "pill good", text: "✓ clean" });
+      if (!k1) return h("span", { cls: "pill good", text: "✓ no flags" });
       return h("span", { cls: "pill warn", text: (g === "hand" ? "v1: " + k1 + (k1 === 1 ? " flag, " : " flags, ") + noteFlags(n.idx, "v3") + " real" : "v1: " + k1 + (k1 === 1 ? " flag" : " flags")) });
     }
     var k = noteFlags(n.idx, "v3");
-    if (!k) return h("span", { cls: "pill good", text: "✓ clean" });
-    return h("span", { cls: "pill bad", text: "✗ " + k + " flagged" });
+    if (!k) return h("span", { cls: "pill good", text: "✓ no flags" });
+    if (!isReviewed(run())) return h("span", { cls: "pill bad", text: "✗ " + k + " flagged" });
+    var rv = noteReview(n.idx), full = k + " flagged, " + rv.wrong + " confirmed" + (rv.unclear ? ", " + rv.unclear + " unclear" : "") + " (blind AI review)";
+    var shortTxt = k + " flagged \u00b7 " + rv.wrong + " conf." + (rv.unclear ? " \u00b7 " + rv.unclear + " uncl." : "");
+    var mark = rv.wrong ? "✗ " : "";
+    if (inDrawer) return h("span", { cls: "pill " + (rv.wrong ? "bad" : "warn"), text: mark + full });
+    var longTxt = k + " flagged \u00b7 " + rv.wrong + " confirmed" + (rv.unclear ? " \u00b7 " + rv.unclear + " unclear" : "");
+    return h("span", { cls: "pill " + (rv.wrong ? "bad" : "warn"), title: full }, [h("span", { cls: "nw-long", text: mark + longTxt }), h("span", { cls: "nw-short", text: mark + shortTxt })]);
   }
+  function statusText(n) { return statusPill(n, true).textContent.replace(/^[✓✗!] /, ""); }
   var rackRows = [];
   function renderRack(reveal) { refocus($("noteTable"), function () { renderRackInner(reveal); }); }
   function renderRackInner(reveal) {
     var notes = filtered(), t = $("noteTable"); clear(t);
     var rows = notes.slice();
     if (state.onlyErr) rows = rows.filter(function (n) { return n.failed || noteFlags(n.idx, state.gate === "v3" ? "v3" : "v1"); });
+    if (state.onlyConf && run().review) rows = rows.filter(function (n) { return noteConfirmed(n.idx) > 0; });
     var col = COLS.find(function (c) { return c.key === state.sort.key; });
     rows.sort(function (a, b) {
       var va = col.get(a), vb = col.get(b), d = typeof va === "number" ? va - vb : String(va).localeCompare(String(vb));
@@ -2850,10 +3297,11 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       return d * state.sort.dir;
     });
     rackRows = rows;
-    $("listCount").textContent = rows.length + " notes";
+    $("listCount").textContent = rows.length !== run().notes.length ? int(rows.length) + " of " + int(run().notes.length) + " notes" : int(rows.length) + " notes";
     var tr = h("tr");
     COLS.forEach(function (c) {
       var btn = h("button", { type: "button", "data-key": "col:" + c.key, text: c.label });
+      if (c.full) { btn.title = c.full; btn.setAttribute("aria-label", c.label + " (" + c.full.toLowerCase() + ")"); }
       if (state.sort.key === c.key) btn.setAttribute("data-dir", state.sort.dir > 0 ? "↑" : "↓");
       btn.addEventListener("click", function () {
         if (state.sort.key === c.key) state.sort.dir *= -1; else state.sort = { key: c.key, dir: typeof c.get(rows[0] || notes[0] || {}) === "number" ? -1 : 1 };
@@ -2865,9 +3313,9 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var tb = h("tbody"), selPos = rows.findIndex(function (n) { return n.idx === state.sel; });
     var shown = state.showAll || selPos >= LIST_LIMIT ? rows : rows.slice(0, LIST_LIMIT);
     shown.forEach(function (n) {
-      var row = h("tr", { cls: "clickable" + (state.sel === n.idx ? " sel" : ""), tabindex: "0", "data-key": "row:" + n.idx, "aria-label": "Open note " + n.table + ", " + stratName(n.strategy) + ", repeat " + n.repeat, "data-note": n.idx }, [
-        h("td", { cls: "num", text: n.table }), h("td", { text: n.strategy }), h("td", { text: n.model }), h("td", { cls: "r num", text: String(n.repeat) }),
-        h("td", { cls: "r num", text: String(M.b ? M.b.nEnd[n.idx] - M.b.nStart[n.idx] : n.nChecked) }), h("td", null, [statusPill(n)]), h("td", { cls: "r num", text: money(n.cost || 0) })]);
+      var row = h("tr", { cls: "clickable" + (state.sel === n.idx ? " sel" : ""), tabindex: "0", "data-key": "row:" + n.idx, "aria-label": "Open note " + n.table + ", " + statusText(n) + ", " + stratName(n.strategy) + ", " + modelName(n.model) + ", repeat " + n.repeat, "data-note": n.idx }, [
+        h("td", { cls: "num", text: n.table }), h("td", null, [statusPill(n)]), h("td", { text: n.strategy }), h("td", { text: shortModel(n.model), title: modelName(n.model) }), h("td", { cls: "r num", text: String(n.repeat) }),
+        h("td", { cls: "r num", text: int(M.b ? M.b.nEnd[n.idx] - M.b.nStart[n.idx] : n.nChecked) }), h("td", { cls: "r num", text: money(n.cost || 0) })]);
       row.addEventListener("click", function () { openDrawer(n.idx, null, row); });
       row.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openDrawer(n.idx, null, row); } });
       row.addEventListener("pointerenter", function () { if (!state.focusPinned && !state.focus) { M.focusMask = noteMask(n.idx); mFocusChanged(); } });
@@ -2877,7 +3325,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     t.appendChild(tb);
     var more = $("moreBtn");
     more.hidden = shown.length === rows.length;
-    more.textContent = "Show all " + rows.length + " notes";
+    more.textContent = "Show all " + int(rows.length) + " notes";
     applyRackFocus();
     if (reveal) { var sel = t.querySelector("tr.sel"), sc = $("listScroll"); if (sel) { var a = sel.getBoundingClientRect(), b = sc.getBoundingClientRect(); if (a.top < b.top + 30 || a.bottom > b.bottom) sc.scrollTop += a.top - b.top - sc.clientHeight / 2; } }
   }
@@ -2890,6 +3338,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     });
   }
   $("onlyErr").addEventListener("change", function () { state.onlyErr = this.checked; state.showAll = false; renderRack(); });
+  $("onlyConf").addEventListener("change", function () { state.onlyConf = this.checked; state.showAll = false; renderRack(); });
   $("moreBtn").addEventListener("click", function () { state.showAll = true; renderRack(); });
 
   /* ================= the note drawer ================= */
@@ -3053,16 +3502,16 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var R = run(), B = M.b, n = R.notes[state.sel], g = state.gate;
     if (!n) return;
     var table = DATA.tables[n.table];
-    $("dEyebrow").textContent = stratName(n.strategy) + " · " + n.model + " · repeat " + n.repeat;
+    $("dEyebrow").textContent = stratName(n.strategy) + " · " + modelName(n.model) + " · repeat " + n.repeat;
     $("dTitle").textContent = n.table;
-    var meta = h("div", { cls: "meta" }, [statusPill(n), metaPill(n.size + " table, " + n.nRows + " rows"), metaPill(n.etype === "country" ? "countries" : "products"),
-      metaPill("week " + n.week), metaPill(n.calls + " calls"), metaPill(money(n.cost || 0)), metaPill(Math.round(n.latency || 0) + " s"),
+    var meta = h("div", { cls: "meta" }, [statusPill(n, true), metaPill(n.size + " table, " + n.nRows + " rows"), metaPill(n.etype === "country" ? "countries" : "products"),
+      metaPill("week " + n.week), metaPill(n.calls + (n.calls === 1 ? " call" : " calls")), metaPill(money(n.cost || 0) + " writing"), metaPill(Math.round(n.latency || 0) + " s"),
       metaPill(int(n.tokIn) + " in / " + int(n.tokOut) + " out tokens")]);
-    if (n.extractor) meta.appendChild(metaPill("claims: " + n.extractor));
+    if (n.extractor) meta.appendChild(metaPill("claims read by " + shortModel(n.extractor)));
     box.appendChild(meta);
     if (n.failed) box.appendChild(h("div", { cls: "banner" }, [h("b", { text: "!" }), h("div", { text: "The S2 facts script failed on both attempts, so no note was written. " + (n.error || "") })]));
     if (n.s3 && n.s3.length) {
-      var rr = h("div", { cls: "rounds" }, [h("span", { cls: "eyebrow", text: "S3 unsupported rate by round" })]);
+      var rr = h("div", { cls: "rounds" }, [h("span", { cls: "eyebrow", text: "S3 not-found rate by round" })]);
       n.s3.forEach(function (v, i) { if (i) rr.appendChild(h("span", { cls: "muted", text: "→" })); rr.appendChild(h("span", { cls: "pill " + (v ? "bad" : "good"), text: (i ? "round " + i : "draft") + " " + fmtRate(v == null ? 0 : v) })); });
       box.appendChild(rr);
     }
@@ -3108,12 +3557,12 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     box.appendChild(noteBox);
     var lgd = h("div", { cls: "marks" });
     [["t0", "matches a table cell"], ["t1", "derived from the table"], ["t2", "skipped"], ["t3", "flagged by gate v3"]].forEach(function (k) { lgd.appendChild(h("span", null, [h("span", { cls: "n " + k[0], text: "12.3" }), " " + k[1]])); });
-    if (R.v1) lgd.appendChild(h("span", null, [h("span", { cls: "n t0 v1x", text: "12.3" }), " flagged by gate v1 only (shown at the v1 and table-check stops)"]));
+    if (R.v1) lgd.appendChild(h("span", null, [h("span", { cls: "n t0 v1x", text: "12.3" }), " flagged by gate v1 only (shown when the gate is set to v1 or table check)"]));
     box.appendChild(lgd);
     receipts.forEach(function (rc) { box.appendChild(renderReceipt(rc, !keepScroll && !instant)); });
     if (claims.length) {
       var ct = h("table", { cls: "t" });
-      ct.appendChild(h("thead", null, [h("tr", null, ["Line", "Entity", "Metric", "Period", "Value", "Verdict", "Evidence"].map(function (c) { return h("th", { text: c, scope: "col" }); }))]));
+      ct.appendChild(h("thead", null, [h("tr", null, ["Line", "Entity", "Metric", "Period", "Value", "Gate verdict", "Evidence"].map(function (c) { return h("th", { text: c, scope: "col" }); }))]));
       var anyAdj = false, tb = h("tbody");
       claims.forEach(function (c) {
         var verdict = c[6];
@@ -3129,7 +3578,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
       });
       ct.appendChild(tb);
       box.appendChild(h("div", null, [h("h3", { cls: "eyebrow", text: "Claims (" + claims.length + ")", style: "margin-bottom:6px" }), h("div", { cls: "tscroll", style: "max-height:300px" }, [ct]),
-        anyAdj ? h("p", { cls: "small muted", style: "margin:6px 0 0", text: "Square brackets mark where a period or metric label written next to the number overrode the claim extractor." }) : null]));
+        anyAdj ? h("p", { cls: "small muted", style: "margin:6px 0 0", text: "Square brackets mark where a period or metric label written next to the number overrode what the claim reader picked." }) : null]));
     }
     if (table) {
       var st = h("table", { cls: "t stick1" }), idx = { cell: {}, col: {}, all: [] }, cited = h("span", { cls: "cited", "aria-live": "polite" });
@@ -3215,7 +3664,8 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   function renderRunsInner() {
     var bar = $("runbar"); clear(bar);
     DATA.runs.forEach(function (r, i) {
-      var b = h("button", { type: "button", "data-key": "run:" + i, "aria-pressed": String(i === state.run) }, [h("b", { text: r.label }), h("span", { text: r.sub })]);
+      var b = h("button", { type: "button", "data-key": "run:" + i, "aria-pressed": String(i === state.run) }, [h("b", { text: r.name || r.label }), h("span", { text: r.sub })]);
+      b.title = r.label;
       b.addEventListener("click", function () { if (i !== state.run) selectRun(i); });
       bar.appendChild(b);
     });
@@ -3223,11 +3673,15 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   function selectRun(i) {
     if (!$("drawer").hidden) closeDrawer();
     state.run = i; state.gate = "v3"; state.focus = null; state.focusPinned = false; state.sel = null; state.selNum = null; state.showAll = false;
+    state.onlyConf = false; $("onlyConf").checked = false;
     resetFilters();
     try { localStorage.setItem("numgate-run", run().id); } catch (e) { /* storage unavailable */ }
     mRunChanged();
     renderEverything();
+    syncBench();
+    announce((run().name || run().label) + " selected. Filters reset.");
     writeHash();
+    navSpy();
   }
   var statsTimer = null;
   function onFilters() {
@@ -3243,8 +3697,14 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     renderRuns(); renderFilters(); renderFinding(); renderCaption(); renderMeters(notes); renderReadouts(notes); renderRack(); renderFallback(); renderConsole();
     $("rig").hidden = !R.isMock;
     $("v1chip").hidden = state.gate === "v3";
-    $("mSpec").textContent = (R.isMock ? "Test run. " : "") + "One dot per number. " + (window.matchMedia && window.matchMedia("(hover: none)").matches ? "Tap a dot to read its sentence." : "Hover a dot to read its sentence; click to open the note.");
-    $("footMeta").textContent = "Run " + R.id + ": " + R.notes.length + " notes, models " + R.models.join(", ") + ", generated " + DATA.meta.generated + ".";
+    var noHover = !!(window.matchMedia && window.matchMedia("(hover: none)").matches);
+    $("mSpec").textContent = (R.isMock ? "Mock test run. " : "") + "Each dot is a number in the filtered notes, or a group of numbers where a bin says so, sorted into four bins. " + (noHover ? "Tap a dot to read its sentence." : "Hover a dot to read its sentence; click to open the note.");
+    $("lgV1").hidden = !R.v1; $("lgStet").hidden = !handOK(R);
+    $("keyHint").textContent = "With the sorting gate selected (click it or Tab to it): arrows move between numbers, F jumps to the next flag, Enter opens the note" + (gateStops().length > 1 ? ", 1 to 3 set the gate" : "");
+    $("keyHint").hidden = noHover;
+    $("onlyConfL").hidden = !R.review;
+    $("footMeta").textContent = (R.name || R.label) + " (runs/" + R.id + "): " + int(R.notes.length) + " notes by " + R.models.map(modelName).join(", ") + ". Page built " + DATA.meta.generated + ".";
+    navLinks();
   }
   [["szL1", "l1"], ["szB", "bind"], ["szL2", "l2"]].forEach(function (pair) {
     $(pair[0]).addEventListener("click", function () {
@@ -3255,6 +3715,63 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     });
   });
   $("groupSel").addEventListener("change", function () { state.group = this.value; renderR6(filtered()); });
+  /* ---------- section nav: scroll offset, link clicks, filter shortcut and the active section ---------- */
+  var NAV_IDS = ["meters-plate", "machine", "readouts", "rack", "bench-plate", "paper"], navActive = null, navRaf = 0;
+  function navOffset() { var nh = $("secnav").offsetHeight; document.documentElement.style.scrollPaddingTop = (nh + 16) + "px"; return nh; }
+  function navLink(id) { return document.querySelector('#secnav [data-nav="' + id + '"]'); }
+  /* 05 is entered through its chapter label, so the Results/Background split stays in view */
+  function navAnchor(el) { var c = $("chBackground"); return el && el.id === "bench-plate" && c && !c.hidden ? c : el; }
+  function navLinks() {
+    NAV_IDS.forEach(function (id) { var a = navLink(id), el = $(id); if (a) a.parentNode.hidden = !el || el.hidden; });
+  }
+  document.querySelectorAll("#secnav [data-nav]").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      var el = $(a.getAttribute("data-nav")); if (!el) return;
+      e.preventDefault();
+      scrollToEl(navAnchor(el));
+      var t = el.id === "readouts" ? $("roTitle") : el.querySelector(".plate-title");
+      if (t) { if (!t.hasAttribute("tabindex")) t.setAttribute("tabindex", "-1"); t.focus({ preventScroll: true }); }
+      navSpy();
+    });
+  });
+  $("navScope").addEventListener("click", function () {
+    if (state.focus && state.focusPinned) {
+      setFocus(null);
+      var nt = $("navScope").offsetParent ? $("navScope") : (navActive && navLink(navActive)) || document.querySelector("#secnav li:not([hidden]) a");
+      if (nt) nt.focus({ preventScroll: true });
+      announce("Focus cleared"); return;
+    }
+    if ($("filterBody").hidden) setFilterOpen(true);
+    scrollToEl($("filterband"));
+    var c = document.querySelector("#filters .chip"); if (c) c.focus({ preventScroll: true });
+  });
+  function navSpy() {
+    navRaf = 0;
+    var mach = $("machine");
+    if (mach && !mach.hidden && mach.offsetParent) { var wantC = mach.getBoundingClientRect().bottom < 0; if (wantC !== consoleWanted) { consoleWanted = wantC; updateConsoleVisibility(); } }
+    var nav = $("secnav"); if (!nav || nav.hidden) return;
+    var nh = nav.offsetHeight, vis = [], active = null;
+    NAV_IDS.forEach(function (id) { var el = $(id); if (el && !el.hidden && el.offsetParent) vis.push(el); });
+    vis.forEach(function (el) { if (navAnchor(el).getBoundingClientRect().top <= nh + 24) active = el.id; });
+    if (vis.length && innerHeight + scrollY >= document.documentElement.scrollHeight - 2) active = vis[vis.length - 1].id;
+    if (active === navActive) return;
+    navActive = active;
+    NAV_IDS.forEach(function (id) { var a = navLink(id); if (!a) return; if (id === active) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current"); });
+    var a = active && navLink(active), list = nav.querySelector(".secnav-links");
+    if (!active && list) list.scrollLeft = 0;
+    else if (a && list) {
+      var ar = a.getBoundingClientRect(), lr = list.getBoundingClientRect();
+      if (ar.left < lr.left) list.scrollLeft += ar.left - lr.left - 8;
+      else if (ar.right > lr.right) list.scrollLeft += ar.right - lr.right + 8;
+    }
+  }
+  window.addEventListener("scroll", function () { if (!navRaf) navRaf = requestAnimationFrame(navSpy); }, { passive: true });
+  var navResizeRaf = 0;
+  window.addEventListener("resize", function () {
+    if (navResizeRaf) return;
+    navResizeRaf = requestAnimationFrame(function () { navResizeRaf = 0; navOffset(); navActive = null; navSpy(); });
+  });
   var consoleWanted = false;
   function updateConsoleVisibility() { $("console").hidden = !consoleWanted || !$("drawer").hidden || !M.b; }
   if (window.IntersectionObserver) {
@@ -3285,9 +3802,10 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
   function init() {
     readTokens(); applyMotion(); initPaper();
     if (!DATA.runs.length) {
-      ["machine", "meters-plate", "bench-plate", "rack"].forEach(function (id) { $(id).hidden = true; });
+      ["machine", "meters-plate", "bench-plate", "rack", "secnav", "filterband", "chResults", "chBackground"].forEach(function (id) { $(id).hidden = true; });
       document.querySelector("section.readouts").hidden = true; $("tiles").hidden = true; $("runbar").hidden = true;
-      $("main").insertBefore(h("div", { cls: "empty", text: "No runs found. Run python src/run_experiment.py --smoke, then python src/analyze.py." }), $("machine"));
+      document.querySelector(".runpick").hidden = true;
+      $("machine").parentNode.insertBefore(h("div", { cls: "empty", text: "No runs found. Run python src/run_experiment.py --smoke, then python src/analyze.py." }), $("machine"));
       return;
     }
     var hs = readHash(), saved = null;
@@ -3295,12 +3813,15 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     var start = DATA.runs.findIndex(function (r) { return r.id === (hs.run || saved); });
     if (start < 0 && hs.run) start = DATA.runs.findIndex(function (r) { return r.id === saved; });
     state.run = start >= 0 ? start : 0;
+    try { localStorage.setItem("numgate-run", run().id); } catch (e) { /* storage unavailable */ }
     resetFilters();
     M.b = mBuild(run()); mAlive(); mLayout(); mSize(); lastW = M.wrap.clientWidth;
     if (hs.gate && gateStops().indexOf(hs.gate) > -1) state.gate = hs.gate;
     placeOverlays(); mPlaceAll(); mFocusChanged(true); mDrawStatic(); schedule();
-    renderEverything(); renderBench();
+    renderEverything(); renderBench(); navLinks();
+    if (window.matchMedia && window.matchMedia("(max-width: 760px)").matches) setFilterOpen(false);
     renderLever();
+    navOffset(); navSpy();
     if (/^\d+$/.test(hs.note || "") && run().notes[+hs.note]) {
       var ni = +hs.note, nn = /^\d+$/.test(hs.n || "") ? +hs.n : null;
       if (nn != null && !(nn >= M.b.nStart[ni] && nn < M.b.nEnd[ni])) nn = null;
@@ -3310,6 +3831,7 @@ if (typeof module !== "undefined") module.exports = NumGateStats;
     Promise.race([fr, new Promise(function (r) { setTimeout(r, 800); })]).then(function () {
       fontsReady = true;
       if (M.b) { placeOverlays(); schedule(); }
+      navOffset();
       if (!window.IntersectionObserver) M.inView = true;
       maybeSweep();
     });

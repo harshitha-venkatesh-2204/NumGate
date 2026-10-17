@@ -137,10 +137,17 @@ def rows(df, cols, note_index, tables=None, lines=None):
     return out
 
 
+MODEL_NAMES = {"mock": "Mock model", "claude-opus-5": "Claude Opus 5", "gpt-4.1": "GPT-4.1",
+               "llama-3.3-70b": "Llama 3.3 70B", "claude-haiku-4-5": "Claude Haiku 4.5", "claude-sonnet-5": "Claude Sonnet 5"}
+RUN_NAMES = {"full": "Full study", "smoke_opus": "Opus pilot", "smoke": "Mock test run"}
+
+
+def names_for(model):
+    return MODEL_NAMES.get(model, model)
+
+
 def run_label(models):
-    names = {"mock": "Mock model", "claude-opus-5": "Claude Opus 5", "gpt-4.1": "GPT-4.1",
-             "llama-3.3-70b": "Llama 3.3 70B", "claude-haiku-4-5": "Claude Haiku 4.5", "claude-sonnet-5": "Claude Sonnet 5"}
-    return ", ".join(names.get(m, m) for m in models)
+    return ", ".join(names_for(m) for m in models)
 
 
 def run_payload(run_dir):
@@ -164,7 +171,7 @@ def run_payload(run_dir):
             "nCell": clean(r["n_Supported_cell"]), "nDer": clean(r["n_Supported_derived"]), "nSkip": clean(r["n_Skipped"]),
             "nClaimsVer": clean(r["n_claims_verifiable"]), "nCorrect": clean(r["n_Correct"]),
             "nWE": clean(r["n_Wrong_entity"]), "nWM": clean(r["n_Wrong_metric"]), "nWV": clean(r["n_Wrong_value"]),
-            "nUnv": clean(r["n_Unverifiable"]), "cost": clean(r["cost_usd"]), "latency": clean(r["latency_s"]),
+            "nUnv": clean(r["n_Unverifiable"]), "cost": clean(r["cost_usd"]), "xcost": clean(r.get("extractor_cost_usd")) or 0, "latency": clean(r["latency_s"]),
             "tokIn": clean(r["tokens_in"]), "tokOut": clean(r["tokens_out"]), "calls": clean(r["n_calls"]),
             "s3": json.loads(rounds) if isinstance(rounds, str) and rounds.startswith("[") else None,
             "extractor": clean(r.get("extractor")) or "", "error": rec.get("trace", {}).get("error", ""),
@@ -180,7 +187,10 @@ def run_payload(run_dir):
     overlay = v1_overlay(notes["note_id"], texts, [tables[t] for t in notes["table_id"]], numbers) if not is_mock else None
     return {
         "id": run_dir.name, "models": models, "isMock": is_mock, "label": run_label(models),
-        "sub": f"{run_dir.name}, {len(notes)} notes" + (", planted errors" if is_mock else ""),
+        "name": RUN_NAMES.get(run_dir.name, "Mock test run" if is_mock else run_dir.name),
+        "sub": (f"{len(notes):,} notes, planted errors" if is_mock
+                else f"{len(notes):,} notes, {len(models)} models" if len(models) > 1
+                else f"{len(notes):,} notes, {names_for(models[0])}"),
         "notes": out_notes, "texts": texts, "s3MaxRounds": s3_rounds,
         "numbers": numbers, "claims": claims, "flags": gate_flags(numbers, claims),
         "v1": overlay[0] if overlay else None, "v1Counts": overlay[1] if overlay else None,
@@ -307,6 +317,17 @@ def story():
     flags = PAPER_DIR / "data" / "v1_flags.csv"
     if flags.exists():
         out["v1ClaimFlags"] = int(len(pd.read_csv(flags)))
+    full = PAPER_DIR / "data" / "full_results.json"
+    if full.exists():
+        # the paper's pre-registered main outcome uses the primary tables only (pilot tables left out)
+        fr = json.loads(full.read_text(encoding="utf-8"))
+        pp, mp = fr.get("precision_pooled") or {}, fr.get("miss_and_precision") or {}
+        checked = sum(int(v.get("checked", 0)) for v in mp.values() if isinstance(v, dict))
+        if pp.get("flags") and checked:
+            out["primary"] = {"run": fr.get("run_id"), "confirmed": int(pp["confirmed"]), "flags": int(pp["flags"]),
+                              "unclear": int(pp.get("unclear", 0)), "checked": checked,
+                              "tables": (fr.get("design") or {}).get("tables"),
+                              "primaryTables": (fr.get("design") or {}).get("primary_tables")}
     return out
 
 
@@ -340,7 +361,7 @@ def build_data():
     runs.sort(key=lambda r: (r["isMock"], -len(r["notes"]), r["id"]))
     table_ids = {n["table"] for r in runs for n in r["notes"]}
     return {"meta": {"generated": datetime.now().strftime("%Y-%m-%d %H:%M"), "s3MaxRounds": cfg["s3_max_rounds"],
-                     "story": story(), "paper": paper_info()},
+                     "story": story(), "paper": paper_info(), "modelNames": MODEL_NAMES},
             "runs": runs, "tables": table_payload(table_ids)}
 
 

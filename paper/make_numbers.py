@@ -169,18 +169,18 @@ def size_table():
         rows.append(" & ".join([size, num(g.table_id.nunique()), num(len(g)), num(g.n_numbers_checked.sum()),
                                 f"{int(g.n_Unsupported.sum())} ({g.n_Unsupported.sum() / g.n_numbers_checked.sum() * 100:.1f})",
                                 num(g.n_claims_verifiable.sum()), num(errs), f"{int(has_error(g).sum())} / {len(g)}"]) + " \\\\")
-    head = ("\\begin{tabular}{lrrrrrrr}\n\\toprule\n"
+    head = ("\\resizebox{\\linewidth}{!}{%\n\\begin{tabular}{lrrrrrrr}\n\\toprule\n"
             "Table size & Tables & Notes & Numbers & Unsupported (\\%) & Claims & Claim errors & Notes with an error \\\\\n\\midrule\n")
-    return head + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n"
+    return head + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}}\n"
 
 
 def validation_table():
     """Table 2: false alarms and caught errors of the gate on the three test sets (paper/data/validation.json)."""
     val = json.loads((PAPER / "data" / "validation.json").read_text())
-    head = ("\\begin{tabular}{lrrrr}\n\\toprule\n"
+    head = ("\\resizebox{\\linewidth}{!}{%\n\\begin{tabular}{lrrrr}\n\\toprule\n"
             "Test set & L1 false alarms (\\%) & L1 errors caught (\\%) & L2 false alarms (\\%) & L2 errors detected (\\%) \\\\\n\\midrule\n")
     rows = [" & ".join(r) + " \\\\" for r in val.get("table_rows", [])]
-    return head + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n"
+    return head + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}}\n"
 
 
 def main():

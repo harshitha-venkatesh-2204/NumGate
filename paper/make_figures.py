@@ -39,7 +39,7 @@ def fig_v1_v2():
     rate_v2 = ((g2.n_Wrong_entity.sum() + g2.n_Wrong_metric.sum() + g2.n_Wrong_value.sum()) / g2.n_claims_verifiable.sum()).reindex(strategies)
     fig, ax = plt.subplots(figsize=(6.4, 3.4))
     x = np.arange(len(strategies))
-    for i, (vals, label, color) in enumerate([(rate_v1, "Gate v1", BLUE), (rate_v2, "Gate v2", ORANGE)]):
+    for i, (vals, label, color) in enumerate([(rate_v1, "Gate v1", BLUE), (rate_v2, "Gate v3 (final)", ORANGE)]):
         pos = x + (i - 0.5) * 0.36
         ax.bar(pos, vals, width=0.34, color=color, label=label, edgecolor="white", linewidth=2)
         for p, v in zip(pos, vals):

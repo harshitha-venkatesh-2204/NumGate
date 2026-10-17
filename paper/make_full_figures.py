@@ -2,7 +2,8 @@
 
 Usage: python paper/make_full_figures.py
 Writes paper/figures/fig_full_rates.png: per writer, the gate's flag rate and the confirmed error rate for each
-strategy, with 95 percent intervals that resample tables.
+strategy, with 95 percent intervals that resample tables. A cell with no confirmed error has no bootstrap interval,
+so it shows the exact (Clopper-Pearson) upper bound as a dotted line.
 """
 import json
 from pathlib import Path
@@ -39,7 +40,9 @@ def main():
             g, cf = c["gate_flag"], c["confirmed"]
             ax.plot([100 * g["lo"], 100 * g["hi"]], [y + 0.14] * 2, color=COLORS[st], lw=1.2, alpha=.45, solid_capstyle="round")
             ax.plot(100 * g["rate"], y + 0.14, marker=MARKERS[st], ms=7, mfc="white", mec=COLORS[st], mew=1.6, ls="none", clip_on=False)
-            ax.plot([100 * cf["lo"], 100 * cf["hi"]], [y - 0.14] * 2, color=COLORS[st], lw=2, solid_capstyle="round")
+            hi = cf["hi"] if cf["num"] else d.get("exploratory", {}).get("exact_upper", {}).get(f"{model}|{st}", cf["hi"])
+            ax.plot([100 * cf["lo"], 100 * hi], [y - 0.14] * 2, color=COLORS[st], lw=2, solid_capstyle="round",
+                    ls="-" if cf["num"] else (0, (1, 1.5)))
             ax.plot(100 * cf["rate"], y - 0.14, marker=MARKERS[st], ms=7, color=COLORS[st], mec="white", mew=1.2, ls="none", clip_on=False)
         ax.set_title(name, fontsize=11, color=INK, loc="left")
         ax.set_yticks(range(len(STRATS)))

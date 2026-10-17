@@ -18,7 +18,7 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import Image, KeepTogether, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+from reportlab.platypus import HRFlowable, Image, KeepTogether, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 PAPER = Path(__file__).resolve().parent
 FONT_DIR = "/System/Library/Fonts"
@@ -29,11 +29,13 @@ MUTED = colors.HexColor("#444444")
 
 
 def register_fonts():
-    """Charter for text and Menlo for code (both ship with macOS); fall back to the built-in Times if missing."""
+    """Times New Roman for text, as in the arXiv preprint layout, and Menlo for code (both ship with macOS);
+    fall back to the built-in Times if missing."""
     try:
-        charter = f"{FONT_DIR}/Supplemental/Charter.ttc"
-        for name, idx in [("Serif", 0), ("Serif-Italic", 1), ("Serif-BoldItalic", 2), ("Serif-Bold", 3)]:
-            pdfmetrics.registerFont(TTFont(name, charter, subfontIndex=idx))
+        sup = f"{FONT_DIR}/Supplemental"
+        for name, f in [("Serif", "Times New Roman.ttf"), ("Serif-Bold", "Times New Roman Bold.ttf"),
+                        ("Serif-Italic", "Times New Roman Italic.ttf"), ("Serif-BoldItalic", "Times New Roman Bold Italic.ttf")]:
+            pdfmetrics.registerFont(TTFont(name, f"{sup}/{f}"))
         pdfmetrics.registerFontFamily("Serif", normal="Serif", bold="Serif-Bold", italic="Serif-Italic", boldItalic="Serif-BoldItalic")
         for name, idx in [("Mono", 0), ("Mono-Bold", 1)]:
             pdfmetrics.registerFont(TTFont(name, f"{FONT_DIR}/Menlo.ttc", subfontIndex=idx))
@@ -46,18 +48,20 @@ SERIF, MONO = register_fonts()
 
 
 def style(name, **kw):
-    base = dict(fontName=SERIF, fontSize=10.5, leading=14.2, textColor=INK, alignment=TA_JUSTIFY)
+    base = dict(fontName=SERIF, fontSize=10.8, leading=13.8, textColor=INK, alignment=TA_JUSTIFY)
     base.update(kw)
     return ParagraphStyle(name, **base)
 
 
 S = {
-    "title": style("title", fontSize=17, leading=21, alignment=TA_CENTER, fontName=SERIF + "-Bold" if SERIF == "Serif" else "Times-Bold"),
-    "author": style("author", fontSize=10.5, leading=13.5, alignment=TA_CENTER),
+    "title": style("title", fontSize=17.5, leading=21.5, alignment=TA_CENTER, fontName=SERIF + "-Bold" if SERIF == "Serif" else "Times-Bold"),
+    "author": style("author", fontSize=12, leading=15, alignment=TA_CENTER, fontName=SERIF + "-Bold" if SERIF == "Serif" else "Times-Bold"),
+    "url": style("url", fontSize=9.5, leading=12, alignment=TA_CENTER),
+    "keywords": style("keywords", fontSize=9.6, leading=12.6, leftIndent=0.45 * inch, rightIndent=0.45 * inch, alignment=TA_LEFT),
     "date": style("date", fontSize=9.5, leading=12, alignment=TA_CENTER, textColor=MUTED),
     "abs_head": style("abs_head", fontSize=10, alignment=TA_CENTER, fontName="Serif-Bold" if SERIF == "Serif" else "Times-Bold"),
     "abstract": style("abstract", fontSize=9.6, leading=12.8, leftIndent=0.45 * inch, rightIndent=0.45 * inch),
-    "h1": style("h1", fontSize=12.5, leading=16, alignment=TA_LEFT, spaceBefore=10, spaceAfter=4,
+    "h1": style("h1", fontSize=12.5, leading=16, alignment=TA_LEFT, spaceBefore=10, spaceAfter=4, keepWithNext=1,
                 fontName="Serif-Bold" if SERIF == "Serif" else "Times-Bold"),
     "body": style("body", spaceAfter=6),
     "item": style("item", spaceAfter=2),
@@ -119,8 +123,18 @@ def parse_bib():
     return entries
 
 
+ACCENTS = {r"\v{e}": "ě", r"\v{s}": "š", r"\v{r}": "ř", r"\v{c}": "č", r"\v{z}": "ž", r"\'s": "ś", r"\'n": "ń",
+           r"\'e": "é", r"\'a": "á", r"\'o": "ó", r'\"o': "ö", r'\"u': "ü", r'\"a': "ä"}
+
+
+def delatex(s):
+    for a, b in ACCENTS.items():
+        s = s.replace(a, b)
+    return s
+
+
 def authors_of(entry):
-    return [a.strip() for a in re.sub(r"[{}]", "", entry.get("author", "")).split(" and ")]
+    return [a.strip() for a in re.sub(r"[{}]", "", delatex(entry.get("author", ""))).split(" and ")]
 
 
 def surname(author):
@@ -158,7 +172,9 @@ class Refs:
 
 
 def math_to_markup(expr):
-    """The few inline formulas in the paper, as italic text with real symbols."""
+    """The few inline formulas in the paper, as italic text with real symbols; a lone sign is set upright."""
+    if expr.strip() in {"-", "+", "<", ">", "&lt;", "&gt;"}:
+        return {"-": "\u2212", "+": "+", "<": "<", ">": ">", "&lt;": "&lt;", "&gt;": "&gt;"}[expr.strip()]
     rep = {r"\le": "≤", r"\ge": "≥", r"\cdot": "·", r"\times": "×", r"\approx": "≈", r"\kappa": "κ", r"\,": " "}
     for a, b in rep.items():
         expr = expr.replace(a, b)
@@ -171,6 +187,7 @@ def math_to_markup(expr):
 def inline(s, ctx):
     """LaTeX inline markup to ReportLab paragraph markup."""
     s = re.sub(r"(?<!\\)%.*", "", s)  # comments
+    s = re.sub(r"\\texttt\{([^{}]*)\}", lambda m: "\\texttt{" + m.group(1).replace("--", "\x01") + "}", s)  # keep -- in code
     s = s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     s = s.replace(r"\&amp;", "&amp;")
     s = s.replace(r"\$", "\x00DOLLAR\x00")  # an escaped dollar is money, not the start of math
@@ -180,7 +197,12 @@ def inline(s, ctx):
     s = re.sub(r"\\ref\{([^}]*)\}", lambda m: ctx["labels"].get(m.group(1), "??"), s)
     s = re.sub(r"\\citep\{([^}]*)\}", lambda m: ctx["refs"].citep(m.group(1)), s)
     s = re.sub(r"\\citet\{([^}]*)\}", lambda m: ctx["refs"].citet(m.group(1)), s)
-    s = re.sub(r"\\url\{([^}]*)\}", r'<font name="%s" size="8.5">\1</font>' % MONO, s)
+    # links are clickable; the URL is held aside so later replacements (-- to an en dash, ~, quotes) cannot touch it
+    urls = []
+    def keep_url(m):
+        urls.append(m.group(1))
+        return f"\x00URL{len(urls) - 1}\x00"
+    s = re.sub(r"\\url\{([^}]*)\}", keep_url, s)
     # innermost-first rewrite of simple commands with one argument
     simple = {"textbf": ("<b>", "</b>"), "emph": ("<i>", "</i>"), "textit": ("<i>", "</i>"),
               "texttt": ('<font name="%s" size="8.8">' % MONO, "</font>"),
@@ -199,6 +221,9 @@ def inline(s, ctx):
     s = s.replace("~", "\u00a0")
     s = re.sub(r"\\(small|centering|hfill|noindent|par)\b\s*", "", s)
     s = re.sub(r"\{\}", "", s)
+    s = s.replace("\x01", "--")
+    s = re.sub(r"\x00URL(\d+)\x00", lambda m: '<a href="%s" color="#1f4e9a"><font name="%s" size="8.5">%s</font></a>'
+               % (urls[int(m.group(1))], MONO, urls[int(m.group(1))]), s)
     return re.sub(r"\s+", " ", s).strip()
 
 # ---------------------------------------------------------------- document structure
@@ -226,7 +251,7 @@ def number_labels(body):
 def split_blocks(body):
     """Top-level blocks: environments, sections and paragraphs, in order."""
     blocks, i = [], 0
-    pat = re.compile(r"\\begin\{(abstract|itemize|enumerate|description|table|figure)\}(\[[^\]]*\])?|\\section\{|\\maketitle|\\bibliography\{[^}]*\}|\\bibliographystyle\{[^}]*\}|\n\s*\n")
+    pat = re.compile(r"\\begin\{(abstract|itemize|enumerate|description|table|figure)\}(\[[^\]]*\])?|\\section\*?\{|\\maketitle|\\bibliography\{[^}]*\}|\\bibliographystyle\{[^}]*\}|\n\s*\n")
     while i < len(body):
         m = pat.search(body, i)
         if not m:
@@ -242,7 +267,7 @@ def split_blocks(body):
             i = end + len("\\end{" + env + "}")
         elif tok.startswith("\\section"):
             close = matching_brace(body, m.end() - 1)
-            blocks.append(("section", body[m.end():close]))
+            blocks.append(("section*" if tok.startswith("\\section*") else "section", body[m.end():close]))
             i = close + 1
         elif tok == "\\maketitle":
             blocks.append(("maketitle",))
@@ -383,6 +408,47 @@ def references(ctx):
     return flow
 
 
+def write_bbl(refs):
+    """paper/numgate.bbl in the natbib/plainnat format, so arXiv can typeset the references without running BibTeX.
+    Entries follow the same order as in the PDF; titles and venues are copied from references.bib as written."""
+    def raw_authors(e):
+        return [a.strip() for a in e.get("author", "").split(" and ")]
+
+    def first_last(a):
+        if "," in a:
+            last, first = a.split(",", 1)
+            return f"{first.strip()} {last.strip()}".strip()
+        return a
+
+    def last(a):
+        return a.split(",")[0].strip() if "," in a else a.split()[-1]
+
+    out = ["\\begin{thebibliography}{%d}" % len(refs.keys), "\\providecommand{\\natexlab}[1]{#1}",
+           "\\providecommand{\\url}[1]{\\texttt{#1}}", ""]
+    for k in refs.keys:
+        e = refs.bib[k]
+        names = [a for a in raw_authors(e) if a != "others"]
+        lasts = [last(a) for a in names]
+        if len(lasts) == 1:
+            short = lasts[0]
+        elif len(lasts) == 2 and "others" not in e.get("author", ""):
+            short = f"{lasts[0]} and {lasts[1]}"
+        else:
+            short = f"{lasts[0]} et~al."
+        full = ", ".join(lasts[:-1]) + (", and " if len(lasts) > 2 else " and ") + lasts[-1] if len(lasts) > 1 else lasts[0]
+        year = e.get("year", "")
+        people = [first_last(a) for a in names]
+        who = (", ".join(people[:-1]) + (", and " if len(people) > 2 else " and ") + people[-1]) if len(people) > 1 else people[0]
+        if "others" in e.get("author", ""):
+            who += " et~al"
+        venue = e.get("booktitle") or e.get("journal") or e.get("howpublished") or e.get("publisher") or ""
+        title = e.get("title", "")
+        out += [f"\\bibitem[{{{short}({year}){full}}}]{{{k}}}", f"{who}.", f"\\newblock {title}.",
+                f"\\newblock {('\\emph{' + venue + '}, ') if venue else ''}{year}." + (f" {e['note']}" if e.get("note") else ""), ""]
+    out.append("\\end{thebibliography}")
+    (PAPER / "numgate.bbl").write_text("\n".join(out) + "\n", encoding="utf-8")
+
+
 def build():
     tex = (PAPER / "numgate.tex").read_text(encoding="utf-8")
     macros = load_macros()
@@ -393,20 +459,38 @@ def build():
     body = expand_macros(re.sub(r"(?<!\\)%.*", "", body), macros)
     ctx["labels"] = number_labels(body)
     ctx["refs"] = Refs(parse_bib(), body)
+    write_bbl(ctx["refs"])
 
     story = []
     section = 0
     for block in split_blocks(body):
         kind = block[0]
         if kind == "maketitle":
-            story += [Spacer(1, 6), Paragraph(inline(expand_macros(arg(pre, "title"), macros), ctx), S["title"]), Spacer(1, 10)]
-            story += [Paragraph(inline(arg(pre, "author"), ctx), S["author"]), Spacer(1, 4)]
-            story += [Paragraph(inline(arg(pre, "date"), ctx), S["date"]), Spacer(1, 14)]
+            rule = lambda w: HRFlowable(width="100%", thickness=w, color=INK, spaceBefore=0, spaceAfter=0)  # noqa: E731
+            story += [Spacer(1, 2), rule(2), Spacer(1, 9), Paragraph(inline(expand_macros(arg(pre, "title"), macros), ctx), S["title"]),
+                      Spacer(1, 5), rule(0.6), Spacer(1, 16), Paragraph(inline(arg(pre, "author"), ctx), S["author"])]
+            if arg(pre, "projecturl"):
+                story += [Spacer(1, 3), Paragraph("Project page: " + inline("\\url{" + arg(pre, "projecturl") + "}", ctx), S["url"])]
+            if arg(pre, "codeurl"):
+                story += [Paragraph("Code and data: " + inline("\\url{" + arg(pre, "codeurl") + "}", ctx), S["url"])]
+            story += [Spacer(1, 8), Paragraph(f"A PREPRINT&nbsp;&nbsp;·&nbsp;&nbsp;{inline(arg(pre, 'date'), ctx)}", S["date"]), Spacer(1, 16)]
         elif kind == "abstract":
-            story += [Paragraph("Abstract", S["abs_head"]), Spacer(1, 4), Paragraph(inline(block[1], ctx), S["abstract"]), Spacer(1, 10)]
+            text, kw = block[1], None
+            k = text.find("\\keywords{")
+            if k >= 0:
+                close = matching_brace(text, k + len("\\keywords"))
+                kw = text[k + len("\\keywords{"):close]
+                text = text[:k] + text[close + 1:]
+            story += [Paragraph("Abstract", S["abs_head"]), Spacer(1, 4), Paragraph(inline(text, ctx), S["abstract"])]
+            if kw:
+                words = " &nbsp;·&nbsp; ".join(inline(w, ctx) for w in kw.split("\\and"))
+                story += [Spacer(1, 6), Paragraph(f"<b>Keywords</b>&nbsp;&nbsp; {words}", S["keywords"])]
+            story += [Spacer(1, 10)]
         elif kind == "section":
             section += 1
             story.append(Paragraph(f"{section}&nbsp;&nbsp;{inline(block[1], ctx)}", S["h1"]))
+        elif kind == "section*":
+            story.append(Paragraph(inline(block[1], ctx), S["h1"]))
         elif kind in {"itemize", "enumerate", "description"}:
             story += list_flowable(kind, block[1], block[2], ctx)
         elif kind == "table":
@@ -425,11 +509,27 @@ def build():
         canvas.drawCentredString(letter[0] / 2, 0.55 * inch, str(doc.page))
         canvas.restoreState()
 
+    running = re.sub(r"\s+", " ", arg(pre, "runningtitle") or "").strip()
+
+    def header(canvas, doc):
+        footer(canvas, doc)
+        canvas.saveState()
+        y = letter[1] - 0.68 * inch
+        canvas.setFillColor(MUTED)
+        canvas.setFont("Serif-Italic" if SERIF == "Serif" else "Times-Italic", 9)
+        canvas.drawString(inch, y, running)
+        canvas.setFont(SERIF, 8.5)
+        canvas.drawRightString(letter[0] - inch, y, "A PREPRINT")
+        canvas.setStrokeColor(MUTED)
+        canvas.setLineWidth(0.4)
+        canvas.line(inch, y - 5, letter[0] - inch, y - 5)
+        canvas.restoreState()
+
     out = PAPER / "numgate.pdf"
     title = re.sub(r"\\\\|[{}]", " ", arg(pre, "title"))
     doc = SimpleDocTemplate(str(out), pagesize=letter, leftMargin=inch, rightMargin=inch, topMargin=inch, bottomMargin=inch,
                             title=re.sub(r"\s+", " ", title).strip(), author=re.split(r"\\\\", arg(pre, "author"))[0].strip())
-    doc.build(story, onFirstPage=footer, onLaterPages=footer)
+    doc.build(story, onFirstPage=footer, onLaterPages=header)
     return out
 
 

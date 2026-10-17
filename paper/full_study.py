@@ -65,7 +65,13 @@ def mention_frame(run_dir, verdicts):
     if verdicts is not None and "error_type" in verdicts:
         e = verdicts.set_index(["note_id", "line_idx", "raw_text", "position"])["error_type"]
         m["etype"] = [e.get(k) for k in key]
+        if "share_sum" in verdicts:
+            ssum = verdicts.set_index(["note_id", "line_idx", "raw_text", "position"])["share_sum"]
+            m["share_sum"] = [1 if ssum.get(k) == 1 else 0 for k in key]
     m["substantive"] = ((m.confirmed == 1) & (m.etype != "rounding")).astype(int)
+    if "share_sum" not in m:
+        m["share_sum"] = 0
+    m["pilot_rule"] = ((m.confirmed == 1) & (m.share_sum != 1)).astype(int)
     m["confirmed_or_unclear"] = ((m.flag == 1) & m.verdict.isin(["wrong", "unclear"])).astype(int)
     return m, notes
 
@@ -175,8 +181,139 @@ def trailing_direction(run_dir, rows):
     return out
 
 
+def cond_paired(df_a, df_b, num, den, rng, R=20000):
+    """Conditional test of a paired difference in pooled rates (b minus a). Within each table, given the table's
+    total number of events in the two arms, the null of equal rates makes arm b's count binomial with probability
+    n_b / (n_a + n_b). Tables are independent strata. This respects the different numbers of checked numbers in
+    the two arms, but treats mentions within an arm as independent, so it is anti-conservative when errors
+    cluster within notes; the sign test over tables below does not make that assumption."""
+    ga = df_a.groupby("table_id")[[num, den]].sum()
+    gb = df_b.groupby("table_id")[[num, den]].sum()
+    t = sorted(set(ga.index) & set(gb.index))
+    na, da = ga.loc[t, num].to_numpy(float), ga.loc[t, den].to_numpy(float)
+    nb, db = gb.loc[t, num].to_numpy(float), gb.loc[t, den].to_numpy(float)
+    obs = nb.sum() / db.sum() - na.sum() / da.sum()
+    k = (na + nb).astype(int)
+    prob = np.where(da + db > 0, db / np.maximum(da + db, 1), 0.0)
+    sim_b = rng.binomial(k, prob, size=(R, len(t)))
+    stat = sim_b.sum(1) / db.sum() - (k - sim_b).sum(1) / da.sum()
+    p = (np.sum(np.abs(stat) >= abs(obs) - 1e-12) + 1) / (R + 1)
+    ra, rb = na / np.maximum(da, 1), nb / np.maximum(db, 1)
+    up, down = int((rb > ra).sum()), int((rb < ra).sum())
+    m, n = min(up, down), up + down
+    sign_p = min(1.0, 2 * binom_cdf(m, n, 0.5)) if n else None
+    return dict(diff=obs, p=p, tables_with_events=int((k > 0).sum()), up=up, down=down, sign_p=sign_p)
+
+
+def dev_tables():
+    """Tables used while developing the gate: the regression stress suites and held-out set 2."""
+    found = set()
+    for path in (PAPER / "stress").rglob("*"):
+        if path.is_file() and path.suffix in {".csv", ".json", ".jsonl", ".py", ".txt"}:
+            found |= set(re.findall(r"(?:small|medium|large)_(?:country|product)_\d{4}-W\d{2}", path.read_text(errors="ignore")))
+    stress = set(found)
+    held = set()
+    pat = r"(?:small|medium|large)_(?:country|product)_\d{4}-W\d{2}"
+    for level in ("L1", "L2"):
+        f = PAPER / "heldout2" / level / "FROZEN.json"
+        if f.exists():
+            held |= set(json.loads(f.read_text()).get("tables", []))
+        for name in ("notes.json", "notes.jsonl", "truth.csv"):  # the Level 2 freeze record does not list its tables
+            g = PAPER / "heldout2" / level / name
+            if g.exists():
+                held |= set(re.findall(pat, g.read_text(errors="ignore")))
+    return stress, held
+
+
+def exploratory(m, kf, run_dir, pilot, rng):
+    """Analyses added after the review and the external audits; none is in the pre-registered plan."""
+    P = m[m.primary]
+    ex = {}
+    # zero and few events: exact two-sided 95% Clopper-Pearson upper bounds per cell (ignoring clustering)
+    ex["exact_upper"] = {f"{md}|{st}": clopper(int(P[(P.model == md) & (P.strategy == st)].confirmed.sum()),
+                                               int(P[(P.model == md) & (P.strategy == st)].checked.sum()))[1]
+                         for md in MODELS for st in STRATS}
+    # strategy contrasts under alternative tests and definitions of an error
+    variants = [("confirmed", "confirmed"), ("substantive", "substantive"), ("pilot_rule", "pilot_rule")]
+    stress, held = dev_tables()
+    clean = P[~P.table_id.isin(stress | held)]
+    con = {}
+    for md in MODELS:
+        con[md] = {}
+        for vname, col in variants + [("no_dev_tables", "confirmed")]:
+            D = clean if vname == "no_dev_tables" else P
+            base = D[(D.model == md) & (D.strategy == "S1")]
+            tests = {st: cond_paired(base, D[(D.model == md) & (D.strategy == st)], col, "checked", rng) for st in ["S2", "S3", "S4"]}
+            adj = holm([tests[k]["p"] for k in ["S2", "S3", "S4"]])
+            for k, a in zip(["S2", "S3", "S4"], adj):
+                tests[k]["p_holm"] = a
+            con[md][vname] = tests
+    ex["strategy_tests"] = con
+    ex["dev_tables"] = {"stress": sorted(stress), "heldout2": sorted(held), "in_primary": len((stress | held) - set(pilot)),
+                        "stress_in_primary": len(stress - set(pilot)), "heldout2_in_primary": len(held - set(pilot)),
+                        "clean_tables": int(clean.table_id.nunique())}
+    ex["no_dev_rates"] = {md: {"confirmed": int(clean[clean.model == md].confirmed.sum()), "checked": int(clean[clean.model == md].checked.sum()),
+                               "flags": int(clean[clean.model == md].flag.sum())} for md in MODELS}
+    ex["pilot_rule_counts"] = {f"{md}|{st}": int(P[(P.model == md) & (P.strategy == st)].pilot_rule.sum()) for md in MODELS for st in STRATS}
+    ex["share_sum_confirmed"] = int(P.share_sum.sum())
+    ex["with_unclear"] = {md: {"errors": int(P[P.model == md].confirmed_or_unclear.sum()), "checked": int(P[P.model == md].checked.sum())}
+                          for md in MODELS}
+    # pooled writer comparisons (not pre-registered): raw gate flags and confirmed errors, Sonnet 5 minus Opus 5
+    wa = P[P.model == "claude-opus-5"]
+    wb = P[P.model == "claude-sonnet-5"]
+    ex["sonnet_minus_opus"] = {"gate_flag": boot_paired(wa, wb, "flag", "checked", rng),
+                               "confirmed": boot_paired(wa, wb, "confirmed", "checked", rng),
+                               "confirmed_without_s2": boot_paired(wa[wa.strategy != "S2"], wb[wb.strategy != "S2"], "confirmed", "checked", rng),
+                               "substantive": boot_paired(wa, wb, "substantive", "checked", rng)}
+    # S3 notes identical to their S1 draft, refusals and format compliance (from the notes themselves)
+    notes = {}
+    for f in (run_dir / "notes").glob("*.json"):
+        d = json.loads(f.read_text())
+        calls = (d.get("trace") or {}).get("calls", []) if isinstance(d.get("trace"), dict) else []
+        notes[(d["table_id"], d["strategy"], d["model"], d["repeat"])] = {
+            "text": d.get("note") or "", "refusal": any(c.get("stop_reason") == "refusal" for c in calls)}
+    raw = pd.read_csv(run_dir / "notes.csv")
+    same, changed_tables = {}, {}
+    for md in MODELS:
+        keys = [k for k in notes if k[1] == "S3" and k[2] == md and k[0] not in pilot]
+        same[md] = {"identical": sum(notes[k]["text"] == notes.get((k[0], "S1", md, k[3]), {}).get("text") for k in keys), "of": len(keys)}
+        changed_tables[md] = len({k[0] for k in keys if notes[k]["text"] != notes.get((k[0], "S1", md, k[3]), {}).get("text")})
+        same[md]["tables_changed"] = changed_tables[md]
+        rs = raw[(raw.model == md) & (raw.strategy == "S3") & ~raw.table_id.isin(pilot)]
+        sent = {(r.table_id, r.repeat) for r in rs.itertuples() if (r.s3_rounds_used or 0) > 0}
+        same[md]["sent_back"] = len(sent)
+        same[md]["sent_back_verbatim"] = sum(notes[(t, "S3", md, rep)]["text"] == notes.get((t, "S1", md, rep), {}).get("text") for t, rep in sent)
+    ex["s3_identical"] = same
+    ref = {}
+    for md in MODELS:
+        for st in STRATS:
+            ks = [k for k in notes if k[2] == md and k[1] == st]
+            r_all = [k for k in ks if notes[k]["refusal"]]
+            ref[f"{md}|{st}"] = {"all": len(r_all), "primary": len([k for k in r_all if k[0] not in pilot])}
+    ex["refusals"] = ref
+    ex["refusal_tables"] = sorted({k[0] for k in notes if notes[k]["refusal"]})
+    ex["empty_or_numberless"] = int((raw.n_numbers_checked == 0).sum())
+    ex["tables_without_ly"] = int(sum(pd.read_csv(ROOT / "data" / "tables" / f"{t}.csv").Revenue_LY.isna().all() for t in raw.table_id.unique()))
+    ex["format_ok"] = {md: float(raw[raw.model == md].format_ok.mean()) for md in MODELS}
+    ex["format_fail"] = {md: int((~raw[raw.model == md].format_ok.astype(bool)).sum()) for md in MODELS}
+    # how many errors the gate could be missing: pooled miss bound applied to all unflagged primary numbers
+    smp = kf[(kf.kind != "flag") & ~kf.table_id.isin(pilot)]
+    k, n = int((smp.final == "wrong").sum()), int(len(smp))
+    hi = clopper(k, n)[1]
+    unflagged = int(P[(P.flag == 0) & (P.checked == 1)].shape[0])
+    conf = int(P.confirmed.sum())
+    ex["recall_bound"] = {"unflagged": unflagged, "max_missed": hi * unflagged, "confirmed": conf,
+                          "recall_lower": conf / (conf + hi * unflagged)}
+    return ex
+
+
+def minus(s):
+    """A typeset minus sign for negative numbers (a hyphen is too short next to a plus)."""
+    return s.replace("-", "$-$")
+
+
 def pct(x, d=2):
-    return "n/a" if x is None or (isinstance(x, float) and np.isnan(x)) else f"{100 * x:.{d}f}"
+    return "n/a" if x is None or (isinstance(x, float) and np.isnan(x)) else minus(f"{100 * x:.{d}f}")
 
 
 def main():
@@ -326,6 +463,7 @@ def main():
                 tests[k]["p_holm"] = a
             sub[model] = {"rates": cell, "vs_s1": tests, "all": boot_rate(P[P.model == model], "substantive", "checked", rng)}
         out["substantive"] = sub
+        out["exploratory"] = exploratory(m, kf, run_dir, pilot, np.random.default_rng(SEED + 1))
     (PAPER / "data").mkdir(exist_ok=True)
     (PAPER / "data" / f"{args.out_prefix}full_results.json").write_text(json.dumps(out, indent=1, default=float), encoding="utf-8")
     write_tex(out, args.out_prefix)
@@ -347,7 +485,7 @@ def fmt_pts(x, d=2):
     """A difference of two rates, in percentage points (no percent sign)."""
     if x is None or (isinstance(x, float) and np.isnan(x)):
         return "n/a"
-    return f"{100 * x:+.{d}f}"
+    return minus(f"{100 * x:+.{d}f}")
 
 
 def fmt_p(p):
@@ -401,8 +539,8 @@ def write_macros(out, prefix):
             m[f"Unclear{mm}"] = str(x["unclear_flags"])
             m[f"FARate{mm}"] = fmt_pct(x["false_alarm_rate"], 2)
             r = out["repeat_reliability"][model]
-            m[f"Kappa{mm}"] = "n/a" if r["kappa"] is None else f"{r['kappa']:.2f}"
-            m[f"Agree{mm}"] = "n/a" if r["agree"] is None else fmt_pct(r["agree"], 0)
+            m[f"Kappa{mm}"] = "n/a" if r["kappa"] is None else minus(f"{r['kappa']:.2f}")
+            m[f"Agree{mm}"] = "n/a" if r["agree"] is None else fmt_pct(r["agree"], 1)
             m[f"RecurBoth{mm}"] = str(r["both"])
             m[f"RecurAny{mm}"] = str(r["both"] + r["one"])
             for st, ss in MACRO_STRAT.items():
@@ -473,6 +611,64 @@ def write_macros(out, prefix):
         for k, kk in names.items():
             m[f"Err{kk}Total"] = str(tot[k])
         m["ErrTotal"] = str(sum(tot.values()))
+    if "exploratory" in out:
+        ex = out["exploratory"]
+        for model, mm in MACRO_MODEL.items():
+            for st, ss in MACRO_STRAT.items():
+                m[f"ExactHi{mm}{ss}"] = fmt_pct(ex["exact_upper"][f"{model}|{st}"], 2)
+                m[f"PilotRule{mm}{ss}"] = str(ex["pilot_rule_counts"][f"{model}|{st}"])
+                m[f"Refused{mm}{ss}"] = str(ex["refusals"][f"{model}|{st}"]["all"])
+            for vname, vv in [("confirmed", "Cond"), ("substantive", "CondSubst"), ("pilot_rule", "CondPilot"), ("no_dev_tables", "CondClean")]:
+                for st, ss in [("S2", "Two"), ("S3", "Three"), ("S4", "Four")]:
+                    t = ex["strategy_tests"][model][vname][st]
+                    m[f"{vv}Diff{mm}{ss}"] = fmt_pts(t["diff"])
+                    m[f"{vv}P{mm}{ss}"] = fmt_p(t["p_holm"])
+                    if vname == "confirmed":
+                        m[f"SignUp{mm}{ss}"] = str(t["up"])
+                        m[f"SignDown{mm}{ss}"] = str(t["down"])
+                        m[f"SignP{mm}{ss}"] = fmt_p(t["sign_p"])
+            s3 = ex["s3_identical"][model]
+            m[f"Sthreesame{mm}"] = str(s3["identical"])
+            m[f"Sthreeof{mm}"] = str(s3["of"])
+            m[f"Sthreechanged{mm}"] = str(s3["of"] - s3["identical"])
+            m[f"SthreeTables{mm}"] = str(s3["tables_changed"])
+            m[f"SthreeSent{mm}"] = str(s3["sent_back"])
+            m[f"SthreeVerbatim{mm}"] = str(s3["sent_back_verbatim"])
+            m[f"SthreeNotSent{mm}"] = str(s3["of"] - s3["sent_back"])
+            fa = out["l1_false_alarms"][model]
+            mp = out["miss_and_precision"][model]
+            m[f"LoneFARate{mm}"] = fmt_pct(fa["false_alarms"] / (mp["checked"] - mp["confirmed"] - mp["unclear_flags"]), 2)
+            m[f"LtwoOnlyFA{mm}"] = str(mp["false_alarms"] - fa["false_alarms"])
+            m[f"FATotal{mm}"] = str(mp["false_alarms"])
+            m[f"FormatOk{mm}"] = fmt_pct(ex["format_ok"][model], 1)
+            m[f"FormatFail{mm}"] = str(ex["format_fail"][model])
+            nd = ex["no_dev_rates"][model]
+            m[f"Clean{mm}"] = fmt_pct(nd["confirmed"] / nd["checked"], 2)
+            m[f"CleanN{mm}"] = str(nd["confirmed"])
+        m["RefusedOpusAll"] = str(sum(ex["refusals"][f"claude-opus-5|{st}"]["all"] for st in STRATS))
+        m["RefusedOpusPrimary"] = str(sum(ex["refusals"][f"claude-opus-5|{st}"]["primary"] for st in STRATS))
+        m["RefusalTables"] = str(len(ex["refusal_tables"]))
+        m["NumberlessNotes"] = str(ex["empty_or_numberless"])
+        m["NoLYTables"] = str(ex["tables_without_ly"])
+        m["FlagsPrimary"] = str(out["precision_pooled"]["flags"])
+        m["DevTables"] = str(ex["dev_tables"]["in_primary"])
+        m["DevStress"] = str(ex["dev_tables"]["stress_in_primary"])
+        m["DevHeld"] = str(ex["dev_tables"]["heldout2_in_primary"])
+        for model, mm in MACRO_MODEL.items():
+            wu = ex["with_unclear"][model]
+            m[f"WithUnclear{mm}"] = fmt_pct(wu["errors"] / wu["checked"], 2)
+        m["CleanTables"] = str(ex["dev_tables"]["clean_tables"])
+        m["ShareSumN"] = str(ex["share_sum_confirmed"])
+        rb = ex["recall_bound"]
+        m["UnflaggedPrimary"] = f"{rb['unflagged']:,}"
+        m["MaxMissed"] = f"{int(round(rb['max_missed'])):,}"
+        m["RecallLower"] = fmt_pct(rb["recall_lower"], 0)
+        so = ex["sonnet_minus_opus"]
+        for k, kk in [("gate_flag", "Gate"), ("confirmed", "Conf"), ("confirmed_without_s2", "ConfNoTwo"), ("substantive", "Subst")]:
+            m[f"SoOp{kk}"] = fmt_pts(so[k]["diff"])
+            m[f"SoOp{kk}Lo"] = fmt_pts(so[k]["lo"])
+            m[f"SoOp{kk}Hi"] = fmt_pts(so[k]["hi"])
+            m[f"SoOp{kk}P"] = fmt_p(so[k]["p"])
     lines = ["% Generated by paper/full_study.py. Do not edit by hand."] + [f"\\newcommand{{\\{k}}}{{{v}}}" for k, v in m.items()]
     (PAPER / f"{prefix}numbers_full.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -489,7 +685,9 @@ def write_tex(out, prefix):
             if adj:
                 cf = c["confirmed"]
                 pr = c["precision"]
-                line += [f"{cf['num']}", f"{pct(cf['rate'])} [{pct(cf['lo'])}, {pct(cf['hi'])}]",
+                ci = (f"[{pct(cf['lo'])}, {pct(cf['hi'])}]" if cf["num"] or "exploratory" not in out
+                      else f"[0.00, {pct(out['exploratory']['exact_upper'][f'{model}|{st}'])}]*")
+                line += [f"{cf['num']}", f"{pct(cf['rate'])} {ci}",
                          f"{pr['confirmed']}/{pr['flags']}" if pr["flags"] else "0/0",
                          f"{c['notes_with_error']['k']}/{c['notes_with_error']['n']}"]
             rows.append(" & ".join(line) + " \\\\")
@@ -513,22 +711,53 @@ def write_tex(out, prefix):
            + "\n\\bottomrule\n\\end{tabular}\n")
     (PAPER / f"{prefix}table_contrasts.tex").write_text(tex, encoding="utf-8")
     rows = []
+    for st in STRATS:
+        for md in MODELS[1:]:
+            c = out["model_vs_opus"][st][md]
+            rows.append(" & ".join([st if md == MODELS[1] else "", f"{MODEL_NAMES[md]} minus Opus 5",
+                                    f"{pct(c['diff'])} [{pct(c['lo'])}, {pct(c['hi'])}]", fmt_p(c["p_holm"])]) + " \\\\")
+        if st != STRATS[-1]:
+            rows.append("\\midrule")
+    tex = ("\\begin{tabular}{llrr}\n\\toprule\nStrategy & Contrast & Difference (points) & $p$ (Holm) \\\\\n\\midrule\n" + "\n".join(rows)
+           + "\n\\bottomrule\n\\end{tabular}\n")
+    (PAPER / f"{prefix}table_writer_contrasts.tex").write_text(tex, encoding="utf-8")
+    if "exploratory" in out:
+        ex = out["exploratory"]["strategy_tests"]
+        rows = []
+        for model in MODELS:
+            for st in ["S2", "S3", "S4"]:
+                pre = out["strategy_vs_s1"][model][st]
+                t = ex[model]
+                cell = lambda x: f"{pct(x['diff'])} ({fmt_p(x['p_holm'])})"  # noqa: E731
+                rows.append(" & ".join([MODEL_NAMES[model] if st == "S2" else "", st,
+                                        f"{pct(pre['diff'])} ({fmt_p(pre['p_holm'])})", fmt_p(t["confirmed"][st]["p_holm"]),
+                                        f"{t['confirmed'][st]['up']}/{t['confirmed'][st]['down']} ({fmt_p(t['confirmed'][st]['sign_p'])})",
+                                        cell(t["substantive"][st]), cell(t["pilot_rule"][st]), cell(t["no_dev_tables"][st])]) + " \\\\")
+            if model != MODELS[-1]:
+                rows.append("\\midrule")
+        head = ["Writer", "Versus S1", "Pre-registered", "Conditional $p$", "Tables up/down (sign $p$)",
+                "Without rounding slips", "Pilot rounding rule", "Without development tables"]
+        tex = ("\\resizebox{\\linewidth}{!}{%\n\\begin{tabular}{llrrrrrr}\n\\toprule\n" + " & ".join(head) + " \\\\\n\\midrule\n" + "\n".join(rows)
+               + "\n\\bottomrule\n\\end{tabular}}\n")
+        (PAPER / f"{prefix}table_sensitivity.tex").write_text(tex, encoding="utf-8")
+    rows = []
     for model in MODELS:
         for st in STRATS:
             g = out["gate_rates_primary"][f"{model}|{st}"]
-            cell = lambda x: f"{pct(x['rate'])} [{pct(x['lo'])}, {pct(x['hi'])}]"  # noqa: E731
+            cell = lambda x: (f"{pct(x['rate'])} [{pct(x['lo'])}, {pct(x['hi'])}]" if x["num"]  # noqa: E731
+                              else f"0.00 [0.00, {pct(clopper(0, x['den'])[1])}]*")
             rows.append(" & ".join([MODEL_NAMES[model] if st == "S1" else "", st,
                                     f"{g['unsupported']['den']:,}", cell(g["unsupported"]), f"{g['binding']['den']:,}",
                                     cell(g["binding"]), cell(g["claim"])]) + " \\\\")
         if model != MODELS[-1]:
             rows.append("\\midrule")
-    tex = ("\\begin{tabular}{llrrrrr}\n\\toprule\nWriter & Strategy & Numbers checked & Unsupported (\\%) & Claims verifiable & Binding errors (\\%) & Claim errors (\\%) \\\\\n\\midrule\n"
-           + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n")
+    tex = ("\\resizebox{\\linewidth}{!}{%\n\\begin{tabular}{llrrrrr}\n\\toprule\nWriter & Strategy & Numbers checked & Unsupported (\\%) & Claims verifiable & Binding errors (\\%) & Claim errors (\\%) \\\\\n\\midrule\n"
+           + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}}\n")
     (PAPER / f"{prefix}table_gate_rates.tex").write_text(tex, encoding="utf-8")
     if "error_types" not in out:
         return
     kinds = ["rounding", "direction", "value", "entity"]
-    head = ["Writer", "Strategy", "Rounding", "Direction", "Value", "Row or scope", "Total"]
+    head = ["Writer", "Strategy", "Rounding", "Direction", "Value", "Scope", "Total"]
     rows = []
     for model in MODELS:
         for st in STRATS:

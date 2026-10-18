@@ -9,7 +9,7 @@ Strategies compared: **S1** Direct (table in the prompt), **S2** Compute-then-wr
 
 The gate rules are written out with worked examples in [docs/method.md](docs/method.md).
 
-**Use of AI:** I built this project with heavy use of AI ("vibe coding"). An AI coding assistant (Claude Code, running Anthropic's Claude models) wrote most of the code, ran the experiments, and drafted and revised the paper under my direction, and AI agents did the blind review and the audits. The paper's "Use of AI" section gives the details.
+**Use of AI:** The research questions, study design and logic are mine. I used AI heavily to implement and run the work ("vibe coding"): an AI coding assistant (Claude Code, running Anthropic's Claude models) wrote the code, generated the test notes, ran the experiments, and drafted and revised the paper's text under my direction, and AI agents did the blind review and the audits. The paper's "Use of AI" section gives the details.
 
 **Live dashboard:** [harshitha-venkatesh-2204.github.io/NumGate](https://harshitha-venkatesh-2204.github.io/NumGate/). **Paper:** [paper/numgate.pdf](paper/numgate.pdf) (also downloadable from the dashboard). The dashboard is rebuilt by `python src/analyze.py` and published by the workflow in `.github/workflows/pages.yml` on every push to `main`.
 

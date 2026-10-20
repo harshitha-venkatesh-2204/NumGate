@@ -399,11 +399,25 @@ def references(ctx):
         who = ", ".join(fmt[:-1]) + (", and " if len(fmt) > 2 else " and ") + fmt[-1] if len(fmt) > 1 else fmt[0]
         if "others" in e.get("author", ""):
             who = ", ".join(fmt) + ", et al"
-        venue = e.get("booktitle") or e.get("journal") or e.get("howpublished") or e.get("publisher") or ""
+        venue = re.sub(r"[{}]", "", delatex(e.get("booktitle") or e.get("journal") or e.get("howpublished") or ""))
         title = re.sub(r"[{}]", "", e.get("title", ""))
         extra = inline(e.get("note", ""), ctx) if e.get("note") else ""
         title_markup = f"<i>{title}</i>" if e["type"] == "book" else title
-        line = f"[{ctx['refs'].number[k]}] {inline(who, ctx)}. {title_markup}. " + (f"<i>{inline(venue, ctx)}</i>, " if venue else "") + f"{e.get('year', '')}." + (f" {extra}" if extra else "")
+        stop = "" if title.rstrip().endswith(("?", "!", ".")) else "."
+        parts = [f"<i>{inline(venue, ctx)}</i>"] if venue else []
+        vol = e.get("volume", "")
+        if vol:
+            parts.append(vol + (f"({e['number']})" if e.get("number") else "") + (f":{e['pages'].replace('--', '–')}" if e.get("pages") else ""))
+        elif e.get("pages"):
+            parts.append("pages " + e["pages"].replace("--", "–"))
+        if e.get("publisher") and (e["type"] in {"book", "misc"} or not venue):
+            parts.append(inline(re.sub(r"[{}]", "", e["publisher"]), ctx))
+        parts.append(e.get("year", ""))
+        line = f"[{ctx['refs'].number[k]}] {inline(who, ctx)}. {title_markup}{stop} " + ", ".join(p for p in parts if p) + "."
+        if extra:
+            line += f" {extra}" + ("" if "url" in e.get("note", "") or extra.rstrip().endswith(".") else ".")
+        if e.get("doi"):
+            line += " " + inline("\\url{https://doi.org/" + e["doi"] + "}", ctx)
         flow.append(Paragraph(line, S["ref"]))
     return flow
 
@@ -441,10 +455,21 @@ def write_bbl(refs):
         who = (", ".join(people[:-1]) + (", and " if len(people) > 2 else " and ") + people[-1]) if len(people) > 1 else people[0]
         if "others" in e.get("author", ""):
             who += " et~al"
-        venue = e.get("booktitle") or e.get("journal") or e.get("howpublished") or e.get("publisher") or ""
+        venue = e.get("booktitle") or e.get("journal") or e.get("howpublished") or ""
         title = e.get("title", "")
-        out += [f"\\bibitem[{{{short}({year}){full}}}]{{{k}}}", f"{who}.", f"\\newblock {title}.",
-                f"\\newblock {('\\emph{' + venue + '}, ') if venue else ''}{year}." + (f" {e['note']}" if e.get("note") else ""), ""]
+        stop = "" if re.sub(r"[{}]", "", title).rstrip().endswith(("?", "!", ".")) else "."
+        parts = ["\\emph{" + venue + "}"] if venue else []
+        if e.get("volume"):
+            parts.append(e["volume"] + (f"({e['number']})" if e.get("number") else "") + (f":{e['pages']}" if e.get("pages") else ""))
+        elif e.get("pages"):
+            parts.append("pages " + e["pages"])
+        if e.get("publisher") and (e["type"] in {"book", "misc"} or not venue):
+            parts.append(e["publisher"])
+        parts.append(year)
+        note = e.get("note", "")
+        tail = (f" {note}" + ("" if "url" in note or note.rstrip().endswith(".") else ".") if note else "") + (f" \\url{{https://doi.org/{e['doi']}}}" if e.get("doi") else "")
+        out += [f"\\bibitem[{{{short}({year}){full}}}]{{{k}}}", f"{who}.", f"\\newblock {title}{stop}",
+                "\\newblock " + ", ".join(p for p in parts if p) + "." + tail, ""]
     out.append("\\end{thebibliography}")
     (PAPER / "numgate.bbl").write_text("\n".join(out) + "\n", encoding="utf-8")
 

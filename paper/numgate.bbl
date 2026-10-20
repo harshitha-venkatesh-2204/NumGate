@@ -5,27 +5,27 @@
 \bibitem[{Aarnes and Setty(2026)Aarnes and Setty}]{aarnes2026robust}
 Peter R{\o}ysland Aarnes and Vinay Setty.
 \newblock Towards Robust Numerical Claim Verification.
-\newblock \emph{Findings of AACL-IJCNLP 2026}, 2026.
+\newblock \emph{arXiv preprint arXiv:2610.00689}, 2026. Accepted to Findings of AACL-IJCNLP 2026. \url{https://doi.org/10.48550/arXiv.2610.00689}
 
 \bibitem[{Aly and Vlachos(2024)Aly and Vlachos}]{aly2024tabver}
 Rami Aly and Andreas Vlachos.
 \newblock {TabVer}: Tabular Fact Verification with Natural Logic.
-\newblock \emph{Transactions of the Association for Computational Linguistics}, 2024.
+\newblock \emph{Transactions of the Association for Computational Linguistics}, 12:1648--1671, 2024. \url{https://doi.org/10.1162/tacl_a_00722}
 
 \bibitem[{Angelopoulos et~al.(2023)Angelopoulos, Bates, Fannjiang, Jordan, and Zrnic}]{angelopoulos2023ppi}
 Anastasios N. Angelopoulos, Stephen Bates, Clara Fannjiang, Michael I. Jordan, and Tijana Zrnic.
-\newblock Prediction-Powered Inference.
-\newblock \emph{Science}, 2023.
+\newblock Prediction-powered inference.
+\newblock \emph{Science}, 382(6671):669--674, 2023. \url{https://doi.org/10.1126/science.adi6000}
 
-\bibitem[{Chen(2019)Chen}]{chen2019onlineretail}
+\bibitem[{Chen(2012)Chen}]{chen2012onlineretail}
 Daqing Chen.
 \newblock {Online Retail II}.
-\newblock \emph{UCI Machine Learning Repository}, 2019. \url{https://archive.ics.uci.edu/dataset/502/online+retail+ii}
+\newblock \emph{UCI Machine Learning Repository}, 2012. \url{https://archive.ics.uci.edu/dataset/502/online+retail+ii} \url{https://doi.org/10.24432/C5CG6D}
 
 \bibitem[{Chen et~al.(2020)Chen, Wang, Chen, Zhang, Wang, Li, Zhou, and Wang}]{chen2020tabfact}
 Wenhu Chen, Hongmin Wang, Jianshu Chen, Yunkai Zhang, Hong Wang, Shiyang Li, Xiyou Zhou, and William Yang Wang.
 \newblock {TabFact}: A Large-scale Dataset for Table-based Fact Verification.
-\newblock \emph{International Conference on Learning Representations}, 2020.
+\newblock \emph{Eighth International Conference on Learning Representations (ICLR 2020)}, 2020.
 
 \bibitem[{Chen et~al.(2023)Chen, Ma, Wang, and Cohen}]{chen2023pot}
 Wenhu Chen, Xueguang Ma, Xinyi Wang, and William W. Cohen.
@@ -35,141 +35,141 @@ Wenhu Chen, Xueguang Ma, Xinyi Wang, and William W. Cohen.
 \bibitem[{Deriu et~al.(2023)Deriu, von D{\"a}niken, Tuggener, and Cieliebak}]{deriu2023correction}
 Jan Deriu, Pius von D{\"a}niken, Don Tuggener, and Mark Cieliebak.
 \newblock Correction of Errors in Preference Ratings from Automated Metrics for Text Generation.
-\newblock \emph{arXiv preprint arXiv:2306.03866}, 2023.
+\newblock \emph{Findings of the Association for Computational Linguistics: ACL 2023}, pages 6456--6474, 2023. \url{https://doi.org/10.18653/v1/2023.findings-acl.404}
 
 \bibitem[{Dhingra et~al.(2019)Dhingra, Faruqui, Parikh, Chang, Das, and Cohen}]{dhingra2019parent}
 Bhuwan Dhingra, Manaal Faruqui, Ankur Parikh, Ming-Wei Chang, Dipanjan Das, and William Cohen.
 \newblock Handling Divergent Reference Texts when Evaluating Table-to-Text Generation.
-\newblock \emph{Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics}, 2019.
+\newblock \emph{Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics}, pages 4884--4895, 2019. \url{https://doi.org/10.18653/v1/P19-1483}
 
 \bibitem[{Dhuliawala et~al.(2024)Dhuliawala, Komeili, Xu, Raileanu, Li, Celikyilmaz, and Weston}]{dhuliawala2024cove}
 Shehzaad Dhuliawala, Mojtaba Komeili, Jing Xu, Roberta Raileanu, Xian Li, Asli Celikyilmaz, and Jason Weston.
 \newblock {Chain-of-Verification} Reduces Hallucination in Large Language Models.
-\newblock \emph{Findings of the Association for Computational Linguistics: ACL 2024}, 2024.
+\newblock \emph{Findings of the Association for Computational Linguistics: ACL 2024}, pages 3563--3578, 2024. \url{https://doi.org/10.18653/v1/2024.findings-acl.212}
 
 \bibitem[{Efron and Tibshirani(1993)Efron and Tibshirani}]{efron1993bootstrap}
 Bradley Efron and Robert J. Tibshirani.
 \newblock An Introduction to the Bootstrap.
-\newblock \emph{Chapman and Hall}, 1993.
+\newblock Chapman \& Hall, 1993. \url{https://doi.org/10.1007/978-1-4899-4541-9}
 
 \bibitem[{Gao et~al.(2023)Gao, Madaan, Zhou, Alon, Liu, Yang, Callan, and Neubig}]{gao2023pal}
 Luyu Gao, Aman Madaan, Shuyan Zhou, Uri Alon, Pengfei Liu, Yiming Yang, Jamie Callan, and Graham Neubig.
 \newblock {PAL}: Program-aided Language Models.
-\newblock \emph{Proceedings of the 40th International Conference on Machine Learning}, 2023.
+\newblock \emph{Proceedings of the 40th International Conference on Machine Learning}, 202:10764--10799, 2023.
 
-\bibitem[{Gligori{\'c} et~al.(2025)Gligori{\'c}, Zrnic, Lee, Cand{\`e}s, and Jurafsky}]{gligoric2024unconfident}
-Kristina Gligori{\'c}, Tijana Zrnic, Cinoo Lee, Emmanuel J. Cand{\`e}s, and Dan Jurafsky.
-\newblock Can Unconfident {LLM} Annotations Be Used for Confident Conclusions?.
-\newblock \emph{Proceedings of NAACL 2025}, 2025.
+\bibitem[{Gligori{\'c} et~al.(2025)Gligori{\'c}, Zrnic, Lee, Cand{\`e}s, and Jurafsky}]{gligoric2025unconfident}
+Kristina Gligori{\'c}, Tijana Zrnic, Cinoo Lee, Emmanuel Cand{\`e}s, and Dan Jurafsky.
+\newblock Can Unconfident {LLM} Annotations Be Used for Confident Conclusions?
+\newblock \emph{Proceedings of the 2025 Conference of the Nations of the {A}mericas Chapter of the {A}ssociation for {C}omputational {L}inguistics: Human Language Technologies (Volume 1: Long Papers)}, pages 3514--3533, 2025. \url{https://doi.org/10.18653/v1/2025.naacl-long.179}
 
 \bibitem[{Godbole and Jia(2025)Godbole and Jia}]{godbole2025verify}
 Ameya Godbole and Robin Jia.
 \newblock Verify with Caution: The Pitfalls of Relying on Imperfect Factuality Metrics.
-\newblock \emph{arXiv preprint arXiv:2501.14883}, 2025.
+\newblock \emph{Findings of the Association for Computational Linguistics: ACL 2025}, pages 22889--22912, 2025. \url{https://doi.org/10.18653/v1/2025.findings-acl.1175}
 
-\bibitem[{Goldsack et~al.(2024)Goldsack, Wang, Lin, and Chen}]{goldsack2024facts}
+\bibitem[{Goldsack et~al.(2025)Goldsack, Wang, Lin, and Chen}]{goldsack2025facts}
 Tomas Goldsack, Yang Wang, Chenghua Lin, and Chung-Chi Chen.
 \newblock From Facts to Insights: A Study on the Generation and Evaluation of Analytical Reports for Deciphering Earnings Calls.
-\newblock \emph{arXiv preprint arXiv:2410.01039}, 2024.
+\newblock \emph{Proceedings of the 31st International Conference on Computational Linguistics}, pages 10576--10593, 2025.
 
 \bibitem[{Honovich et~al.(2022)Honovich, Aharoni, Herzig, Taitelbaum, Kukliansy, Cohen, Scialom, Szpektor, Hassidim, and Matias}]{honovich2022true}
 Or Honovich, Roee Aharoni, Jonathan Herzig, Hagai Taitelbaum, Doron Kukliansy, Vered Cohen, Thomas Scialom, Idan Szpektor, Avinatan Hassidim, and Yossi Matias.
 \newblock {TRUE}: Re-evaluating Factual Consistency Evaluation.
-\newblock \emph{Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies}, 2022.
+\newblock \emph{Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies}, pages 3905--3920, 2022. \url{https://doi.org/10.18653/v1/2022.naacl-main.287}
 
 \bibitem[{Ji et~al.(2023)Ji, Lee, Frieske, Yu, Su, Xu, Ishii, Bang, Madotto, and Fung}]{ji2023survey}
 Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii, Ye Jin Bang, Andrea Madotto, and Pascale Fung.
 \newblock Survey of Hallucination in Natural Language Generation.
-\newblock \emph{ACM Computing Surveys}, 2023.
+\newblock \emph{ACM Computing Surveys}, 55(12):1--38, 2023. \url{https://doi.org/10.1145/3571730}
 
 \bibitem[{Kasner and Du{\v{s}}ek(2024)Kasner and Du{\v{s}}ek}]{kasner2024beyond}
 Zden{\v{e}}k Kasner and Ond{\v{r}}ej Du{\v{s}}ek.
 \newblock Beyond Traditional Benchmarks: Analyzing Behaviors of Open {LLMs} on Data-to-Text Generation.
-\newblock \emph{Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics}, 2024.
+\newblock \emph{Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}, pages 12045--12072, 2024. \url{https://doi.org/10.18653/v1/2024.acl-long.651}
 
-\bibitem[{Krumdick et~al.(2025)Krumdick, Lovering, Reddy, Ebner, and Tanner}]{krumdick2025nofree}
+\bibitem[{Krumdick et~al.(2026)Krumdick, Lovering, Reddy, Ebner, and Tanner}]{krumdick2026nofree}
 Michael Krumdick, Charles Lovering, Varshini Reddy, Seth Ebner, and Chris Tanner.
-\newblock No Free Labels: Limitations of {LLM}-as-a-Judge Without Human Grounding.
-\newblock \emph{arXiv preprint arXiv:2503.05061}, 2025.
+\newblock No Free Labels: Limitations of {LLM-as-a-Judge} Without Human Grounding.
+\newblock \emph{Third Conference on Language Modeling}, 2026.
 
 \bibitem[{Laban et~al.(2022)Laban, Schnabel, Bennett, and Hearst}]{laban2022summac}
 Philippe Laban, Tobias Schnabel, Paul N. Bennett, and Marti A. Hearst.
 \newblock {SummaC}: Re-Visiting {NLI}-based Models for Inconsistency Detection in Summarization.
-\newblock \emph{Transactions of the Association for Computational Linguistics}, 2022.
+\newblock \emph{Transactions of the Association for Computational Linguistics}, 10:163--177, 2022. \url{https://doi.org/10.1162/tacl_a_00453}
 
-\bibitem[{Madaan et~al.(2023)Madaan, Tandon, Gupta, Hallinan, Gao, Wiegreffe, Alon, Dziri, Prabhumoye, and Yang}]{madaan2023selfrefine}
-Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, and Yiming Yang et~al.
+\bibitem[{Madaan et~al.(2023)Madaan, Tandon, Gupta, Hallinan, Gao, Wiegreffe, Alon, Dziri, Prabhumoye, Yang, Gupta, Majumder, Hermann, Welleck, Yazdanbakhsh, and Clark}]{madaan2023selfrefine}
+Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, Shashank Gupta, Bodhisattwa Prasad Majumder, Katherine Hermann, Sean Welleck, Amir Yazdanbakhsh, and Peter Clark.
 \newblock {Self-Refine}: Iterative Refinement with Self-Feedback.
-\newblock \emph{Advances in Neural Information Processing Systems}, 2023.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36:46534--46594, 2023. \url{https://doi.org/10.52202/075280-2019}
 
 \bibitem[{Manakul et~al.(2023)Manakul, Liusie, and Gales}]{manakul2023selfcheckgpt}
-Potsawee Manakul, Adian Liusie, and Mark J. F. Gales.
+Potsawee Manakul, Adian Liusie, and Mark Gales.
 \newblock {SelfCheckGPT}: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models.
-\newblock \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, 2023.
+\newblock \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, pages 9004--9017, 2023. \url{https://doi.org/10.18653/v1/2023.emnlp-main.557}
 
 \bibitem[{Min et~al.(2023)Min, Krishna, Lyu, Lewis, Yih, Koh, Iyyer, Zettlemoyer, and Hajishirzi}]{min2023factscore}
 Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen-tau Yih, Pang Wei Koh, Mohit Iyyer, Luke Zettlemoyer, and Hannaneh Hajishirzi.
 \newblock {FActScore}: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation.
-\newblock \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, 2023.
+\newblock \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing}, pages 12076--12100, 2023. \url{https://doi.org/10.18653/v1/2023.emnlp-main.741}
 
 \bibitem[{Pagnoni et~al.(2021)Pagnoni, Balachandran, and Tsvetkov}]{pagnoni2021frank}
 Artidoro Pagnoni, Vidhisha Balachandran, and Yulia Tsvetkov.
 \newblock Understanding Factuality in Abstractive Summarization with {FRANK}: A Benchmark for Factuality Metrics.
-\newblock \emph{Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies}, 2021.
+\newblock \emph{Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies}, pages 4812--4829, 2021. \url{https://doi.org/10.18653/v1/2021.naacl-main.383}
 
 \bibitem[{Parikh et~al.(2020)Parikh, Wang, Gehrmann, Faruqui, Dhingra, Yang, and Das}]{parikh2020totto}
-Ankur P. Parikh, Xuezhi Wang, Sebastian Gehrmann, Manaal Faruqui, Bhuwan Dhingra, Diyi Yang, and Dipanjan Das.
+Ankur Parikh, Xuezhi Wang, Sebastian Gehrmann, Manaal Faruqui, Bhuwan Dhingra, Diyi Yang, and Dipanjan Das.
 \newblock {ToTTo}: A Controlled Table-To-Text Generation Dataset.
-\newblock \emph{Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing}, 2020.
+\newblock \emph{Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)}, pages 1173--1186, 2020. \url{https://doi.org/10.18653/v1/2020.emnlp-main.89}
 
-\bibitem[{Puduppully et~al.(2018)Puduppully, Dong, and Lapata}]{puduppully2019content}
+\bibitem[{Puduppully et~al.(2019)Puduppully, Dong, and Lapata}]{puduppully2019content}
 Ratish Puduppully, Li Dong, and Mirella Lapata.
 \newblock Data-to-Text Generation with Content Selection and Planning.
-\newblock \emph{arXiv preprint arXiv:1809.00582}, 2018.
+\newblock \emph{Proceedings of the AAAI Conference on Artificial Intelligence}, 33(01):6908--6915, 2019. \url{https://doi.org/10.1609/aaai.v33i01.33016908}
 
 \bibitem[{Rogan and Gladen(1978)Rogan and Gladen}]{rogan1978estimating}
 Walter J. Rogan and Beth Gladen.
 \newblock Estimating Prevalence from the Results of a Screening Test.
-\newblock \emph{American Journal of Epidemiology}, 1978.
+\newblock \emph{American Journal of Epidemiology}, 107(1):71--76, 1978. \url{https://doi.org/10.1093/oxfordjournals.aje.a112510}
 
 \bibitem[{Solatorio(2025)Solatorio}]{solatorio2025pcn}
 Aivin V. Solatorio.
 \newblock Proof-Carrying Numbers ({PCN}): A Protocol for Trustworthy Numeric Answers from {LLMs} via Claim Verification.
-\newblock \emph{arXiv preprint arXiv:2509.06902}, 2025.
+\newblock \emph{arXiv preprint arXiv:2509.06902}, 2025. \url{https://doi.org/10.48550/arXiv.2509.06902}
 
-\bibitem[{Tang et~al.(2023)Tang, Goyal, Fabbri, Laban, Xu, Yavuz, Kry{\'s}ci{\'n}ski, Rousseau, and Durrett}]{tang2023understanding}
-Liyan Tang, Tanya Goyal, Alex Fabbri, Philippe Laban, Jiacheng Xu, Semih Yavuz, Wojciech Kry{\'s}ci{\'n}ski, Justin Rousseau, and Greg Durrett.
+\bibitem[{Tang et~al.(2023)Tang, Goyal, Fabbri, Laban, Xu, Yavuz, Kryscinski, Rousseau, and Durrett}]{tang2023understanding}
+Liyan Tang, Tanya Goyal, Alex Fabbri, Philippe Laban, Jiacheng Xu, Semih Yavuz, Wojciech Kryscinski, Justin Rousseau, and Greg Durrett.
 \newblock Understanding Factual Errors in Summarization: Errors, Summarizers, Datasets, Error Detectors.
-\newblock \emph{Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics}, 2023.
+\newblock \emph{Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}, pages 11626--11644, 2023. \url{https://doi.org/10.18653/v1/2023.acl-long.650}
 
 \bibitem[{Thomson and Reiter(2020)Thomson and Reiter}]{thomson2020gold}
 Craig Thomson and Ehud Reiter.
 \newblock A Gold Standard Methodology for Evaluating Accuracy in Data-To-Text Systems.
-\newblock \emph{Proceedings of the 13th International Conference on Natural Language Generation}, 2020.
+\newblock \emph{Proceedings of the 13th International Conference on Natural Language Generation}, pages 158--168, 2020. \url{https://doi.org/10.18653/v1/2020.inlg-1.22}
 
 \bibitem[{V et~al.(2024)V, Anand, Anand, and Setty}]{venktesh2024quantemp}
 Venktesh V, Abhijit Anand, Avishek Anand, and Vinay Setty.
-\newblock {QuanTemp}: A Real-World Open-Domain Benchmark for Fact-Checking Numerical Claims.
-\newblock \emph{Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2024)}, 2024.
+\newblock {QuanTemp}: A real-world open-domain benchmark for fact-checking numerical claims.
+\newblock \emph{Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval}, pages 650--660, 2024. \url{https://doi.org/10.1145/3626772.3657874}
 
 \bibitem[{Wiseman et~al.(2017)Wiseman, Shieber, and Rush}]{wiseman2017challenges}
 Sam Wiseman, Stuart M. Shieber, and Alexander M. Rush.
 \newblock Challenges in Data-to-Document Generation.
-\newblock \emph{Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing}, 2017.
+\newblock \emph{Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing}, pages 2253--2263, 2017. \url{https://doi.org/10.18653/v1/D17-1239}
 
 \bibitem[{Zhao et~al.(2020)Zhao, Cohen, and Webber}]{zhao2020herman}
 Zheng Zhao, Shay B. Cohen, and Bonnie Webber.
 \newblock Reducing Quantity Hallucinations in Abstractive Summarization.
-\newblock \emph{Findings of the Association for Computational Linguistics: EMNLP 2020}, 2020.
+\newblock \emph{Findings of the Association for Computational Linguistics: EMNLP 2020}, pages 2237--2249, 2020. \url{https://doi.org/10.18653/v1/2020.findings-emnlp.203}
 
-\bibitem[{Zhao et~al.(2024)Zhao, Long, Jiang, Wang, Chen, Liu, Zhang, Tang, Zhao, and Cohan}]{zhao2024findver}
-Yilun Zhao, Yitao Long, Yuru Jiang, Chengye Wang, Weiyuan Chen, Hongjun Liu, Yiming Zhang, Xiangru Tang, Chen Zhao, and Arman Cohan.
-\newblock {FinDVer}: Explainable Claim Verification over Long and Hybrid-Content Financial Documents.
-\newblock \emph{Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP 2024)}, 2024.
+\bibitem[{Zhao et~al.(2024)Zhao, Long, Jiang, Wang, Chen, Liu, Tang, Zhang, Zhao, and Cohan}]{zhao2024findver}
+Yilun Zhao, Yitao Long, Tintin Jiang, Chengye Wang, Weiyuan Chen, Hongjun Liu, Xiangru Tang, Yiming Zhang, Chen Zhao, and Arman Cohan.
+\newblock {FinDVer}: Explainable Claim Verification over Long and Hybrid-content Financial Documents.
+\newblock \emph{Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing}, pages 14739--14752, 2024. \url{https://doi.org/10.18653/v1/2024.emnlp-main.818}
 
 \bibitem[{Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li, Li, Xing, Zhang, Gonzalez, and Stoica}]{zheng2023judging}
 Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao Zhuang, Zi Lin, Zhuohan Li, Dacheng Li, Eric P. Xing, Hao Zhang, Joseph E. Gonzalez, and Ion Stoica.
-\newblock Judging {LLM}-as-a-Judge with {MT-Bench} and {Chatbot Arena}.
-\newblock \emph{Advances in Neural Information Processing Systems 36, Datasets and Benchmarks Track}, 2023.
+\newblock Judging {LLM-as-a-Judge} with {MT-Bench} and {Chatbot Arena}.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36:46595--46623, 2023. \url{https://doi.org/10.52202/075280-2020}
 
 \end{thebibliography}
